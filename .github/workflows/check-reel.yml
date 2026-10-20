@@ -4,6 +4,10 @@ name: check-reel
 # reports whether Instagram accepted the video. Nothing is published.
 on:
   workflow_dispatch:
+    inputs:
+      trial:
+        description: "Test as a trial Reel"
+        default: "false"
 
 jobs:
   check:
@@ -15,10 +19,13 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: |
           url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/assets/test/reel_test.mp4"
+          extra=()
+          if [ "${{ github.event.inputs.trial }}" = "true" ]; then
+            extra=(--data-urlencode 'trial_params={"graduation_strategy":"SS_PERFORMANCE"}')
+          fi
           resp=$(curl -s -X POST "https://graph.instagram.com/v26.0/${IG_USER_ID}/media" \
             --data-urlencode "media_type=REELS" --data-urlencode "video_url=${url}" \
-            --data-urlencode "caption=test (not published)" \
-            --data-urlencode 'trial_params={"graduation_strategy":"SS_PERFORMANCE"}' \
+            --data-urlencode "caption=test (not published)" "${extra[@]}" \
             --data-urlencode "access_token=${IG_ACCESS_TOKEN}")
           id=$(echo "$resp" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))")
           if [ -z "$id" ]; then echo "::error::create failed: $(echo "$resp" | head -c 300)"; exit 1; fi

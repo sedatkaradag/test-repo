@@ -37,11 +37,12 @@ slots:
 dry_run: false
 
 # Günde 1 Reels: o günün onaylı gönderilerinden birinin sessiz videosu.
-# trial: true -> önce sadece takipçi olmayanlara gösterilir (deneme Reels);
-# iyi performans gösterirse Instagram takipçilere de açar.
+# trial: true -> önce sadece takipçi olmayanlara gösterilir (deneme Reels).
+# Instagram deneme Reels için asgari takipçi sayısı istiyor; hesap o eşiğe
+# ulaşana kadar false (normal Reels). Eşik aşılınca true yapılacak.
 reels:
   enabled: true
-  trial: true
+  trial: false
   slot:
     name: reel
     time: "11:00"
