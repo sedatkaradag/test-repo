@@ -76,7 +76,8 @@ def used_ids(days=None):
         row = json.loads(line)
         if cutoff and dt.datetime.fromisoformat(row["posted_at"]) < cutoff:
             continue
-        ids.add(row["entry_id"])
+        for i in row.get("entry_ids") or [row["entry_id"]]:
+            ids.add(i)
     return ids
 
 

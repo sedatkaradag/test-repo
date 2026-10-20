@@ -260,6 +260,39 @@ def render(entry_id, out_path):
     return out_path
 
 
+def render_cover(title, subtitle, out_path, count=None):
+    """Carousel cover: same frame and ground, a large title, a swipe cue."""
+    img = background()
+    d = ImageDraw.Draw(img)
+    tw = _label(d, "THE HALAL ALGORITHM", 140)
+    for side in (-1, 1):
+        x0 = W / 2 + side * (tw / 2 + 24)
+        d.line([(x0, 158), (x0 + side * 60, 158)], fill=GOLD, width=1)
+    max_w = TEXT_RIGHT - TEXT_LEFT
+    title = smart_quotes(title)
+    for size in range(96, 47, -4):
+        lines, lh = _layout_english(title, size, max_w)
+        if len(lines) <= 4:
+            break
+    total = len(lines) * lh
+    y = 560 - total / 2
+    y = _draw_english(d, lines, size, lh, y, IVORY)
+    _divider(d, y + 36)
+    if subtitle:
+        s_lines, s_lh = _layout_english(subtitle, 36, max_w)
+        _draw_english(d, s_lines, 36, s_lh, y + 80, MUTED)
+    cue = "SWIPE" if not count else f"{count} REMINDERS  ·  SWIPE"
+    cw = _label(d, cue, 1150, size=28, color=GOLD, spacing=5)
+    # The display font has no arrow glyph: draw one after the cue.
+    ax, ay = W / 2 + cw / 2 + 18, 1166
+    d.line([(ax, ay), (ax + 34, ay)], fill=GOLD, width=2)
+    d.line([(ax + 24, ay - 8), (ax + 34, ay), (ax + 24, ay + 8)], fill=GOLD, width=2)
+    f2 = _font(F_LABEL, 24)
+    d.text(((W - f2.getlength(HANDLE)) / 2, 1232), HANDLE, font=f2, fill=MUTED)
+    img.save(out_path, "JPEG", quality=92, optimize=True)
+    return out_path
+
+
 def make_story(post_path, out_path, label="TODAY'S REMINDER"):
     """9:16 Story frame: the post centred on the same ground with a label above it."""
     post = Image.open(post_path).convert("RGB")

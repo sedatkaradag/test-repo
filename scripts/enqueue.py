@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from content import ROOT, get, used_ids
-from render import TooLong, make_story, render, render_reel
+from render import TooLong, make_story, render, render_cover, render_reel
 
 QUEUE = ROOT / "queue"
 
@@ -52,6 +52,9 @@ def all_slots(cfg):
     reels = cfg.get("reels") or {}
     if reels.get("enabled") and reels.get("slot"):
         slots.append({**reels["slot"], "type": "reel"})
+    car = cfg.get("carousel") or {}
+    if car.get("enabled") and car.get("slot"):
+        slots.append({**car["slot"], "type": "carousel"})
     return slots
 
 
@@ -62,7 +65,10 @@ def upcoming_slots(cfg, days):
     for s in all_slots(cfg):
         today = dt.datetime.now(ZoneInfo(s["tz"])).date()
         for d in range(days + 1):
-            day = (today + dt.timedelta(days=d)).isoformat()
+            date = today + dt.timedelta(days=d)
+            if "weekday" in s and date.weekday() != int(s["weekday"]):
+                continue
+            day = date.isoformat()
             when = slot_utc(day, s["time"], s["tz"])
             if when > now + dt.timedelta(minutes=20):
                 out.append((when, f"{day}_{s['name']}", s))
@@ -233,6 +239,82 @@ def cmd_add_reel(a):
     print(f"QUEUED REEL {a.slot} from {a.source} -> {video}")
 
 
+def cmd_add_carousel(a):
+    """Weekly carousel: a cover card plus 3-7 verified entries on one theme."""
+    cfg = config()
+    ids = [x.strip() for x in a.entries.split(",") if x.strip()]
+    if not 3 <= len(ids) <= 7:
+        sys.exit("REJECT: a carousel takes 3-7 entries")
+    slot, date_str = slot_by_key(cfg, a.slot)
+    if slot.get("type") != "carousel":
+        sys.exit(f"REJECT: {a.slot} is not the carousel slot")
+    base = slot_utc(date_str, slot["time"], slot["tz"])
+    if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
+        sys.exit("REJECT: slot is in the past or too close")
+    if (QUEUE / f"{a.slot}.json").exists():
+        sys.exit(f"REJECT: slot {a.slot} already filled")
+    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("type") != "reel"}
+    entries = []
+    for i in ids:
+        e = get(i)
+        if e["type"] == "hadith" and e["status"] not in ("sahih", "hasan"):
+            sys.exit(f"REJECT: {i} grade not sahih/hasan")
+        if i in recent:
+            sys.exit(f"REJECT: {i} was posted or queued recently")
+        entries.append(e)
+    caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
+    problems = []
+    if len(caption) > 2200:
+        problems.append("caption longer than 2200 characters")
+    for e in entries:
+        if e["reference"].split(" ")[-1] not in caption:
+            problems.append(f"caption must cite {e['reference']}")
+    tags = hashtags(caption)
+    if not 3 <= len(tags) <= 5:
+        problems.append(f"{len(tags)} hashtags (use 3-5)")
+    if re.search(r"https?://|www\.|\b[\w-]+\.(com|org|net|io|co)\b", caption, re.I):
+        problems.append("no links or domain names in captions")
+    if re.search(r"translation\s*:|translated by|quranenc|rowwad", caption, re.I):
+        problems.append("do not name the translation source in the caption")
+    recent_caps = recent_captions(exclude_slot=a.slot)
+    if closing_line(caption) in {closing_line(c) for c in recent_caps}:
+        problems.append("closing line repeats a recent caption")
+    if problems:
+        sys.exit("REJECT caption: " + "; ".join(problems))
+    stem = a.slot
+    images = [f"queue/{stem}_0.jpg"]
+    render_cover(a.title, a.subtitle, QUEUE / f"{stem}_0.jpg", count=len(entries))
+    for n, i in enumerate(ids, start=1):
+        try:
+            render(i, QUEUE / f"{stem}_{n}.jpg")
+        except TooLong:
+            for f in QUEUE.glob(f"{stem}_*.jpg"):
+                f.unlink()
+            sys.exit(f"REJECT: {i} too long for one card")
+        images.append(f"queue/{stem}_{n}.jpg")
+    jitter = int(cfg.get("jitter_minutes", 0)) * 60
+    when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
+    item = {
+        "entry_id": ",".join(ids),
+        "entry_ids": ids,
+        "type": "carousel",
+        "reference": a.title,
+        "slot": a.slot,
+        "publish_at": when.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "local_slot": f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
+        "image": images[0],
+        "images": images,
+        "caption": caption,
+        "alt_text": a.title,
+        "theme": a.theme,
+        "review": a.review,
+        "status": "ready",
+        "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+    }
+    (QUEUE / f"{stem}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"QUEUED CAROUSEL {stem}: {len(images)} cards")
+
+
 def cmd_recaption(a):
     """Replace the caption of a queued (not yet published) item, with all checks."""
     path = QUEUE / f"{a.slot}.json"
@@ -275,6 +357,14 @@ if __name__ == "__main__":
     ar.add_argument("--slot", required=True, help="reel slot key, e.g. 2026-10-21_reel")
     ar.add_argument("--caption-file", required=True)
     ar.add_argument("--review", default="")
+    ac = sub.add_parser("add-carousel")
+    ac.add_argument("--entries", required=True, help="comma-separated ids, 3-7")
+    ac.add_argument("--slot", required=True, help="carousel slot key, e.g. 2026-10-21_carousel")
+    ac.add_argument("--title", required=True, help="cover title, e.g. '5 Hadith on Patience'")
+    ac.add_argument("--subtitle", default="")
+    ac.add_argument("--caption-file", required=True)
+    ac.add_argument("--theme", default="")
+    ac.add_argument("--review", default="")
     rc = sub.add_parser("recaption")
     rc.add_argument("--slot", required=True)
     rc.add_argument("--caption-file", required=True)
@@ -282,4 +372,4 @@ if __name__ == "__main__":
     sl = sub.add_parser("slots")
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
-    {"add": cmd_add, "add-reel": cmd_add_reel, "recaption": cmd_recaption, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
+    {"add": cmd_add, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel, "recaption": cmd_recaption, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)

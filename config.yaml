@@ -48,6 +48,15 @@ reels:
     time: "11:00"
     tz: America/New_York
 
+# Haftada 1 carousel: tek temada 5 metin + kapak kartı (Çarşamba 18:00 New York).
+carousel:
+  enabled: true
+  slot:
+    name: carousel
+    time: "18:00"
+    tz: America/New_York
+    weekday: 2        # 0=Pazartesi ... 6=Pazar
+
 # true -> her gönderi paylaşıldıktan hemen sonra Story olarak da paylaşılır
 stories: true
 

@@ -84,6 +84,16 @@ class Instagram:
                        caption=caption, alt_text=alt_text[:1000])["id"]
         return self._finish(c)
 
+    def publish_carousel(self, image_urls, caption):
+        children = []
+        for u in image_urls:
+            c = self._call("POST", f"{self.user_id}/media", image_url=u, is_carousel_item="true")["id"]
+            self._wait(c)
+            children.append(c)
+        parent = self._call("POST", f"{self.user_id}/media", media_type="CAROUSEL",
+                            children=",".join(children), caption=caption)["id"]
+        return self._finish(parent)
+
     def publish_story(self, image_url):
         c = self._call("POST", f"{self.user_id}/media", image_url=image_url, media_type="STORIES")["id"]
         return self._finish(c)
@@ -98,6 +108,10 @@ class Instagram:
         return self._finish(c, tries=120)
 
     def _finish(self, c, tries=30):
+        self._wait(c, tries)
+        return self._call("POST", f"{self.user_id}/media_publish", creation_id=c)["id"]
+
+    def _wait(self, c, tries=30):
         for _ in range(tries):
             status = self._call("GET", c, fields="status_code").get("status_code")
             if status == "FINISHED":
@@ -107,7 +121,6 @@ class Instagram:
             time.sleep(5)
         else:
             raise RuntimeError(f"container {c} never finished")
-        return self._call("POST", f"{self.user_id}/media_publish", creation_id=c)["id"]
 
 
 def due_items():
@@ -182,7 +195,10 @@ def main():
                 media_id = None
                 for attempt in range(3):
                     try:
-                        if item.get("video"):
+                        if item.get("images"):
+                            urls = [f"https://raw.githubusercontent.com/{repo}/main/{x}" for x in item["images"]]
+                            media_id = ig.publish_carousel(urls, item["caption"])
+                        elif item.get("video"):
                             vurl = f"https://raw.githubusercontent.com/{repo}/main/{item['video']}"
                             media_id = ig.publish_reel(vurl, item["caption"], item.get("trial", True))
                         else:
@@ -195,7 +211,7 @@ def main():
                         time.sleep(30 * (attempt + 1))
                 telegram(f"✅ Posted {item['reference']} ({item['entry_id']})")
                 # Same post as a Story; a failed Story never fails the feed post.
-                if cfg.get("stories", True) and item.get("story_image") and not item.get("video"):
+                if cfg.get("stories", True) and item.get("story_image") and not item.get("video") and not item.get("images"):
                     try:
                         surl = f"https://raw.githubusercontent.com/{repo}/main/{item['story_image']}"
                         item["story_media_id"] = ig.publish_story(surl)
@@ -208,7 +224,8 @@ def main():
             if media_id != "dry-run":
                 HISTORY.parent.mkdir(exist_ok=True)
                 with HISTORY.open("a", encoding="utf-8") as f:
-                    f.write(json.dumps({"entry_id": item["entry_id"], "media_id": media_id,
+                    f.write(json.dumps({"entry_id": item["entry_id"], "entry_ids": item.get("entry_ids"),
+                                        "media_id": media_id,
                                         "posted_at": item["posted_at"], "theme": item.get("theme", ""),
                                         "slot": item.get("slot", ""), "type": item["type"]},
                                        ensure_ascii=False) + "\n")

@@ -1,0 +1,54 @@
+name: check-carousel
+
+# Manual test: builds a carousel container from the queued cards of one slot and
+# reports whether Instagram accepted it. Nothing is published.
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Queue slot of a carousel, e.g. 2026-10-21_carousel"
+        required: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create child and parent containers (no publish)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          SLOT: ${{ github.event.inputs.slot }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.parse, urllib.request
+          B = "https://graph.instagram.com/v26.0/"
+          tok, uid, repo = os.environ["IG_ACCESS_TOKEN"], os.environ["IG_USER_ID"], os.environ["GITHUB_REPOSITORY"]
+          item = json.load(open(f"queue/{os.environ['SLOT']}.json"))
+          def call(method, path, **p):
+              p["access_token"] = tok
+              data = urllib.parse.urlencode(p).encode()
+              if method == "GET":
+                  req = urllib.request.Request(B + path + "?" + data.decode())
+              else:
+                  req = urllib.request.Request(B + path, data=data, method="POST")
+              try:
+                  return json.load(urllib.request.urlopen(req, timeout=60))
+              except urllib.error.HTTPError as e:
+                  raise SystemExit(f"::error::{path}: {e.read().decode()[:300]}")
+          def wait(c):
+              for _ in range(40):
+                  s = call("GET", c, fields="status_code").get("status_code")
+                  if s == "FINISHED": return
+                  if s in ("ERROR", "EXPIRED"): raise SystemExit(f"::error::container {c} {s}")
+                  time.sleep(5)
+              raise SystemExit("::error::container never finished")
+          kids = []
+          for img in item["images"]:
+              url = f"https://raw.githubusercontent.com/{repo}/main/{img}"
+              c = call("POST", f"{uid}/media", image_url=url, is_carousel_item="true")["id"]
+              wait(c); kids.append(c)
+          parent = call("POST", f"{uid}/media", media_type="CAROUSEL", children=",".join(kids), caption="test (not published)")["id"]
+          wait(parent)
+          print(f"::notice::carousel container FINISHED with {len(kids)} cards (not published)")
+          PY
