@@ -114,6 +114,15 @@ cd scripts
    ve kararı `review_log.py` ile kaydet. Sonra:
    `python3 enqueue.py add-reel --source <gönderi slotu> --slot <tarih>_reel --caption-file <dosya> --review "<özet>"`
    Video sessiz, aynı şablon; metin yukarıdan aşağı belirir. Metin değişmez, yeni hadis/ayet yok.
+7c. **Haftalık carousel:** `slots` çıktısında `carousel` türünde boş slot varsa (haftada bir):
+   tek bir tema seç (son 4 carousel'den farklı; `notes/strategy.md` en iyi temaları söylüyorsa
+   onlardan), aynı temada 5 içerik seç (ayet, hadis ya da karışık; hepsi bağlamdan bağımsız,
+   tam cümle, son 365 günde paylaşılmamış). Kapak başlığı kısa ve aranabilir olsun
+   ("5 Qur'an passages on patience", "5 duas from the Sunnah"); ayet aralığı varsa
+   "verses" değil "passages" de. Caption'da her içeriğin referansı ayrı satırda. **Denetçi
+   tüm seti birlikte** incelesin (her öğe + başlık + caption); kararı kaydet. Sonra:
+   `python3 enqueue.py add-carousel --entries <id1,id2,...> --slot <tarih>_carousel --title "<başlık>" --subtitle "<alt başlık>" --caption-file <dosya> --theme "<tema>" --review "<özet>"`
+   Kapak görselini (`queue/<slot>_0.jpg`) Read ile açıp kontrol et.
 8. **Kaydet:**
    ```bash
    cd .. && git add queue history && git commit -m "content: <tarih> <id'ler>" && git pull --rebase && git push
