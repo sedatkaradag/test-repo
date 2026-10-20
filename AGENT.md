@@ -33,6 +33,11 @@ cd scripts
    durumundaki gönderileri ve hata mesajlarını (`queue/<slot>.json` → `error`) not al;
    rapora en üstte yaz. Son 24 saatte `published` (veya dry_run'da `dry_run_sent`)
    hiç yoksa yayıncı çalışmıyor olabilir: bunu da raporla.
+   **Yayıncı canlı mı?** Yayıncı her çalışmanın sonunda bir sonrakini kendisi başlatır.
+   `gh api "repos/sedatkaradag/test-repo/actions/workflows/publish.yml/runs?per_page=1" --jq '.workflow_runs[0] | [.status,.created_at]'`
+   Şu an çalışan (`in_progress`/`queued`) bir çalışma yoksa zincir kopmuştur: yeniden başlat
+   `gh api -X POST repos/sedatkaradag/test-repo/actions/workflows/publish.yml/dispatches -f ref=main`
+   ve raporda belirt.
 2. **Boş slotları bul:** `python3 enqueue.py slots --days 2`. Çıktıdaki anahtarlar
    (ör. `2026-10-21_us-evening`) slot kimliğidir. Boş slot yoksa rapora geç.
 3. **Planlayıcı:** Her boş slot için bir tema seç.

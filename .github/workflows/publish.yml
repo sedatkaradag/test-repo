@@ -11,11 +11,12 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,3 +34,20 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      # GitHub's cron runs can be delayed or skipped, so each run keeps watch until
+      # shortly before the next queued post (checking the queue every 15 minutes
+      # for newly added posts) and then starts the next run itself.
+      - name: Chain the next run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          end=$(( $(date +%s) + 5*3600 ))
+          while [ "$(date +%s)" -lt "$end" ]; do
+            git pull -q --rebase || true
+            w=$(python scripts/next_due.py)
+            if [ "$w" -le 900 ]; then sleep "$w"; break; fi
+            sleep 900
+          done
+          gh workflow run publish.yml --ref main
