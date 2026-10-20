@@ -38,7 +38,9 @@ cd scripts
 3. **Planlayıcı:** Her boş slot için bir tema seç.
    - `python3 calendar_info.py 3` → özel günler (Cuma, Ramazan, Zilhicce vb.) önceliklidir.
    - `history/posted.jsonl` son 20 kayıt ve `notes/strategy.md` (varsa) oku.
-   - `config.yaml` içindeki `mix` oranına uy; son 3 gönderinin temasını tekrarlama.
+   - Her slotun türü `config.yaml` → `slots[].type` ile sabittir (günde ayet / hadis /
+     ayet / hadis). `enqueue.py slots` çıktısında da yazar; başka tür seçme.
+   - Son 3 gönderinin temasını tekrarlama.
    - Tema örnekleri: patience, gratitude, mercy, du'a, kindness to parents, honesty,
      forgiveness, trust in Allah (tawakkul), remembrance (dhikr), good character,
      charity, prayer, Friday reminders, hope after hardship.
@@ -48,22 +50,31 @@ cd scripts
    - Görselde rahat okunacak uzunluk (yaklaşık 320 karakter altı).
    - Parça/eksik metin olmasın ("the above-mentioned hadith" gibi).
    - Seçimden önce `python3 find.py get <id>` ile tam kaydı oku.
-5. **Metin yazarı:** Caption'ı bir dosyaya yaz (ör. `/tmp/caption.txt`). Şablon:
+5. **Metin yazarı:** Caption'ı bir dosyaya yaz (ör. `/tmp/caption.txt`). Yapı:
    ```
    <Kanca cümlesi: en fazla 12 kelime, metinde olmayan iddia yok>
-   (Slot saatine göre ton: öğle slotu kısa ve enerjik, akşam slotu sakin ve tefekküre dönük.)
 
    <2-3 cümlelik sade İngilizce tefekkür; sadece metnin söylediğine dayanır>
 
    — <referans>  (hadis ise: "Sahih al-Bukhari 6018 · Grade: Sahih")
-   <Kur'an ise ayrı satır: "Translation: Rowwad Translation Center (QuranEnc.com)">
 
-   Save this as a reminder and share it with someone who needs it today.
+   <Kapanış cümlesi: her gönderide farklı>
 
-   #islam #<konuya özel 4-7 etiket>
+   <4-9 hashtag>
    ```
-   Metni caption'da tekrar alıntılayacaksan birebir veritabanındaki gibi olmalı.
-   En fazla 2 emoji. En fazla 10 hashtag.
+   - Ton slot saatine uysun: sabah ve öğle kısa ve enerjik, akşam sakin ve tefekküre dönük.
+   - **Link, alan adı ve meal/çeviri kaynağı yazma** (kod bunları reddeder).
+   - **Kapanış cümlesi** son 8 gönderidekilerin hiçbiriyle aynı olamaz (kod kontrol eder).
+     Hep "save this" deme; türleri değiştir: birine göndermeye çağır ("Send this to someone
+     who…"), soru sor ("Which one will you choose?"), yoruma davet et ("Name one…"),
+     kaydetmeye çağır ("Save it for the moment…"), küçük bir eyleme çağır ("Pick one small
+     deed today…"). İçeriğe özel olsun.
+   - **Hashtag'ler:** 4-9 adet; son 4 gönderiyle örtüşme %50'yi geçemez (kod kontrol eder).
+     Her gönderide en fazla 1-2 geniş etiket (#islam, #quran, #hadith gibi), gerisi konuya
+     özel ve orta/niş etiketler (#smileissadaqah, #morningdua, #muslimhabits gibi).
+     Son gönderilerin etiketlerine `python3 enqueue.py list` ve `queue/*.json` ile bak.
+   - Metni caption'da alıntılayacaksan birebir veritabanındaki gibi olmalı. En fazla 2 emoji.
+   - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
 6. **Denetçi (bağımsız alt ajan):** `Agent` aracıyla ayrı bir ajan başlat ve şu
    görevi ver (yerine id, dosya yolu yaz):
    > You are an independent reviewer for an Islamic Instagram page. Run

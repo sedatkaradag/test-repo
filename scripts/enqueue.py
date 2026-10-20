@@ -68,22 +68,50 @@ def queued():
     return items
 
 
-def check_caption(caption, entry):
+def hashtags(caption):
+    return {t.lower() for t in re.findall(r"#\w+", caption)}
+
+
+def closing_line(caption):
+    """The last paragraph before the hashtags (the call to action)."""
+    paras = [p.strip() for p in re.split(r"\n\s*\n", caption) if p.strip()]
+    paras = [p for p in paras if not p.startswith("#")]
+    return paras[-1].lower() if paras else ""
+
+
+def recent_captions(n=8, exclude_slot=None):
+    items = [i for i in queued() if i.get("slot") != exclude_slot]
+    items.sort(key=lambda i: i["publish_at"])
+    return [i["caption"] for i in items[-n:]]
+
+
+def check_caption(caption, entry, exclude_slot=None):
     problems = []
     if len(caption) > 2200:
         problems.append("caption longer than 2200 characters")
-    tags = re.findall(r"#\w+", caption)
-    if len(tags) > 10:
-        problems.append(f"{len(tags)} hashtags (max 10)")
+    tags = hashtags(caption)
+    if not 4 <= len(tags) <= 9:
+        problems.append(f"{len(tags)} hashtags (use 4-9)")
     if entry["reference"].split(" ")[-1] not in caption:
         problems.append(f"caption must cite the reference ({entry['reference']})")
-    if entry["type"] == "quran" and "QuranEnc" not in caption:
-        problems.append("Qur'an caption must credit 'Rowwad Translation Center (QuranEnc.com)'")
-    # Any long quotation in the caption must be copied from the database text.
+    if re.search(r"https?://|www\.|\b[\w-]+\.(com|org|net|io|co)\b", caption, re.I):
+        problems.append("no links or domain names in captions")
+    if re.search(r"translation\s*:|translated by|quranenc|rowwad", caption, re.I):
+        problems.append("do not name the translation source in the caption")
+    # Any quotation in the caption must be copied from the database text.
     src = re.sub(r"\W+", " ", entry["english"]).lower()
     for q in re.findall(r"[“\"]([^”\"]{8,})[”\"]", caption):
         if re.sub(r"\W+", " ", q).lower().strip() not in src:
             problems.append("caption quotes text that is not in the verified source")
+    # Variety: no repeated closing line, no near-identical hashtag sets.
+    recent = recent_captions(exclude_slot=exclude_slot)
+    if closing_line(caption) and closing_line(caption) in {closing_line(c) for c in recent}:
+        problems.append("closing line repeats one of the last 8 captions — phrase it differently")
+    for c in recent[-4:]:
+        other = hashtags(c)
+        if tags and other and len(tags & other) / len(tags | other) > 0.5:
+            problems.append("hashtags too similar to a recent post — rotate them")
+            break
     return problems
 
 
@@ -102,7 +130,7 @@ def cmd_add(a):
         sys.exit("REJECT: hadith grade not sahih/hasan")
 
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
-    problems = check_caption(caption, entry)
+    problems = check_caption(caption, entry, exclude_slot=a.slot)
     if problems:
         sys.exit("REJECT caption: " + "; ".join(problems))
 
@@ -114,6 +142,8 @@ def cmd_add(a):
         a.slot = f"{date_str}_manual-{when.strftime('%H%M')}"
     else:
         slot, date_str = slot_by_key(cfg, a.slot)
+        if slot.get("type") and slot["type"] != entry["type"]:
+            sys.exit(f"REJECT: slot {a.slot} takes {slot['type']}, not {entry['type']}")
         base = slot_utc(date_str, slot["time"], slot["tz"])
         if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20):
             sys.exit("REJECT: slot is in the past or too close")
@@ -148,6 +178,21 @@ def cmd_add(a):
     print(f"QUEUED {stem} {a.entry} -> {img}")
 
 
+def cmd_recaption(a):
+    """Replace the caption of a queued (not yet published) item, with all checks."""
+    path = QUEUE / f"{a.slot}.json"
+    item = json.loads(path.read_text(encoding="utf-8"))
+    if item["status"] != "ready":
+        sys.exit(f"REJECT: {a.slot} is {item['status']}")
+    caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
+    problems = check_caption(caption, get(item["entry_id"]), exclude_slot=a.slot)
+    if problems:
+        sys.exit("REJECT caption: " + "; ".join(problems))
+    item["caption"] = caption
+    path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"RECAPTIONED {a.slot}")
+
+
 def cmd_list(_):
     for i in queued():
         print(f"{i['publish_at']}  {i.get('slot', ''):<28} {i['status']:<13} {i['entry_id']:<24} {i.get('theme', '')}")
@@ -158,7 +203,7 @@ def cmd_slots(a):
     filled = {i.get("slot") for i in queued()}
     for when, key, s in upcoming_slots(cfg, a.days):
         if key not in filled:
-            print(f"EMPTY {key:<28} base {when.isoformat().replace('+00:00', 'Z')}  ({s['time']} {s['tz']})")
+            print(f"EMPTY {key:<28} {s.get('type', 'any'):<7} base {when.isoformat().replace('+00:00', 'Z')}  ({s['time']} {s['tz']})")
 
 
 if __name__ == "__main__":
@@ -170,8 +215,11 @@ if __name__ == "__main__":
     ad.add_argument("--caption-file", required=True)
     ad.add_argument("--theme", default="")
     ad.add_argument("--review", default="")
+    rc = sub.add_parser("recaption")
+    rc.add_argument("--slot", required=True)
+    rc.add_argument("--caption-file", required=True)
     sub.add_parser("list")
     sl = sub.add_parser("slots")
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
-    {"add": cmd_add, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
+    {"add": cmd_add, "recaption": cmd_recaption, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)

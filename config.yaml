@@ -8,24 +8,29 @@ jitter_minutes: 5
 
 # Paylaşım saatleri. Her slot kendi saat diliminde tanımlıdır, yaz/kış saati
 # geçişleri otomatik hesaplanır. Hedef kitle: ABD + Avrupa.
-# Günde 3 paylaşım: Avrupa sabahı, Avrupa akşamı/ABD öğlesi, ABD akşamı.
+# Günde 4 paylaşım, sırayla ayet / hadis / ayet / hadis. `type` o slota
+# hangi türün gireceğini belirler (enqueue.py bunu zorunlu tutar).
 slots:
   # Avrupa sabahı (işe gidiş) — ABD uyurken
   - name: eu-morning
     time: "08:15"
     tz: Europe/Berlin
+    type: quran
+  # Avrupa öğleden sonrası = ABD sabahı
+  - name: us-morning
+    time: "09:00"
+    tz: America/New_York
+    type: hadith
   # Avrupa akşamı (~19:00 Orta Avrupa) = ABD öğle arası
   - name: eu-evening-us-noon
     time: "13:00"
     tz: America/New_York
+    type: quran
   # ABD akşam prime-time (~20:30 Doğu) — Avrupa uyurken
   - name: us-evening
     time: "20:30"
     tz: America/New_York
-  # Avrupa gece kuşağı (~21:30) = ABD öğleden sonra
-  # - name: eu-late
-  #   time: "21:30"
-  #   tz: Europe/Berlin
+    type: hadith
 
 # true  -> paylaşmaz, sadece kuyruğu işaretler (önizleme ana ajandan istenir)
 # false -> Instagram'a gerçekten paylaşır
@@ -33,11 +38,6 @@ dry_run: false
 
 # true -> hiçbir şey paylaşılmaz (acil durdurma)
 paused: false
-
-# İçerik dengesi (yaklaşık oran)
-mix:
-  quran: 0.5
-  hadith: 0.5
 
 # Aynı ayet/hadis bu kadar gün içinde tekrar paylaşılmaz
 repeat_days: 365

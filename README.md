@@ -22,7 +22,7 @@ veritabanından gelir ve görsele kodla basılır.
 - `jitter_minutes`: her paylaşımın rastgele kaydırma aralığı (±dakika)
 - `dry_run: true`: Instagram'a paylaşmaz; önizlemeyi ana ajandan istersin. Canlıya geçince `false` yap.
 - `paused: true`: acil durdurma
-- `mix`: Kur'an / hadis oranı
+- `slots[].type`: her slota ayet mi hadis mi gireceği (günde ayet / hadis / ayet / hadis)
 
 ## Kurulum
 
@@ -79,8 +79,7 @@ python3 enqueue.py slots --days 2              # boş slotlar
   [fawazahmed0/quran-api](https://github.com/fawazahmed0/quran-api) (Unlicense). Yalnızca Kütüb-i Sitte
   (Buhârî, Müslim, Ebû Dâvûd, Tirmizî, Nesâî, İbn Mâce) kullanılır; Buhârî ve Müslim dışında Al-Albani / Zubair Ali Zai derecelerine göre süzülür; yalnızca sahih ve hasan kalır.
   İngilizce hadis tercümelerinin hakları çevirmenlerine aittir; her gönderide kaynak ve numara belirtilir.
-- Kur'an İngilizce meali: Rowwad Translation Center, [QuranEnc.com](https://quranenc.com) — değiştirmeden
-  ve kaynak belirterek yayımlanabilir; caption'da kaynak zorunludur.
+- Kur'an İngilizce meali: Rowwad Translation Center, [QuranEnc.com](https://quranenc.com) — değiştirmeden yayımlanabilir. QuranEnc şartları kaynağın belirtilmesini istiyor; caption'larda yazılmadığı için profil biyografisinde belirtilmesi önerilir.
 - Arapça Kur'an metni: Khaled Hosny quran-data; font: Amiri Quran.
 - Fontlar: Amiri, Amiri Quran, EB Garamond, Marcellus (SIL Open Font License, `assets/fonts/OFL.txt`).
 - Veritabanını yeniden üretmek için: `scripts/build_data.py`.
