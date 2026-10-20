@@ -1,0 +1,24 @@
+name: check-instagram
+
+# Manual test: confirms the Instagram secrets work without posting anything.
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Who am I and how much publishing quota is left
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$IG_ACCESS_TOKEN" ] || [ -z "$IG_USER_ID" ]; then
+            echo "::error::IG_ACCESS_TOKEN or IG_USER_ID secret is missing"; exit 1
+          fi
+          me=$(curl -s "https://graph.instagram.com/v26.0/me?fields=user_id,username,account_type&access_token=${IG_ACCESS_TOKEN}")
+          echo "account: $me"
+          echo "$me" | grep -q '"username"' || { echo "::error::token rejected"; exit 1; }
+          echo "$me" | grep -q "\"user_id\":\"${IG_USER_ID}\"" || echo "::warning::IG_USER_ID does not match the token's user_id"
+          limit=$(curl -s "https://graph.instagram.com/v26.0/${IG_USER_ID}/content_publishing_limit?fields=quota_usage,config&access_token=${IG_ACCESS_TOKEN}")
+          echo "publishing limit: $limit"
