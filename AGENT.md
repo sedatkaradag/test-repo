@@ -142,7 +142,8 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
    `url` = panel adresi, `asset: true`, `file_paths` = yeni `queue/*.jpg`, `queue/*_story.jpg`
    ve `queue/*.mp4` dosyaları. Dönen url'leri ilgili satır dosyasına ekle: gönderi görseli
    `image_url`, Story görseli `story_url`, Reels videosu `video_url` (Reels satırında
-   `image_url` olarak kaynak gönderinin görselini kullan).
+   `image_url` olarak kaynak gönderinin görselini kullan). Carousel'de tüm kartları
+   (`queue/<slot>_0.jpg` ... ) yükle: kapak `image_url`, hepsi sırayla `card_urls` listesi.
 3. `ArtifactData` ile yaz (`url` = panel adresi; önce `list` ile mevcut sürümleri oku,
    var olan belgelerde `if_version` ver; tek `batch` çağrısı kullan):
    - `queue/<slot>` ← `/tmp/panel/queue/<slot>.json` (zaten yüklü görseli tekrar yükleme;
