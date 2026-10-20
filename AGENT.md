@@ -88,7 +88,7 @@ cd scripts
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç.
 8. **Kaydet:**
    ```bash
-   cd .. && git add queue && git commit -m "content: <tarih> <id'ler>" && git push
+   cd .. && git add queue && git commit -m "content: <tarih> <id'ler>" && git pull --rebase && git push
    ```
 9. **Kontrol panelini güncelle** (aşağıdaki "Kontrol paneli" bölümü).
 10. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
