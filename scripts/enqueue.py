@@ -90,8 +90,8 @@ def check_caption(caption, entry, exclude_slot=None):
     if len(caption) > 2200:
         problems.append("caption longer than 2200 characters")
     tags = hashtags(caption)
-    if not 4 <= len(tags) <= 9:
-        problems.append(f"{len(tags)} hashtags (use 4-9)")
+    if not 3 <= len(tags) <= 5:
+        problems.append(f"{len(tags)} hashtags (use 3-5; more can reduce reach)")
     if entry["reference"].split(" ")[-1] not in caption:
         problems.append(f"caption must cite the reference ({entry['reference']})")
     if re.search(r"https?://|www\.|\b[\w-]+\.(com|org|net|io|co)\b", caption, re.I):

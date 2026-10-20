@@ -60,7 +60,7 @@ cd scripts
 
    <Kapanış cümlesi: her gönderide farklı>
 
-   <4-9 hashtag>
+   <3-5 hashtag>
    ```
    - Ton slot saatine uysun: sabah ve öğle kısa ve enerjik, akşam sakin ve tefekküre dönük.
    - **Link, alan adı ve meal/çeviri kaynağı yazma** (kod bunları reddeder).
@@ -69,9 +69,11 @@ cd scripts
      who…"), soru sor ("Which one will you choose?"), yoruma davet et ("Name one…"),
      kaydetmeye çağır ("Save it for the moment…"), küçük bir eyleme çağır ("Pick one small
      deed today…"). İçeriğe özel olsun.
-   - **Hashtag'ler:** 4-9 adet; son 4 gönderiyle örtüşme %50'yi geçemez (kod kontrol eder).
-     Her gönderide en fazla 1-2 geniş etiket (#islam, #quran, #hadith gibi), gerisi konuya
-     özel ve orta/niş etiketler (#smileissadaqah, #morningdua, #muslimhabits gibi).
+   - **Hashtag'ler:** 3-5 adet (2026'da 5'in üstü erişimi düşürebiliyor); son 4 gönderiyle
+     örtüşme %50'yi geçemez (kod kontrol eder). En fazla 1 geniş etiket (#quran, #hadith gibi),
+     gerisi konuya özel (#smileissadaqah, #morningdua, #muslimhabits gibi).
+   - **Arama için:** Kanca cümlesinde konunun aranan adı geçsin (patience, dua, forgiveness,
+     gratitude); Instagram araması etiketten çok caption kelimelerine bakıyor.
      Son gönderilerin etiketlerine `python3 enqueue.py list` ve `queue/*.json` ile bak.
    - Metni caption'da alıntılayacaksan birebir veritabanındaki gibi olmalı. En fazla 2 emoji.
    - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
