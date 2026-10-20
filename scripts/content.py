@@ -39,6 +39,7 @@ def get(entry_id):
             "id": entry_id,
             "verse": f"{a}-{b}",
             "arabic": " ".join(f"{v['arabic']} ﴿{_arabic_num(v['verse'])}﴾" for v in verses),
+            "arabic_display": " ".join(v["arabic_display"] for v in verses),
             "english": _join_verses([v["english"] for v in verses]),
             "length": sum(v["length"] for v in verses),
             "reference": f"Surah {first['surah_name']} {s}:{a}-{b}",

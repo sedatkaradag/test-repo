@@ -20,6 +20,8 @@ için bu dosyayı düzenlemen yeterli. Gönderi dili İngilizcedir.
    "say- ing"). Metni düzeltmek yasak; `integrity.py` bunları yakalar, başka içerik seç.
 8. Kur'an Arapçası veritabanı oluşturulurken Kral Fahd Kur'an Kompleksi (Medine Mushafı)
    metniyle harf harf karşılaştırılır; uyuşmayan tek bir ayet bile olursa veritabanı oluşmaz.
+   Kartlardaki Arapça, Kral Fahd Kompleksi'nin kendi Hafs metni (`arabic_display`, v18) ve
+   kendi Mushaf fontuyla çizilir; bu metin de saklı metinle harf harf karşılaştırılmıştır.
 
 ## Kurulum (her çalışmanın başında)
 
@@ -104,9 +106,13 @@ cd scripts
    >    with the Read tool. Compare what is drawn with the source text: for Qur'an,
    >    go through the Arabic word by word (no missing, extra, merged or split words,
    >    no missing or misplaced marks, nothing cut off at a line end). Zoom into each
-   >    pair of lines (crop 2x with Pillow): every pause mark (ۖ ۗ ۚ ۛ ۜ ۙ ۘ) must sit
-   >    above the word it follows, inside its own line, never touching or reading as part
-   >    of a word in the line above; a verse number ﴿n﴾ must not start a line. For both, the
+   >    pair of lines (crop 2.5x with Pillow) and check mark by mark: every vowel,
+   >    sukun, shadda, tanween, dagger alif, small waw/yaa, madd and small high meem on
+   >    the right letter, nothing floating, touching another line or cut off. The
+   >    card draws the King Fahd Complex text (`arabic_display`) with the Complex's own
+   >    font, so pause signs (ۖ ۗ ۚ ...) appear as in the Madinah Mushaf: each must sit
+   >    right after/above its own word. Only ۞ and ۩ are left out on purpose. The
+   >    verse-end number must stay with its verse. For both, the
    >    English on the card must be the source English. The reference line must match.
    > 3. Read `<caption dosyası>` and check spelling and grammar sentence by sentence.
    > Reject if: anything in steps 1-3 is wrong; the text could be misunderstood out of

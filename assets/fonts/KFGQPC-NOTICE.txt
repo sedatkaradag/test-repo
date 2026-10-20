@@ -1,0 +1,6 @@
+KFGQPC-UthmanicHafs-v18.ttf — "KFGQPC Uthmanic Script HAFS", version 0.18,
+King Fahd Glorious Qur'an Printing Complex (Madinah). Copyright (c) 2010 KFGQPC.
+ISBN 978-603-8010-15-0. Distributed by the Complex free of charge; it may not be
+sold, modified or reprogrammed. Used here unmodified, only to typeset the
+Complex's own Uthmani Hafs text (hafsData v18) on images.
+https://fonts.qurancomplex.gov.sa/

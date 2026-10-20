@@ -29,13 +29,13 @@ HANDLE = "@thehalalalgorithm"
 FONTS = ROOT / "assets" / "fonts"
 F_BODY = FONTS / "EBGaramond[wght].ttf"
 F_LABEL = FONTS / "Marcellus-Regular.ttf"
-F_QURAN = FONTS / "AmiriQuran-Regular.ttf"
+F_QURAN = FONTS / "KFGQPC-UthmanicHafs-v18.ttf"   # King Fahd Complex font (see KFGQPC-NOTICE.txt)
 F_ARABIC = FONTS / "Amiri-Regular.ttf"
 BG_PATH = ROOT / "assets" / "background.png"
 
 TEXT_LEFT, TEXT_RIGHT = 140, W - 140
 TEXT_TOP, TEXT_BOTTOM = 250, 1095
-ARABIC_LINE = 2.35  # Arabic line height in em (see _layout_arabic)
+ARABIC_LINE = 1.95  # Arabic line height in em (see _layout_arabic)
 
 
 class TooLong(Exception):
@@ -154,42 +154,25 @@ def _layout_english(text, size, max_w):
 
 
 def _arabic_words(text):
-    """Split on spaces, but keep a space that the source uses inside a word
-    (space + combining mark, e.g. a dagger alif) attached to that word.
+    """Split the KFGQPC Uthmani Hafs text into words for line wrapping.
 
-    The source encodes some dagger alifs as space + U+0670 + word joiner, a
-    spacing convention of its own font. For Amiri Quran the standard spelling
-    (the mark directly on the letter) renders correctly, so the space and joiner
-    are dropped. Display only: no letter or mark is changed."""
-    text = text.replace(" \u0670\u2060", "\u0670")
-    # The rub el hizb sign (۞) marks quarter-juz divisions in a printed Mushaf; it is
-    # not part of the verse and reads as a stray star on a single-verse card.
-    text = text.replace("\u06de ", "").replace("\u06de", "")
-    # Pause (waqf) signs ۖ ۗ ۘ ۙ ۚ ۛ and the prostration sign ۩ are recitation
-    # annotations that differ between Mushaf traditions (Madinah, Turkish, South
-    # Asian prints use different sets). They are not letters or vowels. In this
-    # font they sit at a fixed height high above the word and read as stray marks
-    # on a card, so cards leave them out. Letters and vowel marks are untouched.
-    text = re.sub(r" ?[\u06d6-\u06db\u06e9]", "", text)
-    words = []
-    for tok in text.split(" "):
-        # A token that starts with a mark belongs to the previous word; a verse
-        # number ﴿n﴾ stays with the verse it closes (never opens a line).
-        if words and tok and (unicodedata.category(tok[0]).startswith("M")
-                              or tok[0] in ("\u2060", "\ufd3f")):
-            words[-1] += " " + tok
-        elif tok:
-            words.append(tok)
-    return words
+    The text is the King Fahd Complex's own (hafsData v18), drawn with the
+    Complex's own font, so pause signs, madd, open tanween and the verse-end
+    number sit exactly as in the Madinah Mushaf. The verse number is joined to
+    its last word by a no-break space, so it never starts a line.
+    Display only, two Mushaf page annotations are left out: the rub el hizb ۞
+    (quarter-juz division) and the sajdah sign ۩. No letter or vowel changes."""
+    text = re.sub(r"\u06de[\u00a0 ]?", "", text)
+    text = re.sub(r" ?\u06e9", "", text)
+    return [w for w in text.split(" ") if w]
 
 
 def _layout_arabic(text, size, max_w, path):
     f = _font(path, size)
     lines = _wrap(_arabic_words(text), max_w,
                   lambda s: f.getlength(s, direction="rtl", language="ar"))
-    # Vowel marks reach about 1.25 em above the baseline and descenders 0.63 em
-    # below it; a tighter line pushes one line's marks into the line above.
-    # integrity.py measures the inked gap between lines on every card.
+    # The font's own line metrics are 1.76 em; integrity.py measures the inked
+    # gap between lines on every card so marks never reach the line above.
     return lines, int(size * ARABIC_LINE)
 
 
@@ -260,7 +243,7 @@ def render(entry_id, out_path):
     if is_quran:
         for ar_size in range(64, 41, -2):
             en_size = int(ar_size * 0.68)
-            a_lines, a_lh = _layout_arabic(e["arabic"], ar_size, max_w, F_QURAN)
+            a_lines, a_lh = _layout_arabic(e["arabic_display"], ar_size, max_w, F_QURAN)
             e_lines, e_lh = _layout_english(english, en_size, max_w)
             total = len(a_lines) * a_lh + 84 + len(e_lines) * e_lh
             if total <= avail:

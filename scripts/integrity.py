@@ -78,6 +78,8 @@ def text_issues(entry):
             hard.append(f"possible typo in the translation: {', '.join(bad)}")
         if not entry.get("arabic_verified"):
             hard.append("Arabic not verified against the Madinah Mushaf text")
+        if not entry.get("arabic_display_source"):
+            hard.append("no checked King Fahd Complex display text for this verse")
     elif unknown:
         flags.append(f"check these words are correct transliterations, not typos: {', '.join(unknown)}")
     return hard, flags
@@ -118,7 +120,7 @@ def render_issues(entry_id):
     L = R.LAST_LAYOUT
     e = get(entry_id)
     if e["type"] == "quran":
-        expected = R._arabic_words(e["arabic"])
+        expected = R._arabic_words(e["arabic_display"])
         drawn = [w for line in L["arabic_lines"] for w in line.split(" ") if w]
         if " ".join(drawn) != " ".join(expected):
             issues.append("drawn Arabic differs from the source text")
@@ -135,8 +137,8 @@ def render_issues(entry_id):
                 issues.append(f"Arabic line {n} starts with a verse number")
         # Pause marks sit high above the letters; they must stay clearly inside
         # their own line, never reach into (or near) the line above.
-        if re.search(r"[\u06d6-\u06db\u06e9]", " ".join(L["arabic_lines"])):
-            issues.append("a pause or prostration sign was drawn (cards leave them out)")
+        if re.search(r"[\u06de\u06e9]", " ".join(L["arabic_lines"])):
+            issues.append("a rub el hizb or sajdah sign was drawn (cards leave them out)")
         if "\u06dc" in e["arabic"]:
             issues.append("contains the small high seen (saktah / seen reading); choose another entry")
         boxes = L.get("arabic_boxes") or []
