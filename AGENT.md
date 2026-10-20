@@ -88,9 +88,31 @@ cd scripts
    ```bash
    cd .. && git add queue && git commit -m "content: <tarih> <id'ler>" && git push
    ```
-9. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
+9. **Kontrol panelini güncelle** (aşağıdaki "Kontrol paneli" bölümü).
+10. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
    sonra eklenenler (slot, id, tema). Sorun yoksa tek satır yeterli. Bu rapor
    çalışma bittiğinde sahibine bildirim olarak gider.
+
+## Kontrol paneli
+
+Panel: https://claude.ai/artifact/3t2rUDYs4j5aEiSAwc2NEJ (sahibin canlı takip sayfası).
+Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
+
+1. `python3 scripts/panel_rows.py /tmp/panel` → satır dosyaları.
+2. Yeni kuyruk görsellerini panele yükle: `Artifact` aracı, `action: "publish"`,
+   `url` = panel adresi, `asset: true`, `file_paths` = yeni `queue/*.jpg` dosyaları.
+   Dönen her `url`'yi ilgili satır dosyasına `image_url` olarak ekle.
+3. `ArtifactData` ile yaz (`url` = panel adresi; önce `list` ile mevcut sürümleri oku,
+   var olan belgelerde `if_version` ver; tek `batch` çağrısı kullan):
+   - `queue/<slot>` ← `/tmp/panel/queue/<slot>.json` (zaten yüklü görseli tekrar yükleme;
+     mevcut `image_url` değerini koru)
+   - `meta/state` ← `/tmp/panel/meta/state.json` + `last_content_run` (şimdiki UTC zamanı)
+   - `log/<YYYY-MM-DD>` ← o günün belgesinin `entries` listesine bu çalışmanın adımlarını
+     ekle (`{"ts", "agent", "text"}`; agent: Planlayıcı, Küratör, Metin yazarı, Denetçi,
+     Tasarımcı, Analist, Ana ajan). Belge yoksa `{"day": "...", "entries": [...]}` ile oluştur.
+4. 14 günden eski `queue/*` panel satırlarını ve 30 günden eski `log/*` belgelerini sil.
+
+Panel güncellemesi başarısız olursa işi durdurma; raporda belirt.
 
 ## Haftalık analist akışı (pazartesi)
 
