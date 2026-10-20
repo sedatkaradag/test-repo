@@ -88,8 +88,17 @@ class Instagram:
         c = self._call("POST", f"{self.user_id}/media", image_url=image_url, media_type="STORIES")["id"]
         return self._finish(c)
 
-    def _finish(self, c):
-        for _ in range(30):
+    def publish_reel(self, video_url, caption, trial=True):
+        params = dict(media_type="REELS", video_url=video_url, caption=caption)
+        if trial:
+            # Trial reels are shown to non-followers first; Instagram shares them
+            # with followers automatically if they perform well.
+            params["trial_params"] = json.dumps({"graduation_strategy": "SS_PERFORMANCE"})
+        c = self._call("POST", f"{self.user_id}/media", **params)["id"]
+        return self._finish(c, tries=120)
+
+    def _finish(self, c, tries=30):
+        for _ in range(tries):
             status = self._call("GET", c, fields="status_code").get("status_code")
             if status == "FINISHED":
                 break
@@ -173,7 +182,11 @@ def main():
                 media_id = None
                 for attempt in range(3):
                     try:
-                        media_id = ig.publish(url, item["caption"], item["alt_text"])
+                        if item.get("video"):
+                            vurl = f"https://raw.githubusercontent.com/{repo}/main/{item['video']}"
+                            media_id = ig.publish_reel(vurl, item["caption"], item.get("trial", True))
+                        else:
+                            media_id = ig.publish(url, item["caption"], item["alt_text"])
                         break
                     except Exception as e:  # noqa: BLE001
                         print(f"attempt {attempt + 1} failed: {e}")
@@ -182,7 +195,7 @@ def main():
                         time.sleep(30 * (attempt + 1))
                 telegram(f"✅ Posted {item['reference']} ({item['entry_id']})")
                 # Same post as a Story; a failed Story never fails the feed post.
-                if cfg.get("stories", True) and item.get("story_image"):
+                if cfg.get("stories", True) and item.get("story_image") and not item.get("video"):
                     try:
                         surl = f"https://raw.githubusercontent.com/{repo}/main/{item['story_image']}"
                         item["story_media_id"] = ig.publish_story(surl)

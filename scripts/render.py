@@ -287,3 +287,73 @@ if __name__ == "__main__":
     except TooLong:
         print("too_long: pick a shorter entry")
         sys.exit(3)
+
+
+# ---------- Reels (silent, 9:16) ----------
+
+def render_reel(entry_id, out_path, seconds=10, fps=30, label="DAILY REMINDER"):
+    """Silent 1080x1920 MP4: the post's text is revealed top to bottom, then the
+    reference fades in and the finished card holds. Same template as the feed."""
+    import subprocess
+    import tempfile
+
+    import numpy as np
+
+    tmp = Path(tempfile.mkdtemp())
+    full_path = render(entry_id, tmp / "full.jpg")
+    full = np.asarray(Image.open(full_path).convert("RGB"), dtype=np.float32)
+    bgimg = np.asarray(background(), dtype=np.float32)
+    base = full.copy()
+    text_top, text_bot, ref_top, ref_bot = 230, 1120, 1135, 1205
+    base[text_top:text_bot] = bgimg[text_top:text_bot]
+    base[ref_top:ref_bot] = bgimg[ref_top:ref_bot]
+
+    sw, sh = 1080, 1920
+    scale = 0.9
+    pw, ph = int(W * scale), int(H * scale)
+    ox, oy = (sw - pw) // 2, (sh - ph) // 2 + 40
+    canvas = Image.new("RGB", (sw, sh), BG)
+    d = ImageDraw.Draw(canvas)
+    f = _font(F_LABEL, 34)
+    widths = [f.getlength(c) for c in label]
+    x = (sw - (sum(widths) + 8 * (len(label) - 1))) / 2
+    for c, w in zip(label, widths):
+        d.text((x, oy - 110), c, font=f, fill=GOLD)
+        x += w + 8
+    canvas = np.asarray(canvas, dtype=np.float32)
+
+    rows = np.arange(H, dtype=np.float32)[:, None, None]
+    # Reveal only across the rows that actually hold text, so short texts do not
+    # sit on an empty card for seconds.
+    ink = np.abs(full[text_top:text_bot] - bgimg[text_top:text_bot]).max(axis=(1, 2)) > 40
+    idx = np.nonzero(ink)[0]
+    if len(idx):
+        text_top, text_bot = text_top + int(idx[0]) - 20, text_top + int(idx[-1]) + 30
+    span = text_bot - text_top
+    cmd = ["ffmpeg", "-y", "-loglevel", "error",
+           "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{sw}x{sh}", "-r", str(fps), "-i", "-",
+           "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+           "-shortest", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "21", "-preset", "medium",
+           "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", str(out_path)]
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    for i in range(seconds * fps):
+        t = i / fps
+        p = min(1.0, max(0.0, (t - 0.6) / 5.0))          # text reveal 0.6s -> 5.6s
+        edge = text_top + p * span
+        m = np.clip((edge - rows) / 70.0 + 0.5, 0, 1)   # soft 70px edge
+        m[:text_top] = 1
+        m[text_bot:] = 0
+        r = min(1.0, max(0.0, (t - 5.9) / 0.8))          # reference 5.9s -> 6.7s
+        m[ref_top:ref_bot] = r
+        card = base * (1 - m) + full * m
+        frame = canvas.copy()
+        small = np.asarray(Image.fromarray(card.astype(np.uint8)).resize((pw, ph), Image.LANCZOS), dtype=np.float32)
+        frame[oy:oy + ph, ox:ox + pw] = small
+        fade = min(1.0, t / 0.5)
+        if fade < 1:
+            frame = frame * fade + np.array(BG, dtype=np.float32) * (1 - fade)
+        proc.stdin.write(frame.astype(np.uint8).tobytes())
+    proc.stdin.close()
+    if proc.wait() != 0:
+        raise RuntimeError("ffmpeg failed")
+    return out_path

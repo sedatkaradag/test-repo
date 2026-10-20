@@ -1,0 +1,32 @@
+name: check-reel
+
+# Manual test: creates a trial-Reel container from assets/test/reel_test.mp4 and
+# reports whether Instagram accepted the video. Nothing is published.
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create container only (no publish)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/assets/test/reel_test.mp4"
+          resp=$(curl -s -X POST "https://graph.instagram.com/v26.0/${IG_USER_ID}/media" \
+            --data-urlencode "media_type=REELS" --data-urlencode "video_url=${url}" \
+            --data-urlencode "caption=test (not published)" \
+            --data-urlencode 'trial_params={"graduation_strategy":"SS_PERFORMANCE"}' \
+            --data-urlencode "access_token=${IG_ACCESS_TOKEN}")
+          id=$(echo "$resp" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))")
+          if [ -z "$id" ]; then echo "::error::create failed: $(echo "$resp" | head -c 300)"; exit 1; fi
+          for i in $(seq 1 60); do
+            st=$(curl -s "https://graph.instagram.com/v26.0/${id}?fields=status_code,status&access_token=${IG_ACCESS_TOKEN}")
+            code=$(echo "$st" | python3 -c "import sys,json; print(json.load(sys.stdin).get('status_code',''))")
+            if [ "$code" = "FINISHED" ]; then echo "::notice::reel container FINISHED (video accepted, not published)"; exit 0; fi
+            if [ "$code" = "ERROR" ] || [ "$code" = "EXPIRED" ]; then echo "::error::container $code: $(echo "$st" | head -c 300)"; exit 1; fi
+            sleep 10
+          done
+          echo "::error::container still processing after 10 minutes"; exit 1

@@ -102,6 +102,13 @@ cd scripts
    `REJECT` dönerse nedenine göre düzelt ya da başka içerik seç.
    Sonra oluşan `queue/*.jpg` dosyasını **Read ile açıp bak**: taşma, kutucuk
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç.
+7b. **Günün Reels'i:** `slots` çıktısında `reel` türünde boş slot varsa, aynı günün onaylı
+   gönderilerinden en çok paylaşılmaya uygun olanı seç (kısa, evrensel, güçlü kanca).
+   Reels için **ayrı ve farklı** bir caption yaz (ilk satır izleyiciyi durduran kanca,
+   sonra 1-2 cümle, kapanış, 3-5 etiket); denetçi bu caption'ı da aynı kurallarla incelesin
+   ve kararı `review_log.py` ile kaydet. Sonra:
+   `python3 enqueue.py add-reel --source <gönderi slotu> --slot <tarih>_reel --caption-file <dosya> --review "<özet>"`
+   Video sessiz, aynı şablon; metin yukarıdan aşağı belirir. Metin değişmez, yeni hadis/ayet yok.
 8. **Kaydet:**
    ```bash
    cd .. && git add queue history && git commit -m "content: <tarih> <id'ler>" && git pull --rebase && git push

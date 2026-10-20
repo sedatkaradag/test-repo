@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from content import ROOT, get, used_ids
-from render import TooLong, make_story, render
+from render import TooLong, make_story, render, render_reel
 
 QUEUE = ROOT / "queue"
 
@@ -41,17 +41,25 @@ def slot_utc(date_str, slot, tz):
 def slot_by_key(cfg, key):
     """'2026-10-21_us-evening' -> (slot dict, local date)."""
     date_str, _, name = key.partition("_")
-    for s in cfg["slots"]:
+    for s in all_slots(cfg):
         if s["name"] == name:
             return s, date_str
     raise SystemExit(f"REJECT: unknown slot '{name}' (see config.yaml)")
+
+
+def all_slots(cfg):
+    slots = list(cfg["slots"])
+    reels = cfg.get("reels") or {}
+    if reels.get("enabled") and reels.get("slot"):
+        slots.append({**reels["slot"], "type": "reel"})
+    return slots
 
 
 def upcoming_slots(cfg, days):
     """All slot keys from now until `days` ahead, with their base UTC time."""
     now = dt.datetime.now(dt.timezone.utc)
     out = []
-    for s in cfg["slots"]:
+    for s in all_slots(cfg):
         today = dt.datetime.now(ZoneInfo(s["tz"])).date()
         for d in range(days + 1):
             day = (today + dt.timedelta(days=d)).isoformat()
@@ -182,6 +190,49 @@ def cmd_add(a):
     print(f"QUEUED {stem} {a.entry} -> {img}")
 
 
+def cmd_add_reel(a):
+    """Silent Reel from an already approved post of the same day (no new text)."""
+    cfg = config()
+    src = json.loads((QUEUE / f"{a.source}.json").read_text(encoding="utf-8"))
+    entry = get(src["entry_id"])
+    slot, date_str = slot_by_key(cfg, a.slot)
+    if slot.get("type") != "reel":
+        sys.exit(f"REJECT: {a.slot} is not the reel slot")
+    base = slot_utc(date_str, slot["time"], slot["tz"])
+    if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
+        sys.exit("REJECT: slot is in the past or too close")
+    if (QUEUE / f"{a.slot}.json").exists():
+        sys.exit(f"REJECT: slot {a.slot} already filled")
+    caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
+    problems = check_caption(caption, entry, exclude_slot=a.slot)
+    if problems:
+        sys.exit("REJECT caption: " + "; ".join(problems))
+    jitter = int(cfg.get("jitter_minutes", 0)) * 60
+    when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
+    video = QUEUE / f"{a.slot}.mp4"
+    render_reel(src["entry_id"], video)
+    item = {
+        "entry_id": src["entry_id"],
+        "type": "reel",
+        "source_slot": a.source,
+        "reference": entry["reference"],
+        "slot": a.slot,
+        "publish_at": when.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "local_slot": f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
+        "image": src["image"],
+        "video": f"queue/{a.slot}.mp4",
+        "trial": bool((cfg.get("reels") or {}).get("trial", True)),
+        "caption": caption,
+        "alt_text": src.get("alt_text", ""),
+        "theme": src.get("theme", ""),
+        "review": a.review,
+        "status": "ready",
+        "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+    }
+    (QUEUE / f"{a.slot}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"QUEUED REEL {a.slot} from {a.source} -> {video}")
+
+
 def cmd_recaption(a):
     """Replace the caption of a queued (not yet published) item, with all checks."""
     path = QUEUE / f"{a.slot}.json"
@@ -219,6 +270,11 @@ if __name__ == "__main__":
     ad.add_argument("--caption-file", required=True)
     ad.add_argument("--theme", default="")
     ad.add_argument("--review", default="")
+    ar = sub.add_parser("add-reel")
+    ar.add_argument("--source", required=True, help="slot key of an approved post (same day)")
+    ar.add_argument("--slot", required=True, help="reel slot key, e.g. 2026-10-21_reel")
+    ar.add_argument("--caption-file", required=True)
+    ar.add_argument("--review", default="")
     rc = sub.add_parser("recaption")
     rc.add_argument("--slot", required=True)
     rc.add_argument("--caption-file", required=True)
@@ -226,4 +282,4 @@ if __name__ == "__main__":
     sl = sub.add_parser("slots")
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
-    {"add": cmd_add, "recaption": cmd_recaption, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
+    {"add": cmd_add, "add-reel": cmd_add_reel, "recaption": cmd_recaption, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
