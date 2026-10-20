@@ -40,6 +40,9 @@ class TooLong(Exception):
     pass
 
 
+LAST_LAYOUT = {}
+
+
 # ---------- background (fixed theme) ----------
 
 def _star(draw, cx, cy, r, color, width):
@@ -157,6 +160,9 @@ def _arabic_words(text):
     (the mark directly on the letter) renders correctly, so the space and joiner
     are dropped. Display only: no letter or mark is changed."""
     text = text.replace(" \u0670\u2060", "\u0670")
+    # The rub el hizb sign (۞) marks quarter-juz divisions in a printed Mushaf; it is
+    # not part of the verse and reads as a stray star on a single-verse card.
+    text = text.replace("\u06de ", "").replace("\u06de", "")
     words = []
     for tok in text.split(" "):
         if words and tok and (unicodedata.category(tok[0]).startswith("M") or tok[0] == "\u2060"):
@@ -232,6 +238,7 @@ def render(entry_id, out_path):
 
     # Fit text: shrink until everything fits in the text box.
     plan = None
+    narrator = None
     if is_quran:
         for ar_size in range(66, 47, -2):
             en_size = int(ar_size * 0.68)
@@ -258,6 +265,11 @@ def render(entry_id, out_path):
         raise TooLong(entry_id)
 
     a_lines, ar_size, a_lh, e_lines, en_size, e_lh, total = plan
+    global LAST_LAYOUT
+    LAST_LAYOUT = {"entry_id": entry_id, "arabic_lines": a_lines or [], "arabic_size": ar_size,
+                   "arabic_font": str(F_QURAN), "english_lines": e_lines, "english_size": en_size,
+                   "english_text": english, "narrator": narrator,
+                   "max_w": max_w}
     y = TEXT_TOP + (avail - total) / 2
     if a_lines:
         y = _draw_arabic(d, a_lines, ar_size, a_lh, y, IVORY, F_QURAN)

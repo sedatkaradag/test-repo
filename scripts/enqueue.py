@@ -25,8 +25,29 @@ import yaml
 
 from content import ROOT, get, used_ids
 from render import TooLong, make_story, render, render_cover, render_reel
+from integrity import check as integrity_check, unknown_lowercase
 
 QUEUE = ROOT / "queue"
+
+# Islamic terms that are correct in English captions but unknown to a dictionary.
+CAPTION_TERMS = {
+    "dua", "duas", "du'a", "sabr", "shukr", "tawbah", "tawakkul", "dhikr", "sunnah", "deen",
+    "akhlaq", "ibadah", "alhamdulillah", "subhanallah", "insha", "inshallah", "mashallah",
+    "jazakallah", "khair", "jumu", "ah", "salah", "salat", "sadaqah", "zakah", "ummah",
+    "imaan", "iman", "taqwa", "jannah", "akhirah", "dunya", "qur", "an", "hadith", "ahadith",
+    "ayah", "ayat", "surah", "ramadan", "eid", "hajj", "umrah", "astaghfirullah",
+}
+
+
+def require_integrity(entry_ids):
+    """Hard stop on any text or rendering problem; return verifier flags."""
+    flags = []
+    for i in entry_ids:
+        hard, f = integrity_check(i)
+        if hard:
+            sys.exit(f"REJECT integrity {i}: " + "; ".join(hard))
+        flags += [f"{i}: {x}" for x in f]
+    return flags
 
 
 def config():
@@ -112,6 +133,11 @@ def check_caption(caption, entry, exclude_slot=None):
         problems.append("no links or domain names in captions")
     if re.search(r"translation\s*:|translated by|quranenc|rowwad", caption, re.I):
         problems.append("do not name the translation source in the caption")
+    # Spelling: every lowercase word outside hashtags must be a real word or a known term.
+    body = re.sub(r"#\w+", " ", caption)
+    odd = [w for w in unknown_lowercase(body) if w not in CAPTION_TERMS]
+    if odd:
+        problems.append(f"possible spelling mistake in caption: {', '.join(odd)}")
     # Any quotation in the caption must be copied from the database text.
     src = re.sub(r"\W+", " ", entry["english"]).lower()
     for q in re.findall(r"[“\"]([^”\"]{8,})[”\"]", caption):
@@ -142,6 +168,7 @@ def cmd_add(a):
         sys.exit(f"REJECT: {a.entry} was posted or queued recently")
     if entry["type"] == "hadith" and entry["status"] not in ("sahih", "hasan"):
         sys.exit("REJECT: hadith grade not sahih/hasan")
+    flags = require_integrity([a.entry])
 
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
     problems = check_caption(caption, entry, exclude_slot=a.slot)
@@ -189,11 +216,15 @@ def cmd_add(a):
         "alt_text": f"{entry['english'][:900]} — {entry['reference']}",
         "theme": a.theme,
         "review": a.review,
+        "flags": flags,
+        "integrity": "passed",
         "status": "ready",
         "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
     }
     (QUEUE / f"{stem}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"QUEUED {stem} {a.entry} -> {img}")
+    for f in flags:
+        print(f"FLAG {f}")
 
 
 def cmd_add_reel(a):
@@ -201,6 +232,7 @@ def cmd_add_reel(a):
     cfg = config()
     src = json.loads((QUEUE / f"{a.source}.json").read_text(encoding="utf-8"))
     entry = get(src["entry_id"])
+    require_integrity([src["entry_id"]])
     slot, date_str = slot_by_key(cfg, a.slot)
     if slot.get("type") != "reel":
         sys.exit(f"REJECT: {a.slot} is not the reel slot")
@@ -262,8 +294,13 @@ def cmd_add_carousel(a):
         if i in recent:
             sys.exit(f"REJECT: {i} was posted or queued recently")
         entries.append(e)
+    flags = require_integrity(ids)
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
     problems = []
+    body = re.sub(r"#\w+", " ", caption)
+    odd = [w for w in unknown_lowercase(body) if w not in CAPTION_TERMS]
+    if odd:
+        problems.append(f"possible spelling mistake in caption: {', '.join(odd)}")
     if len(caption) > 2200:
         problems.append("caption longer than 2200 characters")
     for e in entries:
@@ -308,6 +345,8 @@ def cmd_add_carousel(a):
         "alt_text": a.title,
         "theme": a.theme,
         "review": a.review,
+        "flags": flags,
+        "integrity": "passed",
         "status": "ready",
         "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
     }

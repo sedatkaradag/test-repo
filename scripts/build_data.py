@@ -5,8 +5,10 @@ Usage:
 
 <hadith_dir> holds eng-<collection>.json and ara-<collection>.json files from
 https://github.com/fawazahmed0/hadith-api (editions/*.min.json).
-<quran_dir> holds ara-qurankhaledhosn.json, eng-rowwadtranslati.json and
-info.json from https://github.com/fawazahmed0/quran-api.
+<quran_dir> holds ara-qurankhaledhosn.json (display text, made for Amiri Quran),
+ara-quranuthmanihaf.json (King Fahd Complex text, used as the reference every
+verse is checked against), eng-rowwadtranslati.json and info.json from
+https://github.com/fawazahmed0/quran-api.
 
 Output (committed to the repo, read-only at runtime):
     data/hadith.jsonl.gz   only hadith graded sahih or hasan
@@ -16,6 +18,7 @@ import gzip
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -107,16 +110,48 @@ def build_hadith(src):
     return out
 
 
+_SKEL_MAP = str.maketrans({"ٱ": "ا", "أ": "ا", "إ": "ا", "آ": "ا", "ى": "ي", "ی": "ي",
+                           "ئ": "ي", "ؤ": "و", "ک": "ك", "ھ": "ه", "ۀ": "ه"})
+
+
+def skeleton(text):
+    """Letters only (no marks, spacing or orthographic variants), for comparing
+    two independent copies of the same verse."""
+    out = []
+    for ch in unicodedata.normalize("NFC", text):
+        cat = unicodedata.category(ch)
+        if cat[0] in "MPS" or cat in ("Cf", "Lm", "Zs", "Nd") or ch in "ـ۞۩ء":
+            continue
+        out.append(ch)
+    return "".join(out).translate(_SKEL_MAP)
+
+
 def build_quran(src):
     ara = json.loads((src / "ara-qurankhaledhosn.json").read_text(encoding="utf-8"))["quran"]
+    ref = json.loads((src / "ara-quranuthmanihaf.json").read_text(encoding="utf-8"))["quran"]
     eng = json.loads((src / "eng-rowwadtranslati.json").read_text(encoding="utf-8"))["quran"]
     info = json.loads((src / "info.json").read_text(encoding="utf-8"))
     names = {c["chapter"]: c for c in info["chapters"]}
     eng_by = {(v["chapter"], v["verse"]): clean(v["text"]) for v in eng}
-    out = []
+    ref_by = {(v["chapter"], v["verse"]): v["text"] for v in ref}
+    # The Bismillah is taken from the source itself (verse 1:1), never typed by hand.
+    basmala = clean(next(v["text"] for v in ara if (v["chapter"], v["verse"]) == (1, 1)))
+    out, stripped = [], 0
     for v in ara:
         c, n = v["chapter"], v["verse"]
         ch = names[c]
+        arabic = clean(v["text"])
+        # The source prefixes the Bismillah to verse 1 of every surah except 1 and 9;
+        # it is not part of those verses.
+        # (Matched by its letters: the prefix's diacritics vary slightly between surahs.)
+        words = arabic.split(" ")
+        if (n == 1 and c not in (1, 9) and skeleton(" ".join(words[:4])) == skeleton(basmala)
+                and skeleton(" ".join(words[4:])) == skeleton(ref_by[(c, n)])):
+            arabic = " ".join(words[4:])
+            stripped += 1
+        # Every verse must match the King Fahd Complex (Madinah Mushaf) text letter for letter.
+        if skeleton(arabic) != skeleton(ref_by[(c, n)]):
+            raise SystemExit(f"ARABIC MISMATCH {c}:{n} — refusing to build")
         en = eng_by[(c, n)]
         out.append({
             "id": f"quran:{c}:{n}",
@@ -125,12 +160,13 @@ def build_quran(src):
             "verse": n,
             "surah_name": ch["name"],
             "surah_english": ch["englishname"],
-            "arabic": clean(v["text"]),
+            "arabic": arabic,
             "english": en,
             "length": len(en),
             "reference": f"Surah {ch['name']} {c}:{n}",
+            "arabic_verified": "King Fahd Complex Uthmani Hafs (letters)",
         })
-    print(f"quran: {len(out)} verses")
+    print(f"quran: {len(out)} verses, all match the Madinah Mushaf text; Bismillah removed from {stripped} verse 1s")
     return out
 
 

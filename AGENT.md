@@ -16,12 +16,16 @@ için bu dosyayı düzenlemen yeterli. Gönderi dili İngilizcedir.
 5. Ayet "and", "so", "then" veya küçük harfle başlıyorsa tek başına kullanma;
    anlam tamamlanacak şekilde aralık seç (ör. `quran:65:2-3`). Aralık en fazla 5 ayet.
 6. Bir yanlışlık şüphesi varsa o slotu boş bırak ve raporla. Boş slot, hatalı gönderiden iyidir.
+7. **Kaynak metinde yazım hatası varsa o içeriği kullanma** (ör. çeviride "meas", hadiste
+   "say- ing"). Metni düzeltmek yasak; `integrity.py` bunları yakalar, başka içerik seç.
+8. Kur'an Arapçası veritabanı oluşturulurken Kral Fahd Kur'an Kompleksi (Medine Mushafı)
+   metniyle harf harf karşılaştırılır; uyuşmayan tek bir ayet bile olursa veritabanı oluşmaz.
 
 ## Kurulum (her çalışmanın başında)
 
 ```bash
 cd <repo klasörü> && git pull
-pip install --break-system-packages -q pyyaml hijridate fonttools pillow
+pip install --break-system-packages -q pyyaml hijridate fonttools pillow uharfbuzz pyspellchecker numpy
 python3 -c "from PIL import features; assert features.check('raqm'), 'raqm missing'"
 cd scripts
 ```
@@ -84,16 +88,28 @@ cd scripts
    - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
 6. **Denetçi (bağımsız alt ajan):** `Agent` aracıyla ayrı bir ajan başlat ve şu
    görevi ver (yerine id, dosya yolu yaz):
-   > You are an independent reviewer for an Islamic Instagram page. Run
-   > `cd <repo>/scripts && python3 find.py get <ID>` and read `<caption dosyası>`.
-   > Reject if: the text could be misunderstood out of context (war, punishments,
-   > slavery, event-specific rulings, easily distorted gender rulings); a Qur'an
-   > excerpt starts mid-sentence; the caption adds claims, rulings or scholarly
-   > opinions not in the text; the caption misquotes the text; the reference or
-   > grade is wrong; the tone is sensational; for hadith, the narrator named in the
-   > English text does not match the narrator in the Arabic chain (`arabic` field)
-   > — the image would show the wrong name. Reply only with JSON:
-   > {"verdict": "approve" | "reject", "reasons": ["..."]}
+   > You are an independent reviewer for an Islamic Instagram page. Mistakes are not
+   > acceptable here: a wrong word in a verse or hadith is a serious error.
+   > 1. Run `cd <repo>/scripts && python3 find.py get <ID>` and
+   >    `python3 integrity.py <ID>`. Any "hard" issue = reject. Read every "flag" and
+   >    judge it (a flagged word must be a correct transliteration, not a typo).
+   > 2. Render the card: `python3 render.py <ID> /tmp/review_<n>.jpg` and OPEN the image
+   >    with the Read tool. Compare what is drawn with the source text: for Qur'an,
+   >    go through the Arabic word by word (no missing, extra, merged or split words,
+   >    no missing or misplaced marks, nothing cut off at a line end); for both, the
+   >    English on the card must be the source English. The reference line must match.
+   > 3. Read `<caption dosyası>` and check spelling and grammar sentence by sentence.
+   > Reject if: anything in steps 1-3 is wrong; the text could be misunderstood out of
+   > context (war, punishments, slavery, event-specific rulings, easily distorted gender
+   > rulings); a Qur'an excerpt starts mid-sentence; the caption adds claims, rulings or
+   > scholarly opinions not in the text, or misquotes it; the reference or grade is
+   > wrong; the tone is sensational; for hadith, the narrator named in the English text
+   > does not match the narrator in the Arabic chain (`arabic` field).
+   > Reply only with JSON:
+   > {"verdict": "approve" | "reject", "arabic_checked": true | false, "reasons": ["..."]}
+   `arabic_checked` Kur'an içeriklerinde mutlaka `true` olmalı; değilse red say.
+   `enqueue.py` kuyruğa eklemeden önce `integrity.py` kontrollerini kendisi de çalıştırır
+   ve herhangi bir sorun varsa reddeder. Bu, denetçinin yerine geçmez; ikisi birlikte zorunlu.
    **Her kararı kaydet** (onay da red de):
    `python3 review_log.py --entry <ID> --slot <slot> --verdict approve|reject --round <tur> --reasons "<gerekçe 1> | <gerekçe 2>"`
    Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur). Üçüncüde de red
