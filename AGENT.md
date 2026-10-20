@@ -119,9 +119,9 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
    var olan belgelerde `if_version` ver; tek `batch` çağrısı kullan):
    - `queue/<slot>` ← `/tmp/panel/queue/<slot>.json` (zaten yüklü görseli tekrar yükleme;
      mevcut `image_url` değerini koru)
-   - `meta/state` ← `/tmp/panel/meta/state.json` + `last_content_run` (şimdiki UTC zamanı)
+   - `meta/state` ← `/tmp/panel/meta/state.json` (çalışma saatini script saatten damgalar; elle yazma)
    - `log/<YYYY-MM-DD>` ← o günün belgesinin `entries` listesine bu çalışmanın adımlarını
-     ekle (`{"ts", "agent", "text"}`; agent: Planlayıcı, Küratör, Metin yazarı, Denetçi,
+     ekle (`{"ts", "agent", "text"}`; `ts` değerini `date -u +%Y-%m-%dT%H:%M:%SZ` ile al, tahmin etme; agent: Planlayıcı, Küratör, Metin yazarı, Denetçi,
      Tasarımcı, Analist, Ana ajan). Belge yoksa `{"day": "...", "entries": [...]}` ile oluştur.
 4. 14 günden eski `queue/*` panel satırlarını ve 30 günden eski `log/*` belgelerini sil.
 

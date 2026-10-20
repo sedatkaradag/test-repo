@@ -7,6 +7,7 @@ Output: <out_dir>/queue/<slot>.json and <out_dir>/meta/state.json.
 image_url is not included: the agent uploads the JPEG as a panel asset and
 adds the returned url.
 """
+import datetime as dt
 import json
 import sys
 from pathlib import Path
@@ -28,6 +29,8 @@ def main(out):
         (out / "queue" / f"{p.stem}.json").write_text(json.dumps(row, ensure_ascii=False), encoding="utf-8")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     state = {k: cfg.get(k) for k in ("dry_run", "paused", "slots", "jitter_minutes")}
+    # Stamped from the clock, never typed by hand.
+    state["last_content_run"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     (out / "meta" / "state.json").write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
     print(f"rows written to {out}")
 
