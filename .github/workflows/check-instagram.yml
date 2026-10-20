@@ -1,6 +1,7 @@
 name: check-instagram
 
-# Manual test: confirms the Instagram secrets work without posting anything.
+# Manual test: confirms which Instagram capabilities the token actually has.
+# Read-only — nothing is posted, replied to or changed.
 on:
   workflow_dispatch:
 
@@ -8,17 +9,23 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Who am I and how much publishing quota is left
+      - name: Check token capabilities
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: |
-          if [ -z "$IG_ACCESS_TOKEN" ] || [ -z "$IG_USER_ID" ]; then
-            echo "::error::IG_ACCESS_TOKEN or IG_USER_ID secret is missing"; exit 1
-          fi
-          me=$(curl -s "https://graph.instagram.com/v26.0/me?fields=user_id,username,account_type&access_token=${IG_ACCESS_TOKEN}")
-          echo "account: $me"
-          echo "$me" | grep -q '"username"' || { echo "::error::token rejected"; exit 1; }
-          echo "$me" | grep -q "\"user_id\":\"${IG_USER_ID}\"" || echo "::warning::IG_USER_ID does not match the token's user_id"
-          limit=$(curl -s "https://graph.instagram.com/v26.0/${IG_USER_ID}/content_publishing_limit?fields=quota_usage,config&access_token=${IG_ACCESS_TOKEN}")
-          echo "publishing limit: $limit"
+          B="https://graph.instagram.com/v26.0"
+          T="access_token=${IG_ACCESS_TOKEN}"
+          ok() { echo "::notice::OK $1"; }
+          bad() { echo "::warning::NO $1 — $(echo "$2" | python3 -c "import sys,json; e=json.load(sys.stdin).get('error',{}); print(e.get('message','')[:160])")"; }
+          me=$(curl -s "$B/me?fields=user_id,username,account_type&$T")
+          echo "$me" | grep -q '"username"' && ok "basic (profile): $(echo "$me" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('username'), d.get('account_type'))")" || { bad "basic" "$me"; exit 1; }
+          lim=$(curl -s "$B/${IG_USER_ID}/content_publishing_limit?fields=quota_usage&$T")
+          echo "$lim" | grep -q '"data"' && ok "content publishing (quota readable: $(echo "$lim" | head -c 80))" || bad "content publishing" "$lim"
+          media=$(curl -s "$B/${IG_USER_ID}/media?fields=id,media_type,timestamp&limit=1&$T")
+          mid=$(echo "$media" | python3 -c "import sys,json; d=json.load(sys.stdin).get('data',[]); print(d[0]['id'] if d else '')")
+          [ -n "$mid" ] && ok "media list (latest $mid)" || { bad "media list" "$media"; exit 0; }
+          com=$(curl -s "$B/${mid}/comments?fields=id&$T")
+          echo "$com" | grep -q '"data"' && ok "comments read" || bad "comments read" "$com"
+          ins=$(curl -s "$B/${mid}/insights?metric=reach&$T")
+          echo "$ins" | grep -q '"data"' && ok "insights" || bad "insights" "$ins"
