@@ -106,12 +106,19 @@ def cmd_add(a):
     if problems:
         sys.exit("REJECT caption: " + "; ".join(problems))
 
-    slot, date_str = slot_by_key(cfg, a.slot)
-    base = slot_utc(date_str, slot["time"], slot["tz"])
-    if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20):
-        sys.exit("REJECT: slot is in the past or too close")
-    jitter = int(cfg.get("jitter_minutes", 0)) * 60
-    when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
+    if a.slot == "now":
+        # One-off post a few minutes from now (owner asked for it explicitly).
+        when = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=4)).replace(microsecond=0)
+        date_str = when.strftime("%Y-%m-%d")
+        slot = {"time": when.strftime("%H:%M"), "tz": "UTC"}
+        a.slot = f"{date_str}_manual-{when.strftime('%H%M')}"
+    else:
+        slot, date_str = slot_by_key(cfg, a.slot)
+        base = slot_utc(date_str, slot["time"], slot["tz"])
+        if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20):
+            sys.exit("REJECT: slot is in the past or too close")
+        jitter = int(cfg.get("jitter_minutes", 0)) * 60
+        when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
     stem = a.slot
     if (QUEUE / f"{stem}.json").exists():
         sys.exit(f"REJECT: slot {stem} already filled")
@@ -159,7 +166,7 @@ if __name__ == "__main__":
     sub = p.add_subparsers(dest="cmd", required=True)
     ad = sub.add_parser("add")
     ad.add_argument("--entry", required=True)
-    ad.add_argument("--slot", required=True, help="slot key printed by `slots`, e.g. 2026-10-21_us-evening")
+    ad.add_argument("--slot", required=True, help="slot key printed by `slots` (e.g. 2026-10-21_us-evening), or 'now' for a one-off post in ~4 minutes")
     ad.add_argument("--caption-file", required=True)
     ad.add_argument("--theme", default="")
     ad.add_argument("--review", default="")

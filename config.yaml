@@ -8,8 +8,12 @@ jitter_minutes: 5
 
 # Paylaşım saatleri. Her slot kendi saat diliminde tanımlıdır, yaz/kış saati
 # geçişleri otomatik hesaplanır. Hedef kitle: ABD + Avrupa.
-# Yeni hesap: önce ilk 2 slotla başla, 2 hafta sonra yorum satırlarını aç.
+# Günde 3 paylaşım: Avrupa sabahı, Avrupa akşamı/ABD öğlesi, ABD akşamı.
 slots:
+  # Avrupa sabahı (işe gidiş) — ABD uyurken
+  - name: eu-morning
+    time: "08:15"
+    tz: Europe/Berlin
   # Avrupa akşamı (~19:00 Orta Avrupa) = ABD öğle arası
   - name: eu-evening-us-noon
     time: "13:00"
@@ -22,14 +26,10 @@ slots:
   # - name: eu-late
   #   time: "21:30"
   #   tz: Europe/Berlin
-  # Avrupa sabahı (işe gidiş)
-  # - name: eu-morning
-  #   time: "08:15"
-  #   tz: Europe/Berlin
 
 # true  -> paylaşmaz, sadece kuyruğu işaretler (önizleme ana ajandan istenir)
 # false -> Instagram'a gerçekten paylaşır
-dry_run: true
+dry_run: false
 
 # true -> hiçbir şey paylaşılmaz (acil durdurma)
 paused: false
