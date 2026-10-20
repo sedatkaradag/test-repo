@@ -26,7 +26,7 @@ COLLECTIONS = {
     "bukhari": ("Sahih al-Bukhari", True),
     "muslim": ("Sahih Muslim", True),
     "abudawud": ("Sunan Abi Dawud", False),
-    "tirmidhi": ("Jami` at-Tirmidhi", False),
+    "tirmidhi": ("Jami at-Tirmidhi", False),
     "nasai": ("Sunan an-Nasa'i", False),
     "ibnmajah": ("Sunan Ibn Majah", False),
 }

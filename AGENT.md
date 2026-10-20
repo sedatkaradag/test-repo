@@ -72,7 +72,9 @@ cd scripts
    > slavery, event-specific rulings, easily distorted gender rulings); a Qur'an
    > excerpt starts mid-sentence; the caption adds claims, rulings or scholarly
    > opinions not in the text; the caption misquotes the text; the reference or
-   > grade is wrong; the tone is sensational. Reply only with JSON:
+   > grade is wrong; the tone is sensational; for hadith, the narrator named in the
+   > English text does not match the narrator in the Arabic chain (`arabic` field)
+   > — the image would show the wrong name. Reply only with JSON:
    > {"verdict": "approve" | "reject", "reasons": ["..."]}
    Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur). Üçüncüde de red
    gelirse o slotu boş bırak.

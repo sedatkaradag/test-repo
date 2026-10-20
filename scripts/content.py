@@ -139,6 +139,11 @@ def smart_quotes(t):
 def split_narrator(text):
     """'Narrated Abu Huraira: ...' -> ('Narrated Abu Huraira', '...'). Layout only."""
     m = re.match(r"^(Narrated [^:]{2,70}):\s*(.+)$", text)
-    if m:
-        return m.group(1), m.group(2)
-    return None, text
+    if not m:
+        return None, text
+    narrator, body = m.group(1), m.group(2)
+    # "(the wife of the Prophet) Allah's Messenger said..." -> the aside belongs to the narrator.
+    p = re.match(r"^(\([^)]{2,60}\))\s*(.+)$", body)
+    if p:
+        narrator, body = f"{narrator} {p.group(1)}", p.group(2)
+    return narrator, body
