@@ -125,8 +125,10 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
 
 1. `python3 scripts/panel_rows.py /tmp/panel` → satır dosyaları.
 2. Yeni kuyruk görsellerini panele yükle: `Artifact` aracı, `action: "publish"`,
-   `url` = panel adresi, `asset: true`, `file_paths` = yeni `queue/*.jpg` dosyaları.
-   Dönen her `url`'yi ilgili satır dosyasına `image_url` olarak ekle.
+   `url` = panel adresi, `asset: true`, `file_paths` = yeni `queue/*.jpg`, `queue/*_story.jpg`
+   ve `queue/*.mp4` dosyaları. Dönen url'leri ilgili satır dosyasına ekle: gönderi görseli
+   `image_url`, Story görseli `story_url`, Reels videosu `video_url` (Reels satırında
+   `image_url` olarak kaynak gönderinin görselini kullan).
 3. `ArtifactData` ile yaz (`url` = panel adresi; önce `list` ile mevcut sürümleri oku,
    var olan belgelerde `if_version` ver; tek `batch` çağrısı kullan):
    - `queue/<slot>` ← `/tmp/panel/queue/<slot>.json` (zaten yüklü görseli tekrar yükleme;
