@@ -1,0 +1,46 @@
+# --- The Halal Algorithm bot settings ---
+
+account: thehalalalgorithm
+handle: "@thehalalalgorithm"
+
+# Her paylaşım bu dakikanın ± kadar rastgele kaydırılır (hep aynı dakikada gitmesin).
+jitter_minutes: 5
+
+# Paylaşım saatleri. Her slot kendi saat diliminde tanımlıdır, yaz/kış saati
+# geçişleri otomatik hesaplanır. Hedef kitle: ABD + Avrupa.
+# Yeni hesap: önce ilk 2 slotla başla, 2 hafta sonra yorum satırlarını aç.
+slots:
+  # Avrupa akşamı (~19:00 Orta Avrupa) = ABD öğle arası
+  - name: eu-evening-us-noon
+    time: "13:00"
+    tz: America/New_York
+  # ABD akşam prime-time (~20:30 Doğu) — Avrupa uyurken
+  - name: us-evening
+    time: "20:30"
+    tz: America/New_York
+  # Avrupa gece kuşağı (~21:30) = ABD öğleden sonra
+  # - name: eu-late
+  #   time: "21:30"
+  #   tz: Europe/Berlin
+  # Avrupa sabahı (işe gidiş)
+  # - name: eu-morning
+  #   time: "08:15"
+  #   tz: Europe/Berlin
+
+# true  -> paylaşmaz, sadece kuyruğu işaretler (önizleme ana ajandan istenir)
+# false -> Instagram'a gerçekten paylaşır
+dry_run: true
+
+# true -> hiçbir şey paylaşılmaz (acil durdurma)
+paused: false
+
+# İçerik dengesi (yaklaşık oran)
+mix:
+  quran: 0.5
+  hadith: 0.5
+
+# Aynı ayet/hadis bu kadar gün içinde tekrar paylaşılmaz
+repeat_days: 365
+
+# Instagram Graph API sürümü ("" = sürümsüz uç nokta)
+api_version: ""

@@ -1,0 +1,120 @@
+# İçerik ajanı talimatları (Claude zamanlanmış görevleri bunu okur)
+
+Bu dosya, Claude'un her çalıştığında izlediği iş akışıdır. Davranışı değiştirmek
+için bu dosyayı düzenlemen yeterli. Gönderi dili İngilizcedir.
+
+## Değişmez kurallar
+
+1. **Ayet veya hadis metnini asla kendin yazma, özetleme ya da düzeltme.** Metin
+   yalnızca `scripts/find.py get <id>` çıktısından gelir. Görsele basılan metni
+   `render.py` veritabanından alır.
+2. Sadece veritabanındaki hadisler kullanılır (hepsi sahih/hasan olarak süzülmüştür).
+3. Fıkhî hüküm (fetva) verme, "âlimler şöyle der" gibi kaynaksız iddia ekleme.
+4. Bağlamından koparılınca yanlış anlaşılabilecek içerikleri seçme: savaş/cezalar,
+   kölelik, yalnızca belirli bir olaya bağlı hükümler, cinsiyetle ilgili kolayca
+   çarpıtılabilecek hükümler, ahiret azabını tek başına sert biçimde öne çıkaran metinler.
+5. Ayet "and", "so", "then" veya küçük harfle başlıyorsa tek başına kullanma;
+   anlam tamamlanacak şekilde aralık seç (ör. `quran:65:2-3`). Aralık en fazla 5 ayet.
+6. Bir yanlışlık şüphesi varsa o slotu boş bırak ve raporla. Boş slot, hatalı gönderiden iyidir.
+
+## Kurulum (her çalışmanın başında)
+
+```bash
+cd <repo klasörü> && git pull
+pip install --break-system-packages -q pyyaml hijridate fonttools pillow
+python3 -c "from PIL import features; assert features.check('raqm'), 'raqm missing'"
+cd scripts
+```
+`raqm` yoksa Arapça doğru çizilemez: hiçbir şey kuyruğa ekleme ve bunu raporla.
+
+## Günlük içerik akışı
+
+1. **Durum kontrolü:** `python3 enqueue.py list` çıktısında `failed` veya `missed`
+   durumundaki gönderileri ve hata mesajlarını (`queue/<slot>.json` → `error`) not al;
+   rapora en üstte yaz. Son 24 saatte `published` (veya dry_run'da `dry_run_sent`)
+   hiç yoksa yayıncı çalışmıyor olabilir: bunu da raporla.
+2. **Boş slotları bul:** `python3 enqueue.py slots --days 2`. Çıktıdaki anahtarlar
+   (ör. `2026-10-21_us-evening`) slot kimliğidir. Boş slot yoksa rapora geç.
+3. **Planlayıcı:** Her boş slot için bir tema seç.
+   - `python3 calendar_info.py 3` → özel günler (Cuma, Ramazan, Zilhicce vb.) önceliklidir.
+   - `history/posted.jsonl` son 20 kayıt ve `notes/strategy.md` (varsa) oku.
+   - `config.yaml` içindeki `mix` oranına uy; son 3 gönderinin temasını tekrarlama.
+   - Tema örnekleri: patience, gratitude, mercy, du'a, kindness to parents, honesty,
+     forgiveness, trust in Allah (tawakkul), remembrance (dhikr), good character,
+     charity, prayer, Friday reminders, hope after hardship.
+4. **Küratör:** `python3 find.py search hadith "<regex>"` veya `search quran "<regex>"`
+   ile 2-4 farklı arama yap (ör. `"\bpatien|\bsabr"`). Adayları oku ve seç:
+   - Tek başına anlaşılır, faydalı, evrensel bir mesaj.
+   - Görselde rahat okunacak uzunluk (yaklaşık 320 karakter altı).
+   - Parça/eksik metin olmasın ("the above-mentioned hadith" gibi).
+   - Seçimden önce `python3 find.py get <id>` ile tam kaydı oku.
+5. **Metin yazarı:** Caption'ı bir dosyaya yaz (ör. `/tmp/caption.txt`). Şablon:
+   ```
+   <Kanca cümlesi: en fazla 12 kelime, metinde olmayan iddia yok>
+   (Slot saatine göre ton: öğle slotu kısa ve enerjik, akşam slotu sakin ve tefekküre dönük.)
+
+   <2-3 cümlelik sade İngilizce tefekkür; sadece metnin söylediğine dayanır>
+
+   — <referans>  (hadis ise: "Sahih al-Bukhari 6018 · Grade: Sahih")
+   <Kur'an ise ayrı satır: "Translation: Rowwad Translation Center (QuranEnc.com)">
+
+   Save this as a reminder and share it with someone who needs it today.
+
+   #islam #<konuya özel 4-7 etiket>
+   ```
+   Metni caption'da tekrar alıntılayacaksan birebir veritabanındaki gibi olmalı.
+   En fazla 2 emoji. En fazla 10 hashtag.
+6. **Denetçi (bağımsız alt ajan):** `Agent` aracıyla ayrı bir ajan başlat ve şu
+   görevi ver (yerine id, dosya yolu yaz):
+   > You are an independent reviewer for an Islamic Instagram page. Run
+   > `cd <repo>/scripts && python3 find.py get <ID>` and read `<caption dosyası>`.
+   > Reject if: the text could be misunderstood out of context (war, punishments,
+   > slavery, event-specific rulings, easily distorted gender rulings); a Qur'an
+   > excerpt starts mid-sentence; the caption adds claims, rulings or scholarly
+   > opinions not in the text; the caption misquotes the text; the reference or
+   > grade is wrong; the tone is sensational. Reply only with JSON:
+   > {"verdict": "approve" | "reject", "reasons": ["..."]}
+   Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur). Üçüncüde de red
+   gelirse o slotu boş bırak.
+7. **Görsel ve kuyruk:**
+   ```bash
+   python3 enqueue.py add --entry <ID> --slot <slot anahtarı> \
+     --caption-file /tmp/caption.txt --theme "<tema>" --review "<denetçi özeti>"
+   ```
+   `REJECT` dönerse nedenine göre düzelt ya da başka içerik seç.
+   Sonra oluşan `queue/*.jpg` dosyasını **Read ile açıp bak**: taşma, kutucuk
+   (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç.
+8. **Kaydet:**
+   ```bash
+   cd .. && git add queue && git commit -m "content: <tarih> <id'ler>" && git push
+   ```
+9. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
+   sonra eklenenler (slot, id, tema). Sorun yoksa tek satır yeterli. Bu rapor
+   çalışma bittiğinde sahibine bildirim olarak gider.
+
+## Haftalık analist akışı (pazartesi)
+
+1. Kurulum adımları + `git pull` (insights pazartesi 03:41 UTC'de güncellenir).
+2. `history/insights.json` oku. Python ile tema, tür (quran/hadith) ve slot
+   bazında ortalama reach / saved / shares hesapla.
+3. `notes/strategy.md` dosyasını güncelle: en iyi 3 tema, en zayıf 3 tema,
+   önerilen tür oranı, saat önerisi (online_followers verisi varsa ona dayan).
+   Tarihli kısa bir değişiklik notu ekle.
+4. Saatleri sadece güçlü kanıt varsa ve son değişiklikten 14 gün geçtiyse
+   `config.yaml` → `slots` içinde değiştir; `dry_run` ve slot sayısına dokunma.
+5. Commit + push, ardından kısa bir haftalık özet yaz.
+
+## Ana ajan (sahibiyle sohbet)
+
+Repo bağlı herhangi bir Claude sohbeti ana ajandır. Sahibi doğal dille şunları ister,
+sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra commit + push:
+
+- "Yarının gönderilerini göster" → `enqueue.py list`, ilgili `queue/*.jpg` dosyalarını
+  ve caption'ları göster.
+- "Şunu değiştir / şunu çıkar" → ilgili `queue/<slot>.*` dosyalarını sil, içerik akışının
+  3-8. adımlarıyla o slotu yeniden doldur.
+- "Saatleri değiştir / slot ekle" → `config.yaml` → `slots`.
+- "Canlıya geç" → `dry_run: false`. "Durdur" → `paused: true`.
+- "Nasıl gidiyor?" → `history/posted.jsonl`, `history/insights.json`, `notes/strategy.md`
+  özetini ver.
+- Kural değişikliği istenirse bu dosyayı (AGENT.md) güncelle; sonraki çalışmalar onu izler.
