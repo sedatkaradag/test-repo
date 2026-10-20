@@ -32,6 +32,18 @@ def main(out):
     # Stamped from the clock, never typed by hand.
     state["last_content_run"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     (out / "meta" / "state.json").write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
+    # Verifier decisions, one panel document per day (newest 14 days).
+    reviews = ROOT / "history" / "reviews.jsonl"
+    if reviews.exists():
+        (out / "reviews").mkdir(parents=True, exist_ok=True)
+        days = {}
+        for line in reviews.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                r = json.loads(line)
+                days.setdefault(r["ts"][:10], []).append(r)
+        for day in sorted(days)[-14:]:
+            doc = {"day": day, "entries": days[day]}
+            (out / "reviews" / f"{day}.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
     print(f"rows written to {out}")
 
 

@@ -89,8 +89,11 @@ cd scripts
    > English text does not match the narrator in the Arabic chain (`arabic` field)
    > — the image would show the wrong name. Reply only with JSON:
    > {"verdict": "approve" | "reject", "reasons": ["..."]}
+   **Her kararı kaydet** (onay da red de):
+   `python3 review_log.py --entry <ID> --slot <slot> --verdict approve|reject --round <tur> --reasons "<gerekçe 1> | <gerekçe 2>"`
    Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur). Üçüncüde de red
    gelirse o slotu boş bırak.
+   Her gönderi için **yeni** bir denetçi başlat; önceki denetçiyi devam ettirme (bağımsızlık).
 7. **Görsel ve kuyruk:**
    ```bash
    python3 enqueue.py add --entry <ID> --slot <slot anahtarı> \
@@ -101,7 +104,7 @@ cd scripts
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç.
 8. **Kaydet:**
    ```bash
-   cd .. && git add queue && git commit -m "content: <tarih> <id'ler>" && git pull --rebase && git push
+   cd .. && git add queue history && git commit -m "content: <tarih> <id'ler>" && git pull --rebase && git push
    ```
 9. **Kontrol panelini güncelle** (aşağıdaki "Kontrol paneli" bölümü).
 10. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
@@ -122,6 +125,7 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
    - `queue/<slot>` ← `/tmp/panel/queue/<slot>.json` (zaten yüklü görseli tekrar yükleme;
      mevcut `image_url` değerini koru)
    - `meta/state` ← `/tmp/panel/meta/state.json` (çalışma saatini script saatten damgalar; elle yazma)
+   - `reviews/<YYYY-MM-DD>` ← `/tmp/panel/reviews/<gün>.json` (denetim kayıtları; script hazırlar)
    - `log/<YYYY-MM-DD>` ← o günün belgesinin `entries` listesine bu çalışmanın adımlarını
      ekle (`{"ts", "agent", "text"}`; `ts` değerini `date -u +%Y-%m-%dT%H:%M:%SZ` ile al, tahmin etme; agent: Planlayıcı, Küratör, Metin yazarı, Denetçi,
      Tasarımcı, Analist, Ana ajan). Belge yoksa `{"day": "...", "entries": [...]}` ile oluştur.
