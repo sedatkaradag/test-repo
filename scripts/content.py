@@ -123,16 +123,30 @@ def display_text(text):
 
 
 def smart_quotes(t):
-    out, open_ = [], True
+    out, open_, single_open = [], True, False
     for i, ch in enumerate(t):
         if ch == '"':
             out.append("“" if open_ else "”")
             open_ = not open_
-        elif ch in "'`":
+        elif ch == "`":
+            out.append("‘")  # transliteration mark for ʿayn (`Aisha), not a quote
+        elif ch == "'":
             prev = t[i - 1] if i else " "
-            out.append("’" if prev.isalnum() or prev in ".,!?" else "‘")
+            nxt = t[i + 1] if i + 1 < len(t) else " "
+            if prev.isalnum() or prev in ".,!?":
+                out.append("’")
+                if not nxt.isalnum():
+                    single_open = False  # a closing quote, not an apostrophe
+            else:
+                out.append("‘")
+                # Only a quote after "said, " / ": " opens a quotation; a mark before
+                # a name ('Umar, 'Abdullah) is a transliterated ʿayn.
+                if i >= 2 and t[i - 2] in ",:;":
+                    single_open = True
         else:
             out.append(ch)
+    if single_open and len(out) > 2:
+        out.append("’")  # the source left a single quotation open
     return "".join(out)
 
 
