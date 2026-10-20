@@ -36,6 +36,9 @@ slots:
 # false -> Instagram'a gerçekten paylaşır
 dry_run: false
 
+# true -> her gönderi paylaşıldıktan hemen sonra Story olarak da paylaşılır
+stories: true
+
 # true -> hiçbir şey paylaşılmaz (acil durdurma)
 paused: false
 

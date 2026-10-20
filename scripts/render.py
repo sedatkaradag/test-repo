@@ -260,6 +260,26 @@ def render(entry_id, out_path):
     return out_path
 
 
+def make_story(post_path, out_path, label="TODAY'S REMINDER"):
+    """9:16 Story frame: the post centred on the same ground with a label above it."""
+    post = Image.open(post_path).convert("RGB")
+    sw, sh = 1080, 1920
+    story = Image.new("RGB", (sw, sh), BG)
+    scale = 0.86
+    pw, ph = int(W * scale), int(H * scale)
+    story.paste(post.resize((pw, ph), Image.LANCZOS), ((sw - pw) // 2, (sh - ph) // 2))
+    d = ImageDraw.Draw(story)
+    f = _font(F_LABEL, 34)
+    spacing = 8
+    widths = [f.getlength(c) for c in label]
+    x = (sw - (sum(widths) + spacing * (len(label) - 1))) / 2
+    for c, w in zip(label, widths):
+        d.text((x, 230), c, font=f, fill=GOLD)
+        x += w + spacing
+    story.save(out_path, "JPEG", quality=90, optimize=True)
+    return out_path
+
+
 if __name__ == "__main__":
     try:
         render(sys.argv[1], sys.argv[2])

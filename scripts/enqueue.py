@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from content import ROOT, get, used_ids
-from render import TooLong, render
+from render import TooLong, make_story, render
 
 QUEUE = ROOT / "queue"
 
@@ -159,6 +159,9 @@ def cmd_add(a):
     except TooLong:
         sys.exit("REJECT: too long for one image, choose a shorter entry")
 
+    story = QUEUE / f"{stem}_story.jpg"
+    make_story(img, story)
+
     item = {
         "entry_id": a.entry,
         "type": entry["type"],
@@ -167,6 +170,7 @@ def cmd_add(a):
         "publish_at": when.isoformat(timespec="seconds").replace("+00:00", "Z"),
         "local_slot": f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
         "image": f"queue/{stem}.jpg",
+        "story_image": f"queue/{stem}_story.jpg",
         "caption": caption,
         "alt_text": f"{entry['english'][:900]} — {entry['reference']}",
         "theme": a.theme,
