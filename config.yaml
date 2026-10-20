@@ -43,4 +43,4 @@ mix:
 repeat_days: 365
 
 # Instagram Graph API sürümü ("" = sürümsüz uç nokta)
-api_version: ""
+api_version: "v26.0"
