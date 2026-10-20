@@ -131,6 +131,17 @@ def render_issues(entry_id):
                 issues.append(f"Arabic line {n} has a character the font cannot draw")
             if f.getlength(line, direction="rtl", language="ar") > L["max_w"] + 1:
                 issues.append(f"Arabic line {n} is wider than the text box")
+            if line.split(" ")[0].startswith("﴿"):
+                issues.append(f"Arabic line {n} starts with a verse number")
+        # Pause marks sit high above the letters; they must stay clearly inside
+        # their own line, never reach into (or near) the line above.
+        boxes = L.get("arabic_boxes") or []
+        min_gap = 0.2 * L["arabic_size"]
+        for n in range(1, len(boxes)):
+            gap = boxes[n][1] - boxes[n - 1][3]
+            if gap < min_gap:
+                issues.append(f"Arabic line {n + 1} comes too close to line {n} "
+                              f"({gap:.0f}px gap; marks may read as the wrong word's)")
     english = L["english_text"]
     if " ".join(L["english_lines"]) != english:
         issues.append("drawn English differs from the source text")

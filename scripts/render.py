@@ -34,6 +34,7 @@ BG_PATH = ROOT / "assets" / "background.png"
 
 TEXT_LEFT, TEXT_RIGHT = 140, W - 140
 TEXT_TOP, TEXT_BOTTOM = 250, 1095
+ARABIC_LINE = 2.7   # Arabic line height in em (see _layout_arabic)
 
 
 class TooLong(Exception):
@@ -165,7 +166,10 @@ def _arabic_words(text):
     text = text.replace("\u06de ", "").replace("\u06de", "")
     words = []
     for tok in text.split(" "):
-        if words and tok and (unicodedata.category(tok[0]).startswith("M") or tok[0] == "\u2060"):
+        # A token that starts with a mark belongs to the previous word; a verse
+        # number ﴿n﴾ stays with the verse it closes (never opens a line).
+        if words and tok and (unicodedata.category(tok[0]).startswith("M")
+                              or tok[0] in ("\u2060", "\ufd3f")):
             words[-1] += " " + tok
         elif tok:
             words.append(tok)
@@ -176,7 +180,12 @@ def _layout_arabic(text, size, max_w, path):
     f = _font(path, size)
     lines = _wrap(_arabic_words(text), max_w,
                   lambda s: f.getlength(s, direction="rtl", language="ar"))
-    return lines, int(size * 1.95)
+    # Amiri Quran sets pause marks (ۖ ۗ ۚ ...) at a fixed height up to 1.82 em
+    # above the baseline and descenders reach 0.63 em below it (its own line
+    # metrics: 2.45 em). A tighter line pushes a line's pause marks into the line
+    # above, where they read as belonging to the wrong word. 2.7 em leaves clear
+    # space; integrity.py checks the inked gap on every card.
+    return lines, int(size * ARABIC_LINE)
 
 
 def _draw_english(draw, lines, size, lh, y, color):
@@ -189,15 +198,19 @@ def _draw_english(draw, lines, size, lh, y, color):
     return y
 
 
-def _draw_arabic(draw, lines, size, lh, y, color, path):
-    """Draw RTL lines; return the lowest pixel actually inked (marks included)."""
+def _draw_arabic(draw, lines, size, lh, y, color, path, boxes=None):
+    """Draw RTL lines; return the lowest pixel actually inked (marks included).
+    The inked box of every line is appended to `boxes` for the checks."""
     f = _font(path, size)
     bottom = y
     for line in lines:
         w = f.getlength(line, direction="rtl", language="ar")
         pos = ((W - w) / 2, y)
         draw.text(pos, line, font=f, fill=color, direction="rtl", language="ar")
-        bottom = max(bottom, draw.textbbox(pos, line, font=f, direction="rtl", language="ar")[3])
+        box = draw.textbbox(pos, line, font=f, direction="rtl", language="ar")
+        if boxes is not None:
+            boxes.append(box)
+        bottom = max(bottom, box[3])
         y += lh
     return bottom
 
@@ -240,7 +253,7 @@ def render(entry_id, out_path):
     plan = None
     narrator = None
     if is_quran:
-        for ar_size in range(66, 47, -2):
+        for ar_size in range(64, 41, -2):
             en_size = int(ar_size * 0.68)
             a_lines, a_lh = _layout_arabic(e["arabic"], ar_size, max_w, F_QURAN)
             e_lines, e_lh = _layout_english(english, en_size, max_w)
@@ -272,7 +285,8 @@ def render(entry_id, out_path):
                    "max_w": max_w}
     y = TEXT_TOP + (avail - total) / 2
     if a_lines:
-        y = _draw_arabic(d, a_lines, ar_size, a_lh, y, IVORY, F_QURAN)
+        LAST_LAYOUT["arabic_boxes"] = []
+        y = _draw_arabic(d, a_lines, ar_size, a_lh, y, IVORY, F_QURAN, LAST_LAYOUT["arabic_boxes"])
         _divider(d, y + 40)
         y += 84
     elif not is_quran and narrator:

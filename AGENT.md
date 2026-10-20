@@ -86,6 +86,13 @@ cd scripts
      Son gönderilerin etiketlerine `python3 enqueue.py list` ve `queue/*.json` ile bak.
    - Metni caption'da alıntılayacaksan birebir veritabanındaki gibi olmalı. En fazla 2 emoji.
    - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
+   - **Kuyruktaki bir gönderide sorun görülürse** (denetçi ya da ana ajan): hemen
+     `python3 enqueue.py hold --slot <slot> --reason "..."` ile beklemeye al (yayıncı
+     sadece `ready` olanları paylaşır). Görsel hatası çizim kodundan geliyorsa kod
+     düzeltilir, sonra `python3 enqueue.py rerender --slot <slot>` (görsel/Story/video
+     yeniden çizilir, öğe `hold` kalır). Yeni bir denetçi onaylarsa
+     `python3 enqueue.py approve --slot <slot> --review "<karar>"`. Onaysız `hold` öğe asla
+     elle `ready` yapılmaz.
 6. **Denetçi (bağımsız alt ajan):** `Agent` aracıyla ayrı bir ajan başlat ve şu
    görevi ver (yerine id, dosya yolu yaz):
    > You are an independent reviewer for an Islamic Instagram page. Mistakes are not
@@ -96,7 +103,10 @@ cd scripts
    > 2. Render the card: `python3 render.py <ID> /tmp/review_<n>.jpg` and OPEN the image
    >    with the Read tool. Compare what is drawn with the source text: for Qur'an,
    >    go through the Arabic word by word (no missing, extra, merged or split words,
-   >    no missing or misplaced marks, nothing cut off at a line end); for both, the
+   >    no missing or misplaced marks, nothing cut off at a line end). Zoom into each
+   >    pair of lines (crop 2x with Pillow): every pause mark (ۖ ۗ ۚ ۛ ۜ ۙ ۘ) must sit
+   >    above the word it follows, inside its own line, never touching or reading as part
+   >    of a word in the line above; a verse number ﴿n﴾ must not start a line. For both, the
    >    English on the card must be the source English. The reference line must match.
    > 3. Read `<caption dosyası>` and check spelling and grammar sentence by sentence.
    > Reject if: anything in steps 1-3 is wrong; the text could be misunderstood out of

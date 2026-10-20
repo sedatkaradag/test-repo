@@ -358,7 +358,7 @@ def cmd_recaption(a):
     """Replace the caption of a queued (not yet published) item, with all checks."""
     path = QUEUE / f"{a.slot}.json"
     item = json.loads(path.read_text(encoding="utf-8"))
-    if item["status"] != "ready":
+    if item["status"] not in ("ready", "hold"):
         sys.exit(f"REJECT: {a.slot} is {item['status']}")
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
     problems = check_caption(caption, get(item["entry_id"]), exclude_slot=a.slot)
@@ -367,6 +367,58 @@ def cmd_recaption(a):
     item["caption"] = caption
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"RECAPTIONED {a.slot}")
+
+
+def cmd_rerender(a):
+    """Re-draw a queued item's images (and video) after a renderer fix. The item
+    goes on hold: it is not published until a fresh verifier approves it."""
+    path = QUEUE / f"{a.slot}.json"
+    item = json.loads(path.read_text(encoding="utf-8"))
+    if item["status"] not in ("ready", "hold"):
+        sys.exit(f"REJECT: {a.slot} is {item['status']}")
+    stem = a.slot
+    if item["type"] == "carousel":
+        ids = item["entry_ids"]
+        flags = require_integrity(ids)
+        for n, i in enumerate(ids, start=1):   # card 0 is the cover (no verse text)
+            render(i, QUEUE / f"{stem}_{n}.jpg")
+    elif item["type"] == "reel":
+        flags = require_integrity([item["entry_id"]])
+        render_reel(item["entry_id"], QUEUE / f"{stem}.mp4")
+    else:
+        flags = require_integrity([item["entry_id"]])
+        render(item["entry_id"], QUEUE / f"{stem}.jpg")
+        make_story(QUEUE / f"{stem}.jpg", QUEUE / f"{stem}_story.jpg")
+    item.update(status="hold", flags=flags, integrity="passed",
+                review="re-rendered; waiting for a fresh verifier",
+                rerendered_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
+    path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"RERENDERED {stem} (on hold until approved)")
+
+
+def cmd_hold(a):
+    path = QUEUE / f"{a.slot}.json"
+    item = json.loads(path.read_text(encoding="utf-8"))
+    if item["status"] != "ready":
+        sys.exit(f"REJECT: {a.slot} is {item['status']}")
+    item.update(status="hold", review=a.reason)
+    path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"HELD {a.slot}")
+
+
+def cmd_approve(a):
+    """Put a held item back in the queue after a fresh verifier approved it."""
+    path = QUEUE / f"{a.slot}.json"
+    item = json.loads(path.read_text(encoding="utf-8"))
+    if item["status"] != "hold":
+        sys.exit(f"REJECT: {a.slot} is {item['status']}")
+    ids = item.get("entry_ids") or [item["entry_id"]]
+    item["flags"] = require_integrity(ids)
+    if dt.datetime.fromisoformat(item["publish_at"].replace("Z", "+00:00")) <= dt.datetime.now(dt.timezone.utc):
+        sys.exit("REJECT: publish time has passed; enqueue it in a new slot")
+    item.update(status="ready", review=a.review)
+    path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"APPROVED {a.slot}")
 
 
 def cmd_list(_):
@@ -407,8 +459,17 @@ if __name__ == "__main__":
     rc = sub.add_parser("recaption")
     rc.add_argument("--slot", required=True)
     rc.add_argument("--caption-file", required=True)
+    rr = sub.add_parser("rerender")
+    rr.add_argument("--slot", required=True)
+    ho = sub.add_parser("hold")
+    ho.add_argument("--slot", required=True)
+    ho.add_argument("--reason", required=True)
+    ap = sub.add_parser("approve")
+    ap.add_argument("--slot", required=True)
+    ap.add_argument("--review", required=True, help="the fresh verifier's verdict")
     sub.add_parser("list")
     sl = sub.add_parser("slots")
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
-    {"add": cmd_add, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel, "recaption": cmd_recaption, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
+    {"add": cmd_add, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel, "recaption": cmd_recaption,
+     "rerender": cmd_rerender, "hold": cmd_hold, "approve": cmd_approve, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
