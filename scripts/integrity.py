@@ -135,6 +135,10 @@ def render_issues(entry_id):
                 issues.append(f"Arabic line {n} starts with a verse number")
         # Pause marks sit high above the letters; they must stay clearly inside
         # their own line, never reach into (or near) the line above.
+        if re.search(r"[\u06d6-\u06db\u06e9]", " ".join(L["arabic_lines"])):
+            issues.append("a pause or prostration sign was drawn (cards leave them out)")
+        if "\u06dc" in e["arabic"]:
+            issues.append("contains the small high seen (saktah / seen reading); choose another entry")
         boxes = L.get("arabic_boxes") or []
         min_gap = 0.2 * L["arabic_size"]
         for n in range(1, len(boxes)):

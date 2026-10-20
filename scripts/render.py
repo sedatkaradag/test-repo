@@ -8,6 +8,7 @@ Exits with code 3 if the text does not fit, so the curator picks another entry.
 """
 import math
 import sys
+import re
 import unicodedata
 from functools import lru_cache
 from pathlib import Path
@@ -34,7 +35,7 @@ BG_PATH = ROOT / "assets" / "background.png"
 
 TEXT_LEFT, TEXT_RIGHT = 140, W - 140
 TEXT_TOP, TEXT_BOTTOM = 250, 1095
-ARABIC_LINE = 2.7   # Arabic line height in em (see _layout_arabic)
+ARABIC_LINE = 2.35  # Arabic line height in em (see _layout_arabic)
 
 
 class TooLong(Exception):
@@ -164,6 +165,12 @@ def _arabic_words(text):
     # The rub el hizb sign (۞) marks quarter-juz divisions in a printed Mushaf; it is
     # not part of the verse and reads as a stray star on a single-verse card.
     text = text.replace("\u06de ", "").replace("\u06de", "")
+    # Pause (waqf) signs ۖ ۗ ۘ ۙ ۚ ۛ and the prostration sign ۩ are recitation
+    # annotations that differ between Mushaf traditions (Madinah, Turkish, South
+    # Asian prints use different sets). They are not letters or vowels. In this
+    # font they sit at a fixed height high above the word and read as stray marks
+    # on a card, so cards leave them out. Letters and vowel marks are untouched.
+    text = re.sub(r" ?[\u06d6-\u06db\u06e9]", "", text)
     words = []
     for tok in text.split(" "):
         # A token that starts with a mark belongs to the previous word; a verse
@@ -180,11 +187,9 @@ def _layout_arabic(text, size, max_w, path):
     f = _font(path, size)
     lines = _wrap(_arabic_words(text), max_w,
                   lambda s: f.getlength(s, direction="rtl", language="ar"))
-    # Amiri Quran sets pause marks (ۖ ۗ ۚ ...) at a fixed height up to 1.82 em
-    # above the baseline and descenders reach 0.63 em below it (its own line
-    # metrics: 2.45 em). A tighter line pushes a line's pause marks into the line
-    # above, where they read as belonging to the wrong word. 2.7 em leaves clear
-    # space; integrity.py checks the inked gap on every card.
+    # Vowel marks reach about 1.25 em above the baseline and descenders 0.63 em
+    # below it; a tighter line pushes one line's marks into the line above.
+    # integrity.py measures the inked gap between lines on every card.
     return lines, int(size * ARABIC_LINE)
 
 
