@@ -8,6 +8,7 @@ Exits with code 3 if the text does not fit, so the curator picks another entry.
 """
 import math
 import sys
+import unicodedata
 from functools import lru_cache
 from pathlib import Path
 
@@ -147,9 +148,27 @@ def _layout_english(text, size, max_w):
     return lines, int(size * 1.42)
 
 
+def _arabic_words(text):
+    """Split on spaces, but keep a space that the source uses inside a word
+    (space + combining mark, e.g. a dagger alif) attached to that word.
+
+    The source encodes some dagger alifs as space + U+0670 + word joiner, a
+    spacing convention of its own font. For Amiri Quran the standard spelling
+    (the mark directly on the letter) renders correctly, so the space and joiner
+    are dropped. Display only: no letter or mark is changed."""
+    text = text.replace(" \u0670\u2060", "\u0670")
+    words = []
+    for tok in text.split(" "):
+        if words and tok and (unicodedata.category(tok[0]).startswith("M") or tok[0] == "\u2060"):
+            words[-1] += " " + tok
+        elif tok:
+            words.append(tok)
+    return words
+
+
 def _layout_arabic(text, size, max_w, path):
     f = _font(path, size)
-    lines = _wrap(text.split(" "), max_w,
+    lines = _wrap(_arabic_words(text), max_w,
                   lambda s: f.getlength(s, direction="rtl", language="ar"))
     return lines, int(size * 1.95)
 
