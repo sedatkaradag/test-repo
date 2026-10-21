@@ -14,5 +14,15 @@
   "flags": [],
   "integrity": "passed",
   "status": "ready",
-  "created_at": "2026-10-21T05:44:26+00:00"
+  "created_at": "2026-10-21T05:44:26+00:00",
+  "story_video": "queue/2026-10-22_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Minshawy_Murattal_128kbps",
+    "reciter_name": "Mohamed Siddiq Al-Minshawi",
+    "ayahs": [
+      "033041",
+      "033042"
+    ],
+    "done": false
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "entry_id": "quran:31:12",
+  "type": "story",
+  "source_slot": "2026-10-21_eu-evening-us-noon",
+  "reference": "Surah Luqman 31:12",
+  "slot": "2026-10-21_eu-evening-us-noon_story-1720",
+  "publish_at": "2026-10-21T17:20:00Z",
+  "local_slot": "2026-10-21 17:20 UTC",
+  "image": "queue/2026-10-21_eu-evening-us-noon_story.jpg",
+  "video": "queue/2026-10-21_eu-evening-us-noon_story-1720.mp4",
+  "caption": "",
+  "theme": "gratitude (shukr)",
+  "review": "Fresh verifier, KFGQPC text + Mushaf font: Arabic matches arabic_display letter by letter and mark by mark (2.5x/4x crops); pause signs on their own words; verse numbers attached; no collisions; English and reference correct",
+  "integrity": "passed",
+  "status": "audio_pending",
+  "created_at": "2026-10-21T16:54:56+00:00",
+  "audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "031012"
+    ],
+    "done": false
+  }
+}
