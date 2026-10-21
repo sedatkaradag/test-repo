@@ -20,9 +20,9 @@ MIN_DELAY = 17  # minutes after the nominal slot time (jitter 5 + publisher slac
 
 PROMPT = """You are the panel sync run for the Instagram page @thehalalalgorithm. Nobody is watching this run: do not ask questions, decide and report. Keep it short; this is a light run.
 
-1. Make sure the GitHub repository sedatkaradag/test-repo is available (use the add_repo tool with owner "sedatkaradag", repo "test-repo", access "read" if it is not already attached), then clone it: `git clone --depth 1 https://github.com/sedatkaradag/test-repo /home/claude/test-repo` (or `git pull` if it already exists).
-2. Read /home/claude/test-repo/AGENT.md and follow its "Panel senkronu (her slottan sonra)" section exactly, including the schedule check. The control panel URL is in its "Kontrol paneli" section. Do not generate content, do not change the queue, config or images, and do not commit anything.
-3. Finish with a report in Turkish: problems first (a post past its time still ready/publishing, failed or missed, panel write errors, schedule changes made). If everything is fine, a single line."""
+1. Make sure the GitHub repository sedatkaradag/test-repo is available (use the add_repo tool with owner "sedatkaradag", repo "test-repo", access "push" if it is not already attached), then clone it: `git clone --depth 1 https://github.com/sedatkaradag/test-repo /home/claude/test-repo` (or `git pull` if it already exists).
+2. Read /home/claude/test-repo/AGENT.md and follow its "Panel senkronu (her slottan sonra)" section exactly, including the schedule check. The control panel URL is in its "Kontrol paneli" section. Do not generate post content and do not change the queue, config or images; the only commits allowed are approved comment replies in comments/outbox, as AGENT.md describes. Never send a comment reply the owner has not approved in the panel.
+3. Finish with a report in Turkish: first the number of comment replies waiting for the owner's approval and any comment left to the owner, then problems (a post past its time still ready/publishing, failed or missed, panel write errors, schedule changes made). If everything is fine, a single line."""
 
 
 def all_slots(cfg):

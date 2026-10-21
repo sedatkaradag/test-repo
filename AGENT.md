@@ -22,6 +22,8 @@ için bu dosyayı düzenlemen yeterli. Gönderi dili İngilizcedir.
    metniyle harf harf karşılaştırılır; uyuşmayan tek bir ayet bile olursa veritabanı oluşmaz.
    Kartlardaki Arapça, Kral Fahd Kompleksi'nin kendi Hafs metni (`arabic_display`, v18) ve
    kendi Mushaf fontuyla çizilir; bu metin de saklı metinle harf harf karşılaştırılmıştır.
+9. **Yorum yanıtı asla onaysız gönderilmez.** `comments/outbox/`'a yalnızca sahibinin panelde
+   onayladığı (`status: "approved"`) yanıt yazılır, onaylanan metin harfi harfine aynen.
 
 ## Kurulum (her çalışmanın başında)
 
@@ -195,7 +197,8 @@ Panel, yayınlanan gönderiyi paylaşımdan sonra 24 saat "Kuyruktaki gönderile
 ## Panel senkronu (her slottan sonra)
 
 GitHub yayıncısı panele yazamaz; paylaşımları repoya kaydeder. Bu kısa çalışma repodaki
-durumu panele taşır. İçerik üretmez, kuyruğu, görselleri veya config'i değiştirmez, commit atmaz.
+durumu panele taşır ve yorum yanıtlarını yürütür. İçerik üretmez, kuyruğu, görselleri veya
+config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
 
 1. `git pull` (repo yoksa Kurulum'daki gibi klonla).
 2. `python3 scripts/panel_rows.py /tmp/panel`.
@@ -212,8 +215,9 @@ durumu panele taşır. İçerik üretmez, kuyruğu, görselleri veya config'i de
    `log`'a "Ana ajan" olarak not düş. Yayıncıyı veya kuyruğu kendin değiştirme.
 6. **Zamanlama kontrolü:** aşağıdaki "Senkron zamanlaması" adımlarını uygula (slot
    saatleri değiştiyse görevler burada kendini düzeltir).
-7. Rapor: sorun yoksa tek satır ("Panel güncel: X yayında, sorun yok"). Hiçbir şey
-   değişmediyse ve sorun yoksa da tek satır yeter.
+7. **Yorumlar:** aşağıdaki "Yorum yanıtları" adımlarını uygula.
+8. Rapor: en üstte onay bekleyen yorum sayısı ("2 yorum yanıtı onayını bekliyor") ve sana
+   bırakılan yorumlar; sorun yoksa tek satır ("Panel güncel: X yayında, sorun yok").
 
 ### Senkron zamanlaması
 
@@ -231,6 +235,55 @@ Senkron görevlerinin saatleri `config.yaml` slotlarından hesaplanır; elle saa
 
 Slot saatlerini değiştiren her çalışma (haftalık analist, ana ajan) commit + push'tan
 hemen sonra bu adımları uygular.
+
+## Yorum yanıtları (kendi gönderilerimize gelen yorumlar)
+
+Akış: GitHub `comments-fetch` saatte bir yeni yorumları `comments/inbox.json`'a yazar →
+senkron çalışması her yeni yorum için panele taslak koyar → sahibi panelde onaylar, düzenler
+veya reddeder → sonraki senkron çalışması onaylananları `comments/outbox/`'a yazıp push eder →
+GitHub `comments-send` gönderir ve sonucu `comments/sent.jsonl`'a yazar. Başka hesapların
+gönderilerine asla yorum yazılmaz; API buna izin vermez, bu sistem de yapmaz.
+
+**Panel belgesi** `comments/<comment_id>`: `comment_id, media_id, permalink, post_ref, slot,
+username, text, ts, category ("reply" | "escalate" | "ignore"), reason, draft, status, reply,
+approved_at, sent_at, reply_id, error`. `status`: `pending` (taslak onayda) · `escalated`
+(sahibine bırakıldı) · `ignored` · `approved` (sahibi onayladı, `reply` = gönderilecek metin) ·
+`rejected` · `sending` · `sent` · `failed` · `skipped` · `answered_in_app` (sahibi uygulamadan
+kendisi yanıtladı). `approved` ve `rejected`'ı yalnızca sahibi (panel) yazar; sen yazma.
+
+Her senkron çalışmasında, sırayla:
+
+1. `comments/inbox.json`, `comments/sent.jsonl` ve panelin `comments` koleksiyonunu oku.
+2. **Sonuçları işle:** `sent.jsonl`'daki her kayıt için panel belgesi `approved` veya `sending`
+   ise `status` = kayıttaki durum (`sent` / `failed` / `skipped`), `sent_at` = `at`, `reply_id`,
+   `error`. Inbox'ta `answered: true` olup panelde `pending` / `escalated` olanı `answered_in_app` yap.
+3. **Yeni yorumlar** (inbox'ta olup panelde olmayan, `answered: false`): her birini sınıflandır,
+   gerekiyorsa taslak yaz, panele `set` ile ekle (`if_version` yok, yeni belge). Gönderinin
+   caption'ını `queue/<slot>.json`'dan oku; yanıt o gönderiye ve yorumun kendisine özel olsun.
+   - `reply` → `status: "pending"`, `draft` dolu. Teşekkür, "Ameen", dua, kişisel paylaşım,
+     gönderinin kaynağını soran yorum (yalnızca caption'daki referansla yanıtla).
+   - `escalate` → `status: "escalated"`, `draft` boş, `reason` tek cümle. Hüküm/fetva veya
+     gönderinin ötesinde dini soru, mezhep/akide tartışması, hadisin sıhhatine veya meale
+     itiraz, sayfaya eleştiri, siyasi konu, sıkıntı veya kriz belirtisi (bunu raporda en üste koy).
+     Emin değilsen `escalate`.
+   - `ignore` → `status: "ignored"`, `reason`. Spam, bot, reklam, link, hakaret. Yanıt yok;
+     gizleme/silme kararı sahibinin.
+4. **Taslak kuralları:** yorumun dilinde (emin değilsen İngilizce), 1-2 kısa cümle, en fazla
+   200 karakter; sıcak, sade, yoruma özel. Ayet veya hadis alıntılama, yeni hadis ekleme,
+   hüküm verme, "âlimler der ki" deme; link, etiket, "DM at", "takip et" yok; en fazla bir emoji.
+   Son 50 yanıtta (panel `reply`/`draft` + `sent.jsonl`) geçen bir cümleyi tekrar etme;
+   son 10 yanıtla aynı kelimeyle başlama.
+5. **Onaylananları gönder:** panelde `approved` olup `sent.jsonl`'da `sent` kaydı olmayan her
+   belge için `comments/outbox/<comment_id>.json` yaz:
+   `{"comment_id", "message": <panel reply alanı, aynen>, "approved_at"}`. Sonra
+   `git add comments/outbox && git commit -m "comments: send <n> approved" && git pull --rebase && git push`
+   ve bu belgeleri `sending` yap. `gh run list -R sedatkaradag/test-repo -w comments-send.yml -L 1`
+   ile en fazla 3 dakika bekle; bitince `git pull` ve 2. adımı tekrarla. Bitmezse sonraki
+   çalışma tamamlar.
+6. `log/<gün>` belgesine `agent: "Yorum ajanı"` ile tek satır: kaç yeni yorum, kaç taslak,
+   kaç yanıt gönderildi (yorum metnini log'a yazma).
+
+Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
 
 ## Haftalık analist akışı (pazartesi)
 
@@ -257,6 +310,9 @@ sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra 
 - "Saatleri değiştir / slot ekle" → `config.yaml` → `slots` (Reels/carousel saatleri
   `reels.slot` / `carousel.slot`); push'tan sonra "Senkron zamanlaması" adımlarını uygula.
 - "Canlıya geç" → `dry_run: false`. "Durdur" → `paused: true`.
+- "Yorumları göster / şu yorumu yanıtla" → "Yorum yanıtları" bölümü. Sahibi sohbette bir
+  yanıtı açıkça onaylarsa panel belgesini `approved` yap (`reply` = onaylanan metin,
+  `approved_at` = şimdi) ve 5. adımı hemen uygula.
 - "Nasıl gidiyor?" → `history/posted.jsonl`, `history/insights.json`, `notes/strategy.md`
   özetini ver.
 - Kural değişikliği istenirse bu dosyayı (AGENT.md) güncelle; sonraki çalışmalar onu izler.
