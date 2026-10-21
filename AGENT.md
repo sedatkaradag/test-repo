@@ -227,7 +227,7 @@ Senkron görevlerinin saatleri `config.yaml` slotlarından hesaplanır; elle saa
    `cron_expression`) ve ortak `prompt`.
 2. `list_triggers` ile adı "Halal Algorithm – panel senkronu · " ile başlayan görevleri bul.
 3. Eşleştir (ada göre):
-   - cron farklıysa `update_trigger` ile yalnızca `cron_expression`'ı güncelle;
+   - cron veya prompt farklıysa `update_trigger` ile yalnızca farklı olanı güncelle;
    - listede olup görevi olmayan için `create_trigger` (`name`, `cron_expression`,
      `prompt` = script'teki prompt, `initiation`: "human_schedule", bildirim: push);
    - görevi olup listede olmayanı (o saat diliminde artık slot yok) `delete_trigger` ile sil.
