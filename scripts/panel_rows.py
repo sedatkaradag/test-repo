@@ -16,7 +16,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 FIELDS = ["slot", "entry_id", "type", "reference", "publish_at", "local_slot", "status",
-          "theme", "caption", "review", "error", "media_id", "posted_at"]
+          "theme", "caption", "review", "error", "media_id", "posted_at", "audio"]
 
 
 def main(out):
