@@ -210,8 +210,27 @@ durumu panele taşır. İçerik üretmez, kuyruğu, görselleri veya config'i de
 5. Sorun kontrolü: `publish_at` 20 dakikadan eski olup repoda hâlâ `ready` veya `publishing`
    olan, ya da `failed` / `missed` olan gönderi var mı? Varsa en üstte bildir ve
    `log`'a "Ana ajan" olarak not düş. Yayıncıyı veya kuyruğu kendin değiştirme.
-6. Rapor: sorun yoksa tek satır ("Panel güncel: X yayında, sorun yok"). Hiçbir şey
+6. **Zamanlama kontrolü:** aşağıdaki "Senkron zamanlaması" adımlarını uygula (slot
+   saatleri değiştiyse görevler burada kendini düzeltir).
+7. Rapor: sorun yoksa tek satır ("Panel güncel: X yayında, sorun yok"). Hiçbir şey
    değişmediyse ve sorun yoksa da tek satır yeter.
+
+### Senkron zamanlaması
+
+Senkron görevlerinin saatleri `config.yaml` slotlarından hesaplanır; elle saat yazma.
+
+1. `python3 scripts/sync_schedule.py` → olması gereken görevler (`tasks`: `name`,
+   `cron_expression`) ve ortak `prompt`.
+2. `list_triggers` ile adı "Halal Algorithm – panel senkronu · " ile başlayan görevleri bul.
+3. Eşleştir (ada göre):
+   - cron farklıysa `update_trigger` ile yalnızca `cron_expression`'ı güncelle;
+   - listede olup görevi olmayan için `create_trigger` (`name`, `cron_expression`,
+     `prompt` = script'teki prompt, `initiation`: "human_schedule", bildirim: push);
+   - görevi olup listede olmayanı (o saat diliminde artık slot yok) `delete_trigger` ile sil.
+4. Değişiklik yaptıysan log'a "Ana ajan" olarak tek satır yaz (eski → yeni saat) ve raporda belirt.
+
+Slot saatlerini değiştiren her çalışma (haftalık analist, ana ajan) commit + push'tan
+hemen sonra bu adımları uygular.
 
 ## Haftalık analist akışı (pazartesi)
 
@@ -223,6 +242,7 @@ durumu panele taşır. İçerik üretmez, kuyruğu, görselleri veya config'i de
    Tarihli kısa bir değişiklik notu ekle.
 4. Saatleri sadece güçlü kanıt varsa ve son değişiklikten 14 gün geçtiyse
    `config.yaml` → `slots` içinde değiştir; `dry_run` ve slot sayısına dokunma.
+   Saat değiştirdiysen push'tan sonra "Senkron zamanlaması" adımlarını uygula.
 5. Commit + push, ardından kısa bir haftalık özet yaz.
 
 ## Ana ajan (sahibiyle sohbet)
@@ -234,7 +254,8 @@ sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra 
   ve caption'ları göster.
 - "Şunu değiştir / şunu çıkar" → ilgili `queue/<slot>.*` dosyalarını sil, içerik akışının
   3-8. adımlarıyla o slotu yeniden doldur.
-- "Saatleri değiştir / slot ekle" → `config.yaml` → `slots`.
+- "Saatleri değiştir / slot ekle" → `config.yaml` → `slots` (Reels/carousel saatleri
+  `reels.slot` / `carousel.slot`); push'tan sonra "Senkron zamanlaması" adımlarını uygula.
 - "Canlıya geç" → `dry_run: false`. "Durdur" → `paused: true`.
 - "Nasıl gidiyor?" → `history/posted.jsonl`, `history/insights.json`, `notes/strategy.md`
   özetini ver.
