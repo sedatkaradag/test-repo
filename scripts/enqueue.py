@@ -131,6 +131,8 @@ def check_caption(caption, entry, exclude_slot=None):
         problems.append(f"caption must cite the reference ({entry['reference']})")
     if re.search(r"https?://|www\.|\b[\w-]+\.(com|org|net|io|co)\b", caption, re.I):
         problems.append("no links or domain names in captions")
+    if re.search("[\u2014\u2013]", caption):
+        problems.append("no long dashes (\u2014 or \u2013) in captions; use a comma, a full stop or a new line")
     if re.search(r"translation\s*:|translated by|quranenc|rowwad", caption, re.I):
         problems.append("do not name the translation source in the caption")
     # Spelling: every lowercase word outside hashtags must be a real word or a known term.
@@ -146,11 +148,11 @@ def check_caption(caption, entry, exclude_slot=None):
     # Variety: no repeated closing line, no near-identical hashtag sets.
     recent = recent_captions(exclude_slot=exclude_slot)
     if closing_line(caption) and closing_line(caption) in {closing_line(c) for c in recent}:
-        problems.append("closing line repeats one of the last 8 captions — phrase it differently")
+        problems.append("closing line repeats one of the last 8 captions; phrase it differently")
     for c in recent[-4:]:
         other = hashtags(c)
         if tags and other and len(tags & other) / len(tags | other) > 0.5:
-            problems.append("hashtags too similar to a recent post — rotate them")
+            problems.append("hashtags too similar to a recent post; rotate them")
             break
     return problems
 
@@ -213,7 +215,7 @@ def cmd_add(a):
         "image": f"queue/{stem}.jpg",
         "story_image": f"queue/{stem}_story.jpg",
         "caption": caption,
-        "alt_text": f"{entry['english'][:900]} — {entry['reference']}",
+        "alt_text": f"{entry['english'][:900]} ({entry['reference']})",
         "theme": a.theme,
         "review": a.review,
         "flags": flags,
@@ -227,48 +229,94 @@ def cmd_add(a):
         print(f"FLAG {f}")
 
 
+def previous_reel_type(before_iso):
+    """Type (quran/hadith) of the latest reel scheduled before `before_iso`, ignoring removed ones."""
+    reels = [i for i in queued() if i.get("type") == "reel" and i.get("status") not in ("deleted", "hold")
+             and i.get("publish_at", "") < before_iso]
+    if not reels:
+        return None
+    last = max(reels, key=lambda i: i["publish_at"])
+    return last.get("content_type") or last["entry_id"].split(":")[0]
+
+
 def cmd_add_reel(a):
-    """Silent Reel from an already approved post of the same day (no new text)."""
+    """Silent Reel with its own verse or hadith: never a copy of a feed post, and the
+    type alternates with the previous Reel (verse, hadith, verse, ...)."""
     cfg = config()
-    src = json.loads((QUEUE / f"{a.source}.json").read_text(encoding="utf-8"))
-    entry = get(src["entry_id"])
-    require_integrity([src["entry_id"]])
-    slot, date_str = slot_by_key(cfg, a.slot)
-    if slot.get("type") != "reel":
-        sys.exit(f"REJECT: {a.slot} is not the reel slot")
-    base = slot_utc(date_str, slot["time"], slot["tz"])
-    if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
-        sys.exit("REJECT: slot is in the past or too close")
+    entry = get(a.entry)
+    base_ids = {a.entry}
+    m = re.fullmatch(r"quran:(\d+):(\d+)-(\d+)", a.entry)
+    if m:
+        s, x, y = map(int, m.groups())
+        base_ids = {f"quran:{s}:{v}" for v in range(x, y + 1)} | {a.entry}
+    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"}
+    for i in queued():
+        recent |= set(i.get("entry_ids") or [])
+    if base_ids & recent:
+        sys.exit(f"REJECT: {a.entry} was posted or queued recently (Reels must not repeat a post)")
+    if entry["type"] == "hadith" and entry["status"] not in ("sahih", "hasan"):
+        sys.exit("REJECT: hadith grade not sahih/hasan")
+    flags = require_integrity([a.entry])
+
+    if a.at:
+        # One-off Reel at a given UTC time (owner asked for it explicitly).
+        when = dt.datetime.fromisoformat(a.at.replace("Z", "+00:00")).astimezone(dt.timezone.utc).replace(microsecond=0)
+        date_str = when.strftime("%Y-%m-%d")
+        slot = {"time": when.strftime("%H:%M"), "tz": "UTC"}
+        a.slot = f"{date_str}_reel-manual-{when.strftime('%H%M')}"
+        if when <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=20):
+            sys.exit("REJECT: time is in the past or too close")
+    else:
+        slot, date_str = slot_by_key(cfg, a.slot)
+        if slot.get("type") != "reel":
+            sys.exit(f"REJECT: {a.slot} is not the reel slot")
+        base = slot_utc(date_str, slot["time"], slot["tz"])
+        if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
+            sys.exit("REJECT: slot is in the past or too close")
+        jitter = int(cfg.get("jitter_minutes", 0)) * 60
+        when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
+    when_iso = when.isoformat(timespec="seconds").replace("+00:00", "Z")
+    prev = previous_reel_type(when_iso)
+    if prev and prev == entry["type"]:
+        want = "hadith" if prev == "quran" else "quran"
+        sys.exit(f"REJECT: the previous Reel was {prev}; this one must be {want}")
+
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
     problems = check_caption(caption, entry, exclude_slot=a.slot)
     if problems:
         sys.exit("REJECT caption: " + "; ".join(problems))
-    jitter = int(cfg.get("jitter_minutes", 0)) * 60
-    when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
+
+    img = QUEUE / f"{a.slot}.jpg"
+    try:
+        render(a.entry, img)
+    except TooLong:
+        sys.exit("REJECT: too long for one image, choose a shorter entry")
     video = QUEUE / f"{a.slot}.mp4"
-    render_reel(src["entry_id"], video)
+    render_reel(a.entry, video)
     item = {
-        "entry_id": src["entry_id"],
+        "entry_id": a.entry,
         "type": "reel",
-        "source_slot": a.source,
+        "content_type": entry["type"],
         "reference": entry["reference"],
         "slot": a.slot,
-        "publish_at": when.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "publish_at": when_iso,
         "local_slot": f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
-        "image": src["image"],
+        "image": f"queue/{a.slot}.jpg",
         "video": f"queue/{a.slot}.mp4",
         "trial": bool((cfg.get("reels") or {}).get("trial", True)),
         "caption": caption,
-        "alt_text": src.get("alt_text", ""),
-        "theme": src.get("theme", ""),
+        "alt_text": f"{entry['english'][:900]} ({entry['reference']})",
+        "theme": a.theme,
         "review": a.review,
+        "flags": flags,
+        "integrity": "passed",
         "status": "ready",
         "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
     }
     (QUEUE / f"{a.slot}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"QUEUED REEL {a.slot} from {a.source} -> {video}")
+    print(f"QUEUED REEL {a.slot} {a.entry} ({entry['type']}) at {when_iso} -> {video}")
 
 
 def cmd_add_carousel(a):
@@ -285,7 +333,7 @@ def cmd_add_carousel(a):
         sys.exit("REJECT: slot is in the past or too close")
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
-    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("type") != "reel"}
+    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"}
     entries = []
     for i in ids:
         e = get(i)
@@ -311,6 +359,8 @@ def cmd_add_carousel(a):
         problems.append(f"{len(tags)} hashtags (use 3-5)")
     if re.search(r"https?://|www\.|\b[\w-]+\.(com|org|net|io|co)\b", caption, re.I):
         problems.append("no links or domain names in captions")
+    if re.search("[\u2014\u2013]", caption):
+        problems.append("no long dashes (\u2014 or \u2013) in captions; use a comma, a full stop or a new line")
     if re.search(r"translation\s*:|translated by|quranenc|rowwad", caption, re.I):
         problems.append("do not name the translation source in the caption")
     recent_caps = recent_captions(exclude_slot=a.slot)
@@ -384,6 +434,8 @@ def cmd_rerender(a):
             render(i, QUEUE / f"{stem}_{n}.jpg")
     elif item["type"] == "reel":
         flags = require_integrity([item["entry_id"]])
+        if item.get("image") == f"queue/{stem}.jpg":   # Reels with their own content keep their own card
+            render(item["entry_id"], QUEUE / f"{stem}.jpg")
         render_reel(item["entry_id"], QUEUE / f"{stem}.mp4")
     else:
         flags = require_integrity([item["entry_id"]])
@@ -444,9 +496,11 @@ if __name__ == "__main__":
     ad.add_argument("--theme", default="")
     ad.add_argument("--review", default="")
     ar = sub.add_parser("add-reel")
-    ar.add_argument("--source", required=True, help="slot key of an approved post (same day)")
-    ar.add_argument("--slot", required=True, help="reel slot key, e.g. 2026-10-21_reel")
+    ar.add_argument("--entry", required=True, help="its own verse or hadith id, never a feed post's")
+    ar.add_argument("--slot", help="reel slot key, e.g. 2026-10-21_reel")
+    ar.add_argument("--at", help="one-off: UTC time instead of a slot, e.g. 2026-10-21T19:30:00Z")
     ar.add_argument("--caption-file", required=True)
+    ar.add_argument("--theme", default="")
     ar.add_argument("--review", default="")
     ac = sub.add_parser("add-carousel")
     ac.add_argument("--entries", required=True, help="comma-separated ids, 3-7")

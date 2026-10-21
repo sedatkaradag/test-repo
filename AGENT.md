@@ -69,7 +69,7 @@ cd scripts
 
    <2-3 cümlelik sade İngilizce tefekkür; sadece metnin söylediğine dayanır>
 
-   — <referans>  (hadis ise: "Sahih al-Bukhari 6018 · Grade: Sahih")
+   <referans>  (hadis ise: "Sahih al-Bukhari 6018 · Grade: Sahih")
 
    <Kapanış cümlesi: her gönderide farklı>
 
@@ -89,6 +89,8 @@ cd scripts
      gratitude); Instagram araması etiketten çok caption kelimelerine bakıyor.
      Son gönderilerin etiketlerine `python3 enqueue.py list` ve `queue/*.json` ile bak.
    - Metni caption'da alıntılayacaksan birebir veritabanındaki gibi olmalı. En fazla 2 emoji.
+   - **Uzun tire (— veya –) kullanma**; yapay zekâ yazısı gibi duruyor. Virgül, nokta ya da yeni
+     satır kullan (kod reddeder). Ayet ve hadis metninin kendisi kaynaktaki gibi kalır.
    - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
    - **Kuyruktaki bir gönderide sorun görülürse** (denetçi ya da ana ajan): hemen
      `python3 enqueue.py hold --slot <slot> --reason "..."` ile beklemeye al (yayıncı
@@ -141,13 +143,16 @@ cd scripts
    `REJECT` dönerse nedenine göre düzelt ya da başka içerik seç.
    Sonra oluşan `queue/*.jpg` dosyasını **Read ile açıp bak**: taşma, kutucuk
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç.
-7b. **Günün Reels'i:** `slots` çıktısında `reel` türünde boş slot varsa, aynı günün onaylı
-   gönderilerinden en çok paylaşılmaya uygun olanı seç (kısa, evrensel, güçlü kanca).
-   Reels için **ayrı ve farklı** bir caption yaz (ilk satır izleyiciyi durduran kanca,
-   sonra 1-2 cümle, kapanış, 3-5 etiket); denetçi bu caption'ı da aynı kurallarla incelesin
-   ve kararı `review_log.py` ile kaydet. Sonra:
-   `python3 enqueue.py add-reel --source <gönderi slotu> --slot <tarih>_reel --caption-file <dosya> --review "<özet>"`
-   Video sessiz, aynı şablon; metin yukarıdan aşağı belirir. Metin değişmez, yeni hadis/ayet yok.
+7b. **Günün Reels'i:** `slots` çıktısında `reel` türünde boş slot varsa, Reels için **kendi
+   içeriğini** seç; hiçbir gönderinin kopyası olmaz. Tür sırayla değişir: önceki Reels ayetse bu
+   hadis, hadisse ayet (`enqueue.py list` ile son Reels'in türüne bak; kod da kontrol eder).
+   3-6. adımları aynen uygula: tema (son 3 gönderi ve son 3 Reels'ten farklı), kısa ve en çok
+   paylaşılmaya uygun içerik (yaklaşık 250 karakter altı, güçlü tek mesaj), ayrı caption (ilk
+   satır izleyiciyi durduran kanca, sonra 1-2 cümle, kapanış, 3-5 etiket), **yeni** bağımsız
+   denetçi ve `review_log.py` kaydı. Sonra:
+   `python3 enqueue.py add-reel --entry <ID> --slot <tarih>_reel --caption-file <dosya> --theme "<tema>" --review "<özet>"`
+   Kod son 365 günde paylaşılan veya kuyruktaki içerikleri ve yanlış türü reddeder.
+   Video sessiz; kart metni yukarıdan aşağı belirir. Oluşan `queue/<slot>.jpg` kartını Read ile aç.
 7c. **Haftalık carousel:** `slots` çıktısında `carousel` türünde boş slot varsa (haftada bir):
    tek bir tema seç (son 4 carousel'den farklı; `notes/strategy.md` en iyi temaları söylüyorsa
    onlardan), aynı temada 5 içerik seç (ayet, hadis ya da karışık; hepsi bağlamdan bağımsız,
@@ -227,9 +232,12 @@ Senkron görevlerinin saatleri `config.yaml` slotlarından hesaplanır; elle saa
    `cron_expression`) ve ortak `prompt`.
 2. `list_triggers` ile adı "Halal Algorithm – panel senkronu · " ile başlayan görevleri bul.
 3. Eşleştir (ada göre):
-   - cron veya prompt farklıysa `update_trigger` ile yalnızca farklı olanı güncelle;
+   - cron farklıysa `update_trigger` ile yalnızca `cron_expression`'ı güncelle. **Görev
+     metnini (prompt) asla otomatik değiştirme**: farklıysa değiştirmeden raporda belirt;
+     metin yalnızca sahibinin onayıyla, sohbetteki ana ajan tarafından güncellenir;
    - listede olup görevi olmayan için `create_trigger` (`name`, `cron_expression`,
-     `prompt` = script'teki prompt, `initiation`: "human_schedule", bildirim: push);
+     `prompt` = script'teki prompt, `initiation`: "human_schedule", bildirim: push) ama
+     yalnızca slot saatleri değiştiği için yeni bir saat dilimi gerekiyorsa;
    - görevi olup listede olmayanı (o saat diliminde artık slot yok) `delete_trigger` ile sil.
 4. Değişiklik yaptıysan log'a "Ana ajan" olarak tek satır yaz (eski → yeni saat) ve raporda belirt.
 
@@ -269,7 +277,7 @@ Her senkron çalışmasında, sırayla:
    - `ignore` → `status: "ignored"`, `reason`. Spam, bot, reklam, link, hakaret. Yanıt yok;
      gizleme/silme kararı sahibinin.
 4. **Taslak kuralları:** yorumun dilinde (emin değilsen İngilizce), 1-2 kısa cümle, en fazla
-   200 karakter; sıcak, sade, yoruma özel. Ayet veya hadis alıntılama, yeni hadis ekleme,
+   200 karakter; sıcak, sade, yoruma özel; uzun tire (— –) yok. Ayet veya hadis alıntılama, yeni hadis ekleme,
    hüküm verme, "âlimler der ki" deme; link, etiket, "DM at", "takip et" yok; en fazla bir emoji.
    Son 50 yanıtta (panel `reply`/`draft` + `sent.jsonl`) geçen bir cümleyi tekrar etme;
    son 10 yanıtla aynı kelimeyle başlama.
