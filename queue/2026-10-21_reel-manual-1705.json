@@ -1,0 +1,31 @@
+{
+  "entry_id": "quran:20:25-28",
+  "type": "reel",
+  "content_type": "quran",
+  "reference": "Surah Taa-Haa 20:25-28",
+  "slot": "2026-10-21_reel-manual-1705",
+  "publish_at": "2026-10-21T17:05:00Z",
+  "local_slot": "2026-10-21 17:05 UTC (±5 min)",
+  "image": "queue/2026-10-21_reel-manual-1705.jpg",
+  "video": "queue/2026-10-21_reel-manual-1705.mp4",
+  "trial": false,
+  "caption": "A du'a for every hard conversation.\n\nBefore facing a heavy task, Musa asked his Lord to put his heart at ease, make his task easy and loosen the knot from his tongue so that people would understand him. Keep these words close before your next exam, interview or difficult talk.\n\nSurah Taa-Haa 20:25-28\n\nWho do you know with a big day ahead? Send this to them.\n\n#quranreels #duaforease #prophetmusa #quranrecitation\n\nRecitation: Mishary Alafasy",
+  "alt_text": "He said, “My Lord, reassure my heart for me; and ease my task for me; and loosen the knot from my tongue; so that they may understand my speech (Surah Taa-Haa 20:25-28)",
+  "theme": "du'a for ease (Musa)",
+  "review": "Independent verifier: Arabic word by word and mark by mark, card English = source, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "created_at": "2026-10-21T16:30:27+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "020025",
+      "020026",
+      "020027",
+      "020028"
+    ],
+    "done": false
+  }
+}
