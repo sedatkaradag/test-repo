@@ -110,7 +110,7 @@ def hashtags(caption):
 def closing_line(caption):
     """The last paragraph before the hashtags (the call to action)."""
     paras = [p.strip() for p in re.split(r"\n\s*\n", caption) if p.strip()]
-    paras = [p for p in paras if not p.startswith("#")]
+    paras = [p for p in paras if not p.startswith("#") and not p.lower().startswith("recitation:")]
     return paras[-1].lower() if paras else ""
 
 
@@ -284,9 +284,27 @@ def cmd_add_reel(a):
         sys.exit(f"REJECT: the previous Reel was {prev}; this one must be {want}")
 
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
+    if re.search(r"(?im)^recitation:", caption):
+        sys.exit("REJECT caption: leave out the Recitation line; it is added automatically")
     problems = check_caption(caption, entry, exclude_slot=a.slot)
     if problems:
         sys.exit("REJECT caption: " + "; ".join(problems))
+
+    # Verse Reels carry the recitation of exactly the verses on the card.
+    audio, status = None, "ready"
+    rec = (cfg.get("reels") or {}).get("recitation") or {}
+    if entry["type"] == "quran" and rec.get("enabled") and rec.get("reciters"):
+        reciters = rec["reciters"]
+        used = [i["audio"]["reciter"] for i in sorted(queued(), key=lambda i: i.get("publish_at", ""))
+                if i.get("type") == "reel" and i.get("audio") and i.get("status") != "deleted"]
+        ids = [r["id"] for r in reciters]
+        nxt = reciters[(ids.index(used[-1]) + 1) % len(reciters)] if used and used[-1] in ids else reciters[0]
+        m2 = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", a.entry)
+        sura, first, last = int(m2.group(1)), int(m2.group(2)), int(m2.group(3) or m2.group(2))
+        audio = {"reciter": nxt["id"], "reciter_name": nxt["name"],
+                 "ayahs": [f"{sura:03d}{v:03d}" for v in range(first, last + 1)], "done": False}
+        caption = f"{caption}\n\nRecitation: {nxt['name']}"
+        status = "audio_pending"   # the reel-audio workflow adds the sound, then marks it ready
 
     img = QUEUE / f"{a.slot}.jpg"
     try:
@@ -312,9 +330,11 @@ def cmd_add_reel(a):
         "review": a.review,
         "flags": flags,
         "integrity": "passed",
-        "status": "ready",
+        "status": status,
         "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
     }
+    if audio:
+        item["audio"] = audio
     (QUEUE / f"{a.slot}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"QUEUED REEL {a.slot} {a.entry} ({entry['type']}) at {when_iso} -> {video}")
 

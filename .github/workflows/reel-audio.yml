@@ -1,0 +1,41 @@
+name: reel-audio
+
+# Adds the Qur'an recitation to verse Reels waiting with status "audio_pending", then marks them
+# ready for the publisher. Starts when queue files are pushed; can also be run by hand
+# ("check" only verifies that each configured reciter's files exist).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "queue/*.json"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run or check"
+        default: "run"
+
+concurrency:
+  group: reel-audio
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml imageio-ffmpeg
+      - name: Git identity
+        run: |
+          git config user.name "halal-algorithm-bot"
+          git config user.email "halal-algorithm-bot@users.noreply.github.com"
+      - name: Add recitation
+        run: |
+          git pull -q --rebase
+          if [ "${{ github.event.inputs.mode }}" = "check" ]; then python scripts/reel_audio.py check; else python scripts/reel_audio.py; fi

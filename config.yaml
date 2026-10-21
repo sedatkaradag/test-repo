@@ -43,6 +43,18 @@ dry_run: false
 reels:
   enabled: true
   trial: false
+  # Ayet Reels'lerinde o ayetlerin tilaveti ses olarak eklenir (müzik yok). Kâriler sırayla
+  # döner; caption'ın en altına "Recitation: <ad>" yazılır. Ses everyayah.com'dan (ayet ayet)
+  # GitHub'da indirilip videoya eklenir. Hadis Reels'leri sessizdir.
+  recitation:
+    enabled: true
+    max_seconds: 75
+    reciters:
+      - {id: Alafasy_128kbps, name: Mishary Alafasy}
+      - {id: Abdul_Basit_Murattal_192kbps, name: Abdul Basit Abdus-Samad}
+      - {id: Husary_128kbps, name: Mahmoud Khalil Al-Husary}
+      - {id: Minshawy_Murattal_128kbps, name: Mohamed Siddiq Al-Minshawi}
+      - {id: MaherAlMuaiqly128kbps, name: Maher Al-Muaiqly}
   slot:
     name: reel
     time: "11:00"
