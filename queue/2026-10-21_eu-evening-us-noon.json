@@ -10,11 +10,13 @@
   "alt_text": "Indeed, We endowed Luqmān with wisdom, [saying], “Be grateful to Allah.” Whoever is grateful, it is only for his own good; and whoever is ungrateful, then Allah is Self-Sufficient, Praiseworthy (Surah Luqman 31:12)",
   "theme": "gratitude (shukr)",
   "review": "Fresh verifier, KFGQPC text + Mushaf font: Arabic matches arabic_display letter by letter and mark by mark (2.5x/4x crops); pause signs on their own words; verse numbers attached; no collisions; English and reference correct",
-  "status": "publishing",
+  "status": "published",
   "created_at": "2026-10-20T13:10:59+00:00",
   "flags": [],
   "integrity": "passed",
   "rerendered_at": "2026-10-20T23:37:32+00:00",
   "story_image_skipped": "queue/2026-10-21_eu-evening-us-noon_story.jpg",
-  "story_note": "Story will be posted separately as a recitation video."
+  "story_note": "Story will be posted separately as a recitation video.",
+  "media_id": "18129701782874214",
+  "posted_at": "2026-10-21T16:55:27+00:00"
 }
