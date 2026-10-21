@@ -44,7 +44,9 @@ def duration(path):
 
 def download(reciter, ayah, dest):
     r = requests.get(f"{BASE}/{reciter}/{ayah}.mp3", timeout=60)
-    if r.status_code != 200 or len(r.content) < 2000 or not (r.content[:3] == b"ID3" or r.content[:2] in (b"\xff\xfb", b"\xff\xf3", b"\xff\xf2")):
+    c = r.content
+    is_mp3 = c[:3] == b"ID3" or (len(c) > 1 and c[0] == 0xFF and (c[1] & 0xE0) == 0xE0)
+    if r.status_code != 200 or len(c) < 2000 or not is_mp3:
         raise RuntimeError(f"recitation file {reciter}/{ayah}.mp3 not available (HTTP {r.status_code})")
     dest.write_bytes(r.content)
 
