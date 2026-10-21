@@ -8,6 +8,9 @@ on:
       trial:
         description: "Test as a trial Reel"
         default: "false"
+      cover:
+        description: "Optional cover image path in the repo (tests cover_url)"
+        default: ""
 
 jobs:
   check:
@@ -20,8 +23,11 @@ jobs:
         run: |
           url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/assets/test/reel_test.mp4"
           extra=()
+          if [ -n "${{ github.event.inputs.cover }}" ]; then
+            extra+=(--data-urlencode "cover_url=https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/${{ github.event.inputs.cover }}")
+          fi
           if [ "${{ github.event.inputs.trial }}" = "true" ]; then
-            extra=(--data-urlencode 'trial_params={"graduation_strategy":"SS_PERFORMANCE"}')
+            extra+=(--data-urlencode 'trial_params={"graduation_strategy":"SS_PERFORMANCE"}')
           fi
           resp=$(curl -s -X POST "https://graph.instagram.com/v26.0/${IG_USER_ID}/media" \
             --data-urlencode "media_type=REELS" --data-urlencode "video_url=${url}" \

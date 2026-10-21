@@ -102,8 +102,10 @@ class Instagram:
         c = self._call("POST", f"{self.user_id}/media", video_url=video_url, media_type="STORIES")["id"]
         return self._finish(c, tries=120)
 
-    def publish_reel(self, video_url, caption, trial=True):
+    def publish_reel(self, video_url, caption, trial=True, cover_url=None):
         params = dict(media_type="REELS", video_url=video_url, caption=caption)
+        if cover_url:
+            params["cover_url"] = cover_url   # 9:16 JPEG shown on the profile grid and Reels tab
         if trial:
             # Trial reels are shown to non-followers first; Instagram shares them
             # with followers automatically if they perform well.
@@ -208,7 +210,8 @@ def main():
                             media_id = ig.publish_carousel(urls, item["caption"])
                         elif item.get("video"):
                             vurl = f"https://raw.githubusercontent.com/{repo}/main/{item['video']}"
-                            media_id = ig.publish_reel(vurl, item["caption"], item.get("trial", True))
+                            curl = f"https://raw.githubusercontent.com/{repo}/main/{item['cover']}" if item.get("cover") else None
+                            media_id = ig.publish_reel(vurl, item["caption"], item.get("trial", True), curl)
                         else:
                             media_id = ig.publish(url, item["caption"], item["alt_text"])
                         break

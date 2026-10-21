@@ -233,6 +233,13 @@ def cmd_add(a):
         print(f"FLAG {f}")
 
 
+def reel_cover(video, out):
+    """9:16 cover for the profile grid and Reels tab: the last frame, the finished card."""
+    import subprocess
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-sseof", "-0.2", "-i", str(video),
+                    "-frames:v", "1", "-q:v", "2", str(out)], check=True)
+
+
 def recitation_plan(cfg, entry_id):
     """Recitation for a verse video: the next reciter in rotation (over every Reel and Story that
     already has one) and the verse files, one per verse on the card. None when switched off."""
@@ -330,6 +337,7 @@ def cmd_add_reel(a):
         sys.exit("REJECT: too long for one image, choose a shorter entry")
     video = QUEUE / f"{a.slot}.mp4"
     render_reel(a.entry, video)
+    reel_cover(video, QUEUE / f"{a.slot}_cover.jpg")
     item = {
         "entry_id": a.entry,
         "type": "reel",
@@ -340,6 +348,7 @@ def cmd_add_reel(a):
         "local_slot": f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
         "image": f"queue/{a.slot}.jpg",
         "video": f"queue/{a.slot}.mp4",
+        "cover": f"queue/{a.slot}_cover.jpg",
         "trial": bool((cfg.get("reels") or {}).get("trial", True)),
         "caption": caption,
         "alt_text": f"{entry['english'][:900]} ({entry['reference']})",
@@ -507,6 +516,8 @@ def cmd_rerender(a):
         if item.get("image") == f"queue/{stem}.jpg":   # Reels with their own content keep their own card
             render(item["entry_id"], QUEUE / f"{stem}.jpg")
         render_reel(item["entry_id"], QUEUE / f"{stem}.mp4")
+        if item.get("cover"):
+            reel_cover(QUEUE / f"{stem}.mp4", ROOT / item["cover"])
     else:
         flags = require_integrity([item["entry_id"]])
         render(item["entry_id"], QUEUE / f"{stem}.jpg")
