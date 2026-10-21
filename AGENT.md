@@ -224,7 +224,7 @@ config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
 1. `git pull` (repo yoksa Kurulum'daki gibi klonla).
 2. `python3 scripts/panel_rows.py /tmp/panel`.
 3. Panelden `queue` koleksiyonunu `ArtifactData list` ile oku. Her repo satırı için yalnızca
-   `status`, `media_id`, `posted_at`, `error` alanlarından farklı olanları `update` ile yaz
+   `status`, `media_id`, `posted_at`, `error`, `story_kind` alanlarından farklı olanları `update` ile yaz
    (`if_version` ver; `image_url`, `story_url`, `video_url`, `card_urls`'e dokunma; repoda
    olmayan alanı yazma). Panelde hiç olmayan bir satır varsa ekleme, raporda belirt.
    Tüm yazımlar tek `batch`.
