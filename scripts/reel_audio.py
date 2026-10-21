@@ -65,7 +65,7 @@ def mix(video, ayah_files, out, max_seconds):
     total = a + TAIL
     k = max(1.0, a / max(v - 1.0, 1.0))   # reveal across the recitation, never faster than the silent cut
     subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(video), "-i", str(audio),
-                    "-filter_complex", f"[0:v]setpts=PTS*{k:.4f},tpad=stop_mode=clone:stop_duration={TAIL + 5}[v];[1:a]apad[a]",
+                    "-filter_complex", f"[0:v]setpts=PTS*{k:.4f},tpad=stop_mode=clone:stop_duration={TAIL + 5}[v];[1:a]loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100,apad[a]",
                     "-map", "[v]", "-map", "[a]", "-t", f"{total:.2f}", "-r", "30",
                     "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high", "-crf", "20",
                     "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)], check=True)
