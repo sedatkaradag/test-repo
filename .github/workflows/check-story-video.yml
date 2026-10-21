@@ -1,0 +1,34 @@
+name: check-story-video
+
+# Manual test: creates a Story container from a video in the repo and reports whether Instagram
+# accepted it. Nothing is published (a container only goes live after media_publish).
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: "Video path in the repo"
+        default: "queue/2026-10-21_reel-manual-1705.mp4"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Story container only (no publish)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/${{ github.event.inputs.path }}"
+          resp=$(curl -s -X POST "https://graph.instagram.com/v26.0/${IG_USER_ID}/media" \
+            --data-urlencode "media_type=STORIES" --data-urlencode "video_url=${url}" \
+            --data-urlencode "access_token=${IG_ACCESS_TOKEN}")
+          id=$(echo "$resp" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))")
+          if [ -z "$id" ]; then echo "::error::create failed: $(echo "$resp" | head -c 300)"; exit 1; fi
+          for i in $(seq 1 60); do
+            st=$(curl -s "https://graph.instagram.com/v26.0/${id}?fields=status_code,status&access_token=${IG_ACCESS_TOKEN}")
+            code=$(echo "$st" | python3 -c "import sys,json; print(json.load(sys.stdin).get('status_code',''))")
+            if [ "$code" = "FINISHED" ]; then echo "::notice::story video container FINISHED (accepted, not published)"; exit 0; fi
+            if [ "$code" = "ERROR" ] || [ "$code" = "EXPIRED" ]; then echo "::error::container $code: $(echo "$st" | head -c 300)"; exit 1; fi
+            sleep 10
+          done
+          echo "::error::container still processing after 10 minutes"; exit 1

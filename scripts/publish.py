@@ -98,6 +98,10 @@ class Instagram:
         c = self._call("POST", f"{self.user_id}/media", image_url=image_url, media_type="STORIES")["id"]
         return self._finish(c)
 
+    def publish_story_video(self, video_url):
+        c = self._call("POST", f"{self.user_id}/media", video_url=video_url, media_type="STORIES")["id"]
+        return self._finish(c, tries=120)
+
     def publish_reel(self, video_url, caption, trial=True):
         params = dict(media_type="REELS", video_url=video_url, caption=caption)
         if trial:
@@ -195,7 +199,11 @@ def main():
                 media_id = None
                 for attempt in range(3):
                     try:
-                        if item.get("images"):
+                        if item.get("type") == "story":
+                            # Stand-alone Story (e.g. a recitation video for a post that went out without one)
+                            vurl = f"https://raw.githubusercontent.com/{repo}/main/{item['video']}"
+                            media_id = ig.publish_story_video(vurl)
+                        elif item.get("images"):
                             urls = [f"https://raw.githubusercontent.com/{repo}/main/{x}" for x in item["images"]]
                             media_id = ig.publish_carousel(urls, item["caption"])
                         elif item.get("video"):
@@ -210,14 +218,26 @@ def main():
                             raise
                         time.sleep(30 * (attempt + 1))
                 telegram(f"✅ Posted {item['reference']} ({item['entry_id']})")
-                # Same post as a Story; a failed Story never fails the feed post.
-                if cfg.get("stories", True) and item.get("story_image") and not item.get("video") and not item.get("images"):
-                    try:
-                        surl = f"https://raw.githubusercontent.com/{repo}/main/{item['story_image']}"
-                        item["story_media_id"] = ig.publish_story(surl)
-                    except Exception as e:  # noqa: BLE001
-                        item["story_error"] = str(e)[:300]
-                        print(f"story failed: {e}")
+                # Same post as a Story; a failed Story never fails the feed post. Verse posts get
+                # the recitation video when it is ready, otherwise (or if it fails) the image.
+                if (cfg.get("stories", True) and item.get("type") in ("quran", "hadith")
+                        and not item.get("video") and not item.get("images")):
+                    if item.get("story_video") and (item.get("story_audio") or {}).get("done"):
+                        try:
+                            vurl = f"https://raw.githubusercontent.com/{repo}/main/{item['story_video']}"
+                            item["story_media_id"] = ig.publish_story_video(vurl)
+                            item["story_kind"] = "video"
+                        except Exception as e:  # noqa: BLE001
+                            item["story_video_error"] = str(e)[:300]
+                            print(f"video story failed, falling back to the image: {e}")
+                    if not item.get("story_media_id") and item.get("story_image"):
+                        try:
+                            surl = f"https://raw.githubusercontent.com/{repo}/main/{item['story_image']}"
+                            item["story_media_id"] = ig.publish_story(surl)
+                            item["story_kind"] = "image"
+                        except Exception as e:  # noqa: BLE001
+                            item["story_error"] = str(e)[:300]
+                            print(f"story failed: {e}")
             item["status"] = "published" if media_id != "dry-run" else "dry_run_sent"
             item["media_id"] = media_id
             item["posted_at"] = now().isoformat(timespec="seconds")

@@ -204,6 +204,9 @@ def cmd_add(a):
 
     story = QUEUE / f"{stem}_story.jpg"
     make_story(img, story)
+    story_audio = recitation_plan(cfg, a.entry) if cfg.get("stories", True) else None
+    if story_audio:
+        render_reel(a.entry, QUEUE / f"{stem}_story.mp4", label="TODAY'S REMINDER")
 
     item = {
         "entry_id": a.entry,
@@ -214,6 +217,7 @@ def cmd_add(a):
         "local_slot": f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
         "image": f"queue/{stem}.jpg",
         "story_image": f"queue/{stem}_story.jpg",
+        **({"story_video": f"queue/{stem}_story.mp4", "story_audio": story_audio} if story_audio else {}),
         "caption": caption,
         "alt_text": f"{entry['english'][:900]} ({entry['reference']})",
         "theme": a.theme,
@@ -227,6 +231,29 @@ def cmd_add(a):
     print(f"QUEUED {stem} {a.entry} -> {img}")
     for f in flags:
         print(f"FLAG {f}")
+
+
+def recitation_plan(cfg, entry_id):
+    """Recitation for a verse video: the next reciter in rotation (over every Reel and Story that
+    already has one) and the verse files, one per verse on the card. None when switched off."""
+    rec = (cfg.get("reels") or {}).get("recitation") or {}
+    if not entry_id.startswith("quran:") or not rec.get("enabled") or not rec.get("reciters"):
+        return None
+    reciters = rec["reciters"]
+    planned = []
+    for i in queued():
+        if i.get("status") == "deleted":
+            continue
+        for key in ("audio", "story_audio"):
+            if i.get(key):
+                planned.append((i.get("publish_at", ""), i[key].get("assigned") or i[key]["reciter"]))
+    ids = [r["id"] for r in reciters]
+    last = max(planned)[1] if planned else None
+    nxt = reciters[(ids.index(last) + 1) % len(reciters)] if last in ids else reciters[0]
+    m = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", entry_id)
+    sura, first, end = int(m.group(1)), int(m.group(2)), int(m.group(3) or m.group(2))
+    return {"reciter": nxt["id"], "reciter_name": nxt["name"],
+            "ayahs": [f"{sura:03d}{v:03d}" for v in range(first, end + 1)], "done": False}
 
 
 def previous_reel_type(before_iso):
@@ -291,19 +318,9 @@ def cmd_add_reel(a):
         sys.exit("REJECT caption: " + "; ".join(problems))
 
     # Verse Reels carry the recitation of exactly the verses on the card.
-    audio, status = None, "ready"
-    rec = (cfg.get("reels") or {}).get("recitation") or {}
-    if entry["type"] == "quran" and rec.get("enabled") and rec.get("reciters"):
-        reciters = rec["reciters"]
-        used = [i["audio"]["reciter"] for i in sorted(queued(), key=lambda i: i.get("publish_at", ""))
-                if i.get("type") == "reel" and i.get("audio") and i.get("status") != "deleted"]
-        ids = [r["id"] for r in reciters]
-        nxt = reciters[(ids.index(used[-1]) + 1) % len(reciters)] if used and used[-1] in ids else reciters[0]
-        m2 = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", a.entry)
-        sura, first, last = int(m2.group(1)), int(m2.group(2)), int(m2.group(3) or m2.group(2))
-        audio = {"reciter": nxt["id"], "reciter_name": nxt["name"],
-                 "ayahs": [f"{sura:03d}{v:03d}" for v in range(first, last + 1)], "done": False}
-        caption = f"{caption}\n\nRecitation: {nxt['name']}"
+    audio, status = recitation_plan(cfg, a.entry), "ready"
+    if audio:
+        caption = f"{caption}\n\nRecitation: {audio['reciter_name']}"
         status = "audio_pending"   # the reel-audio workflow adds the sound, then marks it ready
 
     img = QUEUE / f"{a.slot}.jpg"
@@ -337,6 +354,39 @@ def cmd_add_reel(a):
         item["audio"] = audio
     (QUEUE / f"{a.slot}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"QUEUED REEL {a.slot} {a.entry} ({entry['type']}) at {when_iso} -> {video}")
+
+
+def cmd_add_story(a):
+    """Stand-alone recitation Story for a verse post (e.g. one that went out with no Story)."""
+    cfg = config()
+    src = json.loads((QUEUE / f"{a.source}.json").read_text(encoding="utf-8"))
+    if not src["entry_id"].startswith("quran:"):
+        sys.exit("REJECT: recitation Stories are for verse posts")
+    require_integrity([src["entry_id"]])
+    when = dt.datetime.fromisoformat(a.at.replace("Z", "+00:00")).astimezone(dt.timezone.utc).replace(microsecond=0)
+    if when <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=5):
+        sys.exit("REJECT: time is in the past or too close")
+    slot = f"{a.source}_story-{when.strftime('%H%M')}"
+    if (QUEUE / f"{slot}.json").exists():
+        sys.exit(f"REJECT: {slot} already exists")
+    audio = recitation_plan(cfg, src["entry_id"])
+    video = QUEUE / f"{slot}.mp4"
+    render_reel(src["entry_id"], video, label="TODAY'S REMINDER")
+    item = {
+        "entry_id": src["entry_id"], "type": "story", "source_slot": a.source,
+        "reference": src["reference"], "slot": slot,
+        "publish_at": when.isoformat().replace("+00:00", "Z"),
+        "local_slot": f"{when.strftime('%Y-%m-%d %H:%M')} UTC",
+        "image": src.get("story_image") or src.get("story_image_skipped") or src["image"],
+        "video": f"queue/{slot}.mp4", "caption": "", "theme": src.get("theme", ""),
+        "review": src.get("review", ""), "integrity": "passed",
+        "status": "audio_pending" if audio else "ready",
+        "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+    }
+    if audio:
+        item["audio"] = audio
+    (QUEUE / f"{slot}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"QUEUED STORY {slot} ({src['entry_id']}) at {item['publish_at']}")
 
 
 def cmd_add_carousel(a):
@@ -461,6 +511,9 @@ def cmd_rerender(a):
         flags = require_integrity([item["entry_id"]])
         render(item["entry_id"], QUEUE / f"{stem}.jpg")
         make_story(QUEUE / f"{stem}.jpg", QUEUE / f"{stem}_story.jpg")
+        if item.get("story_video"):
+            render_reel(item["entry_id"], ROOT / item["story_video"], label="TODAY'S REMINDER")
+            item["story_audio"].update(done=False, failed=False)
     item.update(status="hold", flags=flags, integrity="passed",
                 review="re-rendered; waiting for a fresh verifier",
                 rerendered_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
@@ -515,6 +568,9 @@ if __name__ == "__main__":
     ad.add_argument("--caption-file", required=True)
     ad.add_argument("--theme", default="")
     ad.add_argument("--review", default="")
+    st = sub.add_parser("add-story")
+    st.add_argument("--source", required=True, help="slot of a verse post")
+    st.add_argument("--at", required=True, help="UTC time, e.g. 2026-10-21T17:20:00Z")
     ar = sub.add_parser("add-reel")
     ar.add_argument("--entry", required=True, help="its own verse or hadith id, never a feed post's")
     ar.add_argument("--slot", help="reel slot key, e.g. 2026-10-21_reel")
@@ -545,5 +601,5 @@ if __name__ == "__main__":
     sl = sub.add_parser("slots")
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
-    {"add": cmd_add, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel, "recaption": cmd_recaption,
+    {"add": cmd_add, "add-story": cmd_add_story, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel, "recaption": cmd_recaption,
      "rerender": cmd_rerender, "hold": cmd_hold, "approve": cmd_approve, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
