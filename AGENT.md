@@ -189,6 +189,30 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
 
 Panel güncellemesi başarısız olursa işi durdurma; raporda belirt.
 
+Panel, yayınlanan gönderiyi paylaşımdan sonra 24 saat "Kuyruktaki gönderiler"de
+"Yayında" olarak gösterir; sonra yalnızca "Yayınlananlar" tablosunda kalır (sayfa kendisi yapar).
+
+## Panel senkronu (her slottan sonra)
+
+GitHub yayıncısı panele yazamaz; paylaşımları repoya kaydeder. Bu kısa çalışma repodaki
+durumu panele taşır. İçerik üretmez, kuyruğu, görselleri veya config'i değiştirmez, commit atmaz.
+
+1. `git pull` (repo yoksa Kurulum'daki gibi klonla).
+2. `python3 scripts/panel_rows.py /tmp/panel`.
+3. Panelden `queue` koleksiyonunu `ArtifactData list` ile oku. Her repo satırı için yalnızca
+   `status`, `media_id`, `posted_at`, `error` alanlarından farklı olanları `update` ile yaz
+   (`if_version` ver; `image_url`, `story_url`, `video_url`, `card_urls`'e dokunma; repoda
+   olmayan alanı yazma). Panelde hiç olmayan bir satır varsa ekleme, raporda belirt.
+   Tüm yazımlar tek `batch`.
+4. Bu çalışmada "Yayında"ya geçen her gönderi için `log/<YYYY-MM-DD>` belgesine
+   `{"ts": <posted_at>, "agent": "Yayıncı", "text": "<referans> yayınlandı (<İstanbul saati>)…"}`
+   ekle (Story/carousel/Reels olduğunu belirt). Gün belgesi `posted_at`'in UTC günüdür.
+5. Sorun kontrolü: `publish_at` 20 dakikadan eski olup repoda hâlâ `ready` veya `publishing`
+   olan, ya da `failed` / `missed` olan gönderi var mı? Varsa en üstte bildir ve
+   `log`'a "Ana ajan" olarak not düş. Yayıncıyı veya kuyruğu kendin değiştirme.
+6. Rapor: sorun yoksa tek satır ("Panel güncel: X yayında, sorun yok"). Hiçbir şey
+   değişmediyse ve sorun yoksa da tek satır yeter.
+
 ## Haftalık analist akışı (pazartesi)
 
 1. Kurulum adımları + `git pull` (insights pazartesi 03:41 UTC'de güncellenir).
