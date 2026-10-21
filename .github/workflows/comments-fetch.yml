@@ -1,0 +1,37 @@
+name: comments-fetch
+
+# Hourly: reads new comments on our own posts (last 30 days) into comments/inbox.json.
+# Read-only on Instagram — nothing is replied to here.
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: comments
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml
+      - name: Git identity
+        run: |
+          git config user.name "halal-algorithm-bot"
+          git config user.email "halal-algorithm-bot@users.noreply.github.com"
+      - name: Fetch comments
+        run: python scripts/comments.py fetch
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

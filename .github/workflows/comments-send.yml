@@ -1,0 +1,41 @@
+name: comments-send
+
+# Sends replies the owner approved in the control panel. The panel sync run writes each
+# approved reply to comments/outbox/<comment_id>.json and pushes; that push starts this.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "comments/outbox/*.json"
+  workflow_dispatch:
+
+concurrency:
+  group: comments
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml
+      - name: Git identity
+        run: |
+          git config user.name "halal-algorithm-bot"
+          git config user.email "halal-algorithm-bot@users.noreply.github.com"
+      - name: Send approved replies
+        run: |
+          git pull -q --rebase
+          python scripts/comments.py send
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
