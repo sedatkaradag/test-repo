@@ -1,31 +1,20 @@
 {
-  "entry_id": "quran:41:34",
+  "entry_id": "hadith:bukhari:6114",
   "type": "reel",
-  "content_type": "quran",
-  "reference": "Surah Fussilat 41:34",
+  "content_type": "hadith",
+  "reference": "Sahih al-Bukhari 6114",
   "slot": "2026-10-22_reel",
-  "publish_at": "2026-10-22T14:55:11Z",
+  "publish_at": "2026-10-22T14:57:08Z",
   "local_slot": "2026-10-22 11:00 America/New_York (±5 min)",
   "image": "queue/2026-10-22_reel.jpg",
   "video": "queue/2026-10-22_reel.mp4",
   "trial": false,
-  "caption": "Answer harm with good. It can turn an enemy into a friend.\n\nAllah tells us that good and evil are not equal, and asks us to push back evil with what is better. The verse says the one you were at odds with can become like a close friend.\n\nSurah Fussilat 41:34\n\nWho is one person you could answer with kindness this week?\n\n#quranreels #kindness #goodcharacter #forgiveness\n\nRecitation: Abdul Basit Abdus-Samad",
-  "alt_text": "Good and evil are not equal. Repel evil with what is good; the one whom you have enmity with will become as if he was a close friend (Surah Fussilat 41:34)",
-  "theme": "repel evil with good",
-  "review": "Independent verifier: Arabic checked word by word and mark by mark, card English = source, caption faithful",
+  "caption": "Real strength shows up when you are angry.\n\nThe Prophet ﷺ said that the strong one is not the person who overpowers others, but the one who keeps control of himself in anger. That is a kind of strength anyone can work on.\n\nSahih al-Bukhari 6114 · Grade: Sahih\n\nSend this to the friend who always keeps you calm.\n\n#hadith #anger #selfcontrol #islamicreels",
+  "alt_text": "Narrated Abu Huraira:Allah's Messenger (ﷺ) said, \"The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger (Sahih al-Bukhari 6114)",
+  "theme": "anger / self-control",
+  "review": "Independent verifier: narrator matches chain, card text = source, caption faithful",
   "flags": [],
   "integrity": "passed",
   "status": "ready",
-  "created_at": "2026-10-21T16:13:22+00:00",
-  "audio": {
-    "reciter": "Abdul_Basit_Murattal_192kbps",
-    "reciter_name": "Abdul Basit Abdus-Samad",
-    "ayahs": [
-      "041034"
-    ],
-    "done": true,
-    "seconds": 23.2,
-    "video_seconds": 24.7,
-    "added_at": "2026-10-21T16:32:52+00:00"
-  }
+  "created_at": "2026-10-21T16:49:12+00:00"
 }
