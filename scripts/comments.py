@@ -8,8 +8,8 @@ reply for each new comment into the control panel, the owner approves it there, 
 sync run writes the approved text to comments/outbox/<comment_id>.json. Only files in the
 outbox are ever sent, one reply per comment, and never twice.
 
-Environment: IG_USER_ID, IG_ACCESS_TOKEN (needs instagram_business_manage_comments),
-TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID (optional alerts).
+Environment: IG_USER_ID, IG_ACCESS_TOKEN (needs instagram_business_manage_comments).
+The owner is told about new comments by the panel sync run's report (scheduled task notification).
 """
 import datetime as dt
 import json
@@ -22,7 +22,7 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from publish import Instagram, now, parse, telegram  # noqa: E402
+from publish import Instagram, now, parse  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -115,9 +115,7 @@ def fetch():
     DIR.mkdir(exist_ok=True)
     INBOX.write_text(json.dumps(inbox, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(f"{len(new)} new comment(s), {len(inbox)} in inbox")
-    if commit(f"comments: {len(new)} new") and new:
-        lines = [f"@{c.get('username')}: {c.get('text', '')[:200]}" for c in new[:5]]
-        telegram("💬 New comment(s) — a reply draft will be in the panel after the next sync run:\n\n" + "\n".join(lines))
+    commit(f"comments: {len(new)} new")
 
 
 def send():
@@ -156,11 +154,6 @@ def send():
         log.append(rec)
         print(rec["status"], cid, rec.get("error", ""))
     commit("comments: " + ", ".join(f"{r['status']} {r['comment_id']}" for r in log))
-    for r in log:
-        if r["status"] == "failed":
-            telegram(f"❌ Reply to comment {r['comment_id']} failed: {r.get('error', '')}")
-        elif r["status"] == "sent":
-            telegram(f"✅ Reply sent: {r['message'][:200]}")
 
 
 if __name__ == "__main__":
