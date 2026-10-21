@@ -15,7 +15,7 @@
   "review": "Independent verifier: Arabic checked word by word and mark by mark, card English = source, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "created_at": "2026-10-21T16:13:22+00:00",
   "audio": {
     "reciter": "Abdul_Basit_Murattal_192kbps",
@@ -23,6 +23,9 @@
     "ayahs": [
       "041034"
     ],
-    "done": false
+    "done": true,
+    "seconds": 23.2,
+    "video_seconds": 24.7,
+    "added_at": "2026-10-21T16:30:57+00:00"
   }
 }
