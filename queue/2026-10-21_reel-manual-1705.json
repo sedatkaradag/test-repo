@@ -15,7 +15,7 @@
   "review": "Independent verifier: Arabic word by word and mark by mark, card English = source, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "created_at": "2026-10-21T16:30:27+00:00",
   "audio": {
     "reciter": "Alafasy_128kbps",
@@ -26,9 +26,9 @@
       "020027",
       "020028"
     ],
-    "done": false,
+    "done": true,
     "seconds": 15.5,
     "video_seconds": 17.0,
-    "added_at": "2026-10-21T16:31:43+00:00"
+    "added_at": "2026-10-21T16:32:44+00:00"
   }
 }
