@@ -159,7 +159,14 @@ cd scripts
    caption'ın en altına "Recitation: <ad>" satırını kendisi ekler; o satırı sen yazma.
    Öğe `audio_pending` olarak girer; GitHub `reel-audio` işi push'tan sonra sesi everyayah.com'dan
    indirip videoya ekler, ses seviyesini eşitler ve öğeyi `ready` yapar. Sesi eklenmemiş Reels
-   yayınlanmaz. Hadis Reels'leri sessizdir.
+   yayınlanmaz. Atanan kâride ayet yoksa sıradaki kâriler denenir (caption'daki ad kendiliğinden
+   güncellenir); hiçbirinde yoksa Reels sessiz çıkar ve "Recitation" satırı silinir. Hadis
+   Reels'leri sessizdir. **Günde tek Reels** (`reel` slotu); ek Reels ancak sahibi isterse.
+7d. **Ayet gönderilerinin Story'si:** `enqueue.py add` ayet gönderileri için Story'yi kendiliğinden
+   tilavetli 9:16 video olarak hazırlar (`story_video`, `story_audio`; kâri sırası Reels'le ortak).
+   GitHub sesi ekler; eklenemezse ya da video reddedilirse yayıncı görsel Story'yi atar, gönderi
+   hiçbir durumda etkilenmez. Story'siz çıkmış bir ayet gönderisine sonradan tilavetli Story:
+   `python3 enqueue.py add-story --source <gönderi slotu> --at <UTC zaman>`.
 7c. **Haftalık carousel:** `slots` çıktısında `carousel` türünde boş slot varsa (haftada bir):
    tek bir tema seç (son 4 carousel'den farklı; `notes/strategy.md` en iyi temaları söylüyorsa
    onlardan), aynı temada 5 içerik seç (ayet, hadis ya da karışık; hepsi bağlamdan bağımsız,
@@ -189,7 +196,8 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
    ve `queue/*.mp4` dosyaları. Dönen url'leri ilgili satır dosyasına ekle: gönderi görseli
    `image_url`, Story görseli `story_url`, Reels videosu `video_url` (Reels satırında
    `image_url` olarak Reels'in kendi kartını kullan; `audio_pending` Reels'in videosunu ses
-   eklenince yükle, "Panel senkronu" bunu tamamlar). Carousel'de tüm kartları
+   eklenince yükle, "Panel senkronu" bunu tamamlar; `story_audio.done` olan gönderilerin
+   `queue/<slot>_story.mp4` videosunu da yükleyip `story_video_url` yaz). Carousel'de tüm kartları
    (`queue/<slot>_0.jpg` ... ) yükle: kapak `image_url`, hepsi sırayla `card_urls` listesi.
 3. `ArtifactData` ile yaz (`url` = panel adresi; önce `list` ile mevcut sürümleri oku,
    var olan belgelerde `if_version` ver; tek `batch` çağrısı kullan):
@@ -226,8 +234,10 @@ config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
 5. Sorun kontrolü: `publish_at` 20 dakikadan eski olup repoda hâlâ `ready`, `publishing` veya
    `audio_pending` olan, `error`'unda "recitation could not be added" yazan `hold` Reels, ya da
    `failed` / `missed` olan gönderi var mı? **Tilavet eklenen Reels:** repoda `audio.done: true`
-   olup panel satırında `audio.done` olmayan her Reels için `queue/<slot>.mp4`'ü panele yükle,
-   satırın `video_url`, `audio`, `status` ve `publish_at` alanlarını güncelle. Varsa en üstte bildir ve
+   olup panel satırında `audio.done` olmayan her Reels ya da Story öğesi için `queue/<slot>.mp4`'ü
+   panele yükle, satırın `video_url`, `audio`, `status`, `publish_at` ve `caption` alanlarını
+   güncelle; `story_audio.done` olup panelde `story_video_url` olmayan gönderiler için
+   `queue/<slot>_story.mp4`'ü yükleyip `story_video_url` ve `story_audio` yaz. Varsa en üstte bildir ve
    `log`'a "Ana ajan" olarak not düş. Yayıncıyı veya kuyruğu kendin değiştirme.
 6. **Zamanlama kontrolü:** aşağıdaki "Senkron zamanlaması" adımlarını uygula (slot
    saatleri değiştiyse görevler burada kendini düzeltir).
