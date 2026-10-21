@@ -1,0 +1,18 @@
+{
+  "entry_id": "quran:11:123",
+  "type": "quran",
+  "reference": "Surah Hud 11:123",
+  "slot": "2026-10-22_eu-evening-us-noon",
+  "publish_at": "2026-10-22T17:00:16Z",
+  "local_slot": "2026-10-22 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-22_eu-evening-us-noon.jpg",
+  "story_image": "queue/2026-10-22_eu-evening-us-noon_story.jpg",
+  "caption": "Trust in Allah when you can't see the whole picture.\n\nThe unseen of the heavens and the earth belongs to Allah, and every matter returns to Him. So worship Him, put your trust in Him, and remember that He is not unaware of what you do.\n\n— Surah Hud 11:123\n\nSend this to someone carrying a worry they haven't told anyone about.\n\n#tawakkul #trustinallah #quranreflection #surahhud",
+  "alt_text": "To Allah belongs the unseen of the heavens and earth, and to Him will return all matters. So worship Him and put your trust in Him, for your Lord is not unaware of what you do — Surah Hud 11:123",
+  "theme": "trust in Allah (tawakkul)",
+  "review": "Approved round 1: integrity ok; Arabic and pause sign checked; English, reference, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-21T05:43:21+00:00"
+}
