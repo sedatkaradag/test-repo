@@ -152,7 +152,9 @@ cd scripts
    denetçi ve `review_log.py` kaydı. Sonra:
    `python3 enqueue.py add-reel --entry <ID> --slot <tarih>_reel --caption-file <dosya> --theme "<tema>" --review "<özet>"`
    Kod son 365 günde paylaşılan veya kuyruktaki içerikleri ve yanlış türü reddeder.
-   Kart metni yukarıdan aşağı belirir. Oluşan `queue/<slot>.jpg` kartını Read ile aç.
+   Kart metni yukarıdan aşağı belirir. Oluşan `queue/<slot>.jpg` kartını Read ile aç. Kapak (`cover`):
+   videonun son karesi, bitmiş kart (9:16); profil ızgarasında boş yeşil ekran görünmesin diye
+   kod kendisi üretir ve yayıncı Instagram'a kapak olarak gönderir.
    **Ayet Reels'lerinde tilavet:** kartta hangi ayetler varsa ses de tam olarak onlar. Anlam
    için gerekirse bir önceki ya da sonraki ayeti de aralığa kat (tilavet en fazla ~60 sn).
    Kâriyi `enqueue.py` sırayla seçer (`config.yaml` → `reels.recitation.reciters`) ve
