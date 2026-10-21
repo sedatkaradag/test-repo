@@ -20,5 +20,19 @@
   "media_id": "18129701782874214",
   "posted_at": "2026-10-21T16:55:27+00:00",
   "story_kind": "video",
-  "story_media_id": "17963864982213695"
+  "story_media_id": "17963864982213695",
+  "story_audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "031012"
+    ],
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 36.8,
+    "video_seconds": 38.3,
+    "added_at": "2026-10-21T16:56:04+00:00"
+  },
+  "story_video": "queue/2026-10-21_eu-evening-us-noon_story-1720.mp4"
 }

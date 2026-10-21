@@ -167,6 +167,8 @@ cd scripts
    GitHub sesi ekler; eklenemezse ya da video reddedilirse yayıncı görsel Story'yi atar, gönderi
    hiçbir durumda etkilenmez. Story'siz çıkmış bir ayet gönderisine sonradan tilavetli Story:
    `python3 enqueue.py add-story --source <gönderi slotu> --at <UTC zaman>`.
+   Panelde ayrı kart açılmaz: Story yayınlanınca videosunu yükleyip **kaynak gönderinin** satırına
+   `story_video_url`, `story_audio` ve `story_kind: "video"` yaz.
 7c. **Haftalık carousel:** `slots` çıktısında `carousel` türünde boş slot varsa (haftada bir):
    tek bir tema seç (son 4 carousel'den farklı; `notes/strategy.md` en iyi temaları söylüyorsa
    onlardan), aynı temada 5 içerik seç (ayet, hadis ya da karışık; hepsi bağlamdan bağımsız,

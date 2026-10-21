@@ -25,6 +25,8 @@ def main(out):
     (out / "meta").mkdir(parents=True, exist_ok=True)
     for p in sorted((ROOT / "queue").glob("*.json")):
         item = json.loads(p.read_text(encoding="utf-8"))
+        if item.get("type") == "story" and item.get("source_slot"):
+            continue   # shown as the Story of its post (source row: story_video_url, story_audio)
         row = {k: item[k] for k in FIELDS if k in item}
         (out / "queue" / f"{p.stem}.json").write_text(json.dumps(row, ensure_ascii=False), encoding="utf-8")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
