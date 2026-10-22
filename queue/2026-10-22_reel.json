@@ -15,7 +15,9 @@
   "review": "Independent verifier: narrator matches chain, card text = source, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "created_at": "2026-10-21T16:49:12+00:00",
-  "cover": "queue/2026-10-22_reel_cover.jpg"
+  "cover": "queue/2026-10-22_reel_cover.jpg",
+  "media_id": "18002450732798769",
+  "posted_at": "2026-10-22T14:57:46+00:00"
 }
