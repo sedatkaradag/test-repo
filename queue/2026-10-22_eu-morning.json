@@ -13,7 +13,7 @@
   "review": "Approved round 2: integrity ok; Arabic checked word/mark by mark; English, reference, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "created_at": "2026-10-21T05:44:26+00:00",
   "story_video": "queue/2026-10-22_eu-morning_story.mp4",
   "story_audio": {
@@ -29,5 +29,9 @@
     "seconds": 14.5,
     "video_seconds": 16.0,
     "added_at": "2026-10-21T16:56:24+00:00"
-  }
+  },
+  "story_media_id": "18132336910791924",
+  "story_kind": "video",
+  "media_id": "18005272808796568",
+  "posted_at": "2026-10-22T06:18:52+00:00"
 }
