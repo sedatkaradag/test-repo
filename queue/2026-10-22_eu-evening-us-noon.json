@@ -13,7 +13,7 @@
   "review": "Approved round 1: integrity ok; Arabic and pause sign checked; English, reference, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "created_at": "2026-10-21T05:43:21+00:00",
   "story_video": "queue/2026-10-22_eu-evening-us-noon_story.mp4",
   "story_audio": {
@@ -28,5 +28,9 @@
     "seconds": 19.2,
     "video_seconds": 20.7,
     "added_at": "2026-10-21T16:56:16+00:00"
-  }
+  },
+  "story_media_id": "18119381038946191",
+  "story_kind": "video",
+  "media_id": "18044183897822901",
+  "posted_at": "2026-10-22T17:01:15+00:00"
 }
