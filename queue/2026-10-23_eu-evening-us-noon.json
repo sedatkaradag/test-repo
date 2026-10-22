@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:2:261",
+  "type": "quran",
+  "reference": "Surah Al-Baqara 2:261",
+  "slot": "2026-10-23_eu-evening-us-noon",
+  "publish_at": "2026-10-23T16:56:57Z",
+  "local_slot": "2026-10-23 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-23_eu-evening-us-noon.jpg",
+  "story_image": "queue/2026-10-23_eu-evening-us-noon_story.jpg",
+  "story_video": "queue/2026-10-23_eu-evening-us-noon_story.mp4",
+  "story_audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "002261"
+    ],
+    "done": false
+  },
+  "caption": "Charity that grows: one grain, seven ears, a hundred grains in each.\n\nIn this verse, those who spend their wealth in the way of Allah are compared to a grain that sprouts seven ears, each ear bearing a hundred grains. Read it slowly this evening and think about what you give.\n\nSurah Al-Baqara 2:261\n\nName one small act of giving you can do before this week ends.\n\n#sadaqah #charity #quranreflection #surahbaqarah",
+  "alt_text": "The likeness of those who spend their wealth in the way of Allah is like a grain that sprouts seven ears, each ear bearing a hundred grains. And Allah gives multiple [rewards] for whom He wills. And Allah is All-Encompassing, All-Knowing (Surah Al-Baqara 2:261)",
+  "theme": "charity (sadaqah)",
+  "review": "Approved round 3 (captions rewritten after 2 rejections for paraphrase): Arabic checked mark by mark, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-22T05:44:15+00:00"
+}

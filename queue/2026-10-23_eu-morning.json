@@ -1,0 +1,28 @@
+{
+  "entry_id": "quran:62:9-10",
+  "type": "quran",
+  "reference": "Surah Al-Jumu'a 62:9-10",
+  "slot": "2026-10-23_eu-morning",
+  "publish_at": "2026-10-23T06:10:44Z",
+  "local_slot": "2026-10-23 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-23_eu-morning.jpg",
+  "story_image": "queue/2026-10-23_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-23_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "062009",
+      "062010"
+    ],
+    "done": false
+  },
+  "caption": "Jumu'ah Mubarak: Friday is the day to hurry to prayer.\n\nWhen the call to prayer is made on Friday, Allah tells the believers to hasten to His remembrance and leave off trading. When the prayer is over, go out, seek His bounty, and keep remembering Him much.\n\nSurah Al-Jumu'a 62:9-10\n\nWhat will you set aside today so you are ready when the call comes?\n\n#jumuah #jumuahmubarak #fridayreminder #surahjumuah",
+  "alt_text": "O you who believe, when the call for prayer is made on Friday, then hasten to the remembrance of Allah and leave off trading. That is better for you, if only you knew. When the prayer is over, disperse in the land and seek from the bounty of Allah, and remember Allah much so that you may be successful (Surah Al-Jumu'a 62:9-10)",
+  "theme": "Friday (Jumu'ah)",
+  "review": "Approved round 1: integrity ok, Arabic checked mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-22T05:43:51+00:00"
+}
