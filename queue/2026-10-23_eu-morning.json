@@ -28,6 +28,10 @@
   "review": "Approved round 1: integrity ok, Arabic checked mark by mark, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
-  "created_at": "2026-10-22T05:43:51+00:00"
+  "status": "published",
+  "created_at": "2026-10-22T05:43:51+00:00",
+  "story_media_id": "17969197689175478",
+  "story_kind": "image",
+  "media_id": "18643422577017047",
+  "posted_at": "2026-10-23T06:11:06+00:00"
 }
