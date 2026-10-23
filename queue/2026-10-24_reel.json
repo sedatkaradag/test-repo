@@ -1,0 +1,21 @@
+{
+  "entry_id": "hadith:bukhari:6125",
+  "type": "reel",
+  "content_type": "hadith",
+  "reference": "Sahih al-Bukhari 6125",
+  "slot": "2026-10-24_reel",
+  "publish_at": "2026-10-24T14:58:03Z",
+  "local_slot": "2026-10-24 11:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-24_reel.jpg",
+  "video": "queue/2026-10-24_reel.mp4",
+  "cover": "queue/2026-10-24_reel_cover.jpg",
+  "trial": false,
+  "caption": "Make things easy for people, not difficult.\n\nThe Prophet ﷺ told us to make things easy for people and not hard for them, to calm them with glad tidings and not push them away.\n\nSahih al-Bukhari 6125 · Grade: Sahih\n\nSend this to someone who always makes things easier for you.\n\n#hadithreels #ease #gentleness #dawah",
+  "alt_text": "Narrated Anas bin Malik:The Prophet (ﷺ) said, \"Make things easy for the people, and do not make it difficult for them, and make them calm (with glad tidings) and do not repulse (them) (Sahih al-Bukhari 6125)",
+  "theme": "ease / making things easy",
+  "review": "approve r1: English+narrator+ref+grade match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-23T05:46:12+00:00"
+}

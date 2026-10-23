@@ -1,0 +1,18 @@
+{
+  "entry_id": "hadith:tirmidhi:1924",
+  "type": "hadith",
+  "reference": "Jami at-Tirmidhi 1924",
+  "slot": "2026-10-24_us-evening",
+  "publish_at": "2026-10-25T00:30:44Z",
+  "local_slot": "2026-10-24 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-10-24_us-evening.jpg",
+  "story_image": "queue/2026-10-24_us-evening_story.jpg",
+  "caption": "Mercy: be merciful on the earth, and you will be shown mercy.\n\nThe Prophet ﷺ said that the merciful are shown mercy by Ar-Rahman, and that whoever keeps the ties of the womb, Allah keeps ties with him. As the day ends, think of who needs your mercy most, at home and beyond.\n\nJami at-Tirmidhi 1924 · Grade: Sahih\n\nName one relative you will reach out to before the week is over.\n\n#mercy #arrahman #familyties #hadithoftheday",
+  "alt_text": "Abdullah bin 'Amr narrated that the Messenger of Allah said:\"The merciful are shown mercy by Ar-Rahman. Be merciful on the earth, and you will be shown mercy from Who is above the heavens. The womb is named after Ar-Rahman, so whoever connects it, Allah connects him, and whoever severs it, Allah severs him (Jami at-Tirmidhi 1924)",
+  "theme": "mercy / family ties",
+  "review": "approve r2 (replaces bukhari:7536, rejected for quote-order render bug): text/narrator/ref/grade ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-23T05:47:45+00:00"
+}

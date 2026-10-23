@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:16:97",
+  "type": "quran",
+  "reference": "Surah An-Nahl 16:97",
+  "slot": "2026-10-24_eu-morning",
+  "publish_at": "2026-10-24T06:14:10Z",
+  "local_slot": "2026-10-24 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-24_eu-morning.jpg",
+  "story_image": "queue/2026-10-24_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-24_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Minshawy_Murattal_128kbps",
+    "reciter_name": "Mohamed Siddiq Al-Minshawi",
+    "ayahs": [
+      "016097"
+    ],
+    "done": false
+  },
+  "caption": "Good deeds and a good life: a promise for this Saturday morning.\n\nAllah says that whoever does righteous deeds, male or female, while being a believer, will be granted a good life. And they will be rewarded according to the best of their deeds.\n\nSurah An-Nahl 16:97\n\nPick one good deed and get it done before noon.\n\n#quran #gooddeeds #goodlife #muslimhabits",
+  "alt_text": "Whoever does righteous deeds, male or female, while being a believer, We will surely grant him a good life, and We will surely reward them according to the best of their deeds (Surah An-Nahl 16:97)",
+  "theme": "good deeds / good life",
+  "review": "approve r1: Arabic checked word/mark, English+ref match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-23T05:45:49+00:00"
+}

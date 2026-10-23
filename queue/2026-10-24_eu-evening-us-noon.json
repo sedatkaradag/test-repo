@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:49:10",
+  "type": "quran",
+  "reference": "Surah Al-Hujuraat 49:10",
+  "slot": "2026-10-24_eu-evening-us-noon",
+  "publish_at": "2026-10-24T16:58:50Z",
+  "local_slot": "2026-10-24 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-24_eu-evening-us-noon.jpg",
+  "story_image": "queue/2026-10-24_eu-evening-us-noon_story.jpg",
+  "story_video": "queue/2026-10-24_eu-evening-us-noon_story.mp4",
+  "story_audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "049010"
+    ],
+    "done": false
+  },
+  "caption": "Brotherhood: Allah calls the believers brothers and asks us to make peace.\n\nThis verse names the believers as brothers and tells us to make peace between them, then to fear Allah so that we may be shown mercy. This evening, think of a rift that has gone on too long.\n\nSurah Al-Hujuraat 49:10\n\nMessage one person tonight and take the first step to mend it.\n\n#brotherhood #ummah #reconciliation #surahhujurat",
+  "alt_text": "The believers are but brothers, so make peace between your brothers. And fear Allah, so that you may be shown mercy (Surah Al-Hujuraat 49:10)",
+  "theme": "brotherhood / making peace",
+  "review": "approve r1: Arabic checked word/mark, pause sign ok, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-23T05:46:35+00:00"
+}
