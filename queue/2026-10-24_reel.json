@@ -16,6 +16,8 @@
   "review": "approve r1: English+narrator+ref+grade match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
-  "created_at": "2026-10-23T05:46:12+00:00"
+  "status": "published",
+  "created_at": "2026-10-23T05:46:12+00:00",
+  "media_id": "17992240391856108",
+  "posted_at": "2026-10-24T14:58:45+00:00"
 }
