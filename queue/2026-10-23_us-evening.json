@@ -13,6 +13,10 @@
   "review": "Approved round 1: integrity ok, narrator Al-Hasan bin Ali matches chain, grade Sahih, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
-  "created_at": "2026-10-22T05:44:17+00:00"
+  "status": "published",
+  "created_at": "2026-10-22T05:44:17+00:00",
+  "story_media_id": "18590447227069624",
+  "story_kind": "image",
+  "media_id": "18137170735632566",
+  "posted_at": "2026-10-24T00:27:35+00:00"
 }
