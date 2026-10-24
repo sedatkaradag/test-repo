@@ -16,6 +16,6 @@
   "review": "approve r1: English+narrator+ref+grade match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "created_at": "2026-10-23T05:46:12+00:00"
 }
