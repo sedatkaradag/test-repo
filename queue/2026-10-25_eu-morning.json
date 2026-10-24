@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:2:45",
+  "type": "quran",
+  "reference": "Surah Al-Baqara 2:45",
+  "slot": "2026-10-25_eu-morning",
+  "publish_at": "2026-10-25T07:18:56Z",
+  "local_slot": "2026-10-25 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-25_eu-morning.jpg",
+  "story_image": "queue/2026-10-25_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-25_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "002045"
+    ],
+    "done": false
+  },
+  "caption": "Patience and prayer: your two supports for this Sunday morning.\n\nAllah tells us to seek help through patience and prayer, and that this is hard except for the humble. Start the day by turning to Him before turning to anything else.\n\nSurah Al-Baqara 2:45\n\nBefore you reach for your phone again, pause for one short du'a.\n\n#quran #patienceandprayer #salah #morningreminder",
+  "alt_text": "Seek help through patience and prayer. It is strenuous except for the humble (Surah Al-Baqara 2:45)",
+  "theme": "patience and prayer (salah)",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word and mark by mark, English/reference match, caption clean. Closing line reworded afterwards only to pass the spellchecker ('app' -> 'phone')",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-24T05:42:53+00:00"
+}

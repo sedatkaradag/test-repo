@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:25:63",
+  "type": "quran",
+  "reference": "Surah Al-Furqaan 25:63",
+  "slot": "2026-10-25_eu-evening-us-noon",
+  "publish_at": "2026-10-25T16:57:41Z",
+  "local_slot": "2026-10-25 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-25_eu-evening-us-noon.jpg",
+  "story_image": "queue/2026-10-25_eu-evening-us-noon_story.jpg",
+  "story_video": "queue/2026-10-25_eu-evening-us-noon_story.mp4",
+  "story_audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "025063"
+    ],
+    "done": false
+  },
+  "caption": "Humility: how the servants of the Most Compassionate walk and speak.\n\nThis verse describes the servants of Ar-Rahman as those who walk on the earth humbly, and who answer the ignorant only with words of peace. This evening, think back on a moment today when a calm reply would have been enough.\n\nSurah Al-Furqaan 25:63\n\nSave this for the next time someone tries to pull you into an argument.\n\n#humility #ibadurrahman #surahfurqan #calmheart",
+  "alt_text": "The slaves of the Most Compassionate are those who walk on earth humbly, and when the ignorant address them, they only say words of peace (Surah Al-Furqaan 25:63)",
+  "theme": "humility / answering with peace",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word at 2.5x, English/reference match, caption clean",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-24T05:42:27+00:00"
+}

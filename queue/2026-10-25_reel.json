@@ -1,0 +1,33 @@
+{
+  "entry_id": "quran:93:1-5",
+  "type": "reel",
+  "content_type": "quran",
+  "reference": "Surah Ad-Dhuhaa 93:1-5",
+  "slot": "2026-10-25_reel",
+  "publish_at": "2026-10-25T15:00:50Z",
+  "local_slot": "2026-10-25 11:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-25_reel.jpg",
+  "video": "queue/2026-10-25_reel.mp4",
+  "cover": "queue/2026-10-25_reel_cover.jpg",
+  "trial": false,
+  "caption": "Hope for the heavy heart: the opening of Surah Ad-Dhuhaa.\n\nAllah reassured His Prophet ﷺ that his Lord had not forsaken him nor hated him, that the Hereafter would be better for him than the present life, and that his Lord would give him so much that he would be well pleased. Let these words stay with you when a season feels heavy.\n\nSurah Ad-Dhuhaa 93:1-5\n\nSend this to someone who needs a reminder of hope today.\n\n#quranreels #surahduha #hope #heavyheart\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "By the morning brightness; and by the night when it is still; your Lord has not forsaken you [O Prophet], nor does He hate you; the Hereafter is better for you than the present life; and your Lord will certainly give you so much that you will be well pleased (Surah Ad-Dhuhaa 93:1-5)",
+  "theme": "hope / Allah has not forsaken you",
+  "review": "Round 2 independent reviewer approved: integrity ok, Arabic checked mark by mark, English/reference match, caption fixed after round 1 grammar rejection",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "created_at": "2026-10-24T05:43:09+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "093001",
+      "093002",
+      "093003",
+      "093004",
+      "093005"
+    ],
+    "done": false
+  }
+}
