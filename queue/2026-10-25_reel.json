@@ -16,7 +16,7 @@
   "review": "Round 2 independent reviewer approved: integrity ok, Arabic checked mark by mark, English/reference match, caption fixed after round 1 grammar rejection",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "created_at": "2026-10-24T05:43:09+00:00",
   "audio": {
     "reciter": "Abdul_Basit_Murattal_192kbps",
@@ -34,5 +34,7 @@
     "seconds": 21.9,
     "video_seconds": 23.4,
     "added_at": "2026-10-24T05:43:50+00:00"
-  }
+  },
+  "media_id": "18111669851183337",
+  "posted_at": "2026-10-25T15:01:24+00:00"
 }
