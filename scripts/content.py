@@ -96,6 +96,8 @@ def search(kind, query, max_len=None, min_len=25, collections=None, limit=25, ex
             continue
         if collections and r.get("collection") not in collections:
             continue
+        if any(isinstance(v, str) and "\ufffd" in v for v in r.values()):
+            continue   # broken character in the source (see integrity.py); never offered
         hay = r["english"] + " " + r.get("book", "") + " " + r.get("surah_english", "")
         if pat.search(hay):
             out.append(r)

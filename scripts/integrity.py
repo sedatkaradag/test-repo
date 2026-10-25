@@ -71,6 +71,11 @@ def text_issues(entry):
         hard.append("empty brackets in English")
     if re.search(r"\s[,.;:!?]", en):
         hard.append("space before punctuation in English")
+    # A broken character (U+FFFD) anywhere in the source: in a hadith's Arabic it can sit in the
+    # chain, where the verifier checks the narrator, so such records are not used at all.
+    broken = [k for k, v in entry.items() if isinstance(v, str) and "\ufffd" in v]
+    if broken:
+        hard.append(f"broken character (\ufffd) in the source text: {', '.join(broken)}")
     unknown = unknown_lowercase(en)
     if entry["type"] == "quran":
         bad = [w for w in unknown if w not in QURAN_ALLOW]
