@@ -46,6 +46,14 @@ def main(out):
         for day in sorted(days)[-14:]:
             doc = {"day": day, "entries": days[day]}
             (out / "reviews" / f"{day}.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
+    # Open issues (notes/issues.json): one panel document per issue; closed ones for 30 days.
+    issues = ROOT / "notes" / "issues.json"
+    if issues.exists():
+        (out / "issues").mkdir(parents=True, exist_ok=True)
+        cut = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=30)).isoformat()
+        for i in json.loads(issues.read_text(encoding="utf-8")):
+            if i["status"] == "open" or i.get("closed_at", "") >= cut[:19]:
+                (out / "issues" / f"{i['id']}.json").write_text(json.dumps(i, ensure_ascii=False), encoding="utf-8")
     print(f"rows written to {out}")
 
 

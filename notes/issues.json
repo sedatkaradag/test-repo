@@ -1,0 +1,32 @@
+[
+  {
+    "id": "S-001",
+    "kind": "code",
+    "title": "render.py iç içe alıntıda tırnakları ters sırada kapatıyor",
+    "detail": "Kaynak metinde iç içe alıntı kapanmamışsa kart ”’ ile bitiyor (önce çift, sonra tek tırnak). Denetçi 7536'yı bu yüzden reddetti ve içerik elendi; çizim kodu düzeltilmedi. Bu tür hadisler düzelene kadar kullanılamıyor.",
+    "ref": "hadith:bukhari:7536",
+    "source": "Denetçi (23 Eki)",
+    "status": "open",
+    "opened_at": "2026-10-25T02:55:22Z"
+  },
+  {
+    "id": "S-002",
+    "kind": "code",
+    "title": "Yazım denetimi yaygın kelimelerde yanlış alarm veriyor",
+    "detail": "Kodun sözlüğü 'app' ve 'inbox' gibi doğru kelimeleri tanımıyor. Görev, denetçi onayından sonra caption'ı değiştirmek zorunda kalıyor (app→phone, inbox→emails). Öneri: bu kelimeleri izin listesine eklemek.",
+    "ref": "quran:2:45, quran:33:41-42",
+    "source": "Ana ajan (25 Eki)",
+    "status": "open",
+    "opened_at": "2026-10-25T02:55:22Z"
+  },
+  {
+    "id": "S-003",
+    "kind": "rule",
+    "title": "Denetçi onayından sonra caption değişebiliyor",
+    "detail": "Akışta önce denetçi, sonra kod kontrolleri çalışıyor. Kod reddederse caption düzeltiliyor ama yeniden denetim yok. 2:45'te kapanış cümlesi onaydan sonra değişti (sahibi inceledi, sorun yok). Öneri: kod kontrollerini denetçiden önce çalıştırmak ve onaylanan metnin parmak izini tutmak.",
+    "ref": "2026-10-25_eu-morning",
+    "source": "Ana ajan (25 Eki)",
+    "status": "open",
+    "opened_at": "2026-10-25T02:55:22Z"
+  }
+]

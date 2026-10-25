@@ -185,7 +185,9 @@ cd scripts
    cd .. && git add queue history && git commit -m "content: <tarih> <id'ler>" && git pull --rebase && git push
    ```
 9. **Kontrol panelini güncelle** (aşağıdaki "Kontrol paneli" bölümü).
-10. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
+10. **Açık sorunlar:** Bu çalışmada fark ettiğin her sorunu "Açık sorunlar" bölümündeki gibi kaydet,
+   commit + push et ve panelde `issues/<id>` belgesini yaz.
+11. **Rapor:** En üstte sorunlar (başarısız/kaçan gönderi, boş bırakılan slot),
    sonra eklenenler (slot, id, tema). Sorun yoksa tek satır yeterli. Bu rapor
    çalışma bittiğinde sahibine bildirim olarak gider.
 
@@ -209,6 +211,7 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
      mevcut `image_url` değerini koru)
    - `meta/state` ← `/tmp/panel/meta/state.json` (çalışma saatini script saatten damgalar; elle yazma)
    - `reviews/<YYYY-MM-DD>` ← `/tmp/panel/reviews/<gün>.json` (denetim kayıtları; script hazırlar)
+   - `issues/<id>` ← `/tmp/panel/issues/<id>.json` (açık sorunlar; durumu değişenleri yaz)
    - `log/<YYYY-MM-DD>` ← o günün belgesinin `entries` listesine bu çalışmanın adımlarını
      ekle (`{"ts", "agent", "text"}`; `ts` değerini `date -u +%Y-%m-%dT%H:%M:%SZ` ile al, tahmin etme; agent: Planlayıcı, Küratör, Metin yazarı, Denetçi,
      Tasarımcı, Analist, Ana ajan). Belge yoksa `{"day": "...", "entries": [...]}` ile oluştur.
@@ -246,7 +249,9 @@ config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
 6. **Zamanlama kontrolü:** aşağıdaki "Senkron zamanlaması" adımlarını uygula (slot
    saatleri değiştiyse görevler burada kendini düzeltir).
 7. **Yorumlar:** aşağıdaki "Yorum yanıtları" adımlarını uygula.
-8. Rapor: en üstte onay bekleyen yorum sayısı ("2 yorum yanıtı onayını bekliyor") ve sana
+8. Fark ettiğin sorunları "Açık sorunlar" bölümündeki gibi kaydet ve `issues/<id>` panel
+   belgesini yaz.
+9. Rapor: en üstte onay bekleyen yorum sayısı ("2 yorum yanıtı onayını bekliyor") ve sana
    bırakılan yorumlar; sorun yoksa tek satır ("Panel güncel: X yayında, sorun yok").
 
 ### Senkron zamanlaması
@@ -331,9 +336,28 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
    Saat değiştirdiysen push'tan sonra "Senkron zamanlaması" adımlarını uygula.
 5. Commit + push, ardından kısa bir haftalık özet yaz.
 
+## Açık sorunlar
+
+Herhangi bir çalışma (günlük, haftalık, senkron, ana ajan) bir sorun fark ettiğinde raporda
+söylemekle yetinmez, kaydeder:
+
+```bash
+python3 scripts/issues.py add --kind <code|rule|content|publish|other> --source "<ajan, tarih>" \
+  --ref "<slot veya id>" --title "<tek cümle>" --detail "<ne oldu, etkisi, varsa öneri>"
+```
+
+- `code`: script hatası (ör. çizim hatası yüzünden içerik elendi). Kodu **sen düzeltme**; kaydet.
+- `rule`: bir kural esnetildi ya da atlandı (ör. onaydan sonra metin değişti). Ne yaptığını yaz.
+- `content`: bir içerik sorun yüzünden elendi ya da değiştirildi.
+- `publish`: paylaşım, Story, tilavet veya panel hatası.
+Aynı başlıkla açık bir kayıt varsa script yenisini açmaz. Kaydettikten sonra commit + push et,
+panelde `issues/<id>` belgesini yaz. Kayıtları yalnızca ana ajan kapatır
+(`python3 scripts/issues.py close <id> --resolution "..."`), sahibinin onayıyla.
+
 ## Ana ajan (sahibiyle sohbet)
 
-Repo bağlı herhangi bir Claude sohbeti ana ajandır. Sahibi doğal dille şunları ister,
+Repo bağlı herhangi bir Claude sohbeti ana ajandır. Sohbetin başında `python3 scripts/issues.py list`
+ile açık sorunlara bak ve sahibine kısaca söyle. Sahibi doğal dille şunları ister,
 sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra commit + push:
 
 - "Yarının gönderilerini göster" → `enqueue.py list`, ilgili `queue/*.jpg` dosyalarını
