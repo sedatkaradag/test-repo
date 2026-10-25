@@ -503,9 +503,15 @@ def cmd_recaption(a):
     problems = check_caption(caption, get(item["entry_id"]), exclude_slot=a.slot)
     if problems:
         sys.exit("REJECT caption: " + "; ".join(problems))
+    if caption == item["caption"]:
+        print(f"UNCHANGED {a.slot}")
+        return
+    # The approved text changed, so the item waits for a fresh verifier (approve puts it back).
     item["caption"] = caption
+    item["status"] = "hold"
+    item["hold_reason"] = "caption changed after approval; needs a fresh verifier"
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"RECAPTIONED {a.slot}")
+    print(f"RECAPTIONED {a.slot} -> hold until a fresh verifier approves (enqueue.py approve)")
 
 
 def cmd_rerender(a):
@@ -563,6 +569,7 @@ def cmd_approve(a):
     if dt.datetime.fromisoformat(item["publish_at"].replace("Z", "+00:00")) <= dt.datetime.now(dt.timezone.utc):
         sys.exit("REJECT: publish time has passed; enqueue it in a new slot")
     item.update(status="ready", review=a.review)
+    item.pop("hold_reason", None)
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"APPROVED {a.slot}")
 
@@ -589,6 +596,8 @@ if __name__ == "__main__":
     ad.add_argument("--caption-file", required=True)
     ad.add_argument("--theme", default="")
     ad.add_argument("--review", default="")
+    ad.add_argument("--check", action="store_true",
+                    help="run every code check (and the card fit) without queueing anything; run this before the verifier")
     st = sub.add_parser("add-story")
     st.add_argument("--source", required=True, help="slot of a verse post")
     st.add_argument("--at", required=True, help="UTC time, e.g. 2026-10-21T17:20:00Z")
@@ -599,6 +608,8 @@ if __name__ == "__main__":
     ar.add_argument("--caption-file", required=True)
     ar.add_argument("--theme", default="")
     ar.add_argument("--review", default="")
+    ar.add_argument("--check", action="store_true",
+                    help="run every code check (and the card fit) without queueing anything; run this before the verifier")
     ac = sub.add_parser("add-carousel")
     ac.add_argument("--entries", required=True, help="comma-separated ids, 3-7")
     ac.add_argument("--slot", required=True, help="carousel slot key, e.g. 2026-10-21_carousel")
@@ -607,6 +618,8 @@ if __name__ == "__main__":
     ac.add_argument("--caption-file", required=True)
     ac.add_argument("--theme", default="")
     ac.add_argument("--review", default="")
+    ac.add_argument("--check", action="store_true",
+                    help="run every code check (and the card fit) without queueing anything; run this before the verifier")
     rc = sub.add_parser("recaption")
     rc.add_argument("--slot", required=True)
     rc.add_argument("--caption-file", required=True)
@@ -622,5 +635,30 @@ if __name__ == "__main__":
     sl = sub.add_parser("slots")
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
-    {"add": cmd_add, "add-story": cmd_add_story, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel, "recaption": cmd_recaption,
-     "rerender": cmd_rerender, "hold": cmd_hold, "approve": cmd_approve, "list": cmd_list, "slots": cmd_slots}[a.cmd](a)
+    run = {"add": cmd_add, "add-story": cmd_add_story, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel,
+           "recaption": cmd_recaption, "rerender": cmd_rerender, "hold": cmd_hold, "approve": cmd_approve,
+           "list": cmd_list, "slots": cmd_slots}[a.cmd]
+    if getattr(a, "check", False):
+        # Same command, same checks, but against a throwaway copy of the queue: nothing is
+        # queued, rendered into queue/ or committed. A REJECT here means: fix and check again.
+        import shutil
+        import tempfile
+        real = QUEUE
+        tmp = Path(tempfile.mkdtemp(prefix="enqueue-check-"))
+        for f in real.glob("*.json"):
+            shutil.copy(f, tmp / f.name)
+        QUEUE = tmp
+        import contextlib
+        import io
+        buf = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(buf):
+                run(a)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+            for line in buf.getvalue().splitlines():
+                if not line.startswith(("QUEUED", "queued")):
+                    print(line)
+        print("CHECK OK: every code check passed; nothing was queued. Now send exactly this text to the verifier.")
+    else:
+        run(a)

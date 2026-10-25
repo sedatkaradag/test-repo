@@ -92,6 +92,8 @@ cd scripts
    - **Uzun tire (— veya –) kullanma**; yapay zekâ yazısı gibi duruyor. Virgül, nokta ya da yeni
      satır kullan (kod reddeder). Ayet ve hadis metninin kendisi kaynaktaki gibi kalır.
    - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
+     Komut önce kod kontrollerini çalıştırır, metin değiştiyse öğeyi `hold`'a alır; **yeni bir
+     denetçi** onaylayınca `enqueue.py approve` ile yayına döner.
    - **Kuyruktaki bir gönderide sorun görülürse** (denetçi ya da ana ajan): hemen
      `python3 enqueue.py hold --slot <slot> --reason "..."` ile beklemeye al (yayıncı
      sadece `ready` olanları paylaşır). Görsel hatası çizim kodundan geliyorsa kod
@@ -99,7 +101,15 @@ cd scripts
      yeniden çizilir, öğe `hold` kalır). Yeni bir denetçi onaylarsa
      `python3 enqueue.py approve --slot <slot> --review "<karar>"`. Onaysız `hold` öğe asla
      elle `ready` yapılmaz.
-6. **Denetçi (bağımsız alt ajan):** `Agent` aracıyla ayrı bir ajan başlat ve şu
+5b. **Kod kontrolü (denetçiden önce):** Metni denetçiye göndermeden önce kuyruğa ekleyeceğin
+   komutun aynısını `--check` ile çalıştır. Hiçbir şey kuyruğa eklenmez; bütün kod kuralları
+   (bütünlük, kartın sığması, tekrar, caption kuralları, yazım) denenir:
+   ```bash
+   python3 enqueue.py add --check --entry <ID> --slot <slot anahtarı> --caption-file /tmp/caption.txt --theme "<tema>"
+   ```
+   `REJECT` dönerse metni düzelt ya da başka içerik seç ve tekrar `--check` çalıştır.
+   `CHECK OK` görmeden denetçiye gönderme. Denetçi böylece her zaman son metni görür.
+6. **Denetçi (son kontrol, bağımsız alt ajan):** `Agent` aracıyla ayrı bir ajan başlat ve şu
    görevi ver (yerine id, dosya yolu yaz):
    > You are an independent reviewer for an Islamic Instagram page. Mistakes are not
    > acceptable here: a wrong word in a verse or hadith is a serious error.
@@ -132,24 +142,30 @@ cd scripts
    ve herhangi bir sorun varsa reddeder. Bu, denetçinin yerine geçmez; ikisi birlikte zorunlu.
    **Her kararı kaydet** (onay da red de):
    `python3 review_log.py --entry <ID> --slot <slot> --verdict approve|reject --round <tur> --reasons "<gerekçe 1> | <gerekçe 2>"`
-   Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur). Üçüncüde de red
-   gelirse o slotu boş bırak.
+   Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur); düzeltilen ya da yeni metin yine
+   5b'den (kod kontrolü) geçer, sonra **yeni** bir denetçiye gider. Üçüncüde de red gelirse
+   o slotu boş bırak.
    Her gönderi için **yeni** bir denetçi başlat; önceki denetçiyi devam ettirme (bağımsızlık).
 7. **Görsel ve kuyruk:**
    ```bash
    python3 enqueue.py add --entry <ID> --slot <slot anahtarı> \
      --caption-file /tmp/caption.txt --theme "<tema>" --review "<denetçi özeti>"
    ```
-   `REJECT` dönerse nedenine göre düzelt ya da başka içerik seç.
+   5b'deki komutun aynısı, `--check` olmadan ve `--review` ile. **Denetçi onayından sonra
+   caption'da, içerikte ve slotta hiçbir değişiklik yapılmaz.** Kod kontrolleri 5b'de geçtiği için
+   burada `REJECT` beklenmez; yine de dönerse metni düzeltme: o içerikten vazgeç, açık sorun
+   kaydet (`issues.py add --kind rule`) ve slotu baştan doldur (4 → 5b → yeni denetçi) ya da boş bırak.
    Sonra oluşan `queue/*.jpg` dosyasını **Read ile açıp bak**: taşma, kutucuk
-   (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç.
+   (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç
+   (o içerik atılır, düzeltilmez).
 7b. **Günün Reels'i:** `slots` çıktısında `reel` türünde boş slot varsa, Reels için **kendi
    içeriğini** seç; hiçbir gönderinin kopyası olmaz. Tür sırayla değişir: önceki Reels ayetse bu
    hadis, hadisse ayet (`enqueue.py list` ile son Reels'in türüne bak; kod da kontrol eder).
    3-6. adımları aynen uygula: tema (son 3 gönderi ve son 3 Reels'ten farklı), kısa ve en çok
    paylaşılmaya uygun içerik (yaklaşık 250 karakter altı, güçlü tek mesaj), ayrı caption (ilk
-   satır izleyiciyi durduran kanca, sonra 1-2 cümle, kapanış, 3-5 etiket), **yeni** bağımsız
-   denetçi ve `review_log.py` kaydı. Sonra:
+   satır izleyiciyi durduran kanca, sonra 1-2 cümle, kapanış, 3-5 etiket), denetçiden önce kod
+   kontrolü (`python3 enqueue.py add-reel --check --entry <ID> --slot <tarih>_reel --caption-file <dosya> --theme "<tema>"`),
+   sonra **yeni** bağımsız denetçi ve `review_log.py` kaydı. Onaydan sonra hiçbir şey değişmez. Sonra:
    `python3 enqueue.py add-reel --entry <ID> --slot <tarih>_reel --caption-file <dosya> --theme "<tema>" --review "<özet>"`
    Kod son 365 günde paylaşılan veya kuyruktaki içerikleri ve yanlış türü reddeder.
    Kart metni yukarıdan aşağı belirir. Oluşan `queue/<slot>.jpg` kartını Read ile aç. Kapak (`cover`):
@@ -176,8 +192,10 @@ cd scripts
    onlardan), aynı temada 5 içerik seç (ayet, hadis ya da karışık; hepsi bağlamdan bağımsız,
    tam cümle, son 365 günde paylaşılmamış). Kapak başlığı kısa ve aranabilir olsun
    ("5 Qur'an passages on patience", "5 duas from the Sunnah"); ayet aralığı varsa
-   "verses" değil "passages" de. Caption'da her içeriğin referansı ayrı satırda. **Denetçi
-   tüm seti birlikte** incelesin (her öğe + başlık + caption); kararı kaydet. Sonra:
+   "verses" değil "passages" de. Caption'da her içeriğin referansı ayrı satırda. Önce kod kontrolü:
+   aşağıdaki komutun aynısını `--check` ile çalıştır, `CHECK OK` olmadan ilerleme. Sonra **denetçi
+   tüm seti birlikte** incelesin (her öğe + başlık + caption); kararı kaydet. Onaydan sonra
+   hiçbir şey değişmez. Sonra:
    `python3 enqueue.py add-carousel --entries <id1,id2,...> --slot <tarih>_carousel --title "<başlık>" --subtitle "<alt başlık>" --caption-file <dosya> --theme "<tema>" --review "<özet>"`
    Kapak görselini (`queue/<slot>_0.jpg`) Read ile açıp kontrol et.
 8. **Kaydet:**
