@@ -148,7 +148,12 @@ def smart_quotes(t):
         else:
             out.append(ch)
     if single_open and len(out) > 2:
-        out.append("’")  # the source left a single quotation open
+        # The source left a single quotation open. It is nested inside the double one,
+        # so it closes first: …running.’” and not …running.”’
+        if out[-1] == "”":
+            out.insert(len(out) - 1, "’")
+        else:
+            out.append("’")
     return "".join(out)
 
 

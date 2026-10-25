@@ -38,6 +38,16 @@ CAPTION_TERMS = {
     "ayah", "ayat", "surah", "ramadan", "eid", "hajj", "umrah", "astaghfirullah",
 }
 
+# Everyday modern words the dictionary does not know but which are correct English
+# (a caption once had to swap "app" and "inbox" only to get past the check). Captions only;
+# the source-text typo checks in integrity.py stay as strict as before.
+CAPTION_TERMS |= {
+    "app", "apps", "inbox", "inboxes", "smartphone", "smartphones", "selfie", "selfies",
+    "podcast", "podcasts", "playlist", "playlists", "livestream", "livestreams", "wifi",
+    "hashtag", "hashtags", "repost", "reposts", "dms", "texting", "texted", "voicemail",
+    "overthink", "overthinking", "overthinker", "doomscroll", "doomscrolling",
+}
+
 
 def require_integrity(entry_ids):
     """Hard stop on any text or rendering problem; return verifier flags."""
