@@ -142,6 +142,11 @@ cd scripts
    ve herhangi bir sorun varsa reddeder. Bu, denetçinin yerine geçmez; ikisi birlikte zorunlu.
    **Her kararı kaydet** (onay da red de):
    `python3 review_log.py --entry <ID> --slot <slot> --verdict approve|reject --round <tur> --reasons "<gerekçe 1> | <gerekçe 2>"`
+   **Kod bu kaydı arar:** `enqueue.py add`, `add-reel` ve `add-carousel` (`--check` olmadan), o içerik
+   ve o slot için kayıtlı son karar "approve" değilse kuyruğa yazmaz. Carousel'de `--entry` kimliklerin
+   virgülle birleşmiş hali; sahibinin istediği tek seferlik gönderilerde (`--slot now`, `--at`)
+   `--slot manual` ile kaydet. Beklemedeki bir öğeyi `approve` ile yayına döndürmek için, öğe
+   beklemeye alındıktan **sonra** o slot için kaydedilmiş yeni bir onay gerekir.
    Red gelirse gerekçeye göre 4. adıma dön (en fazla 3 tur); düzeltilen ya da yeni metin yine
    5b'den (kod kontrolü) geçer, sonra **yeni** bir denetçiye gider. Üçüncüde de red gelirse
    o slotu boş bırak.

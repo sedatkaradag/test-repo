@@ -49,6 +49,35 @@ CAPTION_TERMS |= {
 }
 
 
+REVIEWS = ROOT / "history" / "reviews.jsonl"
+
+
+def require_approval(entry_id, slot, after=None, manual=False):
+    """Refuse unless the verifier's latest recorded decision for this entry in this slot is an
+    approval (history/reviews.jsonl, written by review_log.py). `after`: the approval must be newer
+    than this time (a held item needs a fresh verifier). One-off posts may be logged with --slot manual."""
+    slots = {slot, "manual"} if manual else {slot}
+    rows = []
+    if REVIEWS.exists():
+        for line in REVIEWS.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                r = json.loads(line)
+                if r.get("entry_id") == entry_id and r.get("slot") in slots:
+                    rows.append(r)
+    if manual:   # a manual approval only counts for a few hours
+        cut = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=6)).isoformat()
+        rows = [r for r in rows if r.get("slot") == slot or r["ts"] >= cut[:19]]
+    if not rows:
+        sys.exit(f"REJECT: no recorded verifier decision for {entry_id} in {slot}; "
+                 "run the verifier and log it with review_log.py first")
+    last = rows[-1]
+    if last["verdict"] != "approve":
+        sys.exit(f"REJECT: the verifier's latest decision for {entry_id} in {slot} is '{last['verdict']}'")
+    if after and last["ts"] <= after:
+        sys.exit(f"REJECT: no verifier approval for {entry_id} in {slot} after it was put on hold ({after})")
+    return last
+
+
 def require_integrity(entry_ids):
     """Hard stop on any text or rendering problem; return verifier flags."""
     flags = []
@@ -203,6 +232,8 @@ def cmd_add(a):
         jitter = int(cfg.get("jitter_minutes", 0)) * 60
         when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
     stem = a.slot
+    if not getattr(a, "check", False):
+        require_approval(a.entry, a.slot, manual="_manual-" in a.slot)
     if (QUEUE / f"{stem}.json").exists():
         sys.exit(f"REJECT: slot {stem} already filled")
 
@@ -319,6 +350,8 @@ def cmd_add_reel(a):
             sys.exit("REJECT: slot is in the past or too close")
         jitter = int(cfg.get("jitter_minutes", 0)) * 60
         when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
+    if not getattr(a, "check", False):
+        require_approval(a.entry, a.slot, manual=bool(a.at))
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
     when_iso = when.isoformat(timespec="seconds").replace("+00:00", "Z")
@@ -420,6 +453,8 @@ def cmd_add_carousel(a):
     base = slot_utc(date_str, slot["time"], slot["tz"])
     if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
         sys.exit("REJECT: slot is in the past or too close")
+    if not getattr(a, "check", False):
+        require_approval(",".join(ids), a.slot)
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
     recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"}
@@ -510,6 +545,7 @@ def cmd_recaption(a):
     item["caption"] = caption
     item["status"] = "hold"
     item["hold_reason"] = "caption changed after approval; needs a fresh verifier"
+    item["held_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"RECAPTIONED {a.slot} -> hold until a fresh verifier approves (enqueue.py approve)")
 
@@ -542,6 +578,7 @@ def cmd_rerender(a):
             render_reel(item["entry_id"], ROOT / item["story_video"], label="TODAY'S REMINDER")
             item["story_audio"].update(done=False, failed=False)
     item.update(status="hold", flags=flags, integrity="passed",
+                held_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
                 review="re-rendered; waiting for a fresh verifier",
                 rerendered_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -553,7 +590,8 @@ def cmd_hold(a):
     item = json.loads(path.read_text(encoding="utf-8"))
     if item["status"] != "ready":
         sys.exit(f"REJECT: {a.slot} is {item['status']}")
-    item.update(status="hold", review=a.reason)
+    item.update(status="hold", review=a.reason,
+                held_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"HELD {a.slot}")
 
@@ -565,11 +603,13 @@ def cmd_approve(a):
     if item["status"] != "hold":
         sys.exit(f"REJECT: {a.slot} is {item['status']}")
     ids = item.get("entry_ids") or [item["entry_id"]]
+    require_approval(item["entry_id"], item["slot"], after=item.get("held_at"))
     item["flags"] = require_integrity(ids)
     if dt.datetime.fromisoformat(item["publish_at"].replace("Z", "+00:00")) <= dt.datetime.now(dt.timezone.utc):
         sys.exit("REJECT: publish time has passed; enqueue it in a new slot")
     item.update(status="ready", review=a.review)
     item.pop("hold_reason", None)
+    item.pop("held_at", None)
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"APPROVED {a.slot}")
 
