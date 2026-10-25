@@ -30,8 +30,10 @@
     "detail": "Akışta önce denetçi, sonra kod kontrolleri çalışıyor. Kod reddederse caption düzeltiliyor ama yeniden denetim yok. 2:45'te kapanış cümlesi onaydan sonra değişti (sahibi inceledi, sorun yok). Öneri: kod kontrollerini denetçiden önce çalıştırmak ve onaylanan metnin parmak izini tutmak.",
     "ref": "2026-10-25_eu-morning",
     "source": "Ana ajan (25 Eki)",
-    "status": "open",
-    "opened_at": "2026-10-25T02:55:22Z"
+    "status": "closed",
+    "opened_at": "2026-10-25T02:55:22Z",
+    "closed_at": "2026-10-25T20:59:16Z",
+    "resolution": "Sıra değişti: önce kod kontrolleri (enqueue --check, kuyruğa bir şey eklemeden bütün kuralları dener), en son denetçi. Onaydan sonra metin değişmez; ekleme yine de reddederse içerik düzeltilmez, atılır ve sorun kaydı açılır. Kuyruktaki bir caption değişirse (recaption) gönderi otomatik beklemeye alınır, yeni denetçi onaylamadan yayınlanmaz. Parmak izi sahibinin kararıyla eklenmedi."
   },
   {
     "id": "S-004",
