@@ -356,8 +356,8 @@ panelde `issues/<id>` belgesini yaz. Kayıtları yalnızca ana ajan kapatır
 
 ## Ana ajan (sahibiyle sohbet)
 
-Repo bağlı herhangi bir Claude sohbeti ana ajandır. Sohbetin başında `python3 scripts/issues.py list`
-ile açık sorunlara bak ve sahibine kısaca söyle. Sahibi doğal dille şunları ister,
+Repo bağlı herhangi bir Claude sohbeti ana ajandır. Açık sorunları sahibi panelden takip eder;
+sen ancak sahibi isteyince bakarsın. Sahibi doğal dille şunları ister,
 sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra commit + push:
 
 - "Yarının gönderilerini göster" → `enqueue.py list`, ilgili `queue/*.jpg` dosyalarını
