@@ -27,6 +27,10 @@
   "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word at 2.5x, English/reference match, caption clean",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
-  "created_at": "2026-10-24T05:42:27+00:00"
+  "status": "published",
+  "created_at": "2026-10-24T05:42:27+00:00",
+  "story_media_id": "18447985729130614",
+  "story_kind": "video",
+  "media_id": "18125085328897943",
+  "posted_at": "2026-10-25T16:58:21+00:00"
 }
