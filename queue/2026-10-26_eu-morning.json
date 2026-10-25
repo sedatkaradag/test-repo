@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:23:62",
+  "type": "quran",
+  "reference": "Surah Al-Muminoon 23:62",
+  "slot": "2026-10-26_eu-morning",
+  "publish_at": "2026-10-26T07:17:04Z",
+  "local_slot": "2026-10-26 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-26_eu-morning.jpg",
+  "story_image": "queue/2026-10-26_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-26_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "023062"
+    ],
+    "done": false
+  },
+  "caption": "Capacity: Allah does not burden a soul beyond what it can bear.\n\nAllah tells us that He does not burden a soul more than what it can bear, and that He has a Record of deeds that tells the truth, and none will be wronged. Begin this Monday doing your best with what you have been given.\n\nSurah Al-Muminoon 23:62\n\nTake on one task today that you have been putting off.\n\n#quran #notburdened #mondaymotivation #muslimreminder",
+  "alt_text": "We do not burden a soul more than what it can bear. We have a Record [of their deeds] that tells the truth, and none will be wronged (Surah Al-Muminoon 23:62)",
+  "theme": "Allah does not burden a soul beyond its capacity",
+  "review": "Independent reviewer approved (round 2, after caption revision): Arabic checked mark by mark, pause sign and verse number correct, English and reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-25T05:43:37+00:00"
+}

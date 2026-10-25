@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:57:4",
+  "type": "quran",
+  "reference": "Surah Al-Hadid 57:4",
+  "slot": "2026-10-26_eu-evening-us-noon",
+  "publish_at": "2026-10-26T16:55:28Z",
+  "local_slot": "2026-10-26 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-26_eu-evening-us-noon.jpg",
+  "story_image": "queue/2026-10-26_eu-evening-us-noon_story.jpg",
+  "story_video": "queue/2026-10-26_eu-evening-us-noon_story.mp4",
+  "story_audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "057004"
+    ],
+    "done": false
+  },
+  "caption": "Never alone: Allah is with you wherever you are.\n\nThis verse tells us that Allah knows all that goes into the earth and all that comes out of it, all that descends from the heaven and all that ascends to it. He is with you wherever you are, and He sees what you do. This evening, sit with that thought for a quiet moment.\n\nSurah Al-Hadid 57:4\n\nWhich part of this verse stayed with you most? Tell us below.\n\n#surahhadid #allahiswithyou #neveralone #quranverse",
+  "alt_text": "It is He Who created the heavens and earth in six days, and then rose over the Throne. He knows all that goes into the earth and all that comes out of it, and all that descends from the heaven and all that ascends to it. He is with you wherever you are, and Allah is All-Seeing of what you do (Surah Al-Hadid 57:4)",
+  "theme": "Allah is with you wherever you are",
+  "review": "Independent reviewer approved (round 1): Arabic checked word by word and mark by mark, pause signs and verse number correct, English and reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-25T05:43:01+00:00"
+}

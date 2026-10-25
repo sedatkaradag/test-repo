@@ -32,5 +32,15 @@
     "source": "Ana ajan (25 Eki)",
     "status": "open",
     "opened_at": "2026-10-25T02:55:22Z"
+  },
+  {
+    "id": "S-004",
+    "kind": "code",
+    "title": "integrity.py does not catch U+FFFD replacement characters in the arabic field",
+    "detail": "The reviewer found a U+FFFD character in Tirmidhi's closing remark in the stored arabic field of hadith:tirmidhi:3538 (should read الْحَدِيثُ). It is outside the matn and chain and not on the card, so the post was not affected and was queued. integrity.py did not flag it. Suggestion: add a hard/flag check for U+FFFD in all text fields and scan the database for other affected records.",
+    "ref": "hadith:tirmidhi:3538",
+    "source": "Günlük içerik ajanı, 2026-10-25",
+    "status": "open",
+    "opened_at": "2026-10-25T05:43:54Z"
   }
 ]
