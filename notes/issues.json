@@ -6,8 +6,10 @@
     "detail": "Kaynak metinde iç içe alıntı kapanmamışsa kart ”’ ile bitiyor (önce çift, sonra tek tırnak). Denetçi 7536'yı bu yüzden reddetti ve içerik elendi; çizim kodu düzeltilmedi. Bu tür hadisler düzelene kadar kullanılamıyor.",
     "ref": "hadith:bukhari:7536",
     "source": "Denetçi (23 Eki)",
-    "status": "open",
-    "opened_at": "2026-10-25T02:55:22Z"
+    "status": "closed",
+    "opened_at": "2026-10-25T02:55:22Z",
+    "closed_at": "2026-10-25T03:11:05Z",
+    "resolution": "content.py düzeltildi: kaynak metin tek tırnağı açık bırakınca kart artık ’” ile bitiyor. Etkilenen 2.934 hadis kaydı kontrol edildi, başka hiçbir kayıt değişmedi; yayınlanmış ya da kuyruktaki gönderilerden etkilenen yok. Buhârî 7536 kartı yeniden çizildi, doğru."
   },
   {
     "id": "S-002",
@@ -16,8 +18,10 @@
     "detail": "Kodun sözlüğü 'app' ve 'inbox' gibi doğru kelimeleri tanımıyor. Görev, denetçi onayından sonra caption'ı değiştirmek zorunda kalıyor (app→phone, inbox→emails). Öneri: bu kelimeleri izin listesine eklemek.",
     "ref": "quran:2:45, quran:33:41-42",
     "source": "Ana ajan (25 Eki)",
-    "status": "open",
-    "opened_at": "2026-10-25T02:55:22Z"
+    "status": "closed",
+    "opened_at": "2026-10-25T02:55:22Z",
+    "closed_at": "2026-10-25T03:11:05Z",
+    "resolution": "Yazım denetimine yalnızca caption'lar için yaygın modern kelimeler eklendi (app, inbox, smartphone, selfie, podcast, hashtag, overthinking vb.). Gerçek yazım hataları hâlâ yakalanıyor (test: 'appp'). Kaynak metin denetimi değişmedi."
   },
   {
     "id": "S-003",
