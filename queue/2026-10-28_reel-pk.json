@@ -17,7 +17,7 @@
   "review": "TEST",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -66,7 +66,16 @@
     "ayahs": [
       "012086"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 13.6,
+    "video_seconds": 15.6,
+    "verse_seconds": [
+      13.64
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-26T20:53:17+00:00"
   },
   "note": "TEST ITEM on branch test-reels-v2 only"
 }
