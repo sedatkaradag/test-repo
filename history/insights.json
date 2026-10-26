@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-26T19:03:47+00:00",
+  "fetched_at": "2026-10-26T19:09:08+00:00",
   "account": {
     "followers_count": 58,
     "media_count": 33,
@@ -598,7 +598,7 @@
       "type": "reel",
       "stats": {
         "reach": 119,
-        "views": 128,
+        "views": 129,
         "likes": 3,
         "comments": 0,
         "saved": 0,

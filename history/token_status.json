@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-26T19:03:00Z",
+  "checked_at": "2026-10-26T19:08:19Z",
   "ok": true,
   "same_token": false,
   "expires_in_days": 59.6,
-  "expires_at": "2026-12-25T09:19:59Z",
+  "expires_at": "2026-12-25T09:19:58Z",
   "stored": false,
-  "note": "Instagram returned a new token, but without a GH_PAT secret it cannot be saved; the stored token keeps its own expiry date."
+  "error": "could not save the new token: failed to fetch public key: HTTP 403: Resource not accessible by personal access token (https://api.github.com/repos/sedatkaradag/test-repo/actions/secrets/public-key)\n"
 }
