@@ -5,7 +5,7 @@
   "template": "v2",
   "reference": "Sahih al-Bukhari 6309",
   "slot": "2026-10-26_reel-us",
-  "publish_at": "2026-10-27T00:30:36Z",
+  "publish_at": "2026-10-27T00:27:02Z",
   "local_slot": "2026-10-26 20:30 America/New_York (±5 min)",
   "image": "queue/2026-10-26_reel-us.jpg",
   "video": "queue/2026-10-26_reel-us.mp4",
@@ -14,7 +14,7 @@
   "caption": "Think you have wandered too far to come back?\n\nThe Prophet ﷺ said Allah is more pleased with the repentance of His servant than a man who finds the camel he had lost in the desert. However far you went, the way back is still open.\n\nSahih al-Bukhari 6309 · Grade: Sahih\n\nSay astaghfirullah before you sleep and mean it\n\n#tawbah #istighfar #hadithreels #nightreminder",
   "alt_text": "Narrated Anas bin Malik:Allah's Messenger (ﷺ) said, \"Allah is more pleased with the repentance of His slave than anyone of you is pleased with finding his camel which he had lost in the desert (Sahih al-Bukhari 6309)",
   "theme": "repentance (tawbah)",
-  "review": "approve r1: integrity ok, narrator matches, card and Reel frame word for word, caption ok",
+  "review": "approve r2: narration and text word for word, narrator matches, caption ok",
   "flags": [],
   "integrity": "passed",
   "status": "ready",
@@ -30,18 +30,12 @@
     ],
     "hook_size": 82,
     "lead_lines": [
-      "Narrated Anas bin Malik:"
+      "Narrated Anas bin Malik: Allah’s Messenger (ﷺ) said,"
     ],
     "lead_size": 34,
-    "lead_y": 646.5,
+    "lead_y": 703.0,
     "text_size": 68,
     "phrases": [
-      {
-        "lines": [
-          "Allah’s Messenger (ﷺ) said,"
-        ],
-        "y": 728.5
-      },
       {
         "lines": [
           "“Allah is more pleased with the",
@@ -50,7 +44,7 @@
           "finding his camel which he had",
           "lost in the desert.”"
         ],
-        "y": 841.5
+        "y": 785.0
       }
     ],
     "cta": "Say astaghfirullah before you sleep and mean it",
@@ -58,11 +52,11 @@
       "Say astaghfirullah before you sleep and mean it"
     ],
     "cta_size": 48,
-    "cta_y": 1346.5,
+    "cta_y": 1290.0,
     "ref": "Sahih al-Bukhari 6309 · Grade: Sahih",
-    "ref_y": 1452.5,
-    "handle_y": 1504.5
+    "ref_y": 1396.0,
+    "handle_y": 1448.0
   },
-  "layout_hash": "334cfb44c4ba1c9dddc72087",
-  "created_at": "2026-10-26T20:58:17+00:00"
+  "layout_hash": "0141a11e09a9e21f065ac44c",
+  "created_at": "2026-10-26T21:03:27+00:00"
 }

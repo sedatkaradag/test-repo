@@ -1,0 +1,93 @@
+{
+  "entry_id": "quran:103:1-3",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Asr 103:1-3",
+  "slot": "2026-10-27_reel-pk",
+  "publish_at": "2026-10-27T15:28:22Z",
+  "local_slot": "2026-10-27 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-10-27_reel-pk.jpg",
+  "video": "queue/2026-10-27_reel-pk.mp4",
+  "cover": "queue/2026-10-27_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Where did today's hours actually go?\n\nBy time, mankind is in loss, except those who believe, do righteous deeds, and exhort one another to truth and to patience. Listen once, then look back at your day.\n\nSurah Al-Asr 103:1-3\n\nSend this to the friend who keeps you on track\n\n#surahasr #quranrecitation #timeisprecious #reminder\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "By the time; man is in utter loss; except those who believe and do righteous deeds, and exhort one another to the truth and exhort one another to patience (Surah Al-Asr 103:1-3)",
+  "theme": "time / Surah Al-Asr",
+  "review": "approve r2: Arabic checked mark by mark on card and Reel frame, caption corrected ('in loss')",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:103:1-3",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Where did today's hours actually go?",
+    "hook_lines": [
+      "Where did today's hours",
+      "actually go?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "103001",
+        "lines": [
+          "وَٱلۡعَصۡرِ ١"
+        ],
+        "y": 597.2,
+        "meal": [
+          "By the time;"
+        ]
+      },
+      {
+        "ayah": "103002",
+        "lines": [
+          "إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ ٢"
+        ],
+        "y": 753.2,
+        "meal": [
+          "man is in utter loss;"
+        ]
+      },
+      {
+        "ayah": "103003",
+        "lines": [
+          "إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ",
+          "وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ ٣"
+        ],
+        "y": 909.2,
+        "meal": [
+          "except those who believe and do righteous deeds,",
+          "and exhort one another to the truth and exhort",
+          "one another to patience."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1251.2,
+    "cta": "Send this to the friend who keeps you on track",
+    "cta_lines": [
+      "Send this to the friend who keeps you on track"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Asr 103:1-3",
+    "ref_y": 1470.2,
+    "handle_y": 1522.2
+  },
+  "layout_hash": "7344397332992af128f77b8d",
+  "created_at": "2026-10-26T21:02:59+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "103001",
+      "103002",
+      "103003"
+    ],
+    "done": false
+  }
+}
