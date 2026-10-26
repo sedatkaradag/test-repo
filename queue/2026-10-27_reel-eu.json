@@ -14,10 +14,10 @@
   "caption": "No hardship reaches you without His permission\n\nWhatever is weighing on you today did not slip past Allah. And He promises to guide the heart of whoever believes in Him.\n\nSurah At-Taghaabun 64:11\n\nRead it twice, then tell Allah what you are carrying\n\n#trustinallah #tawakkul #quranreels #hardtimes\n\nRecitation: Yasser Al-Dosari",
   "alt_text": "No calamity befalls except with Allah’s permission. Whoever believes in Allah, He will guide his heart. And Allah is All-Knowing of everything (Surah At-Taghaabun 64:11)",
   "theme": "trust in hardship",
-  "review": "re-rendered; waiting for a fresh verifier",
+  "review": "approve r2: Arabic checked mark by mark, whole meaning stays at the end with the closing line under it, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "hold",
+  "status": "audio_pending",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -80,6 +80,5 @@
     "done": false,
     "failed": false
   },
-  "held_at": "2026-10-26T23:38:08Z",
   "rerendered_at": "2026-10-26T23:38:08+00:00"
 }
