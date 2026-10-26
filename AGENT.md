@@ -128,6 +128,10 @@ cd scripts
    >    right after/above its own word. Only ۞ and ۩ are left out on purpose. The
    >    verse-end number must stay with its verse. For both, the
    >    English on the card must be the source English. The reference line must match.
+   >    The card changes punctuation only, on purpose: it closes a quotation the source leaves
+   >    open, leaves out a lone closing quote whose opening the source omits (e.g. 112:1-4), and
+   >    puts a full stop or semicolon between joined verses. These are not errors; any change to
+   >    a word is.
    > 3. Read `<caption dosyası>` and check spelling and grammar sentence by sentence.
    > Reject if: anything in steps 1-3 is wrong; the text could be misunderstood out of
    > context (war, punishments, slavery, event-specific rulings, easily distorted gender

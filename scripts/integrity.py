@@ -24,7 +24,7 @@ import uharfbuzz as hb
 from spellchecker import SpellChecker
 
 import render as R
-from content import ROOT, display_text, get, smart_quotes, split_narrator
+from content import ROOT, display_text, drop_dangling_closes, get, quote_context, smart_quotes, split_narrator
 
 # Real words of the Rowwad translation that a general dictionary does not know.
 QURAN_ALLOW = {
@@ -85,6 +85,9 @@ def text_issues(entry):
             hard.append("Arabic not verified against the Madinah Mushaf text")
         if not entry.get("arabic_display_source"):
             hard.append("no checked King Fahd Complex display text for this verse")
+        inside, _ = quote_context(entry)
+        if inside:
+            hard.append("starts in the middle of a quotation opened in an earlier verse; start the range there")
     elif unknown:
         flags.append(f"check these words are correct transliterations, not typos: {', '.join(unknown)}")
     return hard, flags

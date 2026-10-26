@@ -47,12 +47,64 @@ def get(entry_id):
     return _index()[entry_id]
 
 
+@lru_cache(maxsize=None)
+def _surah_quotes(s):
+    """Pair every closing double quote of a surah's translation with its opening one, verse by
+    verse. Returns (pairs, unmatched_closes): pairs are (opening verse, closing verse); an opening
+    the source never closes is ignored, a closing nothing opens is listed by verse."""
+    verses = sorted((r for r in _load("quran") if r["surah"] == s), key=lambda r: r["verse"])
+    stack, pairs, lone = [], [], []
+    for r in verses:
+        for ch in r["english"]:
+            if ch == "\u201c":
+                stack.append(r["verse"])
+            elif ch == "\u201d":
+                if stack:
+                    pairs.append((stack.pop(), r["verse"]))
+                else:
+                    lone.append(r["verse"])
+    return tuple(pairs), tuple(lone)
+
+
+def quote_context(entry):
+    """For a verse or range: does it start inside a quotation, and does the source close a
+    quotation it never opened?
+
+    Returns (starts_inside_quote, dangling_closes).
+    starts_inside_quote: a quotation opened in an earlier verse closes in or after the first verse,
+      so the excerpt begins in the middle of someone's words (integrity rejects it: start earlier).
+    dangling_closes: closing marks in the excerpt that nothing opens. The source left out the
+      opening mark (e.g. 112:1 "Say: He is Allah..."), so the card leaves out the lone closing mark
+      too. Only punctuation; no word changes."""
+    if entry.get("type") != "quran":
+        return False, 0
+    s = int(entry["surah"])
+    a, _, b = str(entry["verse"]).partition("-")
+    a, b = int(a), int(b or a)
+    pairs, lone = _surah_quotes(s)
+    inside = any(o < a <= c for o, c in pairs)
+    dangling = sum(1 for v in lone if a <= v <= b)
+    return inside, dangling
+
+
+def drop_dangling_closes(text, n):
+    """Remove the last n closing double quotes that nothing opened (see quote_context)."""
+    for _ in range(n):
+        i = text.rfind("\u201d")
+        if i < 0:
+            break
+        text = text[:i] + text[i + 1:]
+    return text
+
+
 def _join_verses(parts):
     """Join consecutive verses, adding only punctuation between them."""
     out = parts[0].rstrip()
     for nxt in parts[1:]:
         nxt = nxt.strip()
-        if out and out[-1].isalnum():
+        # A verse that ends in a word, or in a translator's bracket ("[to Him]"), gets the same
+        # joining punctuation; one that already ends in punctuation is left as it is.
+        if out and (out[-1].isalnum() or out[-1] in ")]"):
             out += ";" if nxt[:1].islower() else "."
         out += " " + nxt
     return out

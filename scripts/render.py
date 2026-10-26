@@ -16,7 +16,7 @@ from pathlib import Path
 from fontTools.ttLib import TTFont
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
-from content import ROOT, display_text, get, smart_quotes, split_narrator
+from content import ROOT, display_text, drop_dangling_closes, get, quote_context, smart_quotes, split_narrator
 
 W, H = 1080, 1350
 BG = (13, 36, 32)
@@ -229,6 +229,9 @@ def render(entry_id, out_path):
     avail = TEXT_BOTTOM - TEXT_TOP
     english = display_text(e["english"])
     is_quran = e["type"] == "quran"
+    if is_quran:
+        _, dangling = quote_context(e)
+        english = drop_dangling_closes(english, dangling)
 
     # Header label with short rules either side.
     label = "THE NOBLE QUR'AN" if is_quran else "HADITH"
