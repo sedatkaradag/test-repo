@@ -30,7 +30,15 @@ def main(out):
         row = {k: item[k] for k in FIELDS if k in item}
         (out / "queue" / f"{p.stem}.json").write_text(json.dumps(row, ensure_ascii=False), encoding="utf-8")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
-    state = {k: cfg.get(k) for k in ("dry_run", "paused", "slots", "jitter_minutes")}
+    state = {k: cfg.get(k) for k in ("dry_run", "paused", "jitter_minutes")}
+    # The schedule as it runs from tomorrow on (slots with from/until are being phased in or out).
+    day = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(days=1)).date().isoformat()
+    def on(s):
+        return str(s.get("from", "0000")) <= day <= str(s.get("until", "9999"))
+    state["slots"] = [s for s in cfg.get("slots") or [] if on(s)]
+    reels = cfg.get("reels") or {}
+    if reels.get("enabled"):
+        state["reel_slots"] = [s for s in reels.get("slots") or ([reels["slot"]] if reels.get("slot") else []) if on(s)]
     token = ROOT / "history" / "token_status.json"
     if token.exists():
         state["token"] = json.loads(token.read_text(encoding="utf-8"))

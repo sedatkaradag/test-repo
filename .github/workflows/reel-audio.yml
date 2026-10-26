@@ -1,7 +1,8 @@
 name: reel-audio
 
 # Adds the Qur'an recitation to verse Reels waiting with status "audio_pending", then marks them
-# ready for the publisher. Starts when queue files are pushed; can also be run by hand
+# ready for the publisher. Template v2 Reels are drawn here from their approved layout, each verse
+# lit for exactly as long as its recitation lasts (scripts/reels.py). Starts when queue files are pushed; can also be run by hand
 # ("check" only verifies that each configured reciter's files exist).
 on:
   push:
@@ -24,13 +25,18 @@ permissions:
 jobs:
   audio:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests pyyaml imageio-ffmpeg
+      # Same Pillow as the Claude workspace, so the frames are drawn pixel for pixel alike
+      # (reels.layout_hash checks it). raqm (Arabic shaping) needs FriBiDi.
+      - run: |
+          sudo apt-get install -y -qq libfribidi0 >/dev/null || true
+          pip install requests pyyaml imageio-ffmpeg numpy fonttools "pillow==12.3.0"
+          python -c "from PIL import features; print('raqm:', features.check('raqm'))"
       - name: Git identity
         run: |
           git config user.name "halal-algorithm-bot"

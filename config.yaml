@@ -7,9 +7,10 @@ handle: "@thehalalalgorithm"
 jitter_minutes: 5
 
 # Paylaşım saatleri. Her slot kendi saat diliminde tanımlıdır, yaz/kış saati
-# geçişleri otomatik hesaplanır. Hedef kitle: ABD + Avrupa.
-# Günde 4 paylaşım, sırayla ayet / hadis / ayet / hadis. `type` o slota
-# hangi türün gireceğini belirler (enqueue.py bunu zorunlu tutar).
+# geçişleri otomatik hesaplanır. `type` o slota hangi türün gireceğini belirler
+# (enqueue.py bunu zorunlu tutar).
+# 28 Ekim 2026'dan itibaren: günde 2 fotoğraf (ayet + hadis) ve 3 Reels (aşağıda).
+# `from` / `until`: slotun kullanıldığı ilk / son yerel gün (geçiş için).
 slots:
   # Avrupa sabahı (işe gidiş) — ABD uyurken
   - name: eu-morning
@@ -21,22 +22,25 @@ slots:
     time: "09:00"
     tz: America/New_York
     type: hadith
-  # Avrupa akşamı (~19:00 Orta Avrupa) = ABD öğle arası
+  # Eski düzen: 27 Ekim'de kuyruktaki onaylı gönderiler için son kez. Bu saatlerde artık Reels var.
   - name: eu-evening-us-noon
     time: "13:00"
     tz: America/New_York
     type: quran
-  # ABD akşam prime-time (~20:30 Doğu) — Avrupa uyurken
+    until: "2026-10-27"
   - name: us-evening
     time: "20:30"
     tz: America/New_York
     type: hadith
+    until: "2026-10-27"
 
 # true  -> paylaşmaz, sadece kuyruğu işaretler (önizleme ana ajandan istenir)
 # false -> Instagram'a gerçekten paylaşır
 dry_run: false
 
-# Günde 1 Reels: o günün onaylı gönderilerinden birinin sessiz videosu.
+# Günde 3 Reels (28 Ekim'den itibaren): 2 tilavetli ayet, 1 sessiz hadis. Her Reels kendi
+# ayet/hadisini taşır, hiçbir gönderinin kopyası değildir. Şablon v2 (scripts/reels.py):
+# ayet ayet altın, hadis parça parça gümüş. `content`: o slota girecek tür.
 # trial: true -> önce sadece takipçi olmayanlara gösterilir (deneme Reels).
 # Instagram deneme Reels için asgari takipçi sayısı istiyor; hesap o eşiğe
 # ulaşana kadar false (normal Reels). Eşik aşılınca true yapılacak.
@@ -45,7 +49,7 @@ reels:
   trial: false
   # Ayet Reels'lerinde o ayetlerin tilaveti ses olarak eklenir (müzik yok). Kâriler sırayla
   # döner; caption'ın en altına "Recitation: <ad>" yazılır. Ses everyayah.com'dan (ayet ayet)
-  # GitHub'da indirilip videoya eklenir. Hadis Reels'leri sessizdir.
+  # GitHub'da indirilir; video orada her ayetin gerçek süresiyle çizilir. Hadis Reels'leri sessizdir.
   recitation:
     enabled: true
     max_seconds: 75
@@ -55,10 +59,15 @@ reels:
       - {id: Husary_128kbps, name: Mahmoud Khalil Al-Husary}
       - {id: Minshawy_Murattal_128kbps, name: Mohamed Siddiq Al-Minshawi}
       - {id: MaherAlMuaiqly128kbps, name: Maher Al-Muaiqly}
-  slot:
-    name: reel
-    time: "11:00"
-    tz: America/New_York
+  slots:
+    # Eski tek Reels slotu: 27 Ekim'deki onaylı Reels için son kez.
+    - {name: reel, time: "11:00", tz: America/New_York, until: "2026-10-27"}
+    # Pakistan ve Hindistan akşamı (20:30 Karaçi = 21:00 Hindistan; Avrupa öğleden sonrası)
+    - {name: reel-pk, time: "20:30", tz: Asia/Karachi, content: quran, from: "2026-10-28"}
+    # Avrupa akşamı = ABD öğle arası (ilk Reels'in iyi gittiği saat)
+    - {name: reel-eu, time: "13:00", tz: America/New_York, content: quran, from: "2026-10-28"}
+    # ABD akşam prime-time
+    - {name: reel-us, time: "20:30", tz: America/New_York, content: hadith, from: "2026-10-28"}
 
 # Haftada 1 carousel: tek temada 5 metin + kapak kartı (Çarşamba 18:00 New York).
 carousel:

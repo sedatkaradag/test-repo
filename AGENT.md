@@ -29,7 +29,7 @@ için bu dosyayı düzenlemen yeterli. Gönderi dili İngilizcedir.
 
 ```bash
 cd <repo klasörü> && git pull
-pip install --break-system-packages -q pyyaml hijridate fonttools pillow uharfbuzz pyspellchecker numpy
+pip install --break-system-packages -q pyyaml hijridate fonttools "pillow==12.3.0" uharfbuzz pyspellchecker numpy
 python3 -c "from PIL import features; assert features.check('raqm'), 'raqm missing'"
 cd scripts
 ```
@@ -51,12 +51,19 @@ cd scripts
 3. **Planlayıcı:** Her boş slot için bir tema seç.
    - `python3 calendar_info.py 3` → özel günler (Cuma, Ramazan, Zilhicce vb.) önceliklidir.
    - `history/posted.jsonl` son 20 kayıt ve `notes/strategy.md` (varsa) oku.
-   - Her slotun türü `config.yaml` → `slots[].type` ile sabittir (günde ayet / hadis /
-     ayet / hadis). `enqueue.py slots` çıktısında da yazar; başka tür seçme.
+   - Her slotun türü sabittir: günde 2 fotoğraf (`quran`, `hadith`) ve 3 Reels (`reel/quran`
+     iki kez, `reel/hadith` bir kez); `enqueue.py slots` çıktısında yazar, başka tür seçme
+     (`config.yaml` → `slots[].type`, `reels.slots[].content`).
    - Son 3 gönderinin temasını tekrarlama.
    - Tema örnekleri: patience, gratitude, mercy, du'a, kindness to parents, honesty,
      forgiveness, trust in Allah (tawakkul), remembrance (dhikr), good character,
      charity, prayer, Friday reminders, hope after hardship.
+   - Konuları geniş tut; insanların gerçek hayatından da seç: kaygı ve aşırı düşünme, yalnızlık,
+     yas ve kayıp, uykusuz geceler, iş ve rızık, sınavlar, evlilik ve aile, arkadaşlık, öfke,
+     kıskançlık, dil ve söz, telefon ve zaman, niyet, küçük ameller, Allah'ın isimleri,
+     peygamberlerin duaları ve kıssaları (Yusuf, Yunus, Musa, İbrahim), cennet ve umut, ölümü
+     yumuşak bir dille hatırlatma. Bir Reels'in ilgi çekmesi kancadan gelir; konu güvenli kalır
+     (Değişmez kurallar 4).
 4. **Küratör:** `python3 find.py search hadith "<regex>"` veya `search quran "<regex>"`
    ile 2-4 farklı arama yap (ör. `"\bpatien|\bsabr"`). Adayları oku ve seç:
    - Tek başına anlaşılır, faydalı, evrensel bir mesaj.
@@ -132,6 +139,12 @@ cd scripts
    >    open, leaves out a lone closing quote whose opening the source omits (e.g. 112:1-4), and
    >    puts a full stop or semicolon between joined verses. These are not errors; any change to
    >    a word is.
+   > 2b. Only for a Reel: run `python3 reels.py <ID> /tmp/review_reel_<n> --caption-file <caption dosyası> --no-video`
+   >    and OPEN `reel_still.jpg` (the finished frame). Check its Arabic exactly as on the card
+   >    (word by word, mark by mark, zoom in). The English under the verses must be the source
+   >    English cut at the verse ends; a hadith must be the source text with its narration line.
+   >    The line at the top must be the caption's first line and the line at the bottom its
+   >    closing line, word for word. Nothing may be cut off, overlap or sit in the bottom fifth.
    > 3. Read `<caption dosyası>` and check spelling and grammar sentence by sentence.
    > Reject if: anything in steps 1-3 is wrong; the text could be misunderstood out of
    > context (war, punishments, slavery, event-specific rulings, easily distorted gender
@@ -167,28 +180,53 @@ cd scripts
    Sonra oluşan `queue/*.jpg` dosyasını **Read ile açıp bak**: taşma, kutucuk
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç
    (o içerik atılır, düzeltilmez).
-7b. **Günün Reels'i:** `slots` çıktısında `reel` türünde boş slot varsa, Reels için **kendi
-   içeriğini** seç; hiçbir gönderinin kopyası olmaz. Tür sırayla değişir: önceki Reels ayetse bu
-   hadis, hadisse ayet (`enqueue.py list` ile son Reels'in türüne bak; kod da kontrol eder).
-   3-6. adımları aynen uygula: tema (son 3 gönderi ve son 3 Reels'ten farklı), kısa ve en çok
-   paylaşılmaya uygun içerik (yaklaşık 250 karakter altı, güçlü tek mesaj), ayrı caption (ilk
-   satır izleyiciyi durduran kanca, sonra 1-2 cümle, kapanış, 3-5 etiket), denetçiden önce kod
-   kontrolü (`python3 enqueue.py add-reel --check --entry <ID> --slot <tarih>_reel --caption-file <dosya> --theme "<tema>"`),
-   sonra **yeni** bağımsız denetçi ve `review_log.py` kaydı. Onaydan sonra hiçbir şey değişmez. Sonra:
-   `python3 enqueue.py add-reel --entry <ID> --slot <tarih>_reel --caption-file <dosya> --theme "<tema>" --review "<özet>"`
-   Kod son 365 günde paylaşılan veya kuyruktaki içerikleri ve yanlış türü reddeder.
-   Kart metni yukarıdan aşağı belirir. Oluşan `queue/<slot>.jpg` kartını Read ile aç. Kapak (`cover`):
-   videonun son karesi, bitmiş kart (9:16); profil ızgarasında boş yeşil ekran görünmesin diye
-   kod kendisi üretir ve yayıncı Instagram'a kapak olarak gönderir.
-   **Ayet Reels'lerinde tilavet:** kartta hangi ayetler varsa ses de tam olarak onlar. Anlam
-   için gerekirse bir önceki ya da sonraki ayeti de aralığa kat (tilavet en fazla ~60 sn).
-   Kâriyi `enqueue.py` sırayla seçer (`config.yaml` → `reels.recitation.reciters`) ve
-   caption'ın en altına "Recitation: <ad>" satırını kendisi ekler; o satırı sen yazma.
-   Öğe `audio_pending` olarak girer; GitHub `reel-audio` işi push'tan sonra sesi everyayah.com'dan
-   indirip videoya ekler, ses seviyesini eşitler ve öğeyi `ready` yapar. Sesi eklenmemiş Reels
-   yayınlanmaz. Atanan kâride ayet yoksa sıradaki kâriler denenir (caption'daki ad kendiliğinden
-   güncellenir); hiçbirinde yoksa Reels sessiz çıkar ve "Recitation" satırı silinir. Hadis
-   Reels'leri sessizdir. **Günde tek Reels** (`reel` slotu); ek Reels ancak sahibi isterse.
+7b. **Reels (günde 3):** `slots` çıktısında `reel/quran` ya da `reel/hadith` türündeki her boş
+   slot için (`reel-pk` ve `reel-eu` ayet, `reel-us` hadis) **kendi içeriğini** seç; hiçbir
+   gönderinin kopyası olmaz. Slotun türü sabittir, kod kontrol eder.
+   - **İçerik:** 3-6. adımlar aynen: tema son 3 gönderi ve son 3 Reels'ten farklı; kısa ve tek
+     güçlü mesaj (yaklaşık 250 karakter altı). Ayet Reels'inde 1-5 ayet, her ayet videoda kendi
+     satır(lar)ında durur (ayet başına en fazla 3 satır); tilavet yaklaşık 60 saniyeyi geçmesin.
+     Anlam için gerekirse bir önceki ya da sonraki ayeti de aralığa kat.
+   - **Şablon (v2, `scripts/reels.py`):** En üstte kanca, altında metin. Ayette Arapça altın
+     renkte; okunan ayet parlar, altında o ayetin meali belirir. Hadiste metin gümüş renkte,
+     parça parça parlar; ravi satırı küçük ve soluk. Hadis Reels'inde hiç altın renk yoktur. Sonda
+     bütün metin yanar ve kapanış cümlesi (fildişi renk) belirir. Tilavet satırı videoda yoktur,
+     caption'da vardır.
+   - **Kanca ve kapanış videoya basılır:** kanca = caption'ın ilk satırı, kapanış = caption'ın
+     kapanış cümlesi, harfi harfine. Bu yüzden kanca en fazla 60 karakter (videoda 1-2 satır),
+     kapanış cümlesi tek satır ve en fazla 90 karakter. Kod kontrol eder.
+   - **Caption:** kanca, 1-2 cümle, referans, kapanış, 3-5 etiket ("Recitation" satırını yazma).
+   - **Kanca çeşitliliği:** Tek bir kalıba bağlı kalma; her Reels'te farklı bir tür dene ve aynı
+     türü üst üste kullanma. Kod, son 10 Reels kancasıyla aynı iki kelimeyle başlayan kancayı
+     reddeder. Örnek türler (hepsi metnin söylediğine dayanır, abartı ve korkutma yok):
+     - Soru: "Ever feel like your duas go nowhere?"
+     - Bir duyguya isim koymak: "For the nights you can't switch off"
+     - Varsayımı kırmak: "The strong one is not who you think"
+     - Merak: "The dua Yunus made in the dark"
+     - Bir ana hitap: "If you're reading this at 2am"
+     - Hikâye girişi: "A man asked the Prophet ﷺ one question"
+     - Zıtlık: "Not your looks. Not your wealth."
+     - Günün bir anı: "Before you pick up your phone tomorrow"
+     - Allah'ın bir vaadi: "Allah says He is near"
+     - Küçük bir meydan okuma: "Try this for one week"
+     - Kime gönderileceği: "For the friend who carries everyone"
+     Aynı çeşitlilik fotoğraf gönderilerinin ilk satırı için de geçerli.
+   - **Kod kontrolü (denetçiden önce):**
+     `python3 enqueue.py add-reel --check --entry <ID> --slot <slot anahtarı> --caption-file <dosya> --theme "<tema>"`
+     Bu, kart kurallarına ek olarak Reels karesini planlar ve çizileni kaynakla karşılaştırır
+     (Arapça kelime kelime, satır aralığı, meal, kanca, kapanış, taşma). `CHECK OK` olmadan ilerleme.
+   - **Denetçi:** her Reels için **yeni** bağımsız denetçi; 6. adımdaki 2b maddesiyle Reels
+     karesini de açıp kontrol eder. Kararı `review_log.py` ile kaydet. Onaydan sonra hiçbir şey değişmez.
+   - **Kuyruk:** `python3 enqueue.py add-reel --entry <ID> --slot <slot anahtarı> --caption-file <dosya> --theme "<tema>" --review "<özet>"`
+     Oluşan `queue/<slot>.jpg` (bitmiş kare; panel kartı ve kapak) dosyasını Read ile aç.
+   - **Ayet Reels'inde tilavet:** Kâriyi `enqueue.py` sırayla seçer (`config.yaml` →
+     `reels.recitation.reciters`) ve caption'ın en altına "Recitation: <ad>" satırını kendisi ekler.
+     Öğe `audio_pending` olarak girer. GitHub `reel-audio` işi push'tan sonra ayetleri
+     everyayah.com'dan tek tek indirir ve videoyu onaylı düzenden yeniden çizer; her ayet tam kendi
+     tilaveti süresince parlar. Çizilen düzenin denetçinin gördüğüyle birebir aynı olduğunu
+     `layout_hash` kanıtlar; değilse önizleme sese göre uzatılır (`audio.timing`'de yazar).
+     Atanan kâride ayet yoksa sıradaki kâriler denenir; hiçbirinde yoksa Reels sessiz çıkar ve
+     "Recitation" satırı silinir. Sesi eklenmemiş ayet Reels'i yayınlanmaz. Hadis Reels'leri sessizdir.
 7d. **Ayet gönderilerinin Story'si:** `enqueue.py add` ayet gönderileri için Story'yi kendiliğinden
    tilavetli 9:16 video olarak hazırlar (`story_video`, `story_audio`; kâri sırası Reels'le ortak).
    GitHub sesi ekler; eklenemezse ya da video reddedilirse yayıncı görsel Story'yi atar, gönderi

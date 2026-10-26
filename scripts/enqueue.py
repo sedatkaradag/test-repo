@@ -102,20 +102,29 @@ def slot_by_key(cfg, key):
     """'2026-10-21_us-evening' -> (slot dict, local date)."""
     date_str, _, name = key.partition("_")
     for s in all_slots(cfg):
-        if s["name"] == name:
+        if s["name"] == name and slot_active(s, date_str):
             return s, date_str
     raise SystemExit(f"REJECT: unknown slot '{name}' (see config.yaml)")
 
 
 def all_slots(cfg):
+    """Every slot: feed posts, Reels (each Reels slot names its content: quran or hadith) and the
+    carousel. A slot may carry `from` / `until` (local dates) while the schedule changes."""
     slots = list(cfg["slots"])
     reels = cfg.get("reels") or {}
-    if reels.get("enabled") and reels.get("slot"):
-        slots.append({**reels["slot"], "type": "reel"})
+    if reels.get("enabled"):
+        for s in reels.get("slots") or ([reels["slot"]] if reels.get("slot") else []):
+            slots.append({**s, "type": "reel"})
     car = cfg.get("carousel") or {}
     if car.get("enabled") and car.get("slot"):
         slots.append({**car["slot"], "type": "carousel"})
     return slots
+
+
+def slot_active(s, date):
+    """Is slot `s` in use on local date `date` (a date or 'YYYY-MM-DD')?"""
+    d = date if isinstance(date, str) else date.isoformat()
+    return str(s.get("from", "0000")) <= d <= str(s.get("until", "9999"))
 
 
 def upcoming_slots(cfg, days):
@@ -127,6 +136,8 @@ def upcoming_slots(cfg, days):
         for d in range(days + 1):
             date = today + dt.timedelta(days=d)
             if "weekday" in s and date.weekday() != int(s["weekday"]):
+                continue
+            if not slot_active(s, date):
                 continue
             day = date.isoformat()
             when = slot_utc(day, s["time"], s["tz"])
@@ -304,19 +315,23 @@ def recitation_plan(cfg, entry_id):
             "ayahs": [f"{sura:03d}{v:03d}" for v in range(first, end + 1)], "done": False}
 
 
-def previous_reel_type(before_iso):
-    """Type (quran/hadith) of the latest reel scheduled before `before_iso`, ignoring removed ones."""
-    reels = [i for i in queued() if i.get("type") == "reel" and i.get("status") not in ("deleted", "hold")
-             and i.get("publish_at", "") < before_iso]
-    if not reels:
-        return None
-    last = max(reels, key=lambda i: i["publish_at"])
-    return last.get("content_type") or last["entry_id"].split(":")[0]
+def reel_hooks(n=10, exclude_slot=None):
+    """First lines (hooks) of the latest Reels, newest last."""
+    reels = [i for i in queued() if i.get("type") == "reel" and i.get("slot") != exclude_slot
+             and i.get("status") != "deleted"]
+    reels.sort(key=lambda i: i["publish_at"])
+    return [i["caption"].strip().splitlines()[0] for i in reels[-n:] if i.get("caption")]
+
+
+def _opening(line, k=2):
+    return " ".join(re.findall(r"[a-z0-9']+", line.lower())[:k])
 
 
 def cmd_add_reel(a):
-    """Silent Reel with its own verse or hadith: never a copy of a feed post, and the
-    type alternates with the previous Reel (verse, hadith, verse, ...)."""
+    """A Reel with its own verse or hadith (never a copy of a feed post), in template v2:
+    verses light up one by one in gold with the recitation, hadith phrases in silver, silent.
+    Each Reels slot names its content (config.yaml -> reels.slots[].content)."""
+    import reels as RL
     cfg = config()
     entry = get(a.entry)
     base_ids = {a.entry}
@@ -344,7 +359,9 @@ def cmd_add_reel(a):
     else:
         slot, date_str = slot_by_key(cfg, a.slot)
         if slot.get("type") != "reel":
-            sys.exit(f"REJECT: {a.slot} is not the reel slot")
+            sys.exit(f"REJECT: {a.slot} is not a Reels slot")
+        if slot.get("content") and slot["content"] != entry["type"]:
+            sys.exit(f"REJECT: Reels slot {a.slot} takes {slot['content']}, not {entry['type']}")
         base = slot_utc(date_str, slot["time"], slot["tz"])
         if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
             sys.exit("REJECT: slot is in the past or too close")
@@ -355,36 +372,45 @@ def cmd_add_reel(a):
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
     when_iso = when.isoformat(timespec="seconds").replace("+00:00", "Z")
-    prev = previous_reel_type(when_iso)
-    if prev and prev == entry["type"]:
-        want = "hadith" if prev == "quran" else "quran"
-        sys.exit(f"REJECT: the previous Reel was {prev}; this one must be {want}")
 
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
     if re.search(r"(?im)^recitation:", caption):
         sys.exit("REJECT caption: leave out the Recitation line; it is added automatically")
     problems = check_caption(caption, entry, exclude_slot=a.slot)
+    hook = caption.splitlines()[0].strip()
+    if _opening(hook) and _opening(hook) in {_opening(h) for h in reel_hooks(exclude_slot=a.slot)}:
+        problems.append(f"hook starts like one of the last 10 Reels hooks (\"{_opening(hook)} ...\"); "
+                        "use another kind of opening")
     if problems:
         sys.exit("REJECT caption: " + "; ".join(problems))
 
-    # Verse Reels carry the recitation of exactly the verses on the card.
+    # The video shows the hook (first line) and the closing line of this caption.
+    try:
+        layout = RL.plan(a.entry, caption)
+    except RL.TooLong as e:
+        sys.exit(f"REJECT: {e}")
+    bad = RL.issues(layout)
+    if bad:
+        sys.exit("REJECT reel: " + "; ".join(bad))
+
+    # Verse Reels carry the recitation of exactly the verses on the frame.
     audio, status = recitation_plan(cfg, a.entry), "ready"
     if audio:
         caption = f"{caption}\n\nRecitation: {audio['reciter_name']}"
-        status = "audio_pending"   # the reel-audio workflow adds the sound, then marks it ready
+        status = "audio_pending"   # GitHub draws the final video with the recitation, then marks it ready
 
     img = QUEUE / f"{a.slot}.jpg"
-    try:
-        render(a.entry, img)
-    except TooLong:
-        sys.exit("REJECT: too long for one image, choose a shorter entry")
+    RL.still(layout, img)                     # the finished frame: panel card and cover
+    cover = QUEUE / f"{a.slot}_cover.jpg"
+    cover.write_bytes(img.read_bytes())
     video = QUEUE / f"{a.slot}.mp4"
-    render_reel(a.entry, video)
-    reel_cover(video, QUEUE / f"{a.slot}_cover.jpg")
+    if not getattr(a, "check", False):
+        RL.render_video(layout, video)        # preview timing; verse Reels are redrawn on GitHub
     item = {
         "entry_id": a.entry,
         "type": "reel",
         "content_type": entry["type"],
+        "template": RL.TEMPLATE,
         "reference": entry["reference"],
         "slot": a.slot,
         "publish_at": when_iso,
@@ -400,6 +426,8 @@ def cmd_add_reel(a):
         "flags": flags,
         "integrity": "passed",
         "status": status,
+        "reel_layout": layout,
+        "layout_hash": RL.layout_hash(layout),
         "created_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
     }
     if audio:
@@ -563,6 +591,23 @@ def cmd_rerender(a):
         flags = require_integrity(ids)
         for n, i in enumerate(ids, start=1):   # card 0 is the cover (no verse text)
             render(i, QUEUE / f"{stem}_{n}.jpg")
+    elif item["type"] == "reel" and item.get("template") == "v2":
+        import reels as RL
+        flags = require_integrity([item["entry_id"]])
+        try:
+            layout = RL.plan(item["entry_id"], item["caption"])
+        except RL.TooLong as e:
+            sys.exit(f"REJECT: {e}")
+        bad = RL.issues(layout)
+        if bad:
+            sys.exit("REJECT reel: " + "; ".join(bad))
+        RL.still(layout, QUEUE / f"{stem}.jpg")
+        (ROOT / item["cover"]).write_bytes((QUEUE / f"{stem}.jpg").read_bytes())
+        RL.render_video(layout, QUEUE / f"{stem}.mp4")
+        item.update(reel_layout=layout, layout_hash=RL.layout_hash(layout))
+        if item.get("audio"):   # the recitation is mixed again on GitHub after approval
+            item["audio"].update(done=False, failed=False)
+            item["audio"].pop("silent", None)
     elif item["type"] == "reel":
         flags = require_integrity([item["entry_id"]])
         if item.get("image") == f"queue/{stem}.jpg":   # Reels with their own content keep their own card
@@ -607,7 +652,11 @@ def cmd_approve(a):
     item["flags"] = require_integrity(ids)
     if dt.datetime.fromisoformat(item["publish_at"].replace("Z", "+00:00")) <= dt.datetime.now(dt.timezone.utc):
         sys.exit("REJECT: publish time has passed; enqueue it in a new slot")
-    item.update(status="ready", review=a.review)
+    status = "ready"
+    au = item.get("audio")
+    if item.get("template") == "v2" and au and not au.get("done"):
+        status = "audio_pending"   # re-rendered verse Reel: GitHub adds the recitation again
+    item.update(status=status, review=a.review)
     item.pop("hold_reason", None)
     item.pop("held_at", None)
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -624,7 +673,8 @@ def cmd_slots(a):
     filled = {i.get("slot") for i in queued()}
     for when, key, s in upcoming_slots(cfg, a.days):
         if key not in filled:
-            print(f"EMPTY {key:<28} {s.get('type', 'any'):<7} base {when.isoformat().replace('+00:00', 'Z')}  ({s['time']} {s['tz']})")
+            kind = s.get("type", "any") + (f"/{s['content']}" if s.get("content") else "")
+            print(f"EMPTY {key:<28} {kind:<12} base {when.isoformat().replace('+00:00', 'Z')}  ({s['time']} {s['tz']})")
 
 
 if __name__ == "__main__":

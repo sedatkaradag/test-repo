@@ -26,12 +26,15 @@ PROMPT = """You are the panel sync run for the Instagram page @thehalalalgorithm
 
 
 def all_slots(cfg):
+    """Slots still in use (a slot whose `until` day has passed everywhere is left out)."""
+    import datetime as dt
     slots = list(cfg.get("slots") or [])
     for key in ("reels", "carousel"):
         sec = cfg.get(key) or {}
-        if sec.get("enabled") and sec.get("slot"):
-            slots.append(sec["slot"])
-    return slots
+        if sec.get("enabled"):
+            slots += sec.get("slots") or ([sec["slot"]] if sec.get("slot") else [])
+    yesterday = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=1)).date().isoformat()
+    return [s for s in slots if str(s.get("until", "9999")) >= yesterday]
 
 
 def plan(cfg):

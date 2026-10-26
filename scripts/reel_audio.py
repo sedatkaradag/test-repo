@@ -120,6 +120,73 @@ def add_recitation(video_rel, au, reciters, max_seconds):
     return True, f"{a:.1f}s by {rec['id']}"
 
 
+def decode_wav(src, dest):
+    """Decode one verse file to 44.1 kHz stereo PCM; returns its exact length in seconds."""
+    import wave
+    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(src), "-ar", "44100", "-ac", "2",
+                    "-c:a", "pcm_s16le", str(dest)], check=True)
+    with wave.open(str(dest)) as w:
+        return w.getnframes() / w.getframerate()
+
+
+def add_recitation_v2(item, reciters, max_seconds):
+    """Template v2 verse Reel: the video is drawn here from the approved layout, each verse lit for
+    exactly as long as its own recitation file lasts. If the layout drawn here is not pixel-identical
+    to the one the verifier saw (layout_hash), the preview video is stretched instead (old way)."""
+    import wave
+    au = item["audio"]
+    rec, files, tried = find_recitation(reciters, au["reciter"], au["ayahs"])
+    stamp = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    if not rec:
+        au.update(done=False, failed=True, tried=tried, checked_at=stamp)
+        return False, "no reciter had these verses"
+    tmp = Path(tempfile.mkdtemp())
+    try:
+        durs, wavs = [], []
+        for k, f in enumerate(files):
+            w = tmp / f"{k}.wav"
+            durs.append(decode_wav(f, w))
+            wavs.append(w)
+        total = sum(durs)
+        if total + TAIL > max_seconds:
+            raise RuntimeError(f"recitation is {total:.0f}s, too long for {max_seconds}s")
+        joined = tmp / "all.wav"
+        with wave.open(str(joined), "wb") as out:
+            for k, w in enumerate(wavs):
+                with wave.open(str(w)) as src:
+                    if k == 0:
+                        out.setparams(src.getparams())
+                    out.writeframes(src.readframes(src.getnframes()))
+        audio = tmp / "recitation.m4a"
+        subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(joined),
+                        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100",
+                        "-c:a", "aac", "-b:a", "160k", str(audio)], check=True)
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import reels as RL
+        layout = item["reel_layout"]
+        video = ROOT / item["video"]
+        out = tmp / "out.mp4"
+        if RL.layout_hash(layout) == item.get("layout_hash"):
+            bounds = [0.0]
+            for d in durs:
+                bounds.append(round(bounds[-1] + d, 3))
+            RL.render_video(layout, out, bounds=bounds, audio=audio)
+            timing = "verse by verse"
+        else:   # never publish text drawn differently from what was approved
+            a_s, _ = mix(video, files, out, max_seconds)
+            timing = "stretched preview (layout differed on GitHub)"
+        video.write_bytes(out.read_bytes())
+    except Exception as e:  # noqa: BLE001
+        au.update(done=False, failed=True, tried=tried + [str(e)[:160]], checked_at=stamp)
+        return False, str(e)[:160]
+    if rec["id"] != au["reciter"]:
+        au["assigned"] = au["reciter"]
+    au.update(reciter=rec["id"], reciter_name=rec["name"], done=True, failed=False, tried=tried,
+              seconds=round(total, 1), video_seconds=round(duration(ROOT / item["video"]), 1),
+              verse_seconds=[round(d, 2) for d in durs], timing=timing, added_at=stamp)
+    return True, f"{total:.1f}s by {rec['id']}, {timing}"
+
+
 def set_recitation_line(caption, name):
     caption = re.sub(r"\n*^Recitation: .*$", "", caption, flags=re.M).rstrip()
     return f"{caption}\n\nRecitation: {name}" if name else caption
@@ -153,8 +220,11 @@ def main():
         changed = False
         if item.get("status") == "audio_pending" and item.get("audio"):
             is_story = item.get("type") == "story"
-            ok, note = add_recitation(item["video"], item["audio"], reciters,
-                                      STORY_MAX if is_story else int(rec.get("max_seconds", 75)))
+            if item.get("template") == "v2" and item.get("reel_layout"):
+                ok, note = add_recitation_v2(item, reciters, int(rec.get("max_seconds", 75)))
+            else:
+                ok, note = add_recitation(item["video"], item["audio"], reciters,
+                                          STORY_MAX if is_story else int(rec.get("max_seconds", 75)))
             if not is_story and "caption" in item:
                 item["caption"] = set_recitation_line(item["caption"], item["audio"]["reciter_name"] if ok else "")
             if not ok:
