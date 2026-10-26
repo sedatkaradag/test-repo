@@ -66,5 +66,15 @@
     "source": "Analist, 2026-10-26",
     "status": "open",
     "opened_at": "2026-10-26T06:26:15Z"
+  },
+  {
+    "id": "S-007",
+    "kind": "publish",
+    "title": "Yenilenen Instagram token'ı kaydedilemiyor",
+    "detail": "Instagram yenilemede yeni bir token döndü, ama GitHub'a kaydedecek GH_PAT anahtarı yok (ya da kayıt başarısız oldu). Kayıtlı token kendi süresi dolunca düşer. Çözüm: bu repo için 'Secrets: Read and write' yetkili bir fine-grained GitHub token oluşturup GH_PAT adıyla eklemek.",
+    "ref": "IG_ACCESS_TOKEN",
+    "source": "Gece token kontrolü",
+    "status": "open",
+    "opened_at": "2026-10-26T18:50:47Z"
   }
 ]

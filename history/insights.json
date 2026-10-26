@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-10-26T09:20:52+00:00",
+  "fetched_at": "2026-10-26T18:51:38+00:00",
   "account": {
-    "followers_count": 57,
-    "media_count": 30,
+    "followers_count": 58,
+    "media_count": 33,
     "online_followers_by_utc_hour": null
   },
   "posts": [
@@ -507,13 +507,13 @@
       "slot": "2026-10-25_reel",
       "type": "reel",
       "stats": {
-        "reach": 278,
-        "views": 328,
-        "likes": 17,
+        "reach": 333,
+        "views": 396,
+        "likes": 22,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 18
+        "total_interactions": 23
       }
     },
     {
@@ -543,8 +543,8 @@
       "slot": "2026-10-25_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 3,
-        "views": 5,
+        "reach": 4,
+        "views": 6,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -561,8 +561,62 @@
       "slot": "2026-10-26_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 1,
-        "views": 1,
+        "reach": 2,
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "entry_id": "hadith:tirmidhi:2646",
+      "entry_ids": null,
+      "media_id": "17869818054659758",
+      "posted_at": "2026-10-26T13:03:27+00:00",
+      "theme": "seeking knowledge",
+      "slot": "2026-10-26_us-morning",
+      "type": "hadith",
+      "stats": {
+        "reach": 4,
+        "views": 7,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "entry_id": "hadith:abudawud:4811",
+      "entry_ids": null,
+      "media_id": "18124450768902077",
+      "posted_at": "2026-10-26T14:58:34+00:00",
+      "theme": "gratitude / thanking people",
+      "slot": "2026-10-26_reel",
+      "type": "reel",
+      "stats": {
+        "reach": 118,
+        "views": 128,
+        "likes": 3,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 3
+      }
+    },
+    {
+      "entry_id": "quran:57:4",
+      "entry_ids": null,
+      "media_id": "18152830147526449",
+      "posted_at": "2026-10-26T16:56:12+00:00",
+      "theme": "Allah is with you wherever you are",
+      "slot": "2026-10-26_eu-evening-us-noon",
+      "type": "quran",
+      "stats": {
+        "reach": 5,
+        "views": 13,
         "likes": 0,
         "comments": 0,
         "saved": 0,
