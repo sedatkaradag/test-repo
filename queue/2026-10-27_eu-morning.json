@@ -1,0 +1,27 @@
+{
+  "entry_id": "quran:3:8",
+  "type": "quran",
+  "reference": "Surah Aal-i-Imraan 3:8",
+  "slot": "2026-10-27_eu-morning",
+  "publish_at": "2026-10-27T07:14:18Z",
+  "local_slot": "2026-10-27 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-27_eu-morning.jpg",
+  "story_image": "queue/2026-10-27_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-27_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "003008"
+    ],
+    "done": false
+  },
+  "caption": "A morning dua for a steady heart after guidance.\n\nThis dua asks Allah for two things: a heart that stays firm on guidance, and His mercy. Make it part of your morning before the day pulls you in every direction.\n\nSurah Aal-i-Imraan 3:8\n\nSave it and say it once before you leave home today.\n\n#quran #morningdua #steadfastheart #quranicdua",
+  "alt_text": "“Our Lord, do not let our hearts deviate after You have guided us, and grant us Your mercy; for You are the Munificent Bestower (Surah Aal-i-Imraan 3:8)",
+  "theme": "du'a for a steady heart",
+  "review": "approve r1: integrity ok, Arabic checked mark by mark, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-26T05:43:02+00:00"
+}

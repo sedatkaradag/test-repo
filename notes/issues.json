@@ -46,5 +46,15 @@
     "opened_at": "2026-10-25T05:43:54Z",
     "closed_at": "2026-10-25T21:06:56Z",
     "resolution": "Değerlendirme: bozuk karakter (�) yalnızca 62 hadisin Arapça metninde var; ayetlerde, İngilizce metinlerde ve meallerde yok. Kartlarda hadis Arapçası çizilmediği için takipçiye görünmüyordu; asıl risk, yarısında karakterin senette olması ve denetçinin raviyi doğrulayamamasıydı. Sahibinin kararıyla 62 kayıt seçimden çıkarıldı: aramada hiç çıkmıyor, kod kontrolü de reddediyor. Kuyruktaki Tirmizî 3538 (bozuk karakter senette değil, sondaki açıklamada) olduğu gibi bırakıldı."
+  },
+  {
+    "id": "S-005",
+    "kind": "content",
+    "title": "ibnmajah:3681 kaynak İngilizcesinde tırnaklar uyumsuz, kuyruktan çıkarıldı",
+    "detail": "Denetçi onayladı ama kartta açılış “ ile kapanış ’ uyumsuz göründü (kaynak metin). Kural 7 gereği metin düzeltilmedi; kuyruk dosyaları silindi, slot muslim:6690 ile dolduruldu. Benzer şekilde quran:112:1-4 (kapanışsız tırnak) ve quran:89:27-30 (eksik noktalama) denetçi tarafından reddedildi; bu kayıtların kaynak İngilizcesi düzeltilebilirse kullanılabilir.",
+    "ref": "2026-10-27_us-morning / hadith:ibnmajah:3681",
+    "source": "Günlük ajan, 2026-10-26",
+    "status": "open",
+    "opened_at": "2026-10-26T05:46:47Z"
   }
 ]
