@@ -142,8 +142,9 @@ cd scripts
    >    a word is.
    > 2b. Only for a Reel: run `python3 reels.py <ID> /tmp/review_reel_<n> --caption-file <caption dosyası> --no-video`
    >    and OPEN `reel_still.jpg` (the finished frame). Check its Arabic exactly as on the card
-   >    (word by word, mark by mark, zoom in). The English under the verses must be the source
-   >    English cut at the verse ends; a hadith must be the source text with its narration line.
+   >    (word by word, mark by mark, zoom in). On a verse Reel the frame shows the whole source
+   >    English under the verses, with the closing line under it; a hadith must be the source text
+   >    with its narration line.
    >    The line at the top must be the caption's first line and the line at the bottom its
    >    closing line, word for word. Nothing may be cut off or overlap, and no text may reach below
    >    y=1585 of 1920 (Instagram covers the area under it).
@@ -195,7 +196,8 @@ cd scripts
    - **Şablon (v2, `scripts/reels.py`):** En üstte kanca, altında metin. Ayette Arapça altın
      renkte; okunan ayet parlar, altında o ayetin meali belirir. Hadiste metin gümüş renkte,
      parça parça parlar; ravi satırı küçük ve soluk. Hadis Reels'inde hiç altın renk yoktur. Sonda
-     bütün metin yanar ve kapanış cümlesi (fildişi renk) belirir. Tilavet satırı videoda yoktur,
+     bütün metin yanar ve kapanış cümlesi (fildişi renk) altında belirir; ayet Reels'inde tilavet
+     bitince ayetlerin tam meali ekranda kalır, kapanış cümlesi kısa süre sonra mealin altına gelir. Tilavet satırı videoda yoktur,
      caption'da vardır.
    - **Kanca ve kapanış videoya basılır:** kanca = caption'ın ilk satırı, kapanış = caption'ın
      kapanış cümlesi, harfi harfine. Bu yüzden kanca en fazla 60 karakter (videoda 1-2 satır),

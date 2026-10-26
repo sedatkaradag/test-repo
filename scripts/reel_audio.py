@@ -148,7 +148,9 @@ def add_recitation_v2(video_rel, layout, layout_hash, au, reciters, max_seconds)
             durs.append(decode_wav(f, w))
             wavs.append(w)
         total = sum(durs)
-        if total + 2.0 > max_seconds:   # reels.TAIL: the finished frame stays 2 s after the recitation
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import reels as RL
+        if total + RL.tail_seconds(layout) > max_seconds:   # the finished frame stays a moment after it
             raise RuntimeError(f"recitation is {total:.0f}s, too long for {max_seconds}s")
         joined = tmp / "all.wav"
         with wave.open(str(joined), "wb") as out:
