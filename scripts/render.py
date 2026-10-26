@@ -24,6 +24,9 @@ PATTERN = (44, 86, 74)
 GOLD = (201, 166, 96)
 IVORY = (244, 236, 222)
 MUTED = (160, 170, 158)
+# Text colours by kind (same as the Reels template): verses gold, hadith silver.
+VERSE_GOLD = (214, 178, 104)
+HADITH_SILVER = (184, 198, 214)
 HANDLE = "@thehalalalgorithm"
 
 FONTS = ROOT / "assets" / "fonts"
@@ -235,10 +238,11 @@ def render(entry_id, out_path):
 
     # Header label with short rules either side.
     label = "THE NOBLE QUR'AN" if is_quran else "HADITH"
-    tw = _label(d, label, 140)
+    accent = GOLD if is_quran else HADITH_SILVER   # no gold text on hadith cards
+    tw = _label(d, label, 140, color=accent)
     for side in (-1, 1):
         x0 = W / 2 + side * (tw / 2 + 24)
-        d.line([(x0, 158), (x0 + side * 60, 158)], fill=GOLD, width=1)
+        d.line([(x0, 158), (x0 + side * 60, 158)], fill=accent, width=1)
 
     # Fit text: shrink until everything fits in the text box.
     plan = None
@@ -277,18 +281,18 @@ def render(entry_id, out_path):
     y = TEXT_TOP + (avail - total) / 2
     if a_lines:
         LAST_LAYOUT["arabic_boxes"] = []
-        y = _draw_arabic(d, a_lines, ar_size, a_lh, y, IVORY, F_QURAN, LAST_LAYOUT["arabic_boxes"])
+        y = _draw_arabic(d, a_lines, ar_size, a_lh, y, VERSE_GOLD, F_QURAN, LAST_LAYOUT["arabic_boxes"])
         _divider(d, y + 40)
         y += 84
     elif not is_quran and narrator:
         y = _draw_english(d, n_lines, n_size, n_lh, y, MUTED)
         y += 34
-    _draw_english(d, e_lines, en_size, e_lh, y, IVORY if not a_lines else (222, 214, 198))
+    _draw_english(d, e_lines, en_size, e_lh, y, HADITH_SILVER if not a_lines else (222, 214, 198))
 
     # Reference and handle.
     ref = e["reference"]
     f = _font(F_LABEL, 30)
-    d.text(((W - f.getlength(ref)) / 2, 1150), ref, font=f, fill=GOLD)
+    d.text(((W - f.getlength(ref)) / 2, 1150), ref, font=f, fill=accent)
     f2 = _font(F_LABEL, 24)
     d.text(((W - f2.getlength(HANDLE)) / 2, 1232), HANDLE, font=f2, fill=MUTED)
 

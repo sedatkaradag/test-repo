@@ -1,0 +1,72 @@
+{
+  "entry_id": "quran:12:86",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Yusuf 12:86",
+  "slot": "2026-10-28_reel-pk",
+  "publish_at": "2026-12-31T12:00:00Z",
+  "local_slot": "2026-10-28 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-10-28_reel-pk.jpg",
+  "video": "queue/2026-10-28_reel-pk.mp4",
+  "cover": "queue/2026-10-28_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Where do you take your sorrow?\n\nYaqub did not complain to people. He took it to Allah.\n\nSurah Yusuf 12:86\n\nWhisper your worry to Allah tonight\n\n#quranreels #sabr #prophetyaqub\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "He said, “I only complain of my anguish and sorrow to Allah, and I know from Allah what you do not know (Surah Yusuf 12:86)",
+  "theme": "TEST",
+  "review": "TEST",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:12:86",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Where do you take your sorrow?",
+    "hook_lines": [
+      "Where do you take your",
+      "sorrow?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "012086",
+        "lines": [
+          "قَالَ إِنَّمَآ أَشۡكُواْ بَثِّي وَحُزۡنِيٓ إِلَى ٱللَّهِ",
+          "وَأَعۡلَمُ مِنَ ٱللَّهِ مَا لَا تَعۡلَمُونَ ٨٦"
+        ],
+        "y": 722.0,
+        "meal": [
+          "He said, “I only complain of my anguish and",
+          "sorrow to Allah, and I know from Allah what",
+          "you do not know.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1064.0,
+    "cta": "Whisper your worry to Allah tonight",
+    "cta_lines": [
+      "Whisper your worry to Allah tonight"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Yusuf 12:86",
+    "ref_y": 1283.0,
+    "handle_y": 1335.0
+  },
+  "layout_hash": "0a68eb4d96e012802d15bcb2",
+  "created_at": "2026-10-26T20:51:21+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "012086"
+    ],
+    "done": false
+  },
+  "note": "TEST ITEM on branch test-reels-v2 only"
+}

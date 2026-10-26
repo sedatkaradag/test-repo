@@ -9,8 +9,8 @@ jitter_minutes: 5
 # Paylaşım saatleri. Her slot kendi saat diliminde tanımlıdır, yaz/kış saati
 # geçişleri otomatik hesaplanır. `type` o slota hangi türün gireceğini belirler
 # (enqueue.py bunu zorunlu tutar).
-# 28 Ekim 2026'dan itibaren: günde 2 fotoğraf (ayet + hadis) ve 3 Reels (aşağıda).
-# `from` / `until`: slotun kullanıldığı ilk / son yerel gün (geçiş için).
+# Günde 2 fotoğraf (ayet + hadis) ve 3 Reels (aşağıda).
+# İsteğe bağlı `from` / `until`: slotun kullanıldığı ilk / son yerel gün (geçişler için).
 slots:
   # Avrupa sabahı (işe gidiş) — ABD uyurken
   - name: eu-morning
@@ -22,23 +22,12 @@ slots:
     time: "09:00"
     tz: America/New_York
     type: hadith
-  # Eski düzen: 27 Ekim'de kuyruktaki onaylı gönderiler için son kez. Bu saatlerde artık Reels var.
-  - name: eu-evening-us-noon
-    time: "13:00"
-    tz: America/New_York
-    type: quran
-    until: "2026-10-27"
-  - name: us-evening
-    time: "20:30"
-    tz: America/New_York
-    type: hadith
-    until: "2026-10-27"
 
 # true  -> paylaşmaz, sadece kuyruğu işaretler (önizleme ana ajandan istenir)
 # false -> Instagram'a gerçekten paylaşır
 dry_run: false
 
-# Günde 3 Reels (28 Ekim'den itibaren): 2 tilavetli ayet, 1 sessiz hadis. Her Reels kendi
+# Günde 3 Reels: 2 tilavetli ayet, 1 sessiz hadis. Her Reels kendi
 # ayet/hadisini taşır, hiçbir gönderinin kopyası değildir. Şablon v2 (scripts/reels.py):
 # ayet ayet altın, hadis parça parça gümüş. `content`: o slota girecek tür.
 # trial: true -> önce sadece takipçi olmayanlara gösterilir (deneme Reels).
@@ -47,27 +36,37 @@ dry_run: false
 reels:
   enabled: true
   trial: false
-  # Ayet Reels'lerinde o ayetlerin tilaveti ses olarak eklenir (müzik yok). Kâriler sırayla
-  # döner; caption'ın en altına "Recitation: <ad>" yazılır. Ses everyayah.com'dan (ayet ayet)
+  # Ayet Reels'lerinde ve ayet gönderilerinin Story'sinde o ayetlerin tilaveti ses olarak eklenir
+  # (müzik yok); caption'ın en altına "Recitation: <ad>" yazılır. Kâriler ağırlıklı sırayla döner:
+  # `weight` ne kadar yüksekse o kadar sık (son 30 tilavetteki payı ağırlığına göre), aynı kâri art
+  # arda gelmez. Ağırlıklar popülerliğe göre: en çok dinlenen ve sosyal medyada en çok paylaşılan
+  # sesler önde. Analist izlenme süresine göre değiştirebilir. Ses everyayah.com'dan (ayet ayet)
   # GitHub'da indirilir; video orada her ayetin gerçek süresiyle çizilir. Hadis Reels'leri sessizdir.
   recitation:
     enabled: true
     max_seconds: 75
     reciters:
-      - {id: Alafasy_128kbps, name: Mishary Alafasy}
-      - {id: Abdul_Basit_Murattal_192kbps, name: Abdul Basit Abdus-Samad}
-      - {id: Husary_128kbps, name: Mahmoud Khalil Al-Husary}
-      - {id: Minshawy_Murattal_128kbps, name: Mohamed Siddiq Al-Minshawi}
-      - {id: MaherAlMuaiqly128kbps, name: Maher Al-Muaiqly}
+      - {id: Alafasy_128kbps, name: Mishary Alafasy, weight: 4}
+      - {id: Abdul_Basit_Murattal_192kbps, name: Abdul Basit Abdus-Samad, weight: 3}
+      - {id: MaherAlMuaiqly128kbps, name: Maher Al-Muaiqly, weight: 3}
+      - {id: Yasser_Ad-Dussary_128kbps, name: Yasser Al-Dosari, weight: 3}
+      - {id: Abdurrahmaan_As-Sudais_192kbps, name: Abdul Rahman Al-Sudais, weight: 2}
+      - {id: Minshawy_Murattal_128kbps, name: Mohamed Siddiq Al-Minshawi, weight: 1}
+      - {id: Husary_128kbps, name: Mahmoud Khalil Al-Husary, weight: 1}
+      - {id: Ghamadi_40kbps, name: TEST, weight: 0.01}
+      - {id: ahmed_ibn_ali_al_ajamy_128kbps, name: TEST, weight: 0.01}
+      - {id: Saood_ash-Shuraym_128kbps, name: TEST, weight: 0.01}
+      - {id: Nasser_Alqatami_128kbps, name: TEST, weight: 0.01}
+      - {id: Hani_Rifai_192kbps, name: TEST, weight: 0.01}
+      - {id: Fares_Abbad_64kbps, name: TEST, weight: 0.01}
+      - {id: Abdurrahmaan_As-Sudais_64kbps, name: TEST, weight: 0.01}
   slots:
-    # Eski tek Reels slotu: 27 Ekim'deki onaylı Reels için son kez.
-    - {name: reel, time: "11:00", tz: America/New_York, until: "2026-10-27"}
     # Pakistan ve Hindistan akşamı (20:30 Karaçi = 21:00 Hindistan; Avrupa öğleden sonrası)
-    - {name: reel-pk, time: "20:30", tz: Asia/Karachi, content: quran, from: "2026-10-28"}
+    - {name: reel-pk, time: "20:30", tz: Asia/Karachi, content: quran}
     # Avrupa akşamı = ABD öğle arası (ilk Reels'in iyi gittiği saat)
-    - {name: reel-eu, time: "13:00", tz: America/New_York, content: quran, from: "2026-10-28"}
+    - {name: reel-eu, time: "13:00", tz: America/New_York, content: quran}
     # ABD akşam prime-time
-    - {name: reel-us, time: "20:30", tz: America/New_York, content: hadith, from: "2026-10-28"}
+    - {name: reel-us, time: "20:30", tz: America/New_York, content: hadith}
 
 # Haftada 1 carousel: tek temada 5 metin + kapak kartı (Çarşamba 18:00 New York).
 carousel:
