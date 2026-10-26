@@ -56,5 +56,15 @@
     "source": "Günlük ajan, 2026-10-26",
     "status": "open",
     "opened_at": "2026-10-26T05:46:47Z"
+  },
+  {
+    "id": "S-006",
+    "kind": "other",
+    "title": "Haftalık insights iş akışı hiç çalışmamış, history/insights.json yok",
+    "detail": "weekly.yml (pazartesi 03:41 UTC) için GitHub'da 0 çalışma var; 2026-10-26 analisti veri olmadan durdu. Hesap canlı, 31 yayın kayıtlı. Etkisi: tema/saat analizi ve Instagram token yenileme yapılmıyor (token ~60 günde düşer). Öneri: weekly.yml'yi Actions'tan elle çalıştır (workflow_dispatch) ve zamanlanmış tetiklemenin etkin olduğunu kontrol et.",
+    "ref": "weekly.yml",
+    "source": "Analist, 2026-10-26",
+    "status": "open",
+    "opened_at": "2026-10-26T06:26:15Z"
   }
 ]
