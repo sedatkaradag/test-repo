@@ -78,7 +78,9 @@
     "detail": "Instagram yenilemede yeni bir token döndü, ama GitHub'a kaydedecek GH_PAT anahtarı yok (ya da kayıt başarısız oldu). Kayıtlı token kendi süresi dolunca düşer. Çözüm: bu repo için 'Secrets: Read and write' yetkili bir fine-grained GitHub token oluşturup GH_PAT adıyla eklemek.",
     "ref": "IG_ACCESS_TOKEN",
     "source": "Gece token kontrolü",
-    "status": "open",
-    "opened_at": "2026-10-26T18:50:47Z"
+    "status": "closed",
+    "opened_at": "2026-10-26T18:50:47Z",
+    "closed_at": "2026-10-26T19:13:55Z",
+    "resolution": "GH_PAT eklendi (ilk denemede adı GH_PATH, ikincisinde Secrets yetkisi eksikti). Gece işi yenilenen token'ı artık GitHub'a kaydediyor; kaydedilen token'la ikinci deneme de başarılı (token yenilendi, istatistikler çekildi). Her gece süre yeniden 60 güne çıkıyor. GH_PAT'in kendi süresi 1 yıl; dolmadan yenilenmeli."
   }
 ]
