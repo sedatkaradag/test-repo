@@ -11,7 +11,7 @@ sabit temalı bir görselle hazırlayıp belirlenen saatte paylaşan sistem.
 | Analist | Claude zamanlanmış görevi (pazartesi) | `history/insights.json` verisini inceler, `notes/strategy.md` dosyasını günceller |
 | Yayıncı | GitHub Actions, 15 dakikada bir (`publish.yml`) | Zamanı gelen gönderiyi, slot saatinin ±5 dakikası içinde rastgele seçilmiş anında Instagram'a paylaşır |
 | Ana ajan | Repo bağlı herhangi bir Claude sohbeti | Sohbetle yönetim: önizleme, değiştirme, saatler, canlıya geçiş, durdurma (`AGENT.md` sonu) |
-| Haftalık iş | GitHub Actions, pazartesi (`weekly.yml`) | Instagram token'ını yeniler, gönderi istatistiklerini çeker |
+| Gece işi | GitHub Actions, her gece (`nightly.yml`) | Instagram token'ını yeniler ve sonucu kaydeder, gönderi istatistiklerini çeker |
 
 Ayet ve hadis metinleri **yapay zekâ tarafından yazılmaz**: hepsi `data/` içindeki
 veritabanından gelir ve görsele kodla basılır.

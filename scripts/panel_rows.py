@@ -31,6 +31,9 @@ def main(out):
         (out / "queue" / f"{p.stem}.json").write_text(json.dumps(row, ensure_ascii=False), encoding="utf-8")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     state = {k: cfg.get(k) for k in ("dry_run", "paused", "slots", "jitter_minutes")}
+    token = ROOT / "history" / "token_status.json"
+    if token.exists():
+        state["token"] = json.loads(token.read_text(encoding="utf-8"))
     # Stamped from the clock, never typed by hand.
     state["last_content_run"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     (out / "meta" / "state.json").write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")

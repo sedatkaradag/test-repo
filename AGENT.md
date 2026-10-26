@@ -352,7 +352,8 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
 
 ## Haftalık analist akışı (pazartesi)
 
-1. Kurulum adımları + `git pull` (insights pazartesi 03:41 UTC'de güncellenir).
+1. Kurulum adımları + `git pull` (`history/insights.json` her gece GitHub `nightly` işiyle güncellenir;
+   `fetched_at` 48 saatten eskiyse açık sorun kaydet ve elindeki veriyle devam et).
 2. `history/insights.json` oku. Python ile tema, tür (quran/hadith) ve slot
    bazında ortalama reach / saved / shares hesapla.
 3. `notes/strategy.md` dosyasını güncelle: en iyi 3 tema, en zayıf 3 tema,

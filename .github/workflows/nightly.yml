@@ -1,0 +1,46 @@
+name: nightly
+
+# Every night: refresh the Instagram token (result in history/token_status.json, problems in
+# notes/issues.json) and pull post statistics into history/insights.json for the analyst.
+# GitHub may start scheduled runs hours late; running nightly keeps the data at most a day old.
+on:
+  schedule:
+    - cron: "41 22 * * *"   # 22:41 UTC (01:41 Istanbul)
+  workflow_dispatch:
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  token-and-insights:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pyyaml
+      - name: Refresh Instagram token and record the result
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: python scripts/token_check.py
+      - name: Pull insights
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python scripts/insights.py
+      - name: Commit
+        run: |
+          git config user.name "halal-algorithm-bot"
+          git config user.email "halal-algorithm-bot@users.noreply.github.com"
+          git add history notes
+          git diff --cached --quiet && exit 0
+          git commit -m "nightly: token status and insights"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
