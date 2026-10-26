@@ -548,6 +548,8 @@ def frames(L, bounds, end):
     st, dm, ct = _Layer(static), _Layer(dim), _Layer(cta)
     lt, ml = [_Layer(x) for x in lit], [_Layer(x) for x in meals]
     last = bounds[-1]
+    # A one-verse Story ends on that verse's own meaning, already on screen: nothing changes at the end.
+    same_end = bool(L.get("story")) and len(lt) == 1 and " ".join(L["verses"][0]["meal"]) == L["cta"]
     n = int(round(end * FPS))
     for i in range(n):
         t = i / FPS
@@ -564,7 +566,9 @@ def frames(L, bounds, end):
             lt[k].over(frame, a)
             if ml and not done:
                 ml[k].over(frame, a)
-        if done:
+            elif ml and same_end:
+                ml[k].over(frame, 1.0)   # one-verse Story: its meaning stays on screen to the end
+        if done and not same_end:
             ct.over(frame, min(1.0, (t - last) / 0.35))
         yield t, frame.clip(0, 255).astype(np.uint8)
 

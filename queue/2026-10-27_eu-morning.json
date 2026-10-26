@@ -14,25 +14,18 @@
     "ayahs": [
       "003008"
     ],
-    "done": true,
-    "failed": false,
-    "tried": [],
-    "seconds": 25.1,
-    "video_seconds": 27.1,
-    "verse_seconds": [
-      25.1
-    ],
-    "timing": "verse by verse",
-    "added_at": "2026-10-26T21:01:01+00:00"
+    "done": false,
+    "failed": false
   },
   "caption": "A morning dua for a steady heart after guidance.\n\nThis dua asks Allah for two things: a heart that stays firm on guidance, and His mercy. Make it part of your morning before the day pulls you in every direction.\n\nSurah Aal-i-Imraan 3:8\n\nSave it and say it once before you leave home today.\n\n#quran #morningdua #steadfastheart #quranicdua",
   "alt_text": "“Our Lord, do not let our hearts deviate after You have guided us, and grant us Your mercy; for You are the Munificent Bestower (Surah Aal-i-Imraan 3:8)",
   "theme": "du'a for a steady heart",
-  "review": "approve r2 (new colours): Arabic checked mark by mark on card and Story, caption ok",
+  "review": "re-rendered; waiting for a fresh verifier",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "hold",
   "created_at": "2026-10-26T05:43:02+00:00",
+  "rerendered_at": "2026-10-26T23:14:06+00:00",
   "story_layout": {
     "template": "v2",
     "kind": "quran",
@@ -74,5 +67,5 @@
     "handle_y": 1305.0
   },
   "story_layout_hash": "0cedad017139d4d56fe4539c",
-  "rerendered_at": "2026-10-26T20:55:56+00:00"
+  "held_at": "2026-10-26T23:14:06Z"
 }
