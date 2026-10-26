@@ -54,8 +54,10 @@
     "detail": "Denetçi onayladı ama kartta açılış “ ile kapanış ’ uyumsuz göründü (kaynak metin). Kural 7 gereği metin düzeltilmedi; kuyruk dosyaları silindi, slot muslim:6690 ile dolduruldu. Benzer şekilde quran:112:1-4 (kapanışsız tırnak) ve quran:89:27-30 (eksik noktalama) denetçi tarafından reddedildi; bu kayıtların kaynak İngilizcesi düzeltilebilirse kullanılabilir.",
     "ref": "2026-10-27_us-morning / hadith:ibnmajah:3681",
     "source": "Günlük ajan, 2026-10-26",
-    "status": "open",
-    "opened_at": "2026-10-26T05:46:47Z"
+    "status": "closed",
+    "opened_at": "2026-10-26T05:46:47Z",
+    "closed_at": "2026-10-26T18:52:26Z",
+    "resolution": "Üç ayrı neden vardı. (1) Fecr 89:27-30 bizim hatamızdı: köşeli parantezle biten ayetten sonra noktalama eklenmiyordu; düzeltildi. (2) İhlâs 112:1-4: kaynak mealde açılış tırnağı yok; sahibinin onayıyla kartta tek kalan kapanış tırnağı gösterilmiyor (24 ayet, kelime değişmiyor). Alıntının ortasından başlayan aralıklar artık kod kontrolünde reddediliyor. Denetçiye bu bilinçli noktalama farkları anlatıldı. (3) İbn Mâce 3681 kaynak hatası, eleme doğruydu. Hadislerde tırnak uyumu için otomatik kural denendi: 2.001 kayıt işaretlendi ama yaklaşık yarısı yanlış alarm (kaynak ʿayn işaretini tırnakla aynı karakterle yazıyor); kural açılmadı, bu hadisleri denetçi yakalamaya devam ediyor."
   },
   {
     "id": "S-006",
@@ -64,8 +66,10 @@
     "detail": "weekly.yml (pazartesi 03:41 UTC) için GitHub'da 0 çalışma var; 2026-10-26 analisti veri olmadan durdu. Hesap canlı, 31 yayın kayıtlı. Etkisi: tema/saat analizi ve Instagram token yenileme yapılmıyor (token ~60 günde düşer). Öneri: weekly.yml'yi Actions'tan elle çalıştır (workflow_dispatch) ve zamanlanmış tetiklemenin etkin olduğunu kontrol et.",
     "ref": "weekly.yml",
     "source": "Analist, 2026-10-26",
-    "status": "open",
-    "opened_at": "2026-10-26T06:26:15Z"
+    "status": "closed",
+    "opened_at": "2026-10-26T06:26:15Z",
+    "closed_at": "2026-10-26T18:52:26Z",
+    "resolution": "İş çalışmıştı ama GitHub onu 5,5 saat geç başlattı; analist veriden önce çalıştı. Haftalık iş yerine her gece çalışan bir iş kuruldu (veri en fazla bir günlük olur), bir kez elle çalıştırıldı. Analist elle yeniden başlatıldı. Token yenileme sonucu artık kaydediliyor; token'ın kaydedilememesi ayrı bir sorun olarak açıldı (S-007)."
   },
   {
     "id": "S-007",
