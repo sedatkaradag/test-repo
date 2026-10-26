@@ -14,10 +14,10 @@
   "caption": "Where did today's hours actually go?\n\nBy time, mankind is in loss, except those who believe, do righteous deeds, and exhort one another to truth and to patience. Listen once, then look back at your day.\n\nSurah Al-Asr 103:1-3\n\nSend this to the friend who keeps you on track\n\n#surahasr #quranrecitation #timeisprecious #reminder\n\nRecitation: Abdul Rahman Al-Sudais",
   "alt_text": "By the time; man is in utter loss; except those who believe and do righteous deeds, and exhort one another to the truth and exhort one another to patience (Surah Al-Asr 103:1-3)",
   "theme": "time / Surah Al-Asr",
-  "review": "re-rendered; waiting for a fresh verifier",
+  "review": "approve r3: Arabic checked mark by mark, whole meaning stays at the end with the closing line under it, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "hold",
+  "status": "audio_pending",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -99,6 +99,5 @@
     "done": false,
     "failed": false
   },
-  "held_at": "2026-10-26T23:37:34Z",
   "rerendered_at": "2026-10-26T23:37:34+00:00"
 }
