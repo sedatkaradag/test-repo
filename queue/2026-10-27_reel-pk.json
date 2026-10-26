@@ -17,7 +17,7 @@
   "review": "approve r3: Arabic checked mark by mark, whole meaning stays at the end with the closing line under it, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -96,8 +96,18 @@
       "103002",
       "103003"
     ],
-    "done": false,
-    "failed": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 21.8,
+    "video_seconds": 25.0,
+    "verse_seconds": [
+      1.18,
+      3.74,
+      16.88
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-26T23:40:47+00:00"
   },
   "rerendered_at": "2026-10-26T23:37:34+00:00"
 }
