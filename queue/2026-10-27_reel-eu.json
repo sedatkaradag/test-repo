@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok, Arabic checked mark by mark on card and Reel frame, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -69,6 +69,15 @@
     "ayahs": [
       "064011"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 18.0,
+    "video_seconds": 20.0,
+    "verse_seconds": [
+      18.02
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-26T21:01:52+00:00"
   }
 }
