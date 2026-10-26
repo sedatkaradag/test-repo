@@ -257,8 +257,9 @@ def cmd_add(a):
     story = QUEUE / f"{stem}_story.jpg"
     make_story(img, story)
     story_audio = recitation_plan(cfg, a.entry) if cfg.get("stories", True) else None
+    story_layout = None
     if story_audio:
-        render_reel(a.entry, QUEUE / f"{stem}_story.mp4", label="TODAY'S REMINDER")
+        story_layout = story_video(a.entry, QUEUE / f"{stem}_story.mp4", preview=not getattr(a, "check", False))
 
     item = {
         "entry_id": a.entry,
@@ -270,6 +271,7 @@ def cmd_add(a):
         "image": f"queue/{stem}.jpg",
         "story_image": f"queue/{stem}_story.jpg",
         **({"story_video": f"queue/{stem}_story.mp4", "story_audio": story_audio} if story_audio else {}),
+        **({"story_layout": story_layout[0], "story_layout_hash": story_layout[1]} if story_layout else {}),
         "caption": caption,
         "alt_text": f"{entry['english'][:900]} ({entry['reference']})",
         "theme": a.theme,
@@ -285,11 +287,44 @@ def cmd_add(a):
         print(f"FLAG {f}")
 
 
+def story_video(entry_id, out, preview=True):
+    """Recitation Story of a verse post. Template v2 (verse by verse, drawn again on GitHub with the
+    real recitation timing) when the passage fits the frame and every drawn-text check passes;
+    otherwise the earlier Story (the post card revealed top to bottom). Returns (layout, hash) or None."""
+    import reels as RL
+    try:
+        layout = RL.plan_story(entry_id)
+        if RL.issues(layout):
+            raise RL.TooLong("drawn-text check failed")
+    except RL.TooLong:
+        render_reel(entry_id, out, label="TODAY'S REMINDER")
+        return None
+    if preview:
+        RL.render_video(layout, out)
+    return layout, RL.layout_hash(layout)
+
+
 def reel_cover(video, out):
     """9:16 cover for the profile grid and Reels tab: the last frame, the finished card."""
     import subprocess
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-sseof", "-0.2", "-i", str(video),
                     "-frames:v", "1", "-q:v", "2", str(out)], check=True)
+
+
+def pick_reciter(reciters, history, window=30):
+    """Weighted rotation: each reciter's share of the last `window` recitations follows its
+    `weight` in config.yaml (popular voices more often); never the same reciter twice in a row."""
+    recent = history[-window:]
+    last = recent[-1] if recent else None
+    def score(k):
+        r = reciters[k]
+        w = float(r.get("weight", 1))
+        return ((recent.count(r["id"]) + 1) / w, -w, k)
+    order = sorted(range(len(reciters)), key=score)
+    for k in order:
+        if reciters[k]["id"] != last or len(reciters) == 1:
+            return reciters[k]
+    return reciters[order[0]]
 
 
 def recitation_plan(cfg, entry_id):
@@ -306,9 +341,7 @@ def recitation_plan(cfg, entry_id):
         for key in ("audio", "story_audio"):
             if i.get(key):
                 planned.append((i.get("publish_at", ""), i[key].get("assigned") or i[key]["reciter"]))
-    ids = [r["id"] for r in reciters]
-    last = max(planned)[1] if planned else None
-    nxt = reciters[(ids.index(last) + 1) % len(reciters)] if last in ids else reciters[0]
+    nxt = pick_reciter(reciters, [r for _, r in sorted(planned)])
     m = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", entry_id)
     sura, first, end = int(m.group(1)), int(m.group(2)), int(m.group(3) or m.group(2))
     return {"reciter": nxt["id"], "reciter_name": nxt["name"],
@@ -570,12 +603,42 @@ def cmd_recaption(a):
         print(f"UNCHANGED {a.slot}")
         return
     # The approved text changed, so the item waits for a fresh verifier (approve puts it back).
+    if item.get("type") == "reel" and item.get("template") == "v2":
+        if re.search(r"(?im)^recitation:", caption):
+            sys.exit("REJECT caption: leave out the Recitation line; it is added automatically")
+        rec = re.search(r"(?m)^Recitation: .*$", item["caption"])
+        item["caption"] = caption + (f"\n\n{rec.group(0)}" if rec else "")
+        item["flags"] = redraw_reel_v2(item, a.slot)   # the video shows the hook and closing line
+        caption = item["caption"]
     item["caption"] = caption
     item["status"] = "hold"
     item["hold_reason"] = "caption changed after approval; needs a fresh verifier"
     item["held_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"RECAPTIONED {a.slot} -> hold until a fresh verifier approves (enqueue.py approve)")
+
+
+def redraw_reel_v2(item, stem):
+    """Plan and draw a template v2 Reel again from its current caption; the recitation is mixed
+    again on GitHub after a fresh approval. Returns the integrity flags."""
+    import reels as RL
+    flags = require_integrity([item["entry_id"]])
+    try:
+        layout = RL.plan(item["entry_id"], item["caption"])
+    except RL.TooLong as e:
+        sys.exit(f"REJECT: {e}")
+    bad = RL.issues(layout)
+    if bad:
+        sys.exit("REJECT reel: " + "; ".join(bad))
+    RL.still(layout, QUEUE / f"{stem}.jpg")
+    (ROOT / item["cover"]).write_bytes((QUEUE / f"{stem}.jpg").read_bytes())
+    RL.render_video(layout, QUEUE / f"{stem}.mp4")
+    item.update(reel_layout=layout, layout_hash=RL.layout_hash(layout))
+    if item.get("audio"):
+        for k in ("seconds", "video_seconds", "verse_seconds", "timing", "added_at", "tried", "silent"):
+            item["audio"].pop(k, None)
+        item["audio"].update(done=False, failed=False)
+    return flags
 
 
 def cmd_rerender(a):
@@ -592,22 +655,7 @@ def cmd_rerender(a):
         for n, i in enumerate(ids, start=1):   # card 0 is the cover (no verse text)
             render(i, QUEUE / f"{stem}_{n}.jpg")
     elif item["type"] == "reel" and item.get("template") == "v2":
-        import reels as RL
-        flags = require_integrity([item["entry_id"]])
-        try:
-            layout = RL.plan(item["entry_id"], item["caption"])
-        except RL.TooLong as e:
-            sys.exit(f"REJECT: {e}")
-        bad = RL.issues(layout)
-        if bad:
-            sys.exit("REJECT reel: " + "; ".join(bad))
-        RL.still(layout, QUEUE / f"{stem}.jpg")
-        (ROOT / item["cover"]).write_bytes((QUEUE / f"{stem}.jpg").read_bytes())
-        RL.render_video(layout, QUEUE / f"{stem}.mp4")
-        item.update(reel_layout=layout, layout_hash=RL.layout_hash(layout))
-        if item.get("audio"):   # the recitation is mixed again on GitHub after approval
-            item["audio"].update(done=False, failed=False)
-            item["audio"].pop("silent", None)
+        flags = redraw_reel_v2(item, stem)
     elif item["type"] == "reel":
         flags = require_integrity([item["entry_id"]])
         if item.get("image") == f"queue/{stem}.jpg":   # Reels with their own content keep their own card
@@ -620,7 +668,13 @@ def cmd_rerender(a):
         render(item["entry_id"], QUEUE / f"{stem}.jpg")
         make_story(QUEUE / f"{stem}.jpg", QUEUE / f"{stem}_story.jpg")
         if item.get("story_video"):
-            render_reel(item["entry_id"], ROOT / item["story_video"], label="TODAY'S REMINDER")
+            sl = story_video(item["entry_id"], ROOT / item["story_video"])
+            item.pop("story_layout", None)
+            item.pop("story_layout_hash", None)
+            if sl:
+                item["story_layout"], item["story_layout_hash"] = sl
+            for k in ("seconds", "video_seconds", "verse_seconds", "timing", "added_at", "tried"):
+                item["story_audio"].pop(k, None)
             item["story_audio"].update(done=False, failed=False)
     item.update(status="hold", flags=flags, integrity="passed",
                 held_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),

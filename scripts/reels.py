@@ -218,9 +218,16 @@ def hadith_parts(entry_id):
     lead = smart_quotes(narrator) + ":" if narrator else None
     if not narrator:
         # "It was narrated from Abu Hurairah that the Messenger of Allah said: “...”"
-        mm = re.match(r"^(.{10,170}?\b(?:said|saying)):\s*(?=[\"“A-Z])(.+)$", e["english"], re.S)
+        mm = re.match(r"^(.{10,170}?\b(?:said|saying)(?: to (?:me|us|him))?):\s*(?=[\"“A-Z])(.+)$", e["english"], re.S)
         if mm:
-            lead, body = smart_quotes(mm.group(1)) + ":", mm.group(2)
+            lead = smart_quotes(re.sub(r"([:,;])(?=[\"“‘'A-Za-z(])", r"\1 ", mm.group(1))) + ":"
+            body = mm.group(2)
+    # "Allah's Messenger (ﷺ) said, “..." : the words before the quotation join the narration line,
+    # so only the Prophet's words light up.
+    mm = re.match(r"^(.{5,90}?\b(?:said|saying)),?\s*(?=[\"“])(.+)$", body, re.S)
+    if mm:
+        lead = (lead + " " if lead else "") + smart_quotes(mm.group(1)) + ","
+        body = mm.group(2)
     body = display_text(body)
     return lead, split_phrases(body), body
 
@@ -267,19 +274,31 @@ def plan(entry_id, caption):
     if not cta or len(cta) > 90 or "\n" in cta:
         raise TooLong("the caption's closing line is shown at the end of the Reel: one line, at most 90 characters")
     e = get(entry_id)
+    ref_no = e["reference"].split(" ")[-1]
+    if ref_no in cta or "#" in cta or cta == hook:
+        raise TooLong("the caption needs its own closing line after the reference (it is shown at the end of the Reel)")
     return plan_verse(entry_id, hook, cta) if e["type"] == "quran" else plan_hadith(entry_id, hook, cta)
 
 
-def plan_verse(entry_id, hook, cta):
+def plan_story(entry_id):
+    """Recitation Story of a verse feed post: the same verse-by-verse frame, without a hook or a
+    closing line (the post itself carries the caption)."""
+    return plan_verse(entry_id, None, None, story=True)
+
+
+def plan_verse(entry_id, hook, cta, story=False):
     e = get(entry_id)
     m = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", entry_id)
     s, a, b = int(m.group(1)), int(m.group(2)), int(m.group(3) or m.group(2))
     arabic = [get(f"quran:{s}:{v}")["arabic_display"] for v in range(a, b + 1)]
     meanings, _ = verse_meanings(entry_id)
-    h_lines, h_size = hook_layout(hook)
-    hook_bottom = HOOK_Y + len(h_lines) * en_lh(h_size)
+    if hook:
+        h_lines, h_size = hook_layout(hook)
+        hook_bottom = HOOK_Y + len(h_lines) * en_lh(h_size)
+    else:
+        h_lines, h_size, hook_bottom = [], 0, HOOK_Y + 20
     for meal_size in (46, 42, 38):
-        cta_lines = en_lines(cta, meal_size + 2, MAX_W_EN)
+        cta_lines = en_lines(cta, meal_size + 2, MAX_W_EN) if cta else []
         for size in range(80, 44, -2):
             blocks = [ar_lines(t, size) for t in arabic]
             if any(len(bl) > 3 for bl in blocks):
@@ -287,6 +306,9 @@ def plan_verse(entry_id, hook, cta):
             n = sum(len(bl) for bl in blocks)
             meal = [en_lines(t, meal_size, MAX_W_EN) for t in meanings]
             meal_h = max([len(x) * en_lh(meal_size) for x in meal] + [len(cta_lines) * en_lh(meal_size + 2)])
+            if story and len(meal) > 1:
+                # A Story ends on the whole meaning (it has no closing line to show).
+                meal_h = max(meal_h, len(en_lines(" ".join(meanings), meal_size, MAX_W_EN)) * en_lh(meal_size))
             block = n * ar_lh(size) + 30 + meal_h + 30 + 110
             room = BOTTOM_LIMIT - (hook_bottom + 50)
             if block <= room:
@@ -298,12 +320,15 @@ def plan_verse(entry_id, hook, cta):
                     yy += len(bl) * ar_lh(size)
                 meal_y = yy + 30
                 ref_y = meal_y + meal_h + 30
-                return {"template": TEMPLATE, "kind": "quran", "entry_id": entry_id,
-                        "label": "THE NOBLE QUR'AN", "hook": hook, "hook_lines": h_lines, "hook_size": h_size,
+                if story:   # closing frame: every verse lit with its whole meaning
+                    cta, cta_lines = " ".join(meanings), en_lines(" ".join(meanings), meal_size, MAX_W_EN)
+                return {"template": TEMPLATE, "kind": "quran", "entry_id": entry_id, "story": story,
+                        "label": "THE NOBLE QUR'AN", "hook": hook or "", "hook_lines": h_lines, "hook_size": h_size,
                         "arabic_size": size, "verses": verses, "meal_size": meal_size, "meal_y": meal_y,
-                        "cta": cta, "cta_lines": cta_lines, "cta_size": meal_size + 2,
+                        "cta": cta, "cta_lines": cta_lines, "cta_size": meal_size if story else meal_size + 2,
+                        "cta_color": "meal" if story else "ivory",
                         "ref": e["reference"], "ref_y": ref_y, "handle_y": ref_y + 52}
-    raise TooLong("verses too long for one Reel frame; choose a shorter passage")
+    raise TooLong("verses too long for one frame; choose a shorter passage")
 
 
 def plan_hadith(entry_id, hook, cta):
@@ -348,7 +373,8 @@ def layers(L, boxes=None):
     lit, meals = [], []
     if L["kind"] == "quran":
         draw_label(static, L["label"], TOP_LABEL, GOLD)
-        draw_en(static, L["hook_lines"], L["hook_size"], HOOK_Y, IVORY)
+        if L["hook_lines"]:
+            draw_en(static, L["hook_lines"], L["hook_size"], HOOK_Y, IVORY)
         for v in L["verses"]:
             draw_ar(dim, v["lines"], L["arabic_size"], v["y"], VERSE_DIM, boxes)
             b = layer()
@@ -357,7 +383,7 @@ def layers(L, boxes=None):
             m = layer()
             draw_en(m, v["meal"], L["meal_size"], L["meal_y"], MEAL)
             meals.append(m)
-        draw_en(cta, L["cta_lines"], L["cta_size"], L["meal_y"], IVORY)
+        draw_en(cta, L["cta_lines"], L["cta_size"], L["meal_y"], MEAL if L.get("cta_color") == "meal" else IVORY)
         draw_center(static, L["ref"], L["ref_y"], 36, GOLD)
     else:
         draw_label(static, L["label"], TOP_LABEL, HADITH_ON)
@@ -404,6 +430,8 @@ def issues(L):
     check_en(L["cta_lines"], L["cta_size"], MAX_W_EN, "closing line")
     if " ".join(L["hook_lines"]) != L["hook"] or " ".join(L["cta_lines"]) != L["cta"]:
         out.append("hook or closing line drawn differently from the caption")
+    if L.get("story") and _alnum(L["cta"]) != _alnum(e["english"]):
+        out.append("the Story's closing meaning differs from the source text")
     if L["kind"] == "quran":
         drawn = [w for v in L["verses"] for line in v["lines"] for w in line.split(" ") if w]
         if " ".join(drawn) != " ".join(R._arabic_words(e["arabic_display"])):
@@ -586,13 +614,14 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("entry")
     p.add_argument("out_dir")
-    p.add_argument("--caption-file", required=True)
+    p.add_argument("--caption-file", help="caption (Reels); not used with --story")
+    p.add_argument("--story", action="store_true", help="the recitation Story of a verse post")
     p.add_argument("--no-video", action="store_true", help="only the still (fast)")
     a = p.parse_args()
     out = Path(a.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     try:
-        L = plan(a.entry, Path(a.caption_file).read_text(encoding="utf-8"))
+        L = plan_story(a.entry) if a.story else plan(a.entry, Path(a.caption_file).read_text(encoding="utf-8"))
     except TooLong as e:
         print(f"too_long: {e}")
         sys.exit(3)

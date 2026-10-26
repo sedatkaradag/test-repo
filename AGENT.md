@@ -99,7 +99,8 @@ cd scripts
    - **Uzun tire (— veya –) kullanma**; yapay zekâ yazısı gibi duruyor. Virgül, nokta ya da yeni
      satır kullan (kod reddeder). Ayet ve hadis metninin kendisi kaynaktaki gibi kalır.
    - Kuyruktaki bir caption'ı değiştirmek için: `python3 enqueue.py recaption --slot <slot> --caption-file <dosya>`.
-     Komut önce kod kontrollerini çalıştırır, metin değiştiyse öğeyi `hold`'a alır; **yeni bir
+     Komut önce kod kontrollerini çalıştırır, metin değiştiyse öğeyi `hold`'a alır (Reels'te kanca
+     ve kapanış videoda olduğu için videoyu da yeniden çizer); **yeni bir
      denetçi** onaylayınca `enqueue.py approve` ile yayına döner.
    - **Kuyruktaki bir gönderide sorun görülürse** (denetçi ya da ana ajan): hemen
      `python3 enqueue.py hold --slot <slot> --reason "..."` ile beklemeye al (yayıncı
@@ -144,7 +145,11 @@ cd scripts
    >    (word by word, mark by mark, zoom in). The English under the verses must be the source
    >    English cut at the verse ends; a hadith must be the source text with its narration line.
    >    The line at the top must be the caption's first line and the line at the bottom its
-   >    closing line, word for word. Nothing may be cut off, overlap or sit in the bottom fifth.
+   >    closing line, word for word. Nothing may be cut off or overlap, and no text may reach below
+   >    y=1585 of 1920 (Instagram covers the area under it).
+   > 2c. Only for a verse post (not a Reel): run `python3 reels.py <ID> /tmp/review_story_<n> --story --no-video`.
+   >    If it prints `too_long`, skip this step (the Story then reuses the card). Otherwise OPEN
+   >    `reel_still.jpg` (the post's recitation Story) and check its Arabic and English the same way.
    > 3. Read `<caption dosyası>` and check spelling and grammar sentence by sentence.
    > Reject if: anything in steps 1-3 is wrong; the text could be misunderstood out of
    > context (war, punishments, slavery, event-specific rulings, easily distorted gender
@@ -194,7 +199,10 @@ cd scripts
      caption'da vardır.
    - **Kanca ve kapanış videoya basılır:** kanca = caption'ın ilk satırı, kapanış = caption'ın
      kapanış cümlesi, harfi harfine. Bu yüzden kanca en fazla 60 karakter (videoda 1-2 satır),
-     kapanış cümlesi tek satır ve en fazla 90 karakter. Kod kontrol eder.
+     kapanış cümlesi tek satır ve en fazla 90 karakter; ikisinde de emoji olmaz (font çizemez).
+     Kapanış cümlesi referanstan sonra ayrı bir paragraftır. Kod bunları denetçiden önce (`--check`)
+     kontrol eder; bir şey uymazsa metin kesilmez ya da kısaltılmaz, reddedilir ve sen yeniden
+     yazarsın. Onaydan sonra caption değişmediği için aynı kontrol tekrar geçer.
    - **Caption:** kanca, 1-2 cümle, referans, kapanış, 3-5 etiket ("Recitation" satırını yazma).
    - **Kanca çeşitliliği:** Tek bir kalıba bağlı kalma; her Reels'te farklı bir tür dene ve aynı
      türü üst üste kullanma. Kod, son 10 Reels kancasıyla aynı iki kelimeyle başlayan kancayı
@@ -220,7 +228,8 @@ cd scripts
    - **Kuyruk:** `python3 enqueue.py add-reel --entry <ID> --slot <slot anahtarı> --caption-file <dosya> --theme "<tema>" --review "<özet>"`
      Oluşan `queue/<slot>.jpg` (bitmiş kare; panel kartı ve kapak) dosyasını Read ile aç.
    - **Ayet Reels'inde tilavet:** Kâriyi `enqueue.py` sırayla seçer (`config.yaml` →
-     `reels.recitation.reciters`) ve caption'ın en altına "Recitation: <ad>" satırını kendisi ekler.
+     `reels.recitation.reciters`, ağırlıklı: popüler sesler daha sık) ve caption'ın en altına
+     "Recitation: <ad>" satırını kendisi ekler.
      Öğe `audio_pending` olarak girer. GitHub `reel-audio` işi push'tan sonra ayetleri
      everyayah.com'dan tek tek indirir ve videoyu onaylı düzenden yeniden çizer; her ayet tam kendi
      tilaveti süresince parlar. Çizilen düzenin denetçinin gördüğüyle birebir aynı olduğunu
@@ -229,6 +238,10 @@ cd scripts
      "Recitation" satırı silinir. Sesi eklenmemiş ayet Reels'i yayınlanmaz. Hadis Reels'leri sessizdir.
 7d. **Ayet gönderilerinin Story'si:** `enqueue.py add` ayet gönderileri için Story'yi kendiliğinden
    tilavetli 9:16 video olarak hazırlar (`story_video`, `story_audio`; kâri sırası Reels'le ortak).
+   Story, Reels'le aynı şablondadır (v2, kancasız): ayetler altın, okunan ayet parlar, sonda bütün
+   meal görünür; GitHub her ayeti kendi tilaveti süresince yakar. Ayetler bu kareye sığmazsa Story
+   eski biçimde (kartın yukarıdan aşağı belirmesi) hazırlanır. Hadis gönderilerinin Story'si kartın
+   görselidir (gümüş).
    GitHub sesi ekler; eklenemezse ya da video reddedilirse yayıncı görsel Story'yi atar, gönderi
    hiçbir durumda etkilenmez. Story'siz çıkmış bir ayet gönderisine sonradan tilavetli Story:
    `python3 enqueue.py add-story --source <gönderi slotu> --at <UTC zaman>`.
