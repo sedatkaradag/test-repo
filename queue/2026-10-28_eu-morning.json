@@ -1,0 +1,68 @@
+{
+  "entry_id": "quran:67:15",
+  "type": "quran",
+  "reference": "Surah Al-Mulk 67:15",
+  "slot": "2026-10-28_eu-morning",
+  "publish_at": "2026-10-28T07:12:11Z",
+  "local_slot": "2026-10-28 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-28_eu-morning.jpg",
+  "story_image": "queue/2026-10-28_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-28_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "067015"
+    ],
+    "done": false
+  },
+  "story_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:67:15",
+    "story": true,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "",
+    "hook_lines": [],
+    "hook_size": 0,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "067015",
+        "lines": [
+          "هُوَ ٱلَّذِي جَعَلَ لَكُمُ ٱلۡأَرۡضَ ذَلُولٗا",
+          "فَٱمۡشُواْ فِي مَنَاكِبِهَا وَكُلُواْ مِن رِّزۡقِهِۦۖ",
+          "وَإِلَيۡهِ ٱلنُّشُورُ ١٥"
+        ],
+        "y": 536.0,
+        "meal": [
+          "It is He Who made the earth smooth for you, so",
+          "travel through its regions and eat from His",
+          "provisions. And to Him is the resurrection."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1034.0,
+    "cta": "It is He Who made the earth smooth for you, so travel through its regions and eat from His provisions. And to Him is the resurrection.",
+    "cta_lines": [
+      "It is He Who made the earth smooth for you, so",
+      "travel through its regions and eat from His",
+      "provisions. And to Him is the resurrection."
+    ],
+    "cta_size": 46,
+    "cta_color": "meal",
+    "ref": "Surah Al-Mulk 67:15",
+    "ref_y": 1253.0,
+    "handle_y": 1305.0
+  },
+  "story_layout_hash": "97743b44194eac74be3b53e3",
+  "caption": "Rizq and work: Allah made the earth easy for you.\n\nAllah tells us He made the earth smooth for us, so we can travel through its regions and eat from His provisions, and that to Him we will all return. Start this Wednesday's work knowing where your provision really comes from.\n\nSurah Al-Mulk 67:15\n\nBefore you open your laptop, ask Allah to bless what you earn.\n\n#rizq #halalincome #surahmulk #muslimatwork",
+  "alt_text": "It is He Who made the earth smooth for you, so travel through its regions and eat from His provisions. And to Him is the resurrection (Surah Al-Mulk 67:15)",
+  "theme": "work and provision (rizq)",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word and mark by mark, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-27T05:46:18+00:00"
+}

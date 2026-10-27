@@ -1,0 +1,108 @@
+{
+  "entry_id": "quran:112:1-4",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Ikhlaas 112:1-4",
+  "slot": "2026-10-28_reel-eu",
+  "publish_at": "2026-10-28T16:59:45Z",
+  "local_slot": "2026-10-28 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-28_reel-eu.jpg",
+  "video": "queue/2026-10-28_reel-eu.mp4",
+  "cover": "queue/2026-10-28_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Read these four verses slowly\n\nSurah Al-Ikhlaas describes Allah in a few short lines: He is One, the Eternal Refuge, He neither begets nor is begotten, and nothing is comparable to Him.\n\nSurah Al-Ikhlaas 112:1-4\n\nWhich of these four lines will you reflect on today?\n\n#surahikhlas #tawheed #quranreels #namesofallah\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is He begotten; and there is none comparable to Him.” (Surah Al-Ikhlaas 112:1-4)",
+  "theme": "Allah's oneness (Surah Al-Ikhlaas)",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word and mark by mark, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:112:1-4",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Read these four verses slowly",
+    "hook_lines": [
+      "Read these four verses slowly"
+    ],
+    "hook_size": 82,
+    "arabic_size": 74,
+    "verses": [
+      {
+        "ayah": "112001",
+        "lines": [
+          "قُلۡ هُوَ ٱللَّهُ أَحَدٌ ١"
+        ],
+        "y": 486.2,
+        "meal": [
+          "Say: He is Allah, the One."
+        ]
+      },
+      {
+        "ayah": "112002",
+        "lines": [
+          "ٱللَّهُ ٱلصَّمَدُ ٢"
+        ],
+        "y": 630.2,
+        "meal": [
+          "Allah, the Eternal Refuge."
+        ]
+      },
+      {
+        "ayah": "112003",
+        "lines": [
+          "لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ٣"
+        ],
+        "y": 774.2,
+        "meal": [
+          "He neither begets nor is He begotten;"
+        ]
+      },
+      {
+        "ayah": "112004",
+        "lines": [
+          "وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ٤"
+        ],
+        "y": 918.2,
+        "meal": [
+          "and there is none comparable to Him."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1092.2,
+    "cta": "Which of these four lines will you reflect on today?",
+    "cta_lines": [
+      "Which of these four lines will you reflect on",
+      "today?"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Ikhlaas 112:1-4",
+    "ref_y": 1467.2,
+    "handle_y": 1519.2,
+    "full": "Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is He begotten; and there is none comparable to Him.",
+    "full_lines": [
+      "Say: He is Allah, the One. Allah, the Eternal",
+      "Refuge. He neither begets nor is He begotten;",
+      "and there is none comparable to Him."
+    ],
+    "cta_y": 1305.2
+  },
+  "layout_hash": "dc67fe76c56e0ba997ae2615",
+  "created_at": "2026-10-27T05:46:56+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "112001",
+      "112002",
+      "112003",
+      "112004"
+    ],
+    "done": false
+  }
+}

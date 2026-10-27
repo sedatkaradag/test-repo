@@ -1,0 +1,79 @@
+{
+  "entry_id": "quran:12:86",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Yusuf 12:86",
+  "slot": "2026-10-28_reel-pk",
+  "publish_at": "2026-10-28T15:26:08Z",
+  "local_slot": "2026-10-28 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-10-28_reel-pk.jpg",
+  "video": "queue/2026-10-28_reel-pk.mp4",
+  "cover": "queue/2026-10-28_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Some grief is too heavy to say out loud\n\nProphet Yaqub said he complains of his anguish and sorrow only to Allah, and that he knows from Allah what others do not know. Your grief can go to Him too, in your own words.\n\nSurah Yusuf 12:86\n\nSend this to someone carrying a quiet grief tonight\n\n#grief #prophetyaqub #quranreels #sabr\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "He said, “I only complain of my anguish and sorrow to Allah, and I know from Allah what you do not know (Surah Yusuf 12:86)",
+  "theme": "grief / complaining only to Allah (Yaqub)",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word and mark by mark, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:12:86",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Some grief is too heavy to say out loud",
+    "hook_lines": [
+      "Some grief is too heavy to",
+      "say out loud"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "012086",
+        "lines": [
+          "قَالَ إِنَّمَآ أَشۡكُواْ بَثِّي وَحُزۡنِيٓ إِلَى ٱللَّهِ",
+          "وَأَعۡلَمُ مِنَ ٱللَّهِ مَا لَا تَعۡلَمُونَ ٨٦"
+        ],
+        "y": 659.6,
+        "meal": [
+          "He said, “I only complain of my anguish and",
+          "sorrow to Allah, and I know from Allah what",
+          "you do not know.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1001.6,
+    "cta": "Send this to someone carrying a quiet grief tonight",
+    "cta_lines": [
+      "Send this to someone carrying a quiet grief",
+      "tonight"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Yusuf 12:86",
+    "ref_y": 1376.6,
+    "handle_y": 1428.6,
+    "full": "He said, “I only complain of my anguish and sorrow to Allah, and I know from Allah what you do not know.”",
+    "full_lines": [
+      "He said, “I only complain of my anguish and",
+      "sorrow to Allah, and I know from Allah what",
+      "you do not know.”"
+    ],
+    "cta_y": 1214.6
+  },
+  "layout_hash": "6c3ce830457faa5ec1a54fd3",
+  "created_at": "2026-10-27T05:46:34+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "012086"
+    ],
+    "done": false
+  }
+}

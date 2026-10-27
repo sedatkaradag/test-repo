@@ -1,0 +1,66 @@
+{
+  "entry_id": "hadith:bukhari:6446",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v2",
+  "reference": "Sahih al-Bukhari 6446",
+  "slot": "2026-10-28_reel-us",
+  "publish_at": "2026-10-29T00:33:59Z",
+  "local_slot": "2026-10-28 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-10-28_reel-us.jpg",
+  "video": "queue/2026-10-28_reel-us.mp4",
+  "cover": "queue/2026-10-28_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Not more money. Not more things.\n\nThe Prophet ﷺ said wealth is not in having many possessions, but in feeling sufficiency in the soul. Tonight, look at what you already have before you scroll past it.\n\nSahih al-Bukhari 6446 · Grade: Sahih\n\nName one blessing you stopped noticing\n\n#contentment #qanaah #hadithreels #gratefulheart",
+  "alt_text": "Narrated Abu Huraira:The Prophet (ﷺ) said, \"Wealth is not in having many possessions, but rather (true) wealth is feeling sufficiency in the soul (Sahih al-Bukhari 6446)",
+  "theme": "contentment / richness of the soul",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word and mark by mark, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "hadith",
+    "entry_id": "hadith:bukhari:6446",
+    "label": "HADITH",
+    "hook": "Not more money. Not more things.",
+    "hook_lines": [
+      "Not more money. Not more",
+      "things."
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Narrated Abu Huraira: The Prophet (ﷺ) said,"
+    ],
+    "lead_size": 34,
+    "lead_y": 739.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "“Wealth is not in having many",
+          "possessions,"
+        ],
+        "y": 821.5
+      },
+      {
+        "lines": [
+          "but rather (true) wealth is feeling",
+          "sufficiency in the soul.”"
+        ],
+        "y": 1027.5
+      }
+    ],
+    "cta": "Name one blessing you stopped noticing",
+    "cta_lines": [
+      "Name one blessing you stopped noticing"
+    ],
+    "cta_size": 48,
+    "cta_y": 1253.5,
+    "ref": "Sahih al-Bukhari 6446 · Grade: Sahih",
+    "ref_y": 1359.5,
+    "handle_y": 1411.5
+  },
+  "layout_hash": "e6093a4953913271d42d81b9",
+  "created_at": "2026-10-27T05:47:13+00:00"
+}

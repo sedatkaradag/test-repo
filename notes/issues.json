@@ -82,5 +82,35 @@
     "opened_at": "2026-10-26T18:50:47Z",
     "closed_at": "2026-10-26T19:13:55Z",
     "resolution": "GH_PAT eklendi (ilk denemede adı GH_PATH, ikincisinde Secrets yetkisi eksikti). Gece işi yenilenen token'ı artık GitHub'a kaydediyor; kaydedilen token'la ikinci deneme de başarılı (token yenilendi, istatistikler çekildi). Her gece süre yeniden 60 güne çıkıyor. GH_PAT'in kendi süresi 1 yıl; dolmadan yenilenmeli."
+  },
+  {
+    "id": "S-008",
+    "kind": "code",
+    "title": "Caption yazım denetimi kesme işaretli sure adlarını (Al-A'raaf, Ash-Shu'araa) hata sayıyor",
+    "detail": "add-carousel --check, caption'daki 'Surah Al-A'raaf 7:23' ve 'Surah Ash-Shu'araa 26:83-85' satırları için 'possible spelling mistake: araa, raaf' döndürdü. Bu surelerden ayet içeren carousel/gönderi caption'ı referans yazılamadığı için geçemiyor. Öneri: CAPTION_TERMS'e veritabanındaki tüm sure adı parçalarını ekle ya da referans satırlarını denetimden muaf tut. Bu çalışmada set değiştirildi.",
+    "ref": "2026-10-28_carousel",
+    "source": "Günlük içerik, 2026-10-27",
+    "status": "open",
+    "opened_at": "2026-10-27T05:50:45Z"
+  },
+  {
+    "id": "S-009",
+    "kind": "code",
+    "title": "render.py birleşik ayetlerde kapanan tırnaktan sonra nokta koymuyor (21:87-88)",
+    "detail": "Denetçi: kartta '...I have certainly done wrong” So We answered his prayer...' görünüyor; birleşik ayetler arasında beklenen nokta yok. İçerik carousel'den çıkarıldı. Öneri: render.py, kaynak tırnağı kapatıp nokta koymadığında ayet sınırında nokta eklesin.",
+    "ref": "quran:21:87-88",
+    "source": "Günlük içerik, 2026-10-27",
+    "status": "open",
+    "opened_at": "2026-10-27T05:50:45Z"
+  },
+  {
+    "id": "S-010",
+    "kind": "content",
+    "title": "Carousel 1. tur reddedildi (19:4 ve 18:10 tek başına tam dua değil)",
+    "detail": "Denetçi: 19:4 Zekeriya'nın duasının yalnızca girişi, 18:10 ise 18:9'un devamı (cümle ortası). Set değiştirildi; 2. turda 4 içerikli set (12:101, 3:193, 2:286, Buhari 4522) onaylandı.",
+    "ref": "2026-10-28_carousel",
+    "source": "Günlük içerik, 2026-10-27",
+    "status": "open",
+    "opened_at": "2026-10-27T05:50:45Z"
   }
 ]
