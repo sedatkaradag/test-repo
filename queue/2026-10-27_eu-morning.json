@@ -31,7 +31,7 @@
   "review": "approve r3: card and Story checked mark by mark, meaning stays to the end, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "created_at": "2026-10-26T05:43:02+00:00",
   "rerendered_at": "2026-10-26T23:14:06+00:00",
   "story_layout": {
@@ -74,5 +74,9 @@
     "ref_y": 1253.0,
     "handle_y": 1305.0
   },
-  "story_layout_hash": "0cedad017139d4d56fe4539c"
+  "story_layout_hash": "0cedad017139d4d56fe4539c",
+  "story_media_id": "17905953648656946",
+  "story_kind": "video",
+  "media_id": "17924987169441590",
+  "posted_at": "2026-10-27T07:15:01+00:00"
 }
