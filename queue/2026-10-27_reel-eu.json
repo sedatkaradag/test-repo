@@ -17,7 +17,7 @@
   "review": "approve r2: Arabic checked mark by mark, whole meaning stays at the end with the closing line under it, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -88,5 +88,7 @@
     "timing": "verse by verse",
     "added_at": "2026-10-26T23:40:04+00:00"
   },
-  "rerendered_at": "2026-10-26T23:38:08+00:00"
+  "rerendered_at": "2026-10-26T23:38:08+00:00",
+  "media_id": "18079142390436106",
+  "posted_at": "2026-10-27T17:03:11+00:00"
 }
