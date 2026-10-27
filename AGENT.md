@@ -429,7 +429,10 @@ python3 scripts/issues.py add --kind <code|rule|content|publish|other> --source 
 
 - `code`: script hatası (ör. çizim hatası yüzünden içerik elendi). Kodu **sen düzeltme**; kaydet.
 - `rule`: bir kural esnetildi ya da atlandı (ör. onaydan sonra metin değişti). Ne yaptığını yaz.
-- `content`: bir içerik sorun yüzünden elendi ya da değiştirildi.
+- `content`: bir içerik kaynak verideki ya da koddaki bir sorun yüzünden kullanılamadı (ör. kaynakta bozuk
+  karakter) veya bir slot boş kaldı. Denetçinin reddedip aynı çalışmada başka içerikle ya da düzeltilmiş
+  metinle çözdüğün durumlar sorun değildir, sistemin olağan işleyişidir: zaten Denetim kayıtlarında
+  görünür, açık sorun olarak kaydetme.
 - `publish`: paylaşım, Story, tilavet veya panel hatası.
 Aynı başlıkla açık bir kayıt varsa script yenisini açmaz. Kaydettikten sonra commit + push et,
 panelde `issues/<id>` belgesini yaz. Kayıtları yalnızca ana ajan kapatır

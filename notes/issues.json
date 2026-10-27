@@ -90,8 +90,10 @@
     "detail": "add-carousel --check, caption'daki 'Surah Al-A'raaf 7:23' ve 'Surah Ash-Shu'araa 26:83-85' satırları için 'possible spelling mistake: araa, raaf' döndürdü. Bu surelerden ayet içeren carousel/gönderi caption'ı referans yazılamadığı için geçemiyor. Öneri: CAPTION_TERMS'e veritabanındaki tüm sure adı parçalarını ekle ya da referans satırlarını denetimden muaf tut. Bu çalışmada set değiştirildi.",
     "ref": "2026-10-28_carousel",
     "source": "Günlük içerik, 2026-10-27",
-    "status": "open",
-    "opened_at": "2026-10-27T05:50:45Z"
+    "status": "closed",
+    "opened_at": "2026-10-27T05:50:45Z",
+    "closed_at": "2026-10-27T18:03:30Z",
+    "resolution": "Düzeldi. Caption yazım denetimi artık veritabanındaki sure adlarını (Al-A'raaf, Ash-Shu'araa, Ar-Ra'd vb., düz ya da kıvrık kesme işaretiyle) birebir tanıyıp atlıyor. Gerçek yazım hataları yine yakalanıyor (ör. 'Al-A'raafx', 'recieve' reddediliyor). Gönderi, Reels ve carousel kontrollerinin hepsinde geçerli."
   },
   {
     "id": "S-009",
@@ -100,8 +102,10 @@
     "detail": "Denetçi: kartta '...I have certainly done wrong” So We answered his prayer...' görünüyor; birleşik ayetler arasında beklenen nokta yok. İçerik carousel'den çıkarıldı. Öneri: render.py, kaynak tırnağı kapatıp nokta koymadığında ayet sınırında nokta eklesin.",
     "ref": "quran:21:87-88",
     "source": "Günlük içerik, 2026-10-27",
-    "status": "open",
-    "opened_at": "2026-10-27T05:50:45Z"
+    "status": "closed",
+    "opened_at": "2026-10-27T05:50:45Z",
+    "closed_at": "2026-10-27T18:03:30Z",
+    "resolution": "Düzeldi. Bir ayet, kaynakta noktalamasız kapanan bir alıntıyla bitip sonraki ayete bağlanıyorsa kart artık nokta koyuyor (21:87-88: '...done wrong.” So We answered...'); sonraki ayet küçük harfle devam ediyorsa tırnaktan sonra noktalı virgül. Veritabanında 9 ayet geçişini etkiliyordu. Yalnızca noktalama, kelime değişmiyor; kuyruktaki hiçbir gönderi etkilenmedi."
   },
   {
     "id": "S-010",
@@ -110,7 +114,9 @@
     "detail": "Denetçi: 19:4 Zekeriya'nın duasının yalnızca girişi, 18:10 ise 18:9'un devamı (cümle ortası). Set değiştirildi; 2. turda 4 içerikli set (12:101, 3:193, 2:286, Buhari 4522) onaylandı.",
     "ref": "2026-10-28_carousel",
     "source": "Günlük içerik, 2026-10-27",
-    "status": "open",
-    "opened_at": "2026-10-27T05:50:45Z"
+    "status": "closed",
+    "opened_at": "2026-10-27T05:50:45Z",
+    "closed_at": "2026-10-27T18:03:30Z",
+    "resolution": "Gerçek bir sorun değil, sistem doğru çalışmış: denetçi carousel'deki iki ayeti tek başına eksik bulup reddetti, set değiştirildi ve ikinci turda onaylandı. Ret Denetim kayıtlarında zaten görünüyor. AGENT.md güncellendi: aynı çalışmada çözülen denetçi retleri artık açık sorun olarak kaydedilmiyor."
   }
 ]

@@ -52,6 +52,21 @@ CAPTION_TERMS |= {
 REVIEWS = ROOT / "history" / "reviews.jsonl"
 
 
+def _surah_name_pattern():
+    """Every surah name exactly as the database writes it (e.g. Al-A'raaf, Ash-Shu'araa), with a
+    straight or curly apostrophe. Spelling checks skip these names; they are the references."""
+    from content import _load
+    names = sorted({r["surah_name"] for r in _load("quran")}, key=len, reverse=True)
+    alts = [re.escape(n).replace("'", "['’]") for n in names]
+    return re.compile(r"(?<![\w'’-])(?:" + "|".join(alts) + r")(?![\w'’-])")
+
+
+def spelling_body(caption):
+    """The caption text the spelling check reads: without hashtags and without surah names."""
+    body = re.sub(r"#\w+", " ", caption)
+    return _surah_name_pattern().sub(" ", body)
+
+
 def require_approval(entry_id, slot, after=None, manual=False):
     """Refuse unless the verifier's latest recorded decision for this entry in this slot is an
     approval (history/reviews.jsonl, written by review_log.py). `after`: the approval must be newer
@@ -186,8 +201,7 @@ def check_caption(caption, entry, exclude_slot=None):
     if re.search(r"translation\s*:|translated by|quranenc|rowwad", caption, re.I):
         problems.append("do not name the translation source in the caption")
     # Spelling: every lowercase word outside hashtags must be a real word or a known term.
-    body = re.sub(r"#\w+", " ", caption)
-    odd = [w for w in unknown_lowercase(body) if w not in CAPTION_TERMS]
+    odd = [w for w in unknown_lowercase(spelling_body(caption)) if w not in CAPTION_TERMS]
     if odd:
         problems.append(f"possible spelling mistake in caption: {', '.join(odd)}")
     # Any quotation in the caption must be copied from the database text.
@@ -530,8 +544,7 @@ def cmd_add_carousel(a):
     flags = require_integrity(ids)
     caption = Path(a.caption_file).read_text(encoding="utf-8").strip()
     problems = []
-    body = re.sub(r"#\w+", " ", caption)
-    odd = [w for w in unknown_lowercase(body) if w not in CAPTION_TERMS]
+    odd = [w for w in unknown_lowercase(spelling_body(caption)) if w not in CAPTION_TERMS]
     if odd:
         problems.append(f"possible spelling mistake in caption: {', '.join(odd)}")
     if len(caption) > 2200:

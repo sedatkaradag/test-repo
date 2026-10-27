@@ -106,6 +106,10 @@ def _join_verses(parts):
         # joining punctuation; one that already ends in punctuation is left as it is.
         if out and (out[-1].isalnum() or out[-1] in ")]"):
             out += ";" if nxt[:1].islower() else "."
+        elif len(out) > 1 and out[-1] in "”\"’" and out[-2].isalnum():
+            # The verse ends on a quotation closed without punctuation ("...done wrong”"): a full stop
+            # goes inside the closing mark, a semicolon after it when the next verse goes on.
+            out = out + ";" if nxt[:1].islower() else out[:-1] + "." + out[-1]
         out += " " + nxt
     return out
 
