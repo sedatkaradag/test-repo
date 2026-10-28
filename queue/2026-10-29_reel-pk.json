@@ -1,0 +1,90 @@
+{
+  "entry_id": "quran:15:55-56",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Hijr 15:55-56",
+  "slot": "2026-10-29_reel-pk",
+  "publish_at": "2026-10-29T15:30:59Z",
+  "local_slot": "2026-10-29 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-10-29_reel-pk.jpg",
+  "video": "queue/2026-10-29_reel-pk.mp4",
+  "cover": "queue/2026-10-29_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Losing hope in Allah's mercy?\n\nWhen Ibrahim was given good news, he answered with a question: who would despair of his Lord's mercy except those who are misguided? Whatever tonight feels like, do not be of those who despair.\n\nSurah Al-Hijr 15:55-56\n\nSend this to someone who feels too far gone\n\n#hope #allahsmercy #prophetibrahim #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "They said, “We have given you glad tidings in truth, so do not be of those who despair.” He said, “Who would despair of his Lord’s mercy except those who are misguided?” (Surah Al-Hijr 15:55-56)",
+  "theme": "hope / do not despair of Allah's mercy (Ibrahim)",
+  "review": "Independent reviewer approved: Arabic checked on the card and Reel frame, hook and closing line exact, layout OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:15:55-56",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Losing hope in Allah's mercy?",
+    "hook_lines": [
+      "Losing hope in Allah's",
+      "mercy?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 66,
+    "verses": [
+      {
+        "ayah": "015055",
+        "lines": [
+          "قَالُواْ بَشَّرۡنَٰكَ بِٱلۡحَقِّ فَلَا تَكُن مِّنَ",
+          "ٱلۡقَٰنِطِينَ ٥٥"
+        ],
+        "y": 632.0,
+        "meal": [
+          "They said, “We have given you glad tidings in",
+          "truth, so do not be of those who despair.”"
+        ]
+      },
+      {
+        "ayah": "015056",
+        "lines": [
+          "قَالَ وَمَن يَقۡنَطُ مِن رَّحۡمَةِ رَبِّهِۦٓ إِلَّا ٱلضَّآلُّونَ ٥٦"
+        ],
+        "y": 888.0,
+        "meal": [
+          "He said, “Who would despair of his Lord’s mercy",
+          "except those who are misguided?”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1046.0,
+    "cta": "Send this to someone who feels too far gone",
+    "cta_lines": [
+      "Send this to someone who feels too far gone"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Hijr 15:55-56",
+    "ref_y": 1418.0,
+    "handle_y": 1470.0,
+    "full": "They said, “We have given you glad tidings in truth, so do not be of those who despair.” He said, “Who would despair of his Lord’s mercy except those who are misguided?”",
+    "full_lines": [
+      "They said, “We have given you glad tidings in",
+      "truth, so do not be of those who despair.” He",
+      "said, “Who would despair of his Lord’s mercy",
+      "except those who are misguided?”"
+    ],
+    "cta_y": 1322.0
+  },
+  "layout_hash": "38c3c65a38d7e73df5477675",
+  "created_at": "2026-10-28T05:44:43+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "015055",
+      "015056"
+    ],
+    "done": false
+  }
+}

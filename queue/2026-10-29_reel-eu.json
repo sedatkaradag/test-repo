@@ -1,0 +1,97 @@
+{
+  "entry_id": "quran:21:87-88",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Anbiyaa 21:87-88",
+  "slot": "2026-10-29_reel-eu",
+  "publish_at": "2026-10-29T16:58:33Z",
+  "local_slot": "2026-10-29 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-29_reel-eu.jpg",
+  "video": "queue/2026-10-29_reel-eu.mp4",
+  "cover": "queue/2026-10-29_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "The dua Yunus made in the depths of darkness\n\nYunus cried out to Allah from the darkness, admitting his wrong and glorifying Him. Allah answered him, rescued him from distress, and says this is how He rescues the believers.\n\nSurah Al-Anbiyaa 21:87-88\n\nSay his words tonight for whatever is pressing on your chest\n\n#prophetyunus #duaofyunus #distress #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "And [remember] the Man of the Whale [Jonah] when he departed in anger, thinking that We would not take him to task. Then he cried out in the depths of darkness, “None has the right to be worshiped except You. Glory be to You! I have certainly done wrong.” So We answered his prayer and rescued him from distress. This is how We rescue the believers (Surah Al-Anbiyaa 21:87-88)",
+  "theme": "distress / dua of Yunus",
+  "review": "Independent reviewer approved: Arabic checked on the card and Reel frame, hook and closing line exact, layout OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:21:87-88",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The dua Yunus made in the depths of darkness",
+    "hook_lines": [
+      "The dua Yunus made in the",
+      "depths of darkness"
+    ],
+    "hook_size": 82,
+    "arabic_size": 46,
+    "verses": [
+      {
+        "ayah": "021087",
+        "lines": [
+          "وَذَا ٱلنُّونِ إِذ ذَّهَبَ مُغَٰضِبٗا فَظَنَّ أَن لَّن نَّقۡدِرَ عَلَيۡهِ فَنَادَىٰ فِي",
+          "ٱلظُّلُمَٰتِ أَن لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبۡحَٰنَكَ إِنِّي كُنتُ مِنَ ٱلظَّٰلِمِينَ ٨٧"
+        ],
+        "y": 598.4,
+        "meal": [
+          "And [remember] the Man of the Whale [Jonah] when",
+          "he departed in anger, thinking that We would not",
+          "take him to task. Then he cried out in the depths of",
+          "darkness, “None has the right to be worshiped except",
+          "You. Glory be to You! I have certainly done wrong.”"
+        ]
+      },
+      {
+        "ayah": "021088",
+        "lines": [
+          "فَٱسۡتَجَبۡنَا لَهُۥ وَنَجَّيۡنَٰهُ مِنَ ٱلۡغَمِّۚ وَكَذَٰلِكَ نُـۨجِي ٱلۡمُؤۡمِنِينَ ٨٨"
+        ],
+        "y": 776.4,
+        "meal": [
+          "So We answered his prayer and rescued him from",
+          "distress. This is how We rescue the believers."
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 895.4,
+    "cta": "Say his words tonight for whatever is pressing on your chest",
+    "cta_lines": [
+      "Say his words tonight for whatever is pressing on",
+      "your chest"
+    ],
+    "cta_size": 44,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Anbiyaa 21:87-88",
+    "ref_y": 1468.4,
+    "handle_y": 1520.4,
+    "full": "And [remember] the Man of the Whale [Jonah] when he departed in anger, thinking that We would not take him to task. Then he cried out in the depths of darkness, “None has the right to be worshiped except You. Glory be to You! I have certainly done wrong.” So We answered his prayer and rescued him from distress. This is how We rescue the believers.",
+    "full_lines": [
+      "And [remember] the Man of the Whale [Jonah] when",
+      "he departed in anger, thinking that We would not",
+      "take him to task. Then he cried out in the depths of",
+      "darkness, “None has the right to be worshiped except",
+      "You. Glory be to You! I have certainly done wrong.”",
+      "So We answered his prayer and rescued him from",
+      "distress. This is how We rescue the believers."
+    ],
+    "cta_y": 1318.4
+  },
+  "layout_hash": "9ed5755133ca713756ac99fd",
+  "created_at": "2026-10-28T05:45:24+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "021087",
+      "021088"
+    ],
+    "done": false
+  }
+}

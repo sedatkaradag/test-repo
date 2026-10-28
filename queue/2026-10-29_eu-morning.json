@@ -1,0 +1,80 @@
+{
+  "entry_id": "quran:20:45-46",
+  "type": "quran",
+  "reference": "Surah Taa-Haa 20:45-46",
+  "slot": "2026-10-29_eu-morning",
+  "publish_at": "2026-10-29T07:18:15Z",
+  "local_slot": "2026-10-29 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-29_eu-morning.jpg",
+  "story_image": "queue/2026-10-29_eu-morning_story.jpg",
+  "story_video": "queue/2026-10-29_eu-morning_story.mp4",
+  "story_audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "020045",
+      "020046"
+    ],
+    "done": false
+  },
+  "story_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:20:45-46",
+    "story": true,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "",
+    "hook_lines": [],
+    "hook_size": 0,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "020045",
+        "lines": [
+          "قَالَا رَبَّنَآ إِنَّنَا نَخَافُ أَن يَفۡرُطَ عَلَيۡنَآ",
+          "أَوۡ أَن يَطۡغَىٰ ٤٥"
+        ],
+        "y": 448.4,
+        "meal": [
+          "They said, “Our Lord, we fear that he may hasten",
+          "to punish us or transgress all bounds.”"
+        ]
+      },
+      {
+        "ayah": "020046",
+        "lines": [
+          "قَالَ لَا تَخَافَآۖ إِنَّنِي مَعَكُمَآ أَسۡمَعُ",
+          "وَأَرَىٰ ٤٦"
+        ],
+        "y": 760.4,
+        "meal": [
+          "He said, “Do not be afraid; I am with you both,",
+          "hearing and seeing.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1102.4,
+    "cta": "They said, “Our Lord, we fear that he may hasten to punish us or transgress all bounds.” He said, “Do not be afraid; I am with you both, hearing and seeing.”",
+    "cta_lines": [
+      "They said, “Our Lord, we fear that he may hasten",
+      "to punish us or transgress all bounds.” He said,",
+      "“Do not be afraid; I am with you both, hearing",
+      "and seeing.”"
+    ],
+    "cta_size": 46,
+    "cta_color": "meal",
+    "ref": "Surah Taa-Haa 20:45-46",
+    "ref_y": 1384.4,
+    "handle_y": 1436.4
+  },
+  "story_layout_hash": "a6353a6c7f6cf180a06286a1",
+  "caption": "Anxiety before a hard day? Remember who is with you.\n\nMusa and Harun told their Lord they were afraid. His answer was not to fear, because He was with them both, hearing and seeing. Carry that into whatever you are dreading today.\n\nSurah Taa-Haa 20:45-46\n\nName the one thing you are nervous about today, then make dua about it.\n\n#anxiety #prophetmusa #allahiswithyou #quran",
+  "alt_text": "They said, “Our Lord, we fear that he may hasten to punish us or transgress all bounds.” He said, “Do not be afraid; I am with you both, hearing and seeing (Surah Taa-Haa 20:45-46)",
+  "theme": "fear and anxiety / Allah is with you (Musa)",
+  "review": "Independent reviewer approved: Arabic checked mark by mark on the card and Story, source English, caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "created_at": "2026-10-28T05:44:17+00:00"
+}

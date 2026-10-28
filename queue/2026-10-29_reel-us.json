@@ -1,0 +1,72 @@
+{
+  "entry_id": "hadith:bukhari:6412",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v2",
+  "reference": "Sahih al-Bukhari 6412",
+  "slot": "2026-10-29_reel-us",
+  "publish_at": "2026-10-30T00:26:25Z",
+  "local_slot": "2026-10-29 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-10-29_reel-us.jpg",
+  "video": "queue/2026-10-29_reel-us.mp4",
+  "cover": "queue/2026-10-29_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Two blessings many people lose without noticing\n\nThe Prophet ﷺ said there are two blessings that many people are deceived into losing: health and free time. Tonight, give one free hour to something you will be glad you did.\n\nSahih al-Bukhari 6412 · Grade: Sahih\n\nWhich hour of tomorrow will you protect?\n\n#healthandtime #freetime #hadithreels #muslimhabits",
+  "alt_text": "Narrated Ibn `Abbas:The Prophet (ﷺ) said: \"There are two blessings that many people are deceived into losing: health and free time (Sahih al-Bukhari 6412)",
+  "theme": "health and free time",
+  "review": "Independent reviewer approved: source English, narrator matches, hook and closing line exact, layout OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "hadith",
+    "entry_id": "hadith:bukhari:6412",
+    "label": "HADITH",
+    "hook": "Two blessings many people lose without noticing",
+    "hook_lines": [
+      "Two blessings many people",
+      "lose without noticing"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Narrated Ibn ‘Abbas:"
+    ],
+    "lead_size": 34,
+    "lead_y": 683.0,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "The Prophet (ﷺ) said:"
+        ],
+        "y": 765.0
+      },
+      {
+        "lines": [
+          "“There are two blessings that",
+          "many people are deceived into",
+          "losing:"
+        ],
+        "y": 878.0
+      },
+      {
+        "lines": [
+          "health and free time.”"
+        ],
+        "y": 1177.0
+      }
+    ],
+    "cta": "Which hour of tomorrow will you protect?",
+    "cta_lines": [
+      "Which hour of tomorrow will you protect?"
+    ],
+    "cta_size": 48,
+    "cta_y": 1310.0,
+    "ref": "Sahih al-Bukhari 6412 · Grade: Sahih",
+    "ref_y": 1416.0,
+    "handle_y": 1468.0
+  },
+  "layout_hash": "375314a11dea93f4d8ad43a6",
+  "created_at": "2026-10-28T05:45:49+00:00"
+}
