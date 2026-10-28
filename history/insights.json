@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-10-27T01:38:11+00:00",
+  "fetched_at": "2026-10-28T01:45:01+00:00",
   "account": {
-    "followers_count": 58,
-    "media_count": 34,
+    "followers_count": 62,
+    "media_count": 39,
     "online_followers_by_utc_hour": null
   },
   "posts": [
@@ -237,8 +237,8 @@
       "slot": "2026-10-22_reel",
       "type": "reel",
       "stats": {
-        "reach": 149,
-        "views": 165,
+        "reach": 150,
+        "views": 166,
         "likes": 2,
         "comments": 0,
         "saved": 1,
@@ -381,8 +381,8 @@
       "slot": "2026-10-24_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 5,
-        "views": 8,
+        "reach": 6,
+        "views": 14,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -399,8 +399,8 @@
       "slot": "2026-10-24_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 4,
-        "views": 11,
+        "reach": 5,
+        "views": 17,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -453,8 +453,8 @@
       "slot": "2026-10-24_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 4,
-        "views": 7,
+        "reach": 5,
+        "views": 8,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -489,8 +489,8 @@
       "slot": "2026-10-25_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 3,
-        "views": 5,
+        "reach": 4,
+        "views": 6,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -525,8 +525,8 @@
       "slot": "2026-10-25_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 2,
-        "views": 3,
+        "reach": 3,
+        "views": 4,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -543,8 +543,8 @@
       "slot": "2026-10-25_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 4,
-        "views": 6,
+        "reach": 6,
+        "views": 9,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -561,8 +561,8 @@
       "slot": "2026-10-26_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 2,
-        "views": 2,
+        "reach": 4,
+        "views": 4,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -597,13 +597,13 @@
       "slot": "2026-10-26_reel",
       "type": "reel",
       "stats": {
-        "reach": 120,
-        "views": 129,
-        "likes": 3,
+        "reach": 122,
+        "views": 131,
+        "likes": 4,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 3
+        "total_interactions": 4
       }
     },
     {
@@ -615,8 +615,8 @@
       "slot": "2026-10-26_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 5,
-        "views": 13,
+        "reach": 7,
+        "views": 16,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -633,13 +633,103 @@
       "slot": "2026-10-26_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 40,
-        "views": 102,
-        "likes": 3,
+        "reach": 260,
+        "views": 308,
+        "likes": 10,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 4
+        "total_interactions": 11
+      }
+    },
+    {
+      "entry_id": "quran:3:8",
+      "entry_ids": null,
+      "media_id": "17924987169441590",
+      "posted_at": "2026-10-27T07:15:01+00:00",
+      "theme": "du'a for a steady heart",
+      "slot": "2026-10-27_eu-morning",
+      "type": "quran",
+      "stats": {
+        "reach": 5,
+        "views": 7,
+        "likes": 1,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 1
+      }
+    },
+    {
+      "entry_id": "hadith:muslim:6690",
+      "entry_ids": null,
+      "media_id": "18349371349269551",
+      "posted_at": "2026-10-27T13:00:48+00:00",
+      "theme": "small good deeds / cheerful face",
+      "slot": "2026-10-27_us-morning",
+      "type": "hadith",
+      "stats": {
+        "reach": 5,
+        "views": 8,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "entry_id": "quran:103:1-3",
+      "entry_ids": null,
+      "media_id": "18124804652484657",
+      "posted_at": "2026-10-27T15:29:00+00:00",
+      "theme": "time / Surah Al-Asr",
+      "slot": "2026-10-27_reel-pk",
+      "type": "reel",
+      "stats": {
+        "reach": 345,
+        "views": 401,
+        "likes": 63,
+        "comments": 0,
+        "saved": 2,
+        "shares": 1,
+        "total_interactions": 67
+      }
+    },
+    {
+      "entry_id": "quran:64:11",
+      "entry_ids": null,
+      "media_id": "18079142390436106",
+      "posted_at": "2026-10-27T17:03:11+00:00",
+      "theme": "trust in hardship",
+      "slot": "2026-10-27_reel-eu",
+      "type": "reel",
+      "stats": {
+        "reach": 244,
+        "views": 271,
+        "likes": 26,
+        "comments": 0,
+        "saved": 3,
+        "shares": 0,
+        "total_interactions": 32
+      }
+    },
+    {
+      "entry_id": "hadith:muslim:6552",
+      "entry_ids": null,
+      "media_id": "17975824215139897",
+      "posted_at": "2026-10-28T00:29:43+00:00",
+      "theme": "visiting the sick",
+      "slot": "2026-10-27_reel-us",
+      "type": "reel",
+      "stats": {
+        "reach": 124,
+        "views": 166,
+        "likes": 1,
+        "comments": 0,
+        "saved": 0,
+        "shares": 7,
+        "total_interactions": 8
       }
     }
   ]
