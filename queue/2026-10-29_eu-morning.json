@@ -15,7 +15,17 @@
       "020045",
       "020046"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 21.0,
+    "video_seconds": 23.0,
+    "verse_seconds": [
+      11.52,
+      9.51
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-28T05:46:24+00:00"
   },
   "story_layout": {
     "template": "v2",

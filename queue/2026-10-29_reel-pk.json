@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: Arabic checked on the card and Reel frame, hook and closing line exact, layout OK",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -85,6 +85,16 @@
       "015055",
       "015056"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 17.2,
+    "video_seconds": 20.4,
+    "verse_seconds": [
+      7.34,
+      9.85
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-28T05:48:32+00:00"
   }
 }
