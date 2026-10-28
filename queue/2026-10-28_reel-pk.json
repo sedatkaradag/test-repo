@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word and mark by mark, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -84,5 +84,7 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-10-27T05:52:40+00:00"
-  }
+  },
+  "media_id": "18106365764006278",
+  "posted_at": "2026-10-28T15:26:38+00:00"
 }
