@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok, narrator matches, card and Reel frame word for word, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "hadith",
@@ -57,5 +57,7 @@
     "handle_y": 1378.0
   },
   "layout_hash": "c6e04685e4c28a842ee184f2",
-  "created_at": "2026-10-26T20:57:29+00:00"
+  "created_at": "2026-10-26T20:57:29+00:00",
+  "media_id": "17975824215139897",
+  "posted_at": "2026-10-28T00:29:43+00:00"
 }
