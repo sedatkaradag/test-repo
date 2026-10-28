@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok, narrator matches, card and Reel frame word for word, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v2",
     "kind": "hadith",
