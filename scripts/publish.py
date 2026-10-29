@@ -221,6 +221,22 @@ def main():
                             raise
                         time.sleep(30 * (attempt + 1))
                 telegram(f"✅ Posted {item['reference']} ({item['entry_id']})")
+                # A Reel also goes out as a Story: the same video (config reels.stories_from on).
+                # A failed or skipped Story never fails the Reel.
+                story_from = str((cfg.get("reels") or {}).get("stories_from") or "")
+                if (cfg.get("stories", True) and item.get("type") == "reel" and item.get("video")
+                        and story_from and str(item.get("slot", ""))[:10] >= story_from):
+                    secs = float((item.get("audio") or {}).get("video_seconds") or 0)
+                    if secs > 60:
+                        item["story_error"] = f"video is {secs:.0f}s; Instagram Stories take at most 60s"
+                    else:
+                        try:
+                            vurl = f"https://raw.githubusercontent.com/{repo}/main/{item['video']}"
+                            item["story_media_id"] = ig.publish_story_video(vurl)
+                            item["story_kind"] = "video"
+                        except Exception as e:  # noqa: BLE001
+                            item["story_error"] = str(e)[:300]
+                            print(f"reel story failed: {e}")
                 # Same post as a Story; a failed Story never fails the feed post. Verse posts get
                 # the recitation video when it is ready, otherwise (or if it fails) the image.
                 if (cfg.get("stories", True) and item.get("type") in ("quran", "hadith")

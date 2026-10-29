@@ -23,11 +23,15 @@ def main(out):
     out = Path(out)
     (out / "queue").mkdir(parents=True, exist_ok=True)
     (out / "meta").mkdir(parents=True, exist_ok=True)
+    cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     for p in sorted((ROOT / "queue").glob("*.json")):
         item = json.loads(p.read_text(encoding="utf-8"))
         if item.get("type") == "story" and item.get("source_slot"):
             continue   # shown as the Story of its post (source row: story_video_url, story_audio)
         row = {k: item[k] for k in FIELDS if k in item}
+        story_from = str(((cfg.get("reels") or {}).get("stories_from")) or "")
+        if item.get("type") == "reel" and story_from and str(item.get("slot", ""))[:10] >= story_from:
+            row["story_planned"] = bool(cfg.get("stories", True))   # the same video goes out as a Story
         (out / "queue" / f"{p.stem}.json").write_text(json.dumps(row, ensure_ascii=False), encoding="utf-8")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     state = {k: cfg.get(k) for k in ("dry_run", "paused", "jitter_minutes")}

@@ -9,25 +9,26 @@ jitter_minutes: 5
 # Paylaşım saatleri. Her slot kendi saat diliminde tanımlıdır, yaz/kış saati
 # geçişleri otomatik hesaplanır. `type` o slota hangi türün gireceğini belirler
 # (enqueue.py bunu zorunlu tutar).
-# Günde 2 fotoğraf (ayet + hadis) ve 3 Reels (aşağıda).
+# 30 Ekim 2026'dan itibaren fotoğraf gönderisi yok: günde 4 Reels (aşağıda) ve haftalık carousel.
 # İsteğe bağlı `from` / `until`: slotun kullanıldığı ilk / son yerel gün (geçişler için).
 slots:
-  # Avrupa sabahı (işe gidiş) — ABD uyurken
+  # Eski fotoğraf slotları: 29 Ekim'de son kez.
   - name: eu-morning
     time: "08:15"
     tz: Europe/Berlin
     type: quran
-  # Avrupa öğleden sonrası = ABD sabahı
+    until: "2026-10-29"
   - name: us-morning
     time: "09:00"
     tz: America/New_York
     type: hadith
+    until: "2026-10-29"
 
 # true  -> paylaşmaz, sadece kuyruğu işaretler (önizleme ana ajandan istenir)
 # false -> Instagram'a gerçekten paylaşır
 dry_run: false
 
-# Günde 3 Reels: 2 tilavetli ayet, 1 sessiz hadis. Her Reels kendi
+# Günde 4 Reels (30 Ekim'den itibaren): 3 tilavetli ayet, 1 sessiz hadis. Her Reels kendi
 # ayet/hadisini taşır, hiçbir gönderinin kopyası değildir. Şablon v2 (scripts/reels.py):
 # ayet ayet altın, hadis parça parça gümüş. `content`: o slota girecek tür.
 # trial: true -> önce sadece takipçi olmayanlara gösterilir (deneme Reels).
@@ -36,6 +37,9 @@ dry_run: false
 reels:
   enabled: true
   trial: false
+  # Bu tarihten itibaren her Reels yayınlanınca aynı video Story olarak da paylaşılır
+  # (60 saniyeden uzunsa Story atlanır; Reels hiçbir durumda etkilenmez).
+  stories_from: "2026-10-30"
   # Ayet Reels'lerinde ve ayet gönderilerinin Story'sinde o ayetlerin tilaveti ses olarak eklenir
   # (müzik yok); caption'ın en altına "Recitation: <ad>" yazılır. Kâriler ağırlıklı sırayla döner:
   # `weight` ne kadar yüksekse o kadar sık (son 30 tilavetteki payı ağırlığına göre), aynı kâri art
@@ -55,6 +59,8 @@ reels:
       - {id: ahmed_ibn_ali_al_ajamy_128kbps, name: Ahmed Al-Ajmi, weight: 1}
       - {id: Husary_128kbps, name: Mahmoud Khalil Al-Husary, weight: 1}
   slots:
+    # Avrupa sabahı (işe gidiş), ABD uyurken
+    - {name: reel-eu-am, time: "08:15", tz: Europe/Berlin, content: quran, from: "2026-10-30"}
     # Pakistan ve Hindistan akşamı (20:30 Karaçi = 21:00 Hindistan; Avrupa öğleden sonrası)
     - {name: reel-pk, time: "20:30", tz: Asia/Karachi, content: quran}
     # Avrupa akşamı = ABD öğle arası (ilk Reels'in iyi gittiği saat)

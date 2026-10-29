@@ -51,9 +51,10 @@ cd scripts
 3. **Planlayıcı:** Her boş slot için bir tema seç.
    - `python3 calendar_info.py 3` → özel günler (Cuma, Ramazan, Zilhicce vb.) önceliklidir.
    - `history/posted.jsonl` son 20 kayıt ve `notes/strategy.md` (varsa) oku.
-   - Her slotun türü sabittir: günde 2 fotoğraf (`quran`, `hadith`) ve 3 Reels (`reel/quran`
-     iki kez, `reel/hadith` bir kez); `enqueue.py slots` çıktısında yazar, başka tür seçme
-     (`config.yaml` → `slots[].type`, `reels.slots[].content`).
+   - Her slotun türü sabittir. 30 Ekim 2026'dan itibaren fotoğraf gönderisi yok: günde 4 Reels
+     (`reel/quran` üç kez, `reel/hadith` bir kez) ve haftada bir carousel. `enqueue.py slots`
+     çıktısında yazar, başka tür seçme (`config.yaml` → `reels.slots[].content`). Fotoğraf
+     gönderisi (`enqueue.py add`) yalnızca sahibi isterse.
    - Son 3 gönderinin temasını tekrarlama.
    - Tema örnekleri: patience, gratitude, mercy, du'a, kindness to parents, honesty,
      forgiveness, trust in Allah (tawakkul), remembrance (dhikr), good character,
@@ -186,12 +187,13 @@ cd scripts
    Sonra oluşan `queue/*.jpg` dosyasını **Read ile açıp bak**: taşma, kutucuk
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç
    (o içerik atılır, düzeltilmez).
-7b. **Reels (günde 3):** `slots` çıktısında `reel/quran` ya da `reel/hadith` türündeki her boş
-   slot için (`reel-pk` ve `reel-eu` ayet, `reel-us` hadis) **kendi içeriğini** seç; hiçbir
+7b. **Reels (günde 4):** `slots` çıktısında `reel/quran` ya da `reel/hadith` türündeki her boş
+   slot için (`reel-eu-am`, `reel-pk` ve `reel-eu` ayet, `reel-us` hadis) **kendi içeriğini** seç; hiçbir
    gönderinin kopyası olmaz. Slotun türü sabittir, kod kontrol eder.
    - **İçerik:** 3-6. adımlar aynen: tema son 3 gönderi ve son 3 Reels'ten farklı; kısa ve tek
      güçlü mesaj (yaklaşık 250 karakter altı). Ayet Reels'inde 1-5 ayet, her ayet videoda kendi
-     satır(lar)ında durur (ayet başına en fazla 3 satır); tilavet yaklaşık 60 saniyeyi geçmesin.
+     satır(lar)ında durur (ayet başına en fazla 3 satır); tilavet yaklaşık 55 saniyeyi geçmesin
+     (Reels aynı video olarak Story'de de paylaşılır; Instagram Story'leri en fazla 60 saniye).
      Anlam için gerekirse bir önceki ya da sonraki ayeti de aralığa kat.
    - **Şablon (v2, `scripts/reels.py`):** En üstte kanca, altında metin. Ayette Arapça altın
      renkte; okunan ayet parlar, altında o ayetin meali belirir. Hadiste metin gümüş renkte,
@@ -238,7 +240,10 @@ cd scripts
      `layout_hash` kanıtlar; değilse önizleme sese göre uzatılır (`audio.timing`'de yazar).
      Atanan kâride ayet yoksa sıradaki kâriler denenir; hiçbirinde yoksa Reels sessiz çıkar ve
      "Recitation" satırı silinir. Sesi eklenmemiş ayet Reels'i yayınlanmaz. Hadis Reels'leri sessizdir.
-7d. **Ayet gönderilerinin Story'si:** `enqueue.py add` ayet gönderileri için Story'yi kendiliğinden
+7e. **Reels'in Story'si:** `config.yaml` → `reels.stories_from` tarihinden itibaren yayıncı her Reels'i
+   paylaştıktan hemen sonra aynı videoyu Story olarak da paylaşır; ayrı çizim ya da denetim gerekmez.
+   Video 60 saniyeden uzunsa ya da Story reddedilirse Story atlanır (`story_error`), Reels etkilenmez.
+7d. **Ayet gönderilerinin Story'si** (yalnızca sahibinin istediği fotoğraf gönderileri için): `enqueue.py add` ayet gönderileri için Story'yi kendiliğinden
    tilavetli 9:16 video olarak hazırlar (`story_video`, `story_audio`; kâri sırası Reels'le ortak).
    Story, Reels'le aynı şablondadır (v2, kancasız): ayetler altın, okunan ayet parlar, sonda bütün
    meal görünür; GitHub her ayeti kendi tilaveti süresince yakar. Ayetler bu kareye sığmazsa Story
@@ -413,7 +418,7 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
    önerilen tür oranı, saat önerisi (online_followers verisi varsa ona dayan).
    Tarihli kısa bir değişiklik notu ekle.
 4. Saatleri sadece güçlü kanıt varsa ve son değişiklikten 14 gün geçtiyse
-   `config.yaml` → `slots` içinde değiştir; `dry_run` ve slot sayısına dokunma.
+   `config.yaml` → `reels.slots` (ve varsa `slots`) içinde değiştir; `dry_run` ve slot sayısına dokunma.
    Saat değiştirdiysen push'tan sonra "Senkron zamanlaması" adımlarını uygula.
 5. Commit + push, ardından kısa bir haftalık özet yaz.
 
