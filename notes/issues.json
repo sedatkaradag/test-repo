@@ -126,7 +126,9 @@
     "detail": "MEDIA_METRICS yalnızca reach, views, likes, comments, saved, shares, total_interactions. Gönderi başına follows ile Reels için ig_reels_avg_watch_time ve ig_reels_video_view_total_time istenmiyor; bu yüzden format karşılaştırmasında takip ve izlenme süresi ölçülemedi. Öneri: bu metrikleri MEDIA_METRICS'e ekle (eksik olanlar zaten atlanıyor).",
     "ref": "scripts/insights.py",
     "source": "Analist, 2026-10-29",
-    "status": "open",
-    "opened_at": "2026-10-29T19:10:17Z"
+    "status": "closed",
+    "opened_at": "2026-10-29T19:10:17Z",
+    "closed_at": "2026-10-29T19:24:03Z",
+    "resolution": "Düzeldi. Gecelik iş artık Reels için ortalama ve toplam izlenme süresini, her paylaşım için takip ve profil ziyaretini de istiyor. İlk çalışmada izlenme süresi 15 Reels'in hepsinde geldi. Takip ve profil ziyareti ise yalnızca fotoğraf gönderileri ve carousel için geliyor; Instagram bunları Reels için vermiyor. Instagram'ın değer vermediği ölçümler insights.json'da unavailable_metrics altında sayılıyor."
   }
 ]
