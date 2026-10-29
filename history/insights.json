@@ -1,9 +1,22 @@
 {
-  "fetched_at": "2026-10-29T01:58:00+00:00",
+  "fetched_at": "2026-10-29T19:23:34+00:00",
   "account": {
-    "followers_count": 87,
-    "media_count": 45,
+    "followers_count": 90,
+    "media_count": 49,
     "online_followers_by_utc_hour": null
+  },
+  "unavailable_metrics": {
+    "reach": 2,
+    "views": 2,
+    "likes": 2,
+    "comments": 2,
+    "saved": 2,
+    "shares": 2,
+    "total_interactions": 2,
+    "follows": 17,
+    "profile_visits": 17,
+    "ig_reels_avg_watch_time": 1,
+    "ig_reels_video_view_total_time": 1
   },
   "posts": [
     {
@@ -15,12 +28,14 @@
       "type": "hadith",
       "stats": {
         "reach": 22,
-        "views": 40,
+        "views": 41,
         "likes": 2,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 2
+        "total_interactions": 2,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -31,13 +46,15 @@
       "slot": "2026-10-20_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 17,
-        "views": 32,
+        "reach": 18,
+        "views": 33,
         "likes": 1,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 1
+        "total_interactions": 1,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -55,7 +72,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 2
+        "total_interactions": 2,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -73,7 +92,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 1
+        "total_interactions": 1,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -91,7 +112,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -112,6 +135,11 @@
       "theme": "gratitude (shukr)",
       "slot": "2026-10-21_eu-evening-us-noon",
       "type": "quran",
+      "recitation": {
+        "reciter": "Husary_128kbps",
+        "reciter_name": "Mahmoud Khalil Al-Husary",
+        "on": "story"
+      },
       "stats": {
         "reach": 8,
         "views": 12,
@@ -119,7 +147,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -130,14 +160,21 @@
       "theme": "du'a for ease (Musa)",
       "slot": "2026-10-21_reel-manual-1705",
       "type": "reel",
+      "recitation": {
+        "reciter": "Alafasy_128kbps",
+        "reciter_name": "Mishary Alafasy",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 183,
-        "views": 216,
+        "reach": 184,
+        "views": 217,
         "likes": 15,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 16
+        "total_interactions": 16,
+        "ig_reels_avg_watch_time": 7063,
+        "ig_reels_video_view_total_time": 1426905
       }
     },
     {
@@ -148,6 +185,11 @@
       "theme": "gratitude (shukr)",
       "slot": "2026-10-21_eu-evening-us-noon_story-1720",
       "type": "story",
+      "recitation": {
+        "reciter": "Husary_128kbps",
+        "reciter_name": "Mahmoud Khalil Al-Husary",
+        "on": "story"
+      },
       "stats": {}
     },
     {
@@ -166,12 +208,14 @@
       "type": "carousel",
       "stats": {
         "reach": 8,
-        "views": 21,
+        "views": 22,
         "likes": 0,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -189,7 +233,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -200,6 +246,11 @@
       "theme": "remembrance (dhikr)",
       "slot": "2026-10-22_eu-morning",
       "type": "quran",
+      "recitation": {
+        "reciter": "Minshawy_Murattal_128kbps",
+        "reciter_name": "Mohamed Siddiq Al-Minshawi",
+        "on": "story"
+      },
       "stats": {
         "reach": 7,
         "views": 11,
@@ -207,7 +258,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -225,7 +278,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -237,13 +292,15 @@
       "slot": "2026-10-22_reel",
       "type": "reel",
       "stats": {
-        "reach": 151,
-        "views": 167,
+        "reach": 152,
+        "views": 168,
         "likes": 2,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 3
+        "total_interactions": 3,
+        "ig_reels_avg_watch_time": 2948,
+        "ig_reels_video_view_total_time": 459935
       }
     },
     {
@@ -254,6 +311,11 @@
       "theme": "trust in Allah (tawakkul)",
       "slot": "2026-10-22_eu-evening-us-noon",
       "type": "quran",
+      "recitation": {
+        "reciter": "MaherAlMuaiqly128kbps",
+        "reciter_name": "Maher Al-Muaiqly",
+        "on": "story"
+      },
       "stats": {
         "reach": 9,
         "views": 12,
@@ -261,7 +323,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -279,7 +343,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -297,7 +363,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -315,7 +383,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -326,14 +396,21 @@
       "theme": "repel evil with good",
       "slot": "2026-10-23_reel",
       "type": "reel",
+      "recitation": {
+        "reciter": "Abdul_Basit_Murattal_192kbps",
+        "reciter_name": "Abdul Basit Abdus-Samad",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 131,
-        "views": 147,
+        "reach": 132,
+        "views": 148,
         "likes": 5,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 5
+        "total_interactions": 5,
+        "ig_reels_avg_watch_time": 3424,
+        "ig_reels_video_view_total_time": 479421
       }
     },
     {
@@ -344,6 +421,11 @@
       "theme": "charity (sadaqah)",
       "slot": "2026-10-23_eu-evening-us-noon",
       "type": "quran",
+      "recitation": {
+        "reciter": "Husary_128kbps",
+        "reciter_name": "Mahmoud Khalil Al-Husary",
+        "on": "story"
+      },
       "stats": {
         "reach": 6,
         "views": 11,
@@ -351,7 +433,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -369,7 +453,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -380,6 +466,11 @@
       "theme": "good deeds / good life",
       "slot": "2026-10-24_eu-morning",
       "type": "quran",
+      "recitation": {
+        "reciter": "Minshawy_Murattal_128kbps",
+        "reciter_name": "Mohamed Siddiq Al-Minshawi",
+        "on": "story"
+      },
       "stats": {
         "reach": 8,
         "views": 18,
@@ -387,7 +478,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 1
+        "total_interactions": 1,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -405,7 +498,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -417,13 +512,15 @@
       "slot": "2026-10-24_reel",
       "type": "reel",
       "stats": {
-        "reach": 205,
-        "views": 241,
-        "likes": 2,
+        "reach": 219,
+        "views": 256,
+        "likes": 3,
         "comments": 0,
         "saved": 1,
         "shares": 1,
-        "total_interactions": 4
+        "total_interactions": 5,
+        "ig_reels_avg_watch_time": 3088,
+        "ig_reels_video_view_total_time": 698088
       }
     },
     {
@@ -434,6 +531,11 @@
       "theme": "brotherhood / making peace",
       "slot": "2026-10-24_eu-evening-us-noon",
       "type": "quran",
+      "recitation": {
+        "reciter": "MaherAlMuaiqly128kbps",
+        "reciter_name": "Maher Al-Muaiqly",
+        "on": "story"
+      },
       "stats": {
         "reach": 5,
         "views": 5,
@@ -441,7 +543,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -459,7 +563,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -470,6 +576,11 @@
       "theme": "patience and prayer (salah)",
       "slot": "2026-10-25_eu-morning",
       "type": "quran",
+      "recitation": {
+        "reciter": "Abdul_Basit_Murattal_192kbps",
+        "reciter_name": "Abdul Basit Abdus-Samad",
+        "on": "story"
+      },
       "stats": {
         "reach": 6,
         "views": 14,
@@ -477,7 +588,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -495,7 +608,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -506,14 +621,21 @@
       "theme": "hope / Allah has not forsaken you",
       "slot": "2026-10-25_reel",
       "type": "reel",
+      "recitation": {
+        "reciter": "Abdul_Basit_Murattal_192kbps",
+        "reciter_name": "Abdul Basit Abdus-Samad",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 336,
-        "views": 403,
+        "reach": 337,
+        "views": 404,
         "likes": 23,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 24
+        "total_interactions": 24,
+        "ig_reels_avg_watch_time": 10452,
+        "ig_reels_video_view_total_time": 3522325
       }
     },
     {
@@ -524,6 +646,11 @@
       "theme": "humility / answering with peace",
       "slot": "2026-10-25_eu-evening-us-noon",
       "type": "quran",
+      "recitation": {
+        "reciter": "Alafasy_128kbps",
+        "reciter_name": "Mishary Alafasy",
+        "on": "story"
+      },
       "stats": {
         "reach": 4,
         "views": 5,
@@ -531,7 +658,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -549,7 +678,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -560,6 +691,11 @@
       "theme": "Allah does not burden a soul beyond its capacity",
       "slot": "2026-10-26_eu-morning",
       "type": "quran",
+      "recitation": {
+        "reciter": "Husary_128kbps",
+        "reciter_name": "Mahmoud Khalil Al-Husary",
+        "on": "story"
+      },
       "stats": {
         "reach": 5,
         "views": 5,
@@ -567,7 +703,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -579,13 +717,15 @@
       "slot": "2026-10-26_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 5,
-        "views": 8,
+        "reach": 6,
+        "views": 12,
         "likes": 0,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -597,13 +737,15 @@
       "slot": "2026-10-26_reel",
       "type": "reel",
       "stats": {
-        "reach": 128,
-        "views": 136,
+        "reach": 130,
+        "views": 137,
         "likes": 4,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 4
+        "total_interactions": 4,
+        "ig_reels_avg_watch_time": 1774,
+        "ig_reels_video_view_total_time": 230649
       }
     },
     {
@@ -614,6 +756,11 @@
       "theme": "Allah is with you wherever you are",
       "slot": "2026-10-26_eu-evening-us-noon",
       "type": "quran",
+      "recitation": {
+        "reciter": "Abdul_Basit_Murattal_192kbps",
+        "reciter_name": "Abdul Basit Abdus-Samad",
+        "on": "story"
+      },
       "stats": {
         "reach": 8,
         "views": 18,
@@ -621,7 +768,9 @@
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -633,13 +782,15 @@
       "slot": "2026-10-26_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 267,
-        "views": 313,
+        "reach": 270,
+        "views": 316,
         "likes": 10,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 11
+        "total_interactions": 11,
+        "ig_reels_avg_watch_time": 4291,
+        "ig_reels_video_view_total_time": 1180054
       }
     },
     {
@@ -650,14 +801,21 @@
       "theme": "du'a for a steady heart",
       "slot": "2026-10-27_eu-morning",
       "type": "quran",
+      "recitation": {
+        "reciter": "Husary_128kbps",
+        "reciter_name": "Mahmoud Khalil Al-Husary",
+        "on": "story"
+      },
       "stats": {
-        "reach": 6,
-        "views": 8,
+        "reach": 7,
+        "views": 9,
         "likes": 1,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 1
+        "total_interactions": 1,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -669,13 +827,15 @@
       "slot": "2026-10-27_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 6,
-        "views": 9,
+        "reach": 7,
+        "views": 10,
         "likes": 0,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -686,14 +846,21 @@
       "theme": "time / Surah Al-Asr",
       "slot": "2026-10-27_reel-pk",
       "type": "reel",
+      "recitation": {
+        "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+        "reciter_name": "Abdul Rahman Al-Sudais",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 1310,
-        "views": 1508,
+        "reach": 1316,
+        "views": 1515,
         "likes": 203,
         "comments": 0,
         "saved": 22,
         "shares": 16,
-        "total_interactions": 249
+        "total_interactions": 249,
+        "ig_reels_avg_watch_time": 9944,
+        "ig_reels_video_view_total_time": 13096649
       }
     },
     {
@@ -704,14 +871,21 @@
       "theme": "trust in hardship",
       "slot": "2026-10-27_reel-eu",
       "type": "reel",
+      "recitation": {
+        "reciter": "Yasser_Ad-Dussary_128kbps",
+        "reciter_name": "Yasser Al-Dosari",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 561,
-        "views": 646,
+        "reach": 567,
+        "views": 651,
         "likes": 70,
         "comments": 0,
         "saved": 11,
         "shares": 2,
-        "total_interactions": 88
+        "total_interactions": 88,
+        "ig_reels_avg_watch_time": 6689,
+        "ig_reels_video_view_total_time": 3872962
       }
     },
     {
@@ -723,13 +897,15 @@
       "slot": "2026-10-27_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 299,
-        "views": 374,
+        "reach": 303,
+        "views": 378,
         "likes": 4,
         "comments": 0,
         "saved": 1,
         "shares": 9,
-        "total_interactions": 15
+        "total_interactions": 15,
+        "ig_reels_avg_watch_time": 4311,
+        "ig_reels_video_view_total_time": 1405578
       }
     },
     {
@@ -740,14 +916,21 @@
       "theme": "work and provision (rizq)",
       "slot": "2026-10-28_eu-morning",
       "type": "quran",
+      "recitation": {
+        "reciter": "Alafasy_128kbps",
+        "reciter_name": "Mishary Alafasy",
+        "on": "story"
+      },
       "stats": {
-        "reach": 5,
-        "views": 5,
+        "reach": 6,
+        "views": 7,
         "likes": 0,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -759,13 +942,15 @@
       "slot": "2026-10-28_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 5,
-        "views": 6,
+        "reach": 6,
+        "views": 8,
         "likes": 0,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -776,14 +961,21 @@
       "theme": "grief / complaining only to Allah (Yaqub)",
       "slot": "2026-10-28_reel-pk",
       "type": "reel",
+      "recitation": {
+        "reciter": "Yasser_Ad-Dussary_128kbps",
+        "reciter_name": "Yasser Al-Dosari",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 1639,
-        "views": 1891,
-        "likes": 188,
+        "reach": 1782,
+        "views": 2072,
+        "likes": 204,
         "comments": 0,
         "saved": 21,
         "shares": 5,
-        "total_interactions": 219
+        "total_interactions": 235,
+        "ig_reels_avg_watch_time": 5460,
+        "ig_reels_video_view_total_time": 10013754
       }
     },
     {
@@ -794,14 +986,21 @@
       "theme": "Allah's oneness (Surah Al-Ikhlaas)",
       "slot": "2026-10-28_reel-eu",
       "type": "reel",
+      "recitation": {
+        "reciter": "Alafasy_128kbps",
+        "reciter_name": "Mishary Alafasy",
+        "on": "reel"
+      },
       "stats": {
-        "reach": 2172,
-        "views": 2487,
-        "likes": 289,
+        "reach": 2591,
+        "views": 2977,
+        "likes": 347,
         "comments": 2,
-        "saved": 19,
-        "shares": 13,
-        "total_interactions": 331
+        "saved": 25,
+        "shares": 15,
+        "total_interactions": 398,
+        "ig_reels_avg_watch_time": 5876,
+        "ig_reels_video_view_total_time": 15378189
       }
     },
     {
@@ -818,13 +1017,15 @@
       "slot": "2026-10-28_carousel",
       "type": "carousel",
       "stats": {
-        "reach": 3,
-        "views": 11,
+        "reach": 5,
+        "views": 22,
         "likes": 0,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
       }
     },
     {
@@ -836,13 +1037,110 @@
       "slot": "2026-10-28_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 117,
-        "views": 154,
-        "likes": 4,
+        "reach": 285,
+        "views": 319,
+        "likes": 9,
         "comments": 0,
         "saved": 0,
         "shares": 1,
-        "total_interactions": 5
+        "total_interactions": 11,
+        "ig_reels_avg_watch_time": 3685,
+        "ig_reels_video_view_total_time": 1046794
+      }
+    },
+    {
+      "entry_id": "quran:20:45-46",
+      "entry_ids": null,
+      "media_id": "17992641606107687",
+      "posted_at": "2026-10-29T07:19:06+00:00",
+      "theme": "fear and anxiety / Allah is with you (Musa)",
+      "slot": "2026-10-29_eu-morning",
+      "type": "quran",
+      "recitation": {
+        "reciter": "MaherAlMuaiqly128kbps",
+        "reciter_name": "Maher Al-Muaiqly",
+        "on": "story"
+      },
+      "stats": {
+        "reach": 4,
+        "views": 8,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
+      }
+    },
+    {
+      "entry_id": "hadith:nasai:5039",
+      "entry_ids": null,
+      "media_id": "18131499766692556",
+      "posted_at": "2026-10-29T12:58:22+00:00",
+      "theme": "brotherhood / loving for others",
+      "slot": "2026-10-29_us-morning",
+      "type": "hadith",
+      "stats": {
+        "reach": 4,
+        "views": 9,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0,
+        "follows": 0,
+        "profile_visits": 0
+      }
+    },
+    {
+      "entry_id": "quran:15:55-56",
+      "entry_ids": null,
+      "media_id": "18200019184389836",
+      "posted_at": "2026-10-29T15:32:07+00:00",
+      "theme": "hope / do not despair of Allah's mercy (Ibrahim)",
+      "slot": "2026-10-29_reel-pk",
+      "type": "reel",
+      "recitation": {
+        "reciter": "Yasser_Ad-Dussary_128kbps",
+        "reciter_name": "Yasser Al-Dosari",
+        "on": "reel"
+      },
+      "stats": {
+        "reach": 192,
+        "views": 238,
+        "likes": 25,
+        "comments": 0,
+        "saved": 4,
+        "shares": 1,
+        "total_interactions": 32,
+        "ig_reels_avg_watch_time": 5889,
+        "ig_reels_video_view_total_time": 1154272
+      }
+    },
+    {
+      "entry_id": "quran:21:87-88",
+      "entry_ids": null,
+      "media_id": "17893240749684281",
+      "posted_at": "2026-10-29T16:59:11+00:00",
+      "theme": "distress / dua of Yunus",
+      "slot": "2026-10-29_reel-eu",
+      "type": "reel",
+      "recitation": {
+        "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+        "reciter_name": "Abdul Rahman Al-Sudais",
+        "on": "reel"
+      },
+      "stats": {
+        "reach": 398,
+        "views": 500,
+        "likes": 34,
+        "comments": 0,
+        "saved": 5,
+        "shares": 0,
+        "total_interactions": 42,
+        "ig_reels_avg_watch_time": 6407,
+        "ig_reels_video_view_total_time": 2537506
       }
     }
   ]
