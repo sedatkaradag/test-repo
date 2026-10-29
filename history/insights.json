@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-10-28T01:45:01+00:00",
+  "fetched_at": "2026-10-29T01:58:00+00:00",
   "account": {
-    "followers_count": 62,
-    "media_count": 39,
+    "followers_count": 87,
+    "media_count": 45,
     "online_followers_by_utc_hour": null
   },
   "posts": [
@@ -14,8 +14,8 @@
       "slot": "2026-10-20_manual-1347",
       "type": "hadith",
       "stats": {
-        "reach": 21,
-        "views": 39,
+        "reach": 22,
+        "views": 40,
         "likes": 2,
         "comments": 0,
         "saved": 0,
@@ -31,8 +31,8 @@
       "slot": "2026-10-20_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 16,
-        "views": 31,
+        "reach": 17,
+        "views": 32,
         "likes": 1,
         "comments": 0,
         "saved": 0,
@@ -49,8 +49,8 @@
       "slot": "2026-10-20_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 12,
-        "views": 23,
+        "reach": 14,
+        "views": 25,
         "likes": 2,
         "comments": 0,
         "saved": 0,
@@ -67,8 +67,8 @@
       "slot": "2026-10-21_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 15,
-        "views": 38,
+        "reach": 16,
+        "views": 39,
         "likes": 1,
         "comments": 0,
         "saved": 0,
@@ -85,8 +85,8 @@
       "slot": "2026-10-21_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 9,
-        "views": 25,
+        "reach": 10,
+        "views": 26,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -113,8 +113,8 @@
       "slot": "2026-10-21_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 7,
-        "views": 11,
+        "reach": 8,
+        "views": 12,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -165,8 +165,8 @@
       "slot": "2026-10-21_carousel",
       "type": "carousel",
       "stats": {
-        "reach": 7,
-        "views": 20,
+        "reach": 8,
+        "views": 21,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -183,8 +183,8 @@
       "slot": "2026-10-21_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 7,
-        "views": 16,
+        "reach": 8,
+        "views": 18,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -201,8 +201,8 @@
       "slot": "2026-10-22_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 6,
-        "views": 10,
+        "reach": 7,
+        "views": 11,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -219,8 +219,8 @@
       "slot": "2026-10-22_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 7,
-        "views": 13,
+        "reach": 8,
+        "views": 14,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -237,8 +237,8 @@
       "slot": "2026-10-22_reel",
       "type": "reel",
       "stats": {
-        "reach": 150,
-        "views": 166,
+        "reach": 151,
+        "views": 167,
         "likes": 2,
         "comments": 0,
         "saved": 1,
@@ -255,8 +255,8 @@
       "slot": "2026-10-22_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 8,
-        "views": 11,
+        "reach": 9,
+        "views": 12,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -273,8 +273,8 @@
       "slot": "2026-10-22_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 9,
-        "views": 19,
+        "reach": 10,
+        "views": 21,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -291,8 +291,8 @@
       "slot": "2026-10-23_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 7,
-        "views": 13,
+        "reach": 8,
+        "views": 14,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -309,8 +309,8 @@
       "slot": "2026-10-23_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 9,
-        "views": 19,
+        "reach": 10,
+        "views": 20,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -327,8 +327,8 @@
       "slot": "2026-10-23_reel",
       "type": "reel",
       "stats": {
-        "reach": 130,
-        "views": 146,
+        "reach": 131,
+        "views": 147,
         "likes": 5,
         "comments": 0,
         "saved": 0,
@@ -345,8 +345,8 @@
       "slot": "2026-10-23_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 5,
-        "views": 10,
+        "reach": 6,
+        "views": 11,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -363,8 +363,8 @@
       "slot": "2026-10-23_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 6,
-        "views": 14,
+        "reach": 8,
+        "views": 16,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -381,13 +381,13 @@
       "slot": "2026-10-24_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 6,
-        "views": 14,
-        "likes": 0,
+        "reach": 8,
+        "views": 18,
+        "likes": 1,
         "comments": 0,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 1
       }
     },
     {
@@ -399,8 +399,8 @@
       "slot": "2026-10-24_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 5,
-        "views": 17,
+        "reach": 6,
+        "views": 18,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -417,13 +417,13 @@
       "slot": "2026-10-24_reel",
       "type": "reel",
       "stats": {
-        "reach": 187,
-        "views": 214,
+        "reach": 205,
+        "views": 241,
         "likes": 2,
         "comments": 0,
         "saved": 1,
-        "shares": 0,
-        "total_interactions": 3
+        "shares": 1,
+        "total_interactions": 4
       }
     },
     {
@@ -435,8 +435,8 @@
       "slot": "2026-10-24_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 4,
-        "views": 4,
+        "reach": 5,
+        "views": 5,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -453,8 +453,8 @@
       "slot": "2026-10-24_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 5,
-        "views": 8,
+        "reach": 6,
+        "views": 10,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -471,8 +471,8 @@
       "slot": "2026-10-25_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 3,
-        "views": 4,
+        "reach": 6,
+        "views": 14,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -489,8 +489,8 @@
       "slot": "2026-10-25_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 4,
-        "views": 6,
+        "reach": 6,
+        "views": 12,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -507,13 +507,13 @@
       "slot": "2026-10-25_reel",
       "type": "reel",
       "stats": {
-        "reach": 333,
-        "views": 396,
-        "likes": 22,
+        "reach": 336,
+        "views": 403,
+        "likes": 23,
         "comments": 0,
         "saved": 1,
         "shares": 0,
-        "total_interactions": 23
+        "total_interactions": 24
       }
     },
     {
@@ -525,8 +525,8 @@
       "slot": "2026-10-25_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 3,
-        "views": 4,
+        "reach": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -543,8 +543,8 @@
       "slot": "2026-10-25_us-evening",
       "type": "hadith",
       "stats": {
-        "reach": 6,
-        "views": 9,
+        "reach": 7,
+        "views": 12,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -561,8 +561,8 @@
       "slot": "2026-10-26_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 4,
-        "views": 4,
+        "reach": 5,
+        "views": 5,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -579,8 +579,8 @@
       "slot": "2026-10-26_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 4,
-        "views": 7,
+        "reach": 5,
+        "views": 8,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -597,8 +597,8 @@
       "slot": "2026-10-26_reel",
       "type": "reel",
       "stats": {
-        "reach": 122,
-        "views": 131,
+        "reach": 128,
+        "views": 136,
         "likes": 4,
         "comments": 0,
         "saved": 0,
@@ -615,8 +615,8 @@
       "slot": "2026-10-26_eu-evening-us-noon",
       "type": "quran",
       "stats": {
-        "reach": 7,
-        "views": 16,
+        "reach": 8,
+        "views": 18,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -633,8 +633,8 @@
       "slot": "2026-10-26_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 260,
-        "views": 308,
+        "reach": 267,
+        "views": 313,
         "likes": 10,
         "comments": 0,
         "saved": 1,
@@ -651,8 +651,8 @@
       "slot": "2026-10-27_eu-morning",
       "type": "quran",
       "stats": {
-        "reach": 5,
-        "views": 7,
+        "reach": 6,
+        "views": 8,
         "likes": 1,
         "comments": 0,
         "saved": 0,
@@ -669,8 +669,8 @@
       "slot": "2026-10-27_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 5,
-        "views": 8,
+        "reach": 6,
+        "views": 9,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -687,13 +687,13 @@
       "slot": "2026-10-27_reel-pk",
       "type": "reel",
       "stats": {
-        "reach": 345,
-        "views": 401,
-        "likes": 63,
+        "reach": 1310,
+        "views": 1508,
+        "likes": 203,
         "comments": 0,
-        "saved": 2,
-        "shares": 1,
-        "total_interactions": 67
+        "saved": 22,
+        "shares": 16,
+        "total_interactions": 249
       }
     },
     {
@@ -705,13 +705,13 @@
       "slot": "2026-10-27_reel-eu",
       "type": "reel",
       "stats": {
-        "reach": 244,
-        "views": 271,
-        "likes": 26,
+        "reach": 561,
+        "views": 646,
+        "likes": 70,
         "comments": 0,
-        "saved": 3,
-        "shares": 0,
-        "total_interactions": 32
+        "saved": 11,
+        "shares": 2,
+        "total_interactions": 88
       }
     },
     {
@@ -723,13 +723,126 @@
       "slot": "2026-10-27_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 124,
-        "views": 166,
-        "likes": 1,
+        "reach": 299,
+        "views": 374,
+        "likes": 4,
+        "comments": 0,
+        "saved": 1,
+        "shares": 9,
+        "total_interactions": 15
+      }
+    },
+    {
+      "entry_id": "quran:67:15",
+      "entry_ids": null,
+      "media_id": "18101562515533917",
+      "posted_at": "2026-10-28T07:13:00+00:00",
+      "theme": "work and provision (rizq)",
+      "slot": "2026-10-28_eu-morning",
+      "type": "quran",
+      "stats": {
+        "reach": 5,
+        "views": 5,
+        "likes": 0,
         "comments": 0,
         "saved": 0,
-        "shares": 7,
-        "total_interactions": 8
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "entry_id": "hadith:ibnmajah:3688",
+      "entry_ids": null,
+      "media_id": "18111327212265871",
+      "posted_at": "2026-10-28T12:56:51+00:00",
+      "theme": "gentleness (rifq)",
+      "slot": "2026-10-28_us-morning",
+      "type": "hadith",
+      "stats": {
+        "reach": 5,
+        "views": 6,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "entry_id": "quran:12:86",
+      "entry_ids": null,
+      "media_id": "18106365764006278",
+      "posted_at": "2026-10-28T15:26:38+00:00",
+      "theme": "grief / complaining only to Allah (Yaqub)",
+      "slot": "2026-10-28_reel-pk",
+      "type": "reel",
+      "stats": {
+        "reach": 1639,
+        "views": 1891,
+        "likes": 188,
+        "comments": 0,
+        "saved": 21,
+        "shares": 5,
+        "total_interactions": 219
+      }
+    },
+    {
+      "entry_id": "quran:112:1-4",
+      "entry_ids": null,
+      "media_id": "18439342606196774",
+      "posted_at": "2026-10-28T17:00:31+00:00",
+      "theme": "Allah's oneness (Surah Al-Ikhlaas)",
+      "slot": "2026-10-28_reel-eu",
+      "type": "reel",
+      "stats": {
+        "reach": 2172,
+        "views": 2487,
+        "likes": 289,
+        "comments": 2,
+        "saved": 19,
+        "shares": 13,
+        "total_interactions": 331
+      }
+    },
+    {
+      "entry_id": "quran:12:101,quran:3:193,quran:2:286,hadith:bukhari:4522",
+      "entry_ids": [
+        "quran:12:101",
+        "quran:3:193",
+        "quran:2:286",
+        "hadith:bukhari:4522"
+      ],
+      "media_id": "18004381208825277",
+      "posted_at": "2026-10-28T21:57:23+00:00",
+      "theme": "duas from the Qur'an and Sunnah",
+      "slot": "2026-10-28_carousel",
+      "type": "carousel",
+      "stats": {
+        "reach": 3,
+        "views": 11,
+        "likes": 0,
+        "comments": 0,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "entry_id": "hadith:bukhari:6446",
+      "entry_ids": null,
+      "media_id": "18079442738409610",
+      "posted_at": "2026-10-29T00:34:35+00:00",
+      "theme": "contentment / richness of the soul",
+      "slot": "2026-10-28_reel-us",
+      "type": "reel",
+      "stats": {
+        "reach": 117,
+        "views": 154,
+        "likes": 4,
+        "comments": 0,
+        "saved": 0,
+        "shares": 1,
+        "total_interactions": 5
       }
     }
   ]
