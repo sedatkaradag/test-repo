@@ -1,4 +1,4 @@
-"""Weekly: pull performance numbers for recent posts into history/insights.json
+"""Nightly: pull performance numbers for recent posts into history/insights.json
 so the analyst run can learn which themes and times work. No AI here.
 
 Metric names change between API versions, so each metric is requested on its
@@ -15,7 +15,10 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 HISTORY = ROOT / "history" / "posted.jsonl"
 OUT = ROOT / "history" / "insights.json"
-MEDIA_METRICS = ["reach", "views", "likes", "comments", "saved", "shares", "total_interactions"]
+MEDIA_METRICS = ["reach", "views", "likes", "comments", "saved", "shares", "total_interactions",
+                 "follows", "profile_visits"]
+# Reels only: average watch time and total watch time (milliseconds).
+REEL_METRICS = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
 
 
 def get(base, path, token, **params):
@@ -39,14 +42,16 @@ def main():
                 if dt.datetime.fromisoformat(row["posted_at"]) >= cutoff:
                     posts.append(row)
 
+    unavailable = {}   # metric -> how many posts Instagram gave no value for (shown in the run's log)
     for row in posts:
         stats = {}
-        for m in MEDIA_METRICS:
+        metrics = MEDIA_METRICS + (REEL_METRICS if row.get("type") == "reel" else [])
+        for m in metrics:
             data = get(base, f"{row['media_id']}/insights", token, metric=m)
             try:
                 stats[m] = data["data"][0]["values"][0]["value"]
-            except (KeyError, IndexError):
-                pass
+            except (KeyError, IndexError, TypeError):
+                unavailable[m] = unavailable.get(m, 0) + 1
         row["stats"] = stats
 
     account = {}
@@ -61,9 +66,11 @@ def main():
     OUT.write_text(json.dumps({
         "fetched_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "account": account,
+        "unavailable_metrics": unavailable,
         "posts": posts,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"insights for {len(posts)} posts")
+    print(f"::notice::insights for {len(posts)} posts; no value from Instagram: {unavailable or 'none'}")
 
 
 if __name__ == "__main__":
