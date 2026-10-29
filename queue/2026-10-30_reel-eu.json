@@ -1,0 +1,79 @@
+{
+  "entry_id": "quran:50:16",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Qaaf 50:16",
+  "slot": "2026-10-30_reel-eu",
+  "publish_at": "2026-10-30T17:00:53Z",
+  "local_slot": "2026-10-30 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-30_reel-eu.jpg",
+  "video": "queue/2026-10-30_reel-eu.mp4",
+  "cover": "queue/2026-10-30_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Allah knows what your soul whispers\n\nAllah tells us He created man and knows what his soul whispers within him. The thoughts you keep to yourself are not hidden from Him.\n\nSurah Qaaf 50:16\n\nTurn tonight's overthinking into a quiet dua\n\n#overthinking #allahknows #innerpeace #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "We have created man and know what his soul whispers within him, for We are closer to him than his jugular vein (Surah Qaaf 50:16)",
+  "theme": "overthinking / Allah knows your inner thoughts",
+  "review": "approve r2 (r1 rejected caption wording 'He is closer'; revised): Arabic checked, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:50:16",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Allah knows what your soul whispers",
+    "hook_lines": [
+      "Allah knows what your soul",
+      "whispers"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "050016",
+        "lines": [
+          "وَلَقَدۡ خَلَقۡنَا ٱلۡإِنسَٰنَ وَنَعۡلَمُ مَا تُوَسۡوِسُ",
+          "بِهِۦ نَفۡسُهُۥۖ وَنَحۡنُ أَقۡرَبُ إِلَيۡهِ مِنۡ حَبۡلِ",
+          "ٱلۡوَرِيدِ ١٦"
+        ],
+        "y": 623.6,
+        "meal": [
+          "We have created man and know what his soul",
+          "whispers within him, for We are closer to him",
+          "than his jugular vein."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1121.6,
+    "cta": "Turn tonight's overthinking into a quiet dua",
+    "cta_lines": [
+      "Turn tonight's overthinking into a quiet dua"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Qaaf 50:16",
+    "ref_y": 1430.6,
+    "handle_y": 1482.6,
+    "full": "We have created man and know what his soul whispers within him, for We are closer to him than his jugular vein.",
+    "full_lines": [
+      "We have created man and know what his soul",
+      "whispers within him, for We are closer to him",
+      "than his jugular vein."
+    ],
+    "cta_y": 1334.6
+  },
+  "layout_hash": "b16e614541011a20d4bc9c8b",
+  "created_at": "2026-10-29T05:45:26+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "050016"
+    ],
+    "done": false
+  }
+}

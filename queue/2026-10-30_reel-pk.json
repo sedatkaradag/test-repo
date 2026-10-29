@@ -1,0 +1,81 @@
+{
+  "entry_id": "quran:7:23",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-A'raaf 7:23",
+  "slot": "2026-10-30_reel-pk",
+  "publish_at": "2026-10-30T15:26:55Z",
+  "local_slot": "2026-10-30 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-10-30_reel-pk.jpg",
+  "video": "queue/2026-10-30_reel-pk.mp4",
+  "cover": "queue/2026-10-30_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "When you have wronged yourself, say this\n\nAdam and his wife did not make excuses. They admitted they had wronged themselves, then asked their Lord for forgiveness and mercy.\n\nSurah Al-A'raaf 7:23\n\nSay these words tonight, and mean every one of them\n\n#tawbah #duaofadam #forgiveness #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "They said, “Our Lord, we have wronged ourselves; if You do not forgive us and have mercy upon us, we will surely be among the losers.” (Surah Al-A'raaf 7:23)",
+  "theme": "repentance / dua of Adam",
+  "review": "approve r1: Arabic checked on card and Reel, hook/closing match, within safe area",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:7:23",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "When you have wronged yourself, say this",
+    "hook_lines": [
+      "When you have wronged",
+      "yourself, say this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "007023",
+        "lines": [
+          "قَالَا رَبَّنَا ظَلَمۡنَآ أَنفُسَنَا وَإِن لَّمۡ تَغۡفِرۡ",
+          "لَنَا وَتَرۡحَمۡنَا لَنَكُونَنَّ مِنَ ٱلۡخَٰسِرِينَ ٢٣"
+        ],
+        "y": 634.4,
+        "meal": [
+          "They said, “Our Lord, we have wronged",
+          "ourselves; if You do not forgive us and have",
+          "mercy upon us, we will surely be among the",
+          "losers.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 976.4,
+    "cta": "Say these words tonight, and mean every one of them",
+    "cta_lines": [
+      "Say these words tonight, and mean every one",
+      "of them"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-A'raaf 7:23",
+    "ref_y": 1414.4,
+    "handle_y": 1466.4,
+    "full": "They said, “Our Lord, we have wronged ourselves; if You do not forgive us and have mercy upon us, we will surely be among the losers.”",
+    "full_lines": [
+      "They said, “Our Lord, we have wronged",
+      "ourselves; if You do not forgive us and have",
+      "mercy upon us, we will surely be among the",
+      "losers.”"
+    ],
+    "cta_y": 1252.4
+  },
+  "layout_hash": "6e87360eddc4455b08207877",
+  "created_at": "2026-10-29T05:44:04+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "007023"
+    ],
+    "done": false
+  }
+}

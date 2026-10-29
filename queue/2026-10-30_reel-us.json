@@ -1,0 +1,82 @@
+{
+  "entry_id": "hadith:tirmidhi:3467",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v2",
+  "reference": "Jami at-Tirmidhi 3467",
+  "slot": "2026-10-30_reel-us",
+  "publish_at": "2026-10-31T00:26:21Z",
+  "local_slot": "2026-10-30 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-10-30_reel-us.jpg",
+  "video": "queue/2026-10-30_reel-us.mp4",
+  "cover": "queue/2026-10-30_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Light on the tongue, heavy on the Scale\n\nThe Prophet ﷺ named two short phrases glorifying Allah that are light on the tongue, heavy on the Scale, and beloved to the Most Merciful. They take only seconds to say.\n\nJami at-Tirmidhi 3467 · Grade: Sahih\n\nSay both before you put your phone down tonight\n\n#dhikr #subhanallah #easydeeds #hadithreels",
+  "alt_text": "Abu Hurairah narrated that:The Messenger of Allah (ﷺ) said: “There are two statements that are light on the tongue, heavy on the Scale, and beloved to Ar-Raḥmān: “Glory is to Allah and the praise; Glory is to Allah, the Magnificent. (Subḥān Allāhi wa biḥamdih, Subḥān Allāhil-Aẓīm)” (Jami at-Tirmidhi 3467)",
+  "theme": "dhikr / two light phrases",
+  "review": "approve r1: English matches, narrator and grade correct, Reel frame OK",
+  "flags": [
+    "hadith:tirmidhi:3467: check these words are correct transliterations, not typos: amdih, hil"
+  ],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "hadith",
+    "entry_id": "hadith:tirmidhi:3467",
+    "label": "HADITH",
+    "hook": "Light on the tongue, heavy on the Scale",
+    "hook_lines": [
+      "Light on the tongue, heavy",
+      "on the Scale"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Abu Hurairah narrated that: The Messenger of Allah (ﷺ) said:"
+    ],
+    "lead_size": 34,
+    "lead_y": 631.0,
+    "text_size": 50,
+    "phrases": [
+      {
+        "lines": [
+          "“There are two statements that are light on the",
+          "tongue,"
+        ],
+        "y": 713.0
+      },
+      {
+        "lines": [
+          "heavy on the Scale, and beloved to Ar-Raḥmān:"
+        ],
+        "y": 871.0
+      },
+      {
+        "lines": [
+          "“Glory is to Allah and the praise; Glory is to",
+          "Allah, the Magnificent."
+        ],
+        "y": 960.0
+      },
+      {
+        "lines": [
+          "(Subḥān Allāhi wa biḥamdih, Subḥān",
+          "Allāhil-Aẓīm)””"
+        ],
+        "y": 1118.0
+      }
+    ],
+    "cta": "Say both before you put your phone down tonight",
+    "cta_lines": [
+      "Say both before you put your phone down",
+      "tonight"
+    ],
+    "cta_size": 48,
+    "cta_y": 1296.0,
+    "ref": "Jami at-Tirmidhi 3467 · Grade: Sahih",
+    "ref_y": 1468.0,
+    "handle_y": 1520.0
+  },
+  "layout_hash": "2d5b7a4f090e815eaa1d0169",
+  "created_at": "2026-10-29T05:44:48+00:00"
+}
