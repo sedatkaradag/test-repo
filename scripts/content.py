@@ -226,3 +226,16 @@ def split_narrator(text):
     if p:
         narrator, body = f"{narrator} {p.group(1)}", p.group(2)
     return narrator, body
+
+
+def reel_story_on(cfg, item):
+    """Does this Reel also go out as a Story? From config reels.stories_from: a UTC time
+    (e.g. 2026-10-29T21:00:00Z, compared with the Reel's publish time) or a plain date."""
+    start = str((cfg.get("reels") or {}).get("stories_from") or "")
+    if not start:
+        return False
+    if "T" in start:
+        import datetime as _dt
+        p = lambda s: _dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+        return p(item["publish_at"]) >= p(start)
+    return str(item.get("slot", ""))[:10] >= start

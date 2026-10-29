@@ -14,6 +14,9 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from content import reel_story_on  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 FIELDS = ["slot", "entry_id", "type", "reference", "publish_at", "local_slot", "status",
           "theme", "caption", "review", "error", "media_id", "posted_at", "audio", "story_audio", "story_kind"]
@@ -29,8 +32,7 @@ def main(out):
         if item.get("type") == "story" and item.get("source_slot"):
             continue   # shown as the Story of its post (source row: story_video_url, story_audio)
         row = {k: item[k] for k in FIELDS if k in item}
-        story_from = str(((cfg.get("reels") or {}).get("stories_from")) or "")
-        if item.get("type") == "reel" and story_from and str(item.get("slot", ""))[:10] >= story_from:
+        if item.get("type") == "reel" and item.get("publish_at") and reel_story_on(cfg, item):
             row["story_planned"] = bool(cfg.get("stories", True))   # the same video goes out as a Story
         (out / "queue" / f"{p.stem}.json").write_text(json.dumps(row, ensure_ascii=False), encoding="utf-8")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))

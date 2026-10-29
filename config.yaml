@@ -37,9 +37,9 @@ dry_run: false
 reels:
   enabled: true
   trial: false
-  # Bu tarihten itibaren her Reels yayınlanınca aynı video Story olarak da paylaşılır
-  # (60 saniyeden uzunsa Story atlanır; Reels hiçbir durumda etkilenmez).
-  stories_from: "2026-10-30"
+  # Bu andan itibaren (UTC; 30 Ekim 2026 00:00 İstanbul) her Reels yayınlanınca aynı video Story
+  # olarak da paylaşılır (60 saniyeden uzunsa Story atlanır; Reels hiçbir durumda etkilenmez).
+  stories_from: "2026-10-29T21:00:00Z"
   # Ayet Reels'lerinde ve ayet gönderilerinin Story'sinde o ayetlerin tilaveti ses olarak eklenir
   # (müzik yok); caption'ın en altına "Recitation: <ad>" yazılır. Kâriler ağırlıklı sırayla döner:
   # `weight` ne kadar yüksekse o kadar sık (son 30 tilavetteki payı ağırlığına göre), aynı kâri art

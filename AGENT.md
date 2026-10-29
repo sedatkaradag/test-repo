@@ -240,7 +240,11 @@ cd scripts
      `layout_hash` kanıtlar; değilse önizleme sese göre uzatılır (`audio.timing`'de yazar).
      Atanan kâride ayet yoksa sıradaki kâriler denenir; hiçbirinde yoksa Reels sessiz çıkar ve
      "Recitation" satırı silinir. Sesi eklenmemiş ayet Reels'i yayınlanmaz. Hadis Reels'leri sessizdir.
-7e. **Reels'in Story'si:** `config.yaml` → `reels.stories_from` tarihinden itibaren yayıncı her Reels'i
+7f. **Kâri kaydı:** Yayıncı her paylaşımı `history/posted.jsonl`'a yazarken o ayetle birlikte giden
+   tilaveti de yazar (`recitation`: `reciter`, `reciter_name`, `on`: reel / story). Sessiz içeriklerde bu
+   alan yoktur. İleride aynı ayeti başka bir kâriyle tekrar paylaşmak gündeme gelirse bu kayda bakılır;
+   şimdilik tekrar kuralı (365 gün) kâriden bağımsız geçerlidir.
+7e. **Reels'in Story'si:** `config.yaml` → `reels.stories_from` anından (UTC) itibaren yayıncı her Reels'i
    paylaştıktan hemen sonra aynı videoyu Story olarak da paylaşır; ayrı çizim ya da denetim gerekmez.
    Video 60 saniyeden uzunsa ya da Story reddedilirse Story atlanır (`story_error`), Reels etkilenmez.
 7d. **Ayet gönderilerinin Story'si** (yalnızca sahibinin istediği fotoğraf gönderileri için): `enqueue.py add` ayet gönderileri için Story'yi kendiliğinden

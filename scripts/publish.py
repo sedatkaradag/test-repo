@@ -22,6 +22,9 @@ from pathlib import Path
 import requests
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from content import reel_story_on  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE = ROOT / "queue"
 HISTORY = ROOT / "history" / "posted.jsonl"
@@ -129,6 +132,18 @@ class Instagram:
             raise RuntimeError(f"container {c} never finished")
 
 
+def recitation_of(item):
+    """The recitation that went out with this item: the Reel's own audio, or a verse post's
+    recitation Story. None for silent items."""
+    au = item.get("audio") or {}
+    if item.get("type") in ("reel", "story") and au.get("done"):
+        return {"reciter": au.get("reciter"), "reciter_name": au.get("reciter_name"), "on": item["type"]}
+    sa = item.get("story_audio") or {}
+    if item.get("story_kind") == "video" and sa.get("done"):
+        return {"reciter": sa.get("reciter"), "reciter_name": sa.get("reciter_name"), "on": "story"}
+    return None
+
+
 def due_items():
     items = []
     for p in sorted(QUEUE.glob("*.json")):
@@ -223,9 +238,8 @@ def main():
                 telegram(f"✅ Posted {item['reference']} ({item['entry_id']})")
                 # A Reel also goes out as a Story: the same video (config reels.stories_from on).
                 # A failed or skipped Story never fails the Reel.
-                story_from = str((cfg.get("reels") or {}).get("stories_from") or "")
                 if (cfg.get("stories", True) and item.get("type") == "reel" and item.get("video")
-                        and story_from and str(item.get("slot", ""))[:10] >= story_from):
+                        and reel_story_on(cfg, item)):
                     secs = float((item.get("audio") or {}).get("video_seconds") or 0)
                     if secs > 60:
                         item["story_error"] = f"video is {secs:.0f}s; Instagram Stories take at most 60s"
@@ -266,7 +280,8 @@ def main():
                     f.write(json.dumps({"entry_id": item["entry_id"], "entry_ids": item.get("entry_ids"),
                                         "media_id": media_id,
                                         "posted_at": item["posted_at"], "theme": item.get("theme", ""),
-                                        "slot": item.get("slot", ""), "type": item["type"]},
+                                        "slot": item.get("slot", ""), "type": item["type"],
+                                        **({"recitation": recitation_of(item)} if recitation_of(item) else {})},
                                        ensure_ascii=False) + "\n")
         except Exception as e:  # noqa: BLE001
             item["status"] = "failed"
