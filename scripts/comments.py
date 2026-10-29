@@ -86,11 +86,14 @@ def fetch():
                       fields="id,timestamp,permalink,comments_count", limit=50).get("data", [])
     cutoff = now() - LOOKBACK
     new = []
+    print(f"::notice::DIAG me={me} media={len(media)} newest={media[0]['timestamp'] if media else '-'} oldest={media[-1]['timestamp'] if media else '-'}")
+    print("::notice::DIAG with comments_count: " + ", ".join(f"{m['id']}:{m.get('comments_count')}:{m['timestamp'][:16]}" for m in media if m.get("comments_count")))
     for m in media:
         if parse(m["timestamp"]) < cutoff or not m.get("comments_count"):
             continue
         rows = api._call("GET", f"{m['id']}/comments", limit=50,
                          fields="id,text,username,timestamp,replies{id,text,username,timestamp}").get("data", [])
+        print(f"::notice::DIAG media {m['id']} comments_count={m.get('comments_count')} returned={len(rows)} own={sum(1 for c in rows if c.get('username') == me)} ts={[c.get('timestamp','')[:16] for c in rows]}")
         for c in rows:
             if c.get("username") == me:
                 continue
@@ -115,7 +118,7 @@ def fetch():
     DIR.mkdir(exist_ok=True)
     INBOX.write_text(json.dumps(inbox, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(f"{len(new)} new comment(s), {len(inbox)} in inbox")
-    commit(f"comments: {len(new)} new")
+    print(f"::notice::DIAG result {len(new)} new, {len(inbox)} in inbox")
 
 
 def send():
