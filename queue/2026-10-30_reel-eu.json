@@ -17,7 +17,7 @@
   "review": "approve r2 (r1 rejected caption wording 'He is closer'; revised): Arabic checked, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -74,6 +74,15 @@
     "ayahs": [
       "050016"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 10.3,
+    "video_seconds": 13.5,
+    "verse_seconds": [
+      10.29
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-29T05:46:54+00:00"
   }
 }

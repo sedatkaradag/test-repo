@@ -14,7 +14,16 @@
     "ayahs": [
       "033056"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 16.9,
+    "video_seconds": 18.9,
+    "verse_seconds": [
+      16.86
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-29T05:46:04+00:00"
   },
   "story_layout": {
     "template": "v2",

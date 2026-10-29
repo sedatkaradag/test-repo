@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic checked on card and Reel, hook/closing match, within safe area",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -76,6 +76,15 @@
     "ayahs": [
       "007023"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 17.6,
+    "video_seconds": 20.8,
+    "verse_seconds": [
+      17.63
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-29T05:47:30+00:00"
   }
 }
