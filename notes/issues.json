@@ -118,5 +118,15 @@
     "opened_at": "2026-10-27T05:50:45Z",
     "closed_at": "2026-10-27T18:03:30Z",
     "resolution": "Gerçek bir sorun değil, sistem doğru çalışmış: denetçi carousel'deki iki ayeti tek başına eksik bulup reddetti, set değiştirildi ve ikinci turda onaylandı. Ret Denetim kayıtlarında zaten görünüyor. AGENT.md güncellendi: aynı çalışmada çözülen denetçi retleri artık açık sorun olarak kaydedilmiyor."
+  },
+  {
+    "id": "S-011",
+    "kind": "code",
+    "title": "insights.py takip (follows) ve Reels izlenme süresi metriklerini çekmiyor",
+    "detail": "MEDIA_METRICS yalnızca reach, views, likes, comments, saved, shares, total_interactions. Gönderi başına follows ile Reels için ig_reels_avg_watch_time ve ig_reels_video_view_total_time istenmiyor; bu yüzden format karşılaştırmasında takip ve izlenme süresi ölçülemedi. Öneri: bu metrikleri MEDIA_METRICS'e ekle (eksik olanlar zaten atlanıyor).",
+    "ref": "scripts/insights.py",
+    "source": "Analist, 2026-10-29",
+    "status": "open",
+    "opened_at": "2026-10-29T19:10:17Z"
   }
 ]
