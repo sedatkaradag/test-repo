@@ -77,8 +77,23 @@ def commit(msg):
     raise RuntimeError("git push failed")
 
 
+def diag(api, mid):
+    for label, path, params in [
+        ("edge-nofields", f"{mid}/comments", {}),
+        ("edge-hidden", f"{mid}/comments", {"fields": "id,text,username,timestamp,hidden,like_count"}),
+        ("field-expansion", mid, {"fields": "media_type,media_product_type,comments_count,comments{id,text,username,timestamp,hidden}"}),
+    ]:
+        try:
+            r = api._call("GET", path, **params)
+            r.pop("paging", None)
+            print(f"::notice::DIAG2 {label}: {json.dumps(r)[:600]}")
+        except Exception as e:  # noqa: BLE001
+            print(f"::notice::DIAG2 {label} ERROR: {str(e)[:600]}")
+
+
 def fetch():
     api = ig()
+    diag(api, "18439342606196774")
     me = api._call("GET", "me", fields="username")["username"]
     inbox = load_json(INBOX, {})
     refs = post_refs()
