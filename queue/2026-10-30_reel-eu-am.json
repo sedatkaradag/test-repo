@@ -1,0 +1,81 @@
+{
+  "entry_id": "quran:33:56",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Ahzaab 33:56",
+  "slot": "2026-10-30_reel-eu-am",
+  "publish_at": "2026-10-30T07:16:20Z",
+  "local_slot": "2026-10-30 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-30_reel-eu-am.jpg",
+  "video": "queue/2026-10-30_reel-eu-am.mp4",
+  "cover": "queue/2026-10-30_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Allah and His angels do this. Will you?\n\nAllah sends His blessings upon the Prophet ﷺ and His angels pray for him. Then He calls the believers to do the same. Fill this Friday with blessings on him.\n\nSurah Al-Ahzaab 33:56\n\nSend blessings on him now, then pass this on to a friend\n\n#jumuah #salawat #durood #quranreels\n\nRecitation: Ahmed Al-Ajmi",
+  "alt_text": "Indeed, Allah sends His blessings upon the Prophet, and His angels pray for him. O you who believe, invoke Allah’s blessings upon him, and send him greetings of peace (Surah Al-Ahzaab 33:56)",
+  "theme": "Friday / sending salawat on the Prophet",
+  "review": "approve r1: Arabic checked mark by mark on card and Reel frame, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:33:56",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Allah and His angels do this. Will you?",
+    "hook_lines": [
+      "Allah and His angels do this.",
+      "Will you?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 70,
+    "verses": [
+      {
+        "ayah": "033056",
+        "lines": [
+          "إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِيِّۚ يَٰٓأَيُّهَا",
+          "ٱلَّذِينَ ءَامَنُواْ صَلُّواْ عَلَيۡهِ وَسَلِّمُواْ تَسۡلِيمًا ٥٦"
+        ],
+        "y": 650.4,
+        "meal": [
+          "Indeed, Allah sends His blessings upon the",
+          "Prophet, and His angels pray for him. O you",
+          "who believe, invoke Allah’s blessings upon him,",
+          "and send him greetings of peace."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 952.4,
+    "cta": "Send blessings on him now, then pass this on to a friend",
+    "cta_lines": [
+      "Send blessings on him now, then pass this on",
+      "to a friend"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Ahzaab 33:56",
+    "ref_y": 1390.4,
+    "handle_y": 1442.4,
+    "full": "Indeed, Allah sends His blessings upon the Prophet, and His angels pray for him. O you who believe, invoke Allah’s blessings upon him, and send him greetings of peace.",
+    "full_lines": [
+      "Indeed, Allah sends His blessings upon the",
+      "Prophet, and His angels pray for him. O you",
+      "who believe, invoke Allah’s blessings upon him,",
+      "and send him greetings of peace."
+    ],
+    "cta_y": 1228.4
+  },
+  "layout_hash": "ff7ec214589e0a199882d4f8",
+  "created_at": "2026-10-29T17:30:22+00:00",
+  "audio": {
+    "reciter": "ahmed_ibn_ali_al_ajamy_128kbps",
+    "reciter_name": "Ahmed Al-Ajmi",
+    "ayahs": [
+      "033056"
+    ],
+    "done": false
+  }
+}
