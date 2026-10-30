@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English/reference match, Reel frame OK",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -73,6 +73,15 @@
     "ayahs": [
       "016018"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 11.2,
+    "video_seconds": 14.4,
+    "verse_seconds": [
+      11.18
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-10-30T05:46:21+00:00"
   }
 }
