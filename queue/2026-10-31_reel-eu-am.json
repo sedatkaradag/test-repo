@@ -1,0 +1,78 @@
+{
+  "entry_id": "quran:16:18",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah An-Nahl 16:18",
+  "slot": "2026-10-31_reel-eu-am",
+  "publish_at": "2026-10-31T07:10:47Z",
+  "local_slot": "2026-10-31 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-10-31_reel-eu-am.jpg",
+  "video": "queue/2026-10-31_reel-eu-am.mp4",
+  "cover": "queue/2026-10-31_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Try counting your blessings before breakfast\n\nAllah says that if you try to count His favors, you will not be able to enumerate them. And He is All-Forgiving, Most Merciful. Start the day by noticing a few of them.\n\nSurah An-Nahl 16:18\n\nName three blessings you woke up with today\n\n#gratitude #shukr #countyourblessings #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "If you try to count Allah’s favors, you will not be able to enumerate them. Indeed, Allah is All-Forgiving, Most Merciful (Surah An-Nahl 16:18)",
+  "theme": "gratitude / countless favors of Allah",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English/reference match, Reel frame OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:16:18",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Try counting your blessings before breakfast",
+    "hook_lines": [
+      "Try counting your blessings",
+      "before breakfast"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "016018",
+        "lines": [
+          "وَإِن تَعُدُّواْ نِعۡمَةَ ٱللَّهِ لَا تُحۡصُوهَآۗ إِنَّ",
+          "ٱللَّهَ لَغَفُورٞ رَّحِيمٞ ١٨"
+        ],
+        "y": 686.0,
+        "meal": [
+          "If you try to count Allah’s favors, you will not be",
+          "able to enumerate them. Indeed, Allah is",
+          "All-Forgiving, Most Merciful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1028.0,
+    "cta": "Name three blessings you woke up with today",
+    "cta_lines": [
+      "Name three blessings you woke up with today"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah An-Nahl 16:18",
+    "ref_y": 1337.0,
+    "handle_y": 1389.0,
+    "full": "If you try to count Allah’s favors, you will not be able to enumerate them. Indeed, Allah is All-Forgiving, Most Merciful.",
+    "full_lines": [
+      "If you try to count Allah’s favors, you will not be",
+      "able to enumerate them. Indeed, Allah is",
+      "All-Forgiving, Most Merciful."
+    ],
+    "cta_y": 1241.0
+  },
+  "layout_hash": "afbc0b4dad938c40e7ca8a87",
+  "created_at": "2026-10-30T05:43:36+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "016018"
+    ],
+    "done": false
+  }
+}

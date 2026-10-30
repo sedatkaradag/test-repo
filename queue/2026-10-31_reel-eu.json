@@ -1,0 +1,86 @@
+{
+  "entry_id": "quran:49:13",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Hujuraat 49:13",
+  "slot": "2026-10-31_reel-eu",
+  "publish_at": "2026-10-31T17:02:24Z",
+  "local_slot": "2026-10-31 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-10-31_reel-eu.jpg",
+  "video": "queue/2026-10-31_reel-eu.mp4",
+  "cover": "queue/2026-10-31_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Real honor is not about where you come from\n\nAllah created us from a male and a female and made us nations and tribes so that we may recognize one another. The most noble before Him is the most righteous, and He is All-Knowing, All-Aware.\n\nSurah Al-Hujuraat 49:13\n\nSend this to a friend from a different background\n\n#equalityinislam #unity #righteousness #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "O mankind, We have created you from a male and a female, and made you into nations and tribes so that you may recognize one another. Indeed, the most noble of you before Allah is the most righteous among you. Indeed, Allah is All-Knowing, All-Aware (Surah Al-Hujuraat 49:13)",
+  "theme": "equality / honor is in righteousness",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English/reference match, Reel frame OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:49:13",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Real honor is not about where you come from",
+    "hook_lines": [
+      "Real honor is not about",
+      "where you come from"
+    ],
+    "hook_size": 82,
+    "arabic_size": 48,
+    "verses": [
+      {
+        "ayah": "049013",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقۡنَٰكُم مِّن ذَكَرٖ وَأُنثَىٰ وَجَعَلۡنَٰكُمۡ شُعُوبٗا",
+          "وَقَبَآئِلَ لِتَعَارَفُوٓاْۚ إِنَّ أَكۡرَمَكُمۡ عِندَ ٱللَّهِ أَتۡقَىٰكُمۡۚ إِنَّ ٱللَّهَ عَلِيمٌ",
+          "خَبِيرٞ ١٣"
+        ],
+        "y": 597.2,
+        "meal": [
+          "O mankind, We have created you from a male",
+          "and a female, and made you into nations and",
+          "tribes so that you may recognize one another.",
+          "Indeed, the most noble of you before Allah is the",
+          "most righteous among you. Indeed, Allah is",
+          "All-Knowing, All-Aware."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 906.2,
+    "cta": "Send this to a friend from a different background",
+    "cta_lines": [
+      "Send this to a friend from a different",
+      "background"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Hujuraat 49:13",
+    "ref_y": 1470.2,
+    "handle_y": 1522.2,
+    "full": "O mankind, We have created you from a male and a female, and made you into nations and tribes so that you may recognize one another. Indeed, the most noble of you before Allah is the most righteous among you. Indeed, Allah is All-Knowing, All-Aware.",
+    "full_lines": [
+      "O mankind, We have created you from a male",
+      "and a female, and made you into nations and",
+      "tribes so that you may recognize one another.",
+      "Indeed, the most noble of you before Allah is the",
+      "most righteous among you. Indeed, Allah is",
+      "All-Knowing, All-Aware."
+    ],
+    "cta_y": 1308.2
+  },
+  "layout_hash": "ed0c3130c90fcc65847bd238",
+  "created_at": "2026-10-30T05:44:52+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "049013"
+    ],
+    "done": false
+  }
+}

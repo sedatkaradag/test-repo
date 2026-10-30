@@ -1,0 +1,62 @@
+{
+  "entry_id": "hadith:muslim:6643",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v2",
+  "reference": "Sahih Muslim 6643",
+  "slot": "2026-10-31_reel-us",
+  "publish_at": "2026-11-01T00:29:58Z",
+  "local_slot": "2026-10-31 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-10-31_reel-us.jpg",
+  "video": "queue/2026-10-31_reel-us.mp4",
+  "cover": "queue/2026-10-31_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "What real strength looks like when you are angry\n\nThe Prophet ﷺ said the strong man is not the one who wrestles well, but the one who controls himself in a fit of rage. The next time anger rises, that moment is your real test of strength.\n\nSahih Muslim 6643 · Grade: Sahih\n\nName the one trigger you want to master this week\n\n#anger #selfcontrol #innerstrength #hadithreels",
+  "alt_text": "Abu Huraira reported Allah's Messenger (ﷺ) as saying:The strong-man is not one who wrestles well but the strong man is one who controls himself when he is in a fit of rage (Sahih Muslim 6643)",
+  "theme": "anger / self-control",
+  "review": "Independent verifier approved: source text, narrator, reference and grade correct, Reel frame OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "hadith",
+    "entry_id": "hadith:muslim:6643",
+    "label": "HADITH",
+    "hook": "What real strength looks like when you are angry",
+    "hook_lines": [
+      "What real strength looks like",
+      "when you are angry"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Abu Huraira reported Allah’s Messenger (ﷺ) as saying:"
+    ],
+    "lead_size": 34,
+    "lead_y": 716.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "The strong-man is not one who",
+          "wrestles well but the strong man is",
+          "one who controls himself when he",
+          "is in a fit of rage."
+        ],
+        "y": 798.5
+      }
+    ],
+    "cta": "Name the one trigger you want to master this week",
+    "cta_lines": [
+      "Name the one trigger you want to master this",
+      "week"
+    ],
+    "cta_size": 48,
+    "cta_y": 1210.5,
+    "ref": "Sahih Muslim 6643 · Grade: Sahih",
+    "ref_y": 1382.5,
+    "handle_y": 1434.5
+  },
+  "layout_hash": "7237153f7c99e42412560c5e",
+  "created_at": "2026-10-30T05:45:44+00:00"
+}

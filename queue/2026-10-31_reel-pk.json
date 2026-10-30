@@ -1,0 +1,82 @@
+{
+  "entry_id": "quran:59:18",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Hashr 59:18",
+  "slot": "2026-10-31_reel-pk",
+  "publish_at": "2026-10-31T15:34:17Z",
+  "local_slot": "2026-10-31 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-10-31_reel-pk.jpg",
+  "video": "queue/2026-10-31_reel-pk.mp4",
+  "cover": "queue/2026-10-31_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Tonight's self-reflection: what did you send ahead?\n\nAllah calls the believers to be mindful of Him and to let every soul consider what it has sent forth for tomorrow. He is All-Aware of what we do. Look back at today, then make tomorrow count.\n\nSurah Al-Hashr 59:18\n\nName one deed from today you want to send ahead\n\n#selfreflection #muhasabah #taqwa #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "O you who believe, fear Allah, and let every soul consider what it has sent forth for tomorrow. And fear Allah. Indeed, Allah is All-Aware of what you do (Surah Al-Hashr 59:18)",
+  "theme": "self-reflection / preparing for tomorrow",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English/reference match, Reel frame OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:59:18",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Tonight's self-reflection: what did you send ahead?",
+    "hook_lines": [
+      "Tonight's self-reflection:",
+      "what did you send ahead?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 70,
+    "verses": [
+      {
+        "ayah": "059018",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَلۡتَنظُرۡ نَفۡسٞ",
+          "مَّا قَدَّمَتۡ لِغَدٖۖ وَٱتَّقُواْ ٱللَّهَۚ إِنَّ ٱللَّهَ خَبِيرُۢ بِمَا",
+          "تَعۡمَلُونَ ١٨"
+        ],
+        "y": 596.0,
+        "meal": [
+          "O you who believe, fear Allah, and let every soul",
+          "consider what it has sent forth for tomorrow.",
+          "And fear Allah. Indeed, Allah is All-Aware of",
+          "what you do."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1034.0,
+    "cta": "Name one deed from today you want to send ahead",
+    "cta_lines": [
+      "Name one deed from today you want to send",
+      "ahead"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Hashr 59:18",
+    "ref_y": 1472.0,
+    "handle_y": 1524.0,
+    "full": "O you who believe, fear Allah, and let every soul consider what it has sent forth for tomorrow. And fear Allah. Indeed, Allah is All-Aware of what you do.",
+    "full_lines": [
+      "O you who believe, fear Allah, and let every soul",
+      "consider what it has sent forth for tomorrow.",
+      "And fear Allah. Indeed, Allah is All-Aware of",
+      "what you do."
+    ],
+    "cta_y": 1310.0
+  },
+  "layout_hash": "0dd4a946603ea012c4dfc0e7",
+  "created_at": "2026-10-30T05:44:12+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "059018"
+    ],
+    "done": false
+  }
+}
