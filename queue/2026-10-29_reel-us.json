@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: source English, narrator matches, hook and closing line exact, layout OK",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "hadith",
@@ -68,5 +68,9 @@
     "handle_y": 1468.0
   },
   "layout_hash": "375314a11dea93f4d8ad43a6",
-  "created_at": "2026-10-28T05:45:49+00:00"
+  "created_at": "2026-10-28T05:45:49+00:00",
+  "story_media_id": "18135796822736275",
+  "story_kind": "video",
+  "media_id": "18023732054927027",
+  "posted_at": "2026-10-30T00:27:27+00:00"
 }
