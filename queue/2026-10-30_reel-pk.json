@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic checked on card and Reel, hook/closing match, within safe area",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
