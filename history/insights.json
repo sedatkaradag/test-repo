@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-10-29T19:23:34+00:00",
+  "fetched_at": "2026-10-30T02:10:29+00:00",
   "account": {
-    "followers_count": 90,
-    "media_count": 49,
+    "followers_count": 93,
+    "media_count": 50,
     "online_followers_by_utc_hour": null
   },
   "unavailable_metrics": {
@@ -13,8 +13,8 @@
     "saved": 2,
     "shares": 2,
     "total_interactions": 2,
-    "follows": 17,
-    "profile_visits": 17,
+    "follows": 18,
+    "profile_visits": 18,
     "ig_reels_avg_watch_time": 1,
     "ig_reels_video_view_total_time": 1
   },
@@ -519,8 +519,8 @@
         "saved": 1,
         "shares": 1,
         "total_interactions": 5,
-        "ig_reels_avg_watch_time": 3088,
-        "ig_reels_video_view_total_time": 698088
+        "ig_reels_avg_watch_time": 3081,
+        "ig_reels_video_view_total_time": 699481
       }
     },
     {
@@ -652,8 +652,8 @@
         "on": "story"
       },
       "stats": {
-        "reach": 4,
-        "views": 5,
+        "reach": 5,
+        "views": 6,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -827,8 +827,8 @@
       "slot": "2026-10-27_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 7,
-        "views": 10,
+        "reach": 8,
+        "views": 12,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -852,15 +852,15 @@
         "on": "reel"
       },
       "stats": {
-        "reach": 1316,
-        "views": 1515,
+        "reach": 1317,
+        "views": 1516,
         "likes": 203,
         "comments": 0,
         "saved": 22,
         "shares": 16,
         "total_interactions": 249,
-        "ig_reels_avg_watch_time": 9944,
-        "ig_reels_video_view_total_time": 13096649
+        "ig_reels_avg_watch_time": 9954,
+        "ig_reels_video_view_total_time": 13120272
       }
     },
     {
@@ -942,8 +942,8 @@
       "slot": "2026-10-28_us-morning",
       "type": "hadith",
       "stats": {
-        "reach": 6,
-        "views": 8,
+        "reach": 7,
+        "views": 14,
         "likes": 0,
         "comments": 0,
         "saved": 0,
@@ -968,14 +968,14 @@
       },
       "stats": {
         "reach": 1782,
-        "views": 2072,
+        "views": 2074,
         "likes": 204,
         "comments": 0,
         "saved": 21,
         "shares": 5,
         "total_interactions": 235,
-        "ig_reels_avg_watch_time": 5460,
-        "ig_reels_video_view_total_time": 10013754
+        "ig_reels_avg_watch_time": 5455,
+        "ig_reels_video_view_total_time": 10016698
       }
     },
     {
@@ -992,15 +992,15 @@
         "on": "reel"
       },
       "stats": {
-        "reach": 2591,
-        "views": 2977,
-        "likes": 347,
+        "reach": 2612,
+        "views": 3001,
+        "likes": 349,
         "comments": 2,
         "saved": 25,
         "shares": 15,
-        "total_interactions": 398,
-        "ig_reels_avg_watch_time": 5876,
-        "ig_reels_video_view_total_time": 15378189
+        "total_interactions": 400,
+        "ig_reels_avg_watch_time": 5840,
+        "ig_reels_video_view_total_time": 15430691
       }
     },
     {
@@ -1037,15 +1037,15 @@
       "slot": "2026-10-28_reel-us",
       "type": "reel",
       "stats": {
-        "reach": 285,
-        "views": 319,
+        "reach": 293,
+        "views": 328,
         "likes": 9,
         "comments": 0,
         "saved": 0,
         "shares": 1,
-        "total_interactions": 11,
-        "ig_reels_avg_watch_time": 3685,
-        "ig_reels_video_view_total_time": 1046794
+        "total_interactions": 12,
+        "ig_reels_avg_watch_time": 3708,
+        "ig_reels_video_view_total_time": 1082863
       }
     },
     {
@@ -1107,15 +1107,15 @@
         "on": "reel"
       },
       "stats": {
-        "reach": 192,
-        "views": 238,
-        "likes": 25,
+        "reach": 242,
+        "views": 298,
+        "likes": 30,
         "comments": 0,
         "saved": 4,
         "shares": 1,
-        "total_interactions": 32,
-        "ig_reels_avg_watch_time": 5889,
-        "ig_reels_video_view_total_time": 1154272
+        "total_interactions": 37,
+        "ig_reels_avg_watch_time": 6245,
+        "ig_reels_video_view_total_time": 1555123
       }
     },
     {
@@ -1132,15 +1132,35 @@
         "on": "reel"
       },
       "stats": {
-        "reach": 398,
-        "views": 500,
-        "likes": 34,
+        "reach": 1499,
+        "views": 1759,
+        "likes": 159,
         "comments": 0,
-        "saved": 5,
+        "saved": 25,
+        "shares": 9,
+        "total_interactions": 203,
+        "ig_reels_avg_watch_time": 8646,
+        "ig_reels_video_view_total_time": 12901252
+      }
+    },
+    {
+      "entry_id": "hadith:bukhari:6412",
+      "entry_ids": null,
+      "media_id": "18023732054927027",
+      "posted_at": "2026-10-30T00:27:27+00:00",
+      "theme": "health and free time",
+      "slot": "2026-10-29_reel-us",
+      "type": "reel",
+      "stats": {
+        "reach": 195,
+        "views": 230,
+        "likes": 9,
+        "comments": 0,
+        "saved": 3,
         "shares": 0,
-        "total_interactions": 42,
-        "ig_reels_avg_watch_time": 6407,
-        "ig_reels_video_view_total_time": 2537506
+        "total_interactions": 12,
+        "ig_reels_avg_watch_time": 3334,
+        "ig_reels_video_view_total_time": 650267
       }
     }
   ]
