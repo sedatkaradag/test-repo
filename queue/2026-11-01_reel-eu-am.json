@@ -1,0 +1,76 @@
+{
+  "entry_id": "quran:47:7",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Muhammad 47:7",
+  "slot": "2026-11-01_reel-eu-am",
+  "publish_at": "2026-11-01T07:19:04Z",
+  "local_slot": "2026-11-01 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-01_reel-eu-am.jpg",
+  "video": "queue/2026-11-01_reel-eu-am.mp4",
+  "cover": "queue/2026-11-01_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Want Allah's help to stay steadfast today?\n\nAllah promises the believers that if they stand up for Him, He will help them and make their steps firm. Start this morning by putting Him first.\n\nSurah Muhammad 47:7\n\nPick one small way to stand up for Allah today\n\n#steadfast #istiqamah #morningreminder #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "O you who believe, if you stand up for Allah, He will help you and make your steps firm (Surah Muhammad 47:7)",
+  "theme": "steadfastness / Allah makes your steps firm",
+  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:47:7",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Want Allah's help to stay steadfast today?",
+    "hook_lines": [
+      "Want Allah's help to stay",
+      "steadfast today?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "047007",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓاْ إِن تَنصُرُواْ ٱللَّهَ",
+          "يَنصُرۡكُمۡ وَيُثَبِّتۡ أَقۡدَامَكُمۡ ٧"
+        ],
+        "y": 711.2,
+        "meal": [
+          "O you who believe, if you stand up for Allah, He",
+          "will help you and make your steps firm."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1053.2,
+    "cta": "Pick one small way to stand up for Allah today",
+    "cta_lines": [
+      "Pick one small way to stand up for Allah today"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Muhammad 47:7",
+    "ref_y": 1299.2,
+    "handle_y": 1351.2,
+    "full": "O you who believe, if you stand up for Allah, He will help you and make your steps firm.",
+    "full_lines": [
+      "O you who believe, if you stand up for Allah, He",
+      "will help you and make your steps firm."
+    ],
+    "cta_y": 1203.2
+  },
+  "layout_hash": "c31ced7cb7da773d482ae5c4",
+  "created_at": "2026-10-31T05:42:48+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "047007"
+    ],
+    "done": false
+  }
+}

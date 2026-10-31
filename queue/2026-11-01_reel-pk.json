@@ -1,0 +1,80 @@
+{
+  "entry_id": "quran:18:10",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v2",
+  "reference": "Surah Al-Kahf 18:10",
+  "slot": "2026-11-01_reel-pk",
+  "publish_at": "2026-11-01T15:32:31Z",
+  "local_slot": "2026-11-01 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-01_reel-pk.jpg",
+  "video": "queue/2026-11-01_reel-pk.mp4",
+  "cover": "queue/2026-11-01_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Lost and unsure which way to turn?\n\nWhen the youths took refuge in the Cave, they asked their Lord for mercy from Himself and for the right way in their ordeal. Make their dua your own tonight.\n\nSurah Al-Kahf 18:10\n\nSend this to someone going through an ordeal right now\n\n#dua #surahalkahf #peopleofthecave #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "When the youths took refuge in the Cave, and said, “Our Lord, grant us mercy from Yourself, and show us the right way in our ordeal.” (Surah Al-Kahf 18:10)",
+  "theme": "dua for guidance in hardship (youths of the Cave)",
+  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "quran",
+    "entry_id": "quran:18:10",
+    "story": false,
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Lost and unsure which way to turn?",
+    "hook_lines": [
+      "Lost and unsure which way",
+      "to turn?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "018010",
+        "lines": [
+          "إِذۡ أَوَى ٱلۡفِتۡيَةُ إِلَى ٱلۡكَهۡفِ فَقَالُواْ رَبَّنَآ",
+          "ءَاتِنَا مِن لَّدُنكَ رَحۡمَةٗ وَهَيِّئۡ لَنَا مِنۡ",
+          "أَمۡرِنَا رَشَدٗا ١٠"
+        ],
+        "y": 597.2,
+        "meal": [
+          "When the youths took refuge in the Cave, and",
+          "said, “Our Lord, grant us mercy from Yourself,",
+          "and show us the right way in our ordeal.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1095.2,
+    "cta": "Send this to someone going through an ordeal right now",
+    "cta_lines": [
+      "Send this to someone going through an ordeal",
+      "right now"
+    ],
+    "cta_size": 48,
+    "cta_color": "ivory",
+    "ref": "Surah Al-Kahf 18:10",
+    "ref_y": 1470.2,
+    "handle_y": 1522.2,
+    "full": "When the youths took refuge in the Cave, and said, “Our Lord, grant us mercy from Yourself, and show us the right way in our ordeal.”",
+    "full_lines": [
+      "When the youths took refuge in the Cave, and",
+      "said, “Our Lord, grant us mercy from Yourself,",
+      "and show us the right way in our ordeal.”"
+    ],
+    "cta_y": 1308.2
+  },
+  "layout_hash": "a274d9229bbe5e7351aabf29",
+  "created_at": "2026-10-31T05:43:16+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "018010"
+    ],
+    "done": false
+  }
+}

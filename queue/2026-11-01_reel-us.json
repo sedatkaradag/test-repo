@@ -1,0 +1,62 @@
+{
+  "entry_id": "hadith:muslim:6543",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v2",
+  "reference": "Sahih Muslim 6543",
+  "slot": "2026-11-01_reel-us",
+  "publish_at": "2026-11-02T01:29:35Z",
+  "local_slot": "2026-11-01 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-01_reel-us.jpg",
+  "video": "queue/2026-11-01_reel-us.mp4",
+  "cover": "queue/2026-11-01_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Not your looks. Not your wealth.\n\nThe Prophet ﷺ said that Allah does not look to your faces and your wealth, but He looks to your heart and to your deeds. Work on what He looks at.\n\nSahih Muslim 6543 · Grade: Sahih\n\nSend this to someone who needs to hear it tonight\n\n#sincerity #purifytheheart #selfworth #hadithreels",
+  "alt_text": "Abu Huraira reported Allah's Messenger (ﷺ) as saying:Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds (Sahih Muslim 6543)",
+  "theme": "the heart and deeds over looks and wealth",
+  "review": "Independent reviewer approved: narrator matches chain, source text exact, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v2",
+    "kind": "hadith",
+    "entry_id": "hadith:muslim:6543",
+    "label": "HADITH",
+    "hook": "Not your looks. Not your wealth.",
+    "hook_lines": [
+      "Not your looks. Not your",
+      "wealth."
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Abu Huraira reported Allah’s Messenger (ﷺ) as saying:"
+    ],
+    "lead_size": 34,
+    "lead_y": 716.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "Verily Allah does not look to your",
+          "faces and your wealth but He",
+          "looks to your heart and to your",
+          "deeds."
+        ],
+        "y": 798.5
+      }
+    ],
+    "cta": "Send this to someone who needs to hear it tonight",
+    "cta_lines": [
+      "Send this to someone who needs to hear it",
+      "tonight"
+    ],
+    "cta_size": 48,
+    "cta_y": 1210.5,
+    "ref": "Sahih Muslim 6543 · Grade: Sahih",
+    "ref_y": 1382.5,
+    "handle_y": 1434.5
+  },
+  "layout_hash": "2d660dfb9bbbad0d5f954740",
+  "created_at": "2026-10-31T05:43:56+00:00"
+}
