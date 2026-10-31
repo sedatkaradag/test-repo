@@ -335,8 +335,9 @@ config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
    güncelle; `story_audio.done` olup panelde `story_video_url` olmayan gönderiler için
    `queue/<slot>_story.mp4`'ü yükleyip `story_video_url` ve `story_audio` yaz. Varsa en üstte bildir ve
    `log`'a "Ana ajan" olarak not düş. Yayıncıyı veya kuyruğu kendin değiştirme.
-6. **Zamanlama kontrolü:** aşağıdaki "Senkron zamanlaması" adımlarını uygula (slot
-   saatleri değiştiyse görevler burada kendini düzeltir).
+6. **Zamanlama kontrolü (yalnızca karşılaştır, değiştirme):** aşağıdaki "Senkron zamanlaması"
+   bölümünün 1-3. adımlarıyla görevlerin saatlerini config ile karşılaştır. Uyuşmazlık varsa
+   **hiçbir zamanlanmış görevi değiştirme, oluşturma ya da silme**; açık sorun kaydet ve işine devam et.
 7. **Yorumlar:** aşağıdaki "Yorum yanıtları" adımlarını uygula.
 8. Fark ettiğin sorunları "Açık sorunlar" bölümündeki gibi kaydet ve `issues/<id>` panel
    belgesini yaz.
@@ -346,22 +347,28 @@ config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
 ### Senkron zamanlaması
 
 Senkron görevlerinin saatleri `config.yaml` slotlarından hesaplanır; elle saat yazma.
+**Zamanlanmış görevleri yalnızca sohbetteki ana ajan değiştirir.** Kimsenin bakmadığı çalışmalar
+(senkron, günlük içerik, haftalık analist) bir görevi değiştirmeye kalkarsa onay bekleyip takılır ve
+sahibi bunu yalnızca bildirimlerde görür; bu yüzden onlar yalnızca karşılaştırır ve panele yazar.
 
 1. `python3 scripts/sync_schedule.py` → olması gereken görevler (`tasks`: `name`,
    `cron_expression`) ve ortak `prompt`.
 2. `list_triggers` ile adı "Halal Algorithm – panel senkronu · " ile başlayan görevleri bul.
-3. Eşleştir (ada göre):
-   - cron farklıysa `update_trigger` ile yalnızca `cron_expression`'ı güncelle. **Görev
-     metnini (prompt) asla otomatik değiştirme**: farklıysa değiştirmeden raporda belirt;
-     metin yalnızca sahibinin onayıyla, sohbetteki ana ajan tarafından güncellenir;
-   - listede olup görevi olmayan için `create_trigger` (`name`, `cron_expression`,
-     `prompt` = script'teki prompt, `initiation`: "human_schedule", bildirim: push) ama
-     yalnızca slot saatleri değiştiği için yeni bir saat dilimi gerekiyorsa;
-   - görevi olup listede olmayanı (o saat diliminde artık slot yok) `delete_trigger` ile sil.
-4. Değişiklik yaptıysan log'a "Ana ajan" olarak tek satır yaz (eski → yeni saat) ve raporda belirt.
+3. Ada göre eşleştir: cron farklı mı, listede olup görevi olmayan ya da görevi olup listede
+   olmayan saat dilimi var mı? Görev metni (prompt) script'tekinden farklı mı?
+4. **Kimsenin bakmadığı bir çalışmaysan:** fark varsa hiçbir görevi değiştirme. Şu başlıkla açık
+   sorun kaydet (aynı başlıklı açık kayıt varsa script yenisini açmaz) ve panelde `issues/<id>`
+   belgesini yaz, sonra işine devam et:
+   `python3 scripts/issues.py add --kind other --source "<ajan, tarih>" --ref "senkron görevleri" --title "Senkron görevlerinin saatleri config ile uyuşmuyor" --detail "<görev: şu an → olması gereken>"`
+5. **Ana ajansan (sohbet):** farkları uygula. Cron farklıysa `update_trigger` ile yalnızca
+   `cron_expression`'ı güncelle; yeni bir saat dilimi gerekiyorsa `create_trigger` (`name`,
+   `cron_expression`, `prompt` = script'teki prompt, `initiation`: "human_request", bildirim: push);
+   artık slotu olmayan saat dilimindeki görevi `delete_trigger` ile sil. Görev metnini yalnızca sahibi
+   isterse değiştir. Log'a "Ana ajan" olarak tek satır yaz (eski → yeni saat) ve varsa açık sorunu kapat.
 
-Slot saatlerini değiştiren her çalışma (haftalık analist, ana ajan) commit + push'tan
-hemen sonra bu adımları uygular.
+Ana ajan slot saatlerini değiştirdiğinde commit + push'tan hemen sonra 5. adımı uygular. Değişiklik
+ileri bir tarihte geçerli oluyorsa (`from` / `until`), o tarih gelince senkron çalışması uyuşmazlığı
+panele açık sorun olarak yazar; ana ajan o zaman uygular.
 
 ## Yorum yanıtları (kendi gönderilerimize gelen yorumlar)
 
@@ -423,7 +430,8 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
    Tarihli kısa bir değişiklik notu ekle.
 4. Saatleri sadece güçlü kanıt varsa ve son değişiklikten 14 gün geçtiyse
    `config.yaml` → `reels.slots` (ve varsa `slots`) içinde değiştir; `dry_run` ve slot sayısına dokunma.
-   Saat değiştirdiysen push'tan sonra "Senkron zamanlaması" adımlarını uygula.
+   Saat değiştirdiysen senkron görevlerine dokunma; "Senkron zamanlaması" 4. adımdaki gibi açık
+   sorun kaydet (ana ajan görevleri günceller).
 5. Commit + push, ardından kısa bir haftalık özet yaz.
 
 ## Açık sorunlar
@@ -457,8 +465,8 @@ sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra 
   ve caption'ları göster.
 - "Şunu değiştir / şunu çıkar" → ilgili `queue/<slot>.*` dosyalarını sil, içerik akışının
   3-8. adımlarıyla o slotu yeniden doldur.
-- "Saatleri değiştir / slot ekle" → `config.yaml` → `slots` (Reels/carousel saatleri
-  `reels.slot` / `carousel.slot`); push'tan sonra "Senkron zamanlaması" adımlarını uygula.
+- "Saatleri değiştir / slot ekle" → `config.yaml` → `reels.slots` (carousel: `carousel.slot`,
+  varsa fotoğraf slotları: `slots`); push'tan sonra "Senkron zamanlaması" 5. adımı uygula.
 - "Canlıya geç" → `dry_run: false`. "Durdur" → `paused: true`.
 - "Yorumları göster / şu yorumu yanıtla" → "Yorum yanıtları" bölümü. Sahibi sohbette bir
   yanıtı açıkça onaylarsa panel belgesini `approved` yap (`reply` = onaylanan metin,

@@ -6,8 +6,8 @@ One scheduled task per time zone that has slots (posts, Reels, carousel). Each r
 single minute past the hour, picked so that every slot in that zone is synced at least
 MIN_DELAY minutes after its nominal time (covers the ±jitter and a late publisher) and as
 soon as possible after that. Cron is written in the slot's own zone, so DST is automatic.
-The agent compares this list with the existing scheduled tasks named NAME_PREFIX and
-creates, updates or deletes so they match (AGENT.md, "Panel senkronu").
+Unattended runs only compare this list with the existing scheduled tasks named NAME_PREFIX and
+record a mismatch as an open issue; the owner's chat (main agent) applies it (AGENT.md, "Senkron zamanlaması").
 """
 import json
 from pathlib import Path
@@ -22,7 +22,7 @@ PROMPT = """You are the panel sync run for the Instagram page @thehalalalgorithm
 
 1. Make sure the GitHub repository sedatkaradag/test-repo is available (use the add_repo tool with owner "sedatkaradag", repo "test-repo", access "push" if it is not already attached), then clone it: `git clone --depth 1 https://github.com/sedatkaradag/test-repo /home/claude/test-repo` (or `git pull` if it already exists).
 2. Read /home/claude/test-repo/AGENT.md and follow its "Panel senkronu (her slottan sonra)" section exactly, including the schedule check. The control panel URL is in its "Kontrol paneli" section. Do not generate post content and do not change the queue, config or images; the only commits allowed are approved comment replies in comments/outbox, as AGENT.md describes. Never send a comment reply the owner has not approved in the panel.
-3. Finish with a report in Turkish: first the number of comment replies waiting for the owner's approval and any comment left to the owner, then problems (a post past its time still ready/publishing, failed or missed, panel write errors, schedule changes made). If everything is fine, a single line."""
+3. Finish with a report in Turkish: first the number of comment replies waiting for the owner's approval and any comment left to the owner, then problems (a post past its time still ready/publishing, failed or missed, panel write errors, a schedule mismatch recorded as an open issue). If everything is fine, a single line."""
 
 
 def all_slots(cfg):
