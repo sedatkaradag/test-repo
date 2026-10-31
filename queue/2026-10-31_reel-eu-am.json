@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English/reference match, Reel frame OK",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "quran",
@@ -83,5 +83,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-10-30T05:46:21+00:00"
-  }
+  },
+  "story_media_id": "17921032944453739",
+  "story_kind": "video",
+  "media_id": "17909521329584366",
+  "posted_at": "2026-10-31T07:11:50+00:00"
 }
