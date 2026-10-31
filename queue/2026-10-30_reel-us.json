@@ -19,7 +19,7 @@
     "hadith:tirmidhi:3467: check these words are correct transliterations, not typos: amdih, hil"
   ],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "hadith",
@@ -78,5 +78,9 @@
     "handle_y": 1520.0
   },
   "layout_hash": "2d5b7a4f090e815eaa1d0169",
-  "created_at": "2026-10-29T05:44:48+00:00"
+  "created_at": "2026-10-29T05:44:48+00:00",
+  "story_media_id": "18642891355062748",
+  "story_kind": "video",
+  "media_id": "18492395035128482",
+  "posted_at": "2026-10-31T00:27:37+00:00"
 }
