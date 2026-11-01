@@ -111,3 +111,4 @@
 {"ts": "2026-11-01T05:15:50Z", "entry_id": "hadith:muslim:6543", "slot": "2026-11-01_reel-us", "verdict": "approve", "round": 1, "reasons": ["v3 re-render: source text and narrator match", "still frame order and limits OK", "caption OK"]}
 {"ts": "2026-11-01T05:16:06Z", "entry_id": "quran:18:10", "slot": "2026-11-01_reel-pk", "verdict": "approve", "round": 1, "reasons": ["v3 re-render: Arabic word/mark check OK", "full meaning, order and limits OK", "caption OK"]}
 {"ts": "2026-11-01T05:16:18Z", "entry_id": "quran:4:28", "slot": "2026-11-01_reel-eu", "verdict": "approve", "round": 1, "reasons": ["v3 re-render: Arabic word/mark check OK", "full meaning, order and limits OK", "caption OK"]}
+{"ts": "2026-11-01T05:16:27Z", "entry_id": "quran:47:7", "slot": "2026-11-01_reel-eu-am", "verdict": "approve", "round": 1, "reasons": ["v3 re-render: Arabic word/mark check OK", "full meaning, order and limits OK", "caption OK"]}

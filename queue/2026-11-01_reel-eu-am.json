@@ -14,10 +14,10 @@
   "caption": "Want Allah's help to stay steadfast today?\n\nAllah promises the believers that if they stand up for Him, He will help them and make their steps firm. Start this morning by putting Him first.\n\nSurah Muhammad 47:7\n\nPick one small way to stand up for Allah today\n\n#steadfast #istiqamah #morningreminder #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
   "alt_text": "O you who believe, if you stand up for Allah, He will help you and make your steps firm (Surah Muhammad 47:7)",
   "theme": "steadfastness / Allah makes your steps firm",
-  "review": "re-rendered; waiting for a fresh verifier",
+  "review": "Fresh verifier approved the v3 re-render (Arabic, meaning, frame, caption)",
   "flags": [],
   "integrity": "passed",
-  "status": "hold",
+  "status": "audio_pending",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -98,6 +98,5 @@
     "done": false,
     "failed": false
   },
-  "held_at": "2026-11-01T05:12:18Z",
   "rerendered_at": "2026-11-01T05:12:18+00:00"
 }
