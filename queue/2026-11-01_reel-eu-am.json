@@ -17,7 +17,7 @@
   "review": "Fresh verifier approved the v3 re-render (Arabic, meaning, frame, caption)",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -95,8 +95,16 @@
     "ayahs": [
       "047007"
     ],
-    "done": false,
-    "failed": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 17.5,
+    "video_seconds": 20.7,
+    "verse_seconds": [
+      17.53
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-01T05:17:38+00:00"
   },
   "rerendered_at": "2026-11-01T05:12:18+00:00"
 }
