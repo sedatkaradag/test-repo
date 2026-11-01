@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: source text, narrator, reference and grade correct, Reel frame OK",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v2",
     "kind": "hadith",
@@ -58,5 +58,9 @@
     "handle_y": 1434.5
   },
   "layout_hash": "7237153f7c99e42412560c5e",
-  "created_at": "2026-10-30T05:45:44+00:00"
+  "created_at": "2026-10-30T05:45:44+00:00",
+  "story_media_id": "18156673711460011",
+  "story_kind": "video",
+  "media_id": "17931496065422791",
+  "posted_at": "2026-11-01T00:32:07+00:00"
 }
