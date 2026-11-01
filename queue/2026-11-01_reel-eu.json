@@ -2,7 +2,7 @@
   "entry_id": "quran:4:28",
   "type": "reel",
   "content_type": "quran",
-  "template": "v2",
+  "template": "v3",
   "reference": "Surah An-Nisaa 4:28",
   "slot": "2026-11-01_reel-eu",
   "publish_at": "2026-11-01T18:00:36Z",
@@ -14,15 +14,14 @@
   "caption": "For the days you feel too weak to carry it all\n\nAllah tells us He wants to lighten our burdens, and He knows that man was created weak. Bring what feels heavy to Him.\n\nSurah An-Nisaa 4:28\n\nName one burden you are handing over to Allah today\n\n#burdens #allahsmercy #feelingweak #quranreels\n\nRecitation: Mishary Alafasy",
   "alt_text": "Allah wants to lighten your burdens, for man was created weak (Surah An-Nisaa 4:28)",
   "theme": "feeling weak / Allah wants to lighten your burdens",
-  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "review": "re-rendered; waiting for a fresh verifier",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "hold",
   "reel_layout": {
-    "template": "v2",
+    "template": "v3",
     "kind": "quran",
     "entry_id": "quran:4:28",
-    "story": false,
     "label": "THE NOBLE QUR'AN",
     "hook": "For the days you feel too weak to carry it all",
     "hook_lines": [
@@ -38,7 +37,7 @@
           "يُرِيدُ ٱللَّهُ أَن يُخَفِّفَ عَنكُمۡۚ وَخُلِقَ",
           "ٱلۡإِنسَٰنُ ضَعِيفٗا ٢٨"
         ],
-        "y": 684.8,
+        "y": 697.6,
         "meal": [
           "Allah wants to lighten your burdens, for man",
           "was created weak."
@@ -46,25 +45,42 @@
       }
     ],
     "meal_size": 46,
-    "meal_y": 1026.8,
+    "meal_y": 1039.6,
+    "full": "Allah wants to lighten your burdens, for man was created weak.",
+    "full_lines": [
+      "Allah wants to lighten your burdens, for man",
+      "was created weak."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nisaa 4:28",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
     "cta": "Name one burden you are handing over to Allah today",
     "cta_lines": [
       "Name one burden you are handing over to",
       "Allah today"
     ],
     "cta_size": 48,
-    "cta_color": "ivory",
-    "ref": "Surah An-Nisaa 4:28",
-    "ref_y": 1338.8,
-    "handle_y": 1390.8,
-    "full": "Allah wants to lighten your burdens, for man was created weak.",
-    "full_lines": [
-      "Allah wants to lighten your burdens, for man",
-      "was created weak."
-    ],
-    "cta_y": 1176.8
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
   },
-  "layout_hash": "a1a4fb87397e16a09cafe63f",
+  "layout_hash": "90fb04d569597e0c4108b779",
   "created_at": "2026-10-31T05:43:34+00:00",
   "audio": {
     "reciter": "Alafasy_128kbps",
@@ -72,15 +88,9 @@
     "ayahs": [
       "004028"
     ],
-    "done": true,
-    "failed": false,
-    "tried": [],
-    "seconds": 10.9,
-    "video_seconds": 14.1,
-    "verse_seconds": [
-      10.92
-    ],
-    "timing": "verse by verse",
-    "added_at": "2026-10-31T05:45:24+00:00"
-  }
+    "done": false,
+    "failed": false
+  },
+  "held_at": "2026-11-01T05:13:53Z",
+  "rerendered_at": "2026-11-01T05:13:53+00:00"
 }

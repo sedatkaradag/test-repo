@@ -2,7 +2,7 @@
   "entry_id": "hadith:muslim:6543",
   "type": "reel",
   "content_type": "hadith",
-  "template": "v2",
+  "template": "v3",
   "reference": "Sahih Muslim 6543",
   "slot": "2026-11-01_reel-us",
   "publish_at": "2026-11-02T01:29:35Z",
@@ -14,12 +14,12 @@
   "caption": "Not your looks. Not your wealth.\n\nThe Prophet ﷺ said that Allah does not look to your faces and your wealth, but He looks to your heart and to your deeds. Work on what He looks at.\n\nSahih Muslim 6543 · Grade: Sahih\n\nSend this to someone who needs to hear it tonight\n\n#sincerity #purifytheheart #selfworth #hadithreels",
   "alt_text": "Abu Huraira reported Allah's Messenger (ﷺ) as saying:Verily Allah does not look to your faces and your wealth but He looks to your heart and to your deeds (Sahih Muslim 6543)",
   "theme": "the heart and deeds over looks and wealth",
-  "review": "Independent reviewer approved: narrator matches chain, source text exact, caption faithful",
+  "review": "re-rendered; waiting for a fresh verifier",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "hold",
   "reel_layout": {
-    "template": "v2",
+    "template": "v3",
     "kind": "hadith",
     "entry_id": "hadith:muslim:6543",
     "label": "HADITH",
@@ -33,7 +33,7 @@
       "Abu Huraira reported Allah’s Messenger (ﷺ) as saying:"
     ],
     "lead_size": 34,
-    "lead_y": 716.5,
+    "lead_y": 727.5,
     "text_size": 68,
     "phrases": [
       {
@@ -43,8 +43,14 @@
           "looks to your heart and to your",
           "deeds."
         ],
-        "y": 798.5
+        "y": 809.5
       }
+    ],
+    "ref": "Sahih Muslim 6543 · Grade: Sahih",
+    "ref_y": 1221.5,
+    "slogan": "Follow & Share The Sunnah",
+    "slogan_lines": [
+      "Follow & Share The Sunnah"
     ],
     "cta": "Send this to someone who needs to hear it tonight",
     "cta_lines": [
@@ -52,11 +58,12 @@
       "tonight"
     ],
     "cta_size": 48,
-    "cta_y": 1210.5,
-    "ref": "Sahih Muslim 6543 · Grade: Sahih",
-    "ref_y": 1382.5,
-    "handle_y": 1434.5
+    "line_y": 1279.5,
+    "handle_y": 1425.5,
+    "handle_size": 27
   },
-  "layout_hash": "2d660dfb9bbbad0d5f954740",
-  "created_at": "2026-10-31T05:43:56+00:00"
+  "layout_hash": "f71b51a800517f97e3aafbb8",
+  "created_at": "2026-10-31T05:43:56+00:00",
+  "held_at": "2026-11-01T05:14:36Z",
+  "rerendered_at": "2026-11-01T05:14:36+00:00"
 }
