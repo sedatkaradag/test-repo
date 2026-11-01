@@ -36,6 +36,11 @@ dry_run: false
 # ulaşana kadar false (normal Reels). Eşik aşılınca true yapılacak.
 reels:
   enabled: true
+  # Şablon v3: okuma boyunca kapanış satırının yerinde duran sabit satır; okuma bitince 0,6 sn sonra
+  # yerini caption'ın kapanış satırına bırakır.
+  slogans:
+    quran: "Follow & Share The Qur'an"
+    hadith: "Follow & Share The Sunnah"
   trial: false
   # Bu andan itibaren (UTC; 30 Ekim 2026 00:00 İstanbul) her Reels yayınlanınca aynı video Story
   # olarak da paylaşılır (60 saniyeden uzunsa Story atlanır; Reels hiçbir durumda etkilenmez).

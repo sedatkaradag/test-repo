@@ -144,11 +144,14 @@ cd scripts
    > 2b. Only for a Reel: run `python3 reels.py <ID> /tmp/review_reel_<n> --caption-file <caption dosyası> --no-video`
    >    and OPEN `reel_still.jpg` (the finished frame). Check its Arabic exactly as on the card
    >    (word by word, mark by mark, zoom in). On a verse Reel the frame shows the whole source
-   >    English under the verses, with the closing line under it; a hadith must be the source text
-   >    with its narration line.
-   >    The line at the top must be the caption's first line and the line at the bottom its
-   >    closing line, word for word. Nothing may be cut off or overlap, and no text may reach below
-   >    y=1585 of 1920 (Instagram covers the area under it).
+   >    English under the verses; a hadith must be the source text with its narration line.
+   >    Under the text, in this order: the reference (hadith: with its grade), the closing line,
+   >    then the account name. A thin progress line under the top label is part of the design.
+   >    The line at the top must be the caption's first line and the line above the account name
+   >    its closing line, word for word. (In the video the fixed line "Follow & Share The Qur'an" /
+   >    "Follow & Share The Sunnah" stands in the closing line's place until the end; it is not in
+   >    the caption and is not an error.) Nothing may be cut off or overlap, and no text may reach
+   >    below y=1585 of 1920 (Instagram covers the area under it).
    > 2c. Only for a verse post (not a Reel): run `python3 reels.py <ID> /tmp/review_story_<n> --story --no-video`.
    >    If it prints `too_long`, skip this step (the Story then reuses the card). Otherwise OPEN
    >    `reel_still.jpg` (the post's recitation Story) and check its Arabic and English the same way.
@@ -195,12 +198,17 @@ cd scripts
      satır(lar)ında durur (ayet başına en fazla 3 satır); tilavet yaklaşık 55 saniyeyi geçmesin
      (Reels aynı video olarak Story'de de paylaşılır; Instagram Story'leri en fazla 60 saniye).
      Anlam için gerekirse bir önceki ya da sonraki ayeti de aralığa kat.
-   - **Şablon (v2, `scripts/reels.py`):** En üstte kanca, altında metin. Ayette Arapça altın
-     renkte; okunan ayet parlar, altında o ayetin meali belirir. Hadiste metin gümüş renkte,
-     parça parça parlar; ravi satırı küçük ve soluk. Hadis Reels'inde hiç altın renk yoktur. Sonda
-     bütün metin yanar ve kapanış cümlesi (fildişi renk) altında belirir; ayet Reels'inde tilavet
-     bitince ayetlerin tam meali ekranda kalır, kapanış cümlesi kısa süre sonra mealin altına gelir. Tilavet satırı videoda yoktur,
-     caption'da vardır.
+   - **Şablon (v3, `scripts/reels.py`, 1 Kasım 2026'dan itibaren):** Etiketin altında ince bir
+     ilerleme çizgisi (ayette altın, hadiste gümüş), altında kanca, sonra metin. Ayette Arapça
+     altın renkte, okunan ayet parlar; altında ayetlerin **tam meali baştan soluk** durur ve okunan
+     ayetin kelimeleri Arapçayla birlikte yanar. Hadiste metin gümüş renkte, parça parça parlar;
+     ravi satırı küçük ve soluk; hadis Reels'inde altın renk yoktur. Metnin altında sırasıyla:
+     referans (hadiste "· Grade: …" ile), sabit slogan (`config.yaml` → `reels.slogans`: "Follow &
+     Share The Qur'an" / "Follow & Share The Sunnah"), hesap adı (27 punto). Son ayet/parça bitince
+     kalan metin 0,5 sn içinde yumuşakça yanar; 0,6 sn sonra slogan yerini caption'ın kapanış
+     cümlesine (fildişi) bırakır. Tilavet satırı videoda yoktur, caption'da vardır. Uzun metinlerde
+     Arapça küçülür; sığmazsa kod reddeder (`too long`), daha kısa bir aralık seç.
+     Eski (v2) öğeler kendi şablonlarıyla kalır; yeniden çizilen (`rerender`) öğe v3 olur.
    - **Kanca ve kapanış videoya basılır:** kanca = caption'ın ilk satırı, kapanış = caption'ın
      kapanış cümlesi, harfi harfine. Bu yüzden kanca en fazla 60 karakter (videoda 1-2 satır),
      kapanış cümlesi tek satır ve en fazla 90 karakter; ikisinde de emoji olmaz (font çizemez).

@@ -43,7 +43,9 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter
 import render as R
 from content import ROOT, display_text, drop_dangling_closes, get, quote_context, smart_quotes, split_narrator
 
-TEMPLATE = "v2"
+TEMPLATE = "v3"          # v3: progress line, whole meaning lit as recited, slogan, reference above it
+HANDLE_SIZE = 27         # v3 (v2 and Stories: 24)
+END_FADE = 0.5           # v3: when the last part ends, the other parts light up over this (like a change)
 SW, SH, FPS = 1080, 1920, 30
 BOTTOM_LIMIT = 1585      # nothing below this: Instagram's caption and buttons cover it
 TOP_LABEL = 250
@@ -66,7 +68,7 @@ def tail_seconds(L):
     """Seconds the video runs after the last lit part."""
     if L["kind"] != "quran":
         return HADITH_TAIL
-    return REEL_TAIL if L.get("full_lines") else TAIL
+    return REEL_TAIL if (L.get("full_lines") and not L.get("story")) else TAIL
 
 
 class TooLong(Exception):
@@ -286,7 +288,63 @@ def plan(entry_id, caption):
     ref_no = e["reference"].split(" ")[-1]
     if ref_no in cta or "#" in cta or cta == hook:
         raise TooLong("the caption needs its own closing line after the reference (it is shown at the end of the Reel)")
-    return plan_verse(entry_id, hook, cta) if e["type"] == "quran" else plan_hadith(entry_id, hook, cta)
+    return plan_verse_v3(entry_id, hook, cta) if e["type"] == "quran" else plan_hadith(entry_id, hook, cta)
+
+
+def slogan_for(kind):
+    """The fixed line shown in the closing line's place during the Reel (config.yaml reels.slogans)."""
+    import yaml
+    cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+    s = ((cfg.get("reels") or {}).get("slogans") or {}).get(kind)
+    return s or ("Follow & Share The Qur'an" if kind == "quran" else "Follow & Share The Sunnah")
+
+
+def plan_verse_v3(entry_id, hook, cta):
+    """Verse Reel: Arabic verse by verse; under it the whole meaning (dim, the recited verse's words lit),
+    then the reference, then the slogan (the closing line takes its place at the end), then the handle."""
+    e = get(entry_id)
+    m = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", entry_id)
+    s, a, b = int(m.group(1)), int(m.group(2)), int(m.group(3) or m.group(2))
+    arabic = [get(f"quran:{s}:{v}")["arabic_display"] for v in range(a, b + 1)]
+    meanings, _ = verse_meanings(entry_id)
+    full = " ".join(meanings)
+    owner = [k for k, mm in enumerate(meanings) for _ in mm.split(" ")]
+    slogan = slogan_for("quran")
+    h_lines, h_size = hook_layout(hook)
+    hook_bottom = HOOK_Y + len(h_lines) * en_lh(h_size)
+    for meal_size in (46, 42, 38):
+        line_size = meal_size + 2
+        cta_lines = en_lines(cta, line_size, MAX_W_EN)
+        slogan_lines = en_lines(slogan, line_size, MAX_W_EN)
+        line_h = max(len(cta_lines), len(slogan_lines)) * en_lh(line_size)
+        full_lines = en_lines(full, meal_size, MAX_W_EN)
+        full_h = len(full_lines) * en_lh(meal_size)
+        for size in range(80, 44, -2):
+            blocks = [ar_lines(x, size) for x in arabic]
+            if any(len(bl) > 3 for bl in blocks):
+                continue
+            n = sum(len(bl) for bl in blocks)
+            block = n * ar_lh(size) + 30 + full_h + 24 + 58 + line_h + 14 + 36
+            room = BOTTOM_LIMIT - (hook_bottom + 50)
+            if block <= room:
+                y = hook_bottom + 50 + (room - block) / 2 * 0.8
+                verses, yy = [], y
+                for k, bl in enumerate(blocks):
+                    verses.append({"ayah": f"{s:03d}{a + k:03d}", "lines": bl, "y": yy,
+                                   "meal": en_lines(meanings[k], meal_size, MAX_W_EN)})
+                    yy += len(bl) * ar_lh(size)
+                meal_y = yy + 30
+                ref_y = meal_y + full_h + 24
+                line_y = ref_y + 58
+                return {"template": TEMPLATE, "kind": "quran", "entry_id": entry_id,
+                        "label": "THE NOBLE QUR'AN", "hook": hook, "hook_lines": h_lines, "hook_size": h_size,
+                        "arabic_size": size, "verses": verses, "meal_size": meal_size, "meal_y": meal_y,
+                        "full": full, "full_lines": full_lines, "full_owner": owner,
+                        "ref": e["reference"], "ref_y": ref_y,
+                        "slogan": slogan, "slogan_lines": slogan_lines,
+                        "cta": cta, "cta_lines": cta_lines, "cta_size": line_size, "line_y": line_y,
+                        "handle_y": line_y + line_h + 14, "handle_size": HANDLE_SIZE}
+    raise TooLong("verses too long for one frame; choose a shorter passage")
 
 
 def plan_story(entry_id):
@@ -337,7 +395,7 @@ def plan_verse(entry_id, hook, cta, story=False):
                 ref_y = meal_y + meal_h + cta_h + 30
                 if story:   # closing frame: every verse lit with its whole meaning
                     cta, cta_lines = " ".join(meanings), en_lines(" ".join(meanings), meal_size, MAX_W_EN)
-                out = {"template": TEMPLATE, "kind": "quran", "entry_id": entry_id, "story": story,
+                out = {"template": "v2", "kind": "quran", "entry_id": entry_id, "story": story,
                        "label": "THE NOBLE QUR'AN", "hook": hook or "", "hook_lines": h_lines, "hook_size": h_size,
                        "arabic_size": size, "verses": verses, "meal_size": meal_size, "meal_y": meal_y,
                        "cta": cta, "cta_lines": cta_lines, "cta_size": meal_size if story else meal_size + 2,
@@ -350,18 +408,23 @@ def plan_verse(entry_id, hook, cta, story=False):
 
 
 def plan_hadith(entry_id, hook, cta):
+    """Hadith Reel: narration line, the words lit phrase by phrase; under them the reference with the
+    grade, then the slogan (the closing line takes its place at the end), then the handle."""
     e = get(entry_id)
     lead, phrases, _ = hadith_parts(entry_id)
     h_lines, h_size = hook_layout(hook)
     hook_bottom = HOOK_Y + len(h_lines) * en_lh(h_size)
     lead_size = 34
     lead_lines = en_lines(lead, lead_size, 820) if lead else []
+    slogan = slogan_for("hadith")
     cta_lines = en_lines(cta, 48, MAX_W_EN)
+    slogan_lines = en_lines(slogan, 48, MAX_W_EN)
+    line_h = max(len(cta_lines), len(slogan_lines)) * en_lh(48)
     for size in range(68, 42, -2):
         ph = [en_lines(p, size, 900) for p in phrases]
         lead_h = len(lead_lines) * en_lh(lead_size) + (36 if lead_lines else 0)
         text_h = sum(len(x) * en_lh(size) for x in ph) + 20 * (len(ph) - 1)
-        block = lead_h + text_h + 40 + len(cta_lines) * en_lh(48) + 40 + 90
+        block = lead_h + text_h + 40 + 58 + line_h + 14 + 36
         room = BOTTOM_LIMIT - (hook_bottom + 60)
         if block <= room:
             y = hook_bottom + 60 + (room - block) / 2
@@ -371,41 +434,73 @@ def plan_hadith(entry_id, hook, cta):
             for lines in ph:
                 parts.append({"lines": lines, "y": y})
                 y += len(lines) * en_lh(size) + 20
-            cta_y = y - 20 + 40
-            ref_y = cta_y + len(cta_lines) * en_lh(48) + 40
+            ref_y = y - 20 + 40
+            line_y = ref_y + 58
             grade = str(e.get("status", "")).capitalize()
             return {"template": TEMPLATE, "kind": "hadith", "entry_id": entry_id,
                     "label": "HADITH", "hook": hook, "hook_lines": h_lines, "hook_size": h_size,
                     "lead_lines": lead_lines, "lead_size": lead_size, "lead_y": lead_y,
                     "text_size": size, "phrases": parts,
-                    "cta": cta, "cta_lines": cta_lines, "cta_size": 48, "cta_y": cta_y,
-                    "ref": f"{e['reference']} · Grade: {grade}", "ref_y": ref_y, "handle_y": ref_y + 52}
+                    "ref": f"{e['reference']} · Grade: {grade}", "ref_y": ref_y,
+                    "slogan": slogan, "slogan_lines": slogan_lines,
+                    "cta": cta, "cta_lines": cta_lines, "cta_size": 48, "line_y": line_y,
+                    "handle_y": line_y + line_h + 14, "handle_size": HANDLE_SIZE}
     raise TooLong("hadith too long for one Reel frame; choose a shorter one")
 
 
 # ---------- layers ----------
 
+MEAL_DIM = (128, 124, 112)   # v3: the whole meaning before its verse is recited
+
+
+def _meaning_words(img, L, color, only=None):
+    """v3: the whole meaning word by word on its lines; `only` = draw just that verse's words."""
+    d = ImageDraw.Draw(img)
+    size, y, w = L["meal_size"], L["meal_y"], 0
+    for line in L["full_lines"]:
+        words = line.split(" ")
+        x0 = (SW - R._width_ltr(line, size)) / 2
+        for j, word in enumerate(words):
+            if only is None or L["full_owner"][w + j] == only:
+                x = x0 + (R._width_ltr(" ".join(words[:j]) + " ", size) if j else 0)
+                for t_, f in R._runs(word, size):
+                    d.text((x, y), t_, font=f, fill=color + (255,))
+                    x += f.getlength(t_)
+        w += len(words)
+        y += en_lh(size)
+
+
 def layers(L, boxes=None):
-    """(static, dim, [lit part k], [meaning k], closing, whole meaning) as RGBA images drawn from the
-    plan. The whole meaning is drawn only on verse Reels (empty otherwise)."""
-    static, dim, cta, full = layer(), layer(), layer(), layer()
-    lit, meals = [], []
+    """The plan drawn as RGBA layers: static, dim (unlit text), lit[k] (part k lit), meals[k] (meaning of
+    verse k lit), meal_dim (v3: whole meaning, dim), cta, slogan (v3), full (v2: whole meaning at the end)."""
+    v3 = L.get("template") == "v3"
+    out = {k: layer() for k in ("static", "dim", "cta", "full", "meal_dim", "slogan")}
+    out["lit"], out["meals"] = [], []
+    static, dim = out["static"], out["dim"]
     if L["kind"] == "quran":
         draw_label(static, L["label"], TOP_LABEL, GOLD)
         if L["hook_lines"]:
             draw_en(static, L["hook_lines"], L["hook_size"], HOOK_Y, IVORY)
-        for v in L["verses"]:
+        for k, v in enumerate(L["verses"]):
             draw_ar(dim, v["lines"], L["arabic_size"], v["y"], VERSE_DIM, boxes)
             b = layer()
             draw_ar(b, v["lines"], L["arabic_size"], v["y"], VERSE_ON)
-            lit.append(b)
+            out["lit"].append(b)
             m = layer()
-            draw_en(m, v["meal"], L["meal_size"], L["meal_y"], MEAL)
-            meals.append(m)
-        if L.get("full_lines"):
-            draw_en(full, L["full_lines"], L["meal_size"], L["meal_y"], MEAL)
-        draw_en(cta, L["cta_lines"], L["cta_size"], L.get("cta_y", L["meal_y"]),
-                MEAL if L.get("cta_color") == "meal" else IVORY)
+            if v3:
+                _meaning_words(m, L, MEAL, only=k)
+            else:
+                draw_en(m, v["meal"], L["meal_size"], L["meal_y"], MEAL)
+            out["meals"].append(m)
+        if v3:
+            _meaning_words(out["meal_dim"], L, MEAL_DIM)
+            draw_en(out["slogan"], L["slogan_lines"], L["cta_size"], L["line_y"], IVORY)
+            draw_en(out["cta"], L["cta_lines"], L["cta_size"], L["line_y"], IVORY)
+        else:
+            if L.get("full_lines"):
+                draw_en(out["full"], L["full_lines"], L["meal_size"], L["meal_y"], MEAL)
+            draw_en(out["cta"], L["cta_lines"], L["cta_size"], L.get("cta_y", L["meal_y"]),
+                    MEAL if L.get("cta_color") == "meal" else IVORY)
         draw_center(static, L["ref"], L["ref_y"], 36, GOLD)
     else:
         draw_label(static, L["label"], TOP_LABEL, HADITH_ON)
@@ -416,11 +511,15 @@ def layers(L, boxes=None):
             draw_en(dim, p["lines"], L["text_size"], p["y"], HADITH_DIM)
             b = layer()
             draw_en(b, p["lines"], L["text_size"], p["y"], HADITH_ON)
-            lit.append(b)
-        draw_en(cta, L["cta_lines"], L["cta_size"], L["cta_y"], IVORY)
+            out["lit"].append(b)
+        if v3:
+            draw_en(out["slogan"], L["slogan_lines"], L["cta_size"], L["line_y"], IVORY)
+            draw_en(out["cta"], L["cta_lines"], L["cta_size"], L["line_y"], IVORY)
+        else:
+            draw_en(out["cta"], L["cta_lines"], L["cta_size"], L["cta_y"], IVORY)
         draw_center(static, L["ref"], L["ref_y"], 36, HADITH_ON)
-    draw_center(static, R.HANDLE, L["handle_y"], 24, MUTED)
-    return static, dim, lit, meals, cta, full
+    draw_center(static, R.HANDLE, L["handle_y"], L.get("handle_size", 24), MUTED)
+    return out
 
 
 def layout_hash(L):
@@ -428,8 +527,13 @@ def layout_hash(L):
     Pillow = same hash, so GitHub can prove it drew exactly what the verifier saw."""
     h = hashlib.sha256()
     h.update(background().tobytes())
-    static, dim, lit, meals, cta, full = layers(L)
-    for im in [static, dim, *lit, *meals, cta] + ([full] if L.get("full_lines") else []):
+    ly = layers(L)
+    ims = [ly["static"], ly["dim"], *ly["lit"], *ly["meals"], ly["cta"]]
+    if L.get("template") == "v3":
+        ims += [ly["meal_dim"], ly["slogan"]]
+    elif L.get("full_lines"):
+        ims.append(ly["full"])
+    for im in ims:
         h.update(im.tobytes())
     return h.hexdigest()[:24]
 
@@ -450,6 +554,10 @@ def issues(L):
 
     check_en(L["hook_lines"], L["hook_size"], 900, "hook")
     check_en(L["cta_lines"], L["cta_size"], MAX_W_EN, "closing line")
+    if L.get("template") == "v3":
+        check_en(L["slogan_lines"], L["cta_size"], MAX_W_EN, "slogan")
+        if " ".join(L["slogan_lines"]) != L["slogan"]:
+            out.append("slogan drawn differently from config")
     if " ".join(L["hook_lines"]) != L["hook"] or " ".join(L["cta_lines"]) != L["cta"]:
         out.append("hook or closing line drawn differently from the caption")
     if L.get("story") and _alnum(L["cta"]) != _alnum(e["english"]):
@@ -457,7 +565,13 @@ def issues(L):
     if L.get("full_lines") is not None and L["kind"] == "quran" and not L.get("story"):
         check_en(L["full_lines"], L["meal_size"], MAX_W_EN, "whole meaning")
         if " ".join(L["full_lines"]) != L.get("full") or _alnum(L.get("full", "")) != _alnum(e["english"]):
-            out.append("the whole meaning at the end differs from the source text")
+            out.append("the whole meaning differs from the source text")
+        if L.get("template") == "v3":
+            words = L["full"].split(" ")
+            per = [" ".join(v["meal"]).split(" ") for v in L["verses"]]
+            if len(L["full_owner"]) != len(words) or sum(per, []) != words or \
+                    [L["full_owner"].count(k) for k in range(len(per))] != [len(x) for x in per]:
+                out.append("the lit words of a verse do not match that verse's meaning")
     if L["kind"] == "quran":
         drawn = [w for v in L["verses"] for line in v["lines"] for w in line.split(" ") if w]
         if " ".join(drawn) != " ".join(R._arabic_words(e["arabic_display"])):
@@ -490,7 +604,7 @@ def issues(L):
         meanings = " ".join(" ".join(v["meal"]) for v in L["verses"])
         if _alnum(meanings) != _alnum(e["english"]):
             out.append("meanings on the Reel differ from the source text")
-        bottom = L["handle_y"] + 30
+        bottom = L["handle_y"] + (36 if L.get("template") == "v3" else 30)
     else:
         lead, phrases, body = hadith_parts(L["entry_id"])
         drawn = " ".join(" ".join(p["lines"]) for p in L["phrases"])
@@ -501,8 +615,8 @@ def issues(L):
         check_en(L["lead_lines"], L["lead_size"], 820, "narration")
         for p in L["phrases"]:
             check_en(p["lines"], L["text_size"], 900, "hadith")
-        bottom = L["handle_y"] + 30
-    if bottom > BOTTOM_LIMIT + 40:
+        bottom = L["handle_y"] + (36 if L.get("template") == "v3" else 30)
+    if bottom > BOTTOM_LIMIT + (0 if L.get("template") == "v3" else 40):
         out.append("text reaches into the area Instagram covers")
     return out
 
@@ -566,25 +680,43 @@ def _ffmpeg():
     return imageio_ffmpeg.get_ffmpeg_exe()
 
 
+def _ground(bg, t, end):
+    import numpy as np
+    s = 1.0 + 0.05 * min(1.0, t / end)
+    bw, bh = int(SW * s), int(SH * s)
+    b = bg.resize((bw, bh), Image.BILINEAR).crop(((bw - SW) // 2, (bh - SH) // 2,
+                                                   (bw - SW) // 2 + SW, (bh - SH) // 2 + SH))
+    return np.asarray(b, dtype=np.float32).copy()
+
+
+def _progress(frame, share, kind="quran"):
+    """v3: thin line under the label (gold on verses, silver on hadith); the bright part grows with the video."""
+    import numpy as np
+    on, off = (VERSE_ON, VERSE_DIM) if kind == "quran" else (HADITH_ON, HADITH_DIM)
+    y0, y1 = TOP_LABEL + 49, TOP_LABEL + 53
+    x1 = 140 + int((SW - 280) * min(1.0, max(0.0, share)))
+    frame[y0:y1, 140:SW - 140] = frame[y0:y1, 140:SW - 140] * 0.6 + np.array(off, np.float32) * 0.4
+    frame[y0:y1, 140:x1] = np.array(on, np.float32)
+
+
 def frames(L, bounds, end):
     """Yield (t, frame) as uint8 arrays."""
+    if L.get("template") == "v3":
+        yield from _frames_v3(L, bounds, end)
+        return
     import numpy as np
     bg = background()
-    static, dim, lit, meals, cta, full = layers(L)
-    st, dm, ct, fl = _Layer(static), _Layer(dim), _Layer(cta), _Layer(full)
-    keep = bool(L.get("full_lines"))   # verse Reel: the meaning stays, the closing line comes under it
-    lt, ml = [_Layer(x) for x in lit], [_Layer(x) for x in meals]
+    ly = layers(L)
+    st, dm, ct, fl = _Layer(ly["static"]), _Layer(ly["dim"]), _Layer(ly["cta"]), _Layer(ly["full"])
+    keep = bool(L.get("full_lines"))   # v2 verse Reel: the meaning stays, the closing line comes under it
+    lt, ml = [_Layer(x) for x in ly["lit"]], [_Layer(x) for x in ly["meals"]]
     last = bounds[-1]
     # A one-verse Story ends on that verse's own meaning, already on screen: nothing changes at the end.
     same_end = bool(L.get("story")) and len(lt) == 1 and " ".join(L["verses"][0]["meal"]) == L["cta"]
     n = int(round(end * FPS))
     for i in range(n):
         t = i / FPS
-        s = 1.0 + 0.05 * min(1.0, t / end)
-        bw, bh = int(SW * s), int(SH * s)
-        b = bg.resize((bw, bh), Image.BILINEAR).crop(((bw - SW) // 2, (bh - SH) // 2,
-                                                       (bw - SW) // 2 + SW, (bh - SH) // 2 + SH))
-        frame = np.asarray(b, dtype=np.float32).copy()
+        frame = _ground(bg, t, end)
         dm.over(frame, 1.0)
         st.over(frame, 1.0)
         done = t >= last
@@ -609,6 +741,41 @@ def frames(L, bounds, end):
         yield t, frame.clip(0, 255).astype(np.uint8)
 
 
+def _frames_v3(L, bounds, end):
+    """v3 Reel: the whole meaning is on screen, dim, and the recited verse's words light up with its
+    Arabic (hadith: the phrases light up). When the last part ends, the others light up over END_FADE;
+    the slogan gives way to the closing line CTA_DELAY later. A progress line runs under the label."""
+    import numpy as np
+    bg = background()
+    ly = layers(L)
+    st, dm, md = _Layer(ly["static"]), _Layer(ly["dim"]), _Layer(ly["meal_dim"])
+    sl, ct = _Layer(ly["slogan"]), _Layer(ly["cta"])
+    lt, ml = [_Layer(x) for x in ly["lit"]], [_Layer(x) for x in ly["meals"]]
+    last, final = bounds[-1], len(lt) - 1
+    for i in range(int(round(end * FPS))):
+        t = i / FPS
+        frame = _ground(bg, t, end)
+        dm.over(frame, 1.0)
+        md.over(frame, 1.0)
+        st.over(frame, 1.0)
+        rest = min(1.0, max(0.0, (t - last) / END_FADE))
+        for k in range(len(lt)):
+            if t < last:
+                on = 1.0 if (k == 0 and t < bounds[1]) else _ramp(t, bounds[k], bounds[k + 1])
+            elif k == final:
+                on = 1.0
+            else:
+                on = rest
+            lt[k].over(frame, on)
+            if ml:
+                ml[k].over(frame, on)
+        c = min(1.0, max(0.0, (t - last - CTA_DELAY) / 0.35))
+        sl.over(frame, 1.0 - c)
+        ct.over(frame, c)
+        _progress(frame, t / end, L["kind"])
+        yield t, frame.clip(0, 255).astype(np.uint8)
+
+
 def still(L, out):
     """The finished frame (all text lit, closing line shown): the verifier opens this, and it is
     the Reel's card and cover."""
@@ -619,9 +786,15 @@ def still(L, out):
     b = bg.resize((bw, bh), Image.BILINEAR).crop(((bw - SW) // 2, (bh - SH) // 2,
                                                    (bw - SW) // 2 + SW, (bh - SH) // 2 + SH))
     frame = np.asarray(b, dtype=np.float32).copy()
-    static, dim, lit, meals, cta, full = layers(L)
-    for im in [dim, static, *lit] + ([full] if L.get("full_lines") else []) + [cta]:
+    ly = layers(L)
+    if L.get("template") == "v3":
+        ims = [ly["dim"], ly["meal_dim"], ly["static"], *ly["lit"], *ly["meals"], ly["cta"]]
+    else:
+        ims = [ly["dim"], ly["static"], *ly["lit"]] + ([ly["full"]] if L.get("full_lines") else []) + [ly["cta"]]
+    for im in ims:
         _Layer(im).over(frame, 1.0)
+    if L.get("template") == "v3":
+        _progress(frame, 1.0, L["kind"])
     Image.fromarray(frame.clip(0, 255).astype(np.uint8)).save(out, "JPEG", quality=90)
     return out
 

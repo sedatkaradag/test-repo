@@ -221,7 +221,7 @@ def main():
         changed = False
         if item.get("status") == "audio_pending" and item.get("audio"):
             is_story = item.get("type") == "story"
-            if item.get("template") == "v2" and item.get("reel_layout"):
+            if item.get("template") in ("v2", "v3") and item.get("reel_layout"):
                 ok, note = add_recitation_v2(item["video"], item["reel_layout"], item.get("layout_hash"),
                                              item["audio"], reciters, int(rec.get("max_seconds", 75)))
             else:

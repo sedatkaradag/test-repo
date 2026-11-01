@@ -616,7 +616,7 @@ def cmd_recaption(a):
         print(f"UNCHANGED {a.slot}")
         return
     # The approved text changed, so the item waits for a fresh verifier (approve puts it back).
-    if item.get("type") == "reel" and item.get("template") == "v2":
+    if item.get("type") == "reel" and item.get("template") in ("v2", "v3"):
         if re.search(r"(?im)^recitation:", caption):
             sys.exit("REJECT caption: leave out the Recitation line; it is added automatically")
         rec = re.search(r"(?m)^Recitation: .*$", item["caption"])
@@ -646,7 +646,7 @@ def redraw_reel_v2(item, stem):
     RL.still(layout, QUEUE / f"{stem}.jpg")
     (ROOT / item["cover"]).write_bytes((QUEUE / f"{stem}.jpg").read_bytes())
     RL.render_video(layout, QUEUE / f"{stem}.mp4")
-    item.update(reel_layout=layout, layout_hash=RL.layout_hash(layout))
+    item.update(reel_layout=layout, layout_hash=RL.layout_hash(layout), template=RL.TEMPLATE)
     if item.get("audio"):
         for k in ("seconds", "video_seconds", "verse_seconds", "timing", "added_at", "tried", "silent"):
             item["audio"].pop(k, None)
@@ -667,7 +667,7 @@ def cmd_rerender(a):
         flags = require_integrity(ids)
         for n, i in enumerate(ids, start=1):   # card 0 is the cover (no verse text)
             render(i, QUEUE / f"{stem}_{n}.jpg")
-    elif item["type"] == "reel" and item.get("template") == "v2":
+    elif item["type"] == "reel" and item.get("template") in ("v2", "v3"):
         flags = redraw_reel_v2(item, stem)
     elif item["type"] == "reel":
         flags = require_integrity([item["entry_id"]])
@@ -721,7 +721,7 @@ def cmd_approve(a):
         sys.exit("REJECT: publish time has passed; enqueue it in a new slot")
     status = "ready"
     au = item.get("audio")
-    if item.get("template") == "v2" and au and not au.get("done"):
+    if item.get("template") in ("v2", "v3") and au and not au.get("done"):
         status = "audio_pending"   # re-rendered verse Reel: GitHub adds the recitation again
     item.update(status=status, review=a.review)
     item.pop("hold_reason", None)
