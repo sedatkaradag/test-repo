@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-11-01T01:28:23Z",
+  "checked_at": "2026-11-01T03:50:32Z",
   "ok": true,
   "same_token": false,
-  "expires_in_days": 60.0,
+  "expires_in_days": 59.9,
   "expires_at": "2026-12-31T01:28:23Z",
   "stored": true
 }
