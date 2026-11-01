@@ -1,0 +1,140 @@
+{
+  "entry_id": "quran:67:1-2",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Mulk 67:1-2",
+  "slot": "2026-11-02_reel-eu",
+  "publish_at": "2026-11-02T17:55:49Z",
+  "local_slot": "2026-11-02 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-02_reel-eu.jpg",
+  "video": "queue/2026-11-02_reel-eu.mp4",
+  "cover": "queue/2026-11-02_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Surah Al-Mulk on why life is a test\n\nAllah created death and life to test which of us is best in deeds. Not the most, the best. And He is the All-Mighty, the Most Forgiving.\n\nSurah Al-Mulk 67:1-2\n\nChoose one deed today and do it as well as you can.\n\n#lifeisatest #surahmulk #bestindeeds #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Blessed is He in Whose Hand is the dominion, and He is Most Capable of all things. Who created death and life to test you as to which of you is best in deeds, and He is the All-Mighty, the Most Forgiving (Surah Al-Mulk 67:1-2)",
+  "theme": "life is a test / best in deeds (Surah Al-Mulk)",
+  "review": "approve r2 (29:2 rejected r1): Arabic word/mark check ok, English and reference match, caption fine",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:67:1-2",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Surah Al-Mulk on why life is a test",
+    "hook_lines": [
+      "Surah Al-Mulk on why life is",
+      "a test"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "067001",
+        "lines": [
+          "تَبَٰرَكَ ٱلَّذِي بِيَدِهِ ٱلۡمُلۡكُ وَهُوَ عَلَىٰ كُلِّ شَيۡءٖ قَدِيرٌ ١"
+        ],
+        "y": 606.4,
+        "meal": [
+          "Blessed is He in Whose Hand is the dominion,",
+          "and He is Most Capable of all things."
+        ]
+      },
+      {
+        "ayah": "067002",
+        "lines": [
+          "ٱلَّذِي خَلَقَ ٱلۡمَوۡتَ وَٱلۡحَيَوٰةَ لِيَبۡلُوَكُمۡ أَيُّكُمۡ أَحۡسَنُ",
+          "عَمَلٗاۚ وَهُوَ ٱلۡعَزِيزُ ٱلۡغَفُورُ ٢"
+        ],
+        "y": 723.4,
+        "meal": [
+          "Who created death and life to test you as to",
+          "which of you is best in deeds, and He is the",
+          "All-Mighty, the Most Forgiving."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 987.4,
+    "full": "Blessed is He in Whose Hand is the dominion, and He is Most Capable of all things. Who created death and life to test you as to which of you is best in deeds, and He is the All-Mighty, the Most Forgiving.",
+    "full_lines": [
+      "Blessed is He in Whose Hand is the dominion,",
+      "and He is Most Capable of all things. Who",
+      "created death and life to test you as to which of",
+      "you is best in deeds, and He is the All-Mighty,",
+      "the Most Forgiving."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-Mulk 67:1-2",
+    "ref_y": 1326.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Choose one deed today and do it as well as you can.",
+    "cta_lines": [
+      "Choose one deed today and do it as well as you",
+      "can."
+    ],
+    "cta_size": 48,
+    "line_y": 1384.4,
+    "handle_y": 1530.4,
+    "handle_size": 27
+  },
+  "layout_hash": "0ab77dc8ee6b83844b1a9d53",
+  "created_at": "2026-11-01T05:44:37+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "067001",
+      "067002"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "entry_id": "quran:18:46",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Kahf 18:46",
+  "slot": "2026-11-02_reel-eu-am",
+  "publish_at": "2026-11-02T07:11:49Z",
+  "local_slot": "2026-11-02 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-02_reel-eu-am.jpg",
+  "video": "queue/2026-11-02_reel-eu-am.mp4",
+  "cover": "queue/2026-11-02_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Lasting good deeds: read this before your day starts\n\nWealth and children are a beauty of this life, but Allah tells us the lasting righteous deeds are better with Him, in reward and in hope. Start today with one deed that lasts.\n\nSurah Al-Kahf 18:46\n\nPick one lasting good deed to do before noon today\n\n#gooddeeds #righteousdeeds #muslimhabits #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Wealth and children are the adornment of the life of this world, but the lasting righteous deeds are better with your Lord in reward and better in hope (Surah Al-Kahf 18:46)",
+  "theme": "lasting good deeds / what remains",
+  "review": "approve r1: Arabic word/mark check ok, English and reference match, caption fine",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:18:46",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Lasting good deeds: read this before your day starts",
+    "hook_lines": [
+      "Lasting good deeds: read this",
+      "before your day starts"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "018046",
+        "lines": [
+          "ٱلۡمَالُ وَٱلۡبَنُونَ زِينَةُ ٱلۡحَيَوٰةِ ٱلدُّنۡيَاۖ",
+          "وَٱلۡبَٰقِيَٰتُ ٱلصَّٰلِحَٰتُ خَيۡرٌ عِندَ رَبِّكَ",
+          "ثَوَابٗا وَخَيۡرٌ أَمَلٗا ٤٦"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Wealth and children are the adornment of the life",
+          "of this world, but the lasting righteous deeds are",
+          "better with your Lord in reward and better in",
+          "hope."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Wealth and children are the adornment of the life of this world, but the lasting righteous deeds are better with your Lord in reward and better in hope.",
+    "full_lines": [
+      "Wealth and children are the adornment of the life",
+      "of this world, but the lasting righteous deeds are",
+      "better with your Lord in reward and better in",
+      "hope."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Kahf 18:46",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one lasting good deed to do before noon today",
+    "cta_lines": [
+      "Pick one lasting good deed to do before noon",
+      "today"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "013ec654b2bd9d3fd57d1ce9",
+  "created_at": "2026-11-01T05:43:50+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "018046"
+    ],
+    "done": false
+  }
+}

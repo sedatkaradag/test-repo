@@ -1,0 +1,97 @@
+{
+  "entry_id": "quran:7:55",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'raaf 7:55",
+  "slot": "2026-11-02_reel-pk",
+  "publish_at": "2026-11-02T15:29:46Z",
+  "local_slot": "2026-11-02 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-02_reel-pk.jpg",
+  "video": "queue/2026-11-02_reel-pk.mp4",
+  "cover": "queue/2026-11-02_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "The dua no one else hears\n\nAllah tells us to call upon Him with humility and in private. Tonight, before sleep, talk to Him quietly about what you carry.\n\nSurah Al-A'raaf 7:55\n\nFind two quiet minutes tonight and make your own dua\n\n#dua #nightdua #privatedua #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Call upon your Lord with humility and in private, for He does not like the transgressors (Surah Al-A'raaf 7:55)",
+  "theme": "private dua / calling on Allah humbly",
+  "review": "approve r1: Arabic word/mark check ok, English and reference match, caption fine",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:7:55",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The dua no one else hears",
+    "hook_lines": [
+      "The dua no one else hears"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "007055",
+        "lines": [
+          "ٱدۡعُواْ رَبَّكُمۡ تَضَرُّعٗا وَخُفۡيَةًۚ إِنَّهُۥ لَا",
+          "يُحِبُّ ٱلۡمُعۡتَدِينَ ٥٥"
+        ],
+        "y": 629.8,
+        "meal": [
+          "Call upon your Lord with humility and in",
+          "private, for He does not like the transgressors."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 971.8,
+    "full": "Call upon your Lord with humility and in private, for He does not like the transgressors.",
+    "full_lines": [
+      "Call upon your Lord with humility and in",
+      "private, for He does not like the transgressors."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-A'raaf 7:55",
+    "ref_y": 1121.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Find two quiet minutes tonight and make your own dua",
+    "cta_lines": [
+      "Find two quiet minutes tonight and make your",
+      "own dua"
+    ],
+    "cta_size": 48,
+    "line_y": 1179.8,
+    "handle_y": 1325.8,
+    "handle_size": 27
+  },
+  "layout_hash": "3dd8bb90f1be9a9f8265b385",
+  "created_at": "2026-11-01T05:44:07+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "007055"
+    ],
+    "done": false
+  }
+}

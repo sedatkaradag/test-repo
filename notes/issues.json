@@ -130,5 +130,15 @@
     "opened_at": "2026-10-29T19:10:17Z",
     "closed_at": "2026-10-29T19:24:03Z",
     "resolution": "Düzeldi. Gecelik iş artık Reels için ortalama ve toplam izlenme süresini, her paylaşım için takip ve profil ziyaretini de istiyor. İlk çalışmada izlenme süresi 15 Reels'in hepsinde geldi. Takip ve profil ziyareti ise yalnızca fotoğraf gönderileri ve carousel için geliyor; Instagram bunları Reels için vermiyor. Instagram'ın değer vermediği ölçümler insights.json'da unavailable_metrics altında sayılıyor."
+  },
+  {
+    "id": "S-012",
+    "kind": "code",
+    "title": "Kart ve Reels, soru olan ayetin sonuna nokta ekliyor",
+    "detail": "29:2 kaynak İngilizcesi soru cümlesi ama son noktalama yok; render.py/reels.py sona nokta koyuyor, soru düz cümle gibi okunuyor. Denetçi reddetti, slot 67:1-2 ile dolduruldu. Öneri: soru cümlesiyle biten metinde '?' koy veya hiç ekleme.",
+    "ref": "quran:29:2",
+    "source": "Günlük içerik, 2026-11-01",
+    "status": "open",
+    "opened_at": "2026-11-01T05:45:07Z"
   }
 ]

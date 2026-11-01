@@ -1,0 +1,73 @@
+{
+  "entry_id": "hadith:ibnmajah:3971",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v3",
+  "reference": "Sunan Ibn Majah 3971",
+  "slot": "2026-11-02_reel-us",
+  "publish_at": "2026-11-03T01:25:04Z",
+  "local_slot": "2026-11-02 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-02_reel-us.jpg",
+  "video": "queue/2026-11-02_reel-us.mp4",
+  "cover": "queue/2026-11-02_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Before you speak or post tonight, remember this\n\nThe Prophet ﷺ said that whoever believes in Allah and the Last Day should say something good, or else remain silent. Let every word pass that test.\n\nSunan Ibn Majah 3971 · Grade: Sahih\n\nSend this to the friend who always picks kind words\n\n#goodspeech #guardyourtongue #muslimmanners #hadithreels",
+  "alt_text": "It was narrated from Abu Hurairah that the Messenger of Allah (ﷺ) said:“Whoever believes in Allah and the Last Day, let him say something good, or else remain silent.” (Sunan Ibn Majah 3971)",
+  "theme": "speech / say good or stay silent",
+  "review": "approve r1: text, grade Sahih, narrator match, caption fine",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "hadith",
+    "entry_id": "hadith:ibnmajah:3971",
+    "label": "HADITH",
+    "hook": "Before you speak or post tonight, remember this",
+    "hook_lines": [
+      "Before you speak or post",
+      "tonight, remember this"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "It was narrated from Abu Hurairah that the Messenger of Allah",
+      "(ﷺ) said:"
+    ],
+    "lead_size": 34,
+    "lead_y": 694.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "“Whoever believes in Allah and",
+          "the Last Day,"
+        ],
+        "y": 822.5
+      },
+      {
+        "lines": [
+          "let him say something good, or else",
+          "remain silent.”"
+        ],
+        "y": 1028.5
+      }
+    ],
+    "ref": "Sunan Ibn Majah 3971 · Grade: Sahih",
+    "ref_y": 1254.5,
+    "slogan": "Follow & Share The Sunnah",
+    "slogan_lines": [
+      "Follow & Share The Sunnah"
+    ],
+    "cta": "Send this to the friend who always picks kind words",
+    "cta_lines": [
+      "Send this to the friend who always picks kind",
+      "words"
+    ],
+    "cta_size": 48,
+    "line_y": 1312.5,
+    "handle_y": 1458.5,
+    "handle_size": 27
+  },
+  "layout_hash": "d3075a3e38e799f7eca310ed",
+  "created_at": "2026-11-01T05:44:55+00:00"
+}
