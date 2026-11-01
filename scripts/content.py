@@ -97,6 +97,37 @@ def drop_dangling_closes(text, n):
     return text
 
 
+_Q_AUX = {"do", "does", "did", "is", "are", "was", "were", "has", "have", "had", "will", "would",
+          "shall", "should", "can", "could", "am"}   # not "may": "May Allah forgive you" is a prayer
+_Q_SUBJ = {"you", "they", "we", "he", "she", "it", "i", "people", "the", "those", "these", "there",
+           "man", "mankind", "humankind", "this", "that", "your", "their", "our", "his",
+           "its", "my", "anyone", "any", "none", "allah"}
+_Q_WH = {"What", "Which", "Why", "How"}   # not "Who": the source writes "Who" for Allah in statements
+
+
+def end_mark(text):
+    """Punctuation for a text the source leaves without a final mark (punctuation only, never words).
+    The source translation often drops the question mark at a verse end ("Do people think ... the
+    test"), so: '?' when the last sentence is plainly a question (auxiliary + subject: "Do people",
+    "Did He not", "Will you"), '' (leave it as the source has it) when it may be a question
+    ("How can you ...", "What message ...", "Had I been near ..."), otherwise '.'."""
+    last = re.split(r"(?<=[.!?;:])[\"”’']*\s+", text.strip())[-1].lstrip("\"“‘'([")
+    words = re.findall(r"[A-Za-z’']+", last)
+    if len(words) >= 2:
+        w0, w1 = words[0].lower(), words[1].lower()
+        if w0 in _Q_AUX and words[0][0].isupper() and w1 in _Q_SUBJ and (w0, w1) != ("would", "that"):
+            if w0 == "do" and w1 in ("it", "this", "that"):
+                return "."  # an instruction ("Do that in all of your prayers")
+            if w0 in ("had", "were", "should") and (w0 != "should" or "," in last):
+                # Often a condition ("Had they believed, We would have ...", "Were it not for ..."):
+                # a full stop when the main clause is plain, otherwise leave it as the source has it.
+                return "." if re.search(r",\s+(?:then|We|we|I|they|he|it|Allah|you)\b", last) else ""
+            return "?"
+        if words[0] in _Q_WH and not (w0 == "what" and w1 in ("a", "an")):
+            return ""
+    return "."
+
+
 def _join_verses(parts):
     """Join consecutive verses, adding only punctuation between them."""
     out = parts[0].rstrip()
@@ -105,11 +136,12 @@ def _join_verses(parts):
         # A verse that ends in a word, or in a translator's bracket ("[to Him]"), gets the same
         # joining punctuation; one that already ends in punctuation is left as it is.
         if out and (out[-1].isalnum() or out[-1] in ")]"):
-            out += ";" if nxt[:1].islower() else "."
+            out += ";" if nxt[:1].islower() else ("?" if end_mark(out) == "?" else ".")
         elif len(out) > 1 and out[-1] in "”\"’" and out[-2].isalnum():
             # The verse ends on a quotation closed without punctuation ("...done wrong”"): a full stop
             # goes inside the closing mark, a semicolon after it when the next verse goes on.
-            out = out + ";" if nxt[:1].islower() else out[:-1] + "." + out[-1]
+            out = out + ";" if nxt[:1].islower() else \
+                out[:-1] + ("?" if end_mark(out[:-1]) == "?" else ".") + out[-1]
         out += " " + nxt
     return out
 
@@ -174,11 +206,11 @@ def display_text(text):
         t += '"'
     if t.count("“") > t.count("”"):
         t += "”"
-    # End with a full stop if the source stops mid-air.
+    # End with a full stop (or a question mark, see end_mark) if the source stops mid-air.
     if t and t[-1].isalnum():
-        t += "."
+        t += end_mark(t)
     elif len(t) > 1 and t[-1] in "\"”" and t[-2].isalnum():
-        t = t[:-1] + "." + t[-1]
+        t = t[:-1] + end_mark(t[:-1]) + t[-1]
     return smart_quotes(t)
 
 

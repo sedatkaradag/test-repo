@@ -138,7 +138,9 @@
     "detail": "29:2 kaynak İngilizcesi soru cümlesi ama son noktalama yok; render.py/reels.py sona nokta koyuyor, soru düz cümle gibi okunuyor. Denetçi reddetti, slot 67:1-2 ile dolduruldu. Öneri: soru cümlesiyle biten metinde '?' koy veya hiç ekleme.",
     "ref": "quran:29:2",
     "source": "Günlük içerik, 2026-11-01",
-    "status": "open",
-    "opened_at": "2026-11-01T05:45:07Z"
+    "status": "closed",
+    "opened_at": "2026-11-01T05:45:07Z",
+    "closed_at": "2026-11-01T14:59:28Z",
+    "resolution": "Düzeltildi: kaynak son noktalamayı bırakmışsa metin açıkça soruysa (Do/Did/Is/Will... + özne; ör. 29:2) sona '?' konuyor, emin olunamayanlarda (How/What/Which, Had/Were koşulları) hiçbir işaret eklenmiyor, diğerlerine nokta. Birleştirilen ayetler arasında da aynı kural. Kart, Reels ve Story aynı fonksiyonu kullanıyor; kuyruktaki hiçbir öğe etkilenmedi. Denetçi talimatına eklendi."
   }
 ]

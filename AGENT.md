@@ -138,9 +138,12 @@ cd scripts
    >    verse-end number must stay with its verse. For both, the
    >    English on the card must be the source English. The reference line must match.
    >    The card changes punctuation only, on purpose: it closes a quotation the source leaves
-   >    open, leaves out a lone closing quote whose opening the source omits (e.g. 112:1-4), and
-   >    puts a full stop or semicolon between joined verses. These are not errors; any change to
-   >    a word is.
+   >    open, leaves out a lone closing quote whose opening the source omits (e.g. 112:1-4),
+   >    puts a full stop or semicolon between joined verses, and ends a text the source leaves
+   >    without a final mark with a full stop, or with a question mark when it is plainly a
+   >    question (e.g. 29:2 "Do people think ... put to the test?"; when unsure it adds nothing).
+   >    These are not errors; any change to a word is. A question that ends in a full stop is
+   >    an error.
    > 2b. Only for a Reel: run `python3 reels.py <ID> /tmp/review_reel_<n> --caption-file <caption dosyası> --no-video`
    >    and OPEN `reel_still.jpg` (the finished frame). Check its Arabic exactly as on the card
    >    (word by word, mark by mark, zoom in). On a verse Reel the frame shows the whole source
