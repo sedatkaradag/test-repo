@@ -17,8 +17,9 @@ HISTORY = ROOT / "history" / "posted.jsonl"
 OUT = ROOT / "history" / "insights.json"
 MEDIA_METRICS = ["reach", "views", "likes", "comments", "saved", "shares", "total_interactions",
                  "follows", "profile_visits"]
-# Reels only: average watch time and total watch time (milliseconds).
-REEL_METRICS = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
+# Reels only: average and total watch time (milliseconds), and the skip rate (share of views
+# that left within the first 3 seconds).
+REEL_METRICS = ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time", "reels_skip_rate"]
 
 
 def get(base, path, token, **params):
