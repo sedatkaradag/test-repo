@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-01T03:52:27+00:00",
+  "fetched_at": "2026-11-01T04:19:33+00:00",
   "account": {
     "followers_count": 115,
     "media_count": 58,
@@ -28,9 +28,148 @@
       "21": 29,
       "22": 25,
       "23": 33
+    },
+    "follower_demographics": {
+      "country": {
+        "IN": 25,
+        "PK": 8,
+        "TR": 6,
+        "KE": 5,
+        "SA": 4,
+        "US": 4,
+        "EG": 4,
+        "AE": 4,
+        "NG": 4,
+        "BD": 3,
+        "GB": 3,
+        "MA": 2,
+        "DZ": 2,
+        "CA": 2,
+        "ZA": 2,
+        "KW": 2,
+        "PH": 2,
+        "LK": 2,
+        "DE": 1,
+        "FR": 1,
+        "QA": 1,
+        "UG": 1,
+        "SG": 1,
+        "SN": 1,
+        "ID": 1
+      },
+      "city": {
+        "Chennai, Tamil Nadu": 4,
+        "Kochi, Kerala": 2,
+        "Adana, Adana Province": 2,
+        "Karachi, Sindh": 2,
+        "Lahore, Punjab": 2,
+        "Garissa, North Eastern Province": 2,
+        "Moyale, Eastern Province": 2,
+        "Riyadh, Riyadh Region": 2,
+        "Dubai, Dubai": 2,
+        "Sharjah, Emirate of Sharjah": 2,
+        "Philadelphia, Pennsylvania": 1,
+        "Al-Fahaheel, Ahmadi Governorate": 1,
+        "Luton, England": 1,
+        "Fritissa, Fès-Boulemane": 1,
+        "Garland, Texas": 1,
+        "Montreal, Quebec": 1,
+        "Yuma, Arizona": 1,
+        "Rufisque, Dakar Region": 1,
+        "Khanewal, Punjab": 1,
+        "Pune, Maharashtra": 1,
+        "Manesar, Haryana": 1,
+        "Medchal, Telangana": 1,
+        "Senden, Bayern": 1,
+        "Mecca, Makkah Region": 1,
+        "Mubi, Adamawa State": 1
+      },
+      "age": {
+        "13-17": 4,
+        "18-24": 26,
+        "25-34": 48,
+        "35-44": 14,
+        "45-54": 5,
+        "55-64": 1,
+        "65+": 2
+      },
+      "gender": {
+        "F": 21,
+        "M": 45,
+        "U": 34
+      }
+    },
+    "engaged_audience_demographics": {
+      "country": {
+        "IN": 74,
+        "PK": 16,
+        "GB": 13,
+        "US": 8,
+        "AE": 8,
+        "CA": 7,
+        "TR": 6,
+        "DE": 5,
+        "BD": 5,
+        "SA": 5,
+        "MY": 4,
+        "KE": 3,
+        "RU": 2,
+        "DZ": 2,
+        "IT": 2,
+        "NG": 2,
+        "LK": 2,
+        "FI": 1,
+        "BE": 1,
+        "BH": 1,
+        "FR": 1,
+        "NZ": 1,
+        "QA": 1,
+        "MA": 1,
+        "ID": 1
+      },
+      "city": {
+        "Hyderabad, Telangana": 10,
+        "Dubai, Dubai": 5,
+        "Mumbai, Maharashtra": 5,
+        "Karachi, Sindh": 4,
+        "Chennai, Tamil Nadu": 4,
+        "Bangalore, Karnataka": 4,
+        "Dhaka, Dhaka Division": 3,
+        "Toronto, Ontario": 3,
+        "Dammam, Eastern Province": 3,
+        "London, England": 2,
+        "Bochum, Nordrhein-Westfalen": 2,
+        "Vijayawada, Andhra Pradesh": 2,
+        "Rawalpindi, Punjab": 2,
+        "Moscow, Moscow": 2,
+        "Mombasa, Coast Province": 2,
+        "Hyderabad, Sindh": 2,
+        "Tirur, Kerala": 2,
+        "Sharjah, Emirate of Sharjah": 2,
+        "Algiers, Algiers Province": 1,
+        "Puchong, Selangor": 1,
+        "Luton, England": 1,
+        "Coimbatore, Tamil Nadu": 1,
+        "Shaab, Ahmadi Governorate": 1,
+        "Lagos, Lagos State": 1,
+        "Hounslow, England": 1
+      },
+      "age": {
+        "18-24": 78,
+        "25-34": 81,
+        "35-44": 17,
+        "45-54": 6,
+        "55-64": 1
+      },
+      "gender": {
+        "F": 44,
+        "M": 78,
+        "U": 61
+      }
     }
   },
   "unavailable_metrics": {
+    "reposts": 60,
     "reach": 2,
     "views": 2,
     "likes": 2,
@@ -42,7 +181,24 @@
     "profile_visits": 26,
     "ig_reels_avg_watch_time": 1,
     "ig_reels_video_view_total_time": 1,
-    "reels_skip_rate": 1
+    "reels_skip_rate": 1,
+    "story_navigation": 1,
+    "follows_and_unfollows": 1
+  },
+  "errors": {
+    "reposts": "Instagram Insights Media API endpoint does not support the metrics: reposts. Please refer to https://developers.facebook.com/docs/instagram/reference/media#insi",
+    "reach": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "views": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "likes": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "comments": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "saved": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "shares": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "total_interactions": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "follows": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "profile_visits": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "ig_reels_avg_watch_time": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "ig_reels_video_view_total_time": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
+    "reels_skip_rate": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation"
   },
   "posts": [
     {
@@ -71,6 +227,8 @@
       "theme": "mercy / hope / tawbah",
       "slot": "2026-10-20_eu-evening-us-noon",
       "type": "quran",
+      "story_media_id": "17983466624901485",
+      "story_kind": "",
       "stats": {
         "reach": 19,
         "views": 34,
@@ -91,6 +249,8 @@
       "theme": "kindness / smiling as charity",
       "slot": "2026-10-20_us-evening",
       "type": "hadith",
+      "story_media_id": "18035721566850854",
+      "story_kind": "",
       "stats": {
         "reach": 14,
         "views": 25,
@@ -111,6 +271,8 @@
       "theme": "du'a / Allah is near",
       "slot": "2026-10-21_eu-morning",
       "type": "quran",
+      "story_media_id": "17919865437455399",
+      "story_kind": "",
       "stats": {
         "reach": 17,
         "views": 40,
@@ -131,6 +293,8 @@
       "theme": "consistency in small deeds",
       "slot": "2026-10-21_us-morning",
       "type": "hadith",
+      "story_media_id": "18117360223789872",
+      "story_kind": "",
       "stats": {
         "reach": 10,
         "views": 26,
@@ -166,6 +330,8 @@
         "reciter_name": "Mahmoud Khalil Al-Husary",
         "on": "story"
       },
+      "story_media_id": "17963864982213695",
+      "story_kind": "video",
       "stats": {
         "reach": 8,
         "views": 12,
@@ -253,6 +419,8 @@
       "theme": "hardship expiates sins",
       "slot": "2026-10-21_us-evening",
       "type": "hadith",
+      "story_media_id": "18119029519959702",
+      "story_kind": "image",
       "stats": {
         "reach": 8,
         "views": 18,
@@ -278,6 +446,8 @@
         "reciter_name": "Mohamed Siddiq Al-Minshawi",
         "on": "story"
       },
+      "story_media_id": "18132336910791924",
+      "story_kind": "video",
       "stats": {
         "reach": 7,
         "views": 11,
@@ -298,6 +468,8 @@
       "theme": "Monday/Thursday Sunnah fasting",
       "slot": "2026-10-22_us-morning",
       "type": "hadith",
+      "story_media_id": "18014980775987699",
+      "story_kind": "image",
       "stats": {
         "reach": 8,
         "views": 14,
@@ -344,6 +516,8 @@
         "reciter_name": "Maher Al-Muaiqly",
         "on": "story"
       },
+      "story_media_id": "18119381038946191",
+      "story_kind": "video",
       "stats": {
         "reach": 10,
         "views": 15,
@@ -364,6 +538,8 @@
       "theme": "kindness to parents (mother)",
       "slot": "2026-10-22_us-evening",
       "type": "hadith",
+      "story_media_id": "18075383309477735",
+      "story_kind": "image",
       "stats": {
         "reach": 11,
         "views": 22,
@@ -384,6 +560,8 @@
       "theme": "Friday (Jumu'ah)",
       "slot": "2026-10-23_eu-morning",
       "type": "quran",
+      "story_media_id": "17969197689175478",
+      "story_kind": "image",
       "stats": {
         "reach": 8,
         "views": 14,
@@ -404,6 +582,8 @@
       "theme": "Friday du'a hour",
       "slot": "2026-10-23_us-morning",
       "type": "hadith",
+      "story_media_id": "18249606406310412",
+      "story_kind": "image",
       "stats": {
         "reach": 11,
         "views": 21,
@@ -455,6 +635,8 @@
         "reciter_name": "Mahmoud Khalil Al-Husary",
         "on": "story"
       },
+      "story_media_id": "18357466156168430",
+      "story_kind": "video",
       "stats": {
         "reach": 7,
         "views": 13,
@@ -475,6 +657,8 @@
       "theme": "honesty / leaving doubt",
       "slot": "2026-10-23_us-evening",
       "type": "hadith",
+      "story_media_id": "18590447227069624",
+      "story_kind": "image",
       "stats": {
         "reach": 9,
         "views": 17,
@@ -500,6 +684,8 @@
         "reciter_name": "Mohamed Siddiq Al-Minshawi",
         "on": "story"
       },
+      "story_media_id": "18088546748695204",
+      "story_kind": "video",
       "stats": {
         "reach": 9,
         "views": 22,
@@ -520,6 +706,8 @@
       "theme": "white days sunnah fasting",
       "slot": "2026-10-24_us-morning",
       "type": "hadith",
+      "story_media_id": "18119915362910981",
+      "story_kind": "image",
       "stats": {
         "reach": 6,
         "views": 18,
@@ -566,6 +754,8 @@
         "reciter_name": "Maher Al-Muaiqly",
         "on": "story"
       },
+      "story_media_id": "17902938822656254",
+      "story_kind": "video",
       "stats": {
         "reach": 6,
         "views": 6,
@@ -586,6 +776,8 @@
       "theme": "mercy / family ties",
       "slot": "2026-10-24_us-evening",
       "type": "hadith",
+      "story_media_id": "17879592660633442",
+      "story_kind": "image",
       "stats": {
         "reach": 9,
         "views": 19,
@@ -611,6 +803,8 @@
         "reciter_name": "Abdul Basit Abdus-Samad",
         "on": "story"
       },
+      "story_media_id": "17905697043606087",
+      "story_kind": "video",
       "stats": {
         "reach": 6,
         "views": 14,
@@ -631,6 +825,8 @@
       "theme": "sincerity / the heart (ikhlas)",
       "slot": "2026-10-25_us-morning",
       "type": "hadith",
+      "story_media_id": "17951264448342308",
+      "story_kind": "image",
       "stats": {
         "reach": 7,
         "views": 13,
@@ -682,6 +878,8 @@
         "reciter_name": "Mishary Alafasy",
         "on": "story"
       },
+      "story_media_id": "18447985729130614",
+      "story_kind": "video",
       "stats": {
         "reach": 7,
         "views": 10,
@@ -702,6 +900,8 @@
       "theme": "good speech / neighbors and guests",
       "slot": "2026-10-25_us-evening",
       "type": "hadith",
+      "story_media_id": "18078152651734745",
+      "story_kind": "image",
       "stats": {
         "reach": 8,
         "views": 14,
@@ -727,6 +927,8 @@
         "reciter_name": "Mahmoud Khalil Al-Husary",
         "on": "story"
       },
+      "story_media_id": "18220564258346625",
+      "story_kind": "video",
       "stats": {
         "reach": 7,
         "views": 8,
@@ -747,6 +949,8 @@
       "theme": "seeking knowledge",
       "slot": "2026-10-26_us-morning",
       "type": "hadith",
+      "story_media_id": "18036142733896436",
+      "story_kind": "image",
       "stats": {
         "reach": 6,
         "views": 12,
@@ -793,6 +997,8 @@
         "reciter_name": "Abdul Basit Abdus-Samad",
         "on": "story"
       },
+      "story_media_id": "18032467547681703",
+      "story_kind": "video",
       "stats": {
         "reach": 10,
         "views": 20,
@@ -839,6 +1045,8 @@
         "reciter_name": "Mahmoud Khalil Al-Husary",
         "on": "story"
       },
+      "story_media_id": "17905953648656946",
+      "story_kind": "video",
       "stats": {
         "reach": 8,
         "views": 15,
@@ -859,6 +1067,8 @@
       "theme": "small good deeds / cheerful face",
       "slot": "2026-10-27_us-morning",
       "type": "hadith",
+      "story_media_id": "18397148938166338",
+      "story_kind": "image",
       "stats": {
         "reach": 11,
         "views": 18,
@@ -892,8 +1102,8 @@
         "saved": 22,
         "shares": 16,
         "total_interactions": 249,
-        "ig_reels_avg_watch_time": 9893,
-        "ig_reels_video_view_total_time": 13129265,
+        "ig_reels_avg_watch_time": 9891,
+        "ig_reels_video_view_total_time": 13135366,
         "reels_skip_rate": 54.5
       }
     },
@@ -957,6 +1167,8 @@
         "reciter_name": "Mishary Alafasy",
         "on": "story"
       },
+      "story_media_id": "18379527262241537",
+      "story_kind": "video",
       "stats": {
         "reach": 11,
         "views": 15,
@@ -1100,6 +1312,8 @@
         "reciter_name": "Maher Al-Muaiqly",
         "on": "story"
       },
+      "story_media_id": "18021343100935186",
+      "story_kind": "video",
       "stats": {
         "reach": 8,
         "views": 16,
@@ -1120,6 +1334,8 @@
       "theme": "brotherhood / loving for others",
       "slot": "2026-10-29_us-morning",
       "type": "hadith",
+      "story_media_id": "18098659574122420",
+      "story_kind": "image",
       "stats": {
         "reach": 9,
         "views": 14,
@@ -1192,6 +1408,8 @@
       "theme": "health and free time",
       "slot": "2026-10-29_reel-us",
       "type": "reel",
+      "story_media_id": "18135796822736275",
+      "story_kind": "video",
       "stats": {
         "reach": 728,
         "views": 848,
@@ -1218,6 +1436,8 @@
         "reciter_name": "Ahmed Al-Ajmi",
         "on": "reel"
       },
+      "story_media_id": "18473584528136443",
+      "story_kind": "video",
       "stats": {
         "reach": 1372,
         "views": 1535,
@@ -1244,6 +1464,8 @@
         "reciter_name": "Mishary Alafasy",
         "on": "reel"
       },
+      "story_media_id": "18109493915219070",
+      "story_kind": "video",
       "stats": {
         "reach": 1632,
         "views": 1850,
@@ -1252,8 +1474,8 @@
         "saved": 40,
         "shares": 9,
         "total_interactions": 234,
-        "ig_reels_avg_watch_time": 6937,
-        "ig_reels_video_view_total_time": 11245819,
+        "ig_reels_avg_watch_time": 6938,
+        "ig_reels_video_view_total_time": 11246707,
         "reels_skip_rate": 58.4
       }
     },
@@ -1270,6 +1492,8 @@
         "reciter_name": "Maher Al-Muaiqly",
         "on": "reel"
       },
+      "story_media_id": "18096171749160546",
+      "story_kind": "video",
       "stats": {
         "reach": 263,
         "views": 301,
@@ -1278,8 +1502,8 @@
         "saved": 4,
         "shares": 0,
         "total_interactions": 47,
-        "ig_reels_avg_watch_time": 4434,
-        "ig_reels_video_view_total_time": 1188564,
+        "ig_reels_avg_watch_time": 4432,
+        "ig_reels_video_view_total_time": 1192251,
         "reels_skip_rate": 64.4
       }
     },
@@ -1291,6 +1515,8 @@
       "theme": "dhikr / two light phrases",
       "slot": "2026-10-30_reel-us",
       "type": "reel",
+      "story_media_id": "18642891355062748",
+      "story_kind": "video",
       "stats": {
         "reach": 470,
         "views": 528,
@@ -1317,16 +1543,18 @@
         "reciter_name": "Yasser Al-Dosari",
         "on": "reel"
       },
+      "story_media_id": "17921032944453739",
+      "story_kind": "video",
       "stats": {
-        "reach": 1621,
-        "views": 1813,
+        "reach": 1623,
+        "views": 1814,
         "likes": 184,
         "comments": 0,
         "saved": 23,
         "shares": 11,
         "total_interactions": 222,
-        "ig_reels_avg_watch_time": 4331,
-        "ig_reels_video_view_total_time": 7072676,
+        "ig_reels_avg_watch_time": 4327,
+        "ig_reels_video_view_total_time": 7075169,
         "reels_skip_rate": 65.7
       }
     },
@@ -1343,6 +1571,8 @@
         "reciter_name": "Mishary Alafasy",
         "on": "reel"
       },
+      "story_media_id": "18021946514949554",
+      "story_kind": "video",
       "stats": {
         "reach": 1436,
         "views": 1574,
@@ -1369,17 +1599,19 @@
         "reciter_name": "Abdul Rahman Al-Sudais",
         "on": "reel"
       },
+      "story_media_id": "18115622918606889",
+      "story_kind": "video",
       "stats": {
-        "reach": 1442,
-        "views": 1656,
+        "reach": 1448,
+        "views": 1659,
         "likes": 158,
         "comments": 0,
         "saved": 16,
         "shares": 7,
         "total_interactions": 185,
-        "ig_reels_avg_watch_time": 8386,
-        "ig_reels_video_view_total_time": 12168460,
-        "reels_skip_rate": 60.8
+        "ig_reels_avg_watch_time": 8357,
+        "ig_reels_video_view_total_time": 12176799,
+        "reels_skip_rate": 61
       }
     },
     {
@@ -1390,17 +1622,19 @@
       "theme": "anger / self-control",
       "slot": "2026-10-31_reel-us",
       "type": "reel",
+      "story_media_id": "18156673711460011",
+      "story_kind": "video",
       "stats": {
-        "reach": 434,
-        "views": 515,
-        "likes": 16,
+        "reach": 475,
+        "views": 592,
+        "likes": 18,
         "comments": 0,
         "saved": 5,
-        "shares": 2,
-        "total_interactions": 23,
-        "ig_reels_avg_watch_time": 3524,
-        "ig_reels_video_view_total_time": 1543839,
-        "reels_skip_rate": 63.5
+        "shares": 4,
+        "total_interactions": 27,
+        "ig_reels_avg_watch_time": 3822,
+        "ig_reels_video_view_total_time": 1823168,
+        "reels_skip_rate": 60
       }
     }
   ]
