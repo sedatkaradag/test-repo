@@ -281,7 +281,10 @@ def main():
                                         "media_id": media_id,
                                         "posted_at": item["posted_at"], "theme": item.get("theme", ""),
                                         "slot": item.get("slot", ""), "type": item["type"],
-                                        **({"recitation": recitation_of(item)} if recitation_of(item) else {})},
+                                        **({"recitation": recitation_of(item)} if recitation_of(item) else {}),
+                                        **({"story_media_id": item["story_media_id"],
+                                            "story_kind": item.get("story_kind", "")}
+                                           if item.get("story_media_id") else {})},
                                        ensure_ascii=False) + "\n")
         except Exception as e:  # noqa: BLE001
             item["status"] = "failed"

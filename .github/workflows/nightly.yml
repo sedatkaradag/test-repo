@@ -1,11 +1,13 @@
 name: nightly
 
-# Every night: refresh the Instagram token (result in history/token_status.json, problems in
-# notes/issues.json) and pull post statistics into history/insights.json for the analyst.
-# GitHub may start scheduled runs hours late; running nightly keeps the data at most a day old.
+# Twice a day: refresh the Instagram token (result in history/token_status.json, problems in
+# notes/issues.json) and pull statistics for the analyst (history/insights.json, account_daily.jsonl,
+# story_insights.jsonl). Instagram gives Story numbers for 24 hours only, so a second run 12 hours
+# apart makes sure every Story is read while it is still live. GitHub may start scheduled runs late.
 on:
   schedule:
     - cron: "41 22 * * *"   # 22:41 UTC (01:41 Istanbul)
+    - cron: "41 10 * * *"   # 10:41 UTC (13:41 Istanbul)
   workflow_dispatch:
 
 concurrency:

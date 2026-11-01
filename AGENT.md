@@ -421,12 +421,25 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
 
 ## Haftalık analist akışı (pazartesi)
 
-1. Kurulum adımları + `git pull` (`history/insights.json` her gece GitHub `nightly` işiyle güncellenir;
-   `fetched_at` 48 saatten eskiyse açık sorun kaydet ve elindeki veriyle devam et).
-2. `history/insights.json` oku. Python ile tema, tür (quran/hadith) ve slot
-   bazında ortalama reach / saved / shares hesapla.
+1. Kurulum adımları + `git pull` (veriyi GitHub `nightly` işi günde iki kez günceller;
+   `history/insights.json` → `fetched_at` 48 saatten eskiyse açık sorun kaydet ve elindeki veriyle devam et).
+2. Veriyi oku ve Python ile hesapla:
+   - `history/insights.json`: son 45 günün her paylaşımı. Tema, tür (ayet / hadis) ve slot bazında
+     ortalama reach / saved / shares / reposts; Reels için ortalama izlenme süresi (`ig_reels_avg_watch_time`,
+     ms), videonun süresine oranı (süre: `queue/<slot>.json` → `audio.video_seconds`) ve atlanma oranı
+     (`reels_skip_rate`, ilk 3 saniyede geçenlerin yüzdesi). `account` bloğu: takipçi sayısı, takipçilerin
+     aktif olduğu saatler (`online_followers_by_utc_hour`), takipçi ve etkileşen kitle dağılımı
+     (`follower_demographics`, `engaged_audience_demographics`: ülke, şehir, yaş, cinsiyet; bu ay).
+   - `history/account_daily.jsonl`: gün gün takipçi, yeni takip (`follows`), takipten çıkma (`unfollows`),
+     erişimin takipçi / takipçi olmayan ayrımı (`reach_followers`, `reach_non_followers`), etkileşen hesap.
+     Haftalık net büyümeyi ve yeni kitleye ulaşma oranını buradan çıkar.
+   - `history/story_insights.jsonl`: her Story'nin erişimi ve gezinmesi (`navigation`: tap_forward,
+     tap_back, tap_exit, swipe_forward). Instagram Story verisini yalnızca 24 saat verdiği için `age_hours`
+     küçük olan kayıtlar eksik olabilir; yorumlarken bunu göz önünde tut.
+   `insights.json` → `unavailable_metrics` ve `errors`, Instagram'ın değer vermediği ölçümleri gösterir.
 3. `notes/strategy.md` dosyasını güncelle: en iyi 3 tema, en zayıf 3 tema,
-   önerilen tür oranı, saat önerisi (online_followers verisi varsa ona dayan).
+   önerilen tür oranı, saat önerisi (online_followers ve kitle dağılımı varsa ona dayan), takipçi
+   büyümesi (yeni takip / takipten çıkma), izleyiciyi tutma (izlenme oranı, atlanma oranı).
    Tarihli kısa bir değişiklik notu ekle.
 4. Saatleri sadece güçlü kanıt varsa ve son değişiklikten 14 gün geçtiyse
    `config.yaml` → `reels.slots` (ve varsa `slots`) içinde değiştir; `dry_run` ve slot sayısına dokunma.
