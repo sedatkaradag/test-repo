@@ -17,7 +17,7 @@
   "review": "approve r2 (29:2 rejected r1): Arabic word/mark check ok, English and reference match, caption fine",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -135,6 +135,16 @@
       "067001",
       "067002"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 14.5,
+    "video_seconds": 17.7,
+    "verse_seconds": [
+      6.03,
+      8.49
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-01T05:46:24+00:00"
   }
 }
