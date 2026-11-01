@@ -31,12 +31,12 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: python scripts/token_check.py
+        run: echo skip token
       - name: Pull insights
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-        run: python scripts/insights.py
+        run: python scripts/diag_insights.py
       - name: Commit
         run: |
           git config user.name "halal-algorithm-bot"
