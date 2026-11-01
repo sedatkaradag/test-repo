@@ -4,7 +4,7 @@ Writes:
   history/insights.json        latest snapshot: every post of the last 45 days with its numbers,
                                plus the account block (followers, demographics, online hours)
   history/account_daily.jsonl  one row per Instagram day (Pacific time, as Instagram counts days):
-                               new followers, follows / unfollows, reach split into followers and
+                               follows / unfollows, reach split into followers and
                                non-followers, accounts engaged. Instagram fills the last days in late,
                                so each run refreshes the last 7 days; older rows are kept as they are.
   history/story_insights.jsonl one row per Story: reach, views, navigation (forward, back, exit,
@@ -177,17 +177,6 @@ def daily_rows(base, token, user, account, now, days=7):
     from zoneinfo import ZoneInfo
     pt = ZoneInfo("America/Los_Angeles")
     today = now.astimezone(pt).date()
-    first = dt.datetime.combine(today - dt.timedelta(days=days), dt.time(), pt)
-    # New followers per day, one request for the whole span.
-    data = get(base, f"{user}/insights", token, metric="follower_count", period="day",
-               since=int(first.timestamp()), until=int(dt.datetime.combine(today, dt.time(), pt).timestamp()))
-    new = {}
-    try:
-        for v in data["data"][0]["values"]:
-            end = dt.datetime.fromisoformat(v["end_time"].replace("+0000", "+00:00")).astimezone(pt)
-            new[(end - dt.timedelta(hours=12)).date().isoformat()] = v["value"]
-    except (KeyError, IndexError, TypeError):
-        miss("follower_count", data)
     rows = []
     for k in range(days, 0, -1):
         d = today - dt.timedelta(days=k)
@@ -197,8 +186,6 @@ def daily_rows(base, token, user, account, now, days=7):
                 "since": int(since.timestamp()), "until": int(until.timestamp())}
         row = {"date": d.isoformat(), "measured_at": now.isoformat(timespec="seconds"),
                "provisional": k <= 2}   # Instagram may still fill in the last two days
-        if d.isoformat() in new:
-            row["new_followers"] = new[d.isoformat()]
         data = get(base, f"{user}/insights", token, metric="follows_and_unfollows", breakdown="follow_type", **span)
         fu = breakdown_or_zero(data)
         if fu is None:
@@ -258,7 +245,7 @@ def main():
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"insights for {len(posts)} posts, {n_stories} live stories, day {daily['date']}")
     print(f"::notice::insights for {len(posts)} posts, {n_stories} live stories; day {daily['date']}: "
-          f"{ {k: daily.get(k) for k in ('new_followers', 'follows', 'unfollows', 'reach_followers', 'reach_non_followers', 'accounts_engaged')} }")
+          f"{ {k: daily.get(k) for k in ('follows', 'unfollows', 'reach_followers', 'reach_non_followers', 'accounts_engaged')} }")
     print(f"::notice::no value from Instagram: {unavailable or 'none'}")
     if errors:
         print(f"::notice::first errors: {errors}")
