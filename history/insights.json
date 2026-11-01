@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-01T04:19:33+00:00",
+  "fetched_at": "2026-11-01T04:27:06+00:00",
   "account": {
     "followers_count": 115,
     "media_count": 58,
@@ -169,7 +169,6 @@
     }
   },
   "unavailable_metrics": {
-    "reposts": 60,
     "reach": 2,
     "views": 2,
     "likes": 2,
@@ -182,11 +181,9 @@
     "ig_reels_avg_watch_time": 1,
     "ig_reels_video_view_total_time": 1,
     "reels_skip_rate": 1,
-    "story_navigation": 1,
-    "follows_and_unfollows": 1
+    "story_navigation": 1
   },
   "errors": {
-    "reposts": "Instagram Insights Media API endpoint does not support the metrics: reposts. Please refer to https://developers.facebook.com/docs/instagram/reference/media#insi",
     "reach": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
     "views": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
     "likes": "Unsupported get request. Object with ID '18105934838202372' does not exist, cannot be loaded due to missing permissions, or does not support this operation",
@@ -1602,7 +1599,7 @@
       "story_media_id": "18115622918606889",
       "story_kind": "video",
       "stats": {
-        "reach": 1448,
+        "reach": 1450,
         "views": 1659,
         "likes": 158,
         "comments": 0,
@@ -1625,16 +1622,16 @@
       "story_media_id": "18156673711460011",
       "story_kind": "video",
       "stats": {
-        "reach": 475,
-        "views": 592,
-        "likes": 18,
+        "reach": 505,
+        "views": 606,
+        "likes": 20,
         "comments": 0,
         "saved": 5,
-        "shares": 4,
-        "total_interactions": 27,
-        "ig_reels_avg_watch_time": 3822,
-        "ig_reels_video_view_total_time": 1823168,
-        "reels_skip_rate": 60
+        "shares": 1,
+        "total_interactions": 26,
+        "ig_reels_avg_watch_time": 3814,
+        "ig_reels_video_view_total_time": 1926087,
+        "reels_skip_rate": 61.9
       }
     }
   ]
