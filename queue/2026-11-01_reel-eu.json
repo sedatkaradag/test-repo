@@ -14,10 +14,10 @@
   "caption": "For the days you feel too weak to carry it all\n\nAllah tells us He wants to lighten our burdens, and He knows that man was created weak. Bring what feels heavy to Him.\n\nSurah An-Nisaa 4:28\n\nName one burden you are handing over to Allah today\n\n#burdens #allahsmercy #feelingweak #quranreels\n\nRecitation: Mishary Alafasy",
   "alt_text": "Allah wants to lighten your burdens, for man was created weak (Surah An-Nisaa 4:28)",
   "theme": "feeling weak / Allah wants to lighten your burdens",
-  "review": "re-rendered; waiting for a fresh verifier",
+  "review": "Fresh verifier approved the v3 re-render (Arabic, meaning, frame, caption)",
   "flags": [],
   "integrity": "passed",
-  "status": "hold",
+  "status": "audio_pending",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -91,6 +91,5 @@
     "done": false,
     "failed": false
   },
-  "held_at": "2026-11-01T05:13:53Z",
   "rerendered_at": "2026-11-01T05:13:53+00:00"
 }
