@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok | Arabic checked word by word and mark by mark | English and reference match | frame layout ok | caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -129,6 +129,15 @@
     "ayahs": [
       "017023"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 23.8,
+    "video_seconds": 27.0,
+    "verse_seconds": [
+      23.77
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-02T05:46:36+00:00"
   }
 }
