@@ -31,9 +31,12 @@ asıl karşılaştırma yeni slot düzeninde (27 Ekim sonrası) 17 Reels. Hesap:
 - **İzleyiciyi tutma:** ayet Reels'inde ortalama izlenme videonun **~%30'u** (13-33 sn videolarda 4.3-10.4 sn),
   atlanma oranı %55-72. En düşük atlanma Asr suresi (%54.5) ve Adem'in duası (%58.3): ilk saniyede tanınan
   metin / dua. Uzun videolarda izlenme süresi artıyor ama oran düşüyor (59:18, 26.5 sn: %22).
-- **Şablon v3:** yalnızca 1 Kasım'ın 3 Reels'i 24 saati geçti (ort. 1374 reach, atlanma %67.9, izlenme oranı
-  %28); v2'nin son haftası ort. ~1140 reach, atlanma %63.6. Örnek çok küçük, karar yok; 9 Kasım'da 7 günlük
-  v3 verisiyle karşılaştır.
+- **Şablon v3:** (ana ajan düzeltmesi, 2026-11-02) Veri çekildiğinde (`fetched_at` 2026-11-02 01:50 UTC)
+  1 Kasım'ın v3 Reels'leri **8-18 saatlikti; hiçbiri 24 saati geçmemişti**, bu yüzden v2 ile karşılaştırılamaz.
+  Ham erken değerler (yalnızca not için): 47:7 1424 reach / atlanma %71.1 / 4.9 sn (18 sa), 18:10 1204 / %67.0 /
+  4.7 sn (10 sa), 4:28 1493 / %65.6 / 4.7 sn (8 sa). v2'nin son haftası (24 sa+): atlanma %61-65, izlenme 6-7 sn.
+  Erken sinyal biraz zayıf ama olgunlaşmamış ve tema/kâri etkisiyle karışık. **9 Kasım'da** yalnızca en az
+  48 saatlik Reels'lerle (yaş = `fetched_at` − `posted_at`) karşılaştır; v2 tarafı 27-31 Ekim.
 - **Story (Reels'in kopyası):** 30 Ekim'den bu yana Story erişimi 6-13; takipçi az olduğu için beklenen düzey.
   Maliyeti yok, devam.
 - **Kâri:** n çok küçük (kâri başına 1-4 Reels); Alafasy (3 Reels, ort. 1906) ve Sudais (3, ort. 1534, en uzun
