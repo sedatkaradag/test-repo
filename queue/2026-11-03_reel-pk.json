@@ -1,0 +1,120 @@
+{
+  "entry_id": "quran:28:73",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Qasas 28:73",
+  "slot": "2026-11-03_reel-pk",
+  "publish_at": "2026-11-03T15:33:38Z",
+  "local_slot": "2026-11-03 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-03_reel-pk.jpg",
+  "video": "queue/2026-11-03_reel-pk.mp4",
+  "cover": "queue/2026-11-03_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Your rest tonight is part of Allah's mercy\n\nAllah tells us the night and day are from His mercy: one to rest in, one to seek His bounty. Put the phone down, rest well, and end the day grateful.\n\nSurah Al-Qasas 28:73\n\nWhich favor from today will you thank Allah for before you sleep?\n\n#restisamercy #nightroutine #gratitude #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "It is out of His mercy that He made for you the night and day, so that you may rest therein and seek of His bounty, and so that you may be grateful (Surah Al-Qasas 28:73)",
+  "theme": "rest and night as a mercy",
+  "review": "approve r1: integrity ok | Arabic checked word by word and mark by mark | English and reference match | frame layout ok, lowest text y=1577 | caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:28:73",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Your rest tonight is part of Allah's mercy",
+    "hook_lines": [
+      "Your rest tonight is part of",
+      "Allah's mercy"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "028073",
+        "lines": [
+          "وَمِن رَّحۡمَتِهِۦ جَعَلَ لَكُمُ ٱلَّيۡلَ وَٱلنَّهَارَ",
+          "لِتَسۡكُنُواْ فِيهِ وَلِتَبۡتَغُواْ مِن فَضۡلِهِۦ",
+          "وَلَعَلَّكُمۡ تَشۡكُرُونَ ٧٣"
+        ],
+        "y": 594.4,
+        "meal": [
+          "It is out of His mercy that He made for you the",
+          "night and day, so that you may rest therein and",
+          "seek of His bounty, and so that you may be",
+          "grateful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "It is out of His mercy that He made for you the night and day, so that you may rest therein and seek of His bounty, and so that you may be grateful.",
+    "full_lines": [
+      "It is out of His mercy that He made for you the",
+      "night and day, so that you may rest therein and",
+      "seek of His bounty, and so that you may be",
+      "grateful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Qasas 28:73",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which favor from today will you thank Allah for before you sleep?",
+    "cta_lines": [
+      "Which favor from today will you thank Allah",
+      "for before you sleep?"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "422c77b70104f9ed08dc5dda",
+  "created_at": "2026-11-02T05:43:34+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "028073"
+    ],
+    "done": false
+  }
+}

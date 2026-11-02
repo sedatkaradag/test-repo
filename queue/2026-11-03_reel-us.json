@@ -1,0 +1,72 @@
+{
+  "entry_id": "hadith:abudawud:4835",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v3",
+  "reference": "Sunan Abi Dawud 4835",
+  "slot": "2026-11-03_reel-us",
+  "publish_at": "2026-11-04T01:34:36Z",
+  "local_slot": "2026-11-03 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-03_reel-us.jpg",
+  "video": "queue/2026-11-03_reel-us.mp4",
+  "cover": "queue/2026-11-03_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Are you someone people feel lighter around?\n\nThe Prophet ﷺ taught us to gladden people, not scare them away, and to make things easy, not difficult. A simple test for how we treat the people around us.\n\nSunan Abi Dawud 4835 · Grade: Sahih\n\nSend this to the person who always makes your day easier\n\n#makeiteasy #goodcharacter #prophetsunnah #hadithreels",
+  "alt_text": "Abu Musa reported the Messenger of Allah (ﷺ) as saying:Gladden people and do not scare them; make things easy and do not make them difficult (Sunan Abi Dawud 4835)",
+  "theme": "making things easy for people",
+  "review": "approve r1: integrity ok | narrator Abu Musa matches chain | text and grade Sahih correct | frame layout ok | caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "hadith",
+    "entry_id": "hadith:abudawud:4835",
+    "label": "HADITH",
+    "hook": "Are you someone people feel lighter around?",
+    "hook_lines": [
+      "Are you someone people feel",
+      "lighter around?"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Abu Musa reported the Messenger of Allah (ﷺ) as saying:"
+    ],
+    "lead_size": 34,
+    "lead_y": 717.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "Gladden people and do not scare",
+          "them;"
+        ],
+        "y": 799.5
+      },
+      {
+        "lines": [
+          "make things easy and do not make",
+          "them difficult."
+        ],
+        "y": 1005.5
+      }
+    ],
+    "ref": "Sunan Abi Dawud 4835 · Grade: Sahih",
+    "ref_y": 1231.5,
+    "slogan": "Follow & Share The Sunnah",
+    "slogan_lines": [
+      "Follow & Share The Sunnah"
+    ],
+    "cta": "Send this to the person who always makes your day easier",
+    "cta_lines": [
+      "Send this to the person who always makes your",
+      "day easier"
+    ],
+    "cta_size": 48,
+    "line_y": 1289.5,
+    "handle_y": 1435.5,
+    "handle_size": 27
+  },
+  "layout_hash": "1d7f677dcbe5eea1e5fee003",
+  "created_at": "2026-11-02T05:45:11+00:00"
+}

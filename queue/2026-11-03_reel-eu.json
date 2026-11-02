@@ -1,0 +1,134 @@
+{
+  "entry_id": "quran:17:23",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Israa 17:23",
+  "slot": "2026-11-03_reel-eu",
+  "publish_at": "2026-11-03T18:02:00Z",
+  "local_slot": "2026-11-03 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-03_reel-eu.jpg",
+  "video": "queue/2026-11-03_reel-eu.mp4",
+  "cover": "queue/2026-11-03_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "The word Allah tells us not to say to our parents\n\nRight after His own worship, Allah mentions kindness to parents. Not even a word of annoyance, only noble words, especially as they grow old.\n\nSurah Al-Israa 17:23\n\nCall your mother or father today and speak to them gently\n\n#kindnesstoparents #birrulwalidayn #muslimfamily #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Your Lord has ordained that you worship none but Him, and show kindness to parents. If one or both of them reach old age in your care, do not say to them a word of annoyance nor scold them, rather speak to them noble words (Surah Al-Israa 17:23)",
+  "theme": "kindness to parents",
+  "review": "approve r1: integrity ok | Arabic checked word by word and mark by mark | English and reference match | frame layout ok | caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:17:23",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The word Allah tells us not to say to our parents",
+    "hook_lines": [
+      "The word Allah tells us not",
+      "to say to our parents"
+    ],
+    "hook_size": 82,
+    "arabic_size": 58,
+    "verses": [
+      {
+        "ayah": "017023",
+        "lines": [
+          "وَقَضَىٰ رَبُّكَ أَلَّا تَعۡبُدُوٓاْ إِلَّآ إِيَّاهُ وَبِٱلۡوَٰلِدَيۡنِ إِحۡسَٰنًاۚ إِمَّا",
+          "يَبۡلُغَنَّ عِندَكَ ٱلۡكِبَرَ أَحَدُهُمَآ أَوۡ كِلَاهُمَا فَلَا تَقُل",
+          "لَّهُمَآ أُفّٖ وَلَا تَنۡهَرۡهُمَا وَقُل لَّهُمَا قَوۡلٗا كَرِيمٗا ٢٣"
+        ],
+        "y": 611.2,
+        "meal": [
+          "Your Lord has ordained that you worship none",
+          "but Him, and show kindness to parents. If one or",
+          "both of them reach old age in your care, do not",
+          "say to them a word of annoyance nor scold them,",
+          "rather speak to them noble words."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 980.2,
+    "full": "Your Lord has ordained that you worship none but Him, and show kindness to parents. If one or both of them reach old age in your care, do not say to them a word of annoyance nor scold them, rather speak to them noble words.",
+    "full_lines": [
+      "Your Lord has ordained that you worship none",
+      "but Him, and show kindness to parents. If one or",
+      "both of them reach old age in your care, do not",
+      "say to them a word of annoyance nor scold them,",
+      "rather speak to them noble words."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Israa 17:23",
+    "ref_y": 1319.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Call your mother or father today and speak to them gently",
+    "cta_lines": [
+      "Call your mother or father today and speak to",
+      "them gently"
+    ],
+    "cta_size": 48,
+    "line_y": 1377.2,
+    "handle_y": 1523.2,
+    "handle_size": 27
+  },
+  "layout_hash": "9c8d62f7850eec933c0c3dd9",
+  "created_at": "2026-11-02T05:44:16+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "017023"
+    ],
+    "done": false
+  }
+}
