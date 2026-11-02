@@ -17,7 +17,7 @@
   "review": "approve r2 (29:2 rejected r1): Arabic word/mark check ok, English and reference match, caption fine",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
