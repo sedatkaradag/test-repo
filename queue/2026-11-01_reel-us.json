@@ -17,7 +17,7 @@
   "review": "Fresh verifier approved the v3 re-render (text, narrator, frame, caption)",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
@@ -64,5 +64,9 @@
   },
   "layout_hash": "f71b51a800517f97e3aafbb8",
   "created_at": "2026-10-31T05:43:56+00:00",
-  "rerendered_at": "2026-11-01T05:14:36+00:00"
+  "rerendered_at": "2026-11-01T05:14:36+00:00",
+  "story_media_id": "18116706857591503",
+  "story_kind": "video",
+  "media_id": "17914916880288259",
+  "posted_at": "2026-11-02T01:30:39+00:00"
 }
