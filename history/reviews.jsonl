@@ -125,3 +125,4 @@
 {"ts": "2026-11-03T00:36:18Z", "entry_id": "quran:114:1-6", "slot": "2026-11-03_reel-pk", "verdict": "approve", "round": 1, "reasons": ["Arabic word/mark check OK", "full meaning, order and limits OK", "caption OK"]}
 {"ts": "2026-11-03T00:37:39Z", "entry_id": "quran:108:1-3", "slot": "2026-11-03_reel-eu-am", "verdict": "approve", "round": 1, "reasons": ["Arabic word/mark check OK", "full meaning, order and limits OK", "caption OK", "note: no final full stop after a closing bracket (code)"]}
 {"ts": "2026-11-03T00:38:19Z", "entry_id": "quran:113:1-5", "slot": "2026-11-03_reel-eu", "verdict": "approve", "round": 1, "reasons": ["Arabic word/mark check OK", "full meaning, order and limits OK", "caption OK"]}
+{"ts": "2026-11-03T01:04:31Z", "entry_id": "quran:113:1-5", "slot": "2026-11-03_reel-eu", "verdict": "approve", "round": 2, "reasons": ["new hook within the verses", "Arabic word/mark check OK", "frame order and limits OK", "caption OK"]}
