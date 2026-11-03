@@ -14,10 +14,10 @@
   "caption": "Not every whisperer is a jinn\n\nThe last surah of the Qur'an teaches us to seek refuge with the Lord, the Sovereign and the God of mankind, from the lurking whisperer who whispers into hearts, from among jinn and mankind.\n\nSurah An-Naas 114:1-6\n\nRecite it with your family before bed tonight\n\n#surahnas #seekrefuge #protection #quranreels\n\nRecitation: Mishary Alafasy",
   "alt_text": "Say, “I seek refuge with the Lord of mankind; the Sovereign of mankind; the God of mankind; from the harm of the lurking whisperer; who whispers into the hearts of mankind; from among jinn and mankind.” (Surah An-Naas 114:1-6)",
   "theme": "Surah An-Nas / seeking refuge from the whisperer (owner's pick)",
-  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "review": "Fresh verifier approved the new hook and caption (Arabic, meaning, frame, caption)",
   "flags": [],
   "integrity": "passed",
-  "status": "hold",
+  "status": "audio_pending",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -168,7 +168,5 @@
     ],
     "done": false,
     "failed": false
-  },
-  "hold_reason": "caption changed after approval; needs a fresh verifier",
-  "held_at": "2026-11-03T01:02:59Z"
+  }
 }
