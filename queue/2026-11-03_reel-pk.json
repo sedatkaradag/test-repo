@@ -1,0 +1,171 @@
+{
+  "entry_id": "quran:114:1-6",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Naas 114:1-6",
+  "slot": "2026-11-03_reel-pk",
+  "publish_at": "2026-11-03T15:25:32Z",
+  "local_slot": "2026-11-03 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-03_reel-pk.jpg",
+  "video": "queue/2026-11-03_reel-pk.mp4",
+  "cover": "queue/2026-11-03_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "When the whispers get loud\n\nThe last surah of the Qur'an teaches us to seek refuge with the Lord, the Sovereign and the God of mankind, from the lurking whisperer who whispers into hearts.\n\nSurah An-Naas 114:1-6\n\nRecite it with your family before bed tonight\n\n#surahnas #seekrefuge #protection #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Say, “I seek refuge with the Lord of mankind; the Sovereign of mankind; the God of mankind; from the harm of the lurking whisperer; who whispers into the hearts of mankind; from among jinn and mankind.” (Surah An-Naas 114:1-6)",
+  "theme": "Surah An-Nas / seeking refuge from the whisperer (owner's pick)",
+  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:114:1-6",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "When the whispers get loud",
+    "hook_lines": [
+      "When the whispers get loud"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "114001",
+        "lines": [
+          "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ١"
+        ],
+        "y": 483.8,
+        "meal": [
+          "Say, “I seek refuge with the Lord of mankind;"
+        ]
+      },
+      {
+        "ayah": "114002",
+        "lines": [
+          "مَلِكِ ٱلنَّاسِ ٢"
+        ],
+        "y": 600.8,
+        "meal": [
+          "the Sovereign of mankind;"
+        ]
+      },
+      {
+        "ayah": "114003",
+        "lines": [
+          "إِلَٰهِ ٱلنَّاسِ ٣"
+        ],
+        "y": 717.8,
+        "meal": [
+          "the God of mankind;"
+        ]
+      },
+      {
+        "ayah": "114004",
+        "lines": [
+          "مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٤"
+        ],
+        "y": 834.8,
+        "meal": [
+          "from the harm of the lurking whisperer;"
+        ]
+      },
+      {
+        "ayah": "114005",
+        "lines": [
+          "ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ٥"
+        ],
+        "y": 951.8,
+        "meal": [
+          "who whispers into the hearts of mankind;"
+        ]
+      },
+      {
+        "ayah": "114006",
+        "lines": [
+          "مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ٦"
+        ],
+        "y": 1068.8,
+        "meal": [
+          "from among jinn and mankind.”"
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1215.8,
+    "full": "Say, “I seek refuge with the Lord of mankind; the Sovereign of mankind; the God of mankind; from the harm of the lurking whisperer; who whispers into the hearts of mankind; from among jinn and mankind.”",
+    "full_lines": [
+      "Say, “I seek refuge with the Lord of mankind; the Sovereign of",
+      "mankind; the God of mankind; from the harm of the lurking",
+      "whisperer; who whispers into the hearts of mankind; from among",
+      "jinn and mankind.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "ref": "Surah An-Naas 114:1-6",
+    "ref_y": 1423.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Recite it with your family before bed tonight",
+    "cta_lines": [
+      "Recite it with your family before bed tonight"
+    ],
+    "cta_size": 36,
+    "line_y": 1481.8,
+    "handle_y": 1544.8,
+    "handle_size": 27
+  },
+  "layout_hash": "d4c8de9c644b24906fa7ef10",
+  "created_at": "2026-11-03T00:37:25+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "114001",
+      "114002",
+      "114003",
+      "114004",
+      "114005",
+      "114006"
+    ],
+    "done": false
+  }
+}

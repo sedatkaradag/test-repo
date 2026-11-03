@@ -142,5 +142,15 @@
     "opened_at": "2026-11-01T05:45:07Z",
     "closed_at": "2026-11-01T14:59:28Z",
     "resolution": "Düzeltildi: kaynak son noktalamayı bırakmışsa metin açıkça soruysa (Do/Did/Is/Will... + özne; ör. 29:2) sona '?' konuyor, emin olunamayanlarda (How/What/Which, Had/Were koşulları) hiçbir işaret eklenmiyor, diğerlerine nokta. Birleştirilen ayetler arasında da aynı kural. Kart, Reels ve Story aynı fonksiyonu kullanıyor; kuyruktaki hiçbir öğe etkilenmedi. Denetçi talimatına eklendi."
+  },
+  {
+    "id": "S-013",
+    "kind": "code",
+    "title": "Kaynak köşeli parantezle bitince kart ve Reels sona nokta koymuyor",
+    "detail": "display_text yalnızca harf ya da tırnaktan sonra son işaret ekliyor; 108:3 '[from all goodness]' ile bitiyor ve noktasız kalıyor. Kelime değişmiyor, denetçi onayladı. Öneri: ']' ve ')' ile bitenlerde de end_mark uygulansın (kuyruktaki öğeler yeniden çizilmeden).",
+    "ref": "quran:108:1-3",
+    "source": "Ana ajan, 2026-11-03",
+    "status": "open",
+    "opened_at": "2026-11-03T00:39:18Z"
   }
 ]

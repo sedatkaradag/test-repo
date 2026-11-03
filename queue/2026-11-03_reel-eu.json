@@ -1,0 +1,174 @@
+{
+  "entry_id": "quran:113:1-5",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Falaq 113:1-5",
+  "slot": "2026-11-03_reel-eu",
+  "publish_at": "2026-11-03T17:55:13Z",
+  "local_slot": "2026-11-03 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-03_reel-eu.jpg",
+  "video": "queue/2026-11-03_reel-eu.mp4",
+  "cover": "queue/2026-11-03_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Protection you can carry every single day\n\nAl-Falaq teaches us to seek refuge with the Lord of the daybreak from the harm of what He created, the darkness of night, those who blow on knots, and the envier. Make it part of your daily remembrance.\n\nSurah Al-Falaq 113:1-5\n\nSend this to someone who worries about envy\n\n#surahfalaq #dailydhikr #protection #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "Say, “I seek refuge with the Lord of the daybreak; from the harm of all what He has created; from the harm of night’s darkness when it spreads around; from the harm of the sorceresses who blow on knots; and from the harm of the envier when he envies (Surah Al-Falaq 113:1-5)",
+  "theme": "Surah Al-Falaq / daily protection (owner's pick)",
+  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:113:1-5",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Protection you can carry every single day",
+    "hook_lines": [
+      "Protection you can carry",
+      "every single day"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "113001",
+        "lines": [
+          "قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ١"
+        ],
+        "y": 598.4,
+        "meal": [
+          "Say, “I seek refuge with the Lord of the daybreak;"
+        ]
+      },
+      {
+        "ayah": "113002",
+        "lines": [
+          "مِن شَرِّ مَا خَلَقَ ٢"
+        ],
+        "y": 715.4,
+        "meal": [
+          "from the harm of all what He has created;"
+        ]
+      },
+      {
+        "ayah": "113003",
+        "lines": [
+          "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ٣"
+        ],
+        "y": 832.4,
+        "meal": [
+          "from the harm of night’s darkness when it spreads around;"
+        ]
+      },
+      {
+        "ayah": "113004",
+        "lines": [
+          "وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ٤"
+        ],
+        "y": 949.4,
+        "meal": [
+          "from the harm of the sorceresses who blow on knots;"
+        ]
+      },
+      {
+        "ayah": "113005",
+        "lines": [
+          "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ٥"
+        ],
+        "y": 1066.4,
+        "meal": [
+          "and from the harm of the envier when he envies.”"
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1213.4,
+    "full": "Say, “I seek refuge with the Lord of the daybreak; from the harm of all what He has created; from the harm of night’s darkness when it spreads around; from the harm of the sorceresses who blow on knots; and from the harm of the envier when he envies.”",
+    "full_lines": [
+      "Say, “I seek refuge with the Lord of the daybreak; from the harm",
+      "of all what He has created; from the harm of night’s darkness",
+      "when it spreads around; from the harm of the sorceresses who",
+      "blow on knots; and from the harm of the envier when he envies.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "ref": "Surah Al-Falaq 113:1-5",
+    "ref_y": 1421.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who worries about envy",
+    "cta_lines": [
+      "Send this to someone who worries about envy"
+    ],
+    "cta_size": 36,
+    "line_y": 1479.4,
+    "handle_y": 1542.4,
+    "handle_size": 27
+  },
+  "layout_hash": "9daf444949bd375d04d1c9d6",
+  "created_at": "2026-11-03T00:39:17+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "113001",
+      "113002",
+      "113003",
+      "113004",
+      "113005"
+    ],
+    "done": false
+  }
+}
