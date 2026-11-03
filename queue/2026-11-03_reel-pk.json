@@ -17,7 +17,7 @@
   "review": "Fresh verifier approved the new hook and caption (Arabic, meaning, frame, caption)",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -166,7 +166,20 @@
       "114005",
       "114006"
     ],
-    "done": false,
-    "failed": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 40.6,
+    "video_seconds": 43.8,
+    "verse_seconds": [
+      6.07,
+      5.21,
+      5.29,
+      7.94,
+      7.85,
+      8.19
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-03T01:06:03+00:00"
   }
 }
