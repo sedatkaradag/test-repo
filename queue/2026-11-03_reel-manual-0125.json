@@ -1,0 +1,112 @@
+{
+  "entry_id": "quran:2:201",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:201",
+  "slot": "2026-11-03_reel-manual-0125",
+  "publish_at": "2026-11-03T01:25:00Z",
+  "local_slot": "2026-11-03 01:25 UTC (±5 min)",
+  "image": "queue/2026-11-03_reel-manual-0125.jpg",
+  "video": "queue/2026-11-03_reel-manual-0125.mp4",
+  "cover": "queue/2026-11-03_reel-manual-0125_cover.jpg",
+  "trial": false,
+  "caption": "One short dua that covers this life and the next\n\nAllah mentions people who ask Him for good in this world, good in the Hereafter, and protection from the Fire. Short enough to learn tonight, and to say every day.\n\nSurah Al-Baqara 2:201\n\nTeach this dua to someone you love\n\n#rabbanaatina #duaoftheday #hereafter #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "And there are others who say, “Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.” (Surah Al-Baqara 2:201)",
+  "theme": "Rabbana atina / good in this life and the next (owner's pick)",
+  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:201",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "One short dua that covers this life and the next",
+    "hook_lines": [
+      "One short dua that covers",
+      "this life and the next"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "002201",
+        "lines": [
+          "وَمِنۡهُم مَّن يَقُولُ رَبَّنَآ ءَاتِنَا فِي ٱلدُّنۡيَا",
+          "حَسَنَةٗ وَفِي ٱلۡأٓخِرَةِ حَسَنَةٗ وَقِنَا عَذَابَ",
+          "ٱلنَّارِ ٢٠١"
+        ],
+        "y": 636.4,
+        "meal": [
+          "And there are others who say, “Our Lord, give us",
+          "good in this world and good in the Hereafter,",
+          "and protect us from the punishment of the Fire.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1134.4,
+    "full": "And there are others who say, “Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.”",
+    "full_lines": [
+      "And there are others who say, “Our Lord, give us",
+      "good in this world and good in the Hereafter,",
+      "and protect us from the punishment of the Fire.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:201",
+    "ref_y": 1347.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Teach this dua to someone you love",
+    "cta_lines": [
+      "Teach this dua to someone you love"
+    ],
+    "cta_size": 48,
+    "line_y": 1405.4,
+    "handle_y": 1485.4,
+    "handle_size": 27
+  },
+  "layout_hash": "7eb338187ac3c3427f2f70d1",
+  "created_at": "2026-11-03T00:33:37+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "002201"
+    ],
+    "done": false
+  }
+}
