@@ -1,72 +1,76 @@
 {
-  "entry_id": "hadith:abudawud:4835",
+  "entry_id": "hadith:ibnmajah:3971",
   "type": "reel",
   "content_type": "hadith",
   "template": "v3",
-  "reference": "Sunan Abi Dawud 4835",
+  "reference": "Sunan Ibn Majah 3971",
   "slot": "2026-11-03_reel-us",
-  "publish_at": "2026-11-04T01:34:36Z",
+  "publish_at": "2026-11-04T01:26:46Z",
   "local_slot": "2026-11-03 20:30 America/New_York (±5 min)",
   "image": "queue/2026-11-03_reel-us.jpg",
   "video": "queue/2026-11-03_reel-us.mp4",
   "cover": "queue/2026-11-03_reel-us_cover.jpg",
   "trial": false,
-  "caption": "Are you someone people feel lighter around?\n\nThe Prophet ﷺ taught us to gladden people, not scare them away, and to make things easy, not difficult. A simple test for how we treat the people around us.\n\nSunan Abi Dawud 4835 · Grade: Sahih\n\nSend this to the person who always makes your day easier\n\n#makeiteasy #goodcharacter #prophetsunnah #hadithreels",
-  "alt_text": "Abu Musa reported the Messenger of Allah (ﷺ) as saying:Gladden people and do not scare them; make things easy and do not make them difficult (Sunan Abi Dawud 4835)",
-  "theme": "making things easy for people",
-  "review": "approve r1: integrity ok | narrator Abu Musa matches chain | text and grade Sahih correct | frame layout ok | caption ok",
+  "caption": "Before you speak or post tonight, remember this\n\nThe Prophet ﷺ said that whoever believes in Allah and the Last Day should say something good, or else remain silent. Let every word pass that test.\n\nSunan Ibn Majah 3971 · Grade: Sahih\n\nSend this to the friend who always picks kind words\n\n#goodspeech #guardyourtongue #muslimmanners #hadithreels",
+  "alt_text": "It was narrated from Abu Hurairah that the Messenger of Allah (ﷺ) said:“Whoever believes in Allah and the Last Day, let him say something good, or else remain silent.” (Sunan Ibn Majah 3971)",
+  "theme": "speech / say good or stay silent",
+  "review": "approve r1: text, grade Sahih, narrator match, caption fine",
   "flags": [],
   "integrity": "passed",
   "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
-    "entry_id": "hadith:abudawud:4835",
+    "entry_id": "hadith:ibnmajah:3971",
     "label": "HADITH",
-    "hook": "Are you someone people feel lighter around?",
+    "hook": "Before you speak or post tonight, remember this",
     "hook_lines": [
-      "Are you someone people feel",
-      "lighter around?"
+      "Before you speak or post",
+      "tonight, remember this"
     ],
     "hook_size": 82,
     "lead_lines": [
-      "Abu Musa reported the Messenger of Allah (ﷺ) as saying:"
+      "It was narrated from Abu Hurairah that the Messenger of Allah",
+      "(ﷺ) said:"
     ],
     "lead_size": 34,
-    "lead_y": 717.5,
+    "lead_y": 694.5,
     "text_size": 68,
     "phrases": [
       {
         "lines": [
-          "Gladden people and do not scare",
-          "them;"
+          "“Whoever believes in Allah and",
+          "the Last Day,"
         ],
-        "y": 799.5
+        "y": 822.5
       },
       {
         "lines": [
-          "make things easy and do not make",
-          "them difficult."
+          "let him say something good, or else",
+          "remain silent.”"
         ],
-        "y": 1005.5
+        "y": 1028.5
       }
     ],
-    "ref": "Sunan Abi Dawud 4835 · Grade: Sahih",
-    "ref_y": 1231.5,
+    "ref": "Sunan Ibn Majah 3971 · Grade: Sahih",
+    "ref_y": 1254.5,
     "slogan": "Follow & Share The Sunnah",
     "slogan_lines": [
       "Follow & Share The Sunnah"
     ],
-    "cta": "Send this to the person who always makes your day easier",
+    "cta": "Send this to the friend who always picks kind words",
     "cta_lines": [
-      "Send this to the person who always makes your",
-      "day easier"
+      "Send this to the friend who always picks kind",
+      "words"
     ],
     "cta_size": 48,
-    "line_y": 1289.5,
-    "handle_y": 1435.5,
+    "line_y": 1312.5,
+    "handle_y": 1458.5,
     "handle_size": 27
   },
-  "layout_hash": "1d7f677dcbe5eea1e5fee003",
-  "created_at": "2026-11-02T05:45:11+00:00"
+  "layout_hash": "d3075a3e38e799f7eca310ed",
+  "created_at": "2026-11-01T05:44:55+00:00",
+  "moved_from": "2026-11-02_reel-us",
+  "moved_at": "2026-11-03T00:30:16+00:00",
+  "move_reason": "owner: shift Nov 3-4 (Istanbul) content one day"
 }

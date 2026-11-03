@@ -341,7 +341,7 @@ def pick_reciter(reciters, history, window=30):
     return reciters[order[0]]
 
 
-def recitation_plan(cfg, entry_id):
+def recitation_plan(cfg, entry_id, reciter=None):
     """Recitation for a verse video: the next reciter in rotation (over every Reel and Story that
     already has one) and the verse files, one per verse on the card. None when switched off."""
     rec = (cfg.get("reels") or {}).get("recitation") or {}
@@ -356,6 +356,11 @@ def recitation_plan(cfg, entry_id):
             if i.get(key):
                 planned.append((i.get("publish_at", ""), i[key].get("assigned") or i[key]["reciter"]))
     nxt = pick_reciter(reciters, [r for _, r in sorted(planned)])
+    if reciter:   # the owner chose the reciter for this Reel
+        chosen = [r for r in reciters if r["id"] == reciter]
+        if not chosen:
+            sys.exit(f"REJECT: unknown reciter {reciter} (see config.yaml reels.recitation.reciters)")
+        nxt = chosen[0]
     m = re.fullmatch(r"quran:(\d+):(\d+)(?:-(\d+))?", entry_id)
     sura, first, end = int(m.group(1)), int(m.group(2)), int(m.group(3) or m.group(2))
     return {"reciter": nxt["id"], "reciter_name": nxt["name"],
@@ -441,7 +446,7 @@ def cmd_add_reel(a):
         sys.exit("REJECT reel: " + "; ".join(bad))
 
     # Verse Reels carry the recitation of exactly the verses on the frame.
-    audio, status = recitation_plan(cfg, a.entry), "ready"
+    audio, status = recitation_plan(cfg, a.entry, getattr(a, "reciter", None)), "ready"
     if audio:
         caption = f"{caption}\n\nRecitation: {audio['reciter_name']}"
         status = "audio_pending"   # GitHub draws the final video with the recitation, then marks it ready
@@ -708,6 +713,47 @@ def cmd_hold(a):
     print(f"HELD {a.slot}")
 
 
+def cmd_move(a):
+    """Owner-requested reschedule: move a queued Reel, unchanged (same content, caption, video and
+    approval), to another empty slot of the same kind. The slot's time is used again with fresh jitter."""
+    cfg = config()
+    src = QUEUE / f"{a.slot}.json"
+    item = json.loads(src.read_text(encoding="utf-8"))
+    if item["status"] not in ("ready", "hold", "audio_pending"):
+        sys.exit(f"REJECT: {a.slot} is {item['status']}")
+    if item.get("type") != "reel":
+        sys.exit("REJECT: only Reels can be moved")
+    slot, date_str = slot_by_key(cfg, a.to)
+    old, _ = slot_by_key(cfg, a.slot) if "_reel-manual-" not in a.slot else ({}, None)
+    if slot.get("type") != "reel":
+        sys.exit(f"REJECT: {a.to} is not a Reels slot")
+    if slot.get("content") and slot["content"] != item.get("content_type", item["entry_id"].split(":")[0]):
+        sys.exit(f"REJECT: Reels slot {a.to} takes {slot['content']}")
+    if old and old.get("name") != slot.get("name"):
+        sys.exit("REJECT: move a Reel only to the same slot on another day (its caption fits that time of day)")
+    if (QUEUE / f"{a.to}.json").exists():
+        sys.exit(f"REJECT: slot {a.to} already filled")
+    base = slot_utc(date_str, slot["time"], slot["tz"])
+    if base <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(minutes=30):
+        sys.exit("REJECT: slot is in the past or too close")
+    jitter = int(cfg.get("jitter_minutes", 0)) * 60
+    when = base + dt.timedelta(seconds=random.randint(-jitter, jitter))
+    for key in ("image", "video", "cover", "story_image", "story_video"):
+        if item.get(key):
+            old_path = ROOT / item[key]
+            new_rel = item[key].replace(f"queue/{a.slot}", f"queue/{a.to}", 1)
+            if old_path.exists():
+                old_path.rename(ROOT / new_rel)
+            item[key] = new_rel
+    item.update(slot=a.to, publish_at=when.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                local_slot=f"{date_str} {slot['time']} {slot['tz']} (±{cfg.get('jitter_minutes', 0)} min)",
+                moved_from=a.slot, moved_at=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                move_reason=a.reason)
+    (QUEUE / f"{a.to}.json").write_text(json.dumps(item, ensure_ascii=False, indent=2), encoding="utf-8")
+    src.unlink()
+    print(f"MOVED {a.slot} -> {a.to} at {item['publish_at']}")
+
+
 def cmd_approve(a):
     """Put a held item back in the queue after a fresh verifier approved it."""
     path = QUEUE / f"{a.slot}.json"
@@ -763,6 +809,7 @@ if __name__ == "__main__":
     ar.add_argument("--slot", help="reel slot key, e.g. 2026-10-21_reel")
     ar.add_argument("--at", help="one-off: UTC time instead of a slot, e.g. 2026-10-21T19:30:00Z")
     ar.add_argument("--caption-file", required=True)
+    ar.add_argument("--reciter", help="only when the owner chose the reciter: its id from config.yaml")
     ar.add_argument("--theme", default="")
     ar.add_argument("--review", default="")
     ar.add_argument("--check", action="store_true",
@@ -785,6 +832,10 @@ if __name__ == "__main__":
     ho = sub.add_parser("hold")
     ho.add_argument("--slot", required=True)
     ho.add_argument("--reason", required=True)
+    mv = sub.add_parser("move", help="owner-requested: move a queued Reel unchanged to the same slot on another day")
+    mv.add_argument("--slot", required=True)
+    mv.add_argument("--to", required=True, help="empty slot key of the same kind, e.g. 2026-11-04_reel-pk")
+    mv.add_argument("--reason", required=True)
     ap = sub.add_parser("approve")
     ap.add_argument("--slot", required=True)
     ap.add_argument("--review", required=True, help="the fresh verifier's verdict")
@@ -793,7 +844,7 @@ if __name__ == "__main__":
     sl.add_argument("--days", type=int, default=2)
     a = p.parse_args()
     run = {"add": cmd_add, "add-story": cmd_add_story, "add-reel": cmd_add_reel, "add-carousel": cmd_add_carousel,
-           "recaption": cmd_recaption, "rerender": cmd_rerender, "hold": cmd_hold, "approve": cmd_approve,
+           "recaption": cmd_recaption, "rerender": cmd_rerender, "hold": cmd_hold, "approve": cmd_approve, "move": cmd_move,
            "list": cmd_list, "slots": cmd_slots}[a.cmd]
     if getattr(a, "check", False):
         # Same command, same checks, but against a throwaway copy of the queue: nothing is

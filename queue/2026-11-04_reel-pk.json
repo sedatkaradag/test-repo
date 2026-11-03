@@ -4,12 +4,12 @@
   "content_type": "quran",
   "template": "v3",
   "reference": "Surah Al-Qasas 28:73",
-  "slot": "2026-11-03_reel-pk",
-  "publish_at": "2026-11-03T15:33:38Z",
-  "local_slot": "2026-11-03 20:30 Asia/Karachi (±5 min)",
-  "image": "queue/2026-11-03_reel-pk.jpg",
-  "video": "queue/2026-11-03_reel-pk.mp4",
-  "cover": "queue/2026-11-03_reel-pk_cover.jpg",
+  "slot": "2026-11-04_reel-pk",
+  "publish_at": "2026-11-04T15:32:56Z",
+  "local_slot": "2026-11-04 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-04_reel-pk.jpg",
+  "video": "queue/2026-11-04_reel-pk.mp4",
+  "cover": "queue/2026-11-04_reel-pk_cover.jpg",
   "trial": false,
   "caption": "Your rest tonight is part of Allah's mercy\n\nAllah tells us the night and day are from His mercy: one to rest in, one to seek His bounty. Put the phone down, rest well, and end the day grateful.\n\nSurah Al-Qasas 28:73\n\nWhich favor from today will you thank Allah for before you sleep?\n\n#restisamercy #nightroutine #gratitude #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
   "alt_text": "It is out of His mercy that He made for you the night and day, so that you may rest therein and seek of His bounty, and so that you may be grateful (Surah Al-Qasas 28:73)",
@@ -125,5 +125,8 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-02T05:47:50+00:00"
-  }
+  },
+  "moved_from": "2026-11-03_reel-pk",
+  "moved_at": "2026-11-03T00:30:16+00:00",
+  "move_reason": "owner: shift Nov 3 (Istanbul) content one day"
 }

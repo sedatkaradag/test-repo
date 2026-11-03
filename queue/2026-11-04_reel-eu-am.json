@@ -4,12 +4,12 @@
   "content_type": "quran",
   "template": "v3",
   "reference": "Surah Ash-Shura 42:19",
-  "slot": "2026-11-03_reel-eu-am",
-  "publish_at": "2026-11-03T07:19:13Z",
-  "local_slot": "2026-11-03 08:15 Europe/Berlin (±5 min)",
-  "image": "queue/2026-11-03_reel-eu-am.jpg",
-  "video": "queue/2026-11-03_reel-eu-am.mp4",
-  "cover": "queue/2026-11-03_reel-eu-am_cover.jpg",
+  "slot": "2026-11-04_reel-eu-am",
+  "publish_at": "2026-11-04T07:17:13Z",
+  "local_slot": "2026-11-04 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-04_reel-eu-am.jpg",
+  "video": "queue/2026-11-04_reel-eu-am.mp4",
+  "cover": "queue/2026-11-04_reel-eu-am_cover.jpg",
   "trial": false,
   "caption": "Worried about your provision before work today?\n\nAllah describes Himself as Kind to His slaves, and He gives provision to whom He wills. Do your part today, and trust the One who is All-Powerful.\n\nSurah Ash-Shura 42:19\n\nSend this to someone job hunting right now\n\n#rizq #provision #allahiskind #quranreels\n\nRecitation: Mishary Alafasy",
   "alt_text": "Allah is Kind to His slaves; He gives provision to whom He wills, and He is the All-Powerful, the All-Mighty (Surah Ash-Shura 42:19)",
@@ -109,5 +109,8 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-02T05:45:49+00:00"
-  }
+  },
+  "moved_from": "2026-11-03_reel-eu-am",
+  "moved_at": "2026-11-03T00:30:16+00:00",
+  "move_reason": "owner: shift Nov 3 (Istanbul) content one day"
 }
