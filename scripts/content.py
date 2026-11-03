@@ -217,6 +217,9 @@ def display_text(text):
         t += end_mark(t)
     elif len(t) > 1 and t[-1] in "\"”" and t[-2].isalnum():
         t = t[:-1] + end_mark(t[:-1]) + t[-1]
+    elif len(t) > 1 and t[-1] in ")]" and t[-2].isalnum():
+        # A translator's bracket at the very end ("... cut off [from all goodness]"): the mark goes after it.
+        t += end_mark(t)
     return smart_quotes(t)
 
 

@@ -54,6 +54,10 @@ reels:
   recitation:
     enabled: true
     max_seconds: 75
+    # Bilinen kaynak dosya hataları (saniye, kaynak dosyanın kendi süresine göre). Yalnızca ana ajan ekler.
+    trims:
+      # 108:1 dosyasının sonunda 108:2'nin ilk hecesi ("fe") kalmış; "fe fesalli" diye duyuluyordu.
+      Yasser_Ad-Dussary_128kbps/108001: {end: 5.25}
     reciters:
       - {id: Alafasy_128kbps, name: Mishary Alafasy, weight: 4}
       - {id: Abdul_Basit_Murattal_192kbps, name: Abdul Basit Abdus-Samad, weight: 3}

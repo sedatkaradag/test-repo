@@ -11,22 +11,22 @@
   "video": "queue/2026-11-03_reel-eu.mp4",
   "cover": "queue/2026-11-03_reel-eu_cover.jpg",
   "trial": false,
-  "caption": "Protection you can carry every single day\n\nAl-Falaq teaches us to seek refuge with the Lord of the daybreak from the harm of what He created, the darkness of night, those who blow on knots, and the envier. Make it part of your daily remembrance.\n\nSurah Al-Falaq 113:1-5\n\nSend this to someone who worries about envy\n\n#surahfalaq #dailydhikr #protection #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "caption": "Against envy and magic, Allah taught us this\n\nAl-Falaq teaches us to seek refuge with the Lord of the daybreak from the harm of what He created, the darkness of night, those who blow on knots, and the envier. Make it part of your daily remembrance.\n\nSurah Al-Falaq 113:1-5\n\nSend this to someone who worries about envy\n\n#surahfalaq #dailydhikr #protection #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
   "alt_text": "Say, “I seek refuge with the Lord of the daybreak; from the harm of all what He has created; from the harm of night’s darkness when it spreads around; from the harm of the sorceresses who blow on knots; and from the harm of the envier when he envies (Surah Al-Falaq 113:1-5)",
   "theme": "Surah Al-Falaq / daily protection (owner's pick)",
   "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "hold",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
     "entry_id": "quran:113:1-5",
     "label": "THE NOBLE QUR'AN",
-    "hook": "Protection you can carry every single day",
+    "hook": "Against envy and magic, Allah taught us this",
     "hook_lines": [
-      "Protection you can carry",
-      "every single day"
+      "Against envy and magic,",
+      "Allah taught us this"
     ],
     "hook_size": 82,
     "arabic_size": 60,
@@ -157,7 +157,7 @@
     "handle_y": 1542.4,
     "handle_size": 27
   },
-  "layout_hash": "9daf444949bd375d04d1c9d6",
+  "layout_hash": "8fa5b917e11f726420255710",
   "created_at": "2026-11-03T00:39:17+00:00",
   "audio": {
     "reciter": "Abdurrahmaan_As-Sudais_192kbps",
@@ -169,19 +169,9 @@
       "113004",
       "113005"
     ],
-    "done": true,
-    "failed": false,
-    "tried": [],
-    "seconds": 21.4,
-    "video_seconds": 24.6,
-    "verse_seconds": [
-      3.19,
-      2.85,
-      4.39,
-      5.15,
-      5.85
-    ],
-    "timing": "verse by verse",
-    "added_at": "2026-11-03T00:40:32+00:00"
-  }
+    "done": false,
+    "failed": false
+  },
+  "hold_reason": "caption changed after approval; needs a fresh verifier",
+  "held_at": "2026-11-03T01:01:31Z"
 }

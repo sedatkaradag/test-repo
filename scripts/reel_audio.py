@@ -120,16 +120,25 @@ def add_recitation(video_rel, au, reciters, max_seconds):
     return True, f"{a:.1f}s by {rec['id']}"
 
 
-def decode_wav(src, dest):
-    """Decode one verse file to 44.1 kHz stereo PCM; returns its exact length in seconds."""
+def decode_wav(src, dest, trim=None):
+    """Decode one verse file to 44.1 kHz stereo PCM; returns its exact length in seconds.
+    `trim` ({"start": s, "end": e}, seconds of the source file) cuts a known defect in a source file,
+    e.g. the first syllable of the next verse left at the end (config: reels.recitation.trims)."""
     import wave
-    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(src), "-ar", "44100", "-ac", "2",
+    cut, af = [], []
+    if trim:
+        if trim.get("start"):
+            cut += ["-ss", str(trim["start"])]
+        if trim.get("end"):
+            cut += ["-to", str(trim["end"])]
+            af = ["-af", f"afade=t=out:st={max(0.0, float(trim['end']) - float(trim.get('start', 0)) - 0.04):.3f}:d=0.04"]
+    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(src), *cut, *af, "-ar", "44100", "-ac", "2",
                     "-c:a", "pcm_s16le", str(dest)], check=True)
     with wave.open(str(dest)) as w:
         return w.getnframes() / w.getframerate()
 
 
-def add_recitation_v2(video_rel, layout, layout_hash, au, reciters, max_seconds):
+def add_recitation_v2(video_rel, layout, layout_hash, au, reciters, max_seconds, trims=None):
     """Template v2 verse video (Reel or a verse post's Story): drawn here from the approved layout,
     each verse lit for exactly as long as its own recitation file lasts. If the layout drawn here is
     not pixel-identical to the one checked before queueing (layout_hash), the preview video is
@@ -145,7 +154,7 @@ def add_recitation_v2(video_rel, layout, layout_hash, au, reciters, max_seconds)
         durs, wavs = [], []
         for k, f in enumerate(files):
             w = tmp / f"{k}.wav"
-            durs.append(decode_wav(f, w))
+            durs.append(decode_wav(f, w, (trims or {}).get(f"{rec['id']}/{au['ayahs'][k]}")))
             wavs.append(w)
         total = sum(durs)
         sys.path.insert(0, str(ROOT / "scripts"))
@@ -223,7 +232,8 @@ def main():
             is_story = item.get("type") == "story"
             if item.get("template") in ("v2", "v3") and item.get("reel_layout"):
                 ok, note = add_recitation_v2(item["video"], item["reel_layout"], item.get("layout_hash"),
-                                             item["audio"], reciters, int(rec.get("max_seconds", 75)))
+                                             item["audio"], reciters, int(rec.get("max_seconds", 75)),
+                                             rec.get("trims"))
             else:
                 ok, note = add_recitation(item["video"], item["audio"], reciters,
                                           STORY_MAX if is_story else int(rec.get("max_seconds", 75)))
@@ -242,7 +252,8 @@ def main():
                 and item.get("story_video")):
             if item.get("story_layout"):
                 ok, note = add_recitation_v2(item["story_video"], item["story_layout"],
-                                             item.get("story_layout_hash"), sa, reciters, STORY_MAX)
+                                             item.get("story_layout_hash"), sa, reciters, STORY_MAX,
+                                             rec.get("trims"))
             else:
                 ok, note = add_recitation(item["story_video"], sa, reciters, STORY_MAX)
             done.append(f"{item['slot']} story {'with recitation' if ok else 'stays an image'} ({note})")

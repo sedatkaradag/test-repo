@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "audio_pending",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -130,17 +130,8 @@
       "108002",
       "108003"
     ],
-    "done": true,
-    "failed": false,
-    "tried": [],
-    "seconds": 12.0,
-    "video_seconds": 15.2,
-    "verse_seconds": [
-      5.36,
-      2.66,
-      4.02
-    ],
-    "timing": "verse by verse",
-    "added_at": "2026-11-03T00:39:50+00:00"
-  }
+    "done": false,
+    "failed": false
+  },
+  "audio_redo": "owner: stray 'fa' at the end of the 108:1 file trimmed (config trims)"
 }

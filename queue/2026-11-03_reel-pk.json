@@ -11,21 +11,21 @@
   "video": "queue/2026-11-03_reel-pk.mp4",
   "cover": "queue/2026-11-03_reel-pk_cover.jpg",
   "trial": false,
-  "caption": "When the whispers get loud\n\nThe last surah of the Qur'an teaches us to seek refuge with the Lord, the Sovereign and the God of mankind, from the lurking whisperer who whispers into hearts.\n\nSurah An-Naas 114:1-6\n\nRecite it with your family before bed tonight\n\n#surahnas #seekrefuge #protection #quranreels\n\nRecitation: Mishary Alafasy",
+  "caption": "Not every whisperer is a jinn\n\nThe last surah of the Qur'an teaches us to seek refuge with the Lord, the Sovereign and the God of mankind, from the lurking whisperer who whispers into hearts, from among jinn and mankind.\n\nSurah An-Naas 114:1-6\n\nRecite it with your family before bed tonight\n\n#surahnas #seekrefuge #protection #quranreels\n\nRecitation: Mishary Alafasy",
   "alt_text": "Say, “I seek refuge with the Lord of mankind; the Sovereign of mankind; the God of mankind; from the harm of the lurking whisperer; who whispers into the hearts of mankind; from among jinn and mankind.” (Surah An-Naas 114:1-6)",
   "theme": "Surah An-Nas / seeking refuge from the whisperer (owner's pick)",
   "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "hold",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
     "entry_id": "quran:114:1-6",
     "label": "THE NOBLE QUR'AN",
-    "hook": "When the whispers get loud",
+    "hook": "Not every whisperer is a jinn",
     "hook_lines": [
-      "When the whispers get loud"
+      "Not every whisperer is a jinn"
     ],
     "hook_size": 82,
     "arabic_size": 60,
@@ -153,7 +153,7 @@
     "handle_y": 1544.8,
     "handle_size": 27
   },
-  "layout_hash": "d4c8de9c644b24906fa7ef10",
+  "layout_hash": "43188ac5c00294d94588fad6",
   "created_at": "2026-11-03T00:37:25+00:00",
   "audio": {
     "reciter": "Alafasy_128kbps",
@@ -166,20 +166,9 @@
       "114005",
       "114006"
     ],
-    "done": true,
-    "failed": false,
-    "tried": [],
-    "seconds": 40.6,
-    "video_seconds": 43.8,
-    "verse_seconds": [
-      6.07,
-      5.21,
-      5.29,
-      7.94,
-      7.85,
-      8.19
-    ],
-    "timing": "verse by verse",
-    "added_at": "2026-11-03T00:41:37+00:00"
-  }
+    "done": false,
+    "failed": false
+  },
+  "hold_reason": "caption changed after approval; needs a fresh verifier",
+  "held_at": "2026-11-03T01:02:59Z"
 }
