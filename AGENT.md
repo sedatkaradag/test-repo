@@ -197,7 +197,8 @@ cd scripts
    slot için (`reel-eu-am`, `reel-pk` ve `reel-eu` ayet, `reel-us` hadis) **kendi içeriğini** seç; hiçbir
    gönderinin kopyası olmaz. Slotun türü sabittir, kod kontrol eder.
    - **İçerik:** 3-6. adımlar aynen: tema son 3 gönderi ve son 3 Reels'ten farklı; kısa ve tek
-     güçlü mesaj (yaklaşık 250 karakter altı). Ayet Reels'inde 1-5 ayet, her ayet videoda kendi
+     güçlü mesaj (yaklaşık 250 karakter altı). Ayet Reels'inde 1-5 ayet (tek istisna, sahibinin onayıyla: Nâs suresi 114:1-6;
+     `content.py` → `RANGE_EXCEPTIONS`, buraya kendin ekleme yapma), her ayet videoda kendi
      satır(lar)ında durur (ayet başına en fazla 3 satır); tilavet yaklaşık 55 saniyeyi geçmesin
      (Reels aynı video olarak Story'de de paylaşılır; Instagram Story'leri en fazla 60 saniye).
      Anlam için gerekirse bir önceki ya da sonraki ayeti de aralığa kat.
@@ -210,7 +211,12 @@ cd scripts
      Share The Qur'an" / "Follow & Share The Sunnah"), hesap adı (27 punto). Son ayet/parça bitince
      kalan metin 0,5 sn içinde yumuşakça yanar; 0,6 sn sonra slogan yerini caption'ın kapanış
      cümlesine (fildişi) bırakır. Tilavet satırı videoda yoktur, caption'da vardır. Uzun metinlerde
-     Arapça küçülür; sığmazsa kod reddeder (`too long`), daha kısa bir aralık seç.
+     önce meal (ve kapanış satırı) küçülür (46 → en az 34), Arapça 60'ın altına ancak meal 34'e
+     indiyse iner (en az 44); sığmazsa kod reddeder (`too long`), daha kısa bir aralık seç.
+   - **Sahibinin istekleri (yalnızca ana ajan, sahibi açıkça isteyince):** belli bir kâri
+     `add-reel --reciter <config'teki id>`; kuyruktaki bir Reels'i değiştirmeden başka bir günün aynı
+     slotuna taşımak `enqueue.py move --slot <eski> --to <yeni> --reason "..."` (içerik, caption, video ve
+     onay aynı kalır). Günlük çalışma bunları kendiliğinden kullanmaz.
      Eski (v2) öğeler kendi şablonlarıyla kalır; yeniden çizilen (`rerender`) öğe v3 olur.
    - **Kanca ve kapanış videoya basılır:** kanca = caption'ın ilk satırı, kapanış = caption'ın
      kapanış cümlesi, harfi harfine. Bu yüzden kanca en fazla 60 karakter (videoda 1-2 satır),
@@ -448,6 +454,10 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
      tap_back, tap_exit, swipe_forward). Instagram Story verisini yalnızca 24 saat verdiği için `age_hours`
      küçük olan kayıtlar eksik olabilir; yorumlarken bunu göz önünde tut.
    `insights.json` → `unavailable_metrics` ve `errors`, Instagram'ın değer vermediği ölçümleri gösterir.
+   - **Yaş kuralı:** bir paylaşımın yaşı = `insights.json` → `fetched_at` − `posted_at` (takvim gününe
+     bakarak tahmin etme). Ortalamalara yalnızca en az 24 saatlik paylaşımları kat. İki grubu (şablon,
+     slot, kâri, format) karşılaştırırken her iki taraf da en az 48 saatlik olmalı; her grubun `n`'ini ve
+     yaş aralığını tabloda yaz. Bir grupta 48 saatlik paylaşım yoksa karşılaştırma yapma, "veri yok" yaz.
 3. `notes/strategy.md` dosyasını güncelle: en iyi 3 tema, en zayıf 3 tema,
    önerilen tür oranı, saat önerisi (online_followers ve kitle dağılımı varsa ona dayan), takipçi
    büyümesi (yeni takip / takipten çıkma), izleyiciyi tutma (izlenme oranı, atlanma oranı).

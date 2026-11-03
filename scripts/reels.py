@@ -45,6 +45,8 @@ from content import ROOT, display_text, drop_dangling_closes, get, quote_context
 
 TEMPLATE = "v3"          # v3: progress line, whole meaning lit as recited, slogan, reference above it
 HANDLE_SIZE = 27         # v3 (v2 and Stories: 24)
+AR_SOFT_MIN = 60         # v3 verse Reels: the meaning shrinks (to MEAL_MIN) before the Arabic goes below this
+MEAL_MIN = 34            # smallest meaning size (the closing line is 2 px larger)
 END_FADE = 0.5           # v3: when the last part ends, the other parts light up over this (like a change)
 SW, SH, FPS = 1080, 1920, 30
 BOTTOM_LIMIT = 1585      # nothing below this: Instagram's caption and buttons cover it
@@ -312,14 +314,19 @@ def plan_verse_v3(entry_id, hook, cta):
     slogan = slogan_for("quran")
     h_lines, h_size = hook_layout(hook)
     hook_bottom = HOOK_Y + len(h_lines) * en_lh(h_size)
-    for meal_size in (46, 42, 38):
+    # Arabic first: the meaning (and the closing line with it) gets smaller before the Arabic goes
+    # under AR_SOFT_MIN; only when even the smallest meaning (MEAL_MIN) cannot keep it there does the
+    # Arabic go lower (down to 44).
+    order = [(m, range(80, AR_SOFT_MIN - 2, -2)) for m in (46, 42, 38, 36, MEAL_MIN)] + \
+            [(MEAL_MIN, range(AR_SOFT_MIN - 2, 42, -2))]
+    for meal_size, sizes in order:
         line_size = meal_size + 2
         cta_lines = en_lines(cta, line_size, MAX_W_EN)
         slogan_lines = en_lines(slogan, line_size, MAX_W_EN)
         line_h = max(len(cta_lines), len(slogan_lines)) * en_lh(line_size)
         full_lines = en_lines(full, meal_size, MAX_W_EN)
         full_h = len(full_lines) * en_lh(meal_size)
-        for size in range(80, 44, -2):
+        for size in sizes:
             blocks = [ar_lines(x, size) for x in arabic]
             if any(len(bl) > 3 for bl in blocks):
                 continue

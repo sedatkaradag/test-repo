@@ -25,12 +25,18 @@ def _index():
     return {r["id"]: r for kind in ("hadith", "quran") for r in _load(kind)}
 
 
+# At most 5 verses per item. Exceptions only with the owner's explicit approval, one by one.
+RANGE_EXCEPTIONS = {
+    "quran:114:1-6",   # Surah An-Nas, whole surah (owner, 2026-11-03)
+}
+
+
 def get(entry_id):
     """Return one entry. Quran ranges like quran:94:5-6 are joined verse by verse."""
     m = re.fullmatch(r"quran:(\d+):(\d+)-(\d+)", entry_id)
     if m:
         s, a, b = map(int, m.groups())
-        if b < a or b - a > 4:
+        if b < a or (b - a > 4 and entry_id not in RANGE_EXCEPTIONS):
             raise KeyError(f"bad range {entry_id}")
         verses = [_index()[f"quran:{s}:{v}"] for v in range(a, b + 1)]
         first = verses[0]
