@@ -17,7 +17,7 @@
   "review": "approve r1: text, grade Sahih, narrator match, caption fine",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
@@ -72,5 +72,9 @@
   "created_at": "2026-11-01T05:44:55+00:00",
   "moved_from": "2026-11-02_reel-us",
   "moved_at": "2026-11-03T00:30:16+00:00",
-  "move_reason": "owner: shift Nov 3-4 (Istanbul) content one day"
+  "move_reason": "owner: shift Nov 3-4 (Istanbul) content one day",
+  "story_media_id": "18459868615126261",
+  "story_kind": "video",
+  "media_id": "18115752839029033",
+  "posted_at": "2026-11-04T01:28:05+00:00"
 }
