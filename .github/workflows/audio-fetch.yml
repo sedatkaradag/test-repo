@@ -80,8 +80,15 @@ jobs:
                       try:
                           rows = json.loads(b)
                       except ValueError as e:
-                          rows = [json.loads(l) for l in b.decode("utf-8").splitlines() if l.strip().startswith("{")]
-                          note["align_parse"] = f"json lines ({e})"
+                          # some files carry the aligner's crash log before the data: read every
+                          # {"surah": ...} object wherever it starts
+                          s, dec, rows = b.decode("utf-8", "replace"), json.JSONDecoder(), []
+                          for m in re.finditer(r'\{\s*"(?:surah|ayah)"', s):
+                              try:
+                                  rows.append(dec.raw_decode(s, m.start())[0])
+                              except ValueError:
+                                  pass
+                          note["align_parse"] = f"scanned objects: {len(rows)} ({e})"
                       note.setdefault("align_sample", str(rows[:1] if isinstance(rows, list) else list(rows)[:3])[:400])
                       for r in (rows if isinstance(rows, list) else []):
                           try:
