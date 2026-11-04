@@ -79,9 +79,14 @@ jobs:
                           rows = json.loads(b)
                       except ValueError:
                           continue
-                      for r in rows:
-                          if (r.get("surah"), r.get("ayah")) in want:
-                              found[f"{r['surah']:03d}{r['ayah']:03d}"] = r["segments"]
+                      note.setdefault("align_sample", str(rows[:1] if isinstance(rows, list) else list(rows)[:3])[:400])
+                      for r in (rows if isinstance(rows, list) else []):
+                          try:
+                              k = (int(r["surah"]), int(r["ayah"]))
+                          except (KeyError, TypeError, ValueError):
+                              continue
+                          if k in want:
+                              found[f"{k[0]:03d}{k[1]:03d}"] = r.get("segments")
                       if found:
                           note["align"] = {"asset": x["name"], "file": n}
                           break
