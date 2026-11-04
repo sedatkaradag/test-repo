@@ -117,6 +117,11 @@ Karşılaştırırken aynı yaştaki Reels'leri kullan.
 
 İlk quiz: erişim olağan Reels düzeyinde (patlama yok), beğeni ve kayıt oranı düşük, ama yorum ve takip / görüntüleyen
 oranı ayet Reels'inin ortalamasının üstünde. Tek örnek; karar için 3-5 deneme gerekir.
+Uygulama istatistikleri (sahibinin ekran görüntüleri, 2026-11-04): ortalama izlenme 10 sn (48 sn videoda %21; aynı
+günlerde ayet Reels'i 5,8-7,5 sn, Nâs 12,1 sn), geçme oranı %62,9 (Instagram: tipik Reels'inden "daha düşük", yani iyi),
+yorum oranı %0,4 ("daha yüksek"); paylaşım %0,1, beğeni %6,6, kayıt %0,5 tipikten düşük. Tutma eğrisi: 3. saniyede %40,
+sonra neredeyse düz (~%20 sona kadar izliyor). Kaynak: Reels sekmesi %77,9, Keşfet %19,7. Sonuç: kalanlar sonuna kadar
+izliyor; kayıp ilk 3 saniyede ve paylaşım yok denecek kadar az.
 
 ## Değişiklik notları
 - 2026-10-26: İlk haftalık analiz. Saat değişikliği yok (kanıt zayıf, online_followers yok).
