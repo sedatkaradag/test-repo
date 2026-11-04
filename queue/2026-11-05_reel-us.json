@@ -1,0 +1,79 @@
+{
+  "entry_id": "hadith:bukhari:2472",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v3",
+  "reference": "Sahih al-Bukhari 2472",
+  "slot": "2026-11-05_reel-us",
+  "publish_at": "2026-11-06T01:30:37Z",
+  "local_slot": "2026-11-05 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-05_reel-us.jpg",
+  "video": "queue/2026-11-05_reel-us.mp4",
+  "cover": "queue/2026-11-05_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "A man moved a thorny branch and Allah forgave him\n\nThe Prophet ﷺ told of a man who found a thorny branch on the road and removed it. Allah thanked him for that deed and forgave him. Look out for one small chance to do good.\n\nSahih al-Bukhari 2472 · Grade: Sahih\n\nClear one small harm from someone's path tomorrow\n\n#smalldeeds #removeharm #everydaysunnah #hadithreels",
+  "alt_text": "Narrated Abu Huraira:Allah's Messenger (ﷺ) said, \"While a man was on the way, he found a thorny branch of a tree there on the way and removed it. Allah thanked him for that deed and forgave him (Sahih al-Bukhari 2472)",
+  "theme": "small deeds / removing harm from the path",
+  "review": "approve r1: integrity OK, English matches, narrator matches chain, frame OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "hadith",
+    "entry_id": "hadith:bukhari:2472",
+    "label": "HADITH",
+    "hook": "A man moved a thorny branch and Allah forgave him",
+    "hook_lines": [
+      "A man moved a thorny",
+      "branch and Allah forgave",
+      "him"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Narrated Abu Huraira: Allah’s Messenger (ﷺ) said,"
+    ],
+    "lead_size": 34,
+    "lead_y": 717.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "“While a man was on the way,"
+        ],
+        "y": 799.5
+      },
+      {
+        "lines": [
+          "he found a thorny branch of a tree",
+          "there on the way and removed it."
+        ],
+        "y": 912.5
+      },
+      {
+        "lines": [
+          "Allah thanked him for that deed",
+          "and forgave him.”"
+        ],
+        "y": 1118.5
+      }
+    ],
+    "ref": "Sahih al-Bukhari 2472 · Grade: Sahih",
+    "ref_y": 1344.5,
+    "slogan": "Follow & Share The Sunnah",
+    "slogan_lines": [
+      "Follow & Share The Sunnah"
+    ],
+    "cta": "Clear one small harm from someone's path tomorrow",
+    "cta_lines": [
+      "Clear one small harm from someone's path",
+      "tomorrow"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.5,
+    "handle_y": 1548.5,
+    "handle_size": 27
+  },
+  "layout_hash": "61d5c8a343cb5ba1b506734a",
+  "created_at": "2026-11-04T05:47:54+00:00"
+}

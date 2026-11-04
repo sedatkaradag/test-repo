@@ -1,0 +1,157 @@
+{
+  "entry_id": "quran:21:83-84",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Anbiyaa 21:83-84",
+  "slot": "2026-11-05_reel-pk",
+  "publish_at": "2026-11-05T15:26:44Z",
+  "local_slot": "2026-11-05 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-05_reel-pk.jpg",
+  "video": "queue/2026-11-05_reel-pk.mp4",
+  "cover": "queue/2026-11-05_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "For the nights hardship feels too heavy, the dua of Ayyub\n\nAyyub called on his Lord in his adversity and named Him the Most Merciful of those who show mercy. Allah responded, relieved his adversity, and restored his family.\n\nSurah Al-Anbiyaa 21:83-84\n\nSend this to someone who is going through a hard time\n\n#duaofayyub #hardtimes #prophetstories #quranreels\n\nRecitation: Mohamed Siddiq Al-Minshawi",
+  "alt_text": "And [remember] Job, when he cried out to his Lord, “I have been struck by adversity, and You are the Most Merciful of those who show mercy.” So We responded to him and relieved his adversity, and We restored to him his family, twice as many, as a mercy from Us and as a reminder for Our worshipers (Surah Al-Anbiyaa 21:83-84)",
+  "theme": "hardship / dua of Ayyub",
+  "review": "approve r1: Arabic word/mark checked, English+ref match, frame OK, caption OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:21:83-84",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For the nights hardship feels too heavy, the dua of Ayyub",
+    "hook_lines": [
+      "For the nights hardship feels",
+      "too heavy, the dua of Ayyub"
+    ],
+    "hook_size": 82,
+    "arabic_size": 58,
+    "verses": [
+      {
+        "ayah": "021083",
+        "lines": [
+          "وَأَيُّوبَ إِذۡ نَادَىٰ رَبَّهُۥٓ أَنِّي مَسَّنِيَ ٱلضُّرُّ وَأَنتَ أَرۡحَمُ",
+          "ٱلرَّٰحِمِينَ ٨٣"
+        ],
+        "y": 633.2,
+        "meal": [
+          "And [remember] Job, when he cried out to his Lord, “I have been",
+          "struck by adversity, and You are the Most Merciful of those who",
+          "show mercy.”"
+        ]
+      },
+      {
+        "ayah": "021084",
+        "lines": [
+          "فَٱسۡتَجَبۡنَا لَهُۥ فَكَشَفۡنَا مَا بِهِۦ مِن ضُرّٖۖ وَءَاتَيۡنَٰهُ أَهۡلَهُۥ",
+          "وَمِثۡلَهُم مَّعَهُمۡ رَحۡمَةٗ مِّنۡ عِندِنَا وَذِكۡرَىٰ لِلۡعَٰبِدِينَ ٨٤"
+        ],
+        "y": 859.2,
+        "meal": [
+          "So We responded to him and relieved his adversity, and We",
+          "restored to him his family, twice as many, as a mercy from Us and",
+          "as a reminder for Our worshipers."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1115.2,
+    "full": "And [remember] Job, when he cried out to his Lord, “I have been struck by adversity, and You are the Most Merciful of those who show mercy.” So We responded to him and relieved his adversity, and We restored to him his family, twice as many, as a mercy from Us and as a reminder for Our worshipers.",
+    "full_lines": [
+      "And [remember] Job, when he cried out to his Lord, “I have been",
+      "struck by adversity, and You are the Most Merciful of those who",
+      "show mercy.” So We responded to him and relieved his adversity,",
+      "and We restored to him his family, twice as many, as a mercy from",
+      "Us and as a reminder for Our worshipers."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-Anbiyaa 21:83-84",
+    "ref_y": 1369.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who is going through a hard time",
+    "cta_lines": [
+      "Send this to someone who is going through a hard time"
+    ],
+    "cta_size": 36,
+    "line_y": 1427.2,
+    "handle_y": 1490.2,
+    "handle_size": 27
+  },
+  "layout_hash": "aa316bafa8399dc2716a6aec",
+  "created_at": "2026-11-04T05:45:55+00:00",
+  "audio": {
+    "reciter": "Minshawy_Murattal_128kbps",
+    "reciter_name": "Mohamed Siddiq Al-Minshawi",
+    "ayahs": [
+      "021083",
+      "021084"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "entry_id": "quran:33:3",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ahzaab 33:3",
+  "slot": "2026-11-05_reel-eu-am",
+  "publish_at": "2026-11-05T07:14:57Z",
+  "local_slot": "2026-11-05 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-05_reel-eu-am.jpg",
+  "video": "queue/2026-11-05_reel-eu-am.mp4",
+  "cover": "queue/2026-11-05_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Too much on your plate this morning?\n\nAllah tells us to put our trust in Him, and that He is enough as a Disposer of affairs. Plan well, work hard, and leave the outcome with Him.\n\nSurah Al-Ahzaab 33:3\n\nPick one task today and begin it with Bismillah.\n\n#tawakkul #trustinallah #morningreminder #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Put your trust in Allah; sufficient is Allah as a Disposer of Affairs (Surah Al-Ahzaab 33:3)",
+  "theme": "trust in Allah (tawakkul)",
+  "review": "approve r2 (r1 rejected: closing line punctuation): Arabic word/mark checked, English+ref match, frame OK",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:33:3",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Too much on your plate this morning?",
+    "hook_lines": [
+      "Too much on your plate this",
+      "morning?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "033003",
+        "lines": [
+          "وَتَوَكَّلۡ عَلَى ٱللَّهِۚ وَكَفَىٰ بِٱللَّهِ وَكِيلٗا ٣"
+        ],
+        "y": 760.0,
+        "meal": [
+          "Put your trust in Allah; sufficient is Allah as a",
+          "Disposer of Affairs."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 946.0,
+    "full": "Put your trust in Allah; sufficient is Allah as a Disposer of Affairs.",
+    "full_lines": [
+      "Put your trust in Allah; sufficient is Allah as a",
+      "Disposer of Affairs."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Ahzaab 33:3",
+    "ref_y": 1096.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one task today and begin it with Bismillah.",
+    "cta_lines": [
+      "Pick one task today and begin it with",
+      "Bismillah."
+    ],
+    "cta_size": 48,
+    "line_y": 1154.0,
+    "handle_y": 1300.0,
+    "handle_size": 27
+  },
+  "layout_hash": "73875e1d84d59c8a520d2c75",
+  "created_at": "2026-11-04T05:48:15+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "033003"
+    ],
+    "done": false
+  }
+}
