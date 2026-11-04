@@ -76,10 +76,12 @@ jobs:
                   else:
                       files = {x["name"]: blob}
                   for n, b in files.items():
+                      note.setdefault("align_head", b[:300].decode("utf-8", "replace"))
                       try:
                           rows = json.loads(b)
-                      except ValueError:
-                          continue
+                      except ValueError as e:
+                          rows = [json.loads(l) for l in b.decode("utf-8").splitlines() if l.strip().startswith("{")]
+                          note["align_parse"] = f"json lines ({e})"
                       note.setdefault("align_sample", str(rows[:1] if isinstance(rows, list) else list(rows)[:3])[:400])
                       for r in (rows if isinstance(rows, list) else []):
                           try:
