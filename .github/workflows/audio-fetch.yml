@@ -1,0 +1,96 @@
+name: audio-fetch
+
+# Hand-run helper for drafts and samples (not part of the publishing pipeline): downloads the
+# recitation of the given verses from everyayah.com and, when available, their measured word
+# timings (cpfair/quran-align, CC BY 4.0), and leaves both as a short-lived artifact. It never
+# commits, never touches queue/ or history/, and nothing else in the repo calls it.
+#
+#   gh workflow run audio-fetch.yml -f reciter=Abdurrahmaan_As-Sudais_192kbps -f ayahs=113001,113002
+#   gh run download <run id> -n audio-fetch
+on:
+  workflow_dispatch:
+    inputs:
+      reciter:
+        description: "everyayah folder, e.g. Abdurrahmaan_As-Sudais_192kbps"
+        required: true
+      ayahs:
+        description: "comma-separated SSSAAA ids, e.g. 113001,113002,002201"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download verses and word timings
+        env:
+          RECITER: ${{ inputs.reciter }}
+          AYAHS: ${{ inputs.ayahs }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'EOF'
+          import io, json, os, re, sys, urllib.request, zipfile, gzip
+          rec = os.environ["RECITER"].strip()
+          ids = [a.strip() for a in os.environ["AYAHS"].split(",") if a.strip()]
+          if not re.fullmatch(r"[A-Za-z0-9_.-]+", rec) or not all(re.fullmatch(r"\d{6}", a) for a in ids):
+              sys.exit("bad input")
+          os.makedirs("out/audio", exist_ok=True)
+          def get(url, headers=None):
+              req = urllib.request.Request(url, headers={"User-Agent": "audio-fetch", **(headers or {})})
+              with urllib.request.urlopen(req, timeout=120) as r:
+                  return r.read()
+          for a in ids:
+              data = get(f"https://everyayah.com/data/{rec}/{a}.mp3")
+              open(f"out/audio/{a}.mp3", "wb").write(data)
+              print("audio", a, len(data))
+          # word timings: the quran-align release asset for this reciter, if there is one
+          note = {"reciter": rec, "ayahs": ids, "align": None}
+          try:
+              hdr = {"Authorization": f"Bearer {os.environ['GH_TOKEN']}", "Accept": "application/vnd.github+json"}
+              rels = json.loads(get("https://api.github.com/repos/cpfair/quran-align/releases", hdr))
+              assets = [x for r in rels for x in r.get("assets", [])]
+              print("align assets:", [x["name"] for x in assets][:60])
+              key = rec.lower().split("_")[0]
+              pick = [x for x in assets if rec.lower() in x["name"].lower()] or \
+                     [x for x in assets if key in x["name"].lower()] or \
+                     [x for x in assets if x["name"].endswith((".zip", ".tar.gz"))]
+              want = {(int(a[:3]), int(a[3:])) for a in ids}
+              found = {}
+              for x in pick[:3]:
+                  blob = get(x["browser_download_url"])
+                  files = {}
+                  if x["name"].endswith(".zip"):
+                      z = zipfile.ZipFile(io.BytesIO(blob))
+                      files = {n: z.read(n) for n in z.namelist() if n.endswith(".json") and
+                               (rec.lower() in n.lower() or key in n.lower())}
+                  elif x["name"].endswith(".gz"):
+                      files = {x["name"]: gzip.decompress(blob)}
+                  else:
+                      files = {x["name"]: blob}
+                  for n, b in files.items():
+                      try:
+                          rows = json.loads(b)
+                      except ValueError:
+                          continue
+                      for r in rows:
+                          if (r.get("surah"), r.get("ayah")) in want:
+                              found[f"{r['surah']:03d}{r['ayah']:03d}"] = r["segments"]
+                      if found:
+                          note["align"] = {"asset": x["name"], "file": n}
+                          break
+                  if found:
+                      break
+              json.dump(found, open("out/align.json", "w"))
+              print("timings for", sorted(found))
+          except Exception as e:  # timings are optional
+              print("no word timings:", e)
+          json.dump(note, open("out/info.json", "w"), indent=1)
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio-fetch
+          path: out/
+          retention-days: 3
