@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok | Arabic checked word by word and mark by mark | English and reference match | frame layout ok | caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -112,5 +112,9 @@
   },
   "moved_from": "2026-11-03_reel-eu-am",
   "moved_at": "2026-11-03T00:30:16+00:00",
-  "move_reason": "owner: shift Nov 3 (Istanbul) content one day"
+  "move_reason": "owner: shift Nov 3 (Istanbul) content one day",
+  "story_media_id": "18119523866061236",
+  "story_kind": "video",
+  "media_id": "18561788095072888",
+  "posted_at": "2026-11-04T07:18:35+00:00"
 }
