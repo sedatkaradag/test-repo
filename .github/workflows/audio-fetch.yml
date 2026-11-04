@@ -64,8 +64,12 @@ jobs:
                   files = {}
                   if x["name"].endswith(".zip"):
                       z = zipfile.ZipFile(io.BytesIO(blob))
-                      files = {n: z.read(n) for n in z.namelist() if n.endswith(".json") and
-                               (rec.lower() in n.lower() or key in n.lower())}
+                      names = [n for n in z.namelist() if n.endswith(".json")]
+                      print("files in", x["name"], names)
+                      note["align_files"] = names
+                      toks = [t for t in re.split(r"[_\-.]+", rec.lower()) if len(t) > 3 and not t.endswith("kbps")]
+                      files = {n: z.read(n) for n in names if rec.lower() in n.lower() or
+                               any(t in n.lower() for t in toks)}
                   elif x["name"].endswith(".gz"):
                       files = {x["name"]: gzip.decompress(blob)}
                   else:
