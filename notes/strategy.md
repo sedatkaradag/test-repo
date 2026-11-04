@@ -104,6 +104,20 @@ ilk iki gününde en iyisi. Kitle: takipçilerin %21'i ve etkileşenlerin %40'ı
 İngiltere, ABD, BAE; yaş ağırlıkla 18-34. reel-pk (21:00 Hindistan) bu kitleye denk geliyor.
 `online_followers` gelince saatler yeniden değerlendirilsin.
 
+## Elle yapılan testler (sistem dışı, nightly izlemez)
+
+Bu paylaşımlar `history/posted.jsonl`'da yok; rakamlar Instagram'ın gönderi istatistiklerinden elle alındı.
+Karşılaştırırken aynı yaştaki Reels'leri kullan.
+
+| Tarih | Ne | Yaş | Görüntüleme | Görüntüleyen | Beğeni | Yorum (kişi) | Kayıt | Paylaşım | Takip | Takip / görüntüleyen |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-03 ~17:30 İst. | "Guess the Surah" quiz (3 soru: Felak 1-2, Bakara 2:201, Enbiyâ 21:88; Sudais; 48,7 sn) | 20 sa | 1894 | 1664 | 110 | 3 | 9 | 2 | 9 | %0.54 |
+| karşılaştırma | Kevser 108:1-3 (Reels) | 22 sa | 2033 | 1742 | 273 | 0 | 19 | 2 | 4 | %0.23 |
+| karşılaştırma | Nâs 114:1-6 (Reels) | 22 sa | 4373 | 3723 | 379 | 1 | 55 | 15 | 26 | %0.70 |
+
+İlk quiz: erişim olağan Reels düzeyinde (patlama yok), beğeni ve kayıt oranı düşük, ama yorum ve takip / görüntüleyen
+oranı ayet Reels'inin ortalamasının üstünde. Tek örnek; karar için 3-5 deneme gerekir.
+
 ## Değişiklik notları
 - 2026-10-26: İlk haftalık analiz. Saat değişikliği yok (kanıt zayıf, online_followers yok).
 - 2026-10-29: İkinci haftalık analiz. Ayet Reels'i yeni slotlarda ~5 kat büyüdü; saat değişikliği yok (slotlar 27 ve 30 Ekim'de değişti, 14 gün dolmadı).
