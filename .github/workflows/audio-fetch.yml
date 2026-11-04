@@ -2,11 +2,12 @@ name: audio-fetch
 
 # Hand-run helper for drafts and samples (not part of the publishing pipeline): downloads the
 # recitation of the given verses from everyayah.com and, when available, their measured word
-# timings (cpfair/quran-align, CC BY 4.0), and leaves both as a short-lived artifact. It never
-# commits, never touches queue/ or history/, and nothing else in the repo calls it.
+# timings (cpfair/quran-align, CC BY 4.0), and puts them on the separate branch `drafts-audio`
+# (one commit, replaced on every run). It never writes to main, never touches queue/ or history/,
+# and nothing else in the repo calls it. Read with: git fetch origin drafts-audio
 #
-#   gh workflow run audio-fetch.yml -f reciter=Abdurrahmaan_As-Sudais_192kbps -f ayahs=113001,113002
-#   gh run download <run id> -n audio-fetch
+#   gh api -X POST repos/<owner>/<repo>/actions/workflows/audio-fetch.yml/dispatches -f ref=main \
+#     -f "inputs[reciter]=Abdurrahmaan_As-Sudais_192kbps" -f "inputs[ayahs]=113001,113002"
 on:
   workflow_dispatch:
     inputs:
@@ -18,7 +19,7 @@ on:
         required: true
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   fetch:
@@ -98,8 +99,12 @@ jobs:
               print("no word timings:", e)
           json.dump(note, open("out/info.json", "w"), indent=1)
           EOF
-      - uses: actions/upload-artifact@v4
-        with:
-          name: audio-fetch
-          path: out/
-          retention-days: 3
+      - name: Put the files on the drafts-audio branch (not main)
+        run: |
+          cd out
+          git init -q -b drafts-audio
+          git config user.name "audio-fetch"
+          git config user.email "audio-fetch@users.noreply.github.com"
+          git add -A
+          git commit -q -m "audio-fetch: ${{ inputs.reciter }} ${{ inputs.ayahs }}"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" drafts-audio
