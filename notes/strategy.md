@@ -112,6 +112,7 @@ Karşılaştırırken aynı yaştaki Reels'leri kullan.
 | Tarih | Ne | Yaş | Görüntüleme | Görüntüleyen | Beğeni | Yorum (kişi) | Kayıt | Paylaşım | Takip | Takip / görüntüleyen |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2026-11-03 ~17:30 İst. | "Guess the Surah" quiz (3 soru: Felak 1-2, Bakara 2:201, Enbiyâ 21:88; Sudais; 48,7 sn) | 20 sa | 1894 | 1664 | 110 | 3 | 9 | 2 | 9 | %0.54 |
+| 2026-11-04 ~17:30 İst. | Quiz 2: "Can you name all 4 Surahs?" (Yâsîn 36:82, İhlâs 1-2, İnşirâh 5-6, Ankebût 29:2; orta-kolay-orta-zor; Sudais; ölçülmüş kelime zamanlaması; cevapta meal; finalde cevaplar ve paylaşım çağrısı; 62 sn) | 27 sa | 4068 | 3440 | 286 | 3 | 18 | 16 | 34 | %0.99 |
 | karşılaştırma | Kevser 108:1-3 (Reels) | 22 sa | 2033 | 1742 | 273 | 0 | 19 | 2 | 4 | %0.23 |
 | karşılaştırma | Nâs 114:1-6 (Reels) | 22 sa | 4373 | 3723 | 379 | 1 | 55 | 15 | 26 | %0.70 |
 
@@ -122,6 +123,9 @@ günlerde ayet Reels'i 5,8-7,5 sn, Nâs 12,1 sn), geçme oranı %62,9 (Instagram
 yorum oranı %0,4 ("daha yüksek"); paylaşım %0,1, beğeni %6,6, kayıt %0,5 tipikten düşük. Tutma eğrisi: 3. saniyede %40,
 sonra neredeyse düz (~%20 sona kadar izliyor). Kaynak: Reels sekmesi %77,9, Keşfet %19,7. Sonuç: kalanlar sonuna kadar
 izliyor; kayıp ilk 3 saniyede ve paylaşım yok denecek kadar az.
+Quiz 2 (uygulama, 2026-11-05 20:25): ortalama izlenme 16 sn, geçme %58,5 (tipikten iyi), paylaşım %0,4 ve yorum %0,2
+(ikisi de tipikten yüksek), beğeni %8,0 ve kayıt %0,5 (tipikten düşük); 3. saniyede %46, sonra ~%25 sona kadar; 27. saatte
+hâlâ yükseliyor (tipik Reels 1. günden sonra düzleşiyor). Takip / görüntüleyen %0,99: şimdiye kadarki en yüksek Reels.
 
 ## Değişiklik notları
 - 2026-10-26: İlk haftalık analiz. Saat değişikliği yok (kanıt zayıf, online_followers yok).
