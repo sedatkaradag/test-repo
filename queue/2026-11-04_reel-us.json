@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok | narrator Abu Musa matches chain | text and grade Sahih correct | frame layout ok | caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
