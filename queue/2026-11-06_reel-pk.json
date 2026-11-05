@@ -17,7 +17,7 @@
   "review": "approve (round 2): integrity ok, Arabic checked on card and reel, English/reference match, closing line fixed",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -89,6 +89,15 @@
     "ayahs": [
       "029057"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 11.1,
+    "video_seconds": 14.3,
+    "verse_seconds": [
+      11.1
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-05T05:51:35+00:00"
   }
 }

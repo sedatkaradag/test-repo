@@ -17,7 +17,7 @@
   "review": "approve: integrity ok, Arabic and pause signs checked on card and reel, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -138,6 +138,15 @@
     "ayahs": [
       "049012"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 41.0,
+    "video_seconds": 44.2,
+    "verse_seconds": [
+      41.01
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-05T05:49:49+00:00"
   }
 }

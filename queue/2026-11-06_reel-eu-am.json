@@ -17,7 +17,7 @@
   "review": "approve: integrity ok, Arabic checked word by word and mark by mark on card and reel, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -133,6 +133,16 @@
       "006162",
       "006163"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 35.6,
+    "video_seconds": 38.8,
+    "verse_seconds": [
+      18.1,
+      17.53
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-05T05:48:13+00:00"
   }
 }
