@@ -156,6 +156,22 @@ def _arabic_num(n):
     return str(n).translate(str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩"))
 
 
+def verse_set(ids):
+    """Every single item behind some ids, for repeat checks: a verse range counts as each of its
+    verses ("quran:62:9-10" -> quran:62:9, quran:62:10), a carousel's joined ids are split."""
+    out = set()
+    for i in ids:
+        for part in str(i or "").split(","):
+            part = part.strip()
+            m = re.fullmatch(r"quran:(\d+):(\d+)-(\d+)", part)
+            if m:
+                s, x, y = map(int, m.groups())
+                out |= {f"quran:{s}:{v}" for v in range(x, y + 1)}
+            elif part:
+                out.add(part)
+    return out
+
+
 def used_ids(days=None):
     """IDs already posted (optionally only within the last `days`)."""
     if not HISTORY.exists():

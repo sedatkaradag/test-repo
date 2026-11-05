@@ -23,7 +23,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from content import ROOT, get, used_ids
+from content import ROOT, get, used_ids, verse_set
 from render import TooLong, make_story, render, render_cover, render_reel
 from integrity import check as integrity_check, unknown_lowercase
 
@@ -230,7 +230,7 @@ def cmd_add(a):
         s, x, y = map(int, m.groups())
         base_ids = {f"quran:{s}:{v}" for v in range(x, y + 1)} | {a.entry}
     recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued()}
-    if base_ids & recent:
+    if verse_set(base_ids) & verse_set(recent):   # overlapping verse ranges count as a repeat
         sys.exit(f"REJECT: {a.entry} was posted or queued recently")
     if entry["type"] == "hadith" and entry["status"] not in ("sahih", "hasan"):
         sys.exit("REJECT: hadith grade not sahih/hasan")
@@ -394,7 +394,7 @@ def cmd_add_reel(a):
     recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"}
     for i in queued():
         recent |= set(i.get("entry_ids") or [])
-    if base_ids & recent:
+    if verse_set(base_ids) & verse_set(recent):   # overlapping verse ranges count as a repeat
         sys.exit(f"REJECT: {a.entry} was posted or queued recently (Reels must not repeat a post)")
     if entry["type"] == "hadith" and entry["status"] not in ("sahih", "hasan"):
         sys.exit("REJECT: hadith grade not sahih/hasan")
@@ -537,13 +537,13 @@ def cmd_add_carousel(a):
         require_approval(",".join(ids), a.slot)
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
-    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"}
+    recent = verse_set(used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"})
     entries = []
     for i in ids:
         e = get(i)
         if e["type"] == "hadith" and e["status"] not in ("sahih", "hasan"):
             sys.exit(f"REJECT: {i} grade not sahih/hasan")
-        if i in recent:
+        if verse_set([i]) & recent:
             sys.exit(f"REJECT: {i} was posted or queued recently")
         entries.append(e)
     flags = require_integrity(ids)

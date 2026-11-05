@@ -162,7 +162,9 @@
     "detail": "enqueue.py add-reel --check, quran:62:9 için CHECK OK verdi; oysa quran:62:9-10 2026-10-23'te paylaşılmıştı. Kontrol yalnızca birebir aynı id'yi arıyor gibi. Ajan bu içerikten vazgeçti (6:162-163 seçildi). Öneri: tekrar kontrolünde ayet aralıklarının kesişimine bakılsın.",
     "ref": "2026-11-06_reel-eu-am / quran:62:9",
     "source": "Günlük içerik ajanı, 2026-11-05",
-    "status": "open",
-    "opened_at": "2026-11-05T05:47:28Z"
+    "status": "closed",
+    "opened_at": "2026-11-05T05:47:28Z",
+    "closed_at": "2026-11-05T18:04:19Z",
+    "resolution": "Düzeltildi: tekrar kontrolü artık ayet aralıklarını tek tek ayetlere açıp kesişime bakıyor (add, add-reel, add-carousel). quran:62:9 artık 62:9-10 yüzünden reddediliyor; 62:11 gibi örtüşmeyen ayetler geçiyor."
   }
 ]
