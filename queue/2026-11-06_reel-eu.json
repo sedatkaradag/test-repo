@@ -1,0 +1,143 @@
+{
+  "entry_id": "quran:49:12",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hujuraat 49:12",
+  "slot": "2026-11-06_reel-eu",
+  "publish_at": "2026-11-06T18:02:53Z",
+  "local_slot": "2026-11-06 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-06_reel-eu.jpg",
+  "video": "queue/2026-11-06_reel-eu.mp4",
+  "cover": "queue/2026-11-06_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Suspicion, spying, backbiting: one verse on all three\n\nAllah tells the believers to avoid much suspicion, not to spy on one another and not to backbite, and compares backbiting to eating the flesh of a dead brother. Then He reminds us that He is Accepting of Repentance, Most Merciful.\n\nSurah Al-Hujuraat 49:12\n\nNext time a conversation turns to someone absent, change the subject\n\n#backbiting #guardyourtongue #surahhujurat #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "O you who believe, avoid much of the suspicion, for some suspicions are sin. Do not spy on one another, nor backbite one another. Would any of you like to eat the flesh of his dead brother? You would surely abhor it. So fear Allah. Indeed, Allah is Accepting of Repentance, Most Merciful (Surah Al-Hujuraat 49:12)",
+  "theme": "backbiting and suspicion",
+  "review": "approve: integrity ok, Arabic and pause signs checked on card and reel, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:49:12",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Suspicion, spying, backbiting: one verse on all three",
+    "hook_lines": [
+      "Suspicion, spying,",
+      "backbiting: one verse on all",
+      "three"
+    ],
+    "hook_size": 82,
+    "arabic_size": 44,
+    "verses": [
+      {
+        "ayah": "049012",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱجۡتَنِبُواْ كَثِيرٗا مِّنَ ٱلظَّنِّ إِنَّ بَعۡضَ ٱلظَّنِّ إِثۡمٞۖ وَلَا",
+          "تَجَسَّسُواْ وَلَا يَغۡتَب بَّعۡضُكُم بَعۡضًاۚ أَيُحِبُّ أَحَدُكُمۡ أَن يَأۡكُلَ لَحۡمَ",
+          "أَخِيهِ مَيۡتٗا فَكَرِهۡتُمُوهُۚ وَٱتَّقُواْ ٱللَّهَۚ إِنَّ ٱللَّهَ تَوَّابٞ رَّحِيمٞ ١٢"
+        ],
+        "y": 760.2,
+        "meal": [
+          "O you who believe, avoid much of the suspicion, for some",
+          "suspicions are sin. Do not spy on one another, nor backbite one",
+          "another. Would any of you like to eat the flesh of his dead brother?",
+          "You would surely abhor it. So fear Allah. Indeed, Allah is",
+          "Accepting of Repentance, Most Merciful."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1045.2,
+    "full": "O you who believe, avoid much of the suspicion, for some suspicions are sin. Do not spy on one another, nor backbite one another. Would any of you like to eat the flesh of his dead brother? You would surely abhor it. So fear Allah. Indeed, Allah is Accepting of Repentance, Most Merciful.",
+    "full_lines": [
+      "O you who believe, avoid much of the suspicion, for some",
+      "suspicions are sin. Do not spy on one another, nor backbite one",
+      "another. Would any of you like to eat the flesh of his dead brother?",
+      "You would surely abhor it. So fear Allah. Indeed, Allah is",
+      "Accepting of Repentance, Most Merciful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Hujuraat 49:12",
+    "ref_y": 1299.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Next time a conversation turns to someone absent, change the subject",
+    "cta_lines": [
+      "Next time a conversation turns to someone absent, change the",
+      "subject"
+    ],
+    "cta_size": 36,
+    "line_y": 1357.2,
+    "handle_y": 1469.2,
+    "handle_size": 27
+  },
+  "layout_hash": "2db16df316f9e04ecac9ff20",
+  "created_at": "2026-11-05T05:46:34+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "049012"
+    ],
+    "done": false
+  }
+}

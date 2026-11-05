@@ -1,0 +1,94 @@
+{
+  "entry_id": "quran:29:57",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ankaboot 29:57",
+  "slot": "2026-11-06_reel-pk",
+  "publish_at": "2026-11-06T15:31:26Z",
+  "local_slot": "2026-11-06 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-06_reel-pk.jpg",
+  "video": "queue/2026-11-06_reel-pk.mp4",
+  "cover": "queue/2026-11-06_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "A gentle reminder about death and returning to Allah\n\nAllah tells us that every soul will taste death, and then to Him we will all be returned. Let it shape how you spend the hours you still have.\n\nSurah Al-Ankaboot 29:57\n\nWhich good deed have you been putting off?\n\n#rememberdeath #returntoallah #muslimreminder #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Every soul will taste death, then to Us you will all be returned (Surah Al-Ankaboot 29:57)",
+  "theme": "gentle reminder of death / returning to Allah",
+  "review": "approve (round 2): integrity ok, Arabic checked on card and reel, English/reference match, closing line fixed",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:29:57",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A gentle reminder about death and returning to Allah",
+    "hook_lines": [
+      "A gentle reminder about",
+      "death and returning to Allah"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "029057",
+        "lines": [
+          "كُلُّ نَفۡسٖ ذَآئِقَةُ ٱلۡمَوۡتِۖ ثُمَّ إِلَيۡنَا",
+          "تُرۡجَعُونَ ٥٧"
+        ],
+        "y": 724.0,
+        "meal": [
+          "Every soul will taste death, then to Us you will all",
+          "be returned."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1066.0,
+    "full": "Every soul will taste death, then to Us you will all be returned.",
+    "full_lines": [
+      "Every soul will taste death, then to Us you will all",
+      "be returned."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Ankaboot 29:57",
+    "ref_y": 1216.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which good deed have you been putting off?",
+    "cta_lines": [
+      "Which good deed have you been putting off?"
+    ],
+    "cta_size": 48,
+    "line_y": 1274.0,
+    "handle_y": 1354.0,
+    "handle_size": 27
+  },
+  "layout_hash": "f0d0b962d44a139146bcf2a1",
+  "created_at": "2026-11-05T05:47:15+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "029057"
+    ],
+    "done": false
+  }
+}

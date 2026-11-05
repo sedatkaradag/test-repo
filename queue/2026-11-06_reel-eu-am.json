@@ -1,0 +1,138 @@
+{
+  "entry_id": "quran:6:162-163",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-An'aam 6:162-163",
+  "slot": "2026-11-06_reel-eu-am",
+  "publish_at": "2026-11-06T07:15:40Z",
+  "local_slot": "2026-11-06 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-06_reel-eu-am.jpg",
+  "video": "queue/2026-11-06_reel-eu-am.mp4",
+  "cover": "queue/2026-11-06_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "One verse to renew your intention this Friday\n\nAllah tells the Prophet ﷺ to say that his prayer, his sacrifice, his living and his dying are all for Allah, Lord of the worlds, who has no partner. Carry that intention into everything you do today.\n\nSurah Al-An'aam 6:162-163\n\nSay this verse to yourself before you leave the house today\n\n#intention #niyyah #fridayreminder #quranreels\n\nRecitation: Mahmoud Khalil Al-Husary",
+  "alt_text": "Say, “Indeed, my prayer, my sacrifice, my living and my dying are all for Allah, Lord of the worlds. He has no partner. This is what I have been commanded, and I am the first to submit to Allah.” (Surah Al-An'aam 6:162-163)",
+  "theme": "intention / living for Allah (Friday)",
+  "review": "approve: integrity ok, Arabic checked word by word and mark by mark on card and reel, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:6:162-163",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "One verse to renew your intention this Friday",
+    "hook_lines": [
+      "One verse to renew your",
+      "intention this Friday"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "006162",
+        "lines": [
+          "قُلۡ إِنَّ صَلَاتِي وَنُسُكِي وَمَحۡيَايَ وَمَمَاتِي لِلَّهِ رَبِّ",
+          "ٱلۡعَٰلَمِينَ ١٦٢"
+        ],
+        "y": 606.4,
+        "meal": [
+          "Say, “Indeed, my prayer, my sacrifice, my living",
+          "and my dying are all for Allah, Lord of the",
+          "worlds."
+        ]
+      },
+      {
+        "ayah": "006163",
+        "lines": [
+          "لَا شَرِيكَ لَهُۥۖ وَبِذَٰلِكَ أُمِرۡتُ وَأَنَا۠ أَوَّلُ ٱلۡمُسۡلِمِينَ ١٦٣"
+        ],
+        "y": 840.4,
+        "meal": [
+          "He has no partner. This is what I have been",
+          "commanded, and I am the first to submit to",
+          "Allah.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 987.4,
+    "full": "Say, “Indeed, my prayer, my sacrifice, my living and my dying are all for Allah, Lord of the worlds. He has no partner. This is what I have been commanded, and I am the first to submit to Allah.”",
+    "full_lines": [
+      "Say, “Indeed, my prayer, my sacrifice, my living",
+      "and my dying are all for Allah, Lord of the",
+      "worlds. He has no partner. This is what I have",
+      "been commanded, and I am the first to submit to",
+      "Allah.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-An'aam 6:162-163",
+    "ref_y": 1326.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Say this verse to yourself before you leave the house today",
+    "cta_lines": [
+      "Say this verse to yourself before you leave the",
+      "house today"
+    ],
+    "cta_size": 48,
+    "line_y": 1384.4,
+    "handle_y": 1530.4,
+    "handle_size": 27
+  },
+  "layout_hash": "c0cb232411bc7a6746594078",
+  "created_at": "2026-11-05T05:45:57+00:00",
+  "audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "006162",
+      "006163"
+    ],
+    "done": false
+  }
+}
