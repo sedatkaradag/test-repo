@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic word/mark checked, English+ref match, frame OK, caption OK",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
