@@ -17,7 +17,7 @@
   "review": "approve r1: integrity ok | narrator Abu Musa matches chain | text and grade Sahih correct | frame layout ok | caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
@@ -71,5 +71,9 @@
   "created_at": "2026-11-02T05:45:11+00:00",
   "moved_from": "2026-11-03_reel-us",
   "moved_at": "2026-11-03T00:30:16+00:00",
-  "move_reason": "owner: shift Nov 3-4 (Istanbul) content one day"
+  "move_reason": "owner: shift Nov 3-4 (Istanbul) content one day",
+  "story_media_id": "17982091263131526",
+  "story_kind": "video",
+  "media_id": "17979708618133350",
+  "posted_at": "2026-11-05T01:27:09+00:00"
 }
