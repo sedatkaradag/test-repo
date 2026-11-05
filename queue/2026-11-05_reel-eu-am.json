@@ -17,7 +17,7 @@
   "review": "approve r2 (r1 rejected: closing line punctuation): Arabic word/mark checked, English+ref match, frame OK",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
