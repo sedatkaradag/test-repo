@@ -17,7 +17,7 @@
   "review": "approve r2 (r1 rejected: closing line punctuation): Arabic word/mark checked, English+ref match, frame OK",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -99,5 +99,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-04T05:48:55+00:00"
-  }
+  },
+  "story_media_id": "17880172041562798",
+  "story_kind": "video",
+  "media_id": "18056226374804094",
+  "posted_at": "2026-11-05T07:16:02+00:00"
 }
