@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic word/mark checked, English+ref match, frame OK, caption OK",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -163,5 +163,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-04T05:50:23+00:00"
-  }
+  },
+  "story_media_id": "18121185262972302",
+  "story_kind": "video",
+  "media_id": "18107278192998163",
+  "posted_at": "2026-11-05T15:28:32+00:00"
 }
