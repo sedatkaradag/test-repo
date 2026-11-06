@@ -17,7 +17,7 @@
   "review": "approve: integrity ok, Arabic and pause signs checked on card and reel, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
