@@ -1,0 +1,31 @@
+{
+ "reciter": "Alafasy_128kbps",
+ "ayahs": [
+  "095004",
+  "095005",
+  "095006",
+  "001005",
+  "002152",
+  "033056"
+ ],
+ "align": {
+  "asset": "quran-align-data-2016-11-24.zip",
+  "file": "Alafasy_128kbps.json"
+ },
+ "align_files": [
+  "Abdul_Basit_Mujawwad_128kbps.json",
+  "Abdul_Basit_Murattal_64kbps.json",
+  "Abdurrahmaan_As-Sudais_192kbps.json",
+  "Abu_Bakr_Ash-Shaatree_128kbps.json",
+  "Alafasy_128kbps.json",
+  "Hani_Rifai_192kbps.json",
+  "Husary_64kbps.json",
+  "Husary_Muallim_128kbps.json",
+  "Minshawy_Mujawwad_192kbps.json",
+  "Minshawy_Murattal_128kbps.json",
+  "Mohammad_al_Tablaway_128kbps.json",
+  "Saood_ash-Shuraym_128kbps.json"
+ ],
+ "align_head": "[{\"ayah\": 1, \"segments\": [[0, 1, 60, 610], [1, 2, 620, 1310], [2, 3, 1320, 2450], [3, 4, 2460, 5970]], \"surah\": 1, \"stats\": {\"deletions\": 0, \"transpositions\": 0, \"insertions\": 0}}, {\"ayah\": 2, \"segments\": [[0, 1, 150, 860], [1, 2, 870, 1820], [2, 3, 1830, 2130], [3, 4, 2140, 2680], [4, 5, 2690, 4980",
+ "align_sample": "[{'ayah': 1, 'segments': [[0, 1, 60, 610], [1, 2, 620, 1310], [2, 3, 1320, 2450], [3, 4, 2460, 5970]], 'surah': 1, 'stats': {'deletions': 0, 'transpositions': 0, 'insertions': 0}}]"
+}
