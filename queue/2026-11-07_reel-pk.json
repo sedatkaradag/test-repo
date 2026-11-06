@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: Arabic and English match the source, reel frame ok, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -108,6 +108,15 @@
     "ayahs": [
       "035002"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 19.0,
+    "video_seconds": 22.2,
+    "verse_seconds": [
+      19.04
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-06T05:47:43+00:00"
   }
 }
