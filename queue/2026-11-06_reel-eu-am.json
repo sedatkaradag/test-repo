@@ -17,7 +17,7 @@
   "review": "approve: integrity ok, Arabic checked word by word and mark by mark on card and reel, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
