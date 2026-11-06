@@ -17,7 +17,7 @@
   "review": "approve: integrity ok, Arabic and pause signs checked on card and reel, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -148,5 +148,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-05T05:49:49+00:00"
-  }
+  },
+  "story_media_id": "18389659390234402",
+  "story_kind": "video",
+  "media_id": "18164700241505778",
+  "posted_at": "2026-11-06T18:05:04+00:00"
 }
