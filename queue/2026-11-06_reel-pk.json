@@ -17,7 +17,7 @@
   "review": "approve (round 2): integrity ok, Arabic checked on card and reel, English/reference match, closing line fixed",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
