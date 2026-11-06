@@ -1,0 +1,116 @@
+{
+  "entry_id": "quran:9:128",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah At-Tawba 9:128",
+  "slot": "2026-11-07_reel-eu-am",
+  "publish_at": "2026-11-07T07:19:47Z",
+  "local_slot": "2026-11-07 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-07_reel-eu-am.jpg",
+  "video": "queue/2026-11-07_reel-eu-am.mp4",
+  "cover": "queue/2026-11-07_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "The Messenger who grieves over your suffering\n\nAllah describes His Messenger ﷺ as one from among us, grieved by our suffering, concerned for us, and gracious and merciful towards the believers. Begin your day by sending peace and blessings upon him.\n\nSurah At-Tawba 9:128\n\nSend peace and blessings on the Prophet ﷺ before your first task\n\n#prophetmuhammad #loveforprophet #sunnahreminder #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "There has come to you a Messenger from among yourselves; he is grieved by your suffering, and is concerned for you, and is gracious and merciful towards the believers (Surah At-Tawba 9:128)",
+  "theme": "love for the Prophet / his care for the believers",
+  "review": "Independent reviewer approved: Arabic and English match the source, reel frame ok, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:9:128",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The Messenger who grieves over your suffering",
+    "hook_lines": [
+      "The Messenger who grieves",
+      "over your suffering"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "009128",
+        "lines": [
+          "لَقَدۡ جَآءَكُمۡ رَسُولٞ مِّنۡ أَنفُسِكُمۡ",
+          "عَزِيزٌ عَلَيۡهِ مَا عَنِتُّمۡ حَرِيصٌ عَلَيۡكُم",
+          "بِٱلۡمُؤۡمِنِينَ رَءُوفٞ رَّحِيمٞ ١٢٨"
+        ],
+        "y": 594.4,
+        "meal": [
+          "There has come to you a Messenger from among",
+          "yourselves; he is grieved by your suffering, and is",
+          "concerned for you, and is gracious and merciful",
+          "towards the believers."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "There has come to you a Messenger from among yourselves; he is grieved by your suffering, and is concerned for you, and is gracious and merciful towards the believers.",
+    "full_lines": [
+      "There has come to you a Messenger from among",
+      "yourselves; he is grieved by your suffering, and is",
+      "concerned for you, and is gracious and merciful",
+      "towards the believers."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah At-Tawba 9:128",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send peace and blessings on the Prophet ﷺ before your first task",
+    "cta_lines": [
+      "Send peace and blessings on the Prophet ﷺ",
+      "before your first task"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "57f44e590a990dc71ae5b019",
+  "created_at": "2026-11-06T05:42:35+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "009128"
+    ],
+    "done": false
+  }
+}

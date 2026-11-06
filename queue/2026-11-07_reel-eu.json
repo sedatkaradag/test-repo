@@ -1,0 +1,114 @@
+{
+  "entry_id": "quran:49:6",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hujuraat 49:6",
+  "slot": "2026-11-07_reel-eu",
+  "publish_at": "2026-11-07T18:03:19Z",
+  "local_slot": "2026-11-07 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-07_reel-eu.jpg",
+  "video": "queue/2026-11-07_reel-eu.mp4",
+  "cover": "queue/2026-11-07_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Before you share that news, read this verse\n\nAllah tells the believers that if an evildoer brings them news, they should verify it, so they do not harm people unknowingly and end up regretting it. Today one tap can spread a rumor to thousands.\n\nSurah Al-Hujuraat 49:6\n\nPause and verify the next thing you are about to forward\n\n#verifynews #thinkbeforeyoushare #socialmediaadab #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "O you who believe, if an evildoer brings you some news, verify it, lest you harm a people unknowingly, then you become regretful for what you did (Surah Al-Hujuraat 49:6)",
+  "theme": "verifying news before sharing",
+  "review": "Independent reviewer approved: Arabic and English match the source, reel frame ok, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:49:6",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Before you share that news, read this verse",
+    "hook_lines": [
+      "Before you share that news,",
+      "read this verse"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "049006",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓاْ إِن جَآءَكُمۡ فَاسِقُۢ",
+          "بِنَبَإٖ فَتَبَيَّنُوٓاْ أَن تُصِيبُواْ قَوۡمَۢا بِجَهَٰلَةٖ",
+          "فَتُصۡبِحُواْ عَلَىٰ مَا فَعَلۡتُمۡ نَٰدِمِينَ ٦"
+        ],
+        "y": 594.4,
+        "meal": [
+          "O you who believe, if an evildoer brings you",
+          "some news, verify it, lest you harm a people",
+          "unknowingly, then you become regretful for",
+          "what you did."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "O you who believe, if an evildoer brings you some news, verify it, lest you harm a people unknowingly, then you become regretful for what you did.",
+    "full_lines": [
+      "O you who believe, if an evildoer brings you",
+      "some news, verify it, lest you harm a people",
+      "unknowingly, then you become regretful for",
+      "what you did."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Hujuraat 49:6",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pause and verify the next thing you are about to forward",
+    "cta_lines": [
+      "Pause and verify the next thing you are about",
+      "to forward"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "1c31f6f259bab7e25fc34b97",
+  "created_at": "2026-11-06T05:43:39+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "049006"
+    ],
+    "done": false
+  }
+}

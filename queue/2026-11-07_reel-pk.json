@@ -1,0 +1,113 @@
+{
+  "entry_id": "quran:35:2",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Faatir 35:2",
+  "slot": "2026-11-07_reel-pk",
+  "publish_at": "2026-11-07T15:32:48Z",
+  "local_slot": "2026-11-07 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-07_reel-pk.jpg",
+  "video": "queue/2026-11-07_reel-pk.mp4",
+  "cover": "queue/2026-11-07_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "A closed door? Read what Allah says about His mercy\n\nWhatever mercy Allah opens for people, no one can hold back, and whatever He holds back, no one can release. Ask Him tonight, then rest your heart, for He is the All-Mighty, the All-Wise.\n\nSurah Faatir 35:2\n\nWhich door will you ask Allah to open for you tonight?\n\n#closeddoors #allahsplan #surahfatir #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "Whatever mercy Allah opens up for people, none can withhold it; and whatever He withholds, none can release it thereafter, for He is the All-Mighty, All-Wise (Surah Faatir 35:2)",
+  "theme": "closed doors / no one can withhold Allah's mercy",
+  "review": "Independent reviewer approved: Arabic and English match the source, reel frame ok, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:35:2",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A closed door? Read what Allah says about His mercy",
+    "hook_lines": [
+      "A closed door? Read what",
+      "Allah says about His mercy"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "035002",
+        "lines": [
+          "مَّا يَفۡتَحِ ٱللَّهُ لِلنَّاسِ مِن رَّحۡمَةٖ فَلَا",
+          "مُمۡسِكَ لَهَاۖ وَمَا يُمۡسِكۡ فَلَا مُرۡسِلَ لَهُۥ",
+          "مِنۢ بَعۡدِهِۦۚ وَهُوَ ٱلۡعَزِيزُ ٱلۡحَكِيمُ ٢"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Whatever mercy Allah opens up for people, none",
+          "can withhold it; and whatever He withholds,",
+          "none can release it thereafter, for He is the",
+          "All-Mighty, All-Wise."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Whatever mercy Allah opens up for people, none can withhold it; and whatever He withholds, none can release it thereafter, for He is the All-Mighty, All-Wise.",
+    "full_lines": [
+      "Whatever mercy Allah opens up for people, none",
+      "can withhold it; and whatever He withholds,",
+      "none can release it thereafter, for He is the",
+      "All-Mighty, All-Wise."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Faatir 35:2",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which door will you ask Allah to open for you tonight?",
+    "cta_lines": [
+      "Which door will you ask Allah to open for you",
+      "tonight?"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "0004fd17b0763ecb87ff279d",
+  "created_at": "2026-11-06T05:43:06+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "035002"
+    ],
+    "done": false
+  }
+}

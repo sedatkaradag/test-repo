@@ -1,0 +1,80 @@
+{
+  "entry_id": "hadith:bukhari:6471",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v3",
+  "reference": "Sahih al-Bukhari 6471",
+  "slot": "2026-11-07_reel-us",
+  "publish_at": "2026-11-08T01:30:09Z",
+  "local_slot": "2026-11-07 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-07_reel-us.jpg",
+  "video": "queue/2026-11-07_reel-us.mp4",
+  "cover": "queue/2026-11-07_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Why pray so much? The Prophet ﷺ answered with gratitude\n\nAl-Mughira bin Shu`ba narrated that the Prophet ﷺ prayed so much that his feet became swollen. When asked why, he said, \"Shall I not be a thankful slave (to Allah)?\" Worship can be a way of saying thank you.\n\nSahih al-Bukhari 6471 · Grade: Sahih\n\nThank Allah for one blessing in your next prayer\n\n#gratitude #thankfulservant #sunnahdaily #hadithreels",
+  "alt_text": "Narrated Al-Mughira bin Shu`ba:The Prophet (ﷺ) used to pray so much that his feet used to become edematous or swollen, and when he was asked as to why he prays so much, he would say, \"Shall I not be a thankful slave (to Allah)? (Sahih al-Bukhari 6471)",
+  "theme": "gratitude / a thankful servant",
+  "review": "Independent reviewer approved: source text, narrator, reference and grade ok, reel frame ok, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "hadith",
+    "entry_id": "hadith:bukhari:6471",
+    "label": "HADITH",
+    "hook": "Why pray so much? The Prophet ﷺ answered with gratitude",
+    "hook_lines": [
+      "Why pray so much? The",
+      "Prophet ﷺ answered with",
+      "gratitude"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "Narrated Al-Mughira bin Shu‘ba:"
+    ],
+    "lead_size": 34,
+    "lead_y": 743.0,
+    "text_size": 50,
+    "phrases": [
+      {
+        "lines": [
+          "The Prophet (ﷺ) used to pray so much that his",
+          "feet used to become edematous or swollen,"
+        ],
+        "y": 825.0
+      },
+      {
+        "lines": [
+          "and when he was asked as to why he prays so",
+          "much,"
+        ],
+        "y": 983.0
+      },
+      {
+        "lines": [
+          "he would say, “Shall I not be a thankful slave",
+          "(to Allah)?”"
+        ],
+        "y": 1141.0
+      }
+    ],
+    "ref": "Sahih al-Bukhari 6471 · Grade: Sahih",
+    "ref_y": 1319.0,
+    "slogan": "Follow & Share The Sunnah",
+    "slogan_lines": [
+      "Follow & Share The Sunnah"
+    ],
+    "cta": "Thank Allah for one blessing in your next prayer",
+    "cta_lines": [
+      "Thank Allah for one blessing in your next",
+      "prayer"
+    ],
+    "cta_size": 48,
+    "line_y": 1377.0,
+    "handle_y": 1523.0,
+    "handle_size": 27
+  },
+  "layout_hash": "26a34e08fa71f31cd3a9a773",
+  "created_at": "2026-11-06T05:44:15+00:00"
+}
