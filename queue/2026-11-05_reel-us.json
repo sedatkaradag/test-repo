@@ -17,7 +17,7 @@
   "review": "approve r1: integrity OK, English matches, narrator matches chain, frame OK",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
@@ -75,5 +75,9 @@
     "handle_size": 27
   },
   "layout_hash": "61d5c8a343cb5ba1b506734a",
-  "created_at": "2026-11-04T05:47:54+00:00"
+  "created_at": "2026-11-04T05:47:54+00:00",
+  "story_media_id": "18643527967062831",
+  "story_kind": "video",
+  "media_id": "18152660299510751",
+  "posted_at": "2026-11-06T01:31:47+00:00"
 }
