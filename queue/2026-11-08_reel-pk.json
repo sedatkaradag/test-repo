@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: Arabic checked word by word, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -155,6 +155,17 @@
       "019003",
       "019004"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 27.8,
+    "video_seconds": 31.0,
+    "verse_seconds": [
+      4.57,
+      6.27,
+      16.95
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-07T05:47:18+00:00"
   }
 }
