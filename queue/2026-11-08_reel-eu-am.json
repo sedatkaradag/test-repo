@@ -1,0 +1,98 @@
+{
+  "entry_id": "quran:2:152",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:152",
+  "slot": "2026-11-08_reel-eu-am",
+  "publish_at": "2026-11-08T07:11:39Z",
+  "local_slot": "2026-11-08 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-08_reel-eu-am.jpg",
+  "video": "queue/2026-11-08_reel-eu-am.mp4",
+  "cover": "queue/2026-11-08_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Allah's promise: remember Him and He remembers you\n\nAllah says to remember Him and He will remember us, to be grateful to Him and not ungrateful. Give the first minutes of your morning to His remembrance.\n\nSurah Al-Baqara 2:152\n\nMake dhikr your first words today, before any scrolling\n\n#dhikr #rememberallah #morningdhikr #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "Therefore remember Me; I will remember you. Be grateful to Me, and do not be ungrateful (Surah Al-Baqara 2:152)",
+  "theme": "remembrance (dhikr) / Allah remembers you",
+  "review": "Independent verifier approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:152",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Allah's promise: remember Him and He remembers you",
+    "hook_lines": [
+      "Allah's promise: remember",
+      "Him and He remembers you"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "002152",
+        "lines": [
+          "فَٱذۡكُرُونِيٓ أَذۡكُرۡكُمۡ وَٱشۡكُرُواْ لِي وَلَا",
+          "تَكۡفُرُونِ ١٥٢"
+        ],
+        "y": 697.6,
+        "meal": [
+          "Therefore remember Me; I will remember you.",
+          "Be grateful to Me, and do not be ungrateful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "Therefore remember Me; I will remember you. Be grateful to Me, and do not be ungrateful.",
+    "full_lines": [
+      "Therefore remember Me; I will remember you.",
+      "Be grateful to Me, and do not be ungrateful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:152",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Make dhikr your first words today, before any scrolling",
+    "cta_lines": [
+      "Make dhikr your first words today, before any",
+      "scrolling"
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "ea796d07561e12108e43e5cc",
+  "created_at": "2026-11-07T05:43:02+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "002152"
+    ],
+    "done": false
+  }
+}

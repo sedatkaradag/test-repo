@@ -1,0 +1,129 @@
+{
+  "entry_id": "quran:28:7",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Qasas 28:7",
+  "slot": "2026-11-08_reel-eu",
+  "publish_at": "2026-11-08T17:57:09Z",
+  "local_slot": "2026-11-08 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-08_reel-eu.jpg",
+  "video": "queue/2026-11-08_reel-eu.mp4",
+  "cover": "queue/2026-11-08_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "What Allah told the mother of Musa when she was afraid\n\nAllah inspired the mother of Musa to cast her baby into the river when she feared for him, and told her not to fear or grieve, for He would return him to her. Sometimes trust means letting go and leaving it with Allah.\n\nSurah Al-Qasas 28:7\n\nSend this to a mother who is worried about her child\n\n#storyofmusa #tawakkul #muslimmom #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "We inspired the mother of Moses, “Suckle him; but when you fear for him, cast him into the river, and do not fear or grieve. We will surely return him to you, and will make him one of the messengers.” (Surah Al-Qasas 28:7)",
+  "theme": "letting go / trust (mother of Musa)",
+  "review": "Independent verifier approved: Arabic and pause signs checked, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:28:7",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "What Allah told the mother of Musa when she was afraid",
+    "hook_lines": [
+      "What Allah told the mother",
+      "of Musa when she was afraid"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "028007",
+        "lines": [
+          "وَأَوۡحَيۡنَآ إِلَىٰٓ أُمِّ مُوسَىٰٓ أَنۡ أَرۡضِعِيهِۖ فَإِذَا خِفۡتِ",
+          "عَلَيۡهِ فَأَلۡقِيهِ فِي ٱلۡيَمِّ وَلَا تَخَافِي وَلَا تَحۡزَنِيٓۖ إِنَّا",
+          "رَآدُّوهُ إِلَيۡكِ وَجَاعِلُوهُ مِنَ ٱلۡمُرۡسَلِينَ ٧"
+        ],
+        "y": 598.0,
+        "meal": [
+          "We inspired the mother of Moses, “Suckle him;",
+          "but when you fear for him, cast him into the",
+          "river, and do not fear or grieve. We will surely",
+          "return him to you, and will make him one of the",
+          "messengers.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "We inspired the mother of Moses, “Suckle him; but when you fear for him, cast him into the river, and do not fear or grieve. We will surely return him to you, and will make him one of the messengers.”",
+    "full_lines": [
+      "We inspired the mother of Moses, “Suckle him;",
+      "but when you fear for him, cast him into the",
+      "river, and do not fear or grieve. We will surely",
+      "return him to you, and will make him one of the",
+      "messengers.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Qasas 28:7",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to a mother who is worried about her child",
+    "cta_lines": [
+      "Send this to a mother who is worried about her",
+      "child"
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "2f81c6eafd5e9043860b8ec0",
+  "created_at": "2026-11-07T05:44:24+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "028007"
+    ],
+    "done": false
+  }
+}

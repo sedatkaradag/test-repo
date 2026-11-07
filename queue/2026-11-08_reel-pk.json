@@ -1,0 +1,160 @@
+{
+  "entry_id": "quran:19:2-4",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Maryam 19:2-4",
+  "slot": "2026-11-08_reel-pk",
+  "publish_at": "2026-11-08T15:26:24Z",
+  "local_slot": "2026-11-08 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-08_reel-pk.jpg",
+  "video": "queue/2026-11-08_reel-pk.mp4",
+  "cover": "queue/2026-11-08_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Ever feel like your duas go unanswered?\n\nIn old age, with feeble bones and gray hair, Zakariya called on his Lord in private and said he had never been disappointed in his prayer to Him. Keep asking, quietly and often.\n\nSurah Maryam 19:2-4\n\nMake one private dua tonight that no one else knows about\n\n#duaofzakariya #keepmakingdua #surahmaryam #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "This is a reminder of the mercy of your Lord to His slave Zachariah. When he called upon his Lord in private. He said, “My Lord, my bones have grown feeble, and gray hair has spread across my head, yet never have I been disappointed in my prayer to You, my Lord (Surah Maryam 19:2-4)",
+  "theme": "persistence in dua / Zakariya never disappointed",
+  "review": "Independent verifier approved: Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:19:2-4",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Ever feel like your duas go unanswered?",
+    "hook_lines": [
+      "Ever feel like your duas go",
+      "unanswered?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 68,
+    "verses": [
+      {
+        "ayah": "019002",
+        "lines": [
+          "ذِكۡرُ رَحۡمَتِ رَبِّكَ عَبۡدَهُۥ زَكَرِيَّآ ٢"
+        ],
+        "y": 595.6,
+        "meal": [
+          "This is a reminder of the mercy of your Lord to His slave",
+          "Zachariah."
+        ]
+      },
+      {
+        "ayah": "019003",
+        "lines": [
+          "إِذۡ نَادَىٰ رَبَّهُۥ نِدَآءً خَفِيّٗا ٣"
+        ],
+        "y": 727.6,
+        "meal": [
+          "When he called upon his Lord in private."
+        ]
+      },
+      {
+        "ayah": "019004",
+        "lines": [
+          "قَالَ رَبِّ إِنِّي وَهَنَ ٱلۡعَظۡمُ مِنِّي وَٱشۡتَعَلَ ٱلرَّأۡسُ",
+          "شَيۡبٗا وَلَمۡ أَكُنۢ بِدُعَآئِكَ رَبِّ شَقِيّٗا ٤"
+        ],
+        "y": 859.6,
+        "meal": [
+          "He said, “My Lord, my bones have grown feeble, and gray hair",
+          "has spread across my head, yet never have I been disappointed",
+          "in my prayer to You, my Lord.”"
+        ]
+      }
+    ],
+    "meal_size": 36,
+    "meal_y": 1153.6,
+    "full": "This is a reminder of the mercy of your Lord to His slave Zachariah. When he called upon his Lord in private. He said, “My Lord, my bones have grown feeble, and gray hair has spread across my head, yet never have I been disappointed in my prayer to You, my Lord.”",
+    "full_lines": [
+      "This is a reminder of the mercy of your Lord to His slave",
+      "Zachariah. When he called upon his Lord in private. He said,",
+      "“My Lord, my bones have grown feeble, and gray hair has",
+      "spread across my head, yet never have I been disappointed in",
+      "my prayer to You, my Lord.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "ref": "Surah Maryam 19:2-4",
+    "ref_y": 1422.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Make one private dua tonight that no one else knows about",
+    "cta_lines": [
+      "Make one private dua tonight that no one else knows about"
+    ],
+    "cta_size": 38,
+    "line_y": 1480.6,
+    "handle_y": 1546.6,
+    "handle_size": 27
+  },
+  "layout_hash": "691d0c0c5714cf16930abcdb",
+  "created_at": "2026-11-07T05:43:45+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "019002",
+      "019003",
+      "019004"
+    ],
+    "done": false
+  }
+}
