@@ -1,0 +1,60 @@
+[
+ {
+  "q": "Which animal swallowed Prophet Yunus?",
+  "entry": "quran:37:142",
+  "verses": [
+   "037142"
+  ],
+  "options": [
+   "A lion",
+   "A whale",
+   "A snake"
+  ],
+  "answer": 1,
+  "highlight": [
+   "whale"
+  ],
+  "ar_answer": [
+   1
+  ]
+ },
+ {
+  "q": "Which prophet was thrown into a fire that Allah made cool?",
+  "entry": "quran:21:69",
+  "verses": [
+   "021069"
+  ],
+  "options": [
+   "Nuh (Noah)",
+   "Musa (Moses)",
+   "Ibrahim (Abraham)"
+  ],
+  "answer": 2,
+  "highlight": [
+   "Abraham"
+  ],
+  "ar_answer": [
+   6
+  ]
+ },
+ {
+  "q": "Laylat al-Qadr is better than how many months?",
+  "entry": "quran:97:3",
+  "verses": [
+   "097003"
+  ],
+  "options": [
+   "Ten",
+   "A thousand",
+   "A hundred"
+  ],
+  "answer": 1,
+  "highlight": [
+   "a",
+   "thousand"
+  ],
+  "ar_answer": [
+   4
+  ]
+ }
+]

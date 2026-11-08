@@ -1,0 +1,108 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:95:4-6",
+  "verses": [
+   "095004",
+   "095005",
+   "095006"
+  ],
+  "options": [
+   [
+    "Al-Balad",
+    "البلد"
+   ],
+   [
+    "At-Tin",
+    "التين"
+   ],
+   [
+    "Al-Insan",
+    "الإنسان"
+   ],
+   [
+    "Al-Alaq",
+    "العلق"
+   ]
+  ],
+  "answer": 1
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:1:5",
+  "verses": [
+   "001005"
+  ],
+  "options": [
+   [
+    "An-Nas",
+    "الناس"
+   ],
+   [
+    "Al-Ikhlas",
+    "الإخلاص"
+   ],
+   [
+    "Al-Baqarah",
+    "البقرة"
+   ],
+   [
+    "Al-Fatihah",
+    "الفاتحة"
+   ]
+  ],
+  "answer": 3
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:2:152",
+  "verses": [
+   "002152"
+  ],
+  "options": [
+   [
+    "Al-Baqarah",
+    "البقرة"
+   ],
+   [
+    "Ta-Ha",
+    "طه"
+   ],
+   [
+    "Al-Jumu'ah",
+    "الجمعة"
+   ],
+   [
+    "Al-Ankabut",
+    "العنكبوت"
+   ]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:33:56",
+  "verses": [
+   "033056"
+  ],
+  "options": [
+   [
+    "Al-Fath",
+    "الفتح"
+   ],
+   [
+    "Muhammad",
+    "محمد"
+   ],
+   [
+    "Al-Ahzab",
+    "الأحزاب"
+   ],
+   [
+    "Al-Hujurat",
+    "الحجرات"
+   ]
+  ],
+  "answer": 2
+ }
+]

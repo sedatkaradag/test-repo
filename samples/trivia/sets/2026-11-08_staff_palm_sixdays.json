@@ -1,0 +1,62 @@
+[
+ {
+  "q": "What did Musa's staff turn into when he threw it down?",
+  "entry": "quran:20:20",
+  "verses": [
+   "020020"
+  ],
+  "options": [
+   "A snake",
+   "A bird",
+   "A rope"
+  ],
+  "answer": 0,
+  "highlight": [
+   "snake"
+  ],
+  "ar_answer": [
+   3
+  ]
+ },
+ {
+  "q": "Which tree was Maryam told to shake?",
+  "entry": "quran:19:25",
+  "verses": [
+   "019025"
+  ],
+  "options": [
+   "An olive tree",
+   "A palm tree",
+   "A fig tree"
+  ],
+  "answer": 1,
+  "highlight": [
+   "palm",
+   "tree"
+  ],
+  "ar_answer": [
+   3
+  ]
+ },
+ {
+  "q": "In how many days were the heavens and earth created?",
+  "entry": "quran:50:38",
+  "verses": [
+   "050038"
+  ],
+  "options": [
+   "Seven",
+   "Three",
+   "Six"
+  ],
+  "answer": 2,
+  "highlight": [
+   "six",
+   "days"
+  ],
+  "ar_answer": [
+   7,
+   8
+  ]
+ }
+]
