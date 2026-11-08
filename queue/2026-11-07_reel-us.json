@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: source text, narrator, reference and grade ok, reel frame ok, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
