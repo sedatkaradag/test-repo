@@ -1,0 +1,107 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:67:2",
+  "verses": [
+   "067002"
+  ],
+  "options": [
+   [
+    "Al-Mulk",
+    "الملك"
+   ],
+   [
+    "Al-Furqan",
+    "الفرقان"
+   ],
+   [
+    "Al-Kahf",
+    "الكهف"
+   ],
+   [
+    "Ya-Sin",
+    "يس"
+   ]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:55:13",
+  "verses": [
+   "055013"
+  ],
+  "options": [
+   [
+    "Al-Waqi'ah",
+    "الواقعة"
+   ],
+   [
+    "Ar-Rahman",
+    "الرحمن"
+   ],
+   [
+    "Al-Qamar",
+    "القمر"
+   ],
+   [
+    "Al-Hadid",
+    "الحديد"
+   ]
+  ],
+  "answer": 1
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:87:16-17",
+  "verses": [
+   "087016",
+   "087017"
+  ],
+  "options": [
+   [
+    "Al-Ghashiyah",
+    "الغاشية"
+   ],
+   [
+    "At-Tariq",
+    "الطارق"
+   ],
+   [
+    "Al-A'la",
+    "الأعلى"
+   ],
+   [
+    "Al-Fajr",
+    "الفجر"
+   ]
+  ],
+  "answer": 2
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:13:28",
+  "verses": [
+   "013028"
+  ],
+  "options": [
+   [
+    "Ibrahim",
+    "إبراهيم"
+   ],
+   [
+    "Yusuf",
+    "يوسف"
+   ],
+   [
+    "Al-Hijr",
+    "الحجر"
+   ],
+   [
+    "Ar-Ra'd",
+    "الرعد"
+   ]
+  ],
+  "answer": 3
+ }
+]

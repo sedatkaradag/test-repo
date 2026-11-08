@@ -17,8 +17,10 @@ names in the set files are ours.
      `highlight` (the answer words exactly as they appear in the meaning, e.g. `["palm", "tree"]`),
      `ar_answer` (0-based word numbers of the answer in the Arabic; see below).
    - guess the surah: `level`, `entry`, `verses`, `options` (4 x `[english, arabic]`), `answer` (0-3).
-   - Check the verse is not already in a set below (and ideally not a recent regular Reel:
-     `grep -h entry_id history/posted.jsonl`).
+   - Guess the Surah: the verse must not give the answer away. No word of the surah's name (or of the
+     name people know it by: Al-Mulk is "Tabarak") in the verse, so not 67:1 or 87:1; and not the
+     surah's famous opening (e.g. Ad-Duha starting "wa'd-duha"). A later verse of the same surah is fine.
+   - Check the verse is not already in a quiz set below. Having been posted as a regular Reel does not matter.
 2. **Get the recitation and word timings** (runs on GitHub, writes only the `drafts-audio` branch):
    ```
    gh api -X POST repos/sedatkaradag/test-repo/actions/workflows/audio-fetch.yml/dispatches -f ref=main \
@@ -51,7 +53,7 @@ original image takes over at 1.72 s). Ready transparent frames (30 fps, 2.0 s) f
 ## Used verses
 
 - Guess the Surah, Sudais: 36:82, 112:1-2, 94:5-6, 29:2 | 3:8, 108:1-3, 93:6-8, 25:63
-- Guess the Surah, Alafasy: 95:4-6, 1:5, 2:152, 33:56 | 67:1, 55:13, 87:1, 13:28 (Nov 8)
+- Guess the Surah, Alafasy: 95:4-6, 1:5, 2:152, 33:56 | 67:2, 55:13, 87:16-17, 13:28 (Nov 8)
 - Trivia, Alafasy: 37:142, 21:69, 97:3 (Nov 7) | 20:20, 19:25, 50:38 (Nov 8)
 
 ## Caption (the one that was posted)
