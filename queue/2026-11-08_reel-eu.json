@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: Arabic and pause signs checked, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -134,5 +134,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-07T05:46:00+00:00"
-  }
+  },
+  "story_media_id": "18131949553872293",
+  "story_kind": "video",
+  "media_id": "17871093297659995",
+  "posted_at": "2026-11-08T17:58:24+00:00"
 }
