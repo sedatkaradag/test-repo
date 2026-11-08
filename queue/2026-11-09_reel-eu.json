@@ -1,0 +1,137 @@
+{
+  "entry_id": "quran:6:59",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-An'aam 6:59",
+  "slot": "2026-11-09_reel-eu",
+  "publish_at": "2026-11-09T17:56:31Z",
+  "local_slot": "2026-11-09 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-09_reel-eu.jpg",
+  "video": "queue/2026-11-09_reel-eu.mp4",
+  "cover": "queue/2026-11-09_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Not a single leaf falls without Allah knowing it\n\nAllah alone holds the keys of the unseen. He knows what is in the land and sea, and not even a leaf falls without His knowledge. Whatever you carry today, it is not hidden from Him.\n\nSurah Al-An'aam 6:59\n\nSave this for the day you feel no one sees what you carry\n\n#allahknows #theunseen #surahanam #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "He alone has the keys of the unseen; no one knows them except Him. He knows what is in the land and sea. Not a leaf falls without His knowledge, nor a grain in the darkness of the earth, nor anything moist or dry, but is [written] in a Clear Record (Surah Al-An'aam 6:59)",
+  "theme": "Allah knows all / not a leaf falls",
+  "review": "Independent reviewer approved: Arabic checked word by word and mark by mark, English, reference and reel layout correct, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:6:59",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Not a single leaf falls without Allah knowing it",
+    "hook_lines": [
+      "Not a single leaf falls",
+      "without Allah knowing it"
+    ],
+    "hook_size": 82,
+    "arabic_size": 52,
+    "verses": [
+      {
+        "ayah": "006059",
+        "lines": [
+          "وَعِندَهُۥ مَفَاتِحُ ٱلۡغَيۡبِ لَا يَعۡلَمُهَآ إِلَّا هُوَۚ وَيَعۡلَمُ مَا فِي ٱلۡبَرِّ",
+          "وَٱلۡبَحۡرِۚ وَمَا تَسۡقُطُ مِن وَرَقَةٍ إِلَّا يَعۡلَمُهَا وَلَا حَبَّةٖ فِي ظُلُمَٰتِ",
+          "ٱلۡأَرۡضِ وَلَا رَطۡبٖ وَلَا يَابِسٍ إِلَّا فِي كِتَٰبٖ مُّبِينٖ ٥٩"
+        ],
+        "y": 711.2,
+        "meal": [
+          "He alone has the keys of the unseen; no one knows them except",
+          "Him. He knows what is in the land and sea. Not a leaf falls",
+          "without His knowledge, nor a grain in the darkness of the earth,",
+          "nor anything moist or dry, but is [written] in a Clear Record."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1044.2,
+    "full": "He alone has the keys of the unseen; no one knows them except Him. He knows what is in the land and sea. Not a leaf falls without His knowledge, nor a grain in the darkness of the earth, nor anything moist or dry, but is [written] in a Clear Record.",
+    "full_lines": [
+      "He alone has the keys of the unseen; no one knows them except",
+      "Him. He knows what is in the land and sea. Not a leaf falls",
+      "without His knowledge, nor a grain in the darkness of the earth,",
+      "nor anything moist or dry, but is [written] in a Clear Record."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-An'aam 6:59",
+    "ref_y": 1252.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save this for the day you feel no one sees what you carry",
+    "cta_lines": [
+      "Save this for the day you feel no one sees what you carry"
+    ],
+    "cta_size": 36,
+    "line_y": 1310.2,
+    "handle_y": 1373.2,
+    "handle_size": 27
+  },
+  "layout_hash": "6280b0422721c95aa6243d4b",
+  "created_at": "2026-11-08T05:44:31+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "006059"
+    ],
+    "done": false
+  }
+}

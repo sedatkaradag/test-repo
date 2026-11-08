@@ -1,0 +1,71 @@
+{
+  "entry_id": "hadith:ibnmajah:1847",
+  "type": "reel",
+  "content_type": "hadith",
+  "template": "v3",
+  "reference": "Sunan Ibn Majah 1847",
+  "slot": "2026-11-09_reel-us",
+  "publish_at": "2026-11-10T01:30:56Z",
+  "local_slot": "2026-11-09 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-09_reel-us.jpg",
+  "video": "queue/2026-11-09_reel-us.mp4",
+  "cover": "queue/2026-11-09_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "For two people who love each other\n\nIbn Abbas narrated that the Prophet ﷺ said there is nothing like marriage for two who love one another. Make dua tonight for your spouse, or for the one Allah has written for you.\n\nSunan Ibn Majah 1847 · Grade: Sahih\n\nSend this to a couple whose love reminds you of this hadith\n\n#muslimmarriage #nikah #halallove #hadithreels",
+  "alt_text": "It was narrated from Ibn Abbas that:the Messenger of Allah said: “There is nothing like marriage, for two who love one another.” (Sunan Ibn Majah 1847)",
+  "theme": "marriage / love between spouses",
+  "review": "Independent reviewer approved: source English, narrator matches chain, reference and grade correct, reel layout correct, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "ready",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "hadith",
+    "entry_id": "hadith:ibnmajah:1847",
+    "label": "HADITH",
+    "hook": "For two people who love each other",
+    "hook_lines": [
+      "For two people who love",
+      "each other"
+    ],
+    "hook_size": 82,
+    "lead_lines": [
+      "It was narrated from Ibn Abbas that: the Messenger of Allah",
+      "said:"
+    ],
+    "lead_size": 34,
+    "lead_y": 787.5,
+    "text_size": 68,
+    "phrases": [
+      {
+        "lines": [
+          "“There is nothing like marriage,"
+        ],
+        "y": 915.5
+      },
+      {
+        "lines": [
+          "for two who love one another.”"
+        ],
+        "y": 1028.5
+      }
+    ],
+    "ref": "Sunan Ibn Majah 1847 · Grade: Sahih",
+    "ref_y": 1161.5,
+    "slogan": "Follow & Share The Sunnah",
+    "slogan_lines": [
+      "Follow & Share The Sunnah"
+    ],
+    "cta": "Send this to a couple whose love reminds you of this hadith",
+    "cta_lines": [
+      "Send this to a couple whose love reminds you",
+      "of this hadith"
+    ],
+    "cta_size": 48,
+    "line_y": 1219.5,
+    "handle_y": 1365.5,
+    "handle_size": 27
+  },
+  "layout_hash": "4a7eb585d32447d4718020f2",
+  "created_at": "2026-11-08T05:44:45+00:00"
+}

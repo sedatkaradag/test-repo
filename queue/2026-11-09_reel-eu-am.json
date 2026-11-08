@@ -1,0 +1,116 @@
+{
+  "entry_id": "quran:31:17",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Luqman 31:17",
+  "slot": "2026-11-09_reel-eu-am",
+  "publish_at": "2026-11-09T07:12:14Z",
+  "local_slot": "2026-11-09 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-09_reel-eu-am.jpg",
+  "video": "queue/2026-11-09_reel-eu-am.mp4",
+  "cover": "queue/2026-11-09_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Luqman's advice to his son on prayer and patience\n\nLuqman told his son to establish prayer, enjoin what is right, forbid what is wrong, and be patient with whatever befalls him. A short list, enough for a whole life. Start this Monday with your prayer on time.\n\nSurah Luqman 31:17\n\nWhich part of Luqman's advice will you live by today?\n\n#luqman #parentingadvice #patience #quranreels\n\nRecitation: Ahmed Al-Ajmi",
+  "alt_text": "“O my dear son, establish prayer, enjoin what is right and forbid what is wrong, and be patient with whatever befalls you. This is a matter of firm resolve (Surah Luqman 31:17)",
+  "theme": "Luqman's advice / prayer and patience",
+  "review": "Independent reviewer approved: Arabic checked word by word and mark by mark, English, reference and reel layout correct, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:31:17",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Luqman's advice to his son on prayer and patience",
+    "hook_lines": [
+      "Luqman's advice to his son",
+      "on prayer and patience"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "031017",
+        "lines": [
+          "يَٰبُنَيَّ أَقِمِ ٱلصَّلَوٰةَ وَأۡمُرۡ بِٱلۡمَعۡرُوفِ وَٱنۡهَ",
+          "عَنِ ٱلۡمُنكَرِ وَٱصۡبِرۡ عَلَىٰ مَآ أَصَابَكَۖ إِنَّ",
+          "ذَٰلِكَ مِنۡ عَزۡمِ ٱلۡأُمُورِ ١٧"
+        ],
+        "y": 594.4,
+        "meal": [
+          "“O my dear son, establish prayer, enjoin what is",
+          "right and forbid what is wrong, and be patient",
+          "with whatever befalls you. This is a matter of",
+          "firm resolve.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "“O my dear son, establish prayer, enjoin what is right and forbid what is wrong, and be patient with whatever befalls you. This is a matter of firm resolve.”",
+    "full_lines": [
+      "“O my dear son, establish prayer, enjoin what is",
+      "right and forbid what is wrong, and be patient",
+      "with whatever befalls you. This is a matter of",
+      "firm resolve.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Luqman 31:17",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which part of Luqman's advice will you live by today?",
+    "cta_lines": [
+      "Which part of Luqman's advice will you live by",
+      "today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "56de9dd56ff627a218d76dae",
+  "created_at": "2026-11-08T05:43:43+00:00",
+  "audio": {
+    "reciter": "ahmed_ibn_ali_al_ajamy_128kbps",
+    "reciter_name": "Ahmed Al-Ajmi",
+    "ayahs": [
+      "031017"
+    ],
+    "done": false
+  }
+}
