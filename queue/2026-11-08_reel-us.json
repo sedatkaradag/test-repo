@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: source text verbatim, narrator and grade correct, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "hadith",
@@ -64,5 +64,9 @@
     "handle_size": 27
   },
   "layout_hash": "a33def19f5a5ce68c04d7a7f",
-  "created_at": "2026-11-07T05:44:48+00:00"
+  "created_at": "2026-11-07T05:44:48+00:00",
+  "story_media_id": "18058052570581963",
+  "story_kind": "video",
+  "media_id": "18015136709761725",
+  "posted_at": "2026-11-09T01:31:52+00:00"
 }
