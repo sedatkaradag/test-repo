@@ -1,6 +1,6 @@
-# Hand-made quiz Reels (not part of the publishing pipeline)
+# Hand-made Reels (not part of the publishing pipeline)
 
-Two formats the owner posts by hand. Nothing here is read by the daily agent, the workflows or the
+Formats the owner posts by hand. Nothing here is read by the daily agent, the workflows or the
 queue: these scripts only write a video to the folder you give them. Verse text and meanings always come
 from `scripts/find.py` / `scripts/content.py` (never typed by hand); the questions, options and surah
 names in the set files are ours.
@@ -9,6 +9,7 @@ names in the set files are ours.
 |---|---|---|
 | **Qur'an Quiz (trivia)**: logo intro (drawn) -> 3 questions, 3 options, 5 s timer -> answer -> the verse that answers it, recited and lit word by word, answer word in light green in the Arabic and the meaning -> closing screen with the logo drawn again and the answers | `trivia/make_trivia.py` | ~55-65 s |
 | **Guess the Surah**: 4 rounds (MEDIUM, EASY, MEDIUM, HARD): the verse is recited and lit -> 4 s think bar -> answer + meaning -> score screen. Top line: "Can you name all 4 Surahs?", "Wait for the hard one" from the first answer, the challenge again at the last round | `guess_surah/make_guess_surah.py` | ~75-95 s |
+| **99 Names (tasbih)**: a ring of 99 beads, one name every 1.5 s (Arabic, transliteration, meaning, count, bar), logo drawn in the ring at the start, Alhamdulillah at the end; bead click per name, bell at 33 and 66 | `tasbih/make_tasbih.py` | ~156 s |
 
 ## Making one
 
@@ -42,6 +43,16 @@ Arabic word numbers for `ar_answer`:
 ```
 python3 -c "import sys; sys.path.insert(0,'scripts'); import render as R; from content import get; print(list(enumerate(R._arabic_words(get('quran:50:38')['arabic_display']))))"
 ```
+
+## 99 Names (tasbih)
+
+`python3 samples/tasbih/make_tasbih.py . /tmp/out [seconds_per_name]` (default 1.5; about 8 min). No audio
+fetch needed. The names come only from `tasbih/names_tirmidhi_3507.json`: the commonly recited list
+(Tirmidhi 3507) as on sunnah.com, Arabic from the hadith text, transliterations and meanings from its
+English translation (Darussalam), copied by script and checked character for character; name 1 is
+"Allah". Do not edit the names, spellings or meanings by hand. The list itself is graded weak (the sahih
+hadith is only that Allah has 99 names, Bukhari 2736), so captions call it "the 99 Names" and do not
+attribute the list to the Prophet. Stills of every name are written to `<out>/frames/` for checking.
 
 ## Logo drawing
 
