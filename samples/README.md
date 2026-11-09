@@ -9,7 +9,7 @@ names in the set files are ours.
 |---|---|---|
 | **Qur'an Quiz (trivia)**: logo intro (drawn) -> 3 questions, 3 options, 5 s timer -> answer -> the verse that answers it, recited and lit word by word, answer word in light green in the Arabic and the meaning -> closing screen with the logo drawn again and the answers | `trivia/make_trivia.py` | ~55-65 s |
 | **Guess the Surah**: 4 rounds (MEDIUM, EASY, MEDIUM, HARD): the verse is recited and lit -> 4 s think bar -> answer + meaning -> score screen. Top line: "Can you name all 4 Surahs?", "Wait for the hard one" from the first answer, the challenge again at the last round | `guess_surah/make_guess_surah.py` | ~75-95 s |
-| **99 Names (tasbih)**: a ring of 99 beads, one name every 1.5 s (Arabic, transliteration, meaning, count, bar), logo drawn in the ring at the start, Alhamdulillah at the end; bead click per name, bell at 33 and 66 | `tasbih/make_tasbih.py` | ~156 s |
+| **99 Names (tasbih)**: a ring of 99 beads, one name every 1.5 s (Arabic, transliteration, meaning, count, bar), Bismillah written into the ring at the start, Alhamdulillah at the end; bead click per name, bell at 33 and 66 | `tasbih/make_tasbih.py` | ~156 s |
 
 ## Making one
 

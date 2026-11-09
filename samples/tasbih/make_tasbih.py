@@ -3,7 +3,7 @@
     python3 make_tasbih.py <repo> <out_dir> [seconds_per_name]
 
 A ring of 99 beads; one name every 1.5 s: its bead lights, the Arabic in the middle, the transliteration
-and meaning under the ring, the count and a bar. Intro: the logo drawn inside the ring. End: Alhamdulillah.
+and meaning under the ring, the count and a bar. Intro: Bismillah written into the ring (right to left). End: Alhamdulillah.
 Names, transliterations and meanings come only from names_tirmidhi_3507.json (see its "source").
 Sounds (made here, no music): a soft shimmer, a wooden bead click on every name, a bell at 33 and 66,
 a rising bell arpeggio at the end.
@@ -219,23 +219,54 @@ def counter(frame, n, share, k=1.0):
 counter.cache = {}
 
 
-# ---------- logo (pre-rendered drawing, samples/logo_draw/frames_478) ----------
+# ---------- Bismillah (our Qur'an text, 1:1 without its verse number) ----------
 
-LOGO_FR = sorted((REPO / "samples" / "logo_draw" / "frames_478").glob("*.png"))
-_logo_cache = {}
+def bismillah():
+    """The Bismillah on two lines (bismi-llahi / ar-rahmani r-rahim) as RGBA patches with their places."""
+    words = R._arabic_words(get("quran:1:1")["arabic_display"])
+    words[-1] = words[-1].split("\xa0")[0]
+    lines = [" ".join(words[:2]), " ".join(words[2:])]
+    size = 92
+    f = font(R.F_QURAN, size)
+    while max(f.getlength(l, direction="rtl", language="ar") for l in lines) > 2 * INNER - 110:
+        size -= 2
+        f = font(R.F_QURAN, size)
+    lh = size * 1.55
+    out = []
+    for i, line in enumerate(lines):
+        img = RL.layer()
+        d = ImageDraw.Draw(img)
+        w = f.getlength(line, direction="rtl", language="ar")
+        bb = d.textbbox((0, 0), line, font=f, direction="rtl", language="ar")
+        y = CY - 20 + (i - 0.5) * lh - (bb[1] + bb[3]) / 2
+        d.text(((SW - w) / 2, y), line, font=f, fill=LIT + (255,), direction="rtl", language="ar")
+        a = np.asarray(img, np.float32)
+        ys = np.nonzero(a[..., 3].max(1) > 0)[0]
+        xs = np.nonzero(a[..., 3].max(0) > 0)[0]
+        y0, y1, x0, x1 = ys[0] - 4, ys[-1] + 5, xs[0] - 4, xs[-1] + 5
+        out.append((a[y0:y1, x0:x1], int(y0), int(x0)))
+    return out
 
 
-def logo_at(frame, t, k):
-    i = min(len(LOGO_FR) - 1, max(0, int(t * 30)))
-    if i not in _logo_cache:
-        _logo_cache[i] = np.asarray(Image.open(LOGO_FR[i]).convert("RGBA"), np.float32)
-    spr = _logo_cache[i]
-    s = spr.shape[0]
-    x0, y0 = int(CX - s / 2), int(CY - s / 2)
-    sl = frame[y0:y0 + s, x0:x0 + s]
-    a = spr[..., 3:4] / 255 * k
-    sl *= (1 - a)
-    sl += spr[..., :3] * a
+BISM = bismillah()
+BISM_T = [(0.35, 1.05), (1.05, 1.85)]   # each line is revealed right to left in turn
+
+
+def bismillah_at(frame, t, k):
+    if k <= 0:
+        return
+    for (spr, y0, x0), (ta, tb) in zip(BISM, BISM_T):
+        p = min(1.0, max(0.0, (t - ta) / (tb - ta)))
+        if p <= 0:
+            continue
+        p = p * p * (3 - 2 * p)
+        h, w = spr.shape[:2]
+        edge = w * (1 - p)               # columns right of the edge show, with a soft 40 px edge
+        m = np.clip((np.arange(w, dtype=np.float32) - edge + 40) / 40, 0, 1) if p < 1 else np.ones(w, np.float32)
+        a = spr[..., 3:4] / 255 * m[None, :, None] * k
+        sl = frame[y0:y0 + h, x0:x0 + w]
+        sl *= (1 - a)
+        sl += spr[..., :3] * a
 
 
 # ---------- sound ----------
@@ -353,7 +384,7 @@ def frames():
                     put(frame, GLOW_SPR, x, y, g)
         if t < T0:
             a = 1 - ramp(t, T0 - 0.35, 0.35)
-            logo_at(frame, t - 0.15, a)
+            bismillah_at(frame, t, a)
             intro.over(frame, ramp(t, 1.4, 0.4) * a)
             counter(frame, 0, 0.0, ramp(t, 0.3, 0.4))
         elif t < TE:
