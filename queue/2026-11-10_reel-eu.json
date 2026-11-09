@@ -1,0 +1,131 @@
+{
+  "entry_id": "quran:33:70-71",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ahzaab 33:70-71",
+  "slot": "2026-11-10_reel-eu",
+  "publish_at": "2026-11-10T18:03:04Z",
+  "local_slot": "2026-11-10 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-10_reel-eu.jpg",
+  "video": "queue/2026-11-10_reel-eu.mp4",
+  "cover": "queue/2026-11-10_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "A verse to read before every message you type\n\nAllah tells the believers to be mindful of Him and say what is right, and promises to set their deeds right and forgive their sins. Read your words once more before they leave your hands.\n\nSurah Al-Ahzaab 33:70-71\n\nWhich message will you rewrite before sending it today?\n\n#speakthetruth #honestwords #muslimmanners #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "O you who believe, fear Allah and say what is right. He will guide you to righteous deeds and forgive your sins. Whoever obeys Allah and His Messenger will surely achieve a supreme triumph (Surah Al-Ahzaab 33:70-71)",
+  "theme": "speech / saying what is right",
+  "review": "approve r1: Arabic and English checked on card and Reel, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:33:70-71",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A verse to read before every message you type",
+    "hook_lines": [
+      "A verse to read before every",
+      "message you type"
+    ],
+    "hook_size": 82,
+    "arabic_size": 62,
+    "verses": [
+      {
+        "ayah": "033070",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَقُولُواْ قَوۡلٗا",
+          "سَدِيدٗا ٧٠"
+        ],
+        "y": 594.4,
+        "meal": [
+          "O you who believe, fear Allah and say what is right."
+        ]
+      },
+      {
+        "ayah": "033071",
+        "lines": [
+          "يُصۡلِحۡ لَكُمۡ أَعۡمَٰلَكُمۡ وَيَغۡفِرۡ لَكُمۡ ذُنُوبَكُمۡۗ",
+          "وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدۡ فَازَ فَوۡزًا عَظِيمًا ٧١"
+        ],
+        "y": 834.4,
+        "meal": [
+          "He will guide you to righteous deeds and forgive your",
+          "sins. Whoever obeys Allah and His Messenger will",
+          "surely achieve a supreme triumph."
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 1104.4,
+    "full": "O you who believe, fear Allah and say what is right. He will guide you to righteous deeds and forgive your sins. Whoever obeys Allah and His Messenger will surely achieve a supreme triumph.",
+    "full_lines": [
+      "O you who believe, fear Allah and say what is right.",
+      "He will guide you to righteous deeds and forgive your",
+      "sins. Whoever obeys Allah and His Messenger will",
+      "surely achieve a supreme triumph."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-Ahzaab 33:70-71",
+    "ref_y": 1356.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which message will you rewrite before sending it today?",
+    "cta_lines": [
+      "Which message will you rewrite before sending it",
+      "today?"
+    ],
+    "cta_size": 44,
+    "line_y": 1414.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "405dfece3026f6e38f089b7b",
+  "created_at": "2026-11-09T05:45:31+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "033070",
+      "033071"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "entry_id": "quran:16:53",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nahl 16:53",
+  "slot": "2026-11-10_reel-pk",
+  "publish_at": "2026-11-10T15:29:29Z",
+  "local_slot": "2026-11-10 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-10_reel-pk.jpg",
+  "video": "queue/2026-11-10_reel-pk.mp4",
+  "cover": "queue/2026-11-10_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Every blessing you have tonight came from one place\n\nAllah reminds us that whatever blessing we have is from Him, and when hardship touches us, it is to Him alone that we cry out. Count three blessings before you sleep, and thank the One who gave them.\n\nSurah An-Nahl 16:53\n\nName three blessings you almost forgot to thank Allah for\n\n#countyourblessings #gratitude #alhamdulillah #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Whatever blessing you have, it is from Allah. Then when you are afflicted with hardship, to Him alone you cry out for help (Surah An-Nahl 16:53)",
+  "theme": "every blessing is from Allah / gratitude",
+  "review": "approve r1: Arabic and English checked on card and Reel, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:16:53",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Every blessing you have tonight came from one place",
+    "hook_lines": [
+      "Every blessing you have",
+      "tonight came from one place"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "016053",
+        "lines": [
+          "وَمَا بِكُم مِّن نِّعۡمَةٖ فَمِنَ ٱللَّهِۖ ثُمَّ إِذَا",
+          "مَسَّكُمُ ٱلضُّرُّ فَإِلَيۡهِ تَجۡـَٔرُونَ ٥٣"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Whatever blessing you have, it is from Allah.",
+          "Then when you are afflicted with hardship, to",
+          "Him alone you cry out for help."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Whatever blessing you have, it is from Allah. Then when you are afflicted with hardship, to Him alone you cry out for help.",
+    "full_lines": [
+      "Whatever blessing you have, it is from Allah.",
+      "Then when you are afflicted with hardship, to",
+      "Him alone you cry out for help."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nahl 16:53",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name three blessings you almost forgot to thank Allah for",
+    "cta_lines": [
+      "Name three blessings you almost forgot to",
+      "thank Allah for"
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "d7bc2c39a23c6c159cfa643e",
+  "created_at": "2026-11-09T05:44:55+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "016053"
+    ],
+    "done": false
+  }
+}
