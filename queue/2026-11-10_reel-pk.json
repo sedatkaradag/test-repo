@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic and English checked on card and Reel, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -102,6 +102,15 @@
     "ayahs": [
       "016053"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 13.8,
+    "video_seconds": 17.0,
+    "verse_seconds": [
+      13.78
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-09T05:48:48+00:00"
   }
 }
