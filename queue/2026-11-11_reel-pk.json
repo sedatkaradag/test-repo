@@ -1,0 +1,155 @@
+{
+  "entry_id": "quran:51:15-18",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Adh-Dhaariyat 51:15-18",
+  "slot": "2026-11-11_reel-pk",
+  "publish_at": "2026-11-11T15:28:07Z",
+  "local_slot": "2026-11-11 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-11_reel-pk.jpg",
+  "video": "queue/2026-11-11_reel-pk.mp4",
+  "cover": "queue/2026-11-11_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "What the righteous did in the last hours of night\n\nAllah describes the righteous in gardens and springs, and tells us how they lived before: they slept little at night, and before dawn they sought forgiveness. Tonight, give a few quiet minutes before Fajr to asking Him.\n\nSurah Adh-Dhaariyat 51:15-18\n\nSet one alarm before Fajr and say Astaghfirullah when it rings\n\n#istighfar #beforefajr #nightworship #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Indeed, the righteous will be in gardens and springs; receiving what their Lord will give them, for they were indeed doers of good beforehand. They used to sleep but little at night; and before dawn they would seek forgiveness (Surah Adh-Dhaariyat 51:15-18)",
+  "theme": "seeking forgiveness before dawn / night worship",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English is source, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:51:15-18",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "What the righteous did in the last hours of night",
+    "hook_lines": [
+      "What the righteous did in",
+      "the last hours of night"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "051015",
+        "lines": [
+          "إِنَّ ٱلۡمُتَّقِينَ فِي جَنَّٰتٖ وَعُيُونٍ ١٥"
+        ],
+        "y": 598.4,
+        "meal": [
+          "Indeed, the righteous will be in gardens and springs;"
+        ]
+      },
+      {
+        "ayah": "051016",
+        "lines": [
+          "ءَاخِذِينَ مَآ ءَاتَىٰهُمۡ رَبُّهُمۡۚ إِنَّهُمۡ كَانُواْ قَبۡلَ ذَٰلِكَ",
+          "مُحۡسِنِينَ ١٦"
+        ],
+        "y": 715.4,
+        "meal": [
+          "receiving what their Lord will give them, for they were indeed",
+          "doers of good beforehand."
+        ]
+      },
+      {
+        "ayah": "051017",
+        "lines": [
+          "كَانُواْ قَلِيلٗا مِّنَ ٱلَّيۡلِ مَا يَهۡجَعُونَ ١٧"
+        ],
+        "y": 949.4,
+        "meal": [
+          "They used to sleep but little at night;"
+        ]
+      },
+      {
+        "ayah": "051018",
+        "lines": [
+          "وَبِٱلۡأَسۡحَارِ هُمۡ يَسۡتَغۡفِرُونَ ١٨"
+        ],
+        "y": 1066.4,
+        "meal": [
+          "and before dawn they would seek forgiveness."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1213.4,
+    "full": "Indeed, the righteous will be in gardens and springs; receiving what their Lord will give them, for they were indeed doers of good beforehand. They used to sleep but little at night; and before dawn they would seek forgiveness.",
+    "full_lines": [
+      "Indeed, the righteous will be in gardens and springs; receiving",
+      "what their Lord will give them, for they were indeed doers of good",
+      "beforehand. They used to sleep but little at night; and before dawn",
+      "they would seek forgiveness."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "ref": "Surah Adh-Dhaariyat 51:15-18",
+    "ref_y": 1421.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Set one alarm before Fajr and say Astaghfirullah when it rings",
+    "cta_lines": [
+      "Set one alarm before Fajr and say Astaghfirullah when it rings"
+    ],
+    "cta_size": 36,
+    "line_y": 1479.4,
+    "handle_y": 1542.4,
+    "handle_size": 27
+  },
+  "layout_hash": "e964222f9678f5f97cb72996",
+  "created_at": "2026-11-10T05:44:49+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "051015",
+      "051016",
+      "051017",
+      "051018"
+    ],
+    "done": false
+  }
+}

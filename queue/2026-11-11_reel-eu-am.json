@@ -1,0 +1,129 @@
+{
+  "entry_id": "quran:29:45",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ankaboot 29:45",
+  "slot": "2026-11-11_reel-eu-am",
+  "publish_at": "2026-11-11T07:17:45Z",
+  "local_slot": "2026-11-11 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-11_reel-eu-am.jpg",
+  "video": "queue/2026-11-11_reel-eu-am.mp4",
+  "cover": "queue/2026-11-11_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Your prayer is doing more than you think\n\nAllah tells us that prayer restrains a person from immoral acts and wickedness, and that the remembrance of Allah is greater still. Begin your day with it, and let it shape the hours that follow.\n\nSurah Al-Ankaboot 29:45\n\nWhich prayer will you guard most carefully today?\n\n#salah #pray5times #muslimreminder #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Recite [O Prophet] what is revealed to you of the Book, and establish prayer, for indeed prayer restrains one from immoral acts and wickedness. Indeed, the remembrance of Allah is of greater merit. And Allah knows all what you do (Surah Al-Ankaboot 29:45)",
+  "theme": "prayer / prayer restrains from wrongdoing",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English is source, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:29:45",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Your prayer is doing more than you think",
+    "hook_lines": [
+      "Your prayer is doing more",
+      "than you think"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "029045",
+        "lines": [
+          "ٱتۡلُ مَآ أُوحِيَ إِلَيۡكَ مِنَ ٱلۡكِتَٰبِ وَأَقِمِ ٱلصَّلَوٰةَۖ إِنَّ",
+          "ٱلصَّلَوٰةَ تَنۡهَىٰ عَنِ ٱلۡفَحۡشَآءِ وَٱلۡمُنكَرِۗ وَلَذِكۡرُ ٱللَّهِ",
+          "أَكۡبَرُۗ وَٱللَّهُ يَعۡلَمُ مَا تَصۡنَعُونَ ٤٥"
+        ],
+        "y": 598.0,
+        "meal": [
+          "Recite [O Prophet] what is revealed to you of the",
+          "Book, and establish prayer, for indeed prayer",
+          "restrains one from immoral acts and wickedness.",
+          "Indeed, the remembrance of Allah is of greater",
+          "merit. And Allah knows all what you do."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "Recite [O Prophet] what is revealed to you of the Book, and establish prayer, for indeed prayer restrains one from immoral acts and wickedness. Indeed, the remembrance of Allah is of greater merit. And Allah knows all what you do.",
+    "full_lines": [
+      "Recite [O Prophet] what is revealed to you of the",
+      "Book, and establish prayer, for indeed prayer",
+      "restrains one from immoral acts and wickedness.",
+      "Indeed, the remembrance of Allah is of greater",
+      "merit. And Allah knows all what you do."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Ankaboot 29:45",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which prayer will you guard most carefully today?",
+    "cta_lines": [
+      "Which prayer will you guard most carefully",
+      "today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "5c7960a4958c8cd0dc4d6900",
+  "created_at": "2026-11-10T05:44:04+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "029045"
+    ],
+    "done": false
+  }
+}

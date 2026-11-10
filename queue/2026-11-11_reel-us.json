@@ -1,0 +1,145 @@
+{
+  "entry_id": "quran:89:27-30",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Fajr 89:27-30",
+  "slot": "2026-11-11_reel-us",
+  "publish_at": "2026-11-12T01:26:59Z",
+  "local_slot": "2026-11-11 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-11_reel-us.jpg",
+  "video": "queue/2026-11-11_reel-us.mp4",
+  "cover": "queue/2026-11-11_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "The call to the soul at peace\n\nThese verses tell of the tranquil soul being called back to its Lord, well pleased and pleasing to Him, and welcomed into His Paradise. Let this be the hope you carry into sleep tonight.\n\nSurah Al-Fajr 89:27-30\n\nSend this to someone whose heart needs rest tonight\n\n#jannah #tranquilsoul #surahalfajr #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "[It will be said to the believer,] “O the tranquil soul. Return to your Lord, well pleased and pleasing [to Him]. Join My [righteous] slaves; and enter My Paradise.” (Surah Al-Fajr 89:27-30)",
+  "theme": "hope / the tranquil soul returning to its Lord",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English is source, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:89:27-30",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The call to the soul at peace",
+    "hook_lines": [
+      "The call to the soul at peace"
+    ],
+    "hook_size": 82,
+    "arabic_size": 70,
+    "verses": [
+      {
+        "ayah": "089027",
+        "lines": [
+          "يَٰٓأَيَّتُهَا ٱلنَّفۡسُ ٱلۡمُطۡمَئِنَّةُ ٢٧"
+        ],
+        "y": 486.6,
+        "meal": [
+          "[It will be said to the believer,] “O the tranquil",
+          "soul."
+        ]
+      },
+      {
+        "ayah": "089028",
+        "lines": [
+          "ٱرۡجِعِيٓ إِلَىٰ رَبِّكِ رَاضِيَةٗ مَّرۡضِيَّةٗ ٢٨"
+        ],
+        "y": 622.6,
+        "meal": [
+          "Return to your Lord, well pleased and pleasing",
+          "[to Him]."
+        ]
+      },
+      {
+        "ayah": "089029",
+        "lines": [
+          "فَٱدۡخُلِي فِي عِبَٰدِي ٢٩"
+        ],
+        "y": 758.6,
+        "meal": [
+          "Join My [righteous] slaves;"
+        ]
+      },
+      {
+        "ayah": "089030",
+        "lines": [
+          "وَٱدۡخُلِي جَنَّتِي ٣٠"
+        ],
+        "y": 894.6,
+        "meal": [
+          "and enter My Paradise.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1060.6,
+    "full": "[It will be said to the believer,] “O the tranquil soul. Return to your Lord, well pleased and pleasing [to Him]. Join My [righteous] slaves; and enter My Paradise.”",
+    "full_lines": [
+      "[It will be said to the believer,] “O the tranquil",
+      "soul. Return to your Lord, well pleased and",
+      "pleasing [to Him]. Join My [righteous] slaves;",
+      "and enter My Paradise.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3
+    ],
+    "ref": "Surah Al-Fajr 89:27-30",
+    "ref_y": 1336.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone whose heart needs rest tonight",
+    "cta_lines": [
+      "Send this to someone whose heart needs rest",
+      "tonight"
+    ],
+    "cta_size": 48,
+    "line_y": 1394.6,
+    "handle_y": 1540.6,
+    "handle_size": 27
+  },
+  "layout_hash": "bbcddda039c0c3c7f9fb8b32",
+  "created_at": "2026-11-10T05:46:10+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "089027",
+      "089028",
+      "089029",
+      "089030"
+    ],
+    "done": false
+  }
+}

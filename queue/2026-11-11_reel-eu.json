@@ -1,0 +1,108 @@
+{
+  "entry_id": "quran:7:31",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'raaf 7:31",
+  "slot": "2026-11-11_reel-eu",
+  "publish_at": "2026-11-11T18:02:05Z",
+  "local_slot": "2026-11-11 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-11_reel-eu.jpg",
+  "video": "queue/2026-11-11_reel-eu.mp4",
+  "cover": "queue/2026-11-11_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Before your next meal, remember this verse\n\nAllah tells the children of Adam to dress well for every prayer, to eat and drink, and not to waste, for He does not like the wasteful. Enjoy what He provides, without excess.\n\nSurah Al-A'raaf 7:31\n\nName one thing you will stop wasting this week\n\n#nowaste #moderation #muslimhabits #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "O children of Adam, dress well for every prayer. Eat and drink, but do not waste, for He does not like the wasteful (Surah Al-A'raaf 7:31)",
+  "theme": "moderation / eat and drink without waste",
+  "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English is source, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:7:31",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Before your next meal, remember this verse",
+    "hook_lines": [
+      "Before your next meal,",
+      "remember this verse"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "007031",
+        "lines": [
+          "يَٰبَنِيٓ ءَادَمَ خُذُواْ زِينَتَكُمۡ عِندَ كُلِّ",
+          "مَسۡجِدٖ وَكُلُواْ وَٱشۡرَبُواْ وَلَا تُسۡرِفُوٓاْۚ إِنَّهُۥ",
+          "لَا يُحِبُّ ٱلۡمُسۡرِفِينَ ٣١"
+        ],
+        "y": 610.0,
+        "meal": [
+          "O children of Adam, dress well for every prayer.",
+          "Eat and drink, but do not waste, for He does not",
+          "like the wasteful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1108.0,
+    "full": "O children of Adam, dress well for every prayer. Eat and drink, but do not waste, for He does not like the wasteful.",
+    "full_lines": [
+      "O children of Adam, dress well for every prayer.",
+      "Eat and drink, but do not waste, for He does not",
+      "like the wasteful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-A'raaf 7:31",
+    "ref_y": 1321.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name one thing you will stop wasting this week",
+    "cta_lines": [
+      "Name one thing you will stop wasting this",
+      "week"
+    ],
+    "cta_size": 48,
+    "line_y": 1379.0,
+    "handle_y": 1525.0,
+    "handle_size": 27
+  },
+  "layout_hash": "b128a1fcd991a4c508e33422",
+  "created_at": "2026-11-10T05:45:19+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "007031"
+    ],
+    "done": false
+  }
+}
