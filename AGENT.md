@@ -52,7 +52,7 @@ cd scripts
    - `python3 calendar_info.py 3` → özel günler (Cuma, Ramazan, Zilhicce vb.) önceliklidir.
    - `history/posted.jsonl` son 20 kayıt ve `notes/strategy.md` (varsa) oku.
    - Her slotun türü sabittir. 30 Ekim 2026'dan itibaren fotoğraf gönderisi yok: günde 4 Reels
-     (`reel/quran` üç kez, `reel/hadith` bir kez); 11 Kasım 2026'dan itibaren dördü de `reel/quran`,
+     (`reel/quran` üç kez, `reel/hadith` bir kez); `reel-us` 2026-11-09 slotundan itibaren (10 Kasım 04:30 İstanbul) dördü de `reel/quran`,
      carousel kapalı (hadis Reels'i ve carousel yalnızca sahibi isteyince). `enqueue.py slots`
      çıktısında yazar, başka tür seçme (`config.yaml` → `reels.slots[].content`). Fotoğraf
      gönderisi (`enqueue.py add`) yalnızca sahibi isterse.
@@ -195,8 +195,8 @@ cd scripts
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç
    (o içerik atılır, düzeltilmez).
 7b. **Reels (günde 4):** `slots` çıktısında `reel/quran` ya da `reel/hadith` türündeki her boş
-   slot için (`reel-eu-am`, `reel-pk`, `reel-eu` ayet; `reel-us` 10 Kasım'a kadar hadis, 11 Kasım'dan itibaren
-   ayet) **kendi içeriğini** seç; hiçbir
+   slot için (`reel-eu-am`, `reel-pk`, `reel-eu` ayet; `reel-us` 2026-11-08 slotuna kadar hadis, 2026-11-09
+   slotundan itibaren ayet) **kendi içeriğini** seç; hiçbir
    gönderinin kopyası olmaz. Slotun türü sabittir, kod kontrol eder.
    - **İçerik:** 3-6. adımlar aynen: tema son 3 gönderi ve son 3 Reels'ten farklı; kısa ve tek
      güçlü mesaj (yaklaşık 250 karakter altı). Ayet Reels'inde 1-5 ayet (tek istisna, sahibinin onayıyla: Nâs suresi 114:1-6;
