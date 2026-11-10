@@ -219,6 +219,7 @@ FIRST_DAY = dt.date(2026, 10, 20)   # the first day Instagram has account number
 WINDOW = "pt-day-v2"                 # rows measured with the window above; rows without it are measured again
 REFRESH_DAYS = 7                     # Instagram fills the last days in late, so these are measured on every run
 FOLLOWERS = ROOT / "history" / "followers.jsonl"
+DAY_FIELDS = ("follows", "unfollows", "reach_total", "reach_followers", "reach_non_followers", "views_total", "accounts_engaged")
 
 
 def day_span(d, end=None):
@@ -299,9 +300,11 @@ def daily_rows(base, token, user, now, account):
     d, rows = FIRST_DAY, []
     while d < today:
         old = kept.get(d.isoformat())
-        if old is None or "follows" not in old or "reach_total" not in old or (today - d).days <= REFRESH_DAYS:
+        if old is None or not all(k in old for k in DAY_FIELDS) or (today - d).days <= REFRESH_DAYS:
             new = day_row(base, token, user, d, now)
-            old = {**(old or {}), **new} if ("follows" in new or old is None) else old
+            # a complete new reading replaces the row; an incomplete one never overwrites a complete row
+            if old is None or all(k in new for k in DAY_FIELDS) or not all(k in old for k in DAY_FIELDS):
+                old = {**(old or {}), **new}
         rows.append(old)
         d += dt.timedelta(days=1)
     write_jsonl(DAILY, rows)
@@ -333,8 +336,10 @@ def daily_rows(base, token, user, now, account):
             bad.append({"at": s["at"], "followers_count": s["followers_count"], "range": [s_lo, s_hi], "common_so_far": [lo, hi]})
             continue
         lo, hi = max(lo, s_lo), min(hi, s_hi)
+        if lo > hi:                               # within the slack: keep one number, not an inverted range
+            lo = hi = (lo + hi) // 2
     check = {"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count"),
-             "net_follows_through": {"date": rows[-1]["date"], "net": total} if net_to else None,
+             "net_follows_through": {"date": max(net_to), "net": total} if net_to else None,
              "counts_checked": n, "followers_before_first_day": [lo, hi] if n else None, "conflicts": bad,
              "series": series_check(base, token, user, rows, today)}
     check["ok"] = len(net_to) == len(rows) and n > 0 and not bad and not check["series"]["differences"]
