@@ -3,10 +3,15 @@
 Writes:
   history/insights.json        latest snapshot: every post of the last 45 days with its numbers,
                                plus the account block (followers, demographics, online hours)
-  history/account_daily.jsonl  one row per Instagram day (Pacific time, as Instagram counts days):
-                               follows / unfollows, reach split into followers and
-                               non-followers, accounts engaged. Instagram fills the last days in late,
-                               so each run refreshes the last 7 days; older rows are kept as they are.
+  history/account_daily.jsonl  one row per Instagram day (midnight to midnight, Pacific time, as Instagram
+                               counts days), every day from FIRST_DAY to yesterday, each measured on its own:
+                               follows / unfollows, reach (total, followers / non-followers), views,
+                               accounts engaged. Instagram fills the last days in late, so each run measures
+                               the last 7 days again; older rows are kept as they are.
+  history/followers.jsonl      one row per run: followers count, and the follower check (see below).
+  (insights.json "followers_check": followers now must equal the followers before FIRST_DAY plus every
+   follow minus every unfollow since; that starting number must not move between runs, and every day's
+   reach and new follows must equal Instagram's own day-by-day series. A failed check opens an issue.)
   (insights.json also has "manual_posts": posts on the account that this system did not publish, i.e.
    the owner's hand-made Reels such as quizzes; found by listing the account's media, same numbers.)
   history/story_insights.jsonl one row per Story: reach, views, navigation (forward, back, exit,
@@ -204,44 +209,137 @@ def breakdown_or_zero(data):
         return None
 
 
-def daily_rows(base, token, user, account, now, days=7):
-    """Rows for the last `days` closed Instagram days (midnight to midnight, Pacific time)."""
+# Account numbers per Instagram day. Instagram counts days midnight to midnight, Pacific time, and reads
+# `since` / `until` as whole days with the day of `until` INCLUDED: until = next midnight would add the
+# next day too (that was the bug fixed on 2026-11-10, when every day also held the following day's numbers).
+# So a day is asked for with until = one second before the next midnight. Checked against Instagram's own
+# daily series (reach and follower_count, period=day): equal for every day from the first one.
+PT = "America/Los_Angeles"
+FIRST_DAY = dt.date(2026, 10, 20)   # the first day Instagram has account numbers for (earlier days are all zero)
+WINDOW = "pt-day-v2"                 # rows measured with the window above; rows without it are measured again
+REFRESH_DAYS = 7                     # Instagram fills the last days in late, so these are measured on every run
+FOLLOWERS = ROOT / "history" / "followers.jsonl"
+
+
+def day_span(d, end=None):
+    """since / until for Instagram day `d` (or from its midnight to `end`, for today so far)."""
     from zoneinfo import ZoneInfo
-    pt = ZoneInfo("America/Los_Angeles")
-    today = now.astimezone(pt).date()
-    rows = []
-    for k in range(days, 0, -1):
-        d = today - dt.timedelta(days=k)
-        since = dt.datetime.combine(d, dt.time(), pt)
-        until = dt.datetime.combine(d + dt.timedelta(days=1), dt.time(), pt)
-        span = {"period": "day", "metric_type": "total_value",
-                "since": int(since.timestamp()), "until": int(until.timestamp())}
-        row = {"date": d.isoformat(), "measured_at": now.isoformat(timespec="seconds"),
-               "provisional": k <= 2}   # Instagram may still fill in the last two days
-        data = get(base, f"{user}/insights", token, metric="follows_and_unfollows", breakdown="follow_type", **span)
-        fu = breakdown_or_zero(data)
-        if fu is None:
-            miss("follows_and_unfollows", data)
+    pt = ZoneInfo(PT)
+    since = dt.datetime.combine(d, dt.time(), pt)
+    until = end if end is not None else dt.datetime.combine(d + dt.timedelta(days=1), dt.time(), pt) - dt.timedelta(seconds=1)
+    return {"period": "day", "metric_type": "total_value", "since": int(since.timestamp()), "until": int(until.timestamp())}
+
+
+def follows_for(base, token, user, span):
+    """(follows, unfollows) for a span, or None. FOLLOWER = accounts that started following,
+    NON_FOLLOWER = accounts that unfollowed or left Instagram."""
+    data = get(base, f"{user}/insights", token, metric="follows_and_unfollows", breakdown="follow_type", **span)
+    fu = breakdown_or_zero(data)
+    if fu is None:
+        miss("follows_and_unfollows", data)
+        return None
+    return fu.get("FOLLOWER", 0), fu.get("NON_FOLLOWER", 0)
+
+
+def day_row(base, token, user, d, now):
+    span = day_span(d)
+    row = {"date": d.isoformat(), "measured_at": now.isoformat(timespec="seconds"), "window": WINDOW}
+    fu = follows_for(base, token, user, span)
+    if fu is not None:
+        row.update(follows=fu[0], unfollows=fu[1])
+    data = get(base, f"{user}/insights", token, metric="reach", breakdown="follow_type", **span)
+    rb = breakdown_or_zero(data)
+    if rb is None:
+        miss("reach_by_follow_type", data)
+    else:
+        row.update(reach_followers=rb.get("FOLLOWER", 0), reach_non_followers=rb.get("NON_FOLLOWER", 0))
+    for m in ("reach", "accounts_engaged", "views"):
+        data = get(base, f"{user}/insights", token, metric=m, **span)
+        v = value(data)
+        if v is None:
+            miss(f"account_{m}", data)
         else:
-            # FOLLOWER = accounts that started following, NON_FOLLOWER = accounts that unfollowed or left.
-            row.update(follows=fu.get("FOLLOWER", 0), unfollows=fu.get("NON_FOLLOWER", 0))
-        data = get(base, f"{user}/insights", token, metric="reach", breakdown="follow_type", **span)
-        rb = breakdown_or_zero(data)
-        if rb is None:
-            miss("reach_by_follow_type", data)
-        else:
-            row.update(reach_followers=rb.get("FOLLOWER", 0), reach_non_followers=rb.get("NON_FOLLOWER", 0))
-        for m in ("reach", "accounts_engaged", "views"):
-            data = get(base, f"{user}/insights", token, metric=m, **span)
-            v = value(data)
-            if v is None:
-                miss(f"account_{m}", data)
-            else:
-                row[f"{m}_total" if m != "accounts_engaged" else m] = v
-        rows.append(row)
-    # Followers at the time of this run, on the most recent day's row.
-    rows[-1]["followers_count_at_run"] = account.get("followers_count")
-    return rows
+            row[f"{m}_total" if m != "accounts_engaged" else m] = v
+    return row
+
+
+def series_check(base, token, user, rows, today):
+    """Instagram's own day-by-day series (reach, new followers) for the last 28 days, compared with the rows."""
+    from zoneinfo import ZoneInfo
+    start = max(FIRST_DAY, today - dt.timedelta(days=28))
+    span = {"period": "day", "since": int(dt.datetime.combine(start, dt.time(), ZoneInfo(PT)).timestamp()),
+            "until": int(dt.datetime.combine(today, dt.time(), ZoneInfo(PT)).timestamp())}
+    by_date = {r["date"]: r for r in rows}
+    diffs, n = [], 0
+    for metric, key in (("reach", "reach_total"), ("follower_count", "follows")):
+        data = get(base, f"{user}/insights", token, metric=metric, **span)
+        try:
+            values = data["data"][0]["values"]
+        except (KeyError, IndexError, TypeError):
+            miss(f"series_{metric}", data)
+            continue
+        for v in values:
+            # Instagram labels each day of these series with the UTC time of its Pacific midnight (start of the day).
+            d = dt.datetime.strptime(v["end_time"], "%Y-%m-%dT%H:%M:%S%z").astimezone(ZoneInfo(PT)).date().isoformat()
+            r = by_date.get(d)
+            if r is None or key not in r or d >= today.isoformat():
+                continue
+            n += 1
+            if r[key] != v.get("value"):
+                diffs.append({"date": d, "metric": key, "row": r[key], "instagram_series": v.get("value")})
+    return {"days_compared": n, "differences": diffs}
+
+
+def daily_rows(base, token, user, now, account):
+    """account_daily.jsonl: every Instagram day from FIRST_DAY to yesterday, each measured on its own.
+    Also returns the follower check (followers now vs. the sum of follows - unfollows)."""
+    from zoneinfo import ZoneInfo
+    today = now.astimezone(ZoneInfo(PT)).date()
+    kept = {r["date"]: r for r in read_jsonl(DAILY) if r.get("window") == WINDOW}
+    d, rows = FIRST_DAY, []
+    while d < today:
+        old = kept.get(d.isoformat())
+        if old is None or "follows" not in old or "reach_total" not in old or (today - d).days <= REFRESH_DAYS:
+            new = day_row(base, token, user, d, now)
+            old = {**(old or {}), **new} if ("follows" in new or old is None) else old
+        rows.append(old)
+        d += dt.timedelta(days=1)
+    write_jsonl(DAILY, rows)
+
+    # Follower check: followers now = followers before FIRST_DAY + all follows - all unfollows (closed days and
+    # today so far). The implied "followers before FIRST_DAY" must stay the same from run to run.
+    midnight = dt.datetime.combine(today, dt.time(), ZoneInfo(PT))
+    so_far = follows_for(base, token, user, day_span(today, end=max(now - dt.timedelta(minutes=5), midnight + dt.timedelta(seconds=1))))
+    check = {"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count")}
+    closed = [r for r in rows if "follows" in r]
+    if so_far is not None and check["followers_count"] is not None and len(closed) == len(rows):
+        net = sum(r["follows"] - r["unfollows"] for r in rows) + so_far[0] - so_far[1]
+        check.update(net_follows_since_first_day=net, today_so_far={"follows": so_far[0], "unfollows": so_far[1]},
+                     followers_before_first_day=check["followers_count"] - net)
+    snaps = read_jsonl(FOLLOWERS)
+    earlier = [s["followers_before_first_day"] for s in snaps if s.get("followers_before_first_day") is not None]
+    if "followers_before_first_day" in check and earlier:
+        ref = sorted(earlier)[len(earlier) // 2]
+        check["drift"] = check["followers_before_first_day"] - ref
+    snaps.append(check)
+    write_jsonl(FOLLOWERS, snaps)
+    check["series"] = series_check(base, token, user, rows, today)
+    drift = abs(check.get("drift") or 0)
+    check["ok"] = ("followers_before_first_day" in check and drift <= max(3, round(0.01 * check["followers_count"]))
+                   and not check["series"]["differences"])
+    return rows, check
+
+
+def report_check(check):
+    """Record a failed follower check as an open issue (the panel shows it; the owner's chat fixes it)."""
+    import subprocess, sys
+    detail = (f"followers {check.get('followers_count')}, implied followers before {FIRST_DAY}: "
+              f"{check.get('followers_before_first_day')} (drift {check.get('drift')}); "
+              f"series differences: {check['series']['differences'][:5]}")
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "issues.py"), "add", "--kind", "code",
+                    "--title", "Hesap istatistikleri tutarsız (takipçi kontrolü)", "--detail", detail,
+                    "--source", "Gece istatistik"], check=False)
+    print(f"::warning::follower check failed: {detail}")
 
 
 def main():
@@ -260,15 +358,10 @@ def main():
     manual = manual_posts(base, token, user, known, cutoff)
 
     account = account_block(base, token, user)
-    fresh = daily_rows(base, token, user, account, now)
-    kept = {r["date"]: r for r in read_jsonl(DAILY)}
-    for r in fresh:
-        old = kept.get(r["date"], {})
-        if "followers_count_at_run" not in r and old.get("followers_count_at_run") is not None:
-            r["followers_count_at_run"] = old["followers_count_at_run"]
-        kept[r["date"]] = {**old, **r}
-    write_jsonl(DAILY, sorted(kept.values(), key=lambda r: r["date"]))
-    daily = fresh[-1]
+    rows, check = daily_rows(base, token, user, now, account)
+    daily = rows[-1]
+    if not check["ok"]:
+        report_check(check)
 
     OUT.write_text(json.dumps({
         "fetched_at": now.isoformat(timespec="seconds"),
@@ -277,6 +370,7 @@ def main():
         "errors": errors,
         "posts": posts,
         "manual_posts": manual,
+        "followers_check": check,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"insights for {len(posts)} posts, {len(manual)} hand-made posts, {n_stories} live stories, day {daily['date']}")
     print(f"::notice::insights for {len(posts)} posts, {n_stories} live stories; day {daily['date']}: "

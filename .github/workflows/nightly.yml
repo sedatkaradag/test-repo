@@ -2,7 +2,7 @@ name: nightly
 
 # Twice a day: refresh the Instagram token (result in history/token_status.json, problems in
 # notes/issues.json) and pull statistics for the analyst (history/insights.json, account_daily.jsonl,
-# story_insights.jsonl). Instagram gives Story numbers for 24 hours only, so a second run 12 hours
+# followers.jsonl, story_insights.jsonl). Instagram gives Story numbers for 24 hours only, so a second run 12 hours
 # apart makes sure every Story is read while it is still live. GitHub may start scheduled runs late.
 on:
   schedule:

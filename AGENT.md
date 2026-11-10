@@ -450,9 +450,19 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
      (`reels_skip_rate`, ilk 3 saniyede geçenlerin yüzdesi). `account` bloğu: takipçi sayısı, takipçilerin
      aktif olduğu saatler (`online_followers_by_utc_hour`), takipçi ve etkileşen kitle dağılımı
      (`follower_demographics`, `engaged_audience_demographics`: ülke, şehir, yaş, cinsiyet; bu ay).
-   - `history/account_daily.jsonl`: gün gün takipçi, yeni takip (`follows`), takipten çıkma (`unfollows`),
-     erişimin takipçi / takipçi olmayan ayrımı (`reach_followers`, `reach_non_followers`), etkileşen hesap.
+   - **Önce tutarlılık:** `history/insights.json` → `followers_check.ok` `false` ise hesap düzeyindeki
+     sayıları (account_daily, takipçi büyümesi) kullanma; "Hesap istatistikleri tutarsız" sorununun açık
+     olduğunu kontrol et (yoksa kaydet) ve raporda bunu yaz. Bir sayıyı yazmadan önce birbirini doğrulayan
+     sayılarla karşılaştır: haftalık net takip (follows − unfollows toplamı) ile `history/followers.jsonl`'deki
+     takipçi artışı aynı hafta için birkaç kişiden fazla ayrışıyorsa yazma, sorun kaydet.
+   - `history/account_daily.jsonl`: her satır tek bir Instagram günü (Pasifik saatiyle gece yarısından gece
+     yarısına; 20 Ekim 2026'dan dünkü güne kadar her gün): yeni takip (`follows`), takipten çıkma
+     (`unfollows`), toplam erişim (`reach_total`), erişimin takipçi / takipçi olmayan ayrımı (`reach_followers`,
+     `reach_non_followers`), görüntüleme (`views_total`), etkileşen hesap (`accounts_engaged`). Erişim tekil
+     kişi sayısıdır: günlerin erişimi toplanınca haftanın tekil erişimi çıkmaz, "günlük ortalama erişim" diye yaz.
      Haftalık net büyümeyi ve yeni kitleye ulaşma oranını buradan çıkar.
+   - `history/followers.jsonl`: her çalışmada takipçi sayısı (`at`, `followers_count`). Takipçi büyümesini
+     (ör. "121 → 335") buradan, aynı saat dilimindeki iki kayıttan al.
    - `history/story_insights.jsonl`: her Story'nin erişimi ve gezinmesi (`navigation`: tap_forward,
      tap_back, tap_exit, swipe_forward). Instagram Story verisini yalnızca 24 saat verdiği için `age_hours`
      küçük olan kayıtlar eksik olabilir; yorumlarken bunu göz önünde tut.
