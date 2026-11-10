@@ -8,10 +8,10 @@ Writes:
                                follows / unfollows, reach (total, followers / non-followers), views,
                                accounts engaged. Instagram fills the last days in late, so each run measures
                                the last 7 days again; older rows are kept as they are.
-  history/followers.jsonl      one row per run: followers count, and the follower check (see below).
-  (insights.json "followers_check": followers now must equal the followers before FIRST_DAY plus every
-   follow minus every unfollow since; that starting number must not move between runs, and every day's
-   reach and new follows must equal Instagram's own day-by-day series. A failed check opens an issue.)
+  history/followers.jsonl      one row per run: the followers count and when it was read.
+  (insights.json "followers_check": every followers count, minus the follows and plus the unfollows
+   since FIRST_DAY, must give the same number of followers before FIRST_DAY; and every day's reach and
+   new follows must equal Instagram's own day-by-day series. A failed check opens an issue.)
   (insights.json also has "manual_posts": posts on the account that this system did not publish, i.e.
    the owner's hand-made Reels such as quizzes; found by listing the account's media, same numbers.)
   history/story_insights.jsonl one row per Story: reach, views, navigation (forward, back, exit,
@@ -306,36 +306,46 @@ def daily_rows(base, token, user, now, account):
         d += dt.timedelta(days=1)
     write_jsonl(DAILY, rows)
 
-    # Follower check: followers now = followers before FIRST_DAY + all follows - all unfollows (closed days and
-    # today so far). The implied "followers before FIRST_DAY" must stay the same from run to run.
-    midnight = dt.datetime.combine(today, dt.time(), ZoneInfo(PT))
-    so_far = follows_for(base, token, user, day_span(today, end=max(now - dt.timedelta(minutes=5), midnight + dt.timedelta(seconds=1))))
-    check = {"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count")}
-    closed = [r for r in rows if "follows" in r]
-    if so_far is not None and check["followers_count"] is not None and len(closed) == len(rows):
-        net = sum(r["follows"] - r["unfollows"] for r in rows) + so_far[0] - so_far[1]
-        check.update(net_follows_since_first_day=net, today_so_far={"follows": so_far[0], "unfollows": so_far[1]},
-                     followers_before_first_day=check["followers_count"] - net)
+    # Follower check. Instagram gives a day's follows only after the day (today reads 0), so a follower count
+    # taken during day D lies between (followers before FIRST_DAY + net follows up to D-1) and (... up to D).
+    # Every count whose day is already measured gives such a range for "followers before FIRST_DAY"; all the
+    # ranges must share one number. A count is checked from the run after its day closes.
     snaps = read_jsonl(FOLLOWERS)
-    earlier = [s["followers_before_first_day"] for s in snaps if s.get("followers_before_first_day") is not None]
-    if "followers_before_first_day" in check and earlier:
-        ref = sorted(earlier)[len(earlier) // 2]
-        check["drift"] = check["followers_before_first_day"] - ref
-    snaps.append(check)
+    snaps.append({"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count")})
     write_jsonl(FOLLOWERS, snaps)
-    check["series"] = series_check(base, token, user, rows, today)
-    drift = abs(check.get("drift") or 0)
-    check["ok"] = ("followers_before_first_day" in check and drift <= max(3, round(0.01 * check["followers_count"]))
-                   and not check["series"]["differences"])
+    net_to, total = {}, 0
+    for r in rows:
+        if "follows" not in r:
+            break
+        total += r["follows"] - r["unfollows"]
+        net_to[r["date"]] = total
+    lo, hi, n, bad = -10 ** 9, 10 ** 9, 0, []
+    for s in snaps:
+        if s.get("followers_count") is None:
+            continue
+        d = dt.datetime.fromisoformat(s["at"]).astimezone(ZoneInfo(PT)).date()
+        if d < FIRST_DAY or d.isoformat() not in net_to:
+            continue
+        before = net_to.get((d - dt.timedelta(days=1)).isoformat(), 0)
+        s_lo, s_hi = s["followers_count"] - net_to[d.isoformat()], s["followers_count"] - before
+        n += 1
+        if max(lo, s_lo) > min(hi, s_hi) + 2:    # 2 people of slack (Instagram's late corrections)
+            bad.append({"at": s["at"], "followers_count": s["followers_count"], "range": [s_lo, s_hi], "common_so_far": [lo, hi]})
+            continue
+        lo, hi = max(lo, s_lo), min(hi, s_hi)
+    check = {"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count"),
+             "net_follows_through": {"date": rows[-1]["date"], "net": total} if net_to else None,
+             "counts_checked": n, "followers_before_first_day": [lo, hi] if n else None, "conflicts": bad,
+             "series": series_check(base, token, user, rows, today)}
+    check["ok"] = len(net_to) == len(rows) and n > 0 and not bad and not check["series"]["differences"]
     return rows, check
 
 
 def report_check(check):
     """Record a failed follower check as an open issue (the panel shows it; the owner's chat fixes it)."""
     import subprocess, sys
-    detail = (f"followers {check.get('followers_count')}, implied followers before {FIRST_DAY}: "
-              f"{check.get('followers_before_first_day')} (drift {check.get('drift')}); "
-              f"series differences: {check['series']['differences'][:5]}")
+    detail = (f"followers {check.get('followers_count')}; counts that do not fit the daily follows: "
+              f"{check['conflicts'][:3]}; differences from Instagram's daily series: {check['series']['differences'][:5]}")
     subprocess.run([sys.executable, str(ROOT / "scripts" / "issues.py"), "add", "--kind", "code",
                     "--title", "Hesap istatistikleri tutarsız (takipçi kontrolü)", "--detail", detail,
                     "--source", "Gece istatistik"], check=False)
