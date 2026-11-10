@@ -122,9 +122,9 @@ iki slot (reel-eu 18:00 UTC, reel-pk 15:30 UTC) tam dip saatlerde. Erişimin %99
 takipçilerin çevrimiçi saati belirleyici değil. Hindistan/Pakistan akşamı (reel-pk) kitleye uygun. 16 Kasım'da
 reel-us'un (01:30 UTC) hadis mi saat mi yüzünden zayıf olduğunu ayırmak için önce tür denemesi önerilir.
 
-## Elle yapılan testler (sistem dışı, nightly izlemez)
+## Elle yapılan testler (sistem dışı; 10 Kasım'dan beri nightly `manual_posts` olarak izler)
 
-Bu paylaşımlar `history/posted.jsonl`'da yok; rakamlar Instagram'ın gönderi istatistiklerinden elle alındı.
+Bu paylaşımlar `history/posted.jsonl`'da yok. 10 Kasım'dan itibaren gece toplama bunları kendisi bulur (`insights.json` → `manual_posts`); ilk iki satır Instagram'ın gönderi istatistiklerinden elle alındı.
 Karşılaştırırken aynı yaştaki Reels'leri kullan.
 
 | Tarih | Ne | Yaş | Görüntüleme | Görüntüleyen | Beğeni | Yorum (kişi) | Kayıt | Paylaşım | Takip | Takip / görüntüleyen |

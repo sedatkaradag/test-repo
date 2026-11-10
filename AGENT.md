@@ -457,6 +457,11 @@ Tüm panel yazımları tek `batch`, var olan belgelerde `if_version` ile.
      tap_back, tap_exit, swipe_forward). Instagram Story verisini yalnızca 24 saat verdiği için `age_hours`
      küçük olan kayıtlar eksik olabilir; yorumlarken bunu göz önünde tut.
    `insights.json` → `unavailable_metrics` ve `errors`, Instagram'ın değer vermediği ölçümleri gösterir.
+   - `history/insights.json` → `manual_posts`: sahibinin elle paylaştığı gönderiler (quiz, trivia, tesbih
+     gibi; sistemin paylaşmadığı her gönderi, hesabın gönderi listesinden bulunur). Aynı ölçümler; tema,
+     slot ve kâri bilgisi yok, `caption_first_line` ve `permalink` var. Ortalamalara karıştırma; strateji
+     notundaki "Elle yapılan testler" tablosunu bunlarla güncelle (aynı yaş kuralı) ve aynı yaştaki ayet
+     Reels'leriyle karşılaştır. Arşive alınan ya da silinen gönderiler listede görünmez.
    - **Yaş kuralı:** bir paylaşımın yaşı = `insights.json` → `fetched_at` − `posted_at` (takvim gününe
      bakarak tahmin etme). Ortalamalara yalnızca en az 24 saatlik paylaşımları kat. İki grubu (şablon,
      slot, kâri, format) karşılaştırırken her iki taraf da en az 48 saatlik olmalı; her grubun `n`'ini ve

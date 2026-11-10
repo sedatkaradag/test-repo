@@ -7,6 +7,8 @@ Writes:
                                follows / unfollows, reach split into followers and
                                non-followers, accounts engaged. Instagram fills the last days in late,
                                so each run refreshes the last 7 days; older rows are kept as they are.
+  (insights.json also has "manual_posts": posts on the account that this system did not publish, i.e.
+   the owner's hand-made Reels such as quizzes; found by listing the account's media, same numbers.)
   history/story_insights.jsonl one row per Story: reach, views, navigation (forward, back, exit,
                                next), replies, shares, follows, profile visits. Instagram only gives
                                Story numbers for 24 hours, so each run updates the Stories still live
@@ -138,6 +140,36 @@ def story_stats(base, token, rows, now):
     return sum(1 for r in kept.values() if r.get("measured_at", "")[:13] == now.isoformat()[:13])
 
 
+def manual_posts(base, token, user, known, cutoff):
+    """The account's own posts of the last 45 days that are not in posted.jsonl (made by hand)."""
+    out, path, params = [], f"{user}/media", {"fields": "id,caption,media_type,media_product_type,permalink,timestamp",
+                                               "limit": 50}
+    for _ in range(10):                                  # at most 500 posts back
+        data = get(base, path, token, **params)
+        if not isinstance(data, dict) or "data" not in data:
+            miss("media_list", data)
+            break
+        older = False
+        for m in data["data"]:
+            ts = dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+            if ts < cutoff:
+                older = True
+                break
+            if m["id"] in known:
+                continue
+            reel = m.get("media_product_type") == "REELS"
+            out.append({"media_id": m["id"], "posted_at": ts.astimezone(dt.timezone.utc).isoformat(timespec="seconds"),
+                        "type": "reel" if reel else m.get("media_type", "").lower(), "source": "manual",
+                        "permalink": m.get("permalink", ""),
+                        "caption_first_line": (m.get("caption") or "").strip().split("\n")[0][:120]})
+        nxt = (data.get("paging") or {}).get("cursors", {}).get("after")
+        if older or not nxt or not (data.get("paging") or {}).get("next"):
+            break
+        params["after"] = nxt
+    media_stats(base, token, out)
+    return out
+
+
 def account_block(base, token, user):
     account = {}
     data = get(base, f"{user}", token, fields="followers_count,media_count")
@@ -224,6 +256,8 @@ def main():
     posts = [dict(r) for r in rows if dt.datetime.fromisoformat(r["posted_at"]) >= cutoff]
     media_stats(base, token, posts)
     n_stories = story_stats(base, token, rows, now)
+    known = {str(r.get(k)) for r in rows for k in ("media_id", "story_media_id") if r.get(k)}
+    manual = manual_posts(base, token, user, known, cutoff)
 
     account = account_block(base, token, user)
     fresh = daily_rows(base, token, user, account, now)
@@ -242,8 +276,9 @@ def main():
         "unavailable_metrics": unavailable,
         "errors": errors,
         "posts": posts,
+        "manual_posts": manual,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"insights for {len(posts)} posts, {n_stories} live stories, day {daily['date']}")
+    print(f"insights for {len(posts)} posts, {len(manual)} hand-made posts, {n_stories} live stories, day {daily['date']}")
     print(f"::notice::insights for {len(posts)} posts, {n_stories} live stories; day {daily['date']}: "
           f"{ {k: daily.get(k) for k in ('follows', 'unfollows', 'reach_followers', 'reach_non_followers', 'accounts_engaged')} }")
     print(f"::notice::no value from Instagram: {unavailable or 'none'}")
