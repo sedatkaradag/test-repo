@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T04:37:11+00:00",
+  "fetched_at": "2026-11-10T04:42:25+00:00",
   "account": {
     "followers_count": 387,
     "media_count": 102,
@@ -1817,7 +1817,7 @@
       "story_kind": "video",
       "stats": {
         "reach": 1820,
-        "views": 2120,
+        "views": 2121,
         "likes": 207,
         "comments": 0,
         "saved": 31,
@@ -2344,7 +2344,7 @@
       "story_kind": "video",
       "stats": {
         "reach": 3461,
-        "views": 3863,
+        "views": 3864,
         "likes": 296,
         "comments": 0,
         "saved": 80,
@@ -2502,12 +2502,12 @@
       "story_kind": "video",
       "stats": {
         "reach": 1227,
-        "views": 1373,
+        "views": 1374,
         "likes": 87,
         "comments": 0,
-        "saved": 18,
+        "saved": 19,
         "shares": 3,
-        "total_interactions": 109,
+        "total_interactions": 110,
         "ig_reels_avg_watch_time": 3728,
         "ig_reels_video_view_total_time": 4668357,
         "reels_skip_rate": 73.9
@@ -2530,15 +2530,15 @@
       "story_kind": "video",
       "stats": {
         "reach": 975,
-        "views": 1098,
-        "likes": 109,
+        "views": 1103,
+        "likes": 110,
         "comments": 0,
-        "saved": 9,
+        "saved": 10,
         "shares": 5,
-        "total_interactions": 125,
+        "total_interactions": 127,
         "ig_reels_avg_watch_time": 4284,
         "ig_reels_video_view_total_time": 4190229,
-        "reels_skip_rate": 69.3
+        "reels_skip_rate": 69.2
       }
     },
     {
@@ -2558,7 +2558,7 @@
       "story_kind": "video",
       "stats": {
         "reach": 937,
-        "views": 1075,
+        "views": 1076,
         "likes": 113,
         "comments": 0,
         "saved": 14,
@@ -2566,7 +2566,7 @@
         "total_interactions": 137,
         "ig_reels_avg_watch_time": 5977,
         "ig_reels_video_view_total_time": 5714125,
-        "reels_skip_rate": 65.9
+        "reels_skip_rate": 65.8
       }
     },
     {
@@ -2585,16 +2585,16 @@
       "story_media_id": "18093725339679806",
       "story_kind": "video",
       "stats": {
-        "reach": 1175,
-        "views": 1382,
-        "likes": 95,
+        "reach": 1185,
+        "views": 1395,
+        "likes": 96,
         "comments": 0,
         "saved": 23,
         "shares": 5,
-        "total_interactions": 125,
-        "ig_reels_avg_watch_time": 6081,
-        "ig_reels_video_view_total_time": 7175970,
-        "reels_skip_rate": 64.6
+        "total_interactions": 126,
+        "ig_reels_avg_watch_time": 6100,
+        "ig_reels_video_view_total_time": 7430011,
+        "reels_skip_rate": 64
       }
     }
   ],
@@ -2607,16 +2607,16 @@
       "permalink": "https://www.instagram.com/reel/DfhJdpgJ7NH/",
       "caption_first_line": "Can you name all 4 Surahs? The last one is the hard one.",
       "stats": {
-        "reach": 2798,
+        "reach": 2802,
         "views": 3283,
         "likes": 231,
         "comments": 6,
         "saved": 19,
         "shares": 6,
         "total_interactions": 264,
-        "ig_reels_avg_watch_time": 19676,
-        "ig_reels_video_view_total_time": 55429459,
-        "reels_skip_rate": 59.4
+        "ig_reels_avg_watch_time": 19787,
+        "ig_reels_video_view_total_time": 55839373,
+        "reels_skip_rate": 59.5
       }
     },
     {
@@ -2628,15 +2628,15 @@
       "caption_first_line": "Did you do your dhikr today? 📿 Save it, like it, complete it here every day 🤍",
       "stats": {
         "reach": 2113,
-        "views": 2379,
-        "likes": 157,
+        "views": 2385,
+        "likes": 160,
         "comments": 0,
         "saved": 45,
-        "shares": 29,
-        "total_interactions": 242,
+        "shares": 28,
+        "total_interactions": 244,
         "ig_reels_avg_watch_time": 14433,
         "ig_reels_video_view_total_time": 30614401,
-        "reels_skip_rate": 76.6
+        "reels_skip_rate": 76.4
       }
     },
     {
@@ -2714,8 +2714,8 @@
         "saved": 25,
         "shares": 8,
         "total_interactions": 241,
-        "ig_reels_avg_watch_time": 27697,
-        "ig_reels_video_view_total_time": 61073810,
+        "ig_reels_avg_watch_time": 27686,
+        "ig_reels_video_view_total_time": 61075790,
         "reels_skip_rate": 54.1
       }
     },
@@ -2761,14 +2761,18 @@
     }
   ],
   "followers_check": {
-    "at": "2026-11-10T04:37:11+00:00",
+    "at": "2026-11-10T04:42:25+00:00",
     "followers_count": 387,
-    "net_follows_since_first_day": 286,
-    "today_so_far": {
-      "follows": 0,
-      "unfollows": 0
+    "net_follows_through": {
+      "date": "2026-11-08",
+      "net": 286
     },
-    "followers_before_first_day": 101,
+    "counts_checked": 17,
+    "followers_before_first_day": [
+      51,
+      55
+    ],
+    "conflicts": [],
     "series": {
       "days_compared": 40,
       "differences": []
