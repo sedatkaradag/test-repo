@@ -174,7 +174,9 @@
     "detail": "insights.json (fetched_at 2026-11-09 01:58 UTC) bu Reels için stats {} döndürüyor; 56 saatlik olduğu halde reach/views yok. media_id 18164700241505778. Reels silinmiş, gizlenmiş ya da Instagram tarafından kısıtlanmış olabilir (49:12 gıybeti ölü kardeşin etini yemeye benzetiyor). Öneri: sahibi uygulamada Reels'in yayında olup olmadığını ve hesap durumunu kontrol etsin. Haftalık ortalamalardan çıkarıldı.",
     "ref": "2026-11-06_reel-eu",
     "source": "Analist, 2026-11-09",
-    "status": "open",
-    "opened_at": "2026-11-09T06:28:20Z"
+    "status": "closed",
+    "opened_at": "2026-11-09T06:28:20Z",
+    "closed_at": "2026-11-10T00:45:25Z",
+    "resolution": "Gerçek bir sorun değil: sahibi bu Reels'i Instagram 'ses kullanılamıyor' (tilavet sesi kısıtlandı) uyarısı verdiği için arşive aldı; arşivdeki gönderi için API istatistik döndürmüyor. Analizlerde dışarıda bırakılmaya devam edilsin."
   }
 ]

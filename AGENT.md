@@ -52,7 +52,8 @@ cd scripts
    - `python3 calendar_info.py 3` → özel günler (Cuma, Ramazan, Zilhicce vb.) önceliklidir.
    - `history/posted.jsonl` son 20 kayıt ve `notes/strategy.md` (varsa) oku.
    - Her slotun türü sabittir. 30 Ekim 2026'dan itibaren fotoğraf gönderisi yok: günde 4 Reels
-     (`reel/quran` üç kez, `reel/hadith` bir kez) ve haftada bir carousel. `enqueue.py slots`
+     (`reel/quran` üç kez, `reel/hadith` bir kez); 11 Kasım 2026'dan itibaren dördü de `reel/quran`,
+     carousel kapalı (hadis Reels'i ve carousel yalnızca sahibi isteyince). `enqueue.py slots`
      çıktısında yazar, başka tür seçme (`config.yaml` → `reels.slots[].content`). Fotoğraf
      gönderisi (`enqueue.py add`) yalnızca sahibi isterse.
    - Son 3 gönderinin temasını tekrarlama.
@@ -194,7 +195,8 @@ cd scripts
    (eksik glif), okunaksız satır varsa kuyruk dosyalarını sil ve başka içerik seç
    (o içerik atılır, düzeltilmez).
 7b. **Reels (günde 4):** `slots` çıktısında `reel/quran` ya da `reel/hadith` türündeki her boş
-   slot için (`reel-eu-am`, `reel-pk` ve `reel-eu` ayet, `reel-us` hadis) **kendi içeriğini** seç; hiçbir
+   slot için (`reel-eu-am`, `reel-pk`, `reel-eu` ayet; `reel-us` 10 Kasım'a kadar hadis, 11 Kasım'dan itibaren
+   ayet) **kendi içeriğini** seç; hiçbir
    gönderinin kopyası olmaz. Slotun türü sabittir, kod kontrol eder.
    - **İçerik:** 3-6. adımlar aynen: tema son 3 gönderi ve son 3 Reels'ten farklı; kısa ve tek
      güçlü mesaj (yaklaşık 250 karakter altı). Ayet Reels'inde 1-5 ayet (tek istisna, sahibinin onayıyla: Nâs suresi 114:1-6;
@@ -275,7 +277,8 @@ cd scripts
    `python3 enqueue.py add-story --source <gönderi slotu> --at <UTC zaman>`.
    Panelde ayrı kart açılmaz: Story yayınlanınca videosunu yükleyip **kaynak gönderinin** satırına
    `story_video_url`, `story_audio` ve `story_kind: "video"` yaz.
-7c. **Haftalık carousel:** `slots` çıktısında `carousel` türünde boş slot varsa (haftada bir):
+7c. **Haftalık carousel** (10 Kasım 2026'dan beri kapalı, `carousel.enabled: false`; slot çıkmaz):
+   `slots` çıktısında `carousel` türünde boş slot varsa (haftada bir):
    tek bir tema seç (son 4 carousel'den farklı; `notes/strategy.md` en iyi temaları söylüyorsa
    onlardan), aynı temada 5 içerik seç (ayet, hadis ya da karışık; hepsi bağlamdan bağımsız,
    tam cümle, son 365 günde paylaşılmamış). Kapak başlığı kısa ve aranabilir olsun

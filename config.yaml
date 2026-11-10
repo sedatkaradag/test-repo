@@ -28,7 +28,7 @@ slots:
 # false -> Instagram'a gerçekten paylaşır
 dry_run: false
 
-# Günde 4 Reels (30 Ekim'den itibaren): 3 tilavetli ayet, 1 sessiz hadis. Her Reels kendi
+# Günde 4 Reels (30 Ekim'den itibaren): 3 tilavetli ayet, 1 sessiz hadis; 11 Kasım'dan itibaren 4 tilavetli ayet. Her Reels kendi
 # ayet/hadisini taşır, hiçbir gönderinin kopyası değildir. Şablon v2 (scripts/reels.py):
 # ayet ayet altın, hadis parça parça gümüş. `content`: o slota girecek tür.
 # trial: true -> önce sadece takipçi olmayanlara gösterilir (deneme Reels).
@@ -74,12 +74,15 @@ reels:
     - {name: reel-pk, time: "20:30", tz: Asia/Karachi, content: quran}
     # Avrupa akşamı = ABD öğle arası (ilk Reels'in iyi gittiği saat)
     - {name: reel-eu, time: "13:00", tz: America/New_York, content: quran}
-    # ABD akşam prime-time
-    - {name: reel-us, time: "20:30", tz: America/New_York, content: hadith}
+    # ABD akşam prime-time. 10 Kasım'a kadar hadis; 11 Kasım'dan itibaren ayet (sahibinin kararı,
+    # 2026-11-10: hadis Reels'i v3'te ayetin ~%30'unda kaldı; hadis artık yalnızca sahibi isteyince).
+    - {name: reel-us, time: "20:30", tz: America/New_York, content: hadith, until: "2026-11-10"}
+    - {name: reel-us, time: "20:30", tz: America/New_York, content: quran, from: "2026-11-11"}
 
 # Haftada 1 carousel: tek temada 5 metin + kapak kartı (Çarşamba 18:00 New York).
+# Kapalı (sahibinin kararı, 2026-11-10: üç denemenin üçü de 50 erişimin altında). Sahibi isterse elle.
 carousel:
-  enabled: true
+  enabled: false
   slot:
     name: carousel
     time: "18:00"
