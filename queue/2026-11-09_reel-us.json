@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: Arabic checked word by word and mark by mark on card and Reel frame; English, reference, layout and caption correct.",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -112,6 +112,15 @@
     "ayahs": [
       "028024"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 21.2,
+    "video_seconds": 24.4,
+    "verse_seconds": [
+      21.16
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-10T00:58:56+00:00"
   }
 }
