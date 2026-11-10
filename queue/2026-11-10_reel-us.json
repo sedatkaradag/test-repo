@@ -1,0 +1,128 @@
+{
+  "entry_id": "quran:30:21",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ar-Room 30:21",
+  "slot": "2026-11-10_reel-us",
+  "publish_at": "2026-11-11T01:27:40Z",
+  "local_slot": "2026-11-10 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-10_reel-us.jpg",
+  "video": "queue/2026-11-10_reel-us.mp4",
+  "cover": "queue/2026-11-10_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "The love between spouses is one of Allah's signs\n\nAllah tells us that He created spouses for us from among ourselves so that we find comfort in them, and that He placed love and mercy between us. The verse ends by calling those who reflect to see the signs in this.\n\nSurah Ar-Rum 30:21\n\nSend this to your spouse, or to someone still praying for one\n\n#marriageinislam #muslimcouple #loveandmercy #quran\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "And among His signs is that He created for you spouses from among yourselves that you may find comfort in them, and He placed between you love and mercy. Indeed, there are signs in this for people who reflect (Surah Ar-Room 30:21)",
+  "theme": "marriage / love and mercy between spouses",
+  "review": "Independent verifier (round 2, new content after 25:74 was rejected as mid-sentence) approved: Arabic checked word by word and mark by mark on card and Reel frame; English, reference, layout and caption correct.",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:30:21",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The love between spouses is one of Allah's signs",
+    "hook_lines": [
+      "The love between spouses is",
+      "one of Allah's signs"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "030021",
+        "lines": [
+          "وَمِنۡ ءَايَٰتِهِۦٓ أَنۡ خَلَقَ لَكُم مِّنۡ أَنفُسِكُمۡ",
+          "أَزۡوَٰجٗا لِّتَسۡكُنُوٓاْ إِلَيۡهَا وَجَعَلَ بَيۡنَكُم مَّوَدَّةٗ",
+          "وَرَحۡمَةًۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّقَوۡمٖ يَتَفَكَّرُونَ ٢١"
+        ],
+        "y": 598.0,
+        "meal": [
+          "And among His signs is that He created for you",
+          "spouses from among yourselves that you may",
+          "find comfort in them, and He placed between",
+          "you love and mercy. Indeed, there are signs in this",
+          "for people who reflect."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "And among His signs is that He created for you spouses from among yourselves that you may find comfort in them, and He placed between you love and mercy. Indeed, there are signs in this for people who reflect.",
+    "full_lines": [
+      "And among His signs is that He created for you",
+      "spouses from among yourselves that you may",
+      "find comfort in them, and He placed between",
+      "you love and mercy. Indeed, there are signs in this",
+      "for people who reflect."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Ar-Room 30:21",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to your spouse, or to someone still praying for one",
+    "cta_lines": [
+      "Send this to your spouse, or to someone still",
+      "praying for one"
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "bad2426f507aea405318a6ff",
+  "created_at": "2026-11-10T01:02:16+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "030021"
+    ],
+    "done": false
+  }
+}
