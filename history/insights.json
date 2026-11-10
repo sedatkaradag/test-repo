@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T04:20:05+00:00",
+  "fetched_at": "2026-11-10T04:37:11+00:00",
   "account": {
     "followers_count": 387,
     "media_count": 102,
@@ -2450,16 +2450,16 @@
       "story_media_id": "18131949553872293",
       "story_kind": "video",
       "stats": {
-        "reach": 1236,
+        "reach": 1238,
         "views": 1381,
         "likes": 137,
         "comments": 0,
         "saved": 14,
         "shares": 0,
         "total_interactions": 153,
-        "ig_reels_avg_watch_time": 6334,
-        "ig_reels_video_view_total_time": 7817203,
-        "reels_skip_rate": 62.8
+        "ig_reels_avg_watch_time": 6330,
+        "ig_reels_video_view_total_time": 7818048,
+        "reels_skip_rate": 62.9
       }
     },
     {
@@ -2474,7 +2474,7 @@
       "story_kind": "video",
       "stats": {
         "reach": 1161,
-        "views": 1458,
+        "views": 1459,
         "likes": 49,
         "comments": 0,
         "saved": 7,
@@ -2501,16 +2501,16 @@
       "story_media_id": "17955164646314026",
       "story_kind": "video",
       "stats": {
-        "reach": 1223,
-        "views": 1369,
-        "likes": 86,
+        "reach": 1227,
+        "views": 1373,
+        "likes": 87,
         "comments": 0,
         "saved": 18,
         "shares": 3,
-        "total_interactions": 108,
-        "ig_reels_avg_watch_time": 3734,
-        "ig_reels_video_view_total_time": 4656612,
-        "reels_skip_rate": 73.8
+        "total_interactions": 109,
+        "ig_reels_avg_watch_time": 3728,
+        "ig_reels_video_view_total_time": 4668357,
+        "reels_skip_rate": 73.9
       }
     },
     {
@@ -2529,16 +2529,16 @@
       "story_media_id": "18415596694091190",
       "story_kind": "video",
       "stats": {
-        "reach": 956,
-        "views": 1075,
-        "likes": 108,
+        "reach": 975,
+        "views": 1098,
+        "likes": 109,
         "comments": 0,
         "saved": 9,
         "shares": 5,
-        "total_interactions": 124,
-        "ig_reels_avg_watch_time": 4260,
-        "ig_reels_video_view_total_time": 4098849,
-        "reels_skip_rate": 69.5
+        "total_interactions": 125,
+        "ig_reels_avg_watch_time": 4284,
+        "ig_reels_video_view_total_time": 4190229,
+        "reels_skip_rate": 69.3
       }
     },
     {
@@ -2557,16 +2557,16 @@
       "story_media_id": "17914348725559174",
       "story_kind": "video",
       "stats": {
-        "reach": 918,
-        "views": 1055,
-        "likes": 110,
+        "reach": 937,
+        "views": 1075,
+        "likes": 113,
         "comments": 0,
         "saved": 14,
         "shares": 3,
-        "total_interactions": 133,
-        "ig_reels_avg_watch_time": 5933,
-        "ig_reels_video_view_total_time": 5559903,
-        "reels_skip_rate": 65.8
+        "total_interactions": 137,
+        "ig_reels_avg_watch_time": 5977,
+        "ig_reels_video_view_total_time": 5714125,
+        "reels_skip_rate": 65.9
       }
     },
     {
@@ -2585,16 +2585,16 @@
       "story_media_id": "18093725339679806",
       "story_kind": "video",
       "stats": {
-        "reach": 1132,
-        "views": 1342,
-        "likes": 93,
+        "reach": 1175,
+        "views": 1382,
+        "likes": 95,
         "comments": 0,
-        "saved": 20,
+        "saved": 23,
         "shares": 5,
-        "total_interactions": 120,
-        "ig_reels_avg_watch_time": 6112,
-        "ig_reels_video_view_total_time": 6943678,
-        "reels_skip_rate": 63.6
+        "total_interactions": 125,
+        "ig_reels_avg_watch_time": 6081,
+        "ig_reels_video_view_total_time": 7175970,
+        "reels_skip_rate": 64.6
       }
     }
   ],
@@ -2607,8 +2607,8 @@
       "permalink": "https://www.instagram.com/reel/DfhJdpgJ7NH/",
       "caption_first_line": "Can you name all 4 Surahs? The last one is the hard one.",
       "stats": {
-        "reach": 2797,
-        "views": 3280,
+        "reach": 2798,
+        "views": 3283,
         "likes": 231,
         "comments": 6,
         "saved": 19,
@@ -2616,7 +2616,7 @@
         "total_interactions": 264,
         "ig_reels_avg_watch_time": 19676,
         "ig_reels_video_view_total_time": 55429459,
-        "reels_skip_rate": 59.5
+        "reels_skip_rate": 59.4
       }
     },
     {
@@ -2627,15 +2627,15 @@
       "permalink": "https://www.instagram.com/reel/Dfgn_jTphk1/",
       "caption_first_line": "Did you do your dhikr today? 📿 Save it, like it, complete it here every day 🤍",
       "stats": {
-        "reach": 2094,
-        "views": 2354,
-        "likes": 155,
+        "reach": 2113,
+        "views": 2379,
+        "likes": 157,
         "comments": 0,
         "saved": 45,
         "shares": 29,
-        "total_interactions": 240,
-        "ig_reels_avg_watch_time": 14456,
-        "ig_reels_video_view_total_time": 30388585,
+        "total_interactions": 242,
+        "ig_reels_avg_watch_time": 14433,
+        "ig_reels_video_view_total_time": 30614401,
         "reels_skip_rate": 76.6
       }
     },
@@ -2708,7 +2708,7 @@
       "caption_first_line": "Can you name all 4 surahs? 🎧",
       "stats": {
         "reach": 2138,
-        "views": 2550,
+        "views": 2551,
         "likes": 192,
         "comments": 10,
         "saved": 25,
@@ -2759,5 +2759,20 @@
         "reels_skip_rate": 62.6
       }
     }
-  ]
+  ],
+  "followers_check": {
+    "at": "2026-11-10T04:37:11+00:00",
+    "followers_count": 387,
+    "net_follows_since_first_day": 286,
+    "today_so_far": {
+      "follows": 0,
+      "unfollows": 0
+    },
+    "followers_before_first_day": 101,
+    "series": {
+      "days_compared": 40,
+      "differences": []
+    },
+    "ok": true
+  }
 }
