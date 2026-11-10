@@ -17,7 +17,7 @@
   "review": "Independent verifier (round 2, new content after 25:74 was rejected as mid-sentence) approved: Arabic checked word by word and mark by mark on card and Reel frame; English, reference, layout and caption correct.",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -123,6 +123,15 @@
     "ayahs": [
       "030021"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 22.6,
+    "video_seconds": 25.8,
+    "verse_seconds": [
+      22.57
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-10T01:02:44+00:00"
   }
 }
