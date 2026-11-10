@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic and English checked on card and Reel, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -147,5 +147,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-09T05:46:23+00:00"
-  }
+  },
+  "story_media_id": "18133946218783892",
+  "story_kind": "video",
+  "media_id": "18642582544058083",
+  "posted_at": "2026-11-10T07:15:58+00:00"
 }
