@@ -17,7 +17,7 @@
   "review": "approve r1: Arabic and English checked on card and Reel, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
