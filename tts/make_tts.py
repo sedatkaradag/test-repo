@@ -9,7 +9,7 @@ def lines_of_body():
     spoken = [w["s"] for w in S["words"] if w["s"]]
     text, out, cur = " ".join(spoken), [], ""
     # one line per sentence (the pipeline splits on newlines; a short pause goes between lines)
-    for part in re.split(r'(?<=[.?!]"?)\s+', text):
+    for part in re.split(r'(?:(?<=[.?!])|(?<=[.?!]"))\s+', text):
         out.append(part)
     return out
 def render(name, lines, gap=0.28):
