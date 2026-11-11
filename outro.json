@@ -1,0 +1,91 @@
+{
+"lines": [
+"When you correct someone's mistake, how will they remember that moment?"
+],
+"tokens": [
+{
+"text": "When",
+"ws": " ",
+"start": 0.225,
+"end": 0.338
+},
+{
+"text": "you",
+"ws": " ",
+"start": 0.338,
+"end": 0.45
+},
+{
+"text": "correct",
+"ws": " ",
+"start": 0.45,
+"end": 0.887
+},
+{
+"text": "someone's",
+"ws": " ",
+"start": 0.887,
+"end": 1.375
+},
+{
+"text": "mistake",
+"ws": "",
+"start": 1.375,
+"end": 2.175
+},
+{
+"text": ",",
+"ws": " ",
+"start": 2.175,
+"end": 2.3
+},
+{
+"text": "how",
+"ws": " ",
+"start": 2.3,
+"end": 2.525
+},
+{
+"text": "will",
+"ws": " ",
+"start": 2.525,
+"end": 2.725
+},
+{
+"text": "they",
+"ws": " ",
+"start": 2.725,
+"end": 2.9
+},
+{
+"text": "remember",
+"ws": " ",
+"start": 2.9,
+"end": 3.4
+},
+{
+"text": "that",
+"ws": " ",
+"start": 3.4,
+"end": 3.625
+},
+{
+"text": "moment",
+"ws": "",
+"start": 3.625,
+"end": 4.425
+},
+{
+"text": "?",
+"ws": "",
+"start": 4.425,
+"end": 4.625
+},
+{
+"text": "<line>",
+"start": 4.725,
+"end": 4.725
+}
+],
+"duration": 5.005
+}

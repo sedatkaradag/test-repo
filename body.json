@@ -1,0 +1,1159 @@
+{
+"lines": [
+"Muawiya ibn al Hakam said.",
+"While I was praying with the Messenger of Allah peace be upon him, a man in the company sneezed.",
+"I said: Allah have mercy on you!",
+"The people stared at me with disapproving looks, so I said: Woe be upon me, why is it that you stare at me?",
+"They began to strike their hands on their thighs, and when I saw them urging me to observe silence I became angry but I said nothing.",
+"When the Messenger of Allah peace be upon him, had said the prayer and I declare that neither before him nor after him have I seen a leader who gave better instruction than he for whom I would give my father and mother as ransom.",
+"I swear that he did not scold, beat or revile me but said: Talking to persons is not fitting during the prayer, for it consists of glorifying Allah, declaring his Greatness, and recitation of the Quran or words to that effect."
+],
+"tokens": [
+{
+"text": "Muawiya",
+"ws": " ",
+"start": 0.275,
+"end": 0.812
+},
+{
+"text": "ibn",
+"ws": " ",
+"start": 0.812,
+"end": 1.375
+},
+{
+"text": "al",
+"ws": " ",
+"start": 1.375,
+"end": 1.613
+},
+{
+"text": "Hakam",
+"ws": " ",
+"start": 1.613,
+"end": 2.15
+},
+{
+"text": "said",
+"ws": "",
+"start": 2.15,
+"end": 2.825
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.825,
+"end": 3.05
+},
+{
+"text": "<line>",
+"start": 3.15,
+"end": 3.15
+},
+{
+"text": "While",
+"ws": " ",
+"start": 3.68,
+"end": 3.842
+},
+{
+"text": "I",
+"ws": " ",
+"start": 3.842,
+"end": 3.942
+},
+{
+"text": "was",
+"ws": " ",
+"start": 3.942,
+"end": 4.117
+},
+{
+"text": "praying",
+"ws": " ",
+"start": 4.117,
+"end": 4.805
+},
+{
+"text": "with",
+"ws": " ",
+"start": 4.805,
+"end": 4.942
+},
+{
+"text": "the",
+"ws": " ",
+"start": 4.942,
+"end": 5.067
+},
+{
+"text": "Messenger",
+"ws": " ",
+"start": 5.067,
+"end": 5.68
+},
+{
+"text": "of",
+"ws": " ",
+"start": 5.68,
+"end": 5.842
+},
+{
+"text": "Allah",
+"ws": " ",
+"start": 5.842,
+"end": 6.143
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 6.143,
+"end": 6.567
+},
+{
+"text": "be",
+"ws": " ",
+"start": 6.567,
+"end": 6.755
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 6.755,
+"end": 7.13
+},
+{
+"text": "him",
+"ws": "",
+"start": 7.13,
+"end": 7.705
+},
+{
+"text": ",",
+"ws": " ",
+"start": 7.705,
+"end": 7.817
+},
+{
+"text": "a",
+"ws": " ",
+"start": 7.817,
+"end": 7.942
+},
+{
+"text": "man",
+"ws": " ",
+"start": 7.942,
+"end": 8.355
+},
+{
+"text": "in",
+"ws": " ",
+"start": 8.355,
+"end": 8.442
+},
+{
+"text": "the",
+"ws": " ",
+"start": 8.442,
+"end": 8.53
+},
+{
+"text": "company",
+"ws": " ",
+"start": 8.53,
+"end": 9.067
+},
+{
+"text": "sneezed",
+"ws": "",
+"start": 9.067,
+"end": 10.055
+},
+{
+"text": ".",
+"ws": "",
+"start": 10.055,
+"end": 10.255
+},
+{
+"text": "<line>",
+"start": 10.355,
+"end": 10.355
+},
+{
+"text": "I",
+"ws": " ",
+"start": 10.86,
+"end": 11.035
+},
+{
+"text": "said",
+"ws": "",
+"start": 11.035,
+"end": 11.46
+},
+{
+"text": ":",
+"ws": " ",
+"start": 11.46,
+"end": 11.572
+},
+{
+"text": "Allah",
+"ws": " ",
+"start": 11.572,
+"end": 11.91
+},
+{
+"text": "have",
+"ws": " ",
+"start": 11.91,
+"end": 12.123
+},
+{
+"text": "mercy",
+"ws": " ",
+"start": 12.123,
+"end": 12.585
+},
+{
+"text": "on",
+"ws": " ",
+"start": 12.585,
+"end": 12.797
+},
+{
+"text": "you",
+"ws": "",
+"start": 12.797,
+"end": 13.41
+},
+{
+"text": "!",
+"ws": "",
+"start": 13.41,
+"end": 13.585
+},
+{
+"text": "<line>",
+"start": 13.685,
+"end": 13.685
+},
+{
+"text": "The",
+"ws": " ",
+"start": 14.215,
+"end": 14.29
+},
+{
+"text": "people",
+"ws": " ",
+"start": 14.29,
+"end": 14.677
+},
+{
+"text": "stared",
+"ws": " ",
+"start": 14.677,
+"end": 15.04
+},
+{
+"text": "at",
+"ws": " ",
+"start": 15.04,
+"end": 15.165
+},
+{
+"text": "me",
+"ws": " ",
+"start": 15.165,
+"end": 15.39
+},
+{
+"text": "with",
+"ws": " ",
+"start": 15.39,
+"end": 15.565
+},
+{
+"text": "disapproving",
+"ws": " ",
+"start": 15.565,
+"end": 16.265
+},
+{
+"text": "looks",
+"ws": "",
+"start": 16.265,
+"end": 16.665
+},
+{
+"text": ",",
+"ws": " ",
+"start": 16.665,
+"end": 16.765
+},
+{
+"text": "so",
+"ws": " ",
+"start": 16.765,
+"end": 16.965
+},
+{
+"text": "I",
+"ws": " ",
+"start": 16.965,
+"end": 17.14
+},
+{
+"text": "said",
+"ws": "",
+"start": 17.14,
+"end": 17.765
+},
+{
+"text": ":",
+"ws": " ",
+"start": 17.765,
+"end": 17.902
+},
+{
+"text": "Woe",
+"ws": " ",
+"start": 17.902,
+"end": 18.14
+},
+{
+"text": "be",
+"ws": " ",
+"start": 18.14,
+"end": 18.315
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 18.315,
+"end": 18.69
+},
+{
+"text": "me",
+"ws": "",
+"start": 18.69,
+"end": 19.09
+},
+{
+"text": ",",
+"ws": " ",
+"start": 19.09,
+"end": 19.19
+},
+{
+"text": "why",
+"ws": " ",
+"start": 19.19,
+"end": 19.44
+},
+{
+"text": "is",
+"ws": " ",
+"start": 19.44,
+"end": 19.59
+},
+{
+"text": "it",
+"ws": " ",
+"start": 19.59,
+"end": 19.74
+},
+{
+"text": "that",
+"ws": " ",
+"start": 19.74,
+"end": 19.865
+},
+{
+"text": "you",
+"ws": " ",
+"start": 19.865,
+"end": 20.052
+},
+{
+"text": "stare",
+"ws": " ",
+"start": 20.052,
+"end": 20.39
+},
+{
+"text": "at",
+"ws": " ",
+"start": 20.39,
+"end": 20.515
+},
+{
+"text": "me",
+"ws": "",
+"start": 20.515,
+"end": 21.09
+},
+{
+"text": "?",
+"ws": "",
+"start": 21.09,
+"end": 21.265
+},
+{
+"text": "<line>",
+"start": 21.365,
+"end": 21.365
+},
+{
+"text": "They",
+"ws": " ",
+"start": 21.895,
+"end": 22.02
+},
+{
+"text": "began",
+"ws": " ",
+"start": 22.02,
+"end": 22.395
+},
+{
+"text": "to",
+"ws": " ",
+"start": 22.395,
+"end": 22.532
+},
+{
+"text": "strike",
+"ws": " ",
+"start": 22.532,
+"end": 22.92
+},
+{
+"text": "their",
+"ws": " ",
+"start": 22.92,
+"end": 23.133
+},
+{
+"text": "hands",
+"ws": " ",
+"start": 23.133,
+"end": 23.532
+},
+{
+"text": "on",
+"ws": " ",
+"start": 23.532,
+"end": 23.67
+},
+{
+"text": "their",
+"ws": " ",
+"start": 23.67,
+"end": 23.883
+},
+{
+"text": "thighs",
+"ws": "",
+"start": 23.883,
+"end": 24.695
+},
+{
+"text": ",",
+"ws": " ",
+"start": 24.695,
+"end": 24.795
+},
+{
+"text": "and",
+"ws": " ",
+"start": 24.795,
+"end": 24.907
+},
+{
+"text": "when",
+"ws": " ",
+"start": 24.907,
+"end": 25.032
+},
+{
+"text": "I",
+"ws": " ",
+"start": 25.032,
+"end": 25.183
+},
+{
+"text": "saw",
+"ws": " ",
+"start": 25.183,
+"end": 25.407
+},
+{
+"text": "them",
+"ws": " ",
+"start": 25.407,
+"end": 25.633
+},
+{
+"text": "urging",
+"ws": " ",
+"start": 25.633,
+"end": 25.983
+},
+{
+"text": "me",
+"ws": " ",
+"start": 25.983,
+"end": 26.17
+},
+{
+"text": "to",
+"ws": " ",
+"start": 26.17,
+"end": 26.32
+},
+{
+"text": "observe",
+"ws": " ",
+"start": 26.32,
+"end": 26.87
+},
+{
+"text": "silence",
+"ws": " ",
+"start": 26.87,
+"end": 27.72
+},
+{
+"text": "I",
+"ws": " ",
+"start": 27.72,
+"end": 27.87
+},
+{
+"text": "became",
+"ws": " ",
+"start": 27.87,
+"end": 28.32
+},
+{
+"text": "angry",
+"ws": " ",
+"start": 28.32,
+"end": 29.082
+},
+{
+"text": "but",
+"ws": " ",
+"start": 29.082,
+"end": 29.233
+},
+{
+"text": "I",
+"ws": " ",
+"start": 29.233,
+"end": 29.383
+},
+{
+"text": "said",
+"ws": " ",
+"start": 29.383,
+"end": 29.645
+},
+{
+"text": "nothing",
+"ws": "",
+"start": 29.645,
+"end": 30.445
+},
+{
+"text": ".",
+"ws": "",
+"start": 30.445,
+"end": 30.62
+},
+{
+"text": "<line>",
+"start": 30.72,
+"end": 30.72
+},
+{
+"text": "When",
+"ws": " ",
+"start": 31.25,
+"end": 31.363
+},
+{
+"text": "the",
+"ws": " ",
+"start": 31.363,
+"end": 31.45
+},
+{
+"text": "Messenger",
+"ws": " ",
+"start": 31.45,
+"end": 32.0
+},
+{
+"text": "of",
+"ws": " ",
+"start": 32.0,
+"end": 32.163
+},
+{
+"text": "Allah",
+"ws": " ",
+"start": 32.163,
+"end": 32.438
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 32.438,
+"end": 32.775
+},
+{
+"text": "be",
+"ws": " ",
+"start": 32.775,
+"end": 32.95
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 32.95,
+"end": 33.3
+},
+{
+"text": "him",
+"ws": "",
+"start": 33.3,
+"end": 33.85
+},
+{
+"text": ",",
+"ws": " ",
+"start": 33.85,
+"end": 33.95
+},
+{
+"text": "had",
+"ws": " ",
+"start": 33.95,
+"end": 34.163
+},
+{
+"text": "said",
+"ws": " ",
+"start": 34.163,
+"end": 34.425
+},
+{
+"text": "the",
+"ws": " ",
+"start": 34.425,
+"end": 34.562
+},
+{
+"text": "prayer",
+"ws": " ",
+"start": 34.562,
+"end": 35.425
+},
+{
+"text": "and",
+"ws": " ",
+"start": 35.425,
+"end": 35.562
+},
+{
+"text": "I",
+"ws": " ",
+"start": 35.562,
+"end": 35.7
+},
+{
+"text": "declare",
+"ws": " ",
+"start": 35.7,
+"end": 36.225
+},
+{
+"text": "that",
+"ws": " ",
+"start": 36.225,
+"end": 36.438
+},
+{
+"text": "neither",
+"ws": " ",
+"start": 36.438,
+"end": 36.8
+},
+{
+"text": "before",
+"ws": " ",
+"start": 36.8,
+"end": 37.225
+},
+{
+"text": "him",
+"ws": " ",
+"start": 37.225,
+"end": 37.487
+},
+{
+"text": "nor",
+"ws": " ",
+"start": 37.487,
+"end": 37.763
+},
+{
+"text": "after",
+"ws": " ",
+"start": 37.763,
+"end": 38.125
+},
+{
+"text": "him",
+"ws": " ",
+"start": 38.125,
+"end": 38.763
+},
+{
+"text": "have",
+"ws": " ",
+"start": 38.763,
+"end": 38.938
+},
+{
+"text": "I",
+"ws": " ",
+"start": 38.938,
+"end": 39.1
+},
+{
+"text": "seen",
+"ws": " ",
+"start": 39.1,
+"end": 39.375
+},
+{
+"text": "a",
+"ws": " ",
+"start": 39.375,
+"end": 39.487
+},
+{
+"text": "leader",
+"ws": " ",
+"start": 39.487,
+"end": 40.237
+},
+{
+"text": "who",
+"ws": " ",
+"start": 40.237,
+"end": 40.4
+},
+{
+"text": "gave",
+"ws": " ",
+"start": 40.4,
+"end": 40.712
+},
+{
+"text": "better",
+"ws": " ",
+"start": 40.712,
+"end": 41.025
+},
+{
+"text": "instruction",
+"ws": " ",
+"start": 41.025,
+"end": 41.7
+},
+{
+"text": "than",
+"ws": " ",
+"start": 41.7,
+"end": 41.875
+},
+{
+"text": "he",
+"ws": " ",
+"start": 41.875,
+"end": 42.5
+},
+{
+"text": "for",
+"ws": " ",
+"start": 42.5,
+"end": 42.65
+},
+{
+"text": "whom",
+"ws": " ",
+"start": 42.65,
+"end": 42.925
+},
+{
+"text": "I",
+"ws": " ",
+"start": 42.925,
+"end": 43.075
+},
+{
+"text": "would",
+"ws": " ",
+"start": 43.075,
+"end": 43.225
+},
+{
+"text": "give",
+"ws": " ",
+"start": 43.225,
+"end": 43.45
+},
+{
+"text": "my",
+"ws": " ",
+"start": 43.45,
+"end": 43.663
+},
+{
+"text": "father",
+"ws": " ",
+"start": 43.663,
+"end": 44.05
+},
+{
+"text": "and",
+"ws": " ",
+"start": 44.05,
+"end": 44.175
+},
+{
+"text": "mother",
+"ws": " ",
+"start": 44.175,
+"end": 44.675
+},
+{
+"text": "as",
+"ws": " ",
+"start": 44.675,
+"end": 44.862
+},
+{
+"text": "ransom",
+"ws": "",
+"start": 44.862,
+"end": 45.8
+},
+{
+"text": ".",
+"ws": "",
+"start": 45.8,
+"end": 46.0
+},
+{
+"text": "<line>",
+"start": 46.1,
+"end": 46.1
+},
+{
+"text": "I",
+"ws": " ",
+"start": 46.63,
+"end": 46.793
+},
+{
+"text": "swear",
+"ws": " ",
+"start": 46.793,
+"end": 47.055
+},
+{
+"text": "that",
+"ws": " ",
+"start": 47.055,
+"end": 47.168
+},
+{
+"text": "he",
+"ws": " ",
+"start": 47.168,
+"end": 47.268
+},
+{
+"text": "did",
+"ws": " ",
+"start": 47.268,
+"end": 47.393
+},
+{
+"text": "not",
+"ws": " ",
+"start": 47.393,
+"end": 47.63
+},
+{
+"text": "scold",
+"ws": "",
+"start": 47.63,
+"end": 48.355
+},
+{
+"text": ",",
+"ws": " ",
+"start": 48.355,
+"end": 48.468
+},
+{
+"text": "beat",
+"ws": " ",
+"start": 48.468,
+"end": 48.905
+},
+{
+"text": "or",
+"ws": " ",
+"start": 48.905,
+"end": 49.08
+},
+{
+"text": "revile",
+"ws": " ",
+"start": 49.08,
+"end": 49.518
+},
+{
+"text": "me",
+"ws": " ",
+"start": 49.518,
+"end": 49.655
+},
+{
+"text": "but",
+"ws": " ",
+"start": 49.655,
+"end": 49.867
+},
+{
+"text": "said",
+"ws": "",
+"start": 49.867,
+"end": 50.605
+},
+{
+"text": ":",
+"ws": " ",
+"start": 50.605,
+"end": 50.768
+},
+{
+"text": "Talking",
+"ws": " ",
+"start": 50.768,
+"end": 51.18
+},
+{
+"text": "to",
+"ws": " ",
+"start": 51.18,
+"end": 51.305
+},
+{
+"text": "persons",
+"ws": " ",
+"start": 51.305,
+"end": 51.918
+},
+{
+"text": "is",
+"ws": " ",
+"start": 51.918,
+"end": 52.08
+},
+{
+"text": "not",
+"ws": " ",
+"start": 52.08,
+"end": 52.318
+},
+{
+"text": "fitting",
+"ws": " ",
+"start": 52.318,
+"end": 52.705
+},
+{
+"text": "during",
+"ws": " ",
+"start": 52.705,
+"end": 52.992
+},
+{
+"text": "the",
+"ws": " ",
+"start": 52.992,
+"end": 53.093
+},
+{
+"text": "prayer",
+"ws": "",
+"start": 53.093,
+"end": 53.88
+},
+{
+"text": ",",
+"ws": " ",
+"start": 53.88,
+"end": 53.98
+},
+{
+"text": "for",
+"ws": " ",
+"start": 53.98,
+"end": 54.105
+},
+{
+"text": "it",
+"ws": " ",
+"start": 54.105,
+"end": 54.205
+},
+{
+"text": "consists",
+"ws": " ",
+"start": 54.205,
+"end": 54.755
+},
+{
+"text": "of",
+"ws": " ",
+"start": 54.755,
+"end": 54.918
+},
+{
+"text": "glorifying",
+"ws": " ",
+"start": 54.918,
+"end": 55.668
+},
+{
+"text": "Allah",
+"ws": "",
+"start": 55.668,
+"end": 56.28
+},
+{
+"text": ",",
+"ws": " ",
+"start": 56.28,
+"end": 56.405
+},
+{
+"text": "declaring",
+"ws": " ",
+"start": 56.405,
+"end": 56.93
+},
+{
+"text": "his",
+"ws": " ",
+"start": 56.93,
+"end": 57.118
+},
+{
+"text": "Greatness",
+"ws": "",
+"start": 57.118,
+"end": 57.955
+},
+{
+"text": ",",
+"ws": " ",
+"start": 57.955,
+"end": 58.055
+},
+{
+"text": "and",
+"ws": " ",
+"start": 58.055,
+"end": 58.18
+},
+{
+"text": "recitation",
+"ws": " ",
+"start": 58.18,
+"end": 58.93
+},
+{
+"text": "of",
+"ws": " ",
+"start": 58.93,
+"end": 59.017
+},
+{
+"text": "the",
+"ws": " ",
+"start": 59.017,
+"end": 59.142
+},
+{
+"text": "Quran",
+"ws": " ",
+"start": 59.142,
+"end": 59.855
+},
+{
+"text": "or",
+"ws": " ",
+"start": 59.855,
+"end": 60.043
+},
+{
+"text": "words",
+"ws": " ",
+"start": 60.043,
+"end": 60.693
+},
+{
+"text": "to",
+"ws": " ",
+"start": 60.693,
+"end": 60.83
+},
+{
+"text": "that",
+"ws": " ",
+"start": 60.83,
+"end": 61.055
+},
+{
+"text": "effect",
+"ws": "",
+"start": 61.055,
+"end": 61.88
+},
+{
+"text": ".",
+"ws": "",
+"start": 61.88,
+"end": 62.105
+},
+{
+"text": "<line>",
+"start": 62.205,
+"end": 62.205
+}
+],
+"duration": 62.485
+}
