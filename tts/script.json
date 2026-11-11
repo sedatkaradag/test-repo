@@ -1,0 +1,926 @@
+{
+"hook": "Can you live in the same house as someone, and still neglect them?",
+"outro": "Who in your home needs their right from you today?",
+"words": [
+{
+"d": "Narrated",
+"s": "Narrated"
+},
+{
+"d": "Abu",
+"s": "Abu"
+},
+{
+"d": "Juhaifa:",
+"s": "Juhayfa:"
+},
+{
+"d": "The",
+"s": "The"
+},
+{
+"d": "Prophet",
+"s": "Prophet"
+},
+{
+"d": "(ﷺ)",
+"s": "peace be upon him,"
+},
+{
+"d": "made",
+"s": "made"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "bond",
+"s": "bond"
+},
+{
+"d": "of",
+"s": "of"
+},
+{
+"d": "brotherhood",
+"s": "brotherhood"
+},
+{
+"d": "between",
+"s": "between"
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda.'",
+"s": "Darda."
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "paid",
+"s": "paid"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "visit",
+"s": "visit"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "found",
+"s": "found"
+},
+{
+"d": "Um",
+"s": "Ummud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "dressed",
+"s": "dressed"
+},
+{
+"d": "in",
+"s": "in"
+},
+{
+"d": "shabby",
+"s": "shabby"
+},
+{
+"d": "clothes",
+"s": "clothes"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "asked",
+"s": "asked"
+},
+{
+"d": "her",
+"s": "her"
+},
+{
+"d": "why",
+"s": "why"
+},
+{
+"d": "she",
+"s": "she"
+},
+{
+"d": "was",
+"s": "was"
+},
+{
+"d": "in",
+"s": "in"
+},
+{
+"d": "that",
+"s": "that"
+},
+{
+"d": "state.",
+"s": "state."
+},
+{
+"d": "She",
+"s": "She"
+},
+{
+"d": "replied,",
+"s": "replied,"
+},
+{
+"d": "\"Your",
+"s": "\"Your"
+},
+{
+"d": "brother",
+"s": "brother"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "is",
+"s": "is"
+},
+{
+"d": "not",
+"s": "not"
+},
+{
+"d": "interested",
+"s": "interested"
+},
+{
+"d": "in",
+"s": "in"
+},
+{
+"d": "(the",
+"s": "the"
+},
+{
+"d": "luxuries",
+"s": "luxuries"
+},
+{
+"d": "of)",
+"s": "of"
+},
+{
+"d": "this",
+"s": "this"
+},
+{
+"d": "world.\"",
+"s": "world.\""
+},
+{
+"d": "In",
+"s": "In"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "meantime",
+"s": "meantime"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "came",
+"s": "came"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "prepared",
+"s": "prepared"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "meal",
+"s": "meal"
+},
+{
+"d": "for",
+"s": "for"
+},
+{
+"d": "Salman.",
+"s": "Salman."
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "requested",
+"s": "requested"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-",
+"s": ""
+},
+{
+"d": "Darda'",
+"s": "Darda"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "eat",
+"s": "eat"
+},
+{
+"d": "(with",
+"s": "with"
+},
+{
+"d": "him),",
+"s": "him,"
+},
+{
+"d": "but",
+"s": "but"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "said,",
+"s": "said,"
+},
+{
+"d": "\"I",
+"s": "\"I"
+},
+{
+"d": "am",
+"s": "am"
+},
+{
+"d": "fasting.\"",
+"s": "fasting.\""
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "said,",
+"s": "said,"
+},
+{
+"d": "\"I",
+"s": "\"I"
+},
+{
+"d": "am",
+"s": "am"
+},
+{
+"d": "not",
+"s": "not"
+},
+{
+"d": "going",
+"s": "going"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "eat",
+"s": "eat"
+},
+{
+"d": "unless",
+"s": "unless"
+},
+{
+"d": "you",
+"s": "you"
+},
+{
+"d": "eat.\"",
+"s": "eat.\""
+},
+{
+"d": "So,",
+"s": "So,"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "ate",
+"s": "ate"
+},
+{
+"d": "(with",
+"s": "with"
+},
+{
+"d": "Salman).",
+"s": "Salman."
+},
+{
+"d": "When",
+"s": "When"
+},
+{
+"d": "it",
+"s": "it"
+},
+{
+"d": "was",
+"s": "was"
+},
+{
+"d": "night",
+"s": "night"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "(a",
+"s": "a"
+},
+{
+"d": "part",
+"s": "part"
+},
+{
+"d": "of",
+"s": "of"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "night",
+"s": "night"
+},
+{
+"d": "passed),",
+"s": "passed,"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "got",
+"s": "got"
+},
+{
+"d": "up",
+"s": "up"
+},
+{
+"d": "(to",
+"s": "to"
+},
+{
+"d": "offer",
+"s": "offer"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "night",
+"s": "night"
+},
+{
+"d": "prayer),",
+"s": "prayer,"
+},
+{
+"d": "but",
+"s": "but"
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "told",
+"s": "told"
+},
+{
+"d": "him",
+"s": "him"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "sleep",
+"s": "sleep"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-",
+"s": ""
+},
+{
+"d": "Darda'",
+"s": "Darda"
+},
+{
+"d": "slept.",
+"s": "slept."
+},
+{
+"d": "After",
+"s": "After"
+},
+{
+"d": "sometime",
+"s": "sometime"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda'",
+"s": "Darda"
+},
+{
+"d": "again",
+"s": "again"
+},
+{
+"d": "got",
+"s": "got"
+},
+{
+"d": "up",
+"s": "up"
+},
+{
+"d": "but",
+"s": "but"
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "told",
+"s": "told"
+},
+{
+"d": "him",
+"s": "him"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "sleep.",
+"s": "sleep."
+},
+{
+"d": "When",
+"s": "When"
+},
+{
+"d": "it",
+"s": "it"
+},
+{
+"d": "was",
+"s": "was"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "last",
+"s": "last"
+},
+{
+"d": "hours",
+"s": "hours"
+},
+{
+"d": "of",
+"s": "of"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "night,",
+"s": "night,"
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "told",
+"s": "told"
+},
+{
+"d": "him",
+"s": "him"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "get",
+"s": "get"
+},
+{
+"d": "up",
+"s": "up"
+},
+{
+"d": "then,",
+"s": "then,"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "both",
+"s": "both"
+},
+{
+"d": "of",
+"s": "of"
+},
+{
+"d": "them",
+"s": "them"
+},
+{
+"d": "offered",
+"s": "offered"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "prayer.",
+"s": "prayer."
+},
+{
+"d": "Salman",
+"s": "Salman"
+},
+{
+"d": "told",
+"s": "told"
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-Darda',",
+"s": "Darda,"
+},
+{
+"d": "\"Your",
+"s": "\"Your"
+},
+{
+"d": "Lord",
+"s": "Lord"
+},
+{
+"d": "has",
+"s": "has"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "right",
+"s": "right"
+},
+{
+"d": "on",
+"s": "on"
+},
+{
+"d": "you,",
+"s": "you,"
+},
+{
+"d": "your",
+"s": "your"
+},
+{
+"d": "soul",
+"s": "soul"
+},
+{
+"d": "has",
+"s": "has"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "right",
+"s": "right"
+},
+{
+"d": "on",
+"s": "on"
+},
+{
+"d": "you,",
+"s": "you,"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "your",
+"s": "your"
+},
+{
+"d": "family",
+"s": "family"
+},
+{
+"d": "has",
+"s": "has"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "right",
+"s": "right"
+},
+{
+"d": "on",
+"s": "on"
+},
+{
+"d": "you;",
+"s": "you;"
+},
+{
+"d": "so",
+"s": "so"
+},
+{
+"d": "you",
+"s": "you"
+},
+{
+"d": "should",
+"s": "should"
+},
+{
+"d": "give",
+"s": "give"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "rights",
+"s": "rights"
+},
+{
+"d": "of",
+"s": "of"
+},
+{
+"d": "all",
+"s": "all"
+},
+{
+"d": "those",
+"s": "those"
+},
+{
+"d": "who",
+"s": "who"
+},
+{
+"d": "has",
+"s": "has"
+},
+{
+"d": "a",
+"s": "a"
+},
+{
+"d": "right",
+"s": "right"
+},
+{
+"d": "on",
+"s": "on"
+},
+{
+"d": "you.\"",
+"s": "you.\""
+},
+{
+"d": "Abu",
+"s": "Abud"
+},
+{
+"d": "Ad-",
+"s": ""
+},
+{
+"d": "Darda'",
+"s": "Darda"
+},
+{
+"d": "came",
+"s": "came"
+},
+{
+"d": "to",
+"s": "to"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "Prophet",
+"s": "Prophet"
+},
+{
+"d": "(ﷺ)",
+"s": "peace be upon him,"
+},
+{
+"d": "and",
+"s": "and"
+},
+{
+"d": "narrated",
+"s": "narrated"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "whole",
+"s": "whole"
+},
+{
+"d": "story.",
+"s": "story."
+},
+{
+"d": "The",
+"s": "The"
+},
+{
+"d": "Prophet",
+"s": "Prophet"
+},
+{
+"d": "(ﷺ)",
+"s": "peace be upon him,"
+},
+{
+"d": "said,",
+"s": "said,"
+},
+{
+"d": "\"Salman",
+"s": "\"Salman"
+},
+{
+"d": "has",
+"s": "has"
+},
+{
+"d": "spoken",
+"s": "spoken"
+},
+{
+"d": "the",
+"s": "the"
+},
+{
+"d": "truth",
+"s": "truth"
+}
+]
+}
