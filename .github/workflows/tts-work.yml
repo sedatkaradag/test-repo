@@ -1,10 +1,10 @@
 name: tts-work
-# Temporary, branch tts-work only: makes an English narration with Kokoro (free, open source). Writes nothing to the repo.
+# Temporary, branch tts-work only: makes an English narration with Kokoro (free, open source). Writes only branch tts-out.
 on:
   push:
     branches: [tts-work]
 permissions:
-  contents: read
+  contents: write
 jobs:
   tts:
     runs-on: ubuntu-latest
@@ -16,5 +16,9 @@ jobs:
       - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng
       - run: pip install -q "kokoro>=0.9.4" soundfile
       - run: python tts/make_tts.py bm_george 0.95
-      - uses: actions/upload-artifact@v4
-        with: {name: tts-out, path: out/}
+      - name: push the narration to branch tts-out
+        run: |
+          cd out
+          git init -q -b tts-out && git config user.name tts && git config user.email tts@users.noreply.github.com
+          git add -A && git commit -qm "tts output"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" tts-out
