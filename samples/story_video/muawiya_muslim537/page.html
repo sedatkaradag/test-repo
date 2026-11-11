@@ -85,108 +85,94 @@ const ramp = (t, t0, d) => ease((t - t0) / d);
 const lerp = (a, b, k) => a + (b - a) * k;
 const C = D.cue;
 
-// ---------- people, seen from behind and a little above (no faces anywhere) ----------
-// head: dark hair with a cap (kufi) or a small turban on top; turn = -1..1 turns the head so a cheek edge shows
+// ---------- people, seen from behind and above, like the example: short, wide, big round heads, no faces ----------
+// local units, floor at y = 0; body 116 wide and 106 high; head (dark hair + cap from above) 64 wide
 function headTop(c, turn = 0, outline = false) {
-  const sx = turn * 9, rot = turn * 14;
-  const st = outline ? `stroke="#0b1a17" stroke-width="5"` : "";
-  const cheek = turn === 0 ? "" : `<path transform="scale(${Math.sign(turn)} 1)" d="M30 -414 C44 -404 46 -380 34 -362 C28 -356 20 -356 16 -362 C26 -378 28 -398 22 -412 Z" fill="${c.skin}"/>
-      <path transform="scale(${Math.sign(turn)} 1)" d="M34 -372 C30 -360 22 -356 16 -362 C18 -366 22 -370 24 -374 Z" fill="${c.hair}" opacity=".9"/>`;
-  const cap = c.turban
-    ? `<ellipse cx="0" cy="-418" rx="47" ry="33" fill="${c.cap}" ${st}/>
-       <path d="M-44 -424 C-20 -404 20 -404 44 -424 M-40 -436 C-16 -418 16 -418 40 -436" stroke="${c.capShade}" stroke-width="5" fill="none" opacity=".7"/>`
-    : `<ellipse cx="0" cy="-416" rx="41" ry="30" fill="${c.cap}" ${st}/>
-       <ellipse cx="0" cy="-421" rx="27" ry="18" fill="none" stroke="${c.capShade}" stroke-width="3" opacity=".8"/>
-       <ellipse cx="0" cy="-424" rx="11" ry="7" fill="${c.capShade}" opacity=".6"/>`;
-  return `<g transform="rotate(${rot} 0 -390) translate(${sx} 0)">
-      <ellipse cx="0" cy="-392" rx="40" ry="42" fill="${c.hair}" ${st}/>${cheek}${cap}</g>`;
+  const st = outline ? `stroke="#0b1a17" stroke-width="4"` : "";
+  const rot = turn * 24, dx = turn * 5;
+  // a turned head only shows its ear and the edge of the cheek on the side it turns to; never a face or a beard
+  const ear = turn === 0 ? "" : `<ellipse cx="${Math.sign(turn) * 27}" cy="-124" rx="6" ry="10" fill="${c.skin}" transform="rotate(${rot} 0 -128)"/>`;
+  return `${ear}<g transform="rotate(${rot} 0 -128) translate(${dx} 0)">
+    <ellipse cx="0" cy="-128" rx="29" ry="24" fill="${c.hair}" ${st}/>
+    <ellipse cx="0" cy="-141" rx="30" ry="18" fill="${c.cap}" ${st}/>
+    <ellipse cx="0" cy="-143" rx="20" ry="10" fill="none" stroke="${c.capShade}" stroke-width="2.5" opacity=".8"/>
+    <ellipse cx="0" cy="-144" rx="7" ry="4" fill="${c.capShade}" opacity=".6"/></g>`;
 }
-// shoulders and back; arms only show in the close-up of the hands
 function personTop(c, turn = 0, outline = false) {
-  const st = outline ? `stroke="#0b1a17" stroke-width="5"` : "";
-  return `<path d="M-108 -250 C-112 -320 -86 -352 -40 -360 C-20 -364 20 -364 40 -360 C86 -352 112 -320 108 -250 L116 430 C60 446 -60 446 -116 430 Z" fill="${c.robe}" ${st}/>
-    <path d="M0 -356 L0 430" stroke="#000" stroke-opacity=".1" stroke-width="3"/>
-    <path d="M-108 -250 C-112 -320 -86 -352 -40 -360 L-60 -300 C-80 -260 -84 -100 -90 436 L-116 430 Z" fill="#000" opacity=".08"/>
+  const st = outline ? `stroke="#0b1a17" stroke-width="4"` : "";
+  const hands = outline ? `<ellipse cx="-51" cy="-26" rx="8" ry="11" fill="${c.skin}" stroke="#0b1a17" stroke-width="3"/><ellipse cx="51" cy="-26" rx="8" ry="11" fill="${c.skin}" stroke="#0b1a17" stroke-width="3"/>` : "";
+  return `<ellipse cx="0" cy="2" rx="48" ry="7" fill="#000" opacity=".22"/>${hands}
+    <path d="M-48 0 L-48 -78 C-48 -104 -34 -116 -16 -118 L16 -118 C34 -116 48 -104 48 -78 L48 0 Z" fill="${c.robe}" ${st}/>
+    <path d="M0 -116 L0 0" stroke="#000" stroke-opacity=".12" stroke-width="2.5"/>
+    <path d="M-48 0 L-48 -78 C-48 -104 -34 -116 -16 -118 L-24 -104 C-34 -92 -36 -70 -36 0 Z" fill="#fff" opacity="${outline ? 0.06 : 0.05}"/>
     ${headTop(c, turn, outline)}`;
 }
 const PAL = [
-  { robe: "#4c5d66", hair: "#2a2018", skin: "#a87a52", cap: "#e3d9c2", capShade: "#bfb296" },
-  { robe: "#6b5a46", hair: "#231a13", skin: "#97683f", cap: "#d8c49a", capShade: "#b09b6c", turban: true },
-  { robe: "#3f5148", hair: "#2a2018", skin: "#a87a52", cap: "#efe8d8", capShade: "#cbc2ad" },
-  { robe: "#5e6670", hair: "#30251b", skin: "#8f6340", cap: "#d9cfb8", capShade: "#b5aa90" },
-  { robe: "#7a6a52", hair: "#231a13", skin: "#a87a52", cap: "#e9e1cf", capShade: "#c7bea9", turban: true },
-  { robe: "#465a6e", hair: "#2a2018", skin: "#97683f", cap: "#d4c7a6", capShade: "#ae9f7c" },
+  { robe: "#3d556f", hair: "#231a13", skin: "#a87a52", cap: "#e6dcc6", capShade: "#c2b597" },
+  { robe: "#5a4636", hair: "#2a2018", skin: "#97683f", cap: "#d9c79f", capShade: "#b39e72" },
+  { robe: "#786a56", hair: "#231a13", skin: "#a87a52", cap: "#ece5d4", capShade: "#c9c0aa" },
+  { robe: "#4b5d6a", hair: "#30251b", skin: "#8f6340", cap: "#ddd2b9", capShade: "#b8ac90" },
+  { robe: "#3f5148", hair: "#2a2018", skin: "#a87a52", cap: "#e9e1cf", capShade: "#c7bea9" },
+  { robe: "#66574a", hair: "#231a13", skin: "#97683f", cap: "#d4c7a6", capShade: "#ae9f7c" },
 ];
-const MUAWIYA = { robe: "#f1ece0", hair: "#231a13", skin: "#a87a52", cap: "#d9c08c", capShade: "#b59b62" };
+const MUAWIYA = { robe: "#f3eee2", hair: "#231a13", skin: "#a87a52", cap: "#d9c08c", capShade: "#b59b62" };
 
-// ---------- one world for every shot: rows of people going forward until they are lost in haze ----------
-// Row r = 0 is Mu'awiya's row, r = 1, 2, ... are in front of him (towards the front, which is never seen),
-// r = -1 is the row behind, closest to the camera. Perspective: a row at distance z is drawn at scale K/z,
-// its shoulder line at y = HOR + Y/z, so the rows shrink towards the horizon line HOR and vanish there.
-const HOR = 380, K = 0.78, Y = 880, DZ = 0.12, SP = 222, RMAX = 60;
-const zOf = (r) => r < 0 ? 0.7 : 1 + r * DZ;   // the row behind (closest to the camera) is lower in the frame, out of focus
+// ---------- one world for every shot: rows stacked one above the other (as in the example), each a little
+// smaller and further into the haze; the rows ahead are lost in haze long before any front is reached ----------
+const G = 1.55, STEP = 100, F = 0.93, SP = 104, Y0 = 1360, RMAX = 30, FY = Y0 - 60;
+const rowS = (r) => r < 0 ? G / Math.pow(F, 1.7) : G * Math.pow(F, r);
+const rowY = (r) => r < 0 ? Y0 + G * STEP * 1.95 : Y0 - G * STEP * (1 - Math.pow(F, r)) / (1 - F);
 const HAZE = "#3a5a4e";
 function rowStyle(r) {
-  const z = zOf(r);
-  const haze = r <= 0 ? 0 : 1 - Math.exp(-1.15 * (z - 1));              // farther = more haze, at the end nothing but haze
-  const blur = r < 0 ? 9 : r === 0 ? 0 : Math.min(7, 0.8 + (z - 1) * 4);    // focus is on Mu'awiya's row
-  return { z, s: K / z, y: HOR + Y / z, haze, blur };
+  const haze = r <= 0 ? 0 : 1 - Math.exp(-0.17 * r);
+  const blur = r < 0 ? 9 : r === 0 ? 0 : Math.min(6, 0.6 + r * 0.42);
+  return { s: rowS(r), y: rowY(r), haze, blur };
 }
 let FILTERS_READY = false;
 function makeFilters() {
   if (FILTERS_READY) return;
-  const defs = document.querySelector("#stage defs");
   let f = "";
   for (let r = -1; r <= RMAX; r++) {
     const st = rowStyle(r);
-    // mix the row's own colours with the haze colour, then blur it (in the row's own scale)
     f += `<filter id="row${r + 1}" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
       <feFlood flood-color="${HAZE}" result="fog"/><feComposite in="fog" in2="SourceGraphic" operator="in" result="fogShape"/>
       <feComposite in="SourceGraphic" in2="fogShape" operator="arithmetic" k1="0" k2="${(1 - st.haze).toFixed(3)}" k3="${st.haze.toFixed(3)}" k4="0" result="mixed"/>
       <feGaussianBlur in="mixed" stdDeviation="${(st.blur / st.s).toFixed(2)}"/></filter>`;
   }
-  defs.insertAdjacentHTML("beforeend", f);
+  document.querySelector("#stage defs").insertAdjacentHTML("beforeend", f);
   FILTERS_READY = true;
 }
 const palOf = (r, j) => PAL[((j * 7 + r * 3) % PAL.length + PAL.length) % PAL.length];
-// cam = {zoom, fx, fy}: the world point (fx, fy) is shown at the centre line x = 540, y = sy
 function world(t, cam, look, jolt, warm, kind) {
   makeFilters();
-  const { zoom, sy } = cam, fx = 540, fy = 1260;
-  const toScreen = (x, y) => [540 + (x - fx) * zoom, sy + (y - fy) * zoom];
-  let g = "";
+  const { zoom, sy } = cam;
+  const toScreenY = (y) => sy + (y - FY) * zoom;
   const L = window.PREP ? null : (D.layers || {})[kind];
   const from = window.PREP ? (window.PREP.part === "far" ? RMAX : -1) : (L ? 2 : RMAX);
   const to = window.PREP ? (window.PREP.part === "far" ? 3 : -1) : (L ? 0 : -1);
+  let g = "";
   for (let r = from; r >= to; r--) {
-    const st = rowStyle(r);
-    const off = (r % 2 ? 0.5 : 0);
-    let row = "";
-    const jmax = Math.ceil((620 / zoom) * st.z / SP) + 1;
+    const st = rowStyle(r), off = r % 2 ? 0.5 : 0;
+    const top = toScreenY(st.y - 160 * st.s);
+    if (toScreenY(st.y) < -40 || top > 1960) continue;
+    let row = `<rect x="-2000" y="${st.y - 4 * st.s}" width="5080" height="${16 * st.s}" fill="#2f4c43"/>`;   // the floor line under the row
+    const jmax = Math.ceil((640 / zoom) / (SP * st.s)) + 1;
     for (let j = -jmax; j <= jmax; j++) {
-      const x = 540 + (j + off) * SP / st.z;
-      const [sx, sy2] = toScreen(x, st.y);
-      if (sx < -260 || sx > 1340 || sy2 - 520 * st.s * zoom > 1980 || sy2 < -40) continue;
+      const x = 540 + (j + off) * SP * st.s;
       const isMu = r === 0 && j === 0;
       let turn = 0;
-      if (!isMu && look > 0 && (r === 0 || r === 1 || r === 2) && Math.abs(j + off) <= 2.5) {
-        const side = j + off === 0 ? (r % 2 ? 1 : -1) * 0.6 : (j + off < 0 ? 1 : -1);
-        turn = side * look * (r === 2 ? 0.7 : 1);
-      }
-      const jy = (r === 1 && j === 1) ? -jolt * 16 : 0;
+      if (!isMu && look > 0 && r >= 0 && r <= 2 && Math.abs(j + off) <= 2.5) turn = (j + off === 0 ? 0.7 : (j + off < 0 ? 1 : -1)) * look * (r === 0 ? 1 : 0.8);
+      const jy = (r === 1 && j === 1) ? -jolt * 10 : 0;
       row += `<g transform="translate(${x.toFixed(1)} ${(st.y + jy).toFixed(1)}) scale(${st.s.toFixed(4)})">${isMu ? personTop(MUAWIYA, 0, true) : personTop(palOf(r, j), turn)}</g>`;
     }
     g += `<g filter="url(#row${r + 1})">${row}</g>`;
   }
-  const glowY = HOR - 60;
-  const W = (inner) => `<g transform="translate(540 ${sy}) scale(${zoom}) translate(${-fx} ${-fy})">${inner}</g>`;
-  const glow = `<ellipse cx="540" cy="${glowY}" rx="${900 + 40 * Math.sin(t * 0.5)}" ry="330" fill="url(#glow)" opacity="${0.45 + 0.45 * warm}"/>`;
-  const back = `<rect x="-2000" y="-2000" width="5080" height="6000" fill="#10241f"/><rect x="-2000" y="${HOR - 900}" width="5080" height="2600" fill="url(#haze)"/>`;
+  const W = (inner) => `<g transform="translate(540 ${sy}) scale(${zoom}) translate(-540 ${-FY})">${inner}</g>`;
+  const glow = `<ellipse cx="540" cy="${rowY(RMAX) - 200}" rx="${900 + 40 * Math.sin(t * 0.5)}" ry="420" fill="url(#glow)" opacity="${0.35 + 0.45 * warm}"/>`;
+  const back = `<rect x="-2000" y="-2000" width="5080" height="6000" fill="#10241f"/><rect x="-2000" y="-1400" width="5080" height="3400" fill="url(#haze)"/>`;
   if (window.PREP) return window.PREP.part === "far" ? W(back + g) : W(g);
   if (!L) return W(back + glow + g);
-  // pre-rendered rows (made at the shot's base zoom), scaled for the slow push-in around the same point
-  const push = zoom / CAMS[kind].zoom;
-  const tr = `translate(540 ${sy}) scale(${push}) translate(-540 ${-sy})`;
+  const push = zoom / CAMS[kind].zoom, tr = `translate(540 ${sy}) scale(${push}) translate(-540 ${-sy})`;
   for (const [gid, iid, src] of [["farL", "farI", L.far], ["nearL", "nearI", L.near]]) {
     const im = $(iid); if (im.getAttribute("href") !== src) im.setAttribute("href", src);
     $(gid).setAttribute("transform", tr); $(gid).style.display = "";
@@ -236,7 +222,7 @@ function hands(t, k, on) {
     ${arm(250, 300, 1, "#3e4d55", 0)}${arm(830, 780, -1, "#5a4a39", 0.37)}
   </g>`;
 }
-const CAMS = { wide: { zoom: 1, sy: 1260 }, medium: { zoom: 1.6, sy: 1500 }, look: { zoom: 1.25, sy: 1390 } };
+const CAMS = { wide: { zoom: 1, sy: FY - 40 }, medium: { zoom: 1.75, sy: 1330 }, look: { zoom: 1.3, sy: 1360 } };
 function scene(t) {
   const sh = D.shots.find((s) => t >= s.t0 && t < s.t1) || D.shots[D.shots.length - 1];
   const k = clamp((t - sh.t0) / (sh.t1 - sh.t0), 0, 1);
@@ -250,7 +236,7 @@ function scene(t) {
     const base = CAMS[sh.kind];
     const cam = { zoom: base.zoom * (1 + 0.04 * k), sy: base.sy };
     svg = world(t, cam, look, jolt, warm, sh.kind);
-    if (sh.kind === "medium") tag = nameTag(540, cam.sy - 470 * K * cam.zoom - 34, "Mu'awiya ibn al-Hakam", t, C.mu);
+    if (sh.kind === "medium") tag = nameTag(540, cam.sy + (Y0 - 166 * G - FY) * cam.zoom - 34, "Mu'awiya ibn al-Hakam", t, C.mu);
   }
   const cut = 1 - ramp(t, sh.t0, 0.25);
   window.CUT = sh.t0 > 0.1 ? cut : 0;

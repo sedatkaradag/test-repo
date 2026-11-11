@@ -125,7 +125,12 @@ Sahibinin geri bildirimleri:
 - El vurma: kolun tamamı yukarı-aşağı kaymasın (sıvazlama gibi görünür). Omuz ve üst kol sabit, ön kol
   dirsekten kalkar, hızla inip uyluğa vurur, kısa durur.
 - Kapanışta logo ve yazılar ekranın ortasında olmalı.
-- **11 Kas düzeltmesi (sahibinin onayı bekleniyor):** "3 metre boy" sorununun asıl nedeni saflar arası mesafeydi:
+- **11 Kas son hali (sahibinin referans karesine göre, onay bekleniyor):** saflar perspektifle bir noktaya
+  daralmıyor; örnekteki gibi **yatay şeritler halinde üst üste** (her saf ~%7 küçük, sise karışıyor, aralarında zemin
+  çizgisi). Kişiler normal yapılı: omuz ~1,5 baş genişliği (96 birim), gövde kısa (118), omuz omuza; başta takke +
+  koyu saç. "Stare" kısmında sakal yok, sadece başın dönüşü ve kulak. Sahibi: "kişileri bu kadar geniş yapmana gerek
+  yok, normal boyda kiloda olabilirler ama 3 metre olmasın." Kod: `page.html` → `personTop`, `world` (G, STEP, F, SP).
+- **Ondan önceki deneme:** "3 metre boy" sorununun asıl nedeni saflar arası mesafeydi:
   ardışık iki saffın baş aralığı örnekte ~1,4 baş genişliği, bizde 3,6 idi. Şimdi `DZ = 0.12` (60 saf ufka kadar),
   kişiler omuz omuza (`SP = 222`), gövde ayakta biter (omuzdan +430), arkadaki saf `z = 0.7`'de (alçakta, bulanık),
   sis ve bulanıklık mesafeye (z) göre. Aşağıdaki not bu düzeltmeden önceki teşhistir.
