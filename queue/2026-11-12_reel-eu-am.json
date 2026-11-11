@@ -1,0 +1,107 @@
+{
+  "entry_id": "quran:4:86",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nisaa 4:86",
+  "slot": "2026-11-12_reel-eu-am",
+  "publish_at": "2026-11-12T07:17:45Z",
+  "local_slot": "2026-11-12 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-12_reel-eu-am.jpg",
+  "video": "queue/2026-11-12_reel-eu-am.mp4",
+  "cover": "queue/2026-11-12_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Return every greeting with a better one today\n\nAllah tells us that when we are greeted, we should respond with a better greeting or at least return the same. Make your reply to every greeting a little warmer today.\n\nSurah An-Nisaa 4:86\n\nWho is the first person you will greet warmly today?\n\n#salam #greetings #muslimmanners #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "When you are given a greeting, respond with a better greeting or return the same. Indeed, Allah is Reckoner of all things (Surah An-Nisaa 4:86)",
+  "theme": "greetings / returning salam with a better one",
+  "review": "Independent verifier approved: integrity ok, Arabic checked word by word and mark by mark on card and reel frame, English/reference match, caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:4:86",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Return every greeting with a better one today",
+    "hook_lines": [
+      "Return every greeting with a",
+      "better one today"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "004086",
+        "lines": [
+          "وَإِذَا حُيِّيتُم بِتَحِيَّةٖ فَحَيُّواْ بِأَحۡسَنَ مِنۡهَآ",
+          "أَوۡ رُدُّوهَآۗ إِنَّ ٱللَّهَ كَانَ عَلَىٰ كُلِّ شَيۡءٍ",
+          "حَسِيبًا ٨٦"
+        ],
+        "y": 610.0,
+        "meal": [
+          "When you are given a greeting, respond with a",
+          "better greeting or return the same. Indeed, Allah",
+          "is Reckoner of all things."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1108.0,
+    "full": "When you are given a greeting, respond with a better greeting or return the same. Indeed, Allah is Reckoner of all things.",
+    "full_lines": [
+      "When you are given a greeting, respond with a",
+      "better greeting or return the same. Indeed, Allah",
+      "is Reckoner of all things."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nisaa 4:86",
+    "ref_y": 1321.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Who is the first person you will greet warmly today?",
+    "cta_lines": [
+      "Who is the first person you will greet warmly",
+      "today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1379.0,
+    "handle_y": 1525.0,
+    "handle_size": 27
+  },
+  "layout_hash": "0bc2c684cd811349f83d9104",
+  "created_at": "2026-11-11T05:44:35+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "004086"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "entry_id": "quran:16:90",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nahl 16:90",
+  "slot": "2026-11-12_reel-us",
+  "publish_at": "2026-11-13T01:31:15Z",
+  "local_slot": "2026-11-12 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-12_reel-us.jpg",
+  "video": "queue/2026-11-12_reel-us.mp4",
+  "cover": "queue/2026-11-12_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Justice, kindness, family: three things Allah commands\n\nIn one verse, Allah enjoins justice, kindness and giving relatives their dues, and forbids shameful acts, evil deeds and oppression. He exhorts us so that we may take heed. Before the weekend, choose one of the three to act on.\n\nSurah An-Nahl 16:90\n\nWhich of the three will you act on before Friday ends?\n\n#justiceandkindness #familyties #surahnahl #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "Allah enjoins justice, kindness, and giving relatives [their dues], and He forbids shameful acts, evil deeds and oppression. He exhorts you, so that you may take heed (Surah An-Nahl 16:90)",
+  "theme": "justice, kindness and family ties (Friday eve)",
+  "review": "Independent verifier approved: integrity ok, Arabic checked word by word and mark by mark on card and reel frame, English/reference match, caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:16:90",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Justice, kindness, family: three things Allah commands",
+    "hook_lines": [
+      "Justice, kindness, family:",
+      "three things Allah",
+      "commands"
+    ],
+    "hook_size": 82,
+    "arabic_size": 62,
+    "verses": [
+      {
+        "ayah": "016090",
+        "lines": [
+          "إِنَّ ٱللَّهَ يَأۡمُرُ بِٱلۡعَدۡلِ وَٱلۡإِحۡسَٰنِ وَإِيتَآيِٕ ذِي",
+          "ٱلۡقُرۡبَىٰ وَيَنۡهَىٰ عَنِ ٱلۡفَحۡشَآءِ وَٱلۡمُنكَرِ وَٱلۡبَغۡيِۚ",
+          "يَعِظُكُمۡ لَعَلَّكُمۡ تَذَكَّرُونَ ٩٠"
+        ],
+        "y": 710.2,
+        "meal": [
+          "Allah enjoins justice, kindness, and giving relatives",
+          "[their dues], and He forbids shameful acts, evil deeds",
+          "and oppression. He exhorts you, so that you may take",
+          "heed."
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 1100.2,
+    "full": "Allah enjoins justice, kindness, and giving relatives [their dues], and He forbids shameful acts, evil deeds and oppression. He exhorts you, so that you may take heed.",
+    "full_lines": [
+      "Allah enjoins justice, kindness, and giving relatives",
+      "[their dues], and He forbids shameful acts, evil deeds",
+      "and oppression. He exhorts you, so that you may take",
+      "heed."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nahl 16:90",
+    "ref_y": 1352.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which of the three will you act on before Friday ends?",
+    "cta_lines": [
+      "Which of the three will you act on before Friday",
+      "ends?"
+    ],
+    "cta_size": 44,
+    "line_y": 1410.2,
+    "handle_y": 1544.2,
+    "handle_size": 27
+  },
+  "layout_hash": "1535b52400671e62c2b5eed6",
+  "created_at": "2026-11-11T05:46:18+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "016090"
+    ],
+    "done": false
+  }
+}

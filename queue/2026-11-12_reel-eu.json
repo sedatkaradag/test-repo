@@ -1,0 +1,105 @@
+{
+  "entry_id": "quran:17:37",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Israa 17:37",
+  "slot": "2026-11-12_reel-eu",
+  "publish_at": "2026-11-12T17:56:10Z",
+  "local_slot": "2026-11-12 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-12_reel-eu.jpg",
+  "video": "queue/2026-11-12_reel-eu.mp4",
+  "cover": "queue/2026-11-12_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Humility: you cannot outgrow the mountains\n\nAllah tells us not to walk on the earth arrogantly, for we can neither cleave the earth nor reach the mountains in height. Whatever you achieve today, carry it with humility.\n\nSurah Al-Israa 17:37\n\nSend this to someone whose humility you admire\n\n#humility #stayshumble #surahisra #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Do not walk on the earth arrogantly; you cannot cleave the earth, nor can you reach the mountains in height (Surah Al-Israa 17:37)",
+  "theme": "humility / not walking in arrogance",
+  "review": "Independent verifier approved: integrity ok, Arabic checked word by word and mark by mark on card and reel frame, English/reference match, caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:17:37",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Humility: you cannot outgrow the mountains",
+    "hook_lines": [
+      "Humility: you cannot",
+      "outgrow the mountains"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "017037",
+        "lines": [
+          "وَلَا تَمۡشِ فِي ٱلۡأَرۡضِ مَرَحًاۖ إِنَّكَ لَن",
+          "تَخۡرِقَ ٱلۡأَرۡضَ وَلَن تَبۡلُغَ ٱلۡجِبَالَ",
+          "طُولٗا ٣٧"
+        ],
+        "y": 610.0,
+        "meal": [
+          "Do not walk on the earth arrogantly; you cannot",
+          "cleave the earth, nor can you reach the",
+          "mountains in height."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1108.0,
+    "full": "Do not walk on the earth arrogantly; you cannot cleave the earth, nor can you reach the mountains in height.",
+    "full_lines": [
+      "Do not walk on the earth arrogantly; you cannot",
+      "cleave the earth, nor can you reach the",
+      "mountains in height."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Israa 17:37",
+    "ref_y": 1321.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone whose humility you admire",
+    "cta_lines": [
+      "Send this to someone whose humility you",
+      "admire"
+    ],
+    "cta_size": 48,
+    "line_y": 1379.0,
+    "handle_y": 1525.0,
+    "handle_size": 27
+  },
+  "layout_hash": "9a286bae8d72f522b9c7b8c7",
+  "created_at": "2026-11-11T05:45:39+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "017037"
+    ],
+    "done": false
+  }
+}

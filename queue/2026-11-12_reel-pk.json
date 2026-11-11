@@ -1,0 +1,107 @@
+{
+  "entry_id": "quran:3:92",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Aal-i-Imraan 3:92",
+  "slot": "2026-11-12_reel-pk",
+  "publish_at": "2026-11-12T15:30:04Z",
+  "local_slot": "2026-11-12 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-12_reel-pk.jpg",
+  "video": "queue/2026-11-12_reel-pk.mp4",
+  "cover": "queue/2026-11-12_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "The charity this verse asks of you\n\nAllah tells us we will never attain righteousness until we spend from what we love, and that whatever we spend, He knows it. Tonight, think of one thing you love that could also bring good to someone else.\n\nSurah Aal-i-Imraan 3:92\n\nPick one thing you love and share some of it this week\n\n#sadaqah #spendwhatyoulove #surahaliimran #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "You will never attain righteousness until you spend in charity from what you love. Whatever you spend, Allah is All-Knowing of it (Surah Aal-i-Imraan 3:92)",
+  "theme": "charity / spending from what you love",
+  "review": "Independent verifier approved: integrity ok, Arabic checked word by word and mark by mark on card and reel frame, English/reference match, caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:3:92",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The charity this verse asks of you",
+    "hook_lines": [
+      "The charity this verse asks of",
+      "you"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "003092",
+        "lines": [
+          "لَن تَنَالُواْ ٱلۡبِرَّ حَتَّىٰ تُنفِقُواْ مِمَّا تُحِبُّونَۚ",
+          "وَمَا تُنفِقُواْ مِن شَيۡءٖ فَإِنَّ ٱللَّهَ بِهِۦ",
+          "عَلِيمٞ ٩٢"
+        ],
+        "y": 610.0,
+        "meal": [
+          "You will never attain righteousness until you",
+          "spend in charity from what you love. Whatever",
+          "you spend, Allah is All-Knowing of it."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1108.0,
+    "full": "You will never attain righteousness until you spend in charity from what you love. Whatever you spend, Allah is All-Knowing of it.",
+    "full_lines": [
+      "You will never attain righteousness until you",
+      "spend in charity from what you love. Whatever",
+      "you spend, Allah is All-Knowing of it."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Aal-i-Imraan 3:92",
+    "ref_y": 1321.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one thing you love and share some of it this week",
+    "cta_lines": [
+      "Pick one thing you love and share some of it",
+      "this week"
+    ],
+    "cta_size": 48,
+    "line_y": 1379.0,
+    "handle_y": 1525.0,
+    "handle_size": 27
+  },
+  "layout_hash": "e60f48f8ee20f754a38b5b55",
+  "created_at": "2026-11-11T05:45:10+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "003092"
+    ],
+    "done": false
+  }
+}
