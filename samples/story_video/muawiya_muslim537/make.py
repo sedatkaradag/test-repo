@@ -92,7 +92,7 @@ yar = {"arabic": S["yar"]["arabic"], "t0": words[yr[0]]["t0"], "t1": words[yr[1]
 # audio
 mix = np.zeros(int((END + 1) * SR), dtype=np.float32)
 def add(t, n):
-    a, sr = sf.read(TTS / f"{n}.wav" if (TTS / f"{n}.wav").exists() else TTS / f"{n}.flac", dtype="float32"); assert sr == SR
+    a, sr = sf.read(TTS / f"{n}.wav", dtype="float32"); assert sr == SR
     i = int(t * SR); a = a[: max(0, len(mix) - i)]; mix[i:i + len(a)] += a
 add(HOOK0, "hook"); add(BODY0, "body"); add(NOTE0, "note"); add(OUTRO0, "outro")
 mix *= 0.89 / max(1e-6, np.abs(mix).max())

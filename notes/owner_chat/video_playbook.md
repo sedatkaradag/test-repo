@@ -125,7 +125,11 @@ Sahibinin geri bildirimleri:
 - El vurma: kolun tamamı yukarı-aşağı kaymasın (sıvazlama gibi görünür). Omuz ve üst kol sabit, ön kol
   dirsekten kalkar, hızla inip uyluğa vurur, kısa durur.
 - Kapanışta logo ve yazılar ekranın ortasında olmalı.
-- **AÇIK SORUN (11 Kas):** son sürümde kişiler "3 metre boyunda" görünüyor. Sahibi: "tek yapman gereken ufku
+- **11 Kas düzeltmesi (sahibinin onayı bekleniyor):** "3 metre boy" sorununun asıl nedeni saflar arası mesafeydi:
+  ardışık iki saffın baş aralığı örnekte ~1,4 baş genişliği, bizde 3,6 idi. Şimdi `DZ = 0.12` (60 saf ufka kadar),
+  kişiler omuz omuza (`SP = 222`), gövde ayakta biter (omuzdan +430), arkadaki saf `z = 0.7`'de (alçakta, bulanık),
+  sis ve bulanıklık mesafeye (z) göre. Aşağıdaki not bu düzeltmeden önceki teşhistir.
+- **Önceki teşhis:** son sürümde kişiler "3 metre boyunda" görünüyordu. Sahibi: "tek yapman gereken ufku
   düzeltmekti; ufuk düzelmiş ama başka şeyler bozulmuş." Nedeni: perspektif dünyasında (`world()`) kişi
   boyu (omuzdan ayağa ~520 birim × ölçek) satır aralığına göre çok büyük ve gövde aşağı doğru 1000 birim
   uzatıldı; yakın çekimde 1,6× zoom ile gövdeler upuzun görünüyor. Düzeltme yönü: önceki (beğenilen) karakter

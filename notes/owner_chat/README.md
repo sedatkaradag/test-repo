@@ -78,7 +78,7 @@ Zamanlanmış görevler (Claude, hepsi `permission_mode: auto`):
 
 ## Açık işler (11 Kasım 2026 itibarıyla)
 
-1. **Muâviye videosu (Sahih Muslim 537)** — sahibi son sürümü beğenmedi: "insanların boyları 3 metre gibi
+1. **Muâviye videosu (Sahih Muslim 537)** — 11 Kasım'da saf aralığı düzeltilip yeniden gönderildi; sahibinin onayı bekleniyor. Önceki durum: sahibi son sürümü beğenmedi: "insanların boyları 3 metre gibi
    görünüyor". Saflar artık sonsuza gidiyor (bu istenen), ama perspektifte kişiler çok uzun/dar duruyor.
    Düzeltilecek: tek dünya + kamera yaklaşımı korunacak; boy/omuz oranı ve satır aralığı gerçekçi olacak
    (kişi yüksekliği satır aralığına göre küçük, omuz genişliği ~0.45 × boy, baş ~1/7). Ayrıntılar ve bütün

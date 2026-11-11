@@ -104,9 +104,9 @@ function headTop(c, turn = 0, outline = false) {
 // shoulders and back; arms only show in the close-up of the hands
 function personTop(c, turn = 0, outline = false) {
   const st = outline ? `stroke="#0b1a17" stroke-width="5"` : "";
-  return `<path d="M-108 -250 C-112 -320 -86 -352 -40 -360 C-20 -364 20 -364 40 -360 C86 -352 112 -320 108 -250 L124 1000 L-124 1000 Z" fill="${c.robe}" ${st}/>
-    <path d="M0 -356 L0 1000" stroke="#000" stroke-opacity=".1" stroke-width="3"/>
-    <path d="M-108 -250 C-112 -320 -86 -352 -40 -360 L-60 -300 C-80 -260 -84 -100 -94 1000 L-124 1000 Z" fill="#000" opacity=".08"/>
+  return `<path d="M-108 -250 C-112 -320 -86 -352 -40 -360 C-20 -364 20 -364 40 -360 C86 -352 112 -320 108 -250 L116 430 C60 446 -60 446 -116 430 Z" fill="${c.robe}" ${st}/>
+    <path d="M0 -356 L0 430" stroke="#000" stroke-opacity=".1" stroke-width="3"/>
+    <path d="M-108 -250 C-112 -320 -86 -352 -40 -360 L-60 -300 C-80 -260 -84 -100 -90 436 L-116 430 Z" fill="#000" opacity=".08"/>
     ${headTop(c, turn, outline)}`;
 }
 const PAL = [
@@ -123,13 +123,13 @@ const MUAWIYA = { robe: "#f1ece0", hair: "#231a13", skin: "#a87a52", cap: "#d9c0
 // Row r = 0 is Mu'awiya's row, r = 1, 2, ... are in front of him (towards the front, which is never seen),
 // r = -1 is the row behind, closest to the camera. Perspective: a row at distance z is drawn at scale K/z,
 // its shoulder line at y = HOR + Y/z, so the rows shrink towards the horizon line HOR and vanish there.
-const HOR = 380, K = 0.78, Y = 880, DZ = 0.36, SP = 265, RMAX = 22;
-const zOf = (r) => 1 + r * DZ;
+const HOR = 380, K = 0.78, Y = 880, DZ = 0.12, SP = 222, RMAX = 60;
+const zOf = (r) => r < 0 ? 0.7 : 1 + r * DZ;   // the row behind (closest to the camera) is lower in the frame, out of focus
 const HAZE = "#3a5a4e";
 function rowStyle(r) {
   const z = zOf(r);
-  const haze = r <= 0 ? 0 : 1 - Math.exp(-0.2 * r);                     // farther = more haze, at the end nothing but haze
-  const blur = r < 0 ? 9 : r === 0 ? 0 : Math.min(7, 1.2 + r * 0.55);     // focus is on Mu'awiya's row
+  const haze = r <= 0 ? 0 : 1 - Math.exp(-1.15 * (z - 1));              // farther = more haze, at the end nothing but haze
+  const blur = r < 0 ? 9 : r === 0 ? 0 : Math.min(7, 0.8 + (z - 1) * 4);    // focus is on Mu'awiya's row
   return { z, s: K / z, y: HOR + Y / z, haze, blur };
 }
 let FILTERS_READY = false;
