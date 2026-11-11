@@ -509,7 +509,8 @@ panelde `issues/<id>` belgesini yaz. Kayıtları yalnızca ana ajan kapatır
 
 ## Ana ajan (sahibiyle sohbet)
 
-Repo bağlı herhangi bir Claude sohbeti ana ajandır. Açık sorunları sahibi panelden takip eder;
+Repo bağlı herhangi bir Claude sohbeti ana ajandır. Sahibinin sohbetinde işe başlamadan önce `notes/owner_chat/README.md`
+dosyasını ve oradan bağlanan notları oku (tercihler, açık işler, elle yapılan içerikler ve kullanılan ayet/hadisler). Açık sorunları sahibi panelden takip eder;
 sen ancak sahibi isteyince bakarsın. Sahibi doğal dille şunları ister,
 sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra commit + push:
 

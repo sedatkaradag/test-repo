@@ -1,0 +1,73 @@
+{
+"lines": [
+"Look at the three things he did not do."
+],
+"tokens": [
+{
+"text": "Look",
+"ws": " ",
+"start": 0.275,
+"end": 0.487
+},
+{
+"text": "at",
+"ws": " ",
+"start": 0.487,
+"end": 0.575
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.575,
+"end": 0.725
+},
+{
+"text": "three",
+"ws": " ",
+"start": 0.725,
+"end": 1.062
+},
+{
+"text": "things",
+"ws": " ",
+"start": 1.062,
+"end": 1.8
+},
+{
+"text": "he",
+"ws": " ",
+"start": 1.8,
+"end": 1.975
+},
+{
+"text": "did",
+"ws": " ",
+"start": 1.975,
+"end": 2.175
+},
+{
+"text": "not",
+"ws": " ",
+"start": 2.175,
+"end": 2.438
+},
+{
+"text": "do",
+"ws": "",
+"start": 2.438,
+"end": 3.15
+},
+{
+"text": ".",
+"ws": "",
+"start": 3.15,
+"end": 3.325
+},
+{
+"text": "<line>",
+"start": 3.425,
+"end": 3.425
+}
+],
+"duration": 3.705
+}

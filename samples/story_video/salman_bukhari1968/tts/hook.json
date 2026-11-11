@@ -1,0 +1,103 @@
+{
+"lines": [
+"Can you live in the same house as someone, and still neglect them?"
+],
+"tokens": [
+{
+"text": "Can",
+"ws": " ",
+"start": 0.25,
+"end": 0.425
+},
+{
+"text": "you",
+"ws": " ",
+"start": 0.425,
+"end": 0.55
+},
+{
+"text": "live",
+"ws": " ",
+"start": 0.55,
+"end": 0.875
+},
+{
+"text": "in",
+"ws": " ",
+"start": 0.875,
+"end": 0.963
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.963,
+"end": 1.087
+},
+{
+"text": "same",
+"ws": " ",
+"start": 1.087,
+"end": 1.425
+},
+{
+"text": "house",
+"ws": " ",
+"start": 1.425,
+"end": 1.825
+},
+{
+"text": "as",
+"ws": " ",
+"start": 1.825,
+"end": 1.962
+},
+{
+"text": "someone",
+"ws": "",
+"start": 1.962,
+"end": 2.625
+},
+{
+"text": ",",
+"ws": " ",
+"start": 2.625,
+"end": 2.725
+},
+{
+"text": "and",
+"ws": " ",
+"start": 2.725,
+"end": 2.888
+},
+{
+"text": "still",
+"ws": " ",
+"start": 2.888,
+"end": 3.225
+},
+{
+"text": "neglect",
+"ws": " ",
+"start": 3.225,
+"end": 3.725
+},
+{
+"text": "them",
+"ws": "",
+"start": 3.725,
+"end": 4.325
+},
+{
+"text": "?",
+"ws": "",
+"start": 4.325,
+"end": 4.5
+},
+{
+"text": "<line>",
+"start": 4.6,
+"end": 4.6
+}
+],
+"duration": 4.88
+}

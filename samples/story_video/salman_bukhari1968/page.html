@@ -1,0 +1,332 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Garamond'; src: url('file:///home/claude/test-repo/assets/fonts/EBGaramond[wght].ttf'); font-weight: 400 800; }
+@font-face { font-family: 'Amiri'; src: url('file:///home/claude/test-repo/assets/fonts/Amiri-Regular.ttf'); }
+@font-face { font-family: 'Marcellus'; src: url('file:///home/claude/test-repo/assets/fonts/Marcellus-Regular.ttf'); }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0b1a17; }
+#stage { position: absolute; inset: 0; }
+#top { position: absolute; top: 92px; left: 0; right: 0; text-align: center; font-family: Marcellus; letter-spacing: 6px;
+       color: #e8c66a; font-size: 26px; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
+#top .rule { display: inline-block; width: 60px; height: 1px; background: #e8c66a; vertical-align: middle; margin: 0 18px; opacity: .7; }
+#hook { position: absolute; top: 250px; left: 90px; right: 90px; text-align: center; font-family: Garamond; font-weight: 600;
+        font-size: 76px; line-height: 1.12; color: #f6efdc; text-shadow: 0 4px 24px rgba(0,0,0,.55); opacity: 0; }
+#cap { position: absolute; left: 70px; right: 70px; top: 1440px; text-align: center; font-family: Garamond; font-weight: 600;
+       font-size: 58px; line-height: 1.32; color: #f6efdc; text-shadow: 0 3px 14px rgba(0,0,0,.75); }
+#cap span { padding: 0 6px; border-radius: 10px; }
+#cap .saw { font-family: Amiri; font-size: 1.55em; line-height: 0; vertical-align: -0.12em; color: #f2dc9c; }
+#cap span.on .saw { color: #10241f; }
+#cap span.on { background: #e8c66a; color: #10241f; text-shadow: none; }
+#handle { position: absolute; bottom: 120px; left: 0; right: 0; text-align: center; font-family: Garamond; font-size: 28px; color: #e8c66a; opacity: .75; }
+#hook span { padding: 0 6px; border-radius: 10px; }
+#hook span.on { background: #e8c66a; color: #10241f; text-shadow: none; }
+.nm { font-family: Marcellus; font-size: 30px; letter-spacing: 2px; }
+#black { position: absolute; inset: 0; background: #0b1a17; opacity: 0; }
+</style></head>
+<body>
+<svg id="stage" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="face" clipPathUnits="userSpaceOnUse"><ellipse cx="6" cy="-446" rx="34" ry="40"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c2a24"/><stop offset=".45" stop-color="#2c5a49"/><stop offset=".78" stop-color="#c79a55"/><stop offset="1" stop-color="#e7c27c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff1c9" stop-opacity=".95"/><stop offset=".35" stop-color="#f4cf82" stop-opacity=".55"/><stop offset="1" stop-color="#f4cf82" stop-opacity="0"/></radialGradient>
+    <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4b384"/><stop offset="1" stop-color="#b8935f"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a7834f"/><stop offset="1" stop-color="#6e5434"/></linearGradient>
+    <linearGradient id="inside" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2c1e"/><stop offset="1" stop-color="#1f1710"/></linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></linearGradient>
+    <linearGradient id="vig" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1a17" stop-opacity=".55"/><stop offset=".2" stop-color="#0b1a17" stop-opacity="0"/><stop offset=".62" stop-color="#0b1a17" stop-opacity="0"/><stop offset="1" stop-color="#0b1a17" stop-opacity=".92"/></linearGradient>
+  </defs>
+  <g id="scene1"></g>
+  <g id="scene2"></g><g id="scene3"></g><g id="scene4"></g><g id="scene5"></g><g id="scene6"></g><g id="scene7"></g><g id="scene8"></g>
+  <rect width="1080" height="1920" fill="url(#vig)"/>
+</svg>
+<div id="top"><span class="rule"></span>SAHIH AL-BUKHARI 1968<span class="rule"></span></div>
+<div id="hook"></div>
+<div id="cap"></div>
+<div id="handle">@thehalalalgorithm</div>
+<div id="logo" style="position:absolute;top:640px;left:0;right:0;text-align:center;opacity:0"><img src="file:///home/claude/test-repo/samples/logo_draw/frames_800/059.png" style="width:520px"><div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:40px;margin-top:30px">THE HALAL ALGORITHM</div><div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:32px;margin-top:40px;border:2px solid #e8c66a;display:inline-block;padding:14px 36px;border-radius:40px">+ FOLLOW</div></div>
+<div id="black"></div>
+<script>
+const D = __DATA__;
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const ease = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+const ramp = (t, t0, d) => ease((t - t0) / d);
+const lerp = (a, b, k) => a + (b - a) * k;
+
+// ---------- figures (faceless, flat) ----------
+// a standing man in profile facing right, feet at (0,0); arm = [elbowX, elbowY, handX, handY] relative to the shoulder
+function man(c, arm, step = 0) {
+  const sh = [18, -372];
+  const [ex, ey, hx, hy] = arm;
+  const lift = Math.sin(step * Math.PI) * 10;
+  return `
+  <ellipse cx="0" cy="4" rx="78" ry="12" fill="#000" opacity=".18"/>
+  <ellipse cx="${-26 - lift}" cy="-6" rx="24" ry="9" fill="#3b2a1b"/><ellipse cx="${30 + lift}" cy="-6" rx="24" ry="9" fill="#3b2a1b"/>
+  <path d="M-44 -396 C-70 -300 -80 -120 -84 -8 L78 -8 C72 -130 66 -300 46 -396 C20 -414 -20 -414 -44 -396 Z" fill="${c.cloak}"/>
+  <path d="M-44 -396 C-70 -300 -80 -120 -84 -8 L-60 -8 C-58 -140 -50 -300 -30 -398 Z" fill="#000" opacity=".12"/>
+  <path d="M-8 -404 C-4 -420 22 -422 28 -404 Z" fill="${c.skin}"/>
+  <ellipse cx="6" cy="-446" rx="33" ry="39" fill="${c.skin}" stroke="#2a1d12" stroke-opacity=".35" stroke-width="2.5"/>
+  ${BEARD(c)}
+  <path d="M-36 -458 C-38 -492 -8 -506 14 -502 C38 -498 46 -480 42 -458 C24 -466 -14 -468 -36 -458 Z" fill="${c.turban}"/>
+  <path d="M-34 -462 C-14 -470 22 -470 42 -460" stroke="${c.turbanShade}" stroke-width="6" fill="none" opacity=".7"/>
+  <path d="M-36 -474 C-44 -450 -46 -422 -42 -398 L-27 -400 C-30 -420 -29 -444 -22 -466 Z" fill="${c.turban}"/>
+  <path d="M${sh[0]} ${sh[1]} L${sh[0] + ex} ${sh[1] + ey} L${sh[0] + hx} ${sh[1] + hy}" stroke="${c.cloak}" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M${sh[0]} ${sh[1]} L${sh[0] + ex} ${sh[1] + ey}" stroke="#000" stroke-opacity=".10" stroke-width="36" stroke-linecap="round" fill="none"/>
+  <circle cx="${sh[0] + hx}" cy="${sh[1] + hy}" r="14" fill="${c.skin}"/>`;
+}
+// a woman sitting on the floor in profile facing right, plain worn dress with patches
+function womanSitting(c) {
+  return `
+  <ellipse cx="10" cy="6" rx="130" ry="14" fill="#000" opacity=".22"/>
+  <path d="M-96 -6 C-104 -120 -78 -230 -30 -262 C10 -290 52 -270 66 -222 C80 -170 74 -110 120 -70 C140 -50 136 -8 120 -6 Z" fill="${c.dress}"/>
+  <rect x="-62" y="-150" width="40" height="34" rx="4" fill="${c.patch}" transform="rotate(-8 -42 -133)"/>
+  <rect x="-62" y="-150" width="40" height="34" rx="4" fill="none" stroke="${c.stitch}" stroke-width="2" stroke-dasharray="5 5" transform="rotate(-8 -42 -133)"/>
+  <rect x="58" y="-60" width="34" height="28" rx="4" fill="${c.patch}" transform="rotate(10 75 -46)"/>
+  <rect x="58" y="-60" width="34" height="28" rx="4" fill="none" stroke="${c.stitch}" stroke-width="2" stroke-dasharray="5 5" transform="rotate(10 75 -46)"/>
+  <path d="M-58 -232 C-64 -300 -40 -352 6 -356 C48 -358 72 -322 70 -278 C66 -244 40 -222 6 -222 C-26 -222 -50 -220 -58 -232 Z" fill="${c.khimar}"/>
+  <path d="M14 -330 C34 -330 48 -312 48 -292 C48 -272 34 -256 16 -256 C4 -256 -2 -270 -2 -292 C-2 -314 2 -330 14 -330 Z" fill="${c.skin}"/>
+  <path d="M-20 -350 C10 -364 56 -346 62 -300 C64 -270 52 -248 30 -238" stroke="${c.khimar}" stroke-width="16" fill="none"/>
+  <path d="M30 -170 C60 -150 84 -130 96 -116" stroke="${c.dress}" stroke-width="30" stroke-linecap="round" fill="none"/>
+  <circle cx="100" cy="-112" r="12" fill="${c.skin}"/>`;
+}
+const SALMAN = { cloak: "#6b4a2e", tunic: "#e9dcc0", skin: "#a87a52", beard: "#3a2a1c", turban: "#f1ead8", turbanShade: "#cfc3a6" };
+const DARDA = { cloak: "#2f5546", tunic: "#ded3b8", skin: "#97683f", beard: "#2a1f15", turban: "#d9c497", turbanShade: "#b09b6c" };
+const UMM = { dress: "#7a6956", patch: "#958267", stitch: "#d8c7a4", khimar: "#4e4236", skin: "#a87a52" };
+
+function palm(x, y, s, flip = 1) {
+  let leaves = "";
+  for (let i = 0; i < 8; i++) {
+    const a = (-160 + i * 22) * Math.PI / 180, L = 150 + (i % 2) * 30;
+    const ex = Math.cos(a) * L, ey = Math.sin(a) * L * 0.75 + 40;
+    leaves += `<path d="M0 0 Q${ex * 0.5} ${ey * 0.5 - 50} ${ex} ${ey}" stroke="#1d3a2f" stroke-width="16" fill="none" stroke-linecap="round"/>`;
+  }
+  return `<g transform="translate(${x} ${y}) scale(${s * flip} ${s})"><path d="M-8 0 C-14 -200 6 -420 20 -560 L36 -560 C24 -420 10 -200 14 0 Z" fill="#3a2e22"/>
+    <g transform="translate(28 -560)">${leaves}<circle cx="0" cy="6" r="16" fill="#5a3b20"/></g></g>`;
+}
+function house(x, y, w, h, col, door = true) {
+  return `<g transform="translate(${x} ${y})"><rect x="0" y="${-h}" width="${w}" height="${h}" fill="${col}"/>
+    <rect x="-6" y="${-h - 14}" width="${w + 12}" height="16" fill="${col}" opacity=".85"/>
+    <rect x="0" y="${-h}" width="${w}" height="${h}" fill="url(#shade)" opacity=".35"/>
+    ${door ? `<path d="M${w / 2 - 34} 0 L${w / 2 - 34} -96 Q${w / 2} -132 ${w / 2 + 34} -96 L${w / 2 + 34} 0 Z" fill="#3a2a1c" opacity=".8"/>` : ""}
+    <rect x="${w * 0.18}" y="${-h * 0.75}" width="22" height="30" rx="11" fill="#2a1f15" opacity=".55"/></g>`;
+}
+
+// ---------- scene 1: the bond of brotherhood (a street at golden hour) ----------
+function scene1(t, k) {
+  // k: 0..1 progress of the scene; the two men step together and clasp hands
+  const meet = ramp(k, 0.15, 0.45);
+  const gap = lerp(250, 118, meet);
+  const armUp = ramp(k, 0.35, 0.3);
+  const armS = [lerp(10, 40, armUp), lerp(120, 60, armUp), lerp(18, 96, armUp), lerp(230, 70, armUp)];
+  const step = (k > 0.15 && k < 0.6) ? ((k - 0.15) / 0.45 * 3) % 1 : 0;
+  const zoom = lerp(1.0, 1.08, ease(k));
+  return `<g transform="translate(540 960) scale(${zoom}) translate(-540 -960)">
+    <rect width="1080" height="1920" fill="url(#sky)"/>
+    <circle cx="540" cy="1080" r="420" fill="url(#sun)"/>
+    ${house(-40, 1250, 300, 380, "#b9925f", false)}${house(820, 1250, 300, 420, "#b48d5a", false)}
+    ${house(190, 1250, 230, 300, "#c7a271")}${house(660, 1250, 220, 320, "#c29c69")}
+    ${palm(150, 1250, 1.05)}${palm(930, 1250, 0.95, -1)}${palm(430, 1250, 0.7)}
+    <rect y="1240" width="1080" height="700" fill="url(#ground)"/>
+    <path d="M0 1260 L1080 1260" stroke="#000" stroke-opacity=".12" stroke-width="8"/>
+    <g transform="translate(${540 - gap} 1420) scale(1.12)">${man(SALMAN, armS, step)}</g>
+    <g transform="translate(${540 + gap} 1420) scale(-1.12 1.12)">${man(DARDA, armS, step)}</g>
+    ${nameTag(540 - gap + 8, 820, "Salman", t, 0.5)}${nameTag(540 + gap - 8, 820, "Abu ad-Darda'", t, 0.5)}
+    ${meet > 0.98 ? `<circle cx="540" cy="${1420 - 1.12 * (372 - 70)}" r="${10 + 30 * ramp(k, 0.82, 0.18)}" fill="#f4cf82" opacity="${0.35 * (1 - ramp(k, 0.9, 0.1))}"/>` : ""}
+  </g>`;
+}
+
+// ---------- scene 2: Salman at the door, Umm Darda inside ----------
+function scene2(t, k) {
+  const zoom = lerp(1.0, 1.12, ease(k));
+  const cx = lerp(540, 470, ease(k));
+  const walk = ramp(k, 0.0, 0.35);
+  const sx = lerp(980, 760, walk);
+  const step = walk < 1 ? (walk * 3) % 1 : 0;
+  const ask = ramp(k, 0.55, 0.2);
+  const arm = [lerp(10, 30, ask), lerp(120, 80, ask), lerp(18, 64, ask), lerp(230, 140, ask)];
+  return `<g transform="translate(${cx} 1000) scale(${zoom}) translate(-540 -1000)">
+    <rect width="1080" height="1920" fill="url(#wallG)"/>
+    <path d="M0 0 L1080 0 L1080 260 C800 300 300 280 0 240 Z" fill="#9c7b4f" opacity=".35"/>
+    <g opacity=".22" fill="#8a6a41">${[[90, 420], [880, 560], [160, 980], [930, 1120], [300, 300]].map(([x, y]) => `<rect x="${x}" y="${y}" width="70" height="26" rx="6"/>`).join("")}</g>
+    <path d="M240 1300 L240 640 Q440 470 640 640 L640 1300 Z" fill="url(#inside)"/>
+    <path d="M240 1300 L240 640 Q440 470 640 640 L640 1300" stroke="#7a5a36" stroke-width="22" fill="none"/>
+    <path d="M640 1300 L640 640 L700 600 L700 1336 Z" fill="#5b3f24"/>
+    <g opacity=".5">${[0, 1, 2, 3, 4].map((i) => `<line x1="${652 + i * 10}" y1="${630 - i * 7}" x2="${652 + i * 10}" y2="${1306 + i * 7}" stroke="#3b2715" stroke-width="2"/>`).join("")}</g>
+    <path d="M250 1300 L640 1300 L620 1180 L270 1180 Z" fill="#000" opacity=".25"/>
+    <rect x="290" y="1060" width="70" height="90" rx="30" fill="#7b5532"/><rect x="300" y="1050" width="50" height="16" rx="6" fill="#5e4026"/>
+    <g transform="translate(470 1250) scale(0.92)">${womanSitting(UMM)}</g>
+    <path d="M300 690 Q440 560 590 690" stroke="#f4cf82" stroke-width="3" fill="none" opacity=".25"/>
+    <rect y="1300" width="1080" height="640" fill="url(#ground)"/>
+    <path d="M0 1306 L1080 1306" stroke="#000" stroke-opacity=".15" stroke-width="10"/>
+    <g transform="translate(${sx} 1470) scale(-1.12 1.12)">${man(SALMAN, arm, step)}</g>
+    ${nameTag(470, 880, "Umm ad-Darda'", t, D.cue.umm)}
+  </g>`;
+}
+
+
+// a man sitting cross-legged in profile facing right, feet/seat at (0,0)
+function manSit(c, arm) {
+  const sh = [18, -262]; const [ex, ey, hx, hy] = arm;
+  return `<ellipse cx="10" cy="4" rx="120" ry="12" fill="#000" opacity=".2"/>
+  <path d="M-60 -286 C-80 -200 -96 -80 -100 -10 L120 -10 C126 -40 110 -66 70 -76 C60 -150 54 -220 44 -286 C20 -304 -36 -304 -60 -286 Z" fill="${c.cloak}"/>
+  <path d="M-100 -10 L120 -10 C122 -30 112 -50 86 -58 C40 -56 -40 -40 -100 -10 Z" fill="#000" opacity=".12"/>
+  <g transform="translate(0 110)">${HEAD(c)}</g>
+  <path d="M${sh[0]} ${sh[1]} L${sh[0] + ex} ${sh[1] + ey} L${sh[0] + hx} ${sh[1] + hy}" stroke="${c.cloak}" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="${sh[0] + hx}" cy="${sh[1] + hy}" r="13" fill="${c.skin}"/>`;
+}
+// a man lying asleep under a blanket, head to the left
+function manLie(c) {
+  return `<ellipse cx="0" cy="6" rx="190" ry="14" fill="#000" opacity=".2"/>
+  <path d="M-150 -10 C-150 -60 -100 -78 -40 -76 C40 -80 140 -70 170 -40 C186 -24 180 -8 170 -6 Z" fill="${c.cloak}"/>
+  <path d="M-110 -40 C-60 -50 60 -54 160 -36" stroke="#000" stroke-opacity=".15" stroke-width="5" fill="none"/>
+  <rect x="-250" y="-30" width="96" height="26" rx="12" fill="#cdb894"/>
+  <g transform="translate(-190 -50) rotate(-90) translate(-6 446)">${HEAD(c)}</g>
+`;
+}
+function HEAD(c) {
+  return `<ellipse cx="6" cy="-446" rx="33" ry="39" fill="${c.skin}" stroke="#2a1d12" stroke-opacity=".35" stroke-width="2.5"/>
+  ${BEARD(c)}
+  <path d="M-36 -458 C-38 -492 -8 -506 14 -502 C38 -498 46 -480 42 -458 C24 -466 -14 -468 -36 -458 Z" fill="${c.turban}"/>
+  <path d="M-36 -474 C-44 -450 -46 -422 -42 -398 L-27 -400 C-30 -420 -29 -444 -22 -466 Z" fill="${c.turban}"/>`;
+}
+
+// a short trimmed beard: a thin band that follows the lower edge of the face (head ellipse cx 6, cy -446, rx 33, ry 39)
+function BEARD(c) {
+  // side view (faces right): from the ear along the jaw to the chin, clipped to the face so it never sticks out
+  return `<path clip-path="url(#face)" d="M-20 -444 C-22 -418 -10 -398 10 -392 C26 -388 40 -396 43 -414 L41 -421 C34 -417 26 -419 20 -425 C12 -421 4 -424 -3 -434 C-9 -440 -14 -444 -20 -444 Z" fill="${c.beard}"/>`;
+}
+// a small name shown over a character the first time they appear
+function nameTag(x, y, text, t, t0) {
+  const o = Math.min(ramp(t, t0 + 0.3, 0.35), 1 - ramp(t, t0 + 3.6, 0.4));
+  if (o <= 0) return "";
+  const w = text.length * 17 + 36;
+  return `<g opacity="${o}" transform="translate(${x} ${y - 10 * (1 - ramp(t, t0 + 0.3, 0.35))})">
+    <rect x="${-w / 2}" y="-26" width="${w}" height="44" rx="22" fill="#0b1a17" opacity=".72"/>
+    <text x="0" y="6" text-anchor="middle" class="nm" fill="#f2dc9c">${text}</text>
+    <path d="M-8 18 L0 28 L8 18 Z" fill="#0b1a17" opacity=".72"/></g>`;
+}
+// an inside room (day or night)
+function room(night) {
+  const wall = night ? "#2a2a33" : "#c4a274", floor = night ? "#1d1a1c" : "#8c6a42";
+  return `<rect width="1080" height="1920" fill="${wall}"/>
+    <rect x="640" y="520" width="200" height="260" rx="100" fill="${night ? "#0c1830" : "#f2d79c"}"/>
+    ${night ? `<circle cx="760" cy="600" r="34" fill="#f1e8c8"/><circle cx="776" cy="590" r="30" fill="#0c1830"/>
+      <g fill="#f1e8c8">${[[680, 560], [700, 700], [800, 690], [720, 640]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3"/>`).join("")}</g>` : ""}
+    <rect x="640" y="520" width="200" height="260" rx="100" fill="none" stroke="${night ? "#141218" : "#7a5a36"}" stroke-width="16"/>
+    <rect y="1240" width="1080" height="700" fill="${floor}"/>
+    <path d="M150 1300 L930 1300 L980 1420 L100 1420 Z" fill="${night ? "#3a2f2a" : "#9a3f2c"}" opacity=".85"/>
+    <path d="M150 1300 L930 1300 L980 1420 L100 1420 Z" fill="none" stroke="#e8c66a" stroke-opacity=".35" stroke-width="4" stroke-dasharray="14 10"/>
+    ${night ? `<rect width="1080" height="1920" fill="#0b1030" opacity=".25"/>` : ""}`;
+}
+function lamp(x, y, t) {
+  const f = 1 + 0.05 * Math.sin(t * 9) + 0.03 * Math.sin(t * 23);
+  return `<circle cx="${x}" cy="${y - 40}" r="${170 * f}" fill="url(#sun)" opacity=".55"/>
+    <path d="M${x - 40} ${y} C${x - 40} ${y - 26} ${x + 40} ${y - 26} ${x + 50} ${y - 6} L${x + 70} ${y - 16} L${x + 50} ${y} Z" fill="#8a5a2c"/>
+    <path d="M${x + 62} ${y - 18} C${x + 52} ${y - 40} ${x + 66} ${y - 58} ${x + 70} ${y - 70} C${x + 76} ${y - 54} ${x + 84} ${y - 40} ${x + 72} ${y - 18} Z" fill="#ffd27a" transform="scale(1 ${f})" transform-origin="${x + 66} ${y - 18}"/>`;
+}
+// 3: the meal
+function scene3(t, k, t0) {
+  const z = lerp(1.0, 1.08, ease(k));
+  const eat = ramp(t, D.cue.ate - 0.2, 0.6);
+  const armD = [lerp(30, 40, eat), lerp(70, 80, eat), lerp(60, 120, eat), lerp(120, 180, eat)];
+  return `<g transform="translate(540 1100) scale(${z}) translate(-540 -1100)">${room(false)}
+    <g transform="translate(330 1400)">${manSit(DARDA, armD)}</g>
+    <g transform="translate(750 1400) scale(-1 1)">${manSit(SALMAN, [30, 90, 70, 150])}</g>
+    <ellipse cx="540" cy="1380" rx="110" ry="22" fill="#e9dcc0"/>
+    <ellipse cx="540" cy="1360" rx="60" ry="26" fill="#7b5532"/><ellipse cx="540" cy="1350" rx="48" ry="12" fill="#c78a3c"/>
+    <ellipse cx="460" cy="1376" rx="30" ry="10" fill="#d8b277"/><ellipse cx="620" cy="1376" rx="26" ry="9" fill="#d8b277"/>
+    ${lamp(900, 1300, t)}
+    </g>`;
+}
+// 4: the night, he gets up, Salman says "sleep"
+function scene4(t, k) {
+  const c = D.cue;
+  const up = (t >= c.got1 - 0.1 && t < c.sleep1 + 0.6) || (t >= c.got2 - 0.1 && t < c.sleep2 + 0.6);
+  const o = up ? 1 : 0;
+  const lean = Math.max(ramp(t, c.sleep1 - 0.4, 0.3) * (1 - ramp(t, c.sleep1 + 0.8, 0.3)), ramp(t, c.sleep2 - 0.4, 0.3) * (1 - ramp(t, c.sleep2 + 0.8, 0.3)));
+  return `<g>${room(true)}
+    <g transform="translate(310 1400)" opacity="${1 - o}">${manLie(DARDA)}</g>
+    <g transform="translate(330 1430)" opacity="${o}">${man(DARDA, [10, 120, 18, 230])}</g>
+    <g transform="translate(780 1400) scale(-1 1)">${manSit(SALMAN, [lerp(30, 50, lean), lerp(90, 40, lean), lerp(70, 140, lean), lerp(150, 60, lean)])}</g>
+    ${lamp(560, 1330, t)}</g>`;
+}
+// 5: the last part of the night, both pray
+function scene5(t, k) {
+  const ruku = ramp(k, 0.7, 0.15);
+  const fold = [40, 110, 70, 90];
+  return `<g>${room(true)}<rect width="1080" height="1920" fill="#4a3a6a" opacity="${0.15 + 0.2 * ease(k)}"/>
+    <rect x="640" y="520" width="200" height="260" rx="100" fill="#d9a066" opacity="${0.5 * ease(k)}"/>
+    <rect x="250" y="1395" width="200" height="36" rx="6" fill="#2f5546"/><rect x="520" y="1395" width="200" height="36" rx="6" fill="#6b4a2e"/>
+    <g transform="translate(360 1420)">${man(DARDA, fold)}</g>
+    <g transform="translate(630 1420)">${man(SALMAN, fold)}</g></g>`;
+}
+// 6: Salman's words
+function scene6(t, k) {
+  const g = 0.5 + 0.5 * Math.sin(t * 2.2);
+  return `<g transform="translate(540 1100) scale(${lerp(1.04, 1.12, ease(k))}) translate(-540 -1100)">${room(false)}
+    <rect width="1080" height="1920" fill="#f4cf82" opacity=".08"/>
+    <g transform="translate(330 1400)">${manSit(DARDA, [30, 90, 70, 150])}</g>
+    <g transform="translate(750 1400) scale(-1 1)">${manSit(SALMAN, [40, lerp(60, 50, g), 110, lerp(10, -6, g)])}</g></g>`;
+}
+// 7: Abu ad-Darda' goes to the mosque (the Prophet is not shown)
+function scene7(t, k) {
+  const x = lerp(140, 600, ease(clamp(k * 1.4, 0, 1)));
+  const step = k < 0.7 ? (k * 6) % 1 : 0;
+  return `<g transform="translate(540 1000) scale(${lerp(1, 1.06, ease(k))}) translate(-540 -1000)">
+    <rect width="1080" height="1920" fill="url(#sky)"/><circle cx="760" cy="1050" r="380" fill="url(#sun)"/>
+    <rect x="360" y="900" width="720" height="350" fill="#c7a271"/><rect x="350" y="886" width="740" height="20" fill="#a98656"/>
+    ${[0, 1, 2, 3, 4, 5].map((i) => `<rect x="${420 + i * 110}" y="960" width="26" height="290" fill="#6e4f30"/>`).join("")}
+    <rect x="360" y="900" width="720" height="60" fill="#8a6a41"/>
+    <path d="M660 1250 L660 1090 Q720 1040 780 1090 L780 1250 Z" fill="#2a1f15" opacity=".85"/>
+    ${palm(260, 1250, 0.9)}${palm(1000, 1250, 0.8, -1)}
+    <rect y="1240" width="1080" height="700" fill="url(#ground)"/>
+    <g transform="translate(${x} 1430) scale(1.0)">${man(DARDA, [10, 120, 18, 230], step)}</g></g>`;
+}
+// 8: closing question and logo
+function scene8(t, k) {
+  return `<rect width="1080" height="1920" fill="#0b1a17"/><circle cx="540" cy="900" r="520" fill="url(#sun)" opacity=".18"/>`;
+}
+const SCENES = { scene1, scene2, scene3, scene4, scene5, scene6, scene7, scene8 };
+
+// ---------- captions ----------
+function caption(t) {
+  const cap = $("cap");
+  const ch = D.chunks.find((c) => t >= c.start && t < c.end);
+  if (!ch) { cap.innerHTML = ""; return; }
+  if (cap.dataset.id !== String(ch.id)) {
+    cap.innerHTML = ""; cap.dataset.id = ch.id;
+    ch.words.forEach((w, i) => { const s = document.createElement("span"); if (w.d.includes("\uFDFA")) { const [a, b] = w.d.split("\uFDFA"); s.append(a); const g = document.createElement("b"); g.className = "saw"; g.textContent = "\uFDFA"; s.append(g, b); } else s.textContent = w.d; cap.appendChild(s); cap.appendChild(document.createTextNode(i < ch.words.length - 1 && !w.glue ? " " : "")); });
+  }
+  const spans = cap.querySelectorAll("span");
+  ch.words.forEach((w, i) => spans[i].classList.toggle("on", t >= w.t0 && t < w.t1));
+  cap.style.opacity = Math.min(ramp(t, ch.start, 0.12), 1 - ramp(t, ch.end - 0.1, 0.1));
+}
+
+window.render = (t) => {
+  const S = D.scenes;
+  for (const s of S) {
+    const g = $(s.id);
+    const vis = Math.min(ramp(t, s.t0 - 0.5, 0.5), 1 - ramp(t, s.t1, 0.5));
+    if (vis <= 0) { g.innerHTML = ""; continue; }
+    const k = clamp((t - s.t0) / (s.t1 - s.t0), 0, 1);
+    g.innerHTML = SCENES[s.id](t, k, s.t0);
+    g.setAttribute("opacity", s.first ? 1 : vis);
+  }
+  const h = $("hook");
+  const hk = t < D.outro0 - 0.5 ? D.hookWords : D.outroWords;
+  if (h.dataset.which !== (hk === D.hookWords ? "h" : "o")) {
+    h.dataset.which = hk === D.hookWords ? "h" : "o"; h.innerHTML = "";
+    hk.forEach((w, i) => { const s = document.createElement("span"); s.textContent = w.d; h.appendChild(s); if (i < hk.length - 1) h.appendChild(document.createTextNode(" ")); });
+  }
+  h.querySelectorAll("span").forEach((s, i) => s.classList.toggle("on", t >= hk[i].t0 && t < hk[i].t1));
+  h.style.opacity = hk === D.hookWords ? Math.min(ramp(t, 0.2, 0.4), 1 - ramp(t, D.hookEnd, 0.4)) : Math.min(ramp(t, D.outro0 - 0.4, 0.4), 1 - ramp(t, D.end0, 0.4));
+  $("logo").style.opacity = ramp(t, D.end0 + 0.2, 0.6);
+  h.style.transform = `translateY(${(1 - ramp(t, 0.2, 0.6)) * 20}px)`;
+  caption(t);
+  $("black").style.opacity = 1 - ramp(t, 0, 0.35);
+};
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body></html>

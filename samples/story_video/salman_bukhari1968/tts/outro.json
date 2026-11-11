@@ -1,0 +1,79 @@
+{
+"lines": [
+"Who in your home needs their right from you today?"
+],
+"tokens": [
+{
+"text": "Who",
+"ws": " ",
+"start": 0.25,
+"end": 0.463
+},
+{
+"text": "in",
+"ws": " ",
+"start": 0.463,
+"end": 0.65
+},
+{
+"text": "your",
+"ws": " ",
+"start": 0.65,
+"end": 0.875
+},
+{
+"text": "home",
+"ws": " ",
+"start": 0.875,
+"end": 1.562
+},
+{
+"text": "needs",
+"ws": " ",
+"start": 1.562,
+"end": 1.95
+},
+{
+"text": "their",
+"ws": " ",
+"start": 1.95,
+"end": 2.163
+},
+{
+"text": "right",
+"ws": " ",
+"start": 2.163,
+"end": 2.475
+},
+{
+"text": "from",
+"ws": " ",
+"start": 2.475,
+"end": 2.7
+},
+{
+"text": "you",
+"ws": " ",
+"start": 2.7,
+"end": 2.913
+},
+{
+"text": "today",
+"ws": "",
+"start": 2.913,
+"end": 3.7
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.7,
+"end": 3.9
+},
+{
+"text": "<line>",
+"start": 4.0,
+"end": 4.0
+}
+],
+"duration": 4.28
+}

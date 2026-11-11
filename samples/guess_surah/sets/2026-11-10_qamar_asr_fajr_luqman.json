@@ -1,0 +1,108 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:54:17",
+  "verses": [
+   "054017"
+  ],
+  "options": [
+   [
+    "An-Najm",
+    "النجم"
+   ],
+   [
+    "Ar-Rahman",
+    "الرحمن"
+   ],
+   [
+    "Al-Qamar",
+    "القمر"
+   ],
+   [
+    "Al-Waqi'ah",
+    "الواقعة"
+   ]
+  ],
+  "answer": 2
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:103:2-3",
+  "verses": [
+   "103002",
+   "103003"
+  ],
+  "options": [
+   [
+    "Al-'Asr",
+    "العصر"
+   ],
+   [
+    "At-Takathur",
+    "التكاثر"
+   ],
+   [
+    "Al-Humazah",
+    "الهمزة"
+   ],
+   [
+    "Al-Qari'ah",
+    "القارعة"
+   ]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:89:27-28",
+  "verses": [
+   "089027",
+   "089028"
+  ],
+  "options": [
+   [
+    "Al-Ghashiyah",
+    "الغاشية"
+   ],
+   [
+    "Al-Balad",
+    "البلد"
+   ],
+   [
+    "Ash-Shams",
+    "الشمس"
+   ],
+   [
+    "Al-Fajr",
+    "الفجر"
+   ]
+  ],
+  "answer": 3
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:31:18",
+  "verses": [
+   "031018"
+  ],
+  "options": [
+   [
+    "Al-Isra",
+    "الإسراء"
+   ],
+   [
+    "Luqman",
+    "لقمان"
+   ],
+   [
+    "Al-Hujurat",
+    "الحجرات"
+   ],
+   [
+    "Al-Furqan",
+    "الفرقان"
+   ]
+  ],
+  "answer": 1
+ }
+]

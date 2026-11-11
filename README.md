@@ -1,5 +1,8 @@
 # The Halal Algorithm — otomatik paylaşım sistemi
 
+> Sahibinin Claude sohbeti (ana ajan) yeni bir sohbette önce **`notes/owner_chat/README.md`** dosyasını okur:
+> tercihler, açık işler, elle yapılan içerikler, video rehberi, istatistikler.
+
 Instagram **@thehalalalgorithm** için her gün doğrulanmış bir ayet veya hadisi
 sabit temalı bir görselle hazırlayıp belirlenen saatte paylaşan sistem.
 

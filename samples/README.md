@@ -9,6 +9,9 @@ names in the set files are ours.
 |---|---|---|
 | **Qur'an Quiz (trivia)**: logo intro (drawn) -> 3 questions, 3 options, 5 s timer -> answer -> the verse that answers it, recited and lit word by word, answer word in light green in the Arabic and the meaning -> closing screen with the logo drawn again and the answers | `trivia/make_trivia.py` | ~55-65 s |
 | **Guess the Surah**: 4 rounds (MEDIUM, EASY, MEDIUM, HARD): the verse is recited and lit -> 4 s think bar -> answer + meaning -> score screen. Top line: "Can you name all 4 Surahs?", "Wait for the hard one" from the first answer, the challenge again at the last round | `guess_surah/make_guess_surah.py` | ~75-95 s |
+| **Voice note** (Al-Isra 17:32): HIM / HER night panels → he types, each bubble turns into a red heart and flies to her phone → chat → the verse recorded as a voice note (Alafasy, words and meaning lit as recited) → sent → end card | `voice_note/make_voice_note.py` | ~29 s |
+| **Story video, illustrated** (Bukhari 1968): flat faceless side-view characters in scenes, English TTS narration of the hadith word for word, word-by-word captions, name tags on first appearance | `story_video/salman_bukhari1968/make_story.py` | ~108 s |
+| **Story video, congregation + cards** (Muslim 537): rows seen from behind fading into haze, shots of one world, Arabic phrase cards with the English, our hook / note / closing question | `story_video/muawiya_muslim537/make.py` | ~84 s |
 | **99 Names (tasbih)**: a ring of 99 beads, one name every 1.5 s (Arabic, transliteration, meaning, count, bar), Bismillah written into the ring at the start, Alhamdulillah at the end; bead click per name, bell at 33 and 66 | `tasbih/make_tasbih.py` | ~156 s |
 
 ## Making one
@@ -61,11 +64,27 @@ original image takes over at 1.72 s). Ready transparent frames (30 fps, 2.0 s) f
 `logo_draw/frames_800/` (intro size) and `logo_draw/frames_478/` (closing size). For .mov files with alpha:
 `python3 samples/logo_draw/export_logo.py . <out_dir>`.
 
+## Voice note and story videos
+
+Read `notes/owner_chat/video_playbook.md` first (the owner's feedback for each format).
+- Voice note: `python3 samples/voice_note/make_voice_note.py . <audio_dir> <out>` with Alafasy 17:032 from
+  audio-fetch (`inputs[ayahs]=017032`). Another verse needs the English split and the word map edited in the script.
+- Story videos: the narration is made with Kokoro TTS on GitHub (`samples/tts/`, branch `tts-work` → `tts-out`);
+  each story folder keeps its `script.json` (shown words + spoken forms) and its narration (`tts/*.flac` + word
+  times `*.json`). `python3 samples/story_video/<story>/make*.py <out_dir> [until]` (Muslim 537: `build_script.py`
+  makes `script.json` from the source text; `make.py <out> 0 --no-video` writes only the timeline; `snap.py`
+  saves stills). The pages read fonts and the logo from `/home/claude/test-repo`.
+
 ## Used verses
 
-- Guess the Surah, Sudais: 36:82, 112:1-2, 94:5-6, 29:2 | 3:8, 108:1-3, 93:6-8, 25:63
-- Guess the Surah, Alafasy: 95:4-6, 1:5, 2:152, 33:56 | 67:2, 55:13, 87:16-17, 13:28 (Nov 8)
+Full list with dates, captions and results: `notes/owner_chat/content_log.md` (also hadith used in videos).
+
+
+- Guess the Surah, Sudais: 113:1-2, 2:201, 21:88 (Nov 3, 3 questions) | 36:82, 112:1-2, 94:5-6, 29:2 | 3:8, 108:1-3, 93:6-8, 25:63
+- Guess the Surah, Alafasy: 95:4-6, 1:5, 2:152, 33:56 | 67:2, 55:13, 87:16-17, 13:28 (Nov 8) | 54:17, 103:2-3, 89:27-28, 31:18 (Nov 10)
 - Trivia, Alafasy: 37:142, 21:69, 97:3 (Nov 7) | 20:20, 19:25, 50:38 (Nov 8)
+- Voice note: 17:32 (Alafasy, posted Nov 10); 49:6 (first draft, not posted)
+- Story videos (hadith): Bukhari 1968 (posted Nov 11), Muslim 537 (in revision)
 
 ## Caption (the one that was posted)
 

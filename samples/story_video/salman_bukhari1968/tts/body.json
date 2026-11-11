@@ -1,0 +1,1735 @@
+{
+"lines": [
+"Narrated Abu Juhayfa: The Prophet peace be upon him, made a bond of brotherhood between Salman and Abud Darda.",
+"Salman paid a visit to Abud Darda and found Ummud Darda dressed in shabby clothes and asked her why she was in that state.",
+"She replied, \"Your brother Abud Darda is not interested in the luxuries of this world.\"",
+"In the meantime Abud Darda came and prepared a meal for Salman.",
+"Salman requested Abud Darda to eat with him, but Abud Darda said, \"I am fasting.\"",
+"Salman said, \"I am not going to eat unless you eat.\"",
+"So, Abud Darda ate with Salman.",
+"When it was night and a part of the night passed, Abud Darda got up to offer the night prayer, but Salman told him to sleep and Abud Darda slept.",
+"After sometime Abud Darda again got up but Salman told him to sleep.",
+"When it was the last hours of the night, Salman told him to get up then, and both of them offered the prayer.",
+"Salman told Abud Darda, \"Your Lord has a right on you, your soul has a right on you, and your family has a right on you; so you should give the rights of all those who has a right on you.\"",
+"Abud Darda came to the Prophet peace be upon him, and narrated the whole story.",
+"The Prophet peace be upon him, said, \"Salman has spoken the truth"
+],
+"tokens": [
+{
+"text": "Narrated",
+"ws": " ",
+"start": 0.275,
+"end": 0.925
+},
+{
+"text": "Abu",
+"ws": " ",
+"start": 0.925,
+"end": 1.288
+},
+{
+"text": "Juhayfa",
+"ws": "",
+"start": 1.288,
+"end": 2.175
+},
+{
+"text": ":",
+"ws": " ",
+"start": 2.175,
+"end": 2.3
+},
+{
+"text": "The",
+"ws": " ",
+"start": 2.3,
+"end": 2.425
+},
+{
+"text": "Prophet",
+"ws": " ",
+"start": 2.425,
+"end": 2.825
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 2.825,
+"end": 3.15
+},
+{
+"text": "be",
+"ws": " ",
+"start": 3.15,
+"end": 3.325
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 3.325,
+"end": 3.7
+},
+{
+"text": "him",
+"ws": "",
+"start": 3.7,
+"end": 4.2
+},
+{
+"text": ",",
+"ws": " ",
+"start": 4.2,
+"end": 4.3
+},
+{
+"text": "made",
+"ws": " ",
+"start": 4.3,
+"end": 4.487
+},
+{
+"text": "a",
+"ws": " ",
+"start": 4.487,
+"end": 4.562
+},
+{
+"text": "bond",
+"ws": " ",
+"start": 4.562,
+"end": 4.862
+},
+{
+"text": "of",
+"ws": " ",
+"start": 4.862,
+"end": 4.987
+},
+{
+"text": "brotherhood",
+"ws": " ",
+"start": 4.987,
+"end": 5.55
+},
+{
+"text": "between",
+"ws": " ",
+"start": 5.55,
+"end": 6.013
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 6.013,
+"end": 6.95
+},
+{
+"text": "and",
+"ws": " ",
+"start": 6.95,
+"end": 7.162
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 7.162,
+"end": 7.638
+},
+{
+"text": "Darda",
+"ws": "",
+"start": 7.638,
+"end": 8.45
+},
+{
+"text": ".",
+"ws": "",
+"start": 8.45,
+"end": 8.65
+},
+{
+"text": "<line>",
+"start": 8.75,
+"end": 8.75
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 9.305,
+"end": 9.792
+},
+{
+"text": "paid",
+"ws": " ",
+"start": 9.792,
+"end": 10.042
+},
+{
+"text": "a",
+"ws": " ",
+"start": 10.042,
+"end": 10.105
+},
+{
+"text": "visit",
+"ws": " ",
+"start": 10.105,
+"end": 10.455
+},
+{
+"text": "to",
+"ws": " ",
+"start": 10.455,
+"end": 10.617
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 10.617,
+"end": 11.005
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 11.005,
+"end": 11.805
+},
+{
+"text": "and",
+"ws": " ",
+"start": 11.805,
+"end": 11.955
+},
+{
+"text": "found",
+"ws": " ",
+"start": 11.955,
+"end": 12.317
+},
+{
+"text": "Ummud",
+"ws": " ",
+"start": 12.317,
+"end": 12.68
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 12.68,
+"end": 13.067
+},
+{
+"text": "dressed",
+"ws": " ",
+"start": 13.067,
+"end": 13.505
+},
+{
+"text": "in",
+"ws": " ",
+"start": 13.505,
+"end": 13.668
+},
+{
+"text": "shabby",
+"ws": " ",
+"start": 13.668,
+"end": 14.043
+},
+{
+"text": "clothes",
+"ws": " ",
+"start": 14.043,
+"end": 14.93
+},
+{
+"text": "and",
+"ws": " ",
+"start": 14.93,
+"end": 15.092
+},
+{
+"text": "asked",
+"ws": " ",
+"start": 15.092,
+"end": 15.442
+},
+{
+"text": "her",
+"ws": " ",
+"start": 15.442,
+"end": 15.817
+},
+{
+"text": "why",
+"ws": " ",
+"start": 15.817,
+"end": 16.055
+},
+{
+"text": "she",
+"ws": " ",
+"start": 16.055,
+"end": 16.205
+},
+{
+"text": "was",
+"ws": " ",
+"start": 16.205,
+"end": 16.43
+},
+{
+"text": "in",
+"ws": " ",
+"start": 16.43,
+"end": 16.58
+},
+{
+"text": "that",
+"ws": " ",
+"start": 16.58,
+"end": 16.843
+},
+{
+"text": "state",
+"ws": "",
+"start": 16.843,
+"end": 17.63
+},
+{
+"text": ".",
+"ws": "",
+"start": 17.63,
+"end": 17.83
+},
+{
+"text": "<line>",
+"start": 17.93,
+"end": 17.93
+},
+{
+"text": "She",
+"ws": " ",
+"start": 18.485,
+"end": 18.61
+},
+{
+"text": "replied",
+"ws": "",
+"start": 18.61,
+"end": 19.41
+},
+{
+"text": ",",
+"ws": " ",
+"start": 19.41,
+"end": 19.51
+},
+{
+"text": "\"",
+"ws": "",
+"start": 19.51,
+"end": 19.585
+},
+{
+"text": "Your",
+"ws": " ",
+"start": 19.585,
+"end": 19.748
+},
+{
+"text": "brother",
+"ws": " ",
+"start": 19.748,
+"end": 20.16
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 20.16,
+"end": 20.623
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 20.623,
+"end": 21.26
+},
+{
+"text": "is",
+"ws": " ",
+"start": 21.26,
+"end": 21.435
+},
+{
+"text": "not",
+"ws": " ",
+"start": 21.435,
+"end": 21.698
+},
+{
+"text": "interested",
+"ws": " ",
+"start": 21.698,
+"end": 22.498
+},
+{
+"text": "in",
+"ws": " ",
+"start": 22.498,
+"end": 22.623
+},
+{
+"text": "the",
+"ws": " ",
+"start": 22.623,
+"end": 22.735
+},
+{
+"text": "luxuries",
+"ws": " ",
+"start": 22.735,
+"end": 23.31
+},
+{
+"text": "of",
+"ws": " ",
+"start": 23.31,
+"end": 23.41
+},
+{
+"text": "this",
+"ws": " ",
+"start": 23.41,
+"end": 23.672
+},
+{
+"text": "world",
+"ws": "",
+"start": 23.672,
+"end": 24.435
+},
+{
+"text": ".",
+"ws": "",
+"start": 24.435,
+"end": 24.61
+},
+{
+"text": "\"",
+"ws": "",
+"start": 24.61,
+"end": 24.66
+},
+{
+"text": "<line>",
+"start": 24.76,
+"end": 24.76
+},
+{
+"text": "In",
+"ws": " ",
+"start": 25.29,
+"end": 25.378
+},
+{
+"text": "the",
+"ws": " ",
+"start": 25.378,
+"end": 25.465
+},
+{
+"text": "meantime",
+"ws": " ",
+"start": 25.465,
+"end": 26.403
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 26.403,
+"end": 26.853
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 26.853,
+"end": 27.253
+},
+{
+"text": "came",
+"ws": " ",
+"start": 27.253,
+"end": 27.828
+},
+{
+"text": "and",
+"ws": " ",
+"start": 27.828,
+"end": 27.965
+},
+{
+"text": "prepared",
+"ws": " ",
+"start": 27.965,
+"end": 28.428
+},
+{
+"text": "a",
+"ws": " ",
+"start": 28.428,
+"end": 28.528
+},
+{
+"text": "meal",
+"ws": " ",
+"start": 28.528,
+"end": 28.89
+},
+{
+"text": "for",
+"ws": " ",
+"start": 28.89,
+"end": 29.028
+},
+{
+"text": "Salman",
+"ws": "",
+"start": 29.028,
+"end": 29.99
+},
+{
+"text": ".",
+"ws": "",
+"start": 29.99,
+"end": 30.165
+},
+{
+"text": "<line>",
+"start": 30.265,
+"end": 30.265
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 30.82,
+"end": 31.345
+},
+{
+"text": "requested",
+"ws": " ",
+"start": 31.345,
+"end": 32.07
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 32.07,
+"end": 32.52
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 32.52,
+"end": 32.895
+},
+{
+"text": "to",
+"ws": " ",
+"start": 32.895,
+"end": 33.032
+},
+{
+"text": "eat",
+"ws": " ",
+"start": 33.032,
+"end": 33.258
+},
+{
+"text": "with",
+"ws": " ",
+"start": 33.258,
+"end": 33.395
+},
+{
+"text": "him",
+"ws": "",
+"start": 33.395,
+"end": 33.87
+},
+{
+"text": ",",
+"ws": " ",
+"start": 33.87,
+"end": 33.97
+},
+{
+"text": "but",
+"ws": " ",
+"start": 33.97,
+"end": 34.157
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 34.157,
+"end": 34.545
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 34.545,
+"end": 34.933
+},
+{
+"text": "said",
+"ws": "",
+"start": 34.933,
+"end": 35.52
+},
+{
+"text": ",",
+"ws": " ",
+"start": 35.52,
+"end": 35.645
+},
+{
+"text": "\"",
+"ws": "",
+"start": 35.645,
+"end": 35.72
+},
+{
+"text": "I",
+"ws": " ",
+"start": 35.72,
+"end": 35.845
+},
+{
+"text": "am",
+"ws": " ",
+"start": 35.845,
+"end": 36.02
+},
+{
+"text": "fasting",
+"ws": "",
+"start": 36.02,
+"end": 36.97
+},
+{
+"text": ".",
+"ws": "",
+"start": 36.97,
+"end": 37.12
+},
+{
+"text": "\"",
+"ws": "",
+"start": 37.12,
+"end": 37.17
+},
+{
+"text": "<line>",
+"start": 37.27,
+"end": 37.27
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 37.825,
+"end": 38.325
+},
+{
+"text": "said",
+"ws": "",
+"start": 38.325,
+"end": 38.875
+},
+{
+"text": ",",
+"ws": " ",
+"start": 38.875,
+"end": 39.0
+},
+{
+"text": "\"",
+"ws": "",
+"start": 39.0,
+"end": 39.075
+},
+{
+"text": "I",
+"ws": " ",
+"start": 39.075,
+"end": 39.175
+},
+{
+"text": "am",
+"ws": " ",
+"start": 39.175,
+"end": 39.288
+},
+{
+"text": "not",
+"ws": " ",
+"start": 39.288,
+"end": 39.475
+},
+{
+"text": "going",
+"ws": " ",
+"start": 39.475,
+"end": 39.7
+},
+{
+"text": "to",
+"ws": " ",
+"start": 39.7,
+"end": 39.838
+},
+{
+"text": "eat",
+"ws": " ",
+"start": 39.838,
+"end": 40.188
+},
+{
+"text": "unless",
+"ws": " ",
+"start": 40.188,
+"end": 40.525
+},
+{
+"text": "you",
+"ws": " ",
+"start": 40.525,
+"end": 40.688
+},
+{
+"text": "eat",
+"ws": "",
+"start": 40.688,
+"end": 41.35
+},
+{
+"text": ".",
+"ws": "",
+"start": 41.35,
+"end": 41.525
+},
+{
+"text": "\"",
+"ws": "",
+"start": 41.525,
+"end": 41.575
+},
+{
+"text": "<line>",
+"start": 41.675,
+"end": 41.675
+},
+{
+"text": "So",
+"ws": "",
+"start": 42.205,
+"end": 42.455
+},
+{
+"text": ",",
+"ws": " ",
+"start": 42.455,
+"end": 42.53
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 42.53,
+"end": 43.005
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 43.005,
+"end": 43.443
+},
+{
+"text": "ate",
+"ws": " ",
+"start": 43.443,
+"end": 43.755
+},
+{
+"text": "with",
+"ws": " ",
+"start": 43.755,
+"end": 43.955
+},
+{
+"text": "Salman",
+"ws": "",
+"start": 43.955,
+"end": 44.93
+},
+{
+"text": ".",
+"ws": "",
+"start": 44.93,
+"end": 45.13
+},
+{
+"text": "<line>",
+"start": 45.23,
+"end": 45.23
+},
+{
+"text": "When",
+"ws": " ",
+"start": 45.76,
+"end": 45.873
+},
+{
+"text": "it",
+"ws": " ",
+"start": 45.873,
+"end": 45.948
+},
+{
+"text": "was",
+"ws": " ",
+"start": 45.948,
+"end": 46.123
+},
+{
+"text": "night",
+"ws": " ",
+"start": 46.123,
+"end": 46.623
+},
+{
+"text": "and",
+"ws": " ",
+"start": 46.623,
+"end": 46.748
+},
+{
+"text": "a",
+"ws": " ",
+"start": 46.748,
+"end": 46.81
+},
+{
+"text": "part",
+"ws": " ",
+"start": 46.81,
+"end": 47.098
+},
+{
+"text": "of",
+"ws": " ",
+"start": 47.098,
+"end": 47.173
+},
+{
+"text": "the",
+"ws": " ",
+"start": 47.173,
+"end": 47.26
+},
+{
+"text": "night",
+"ws": " ",
+"start": 47.26,
+"end": 47.548
+},
+{
+"text": "passed",
+"ws": "",
+"start": 47.548,
+"end": 48.285
+},
+{
+"text": ",",
+"ws": " ",
+"start": 48.285,
+"end": 48.423
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 48.423,
+"end": 48.835
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 48.835,
+"end": 49.16
+},
+{
+"text": "got",
+"ws": " ",
+"start": 49.16,
+"end": 49.323
+},
+{
+"text": "up",
+"ws": " ",
+"start": 49.323,
+"end": 49.51
+},
+{
+"text": "to",
+"ws": " ",
+"start": 49.51,
+"end": 49.635
+},
+{
+"text": "offer",
+"ws": " ",
+"start": 49.635,
+"end": 49.935
+},
+{
+"text": "the",
+"ws": " ",
+"start": 49.935,
+"end": 50.06
+},
+{
+"text": "night",
+"ws": " ",
+"start": 50.06,
+"end": 50.348
+},
+{
+"text": "prayer",
+"ws": "",
+"start": 50.348,
+"end": 51.085
+},
+{
+"text": ",",
+"ws": " ",
+"start": 51.085,
+"end": 51.185
+},
+{
+"text": "but",
+"ws": " ",
+"start": 51.185,
+"end": 51.348
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 51.348,
+"end": 51.873
+},
+{
+"text": "told",
+"ws": " ",
+"start": 51.873,
+"end": 52.148
+},
+{
+"text": "him",
+"ws": " ",
+"start": 52.148,
+"end": 52.335
+},
+{
+"text": "to",
+"ws": " ",
+"start": 52.335,
+"end": 52.485
+},
+{
+"text": "sleep",
+"ws": " ",
+"start": 52.485,
+"end": 53.21
+},
+{
+"text": "and",
+"ws": " ",
+"start": 53.21,
+"end": 53.423
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 53.423,
+"end": 53.873
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 53.873,
+"end": 54.348
+},
+{
+"text": "slept",
+"ws": "",
+"start": 54.348,
+"end": 55.135
+},
+{
+"text": ".",
+"ws": "",
+"start": 55.135,
+"end": 55.335
+},
+{
+"text": "<line>",
+"start": 55.435,
+"end": 55.435
+},
+{
+"text": "After",
+"ws": " ",
+"start": 55.965,
+"end": 56.303
+},
+{
+"text": "sometime",
+"ws": " ",
+"start": 56.303,
+"end": 57.178
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 57.178,
+"end": 57.678
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 57.678,
+"end": 58.065
+},
+{
+"text": "again",
+"ws": " ",
+"start": 58.065,
+"end": 58.39
+},
+{
+"text": "got",
+"ws": " ",
+"start": 58.39,
+"end": 58.615
+},
+{
+"text": "up",
+"ws": " ",
+"start": 58.615,
+"end": 59.24
+},
+{
+"text": "but",
+"ws": " ",
+"start": 59.24,
+"end": 59.415
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 59.415,
+"end": 59.928
+},
+{
+"text": "told",
+"ws": " ",
+"start": 59.928,
+"end": 60.203
+},
+{
+"text": "him",
+"ws": " ",
+"start": 60.203,
+"end": 60.39
+},
+{
+"text": "to",
+"ws": " ",
+"start": 60.39,
+"end": 60.54
+},
+{
+"text": "sleep",
+"ws": "",
+"start": 60.54,
+"end": 61.24
+},
+{
+"text": ".",
+"ws": "",
+"start": 61.24,
+"end": 61.465
+},
+{
+"text": "<line>",
+"start": 61.565,
+"end": 61.565
+},
+{
+"text": "When",
+"ws": " ",
+"start": 62.095,
+"end": 62.208
+},
+{
+"text": "it",
+"ws": " ",
+"start": 62.208,
+"end": 62.283
+},
+{
+"text": "was",
+"ws": " ",
+"start": 62.283,
+"end": 62.47
+},
+{
+"text": "the",
+"ws": " ",
+"start": 62.47,
+"end": 62.595
+},
+{
+"text": "last",
+"ws": " ",
+"start": 62.595,
+"end": 63.008
+},
+{
+"text": "hours",
+"ws": " ",
+"start": 63.008,
+"end": 63.358
+},
+{
+"text": "of",
+"ws": " ",
+"start": 63.358,
+"end": 63.433
+},
+{
+"text": "the",
+"ws": " ",
+"start": 63.433,
+"end": 63.545
+},
+{
+"text": "night",
+"ws": "",
+"start": 63.545,
+"end": 64.145
+},
+{
+"text": ",",
+"ws": " ",
+"start": 64.145,
+"end": 64.282
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 64.282,
+"end": 64.808
+},
+{
+"text": "told",
+"ws": " ",
+"start": 64.808,
+"end": 65.083
+},
+{
+"text": "him",
+"ws": " ",
+"start": 65.083,
+"end": 65.245
+},
+{
+"text": "to",
+"ws": " ",
+"start": 65.245,
+"end": 65.37
+},
+{
+"text": "get",
+"ws": " ",
+"start": 65.37,
+"end": 65.532
+},
+{
+"text": "up",
+"ws": " ",
+"start": 65.532,
+"end": 65.72
+},
+{
+"text": "then",
+"ws": "",
+"start": 65.72,
+"end": 66.345
+},
+{
+"text": ",",
+"ws": " ",
+"start": 66.345,
+"end": 66.445
+},
+{
+"text": "and",
+"ws": " ",
+"start": 66.445,
+"end": 66.583
+},
+{
+"text": "both",
+"ws": " ",
+"start": 66.583,
+"end": 66.858
+},
+{
+"text": "of",
+"ws": " ",
+"start": 66.858,
+"end": 66.97
+},
+{
+"text": "them",
+"ws": " ",
+"start": 66.97,
+"end": 67.27
+},
+{
+"text": "offered",
+"ws": " ",
+"start": 67.27,
+"end": 67.645
+},
+{
+"text": "the",
+"ws": " ",
+"start": 67.645,
+"end": 67.782
+},
+{
+"text": "prayer",
+"ws": "",
+"start": 67.782,
+"end": 68.62
+},
+{
+"text": ".",
+"ws": "",
+"start": 68.62,
+"end": 68.82
+},
+{
+"text": "<line>",
+"start": 68.92,
+"end": 68.92
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 69.475,
+"end": 69.963
+},
+{
+"text": "told",
+"ws": " ",
+"start": 69.963,
+"end": 70.362
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 70.362,
+"end": 70.788
+},
+{
+"text": "Darda",
+"ws": "",
+"start": 70.788,
+"end": 71.525
+},
+{
+"text": ",",
+"ws": " ",
+"start": 71.525,
+"end": 71.625
+},
+{
+"text": "\"",
+"ws": "",
+"start": 71.625,
+"end": 71.675
+},
+{
+"text": "Your",
+"ws": " ",
+"start": 71.675,
+"end": 71.8
+},
+{
+"text": "Lord",
+"ws": " ",
+"start": 71.8,
+"end": 72.075
+},
+{
+"text": "has",
+"ws": " ",
+"start": 72.075,
+"end": 72.275
+},
+{
+"text": "a",
+"ws": " ",
+"start": 72.275,
+"end": 72.375
+},
+{
+"text": "right",
+"ws": " ",
+"start": 72.375,
+"end": 72.638
+},
+{
+"text": "on",
+"ws": " ",
+"start": 72.638,
+"end": 72.838
+},
+{
+"text": "you",
+"ws": "",
+"start": 72.838,
+"end": 73.35
+},
+{
+"text": ",",
+"ws": " ",
+"start": 73.35,
+"end": 73.45
+},
+{
+"text": "your",
+"ws": " ",
+"start": 73.45,
+"end": 73.675
+},
+{
+"text": "soul",
+"ws": " ",
+"start": 73.675,
+"end": 74.05
+},
+{
+"text": "has",
+"ws": " ",
+"start": 74.05,
+"end": 74.225
+},
+{
+"text": "a",
+"ws": " ",
+"start": 74.225,
+"end": 74.325
+},
+{
+"text": "right",
+"ws": " ",
+"start": 74.325,
+"end": 74.562
+},
+{
+"text": "on",
+"ws": " ",
+"start": 74.562,
+"end": 74.763
+},
+{
+"text": "you",
+"ws": "",
+"start": 74.763,
+"end": 75.325
+},
+{
+"text": ",",
+"ws": " ",
+"start": 75.325,
+"end": 75.425
+},
+{
+"text": "and",
+"ws": " ",
+"start": 75.425,
+"end": 75.538
+},
+{
+"text": "your",
+"ws": " ",
+"start": 75.538,
+"end": 75.737
+},
+{
+"text": "family",
+"ws": " ",
+"start": 75.737,
+"end": 76.25
+},
+{
+"text": "has",
+"ws": " ",
+"start": 76.25,
+"end": 76.425
+},
+{
+"text": "a",
+"ws": " ",
+"start": 76.425,
+"end": 76.525
+},
+{
+"text": "right",
+"ws": " ",
+"start": 76.525,
+"end": 76.763
+},
+{
+"text": "on",
+"ws": " ",
+"start": 76.763,
+"end": 76.963
+},
+{
+"text": "you",
+"ws": "",
+"start": 76.963,
+"end": 77.55
+},
+{
+"text": ";",
+"ws": " ",
+"start": 77.55,
+"end": 77.65
+},
+{
+"text": "so",
+"ws": " ",
+"start": 77.65,
+"end": 77.825
+},
+{
+"text": "you",
+"ws": " ",
+"start": 77.825,
+"end": 77.95
+},
+{
+"text": "should",
+"ws": " ",
+"start": 77.95,
+"end": 78.15
+},
+{
+"text": "give",
+"ws": " ",
+"start": 78.15,
+"end": 78.375
+},
+{
+"text": "the",
+"ws": " ",
+"start": 78.375,
+"end": 78.513
+},
+{
+"text": "rights",
+"ws": " ",
+"start": 78.513,
+"end": 78.875
+},
+{
+"text": "of",
+"ws": " ",
+"start": 78.875,
+"end": 79.025
+},
+{
+"text": "all",
+"ws": " ",
+"start": 79.025,
+"end": 79.25
+},
+{
+"text": "those",
+"ws": " ",
+"start": 79.25,
+"end": 79.7
+},
+{
+"text": "who",
+"ws": " ",
+"start": 79.7,
+"end": 79.85
+},
+{
+"text": "has",
+"ws": " ",
+"start": 79.85,
+"end": 80.05
+},
+{
+"text": "a",
+"ws": " ",
+"start": 80.05,
+"end": 80.15
+},
+{
+"text": "right",
+"ws": " ",
+"start": 80.15,
+"end": 80.425
+},
+{
+"text": "on",
+"ws": " ",
+"start": 80.425,
+"end": 80.638
+},
+{
+"text": "you",
+"ws": "",
+"start": 80.638,
+"end": 81.275
+},
+{
+"text": ".",
+"ws": "",
+"start": 81.275,
+"end": 81.4
+},
+{
+"text": "\"",
+"ws": "",
+"start": 81.4,
+"end": 81.45
+},
+{
+"text": "<line>",
+"start": 81.55,
+"end": 81.55
+},
+{
+"text": "Abud",
+"ws": " ",
+"start": 82.08,
+"end": 82.468
+},
+{
+"text": "Darda",
+"ws": " ",
+"start": 82.468,
+"end": 82.968
+},
+{
+"text": "came",
+"ws": " ",
+"start": 82.968,
+"end": 83.28
+},
+{
+"text": "to",
+"ws": " ",
+"start": 83.28,
+"end": 83.367
+},
+{
+"text": "the",
+"ws": " ",
+"start": 83.367,
+"end": 83.48
+},
+{
+"text": "Prophet",
+"ws": " ",
+"start": 83.48,
+"end": 83.855
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 83.855,
+"end": 84.18
+},
+{
+"text": "be",
+"ws": " ",
+"start": 84.18,
+"end": 84.355
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 84.355,
+"end": 84.73
+},
+{
+"text": "him",
+"ws": "",
+"start": 84.73,
+"end": 85.255
+},
+{
+"text": ",",
+"ws": " ",
+"start": 85.255,
+"end": 85.355
+},
+{
+"text": "and",
+"ws": " ",
+"start": 85.355,
+"end": 85.48
+},
+{
+"text": "narrated",
+"ws": " ",
+"start": 85.48,
+"end": 86.08
+},
+{
+"text": "the",
+"ws": " ",
+"start": 86.08,
+"end": 86.205
+},
+{
+"text": "whole",
+"ws": " ",
+"start": 86.205,
+"end": 86.492
+},
+{
+"text": "story",
+"ws": "",
+"start": 86.492,
+"end": 87.38
+},
+{
+"text": ".",
+"ws": "",
+"start": 87.38,
+"end": 87.555
+},
+{
+"text": "<line>",
+"start": 87.655,
+"end": 87.655
+},
+{
+"text": "The",
+"ws": " ",
+"start": 88.16,
+"end": 88.235
+},
+{
+"text": "Prophet",
+"ws": " ",
+"start": 88.235,
+"end": 88.61
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 88.61,
+"end": 88.91
+},
+{
+"text": "be",
+"ws": " ",
+"start": 88.91,
+"end": 89.085
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 89.085,
+"end": 89.41
+},
+{
+"text": "him",
+"ws": "",
+"start": 89.41,
+"end": 89.66
+},
+{
+"text": ",",
+"ws": " ",
+"start": 89.66,
+"end": 89.722
+},
+{
+"text": "said",
+"ws": "",
+"start": 89.722,
+"end": 90.235
+},
+{
+"text": ",",
+"ws": " ",
+"start": 90.235,
+"end": 90.36
+},
+{
+"text": "\"",
+"ws": "",
+"start": 90.36,
+"end": 90.435
+},
+{
+"text": "Salman",
+"ws": " ",
+"start": 90.435,
+"end": 90.91
+},
+{
+"text": "has",
+"ws": " ",
+"start": 90.91,
+"end": 91.06
+},
+{
+"text": "spoken",
+"ws": " ",
+"start": 91.06,
+"end": 91.485
+},
+{
+"text": "the",
+"ws": " ",
+"start": 91.485,
+"end": 91.623
+},
+{
+"text": "truth",
+"ws": "",
+"start": 91.623,
+"end": 92.41
+},
+{
+"text": "<line>",
+"start": 92.735,
+"end": 92.735
+}
+],
+"duration": 93.015
+}
