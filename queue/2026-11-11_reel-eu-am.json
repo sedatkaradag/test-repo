@@ -17,7 +17,7 @@
   "review": "Independent verifier approved: Arabic checked word by word and mark by mark, English is source, caption accurate",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -134,5 +134,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-10T05:46:54+00:00"
-  }
+  },
+  "story_media_id": "18652040692049254",
+  "story_kind": "video",
+  "media_id": "18026547512868415",
+  "posted_at": "2026-11-11T07:18:58+00:00"
 }
