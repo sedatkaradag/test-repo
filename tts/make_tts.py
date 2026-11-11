@@ -27,4 +27,5 @@ def render(name, lines, gap=0.28):
     json.dump({"lines": lines, "tokens": toks, "duration": round(t0, 3)}, open(f"out/{name}.json", "w"), indent=0)
     print(name, round(t0, 2), "s", len(toks), "tokens")
 import os; os.makedirs("out", exist_ok=True)
-render("hook", [S["hook"]]); render("body", lines_of_body()); render("outro", [S["outro"]])
+render("hook", [S.get("hook_spoken", S["hook"])]); render("body", lines_of_body()); render("outro", [S["outro"]])
+if S.get("note"): render("note", [S["note"]])
