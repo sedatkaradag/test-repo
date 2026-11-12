@@ -1,0 +1,108 @@
+{
+  "entry_id": "quran:87:14-15",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'laa 87:14-15",
+  "slot": "2026-11-13_reel-eu-am",
+  "publish_at": "2026-11-13T07:12:19Z",
+  "local_slot": "2026-11-13 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-13_reel-eu-am.jpg",
+  "video": "queue/2026-11-13_reel-eu-am.mp4",
+  "cover": "queue/2026-11-13_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Purify, remember, pray: the path to success\n\nAllah tells us that whoever purifies himself, remembers his Lord's Name and prays will attain success. Today is Friday, so make time to purify your heart, remember Allah and pray with presence.\n\nSurah Al-A'laa 87:14-15\n\nShare this with someone getting ready for Jumu'ah today\n\n#jumuah #fridayreminder #surahala #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Indeed, he who purifies himself will attain success; and remembers his Lord’s Name and prays (Surah Al-A'laa 87:14-15)",
+  "theme": "Friday / purification, remembrance and prayer",
+  "review": "Round 2 independent reviewer approved: integrity ok, Arabic checked, English and reference match, revised caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:87:14-15",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Purify, remember, pray: the path to success",
+    "hook_lines": [
+      "Purify, remember, pray: the",
+      "path to success"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "087014",
+        "lines": [
+          "قَدۡ أَفۡلَحَ مَن تَزَكَّىٰ ١٤"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Indeed, he who purifies himself will attain",
+          "success;"
+        ]
+      },
+      {
+        "ayah": "087015",
+        "lines": [
+          "وَذَكَرَ ٱسۡمَ رَبِّهِۦ فَصَلَّىٰ ١٥"
+        ],
+        "y": 828.4,
+        "meal": [
+          "and remembers his Lord’s Name and prays."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Indeed, he who purifies himself will attain success; and remembers his Lord’s Name and prays.",
+    "full_lines": [
+      "Indeed, he who purifies himself will attain",
+      "success; and remembers his Lord’s Name and",
+      "prays."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-A'laa 87:14-15",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Share this with someone getting ready for Jumu'ah today",
+    "cta_lines": [
+      "Share this with someone getting ready for",
+      "Jumu'ah today"
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "f7ec64a0d370a1de4eace3b0",
+  "created_at": "2026-11-12T05:45:00+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "087014",
+      "087015"
+    ],
+    "done": false
+  }
+}

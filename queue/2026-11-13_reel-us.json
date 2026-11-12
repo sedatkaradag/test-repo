@@ -1,0 +1,113 @@
+{
+  "entry_id": "quran:59:22",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hashr 59:22",
+  "slot": "2026-11-13_reel-us",
+  "publish_at": "2026-11-14T01:31:18Z",
+  "local_slot": "2026-11-13 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-13_reel-us.jpg",
+  "video": "queue/2026-11-13_reel-us.mp4",
+  "cover": "queue/2026-11-13_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "For what you carry that no one else can see\n\nAllah tells us He is the Knower of the unseen and the seen, the Most Compassionate, the Most Merciful. What is hidden from everyone else is known to Him, so bring it to Him tonight in your dua.\n\nSurah Al-Hashr 59:22\n\nCall on Him by these names before you sleep tonight\n\n#namesofallah #arrahman #surahhashr #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "He is Allah; none has the right to be worshiped except Him, Knower of the unseen and the seen; He is the Most Compassionate, the Most Merciful (Surah Al-Hashr 59:22)",
+  "theme": "Allah's names / Knower of the unseen, Most Merciful",
+  "review": "Independent reviewer approved: integrity ok, Arabic and pause signs checked, English and reference match, caption gentle and accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:59:22",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For what you carry that no one else can see",
+    "hook_lines": [
+      "For what you carry that no",
+      "one else can see"
+    ],
+    "hook_size": 82,
+    "arabic_size": 78,
+    "verses": [
+      {
+        "ayah": "059022",
+        "lines": [
+          "هُوَ ٱللَّهُ ٱلَّذِي لَآ إِلَٰهَ إِلَّا هُوَۖ عَٰلِمُ",
+          "ٱلۡغَيۡبِ وَٱلشَّهَٰدَةِۖ هُوَ ٱلرَّحۡمَٰنُ ٱلرَّحِيمُ ٢٢"
+        ],
+        "y": 650.4,
+        "meal": [
+          "He is Allah; none has the right to be worshiped",
+          "except Him, Knower of the unseen and the seen;",
+          "He is the Most Compassionate, the Most",
+          "Merciful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 984.4,
+    "full": "He is Allah; none has the right to be worshiped except Him, Knower of the unseen and the seen; He is the Most Compassionate, the Most Merciful.",
+    "full_lines": [
+      "He is Allah; none has the right to be worshiped",
+      "except Him, Knower of the unseen and the seen;",
+      "He is the Most Compassionate, the Most",
+      "Merciful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Hashr 59:22",
+    "ref_y": 1260.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Call on Him by these names before you sleep tonight",
+    "cta_lines": [
+      "Call on Him by these names before you sleep",
+      "tonight"
+    ],
+    "cta_size": 48,
+    "line_y": 1318.4,
+    "handle_y": 1464.4,
+    "handle_size": 27
+  },
+  "layout_hash": "bc004e0954fd275c56e72692",
+  "created_at": "2026-11-12T05:44:39+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "059022"
+    ],
+    "done": false
+  }
+}

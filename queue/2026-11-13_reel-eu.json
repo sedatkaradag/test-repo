@@ -1,0 +1,143 @@
+{
+  "entry_id": "quran:3:133-134",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Aal-i-Imraan 3:133-134",
+  "slot": "2026-11-13_reel-eu",
+  "publish_at": "2026-11-13T18:03:26Z",
+  "local_slot": "2026-11-13 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-13_reel-eu.jpg",
+  "video": "queue/2026-11-13_reel-eu.mp4",
+  "cover": "queue/2026-11-13_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Angry today? Read this before you reply\n\nAllah describes the righteous as those who spend in prosperity and adversity, restrain their anger and pardon people, and He tells us He loves those who do good. The next time anger rises, hold it and choose to pardon.\n\nSurah Aal-i-Imraan 3:133-134\n\nPick one person to pardon before the day ends\n\n#anger #pardonpeople #muslimcharacter #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "And hasten towards forgiveness from your Lord and a Paradise as wide as the heavens and earth, prepared for the righteous; those who spend in times of prosperity and adversity, and who restrain their anger and pardon people; for Allah loves those who do good (Surah Aal-i-Imraan 3:133-134)",
+  "theme": "anger / restraining anger and pardoning",
+  "review": "Independent reviewer approved: integrity ok, 24 Arabic words checked mark by mark, English and reference match, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:3:133-134",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Angry today? Read this before you reply",
+    "hook_lines": [
+      "Angry today? Read this",
+      "before you reply"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "003133",
+        "lines": [
+          "وَسَارِعُوٓاْ إِلَىٰ مَغۡفِرَةٖ مِّن رَّبِّكُمۡ وَجَنَّةٍ عَرۡضُهَا",
+          "ٱلسَّمَٰوَٰتُ وَٱلۡأَرۡضُ أُعِدَّتۡ لِلۡمُتَّقِينَ ١٣٣"
+        ],
+        "y": 598.4,
+        "meal": [
+          "And hasten towards forgiveness from your Lord and a Paradise as",
+          "wide as the heavens and earth, prepared for the righteous;"
+        ]
+      },
+      {
+        "ayah": "003134",
+        "lines": [
+          "ٱلَّذِينَ يُنفِقُونَ فِي ٱلسَّرَّآءِ وَٱلضَّرَّآءِ وَٱلۡكَٰظِمِينَ",
+          "ٱلۡغَيۡظَ وَٱلۡعَافِينَ عَنِ ٱلنَّاسِۗ وَٱللَّهُ يُحِبُّ",
+          "ٱلۡمُحۡسِنِينَ ١٣٤"
+        ],
+        "y": 832.4,
+        "meal": [
+          "those who spend in times of prosperity and adversity, and who",
+          "restrain their anger and pardon people; for Allah loves those who",
+          "do good."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1213.4,
+    "full": "And hasten towards forgiveness from your Lord and a Paradise as wide as the heavens and earth, prepared for the righteous; those who spend in times of prosperity and adversity, and who restrain their anger and pardon people; for Allah loves those who do good.",
+    "full_lines": [
+      "And hasten towards forgiveness from your Lord and a Paradise as",
+      "wide as the heavens and earth, prepared for the righteous; those",
+      "who spend in times of prosperity and adversity, and who restrain",
+      "their anger and pardon people; for Allah loves those who do good."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Aal-i-Imraan 3:133-134",
+    "ref_y": 1421.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one person to pardon before the day ends",
+    "cta_lines": [
+      "Pick one person to pardon before the day ends"
+    ],
+    "cta_size": 36,
+    "line_y": 1479.4,
+    "handle_y": 1542.4,
+    "handle_size": 27
+  },
+  "layout_hash": "c7cdc80e13c68c5736a765b8",
+  "created_at": "2026-11-12T05:44:15+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "003133",
+      "003134"
+    ],
+    "done": false
+  }
+}

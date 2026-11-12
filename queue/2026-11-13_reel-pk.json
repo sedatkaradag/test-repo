@@ -1,0 +1,110 @@
+{
+  "entry_id": "quran:25:47",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Furqaan 25:47",
+  "slot": "2026-11-13_reel-pk",
+  "publish_at": "2026-11-13T15:32:24Z",
+  "local_slot": "2026-11-13 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-13_reel-pk.jpg",
+  "video": "queue/2026-11-13_reel-pk.mp4",
+  "cover": "queue/2026-11-13_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "If you can't sleep tonight, read this\n\nAllah tells us He made the night a garment for us, sleep for rest, and the day for returning to life. Put the phone down, let the night cover you, and leave tomorrow for its own day.\n\nSurah Al-Furqaan 25:47\n\nSend this to someone who is still awake right now\n\n#sleeplessnights #nightroutine #surahfurqan #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "It is He Who has made the night as a garment for you, and made sleep for rest; and has made daytime for returning to life (Surah Al-Furqaan 25:47)",
+  "theme": "sleepless nights / night as rest",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked mark by mark, English and reference match, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:25:47",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "If you can't sleep tonight, read this",
+    "hook_lines": [
+      "If you can't sleep tonight,",
+      "read this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "025047",
+        "lines": [
+          "وَهُوَ ٱلَّذِي جَعَلَ لَكُمُ ٱلَّيۡلَ لِبَاسٗا",
+          "وَٱلنَّوۡمَ سُبَاتٗا وَجَعَلَ ٱلنَّهَارَ نُشُورٗا ٤٧"
+        ],
+        "y": 672.4,
+        "meal": [
+          "It is He Who has made the night as a garment for",
+          "you, and made sleep for rest; and has made",
+          "daytime for returning to life."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "It is He Who has made the night as a garment for you, and made sleep for rest; and has made daytime for returning to life.",
+    "full_lines": [
+      "It is He Who has made the night as a garment for",
+      "you, and made sleep for rest; and has made",
+      "daytime for returning to life."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Furqaan 25:47",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who is still awake right now",
+    "cta_lines": [
+      "Send this to someone who is still awake right",
+      "now"
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "5a77819fcedc13889b4aed72",
+  "created_at": "2026-11-12T05:43:26+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "025047"
+    ],
+    "done": false
+  }
+}
