@@ -91,7 +91,19 @@ günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual
 - İlk gerçek kullanımda kontrol et: panelin "Paylaş" düğmesi görevi başlatabildi mi (Claude Code Remote
   bağlantısı izni). Başlatamazsa sahibi sohbette "paylaş" der, ana ajan aynı adımları uygular.
 
+## Kaynak kuralı (sahibinin sözü, 12 Kasım 2026)
+
+**Yalnızca sahih ve hasen kaynak.** Sahibi açıkça onay vermedikçe bunun dışına asla çıkılmaz. Tek istisna:
+Şeyh Kişk sesli "Ölüm" deneme videosu (Hadîsü's-Sûr, zayıf/münker); **kanalda paylaşılmayacak**, yalnızca
+"yapabilir miyiz" denemesi. Her şey yayınlanacakmış gibi yapılır (caption'da rivayetin zayıflığı belirtilir).
+Bu istisna başka içeriğe emsal değildir.
+
 ## Açık işler (11 Kasım 2026 itibarıyla)
+- **Şeyh Kişk "Ölüm" deneme videosu** (12 Kas): örnek https://www.instagram.com/p/DfcgRWbsX-1 (2:49,
+  krem zemin çizgi illüstrasyon, serif altyazı, turuncu italik vurgu, ayet etiketleri). Bizde: koyu yeşil zemin,
+  fildişi çizgi, altın vurgu, tam 2:49, aynı ses. Ses: sahibi videoyu yükleyecek. Arapça yazıya dökülüp
+  İngilizceye bizim çevirimiz yapılacak (örneğin altyazısı kopyalanmaz); ayet satırları veritabanından.
+  Kanalda paylaşılmayacak; panelin "Elle gönderiler"ine konmaz.
 
 1. **Muâviye videosu (Sahih Muslim 537)** — 11 Kasım'da saf aralığı düzeltilip yeniden gönderildi; sahibinin onayı bekleniyor. Önceki durum: sahibi son sürümü beğenmedi: "insanların boyları 3 metre gibi
    görünüyor". Saflar artık sonsuza gidiyor (bu istenen), ama perspektifte kişiler çok uzun/dar duruyor.
