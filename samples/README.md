@@ -81,7 +81,7 @@ Full list with dates, captions and results: `notes/owner_chat/content_log.md` (a
 
 
 - Guess the Surah, Sudais: 113:1-2, 2:201, 21:88 (Nov 3, 3 questions) | 36:82, 112:1-2, 94:5-6, 29:2 | 3:8, 108:1-3, 93:6-8, 25:63
-- Guess the Surah, Alafasy: 95:4-6, 1:5, 2:152, 33:56 | 67:2, 55:13, 87:16-17, 13:28 (Nov 8) | 54:17, 103:2-3, 89:27-28, 31:18 (Nov 10)
+- Guess the Surah, Alafasy: 95:4-6, 1:5, 2:152, 33:56 | 67:2, 55:13, 87:16-17, 13:28 (Nov 8) | 54:17, 103:2-3, 89:27-28, 31:18 (Nov 10) | 20:25-28, 99:7-8, 105:3-4, 40:60 (Nov 12)
 - Trivia, Alafasy: 37:142, 21:69, 97:3 (Nov 7) | 20:20, 19:25, 50:38 (Nov 8)
 - Voice note: 17:32 (Alafasy, posted Nov 10); 49:6 (first draft, not posted)
 - Story videos (hadith): Bukhari 1968 (posted Nov 11), Muslim 537 (in revision)

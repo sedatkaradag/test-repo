@@ -16,6 +16,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 - 7 Kas, Alafasy: At-Tin 95:4-6 · Al-Fatihah 1:5 · Al-Baqarah 2:152 · Al-Ahzab 33:56
 - 9 Kas, Alafasy: Al-Mulk 67:2 · Ar-Rahman 55:13 · Al-A'la 87:16-17 · Ar-Ra'd 13:28
 - 10 Kas, Alafasy: Al-Qamar 54:17 · Al-'Asr 103:2-3 · Al-Fajr 89:27-28 · Luqman 31:18
+- 12 Kas, Alafasy: Ta-Ha 20:25-28 · Az-Zalzalah 99:7-8 · Al-Fil 105:3-4 · Ghafir 40:60
 - Denenip kullanılmayan: Az-Zumar 39:53 (okuma uzun, video 111 sn oldu; yerine 54:17). Kullanılabilir.
 
 **Trivia (Qur'an Quiz)**
@@ -51,6 +52,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-10 05:08 | Sesli mesaj (28,6 sn) | 17:32 · Alafasy | He sent a heart. She sent this back. | 0,9 g | 2320 | 2609 | 183 | 0 | 32 | 17 | 10,1 sn |
 | 2026-11-10 20:41 | Guess the Surah (91,6 sn) | 54:17, 103:2-3, 89:27-28, 31:18 · Alafasy | Can you name all 4 Surahs? The last one is hard. | 0,2 g | 1661 | 1916 | 130 | 4 | 10 | 4 | 14,7 sn |
 | 2026-11-11 (sabah) | Hikâye, TTS (107,5 sn) | Buhârî 1968 | Can you live in the same house as someone, and still neglect them? | — | — | — | — | — | — | — | — |
+| 2026-11-12 (sabah) | Guess the Surah (99,9 sn) | 20:25-28, 99:7-8, 105:3-4, 40:60 · Alafasy | Can you name all 4 Surahs? The last one is hard. (önerilen) | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -68,6 +70,22 @@ Listen to the verse, pick your answer before the timer ends, then see if you got
 Comment your score below (?/4) and send this to a friend to compare.
 
 Verses: Al-Qamar 54:17 · Al-'Asr 103:2-3 · Al-Fajr 89:27-28 · Luqman 31:18
+Recitation: Mishary Rashid Alafasy
+
+Follow @thehalalalgorithm for more.
+
+#quran #guessthesurah #quranquiz #islamicquiz #quranverses #islam #muslim #alafasy
+```
+
+**Guess the Surah, 12 Kasım** (önerilen caption; sahibi değiştirdiyse Instagram'daki geçerlidir)
+```
+Can you name all 4 Surahs? The last one is hard.
+
+Listen to the verse, pick your answer before the timer ends, then see if you got it right.
+
+Comment your score below (?/4) and send this to a friend to compare.
+
+Verses: Ta-Ha 20:25-28 · Az-Zalzalah 99:7-8 · Al-Fil 105:3-4 · Ghafir 40:60
 Recitation: Mishary Rashid Alafasy
 
 Follow @thehalalalgorithm for more.
