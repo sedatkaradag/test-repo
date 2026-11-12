@@ -1,0 +1,50 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:20:25-28",
+  "verses": ["020025", "020026", "020027", "020028"],
+  "options": [
+   ["Ash-Sharh", "الشرح"],
+   ["Ta-Ha", "طه"],
+   ["Al-Qasas", "القصص"],
+   ["Maryam", "مريم"]
+  ],
+  "answer": 1
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:99:7-8",
+  "verses": ["099007", "099008"],
+  "options": [
+   ["Al-Qari'ah", "القارعة"],
+   ["Al-'Adiyat", "العاديات"],
+   ["Al-Bayyinah", "البينة"],
+   ["Az-Zalzalah", "الزلزلة"]
+  ],
+  "answer": 3
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:105:3-4",
+  "verses": ["105003", "105004"],
+  "options": [
+   ["Al-Fil", "الفيل"],
+   ["Quraysh", "قريش"],
+   ["Al-Humazah", "الهمزة"],
+   ["Al-Ma'un", "الماعون"]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:40:60",
+  "verses": ["040060"],
+  "options": [
+   ["Al-Baqarah", "البقرة"],
+   ["Fussilat", "فصلت"],
+   ["Ghafir", "غافر"],
+   ["Az-Zumar", "الزمر"]
+  ],
+  "answer": 2
+ }
+]
