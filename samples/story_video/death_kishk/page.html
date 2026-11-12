@@ -1,0 +1,299 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Garamond'; src: url('file:///home/claude/test-repo/assets/fonts/EBGaramond[wght].ttf'); font-weight: 400 800; }
+@font-face { font-family: 'Marcellus'; src: url('file:///home/claude/test-repo/assets/fonts/Marcellus-Regular.ttf'); }
+@font-face { font-family: 'Hafs'; src: url('file:///home/claude/test-repo/assets/fonts/KFGQPC-UthmanicHafs-v18.ttf'); }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0b1a17; }
+#stage { position: absolute; inset: 0; }
+#handle { position: absolute; top: 92px; left: 0; right: 0; text-align: center; font-family: Marcellus; letter-spacing: 4px;
+          color: #e8c66a; font-size: 24px; opacity: .55; }
+#rule { position: absolute; top: 1352px; left: 440px; width: 200px; height: 2px; background: #f6efdc; opacity: .35; }
+#sub { position: absolute; left: 80px; right: 80px; top: 1400px; text-align: center; font-family: Garamond; font-weight: 500;
+       font-size: 64px; line-height: 1.22; color: #f6efdc; }
+#sub em { font-style: italic; color: #e8c66a; font-weight: 600; }
+#tag { position: absolute; left: 0; right: 0; top: 1620px; text-align: center; font-family: Marcellus; letter-spacing: 5px;
+       font-size: 26px; color: #e8c66a; opacity: 0; }
+#arabic { position: absolute; left: 60px; right: 60px; top: 1130px; text-align: center; font-family: Hafs; direction: rtl;
+          font-size: 92px; line-height: 1.6; color: #e8c66a; opacity: 0; }
+#final { position: absolute; left: 60px; right: 60px; top: 560px; text-align: center; opacity: 0; }
+#final .ar { font-family: Hafs; direction: rtl; font-size: 150px; line-height: 1.7; color: #e8c66a; }
+#final .glow { position: absolute; left: 50%; top: 150px; width: 760px; height: 760px; margin-left: -380px; margin-top: -380px;
+               background: radial-gradient(circle, rgba(232,198,106,.22), rgba(232,198,106,0) 62%); }
+#logo { position: absolute; top: 640px; left: 0; right: 0; text-align: center; opacity: 0; }
+#credit { position: absolute; bottom: 150px; left: 0; right: 0; text-align: center; font-family: Garamond; font-size: 28px;
+          line-height: 1.5; color: #f6efdc; opacity: 0; }
+#dark { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 38%, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%); opacity: 0; }
+</style></head>
+<body>
+<svg id="stage" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".36" r=".75"><stop offset="0" stop-color="#14302a"/><stop offset=".6" stop-color="#0e211c"/><stop offset="1" stop-color="#091512"/></radialGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f2cf73" stop-opacity=".55"/><stop offset=".45" stop-color="#e8c66a" stop-opacity=".18"/><stop offset="1" stop-color="#e8c66a" stop-opacity="0"/></radialGradient>
+    <radialGradient id="soft" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e8c66a" stop-opacity=".25"/><stop offset="1" stop-color="#e8c66a" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#f6efdc" stroke-opacity=".035" stroke-width="2"/></pattern>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="14" stroke="#f6efdc" stroke-opacity=".32" stroke-width="2.4"/></pattern>
+    <pattern id="hatchG" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="14" stroke="#e8c66a" stroke-opacity=".5" stroke-width="2.4"/></pattern>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect width="1080" height="1920" fill="url(#grid)"/>
+  <g id="world"></g>
+</svg>
+<div id="dark"></div>
+<div id="handle">@THEHALALALGORITHM</div>
+<div id="arabic"></div>
+<div id="final"><div class="glow"></div><div class="ar" id="finalAr"></div></div>
+<div id="rule"></div>
+<div id="sub"></div>
+<div id="tag"></div>
+<div id="logo"><div style="height:333px;overflow:hidden;margin:0 auto;width:520px"><img src="file:///home/claude/test-repo/samples/logo_draw/frames_800/__LOGO__" style="width:520px;margin-top:-96px"></div><div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:40px;margin-top:40px">THE HALAL ALGORITHM</div><div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:32px;margin-top:44px;border:2px solid #e8c66a;display:inline-block;padding:14px 36px;border-radius:40px">+ FOLLOW</div></div>
+<div id="credit">Voice: Sheikh Abd al-Hamid Kishk (sermon)<br>Concept: @tab.takhayal</div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const IV = "#f6efdc", GD = "#e8c66a";
+const cl = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ramp = (t, t0, d) => cl((t - t0) / d);
+const ease = x => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+const world = $("world");
+function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); (parent || world).appendChild(e); return e; }
+const S = (extra = {}) => Object.assign({ fill: "none", stroke: IV, "stroke-width": 4, "stroke-linecap": "round", "stroke-linejoin": "round" }, extra);
+// a path that draws itself in: class "draw", pathLength 1
+function dp(g, d, extra = {}) { return el("path", Object.assign(S(extra), { d, pathLength: 1, class: "draw", "stroke-dasharray": 1 }), g); }
+
+// ---------- scenes: each is a <g> with an update(local time, line) ----------
+const SC = {};
+function scene(id, build, update) { const g = el("g", { id: "sc-" + id, opacity: 0, transform: ["hall", "angels"].includes(id) ? "" : "translate(0 130)" }); build(g); SC[id] = { g, update: update || (() => {}) }; }
+const VC = 640; // visual centre y
+
+// lantern (our own drawing): cap, chain, lens body, flame
+function lantern(g, x, y, s, chain) {
+  const L = el("g", { transform: `translate(${x} ${y}) scale(${s})` }, g);
+  el("line", S({ x1: 0, y1: -chain / s, x2: 0, y2: -92, "stroke-dasharray": "3 9", "stroke-width": 3, opacity: .7 }), L);
+  const halo = el("circle", { cx: 0, cy: 6, r: 190, fill: "url(#halo)", opacity: 0 }, L);
+  el("path", S({ d: "M-26 -92 Q0 -118 26 -92 Z", "stroke-width": 4 }), L);           // cap
+  const body = el("path", S({ d: "M-26 -88 C-78 -40 -78 52 -24 92 L24 92 C78 52 78 -40 26 -88 Z", fill: "url(#hatch)" }), L);
+  el("path", S({ d: "M-24 92 L-14 112 L14 112 L24 92", "stroke-width": 4 }), L);
+  el("circle", S({ cx: 0, cy: 124, r: 7, fill: IV, stroke: "none" }), L);
+  el("path", S({ d: "M-52 -40 C-46 -60 -38 -72 -26 -88 M52 -40 C46 -60 38 -72 26 -88", "stroke-width": 2.4, opacity: .5 }), L);
+  const flame = el("path", { d: "M0 -34 C14 -12 22 6 22 20 C22 36 12 46 0 46 C-12 46 -22 36 -22 20 C-22 6 -14 -12 0 -34 Z", fill: GD }, L);
+  const lab = el("text", { x: 0, y: 200, "text-anchor": "middle", "font-family": "Marcellus", "font-size": 30 / s, fill: GD, "letter-spacing": 3, opacity: 0 }, L);
+  return { L, halo, flame, body, lab, x, y, s };
+}
+function setLamp(l, lit, flick = 0) {
+  l.flame.setAttribute("opacity", lit);
+  l.flame.setAttribute("transform", `translate(0 ${20 * (1 - lit)}) scale(${0.25 + 0.75 * lit + flick} ${0.25 + 0.75 * lit - flick * .6})`);
+  l.halo.setAttribute("opacity", lit * .95);
+  l.body.setAttribute("fill", lit > .5 ? "url(#hatchG)" : "url(#hatch)");
+}
+
+// opening: five small lanterns going out
+scene("angels", g => { SC.tmp = [[180, 420, .7, 260], [350, 560, .8, 400], [540, 470, .9, 300], [730, 600, .8, 440], [900, 430, .7, 270]].map(a => lantern(g, ...a)); },
+  (lt) => { SC.angelsL.forEach((l, i) => setLamp(l, 1 - ramp(lt, .1 + i * .18, .35))); });
+SC.angelsL = SC.tmp;
+scene("people", g => {
+  [[300, 1.0], [470, 1.25], [640, 1.0]].forEach(([x, k]) => {
+    dp(g, `M${x - 70 * k} 760 L${x - 70 * k} ${760 - 90 * k} L${x} ${760 - 160 * k} L${x + 70 * k} ${760 - 90 * k} L${x + 70 * k} 760`);
+    el("rect", { x: x - 16 * k, y: 760 - 70 * k, width: 32 * k, height: 34 * k, fill: GD, class: "win" }, g);
+  });
+  dp(g, "M150 760 L930 760");
+  dp(g, "M800 740 C770 690 830 660 800 610 C770 560 830 530 805 480", { stroke: GD, "stroke-width": 3 });
+  dp(g, "M840 740 C815 700 860 670 838 630 C815 590 860 560 842 520", { stroke: GD, "stroke-width": 2, opacity: .6 });
+}, (lt) => { SC.people.g.querySelectorAll(".win").forEach(w => w.setAttribute("opacity", ramp(lt, .7, .4) * (1 - ramp(lt, 1.4, .6)))); });
+scene("birds", g => {
+  dp(g, "M170 700 L910 560");
+  dp(g, "M430 652 L410 600 L432 560 L452 600 Z", { "stroke-width": 3 });
+  el("path", { d: "M0 -26 C10 -8 10 12 0 26 C-10 12 -10 -8 0 -26 Z M0 -26 L0 26", fill: "none", stroke: GD, "stroke-width": 3, class: "feather" }, g);
+}, (lt) => { const f = SC.birds.g.querySelector(".feather"), y = 690 + lt * 120; f.setAttribute("transform", `translate(${560 + Math.sin(lt * 3) * 40} ${y}) rotate(${Math.sin(lt * 3) * 35})`); });
+scene("earth", g => {
+  dp(g, "M150 780 L350 520 L470 680 L600 470 L790 780");
+  dp(g, "M330 780 L330 640 M330 690 L300 650 M330 670 L362 628", { "stroke-width": 3 });
+  dp(g, "M120 780 L960 780");
+  for (let i = 0; i < 3; i++) dp(g, `M800 ${740 + i * 18} q20 -12 40 0 t40 0 t40 0 t40 0`, { "stroke-width": 2.5, opacity: .8 });
+});
+scene("sky", g => {
+  el("path", { d: "M600 520 A120 120 0 1 0 600 760 A95 95 0 1 1 600 520 Z", fill: "none", stroke: GD, "stroke-width": 4, class: "draw", pathLength: 1, "stroke-dasharray": 1 }, g);
+  [[300, 450], [380, 760], [760, 470], [820, 700], [250, 640], [700, 820], [460, 420]].forEach(([x, y], i) => el("circle", { cx: x, cy: y, r: 5, fill: IV, class: "tw", "data-i": i }, g));
+}, (lt) => { SC.sky.g.querySelectorAll(".tw").forEach(c => c.setAttribute("opacity", .4 + .6 * Math.abs(Math.sin(lt * 2 + +c.dataset.i)))); });
+
+// the long lantern scene (8.8 → 102.7): centre = Angel of Death, J / M / I around it
+scene("hall", g => {
+  SC.cam = el("g", {}, g);
+  const c = SC.cam;
+  SC.hallBack = [[120, 360, .62, 230], [960, 380, .62, 250]].map(a => lantern(c, ...a));
+  SC.J = lantern(c, 290, 520, .82, 400); SC.M = lantern(c, 790, 520, .82, 400); SC.I = lantern(c, 540, 330, .62, 200);
+  SC.A = lantern(c, 540, 760, 1.35, 560);
+  SC.J.lab.textContent = "JIBRIL"; SC.M.lab.textContent = "MIKA'IL"; SC.I.lab.textContent = "ISRAFIL";
+  SC.qm = el("text", { x: 690, y: 690, "font-family": "Garamond", "font-size": 170, fill: GD, "font-style": "italic", opacity: 0 }, c);
+  SC.qm.textContent = "?";
+  SC.ripple = el("g", {}, g);
+  for (let i = 0; i < 4; i++) el("circle", { cx: 540, cy: -40, r: 100, fill: "none", stroke: GD, "stroke-width": 2.5, opacity: 0 }, SC.ripple);
+  SC.smoke = el("g", {}, c);
+  for (let i = 0; i < 3; i++) el("path", { fill: "none", stroke: IV, "stroke-width": 3, "stroke-linecap": "round", opacity: 0 }, SC.smoke);
+});
+const win = (t, spans) => spans.some(([a, b]) => t >= a && t < b);
+const lab = (t, spans) => spans.reduce((o, [a, b]) => Math.max(o, ramp(t, a, .3) * (1 - ramp(t, b - .3, .3))), 0);
+function updHall(t) {
+  const lit = (on, off) => ramp(t, on, .5) * (1 - ramp(t, off, .9));
+  SC.hallBack.forEach(l => setLamp(l, 0));
+  setLamp(SC.J, lit(D.cue.nameJ, D.cue.outJ)); setLamp(SC.M, lit(D.cue.nameM, D.cue.outM)); setLamp(SC.I, lit(D.cue.nameI, D.cue.outI));
+  const fl = t > D.cue.die && t < D.cue.dead ? Math.sin(t * 23) * .05 + Math.sin(t * 9) * .04 : 0;
+  setLamp(SC.A, 1 - ramp(t, D.cue.dead, 1.4), fl);
+  SC.J.lab.setAttribute("opacity", lab(t, D.lab.J)); SC.M.lab.setAttribute("opacity", lab(t, D.lab.M)); SC.I.lab.setAttribute("opacity", lab(t, D.lab.I));
+  SC.qm.setAttribute("opacity", lab(t, D.ask));
+  // Allah speaks: rings come down from above (nobody is shown)
+  const call = D.calls.filter(c => t >= c && t < c + 2.6).pop();
+  [...SC.ripple.children].forEach((r, i) => {
+    if (call === undefined) { r.setAttribute("opacity", 0); return; }
+    const p = cl((t - call - i * .28) / 2.0); r.setAttribute("r", 120 + p * 900); r.setAttribute("opacity", p > 0 ? (1 - p) * .55 : 0);
+  });
+  // camera moves in on the Angel of Death from "Then Allah says to him" (72.4)
+  const z = 1 + .55 * ease(ramp(t, D.cue.zoom, 3.5));
+  const fade = 1 - .7 * ease(ramp(t, D.cue.zoom, 2.5));   // the others step back while the camera moves in
+  [SC.J, SC.M, ...SC.hallBack].forEach(l => l.L.setAttribute("opacity", fade)); SC.I.L.setAttribute("opacity", 1 - .9 * ease(ramp(t, D.cue.zoom, 2.5)));
+  SC.cam.setAttribute("transform", `translate(540 760) scale(${z}) translate(-540 -760)`);
+  // smoke after death
+  [...SC.smoke.children].forEach((p, i) => {
+    const a = ramp(t, D.cue.dead + .8 + i * .5, 1.2) * (1 - ramp(t, D.cue.ruins - .6, .5));
+    const ph = t * 1.3 + i * 2.1, x0 = 540 + (i - 1) * 16, y0 = 620;
+    const P = [[x0, y0]]; for (let k = 1; k <= 7; k++) P.push([x0 + Math.sin(ph + k * .8) * (8 + k * 6), y0 - k * 40]);
+    let d = `M${P[0][0]} ${P[0][1]}`; for (let k = 1; k < P.length - 1; k++) { const mx = (P[k][0] + P[k + 1][0]) / 2, my = (P[k][1] + P[k + 1][1]) / 2; d += ` Q${P[k][0]} ${P[k][1]} ${mx} ${my}`; }
+    p.setAttribute("d", d); p.setAttribute("opacity", a * (.55 - i * .12));
+  });
+  $("dark").style.opacity = .85 * ramp(t, D.cue.dead, 1.6) * (1 - ramp(t, D.cue.ruins - .5, .6));
+}
+SC.hall.update = (lt, t) => updHall(t);
+
+scene("ruins", g => {
+  dp(g, "M150 800 L930 800");
+  dp(g, "M220 800 L220 520 L240 540 L262 505 L280 530 L280 800");
+  dp(g, "M330 800 L330 630 L352 610 L372 640 L372 800");
+  dp(g, "M450 800 L450 580 C450 470 610 470 610 580 L610 640 M610 700 L610 800");
+  dp(g, "M680 800 L680 600 L760 600 L760 800");
+  dp(g, "M820 800 L900 600", { stroke: GD, "stroke-width": 7 });
+  for (let i = 0; i < 18; i++) el("circle", { cx: 200 + (i * 47) % 700, cy: 560 + (i * 71) % 220, r: 3, fill: IV, opacity: .5, class: "dust", "data-i": i }, g);
+}, lt => SC.ruins.g.querySelectorAll(".dust").forEach(c => c.setAttribute("transform", `translate(0 ${(lt * 25 + +c.dataset.i * 7) % 60})`)));
+
+// At-Takwir
+scene("sun", g => { SC.sunC = el("circle", { cx: 540, cy: VC, r: 170, fill: GD, opacity: .9 }, g); SC.sunR = el("circle", S({ cx: 540, cy: VC, r: 200 }), g); },
+  lt => { const p = ease(ramp(lt, .2, 1.8)); SC.sunC.setAttribute("r", 170 - 120 * p); SC.sunC.setAttribute("opacity", .9 - .6 * p); SC.sunR.setAttribute("r", 200 - 110 * p); });
+scene("stars", g => { for (let i = 0; i < 16; i++) el("circle", { r: i % 3 ? 5 : 8, fill: i % 4 ? IV : GD, class: "st", "data-x": 170 + (i * 113) % 740, "data-y": 420 + (i * 59) % 260, "data-v": 60 + (i * 37) % 120 }, g); },
+  lt => SC.stars.g.querySelectorAll(".st").forEach(c => { const p = ramp(lt, .3, 1.8); c.setAttribute("cx", c.dataset.x); c.setAttribute("cy", +c.dataset.y + p * p * +c.dataset.v * 3); c.setAttribute("opacity", 1 - p * .8); }));
+scene("mountains", g => { SC.mt = el("g", {}, g); dp(SC.mt, "M170 800 L380 520 L520 700 L650 470 L900 800"); dp(SC.mt, "M380 520 L430 800 M650 470 L700 800", { "stroke-width": 2.5, opacity: .6 }); dp(g, "M120 800 L960 800"); },
+  lt => { const p = ease(ramp(lt, .6, 1.4)); SC.mt.setAttribute("transform", `translate(0 ${-p * 140})`); SC.mt.setAttribute("opacity", 1 - p * .85); });
+scene("camels", g => {
+  dp(g, "M120 800 L960 800"); dp(g, "M260 800 L260 640 M240 640 L280 640");
+  dp(g, "M260 660 C330 720 380 800 470 796", { stroke: GD, "stroke-width": 3 });
+  SC.camel = el("g", {}, g);
+  dp(SC.camel, "M0 0 C10 -40 30 -60 60 -60 C80 -90 110 -90 120 -60 C140 -60 150 -40 160 -20 L196 -70 L214 -66 L208 -40 C200 -20 180 0 170 0 M30 0 L30 60 M60 0 L60 60 M130 0 L130 60 M160 0 L160 60", { "stroke-width": 3.5 });
+}, lt => SC.camel.setAttribute("transform", `translate(${620 + lt * 70} 740) scale(.9)`));
+scene("seas", g => {
+  for (let i = 0; i < 5; i++) dp(g, `M150 ${600 + i * 46} q35 -22 70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0`, { "stroke-width": 3, opacity: .8 });
+  for (let i = 0; i < 6; i++) el("path", { d: "M0 0 C12 -18 6 -34 0 -50 C-6 -34 -12 -18 0 0 Z", fill: GD, class: "fl", "data-i": i }, g);
+}, lt => SC.seas.g.querySelectorAll(".fl").forEach(f => { const i = +f.dataset.i, a = ramp(lt, .3 + i * .15, .4); f.setAttribute("transform", `translate(${210 + i * 135} ${600 + (i % 3) * 46}) scale(${a * (1 + .15 * Math.sin(lt * 8 + i))})`); }));
+scene("souls", g => { for (let i = 0; i < 4; i++) { el("circle", { r: 16, fill: "none", stroke: IV, "stroke-width": 4, class: "sa", "data-i": i }, g); el("circle", { r: 16, fill: GD, class: "sb", "data-i": i }, g); } },
+  lt => { const p = ease(ramp(lt, .3, 1.2)); SC.souls.g.querySelectorAll(".sa,.sb").forEach(c => { const i = +c.dataset.i, cx = 270 + i * 180, side = c.classList.contains("sa") ? -1 : 1; c.setAttribute("cx", cx + side * (60 - 40 * p)); c.setAttribute("cy", VC + (i % 2 ? 40 : -40) + side * (1 - p) * 30); }); });
+scene("skyroll", g => { SC.dome = el("path", S({ d: "M200 800 A340 340 0 0 1 880 800", fill: "url(#hatch)", pathLength: 1, "stroke-dasharray": 1 }), g); dp(g, "M150 800 L930 800"); },
+  lt => { const p = ease(ramp(lt, .4, 1.4)); SC.dome.setAttribute("stroke-dashoffset", -p * .85); SC.dome.setAttribute("fill-opacity", 1 - p); });
+scene("paradise", g => {
+  el("circle", { cx: 540, cy: 650, r: 260, fill: "url(#soft)" }, g);
+  SC.gate = el("g", {}, g);
+  dp(SC.gate, "M440 800 L440 600 C440 470 640 470 640 600 L640 800", { stroke: GD, "stroke-width": 5 });
+  dp(SC.gate, "M480 800 L480 610 C480 530 600 530 600 610 L600 800", { "stroke-width": 3, opacity: .7 });
+  dp(g, "M150 800 L930 800");
+}, lt => { const p = ease(ramp(lt, .2, 1.5)); SC.gate.setAttribute("transform", `translate(540 800) scale(${.75 + .25 * p}) translate(-540 -800)`); });
+scene("fire", g => { for (let i = 0; i < 5; i++) el("path", { d: "M0 0 C-52 -6 -62 -66 -32 -116 C-28 -88 -14 -80 -8 -92 C-14 -136 6 -164 0 -204 C30 -166 42 -128 30 -100 C40 -108 46 -120 44 -134 C72 -88 58 -8 0 0 Z", fill: i % 2 ? "url(#hatchG)" : "none", stroke: i % 2 ? GD : IV, "stroke-width": 4, class: "ff", "data-i": i }, g); dp(g, "M150 800 L930 800"); },
+  lt => SC.fire.g.querySelectorAll(".ff").forEach(f => { const i = +f.dataset.i, a = ramp(lt, .1 + i * .12, .5); const k = (.85 + ((i + 1) % 3) * .25) * a; f.setAttribute("transform", `translate(${290 + i * 125} 800) scale(${k} ${k * (1 + .07 * Math.sin(lt * 9 + i))})`); }));
+
+// the world
+function globe(g) { const G = el("g", {}, g); el("circle", { cx: 540, cy: VC, r: 230, fill: "url(#soft)" }, G); dp(G, `M310 ${VC} A230 230 0 1 0 770 ${VC} A230 230 0 1 0 310 ${VC}`);
+  [80, 160].forEach(r => dp(G, `M${540 - r} ${VC - 222} Q${540 - r * 1.4} ${VC} ${540 - r} ${VC + 222} M${540 + r} ${VC - 222} Q${540 + r * 1.4} ${VC} ${540 + r} ${VC + 222}`, { "stroke-width": 2.5, opacity: .6 }));
+  dp(G, `M540 ${VC - 230} L540 ${VC + 230} M310 ${VC} L770 ${VC} M330 ${VC - 100} L750 ${VC - 100} M330 ${VC + 100} L750 ${VC + 100}`, { "stroke-width": 2.5, opacity: .6 });
+  el("ellipse", { cx: 540, cy: VC, rx: 330, ry: 60, fill: "none", stroke: GD, "stroke-width": 4 }, G); return G; }
+scene("globe", g => { SC.gl1 = globe(g); }, lt => SC.gl1.setAttribute("transform", `rotate(${lt * 3} 540 ${VC})`));
+scene("globe2", g => { SC.gl2 = globe(g); }, lt => { SC.gl2.setAttribute("opacity", 1 - .55 * ramp(lt, .3, 1.5)); });
+scene("globe3", g => { SC.gl3 = globe(g); SC.gl3.setAttribute("opacity", .45); for (let i = 0; i < 3; i++) el("circle", { cx: 540, cy: -40, r: 100, fill: "none", stroke: GD, "stroke-width": 2.5, class: "rp", "data-i": i }, g); },
+  lt => SC.globe3.g.querySelectorAll(".rp").forEach(r => { const p = cl((lt - +r.dataset.i * .3) / 2); r.setAttribute("r", 120 + p * 900); r.setAttribute("opacity", p > 0 ? (1 - p) * .55 : 0); }));
+scene("rivers", g => { [-1, 0, 1].forEach(k => dp(g, `M${540 + k * 120} 430 C${590 + k * 120} 510 ${490 + k * 120} 590 ${540 + k * 120} 670 C${590 + k * 120} 750 ${490 + k * 120} 790 ${540 + k * 120} 860`, { stroke: k ? IV : GD, "stroke-width": k ? 4 : 5 })); },
+  lt => SC.rivers.g.setAttribute("opacity", 1 - .7 * ramp(lt, 1.2, .7)));
+scene("trees", g => { [[330, 1], [540, 1.3], [750, 1]].forEach(([x, k], i) => { dp(g, `M${x} 800 L${x} ${800 - 170 * k}`); el("circle", { cx: x, cy: 800 - 230 * k, r: 80 * k, fill: i === 1 ? "url(#hatchG)" : "url(#hatch)", stroke: i === 1 ? GD : IV, "stroke-width": 4 }, g); }); dp(g, "M150 800 L930 800"); },
+  lt => SC.trees.g.setAttribute("opacity", 1 - .7 * ramp(lt, 1.2, .7)));
+scene("waves", g => { for (let i = 0; i < 6; i++) dp(g, `M150 ${560 + i * 50} q35 -22 70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0`, { stroke: i === 2 ? GD : IV, "stroke-width": 3 }); },
+  lt => SC.waves.g.setAttribute("opacity", 1 - .7 * ramp(lt, 1.2, .7)));
+scene("palace", g => {
+  dp(g, "M150 800 L930 800"); dp(g, "M250 800 L250 600 L350 600 L350 800 M730 800 L730 600 L830 600 L830 800");
+  dp(g, "M380 800 L380 560 L700 560 L700 800 M380 560 C420 470 660 470 700 560", { "stroke-width": 4.5 });
+  dp(g, "M490 800 L490 690 C490 640 590 640 590 690 L590 800", { stroke: GD });
+  dp(g, "M540 470 L540 420 M530 430 L550 430", { stroke: GD, "stroke-width": 3 });
+}, lt => SC.palace.g.setAttribute("opacity", 1 - .7 * ramp(lt, 1.2, .7)));
+function crown(g, x, y, s, rot) { const c = el("g", { transform: `translate(${x} ${y}) rotate(${rot}) scale(${s})` }, g);
+  el("path", { d: "M-70 30 L-80 -40 L-40 -5 L0 -55 L40 -5 L80 -40 L70 30 Z", fill: "url(#hatchG)", stroke: GD, "stroke-width": 4, "stroke-linejoin": "round" }, c);
+  [-80, 0, 80].forEach((xx, i) => el("circle", { cx: xx, cy: i === 1 ? -55 : -40, r: 7, fill: GD }, c)); return c; }
+scene("crown", g => { dp(g, "M150 800 L930 800"); SC.cr1 = crown(g, 540, 600, 1.4, 0); },
+  lt => { const p = ease(ramp(lt, .2, .9)); SC.cr1.setAttribute("transform", `translate(${540 + p * 40} ${600 + p * 160}) rotate(${p * 24}) scale(1.4)`); });
+scene("crown2", g => { dp(g, "M150 800 L930 800"); crown(g, 580, 760, 1.4, 24); SC.cr2 = crown(g, 420, 560, 1.0, 0); },
+  lt => { const p = ease(ramp(lt, .2, .9)); SC.cr2.setAttribute("transform", `translate(${420 - p * 30} ${560 + p * 205}) rotate(${-p * 30}) scale(1)`); });
+scene("crowns", g => { dp(g, "M150 800 L930 800"); crown(g, 580, 760, 1.4, 24); crown(g, 390, 765, 1.0, -30); [260, 700, 830].forEach((x, i) => { const c = crown(g, x, 500, .55, 0); c.setAttribute("class", "cs"); c.dataset.i = i; c.dataset.x = x; }); },
+  lt => SC.crowns.g.querySelectorAll(".cs").forEach(c => { const i = +c.dataset.i, p = ease(ramp(lt, .2 + i * .25, .8)); c.setAttribute("transform", `translate(${c.dataset.x} ${500 + p * 280}) rotate(${p * (i % 2 ? 40 : -35)}) scale(.55)`); }));
+function throne(g, x, s) { const t = el("g", { transform: `translate(${x} 800) scale(${s})` }, g);
+  el("path", { d: "M-70 0 L-70 -150 L70 -150 L70 0 M-90 -150 L90 -150 M-70 -150 L-70 -330 C-70 -420 70 -420 70 -330 L70 -150", fill: "url(#hatch)", stroke: IV, "stroke-width": 4, "stroke-linejoin": "round" }, t);
+  const crack = el("path", { d: "M10 -380 L-14 -320 L12 -270 L-10 -210 L8 -160", fill: "none", stroke: GD, "stroke-width": 5, "stroke-linecap": "round", pathLength: 1, "stroke-dasharray": 1, "stroke-dashoffset": 1 }, t);
+  return { t, crack }; }
+scene("throne", g => { dp(g, "M150 800 L930 800"); SC.th1 = throne(g, 540, 1.1); }, lt => SC.th1.crack.setAttribute("stroke-dashoffset", 1 - ramp(lt, .3, 1)));
+scene("thrones", g => { dp(g, "M150 800 L930 800"); SC.th2 = throne(g, 480, 1.1); SC.th2.crack.setAttribute("stroke-dashoffset", 0); SC.th3 = throne(g, 760, .55); },
+  lt => { const p = ease(ramp(lt, .3, .9)); SC.th3.t.setAttribute("transform", `translate(${760 + p * 40} 800) rotate(${p * 78}) scale(.55)`); });
+scene("wheat", g => { dp(g, "M150 800 L930 800"); for (let i = 0; i < 9; i++) { const x = 230 + i * 78, gold = i % 3 === 1, h = 230 + (i % 2) * 40;
+  dp(g, `M${x} 800 L${x} ${800 - h}`, { stroke: gold ? GD : IV, "stroke-width": 3 });
+  for (let k = 0; k < 5; k++) dp(g, `M${x} ${800 - h + k * 22} l-16 -14 M${x} ${800 - h + k * 22} l16 -14`, { stroke: gold ? GD : IV, "stroke-width": 3 }); } });
+scene("idols", g => { dp(g, "M150 800 L930 800"); [[330, 140, 200], [540, 170, 250], [750, 140, 200]].forEach(([x, w, h], i) => {
+  el("rect", { x: x - w / 2, y: 800 - h, width: w, height: h, fill: "url(#hatch)", stroke: IV, "stroke-width": 4 }, g);
+  el("path", { d: `M${x} ${800 - h} l-14 50 l16 50 l-12 50 l10 ${h - 150}`, fill: "none", stroke: GD, "stroke-width": 4, pathLength: 1, "stroke-dasharray": 1, class: "ck" }, g);
+  const b = el("rect", { x: -38, y: -38, width: 76, height: 76, fill: "none", stroke: IV, "stroke-width": 4, class: "blk", "data-x": x, "data-h": h, "data-i": i }, g); }); },
+  lt => { SC.idols.g.querySelectorAll(".ck").forEach(c => c.setAttribute("stroke-dashoffset", 1 - ramp(lt, .2, .8)));
+    SC.idols.g.querySelectorAll(".blk").forEach(b => { const i = +b.dataset.i, p = ease(ramp(lt, .5 + i * .15, .8)); b.setAttribute("transform", `translate(${+b.dataset.x + p * 50} ${800 - +b.dataset.h - 38 + p * (+b.dataset.h)}) rotate(${p * 60})`); }); });
+scene("dominion", g => { SC.burst = el("g", {}, g); el("circle", { cx: 540, cy: VC, r: 300, fill: "url(#soft)" }, SC.burst);
+  for (let i = 0; i < 28; i++) { const a = i / 28 * Math.PI * 2; el("line", { x1: 540 + Math.cos(a) * 90, y1: VC + Math.sin(a) * 90, x2: 540 + Math.cos(a) * 300, y2: VC + Math.sin(a) * 300, stroke: i % 2 ? GD : IV, "stroke-width": 3, opacity: .8 }, SC.burst); }
+  el("circle", S({ cx: 540, cy: VC, r: 90, stroke: GD }), SC.burst); el("circle", S({ cx: 540, cy: VC, r: 330, "stroke-width": 2, opacity: .4 }), SC.burst); },
+  lt => SC.burst.setAttribute("transform", `rotate(${lt * 4} 540 ${VC})`));
+
+// ---------- timeline ----------
+const lines = D.lines;
+function render(t) {
+  const li = lines.findIndex((l, i) => t >= l.t && (i + 1 === lines.length || t < lines[i + 1].t));
+  const L = li >= 0 ? lines[li] : null;
+  // which scene group is visible (with a short crossfade)
+  const vis = [];
+  for (let i = 0; i < lines.length; i++) { const l = lines[i]; const nx = i + 1 < lines.length ? lines[i + 1].t : 1e9; if (t >= l.t - .3 && t < nx + .3) vis.push([l, i]); }
+  const op = {};
+  vis.forEach(([l, i]) => { const nx = i + 1 < lines.length ? lines[i + 1] : null; const id = l.scene;
+    const sameNext = nx && nx.scene === id, prev = lines[i - 1], samePrev = prev && prev.scene === id;
+    const a = samePrev ? 1 : ramp(t, l.t - .3, .45), b = sameNext ? 1 : 1 - ramp(t, (nx ? nx.t : 1e9) - .15, .4);
+    op[id] = Math.max(op[id] || 0, Math.min(a, b)); });
+  for (const id in SC) { if (!SC[id].g) continue; const o = op[id] || 0; SC[id].g.setAttribute("opacity", o);
+    if (o > 0) { const first = lines.find(l => l.scene === id && l.t <= t + .3) || lines.find(l => l.scene === id); const lt = t - first.t;
+      SC[id].g.querySelectorAll(":scope .draw").forEach(p => p.setAttribute("stroke-dashoffset", 1 - ease(ramp(lt, -.2, 1.1))));
+      SC[id].update(lt, t); } }
+  if (!op.hall) $("dark").style.opacity = 0;
+  // subtitle
+  const sub = $("sub");
+  if (L && L.html) { if (sub.dataset.k != li) { sub.innerHTML = L.html; sub.dataset.k = li; }
+    const nx = li + 1 < lines.length ? lines[li + 1].t : L.t + 3; sub.style.opacity = ramp(t, L.t, .22) * (1 - ramp(t, nx - .18, .18));
+    sub.style.transform = `translateY(${(1 - ease(ramp(t, L.t, .3))) * 14}px)`;
+  } else sub.style.opacity = 0;
+  const showRule = L && L.html && L.scene !== "final";
+  $("rule").style.opacity = showRule ? .35 : 0;
+  $("tag").textContent = L && L.tag ? L.tag : ""; $("tag").style.opacity = L && L.tag ? sub.style.opacity : 0;
+  // Arabic of 40:16
+  const dom = lines.find(l => l.scene === "dominion"), fin = lines.find(l => l.scene === "final"), logo = lines.find(l => l.scene === "logo");
+  $("arabic").textContent = D.arDominion; $("arabic").style.opacity = ramp(t, dom.t + .2, .5) * (1 - ramp(t, fin.t - .2, .3));
+  $("finalAr").textContent = D.arFinal; $("final").style.opacity = ramp(t, fin.t, .6) * (1 - ramp(t, logo.t - .2, .4));
+  if (L && L.scene === "final") { sub.style.top = "1080px"; $("tag").style.top = "1300px"; } else { sub.style.top = "1400px"; $("tag").style.top = (L && L.tag && L.html.length > 70 ? 1720 : 1620) + "px"; }
+  $("logo").style.opacity = ramp(t, logo.t + .2, .6);
+  $("credit").style.opacity = .4 * ramp(t, logo.t + .9, .6);
+  $("handle").style.opacity = .55 * (1 - ramp(t, logo.t, .4));
+}
+window.render = render;
+window.ready = document.fonts.ready.then(() => { render(0); return true; });
+</script>
+</body></html>

@@ -143,3 +143,17 @@ Sahibinin geri bildirimleri:
   sonraki saffın omuz çizgisi, öndekinin başının hemen üstünde kalmalı), gövdeyi ekran dışına taşacak kadar
   uzatma, yakın çekimde zoom'u Muâviye'nin omuzları ekranın altında kalacak şekilde ayarla. Örnek videonun
   geniş ve yakın çekim karelerine bakıp oranları karşılaştır. Çizimden önce birkaç kareyi sahibine gönder.
+
+## Format: vaaz sesi + çizgi illüstrasyon (Şeyh Kişk "Ölüm" denemesi, 12 Kas) — `samples/story_video/death_kishk/`
+
+**Deneme; kanalda paylaşılmaz** (Hadîsü's-Sûr zayıf/münker; sahibinin tek seferlik istisnası, bkz. README "Kaynak kuralı").
+Örnek: tab.takhayal'ın Arapça aslı (https://www.instagram.com/p/DfSwENuBmbK/) ve TheTazkiyyahGuide'ın İngilizce kopyası.
+Sahibi "bizimki de benzer olsun" dedi: aynı sahne akışı, bizim renkler (koyu yeşil zemin, fildişi çizgi, altın vurgu), kendi çizimimiz.
+- **Ses yazıya dökme:** `samples/asr/` (faster-whisper large-v3, `asr-work` dalı → `asr-out`; sahibi onayladı). Sandbox modeli
+  indiremiyor. Whisper Mısır vaazında birkaç kelimeyi yanlış duydu; Arapça videonun ekran yazısıyla karşılaştırıp düzelt.
+- **Çeviri bizim;** örnek videonun altyazısı kopyalanmaz. Ayet satırları `find.py`'den birebir (make.py kontrol eder), ayet etiketi
+  ses sırasıyla (Kişk 81:13'ü 81:12'den önce okuyor). Arapça kartlar kaynaktan **kelime konumuyla** kesilir (elle yazılan Arapça
+  kaynakla eşleşmez, yazma).
+- `lines.txt`: `başlangıç | metin ([vurgu]) | sahne | ayet`. Render iki paralel parça (2 çekirdek), ~10 dk; düzeltmede sadece ilgili
+  aralık yeniden çizilip `trim + concat` ile eklenir.
+- Künye: en sonda soluk, küçük ("Voice: … · Concept: @tab.takhayal"), sahibi istedi.

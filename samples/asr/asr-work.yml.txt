@@ -1,0 +1,24 @@
+name: asr-work
+# Temporary, branch asr-work only: Arabic speech to text with word times (faster-whisper, free, open source).
+# Writes only branch asr-out. Approved by the owner on 12 Nov 2026 (Kishk test video).
+on:
+  push:
+    branches: [asr-work]
+permissions:
+  contents: write
+jobs:
+  asr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -q "faster-whisper==1.1.1" requests
+      - run: mkdir -p out && python asr/transcribe.py asr/audio.wav out/transcript.json ar
+      - name: push the transcript to branch asr-out
+        run: |
+          cd out
+          git init -q -b asr-out && git config user.name asr && git config user.email asr@users.noreply.github.com
+          git add -A && git commit -qm "asr output"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" asr-out

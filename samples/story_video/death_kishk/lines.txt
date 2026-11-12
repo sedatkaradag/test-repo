@@ -1,0 +1,75 @@
+# t | text with [highlight] | visual | verse tag (optional)
+0.00 | The [angels] died, | angels
+1.20 | and [mankind] and the jinn, | people
+3.30 | and the [birds], | birds
+4.70 | and all that is on the [earth] | earth
+7.10 | and above the [sky], | sky
+8.80 | except the [Angel of Death]. | aod
+11.20 | [Allah] asks him: | call
+12.90 | “Who is [left] of creation, | ask
+16.30 | O [Angel of Death]?” | ask
+18.30 | He says: “My [God], | four
+19.60 | none is left but [Jibril], | four:j
+22.70 | [Mika'il] | four:m
+24.40 | and [Israfil], | four:i
+26.20 | and Your [servant] standing | four:a
+28.30 | now before You.” | four:a
+29.90 | Then [Allah] says to him: | call4
+32.00 | “[Take] the soul of Jibril, | four:j
+35.10 | O Angel of Death.” | four:j
+37.10 | So he [takes] the soul of Jibril. | outj
+39.40 | “Who is [left]?” | ask3
+41.30 | He says: “[Mika'il] and Israfil, | three
+44.60 | and I, the [humbled] servant | three:a
+46.60 | before You.” | three:a
+47.90 | “Take the soul of [Mika'il], | three:m
+50.60 | O Angel of Death.” | three:m
+52.50 | So he [takes] it. | outm
+54.00 | “Take the soul of [Israfil], | two:i
+56.50 | O Angel of Death.” | two:i
+58.30 | So he [takes] it. | outi
+59.30 | Then the [Compeller], | call1
+61.70 | exalted is His [majesty], asks him: | call1
+63.10 | “Who is left of creation, | ask1
+65.30 | O [Angel of Death]?” | ask1
+67.10 | He says: “None is left but [me], | one
+70.00 | the [humbled] servant before You.” | one
+72.40 | Then [Allah] says to him: | call1b
+74.20 | “[Die], O Angel of Death.” | die
+79.70 | “[Die], O Angel of Death.” | die2
+83.60 | And the Angel of Death [dies]. | dead
+86.10 | As he feels the [agony] of death, | smoke
+89.30 | he says: “By Your [might] | smoke
+91.10 | and Your [majesty], | smoke
+92.20 | had I [known] | smoke
+94.40 | the agony of death was this [severe], | smoke
+97.80 | I would have asked You to [spare] me | smoke
+100.40 | from taking the [souls] of Your servants.” | smoke
+102.70 | And Allah looks upon the [world], | ruins
+105.80 | and it lies in [ruins], fallen in on itself. | ruins
+109.60 | When the [sun] is wrapped up in darkness | sun | 81:1
+111.70 | and when the [stars] are scattered | stars | 81:2
+114.00 | and when the [mountains] are vanished | mountains | 81:3
+116.00 | and when pregnant [camels] are left unattended | camels | 81:4
+118.10 | and when the [seas] are set on fire | seas | 81:6
+119.80 | and when the [souls] are sorted | souls | 81:7
+121.80 | and when the [sky] is stripped away | skyroll | 81:11
+124.00 | and when [Paradise] is brought near – | paradise | 81:13
+125.90 | and when the [Blazing Fire] is flared up | fire | 81:12
+128.20 | Your Lord looks upon the [world], | globe
+131.60 | and it is [empty]. | globe2
+135.00 | He says: “O [world], | globe3
+137.40 | where are your [rivers]? | rivers
+139.30 | Where are your [trees]? | trees
+141.40 | Where are your [seas]? | waves
+143.30 | Where are your [palaces]? | palace
+145.10 | Where are the [kings]? | crown
+146.70 | Where are the [kings]? | crown2
+148.30 | Where are the [sons] of kings? | crowns
+150.50 | Where are the [tyrants]? | throne
+152.10 | Where are the [sons] of tyrants? | thrones
+154.50 | Where are those who lived on My [bounty] | wheat
+157.90 | and worshipped [others] than Me?” | idols
+159.90 | To whom does the [dominion] belong this Day? | dominion | 40:16
+163.40 | To Allah, the [One], the Subjugator | final | 40:16
+166.60 | | logo
