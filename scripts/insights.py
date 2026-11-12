@@ -366,10 +366,14 @@ def main():
     cutoff = now - dt.timedelta(days=45)
 
     rows = read_jsonl(HISTORY)
-    posts = [dict(r) for r in rows if dt.datetime.fromisoformat(r["posted_at"]) >= cutoff]
+    # Hand-made posts that went out through the publisher (source "manual") stay with the other
+    # hand-made posts in manual_posts, as before, so the system's numbers are not mixed with them.
+    posts = [dict(r) for r in rows if dt.datetime.fromisoformat(r["posted_at"]) >= cutoff
+             and r.get("source") != "manual"]
     media_stats(base, token, posts)
     n_stories = story_stats(base, token, rows, now)
-    known = {str(r.get(k)) for r in rows for k in ("media_id", "story_media_id") if r.get(k)}
+    known = {str(r.get(k)) for r in rows if r.get("source") != "manual"
+             for k in ("media_id", "story_media_id") if r.get(k)}
     manual = manual_posts(base, token, user, known, cutoff)
 
     account = account_block(base, token, user)

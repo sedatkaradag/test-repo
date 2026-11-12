@@ -239,7 +239,7 @@ def main():
                 # A Reel also goes out as a Story: the same video (config reels.stories_from on).
                 # A failed or skipped Story never fails the Reel.
                 if (cfg.get("stories", True) and item.get("type") == "reel" and item.get("video")
-                        and reel_story_on(cfg, item)):
+                        and item.get("story", True) and reel_story_on(cfg, item)):
                     secs = float((item.get("audio") or {}).get("video_seconds") or 0)
                     if secs > 60:
                         item["story_error"] = f"video is {secs:.0f}s; Instagram Stories take at most 60s"
@@ -282,6 +282,9 @@ def main():
                                         "posted_at": item["posted_at"], "theme": item.get("theme", ""),
                                         "slot": item.get("slot", ""), "type": item["type"],
                                         **({"recitation": recitation_of(item)} if recitation_of(item) else {}),
+                                        # hand-made posts (scripts/manual_post.py): kept apart in the stats
+                                        **({"source": "manual", "manual_id": item.get("manual_id", ""),
+                                            "verses": item.get("verses", "")} if item.get("manual") else {}),
                                         **({"story_media_id": item["story_media_id"],
                                             "story_kind": item.get("story_kind", "")}
                                            if item.get("story_media_id") else {})},

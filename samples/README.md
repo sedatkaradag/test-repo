@@ -75,6 +75,13 @@ Read `notes/owner_chat/video_playbook.md` first (the owner's feedback for each f
   makes `script.json` from the source text; `make.py <out> 0 --no-video` writes only the timeline; `snap.py`
   saves stills). The pages read fonts and the logo from `/home/claude/test-repo`.
 
+## Sharing from the control panel
+
+A finished video goes to the panel's "Elle gönderiler" section for the owner's approval
+(`scripts/manual_post.py add ...`, then the asset upload and panel document in AGENT.md → "Elle gönderiler").
+The owner presses "Paylaş" there and the regular publisher posts it; the used-verse lists below are then
+updated by the sharing run. Posting by hand from the phone still works as before.
+
 ## Used verses
 
 Full list with dates, captions and results: `notes/owner_chat/content_log.md` (also hadith used in videos).

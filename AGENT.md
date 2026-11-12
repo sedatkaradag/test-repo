@@ -390,6 +390,67 @@ Ana ajan slot saatlerini değiştirdiğinde commit + push'tan hemen sonra 5. ad�
 ileri bir tarihte geçerli oluyorsa (`from` / `until`), o tarih gelince senkron çalışması uyuşmazlığı
 panele açık sorun olarak yazar; ana ajan o zaman uygular.
 
+## Elle gönderiler (panelden onay ve paylaşım)
+
+Sahibinin elle yapılan içerikleri (Guess the Surah, trivia, hikâye videosu vb.) panelin
+**"Elle gönderiler"** bölümünde onayını bekler. Sahibi videoyu izler, caption'ı gerekirse düzeltir ve
+**Paylaş**, **Revize iste** (notuyla) ya da **Reddet** der. Bunlar denetçi / `review_log` / `integrity`
+adımlarından geçmez: son kontrol sahibindedir (sahibinin kararı, 12 Kasım 2026). İçerik hazırlanırken
+"Değişmez kurallar" ve `notes/owner_chat/` kuralları yine geçerlidir (ayet/hadis yalnızca kaynaktan,
+doğrulayıcı alt ajan).
+
+Repo: `manual/<id>/` (`video.mp4`, `cover.jpg`, `post.json`), script `scripts/manual_post.py`.
+Panel belgesi `manual/<id>`: `title`, `format`, `caption`, `verses`, `reciter`, `seconds`, `status`,
+`video_url`, `image_url`, `created_at`, `version`, `note` (revize notu), `notes` (eski notlar),
+`decided_at`, `slot`, `media_id`, `posted_at`, `error`.
+Durumlar: `pending` → (sahibi) `approved` | `revision` | `rejected` → (paylaşım görevi) `queued` →
+`published` | `failed`.
+
+Kuyruk öğesi düzenli gönderilerle aynı yayıncıdan çıkar, şu farklarla: `slot` = `<gün>_handmade-<SSDD>`,
+`entry_id` = `manual:<id>`, `manual: true`, `trial: false`, `story: false` (Story yok), tilavet
+rotasyonuna girmez (`audio` alanı yok). Yayıncı `history/posted.jsonl` satırına `source: "manual"` yazar;
+gece istatistikleri bunları eskisi gibi `insights.json` → `manual_posts` içinde tutar.
+
+### Ana ajan: yeni elle gönderi ekleme
+1. Video, kapak (videodan bir kare, `.jpg`) ve caption hazır olsun; sahibine sohbette de gönder.
+2. `python3 scripts/manual_post.py add --id <YYYY-MM-DD-kisa-ad> --title "<Başlık>" --format "<Guess the Surah | Trivia | ...>" --video <mp4> --cover <jpg> --caption <txt> --verses "<20:25-28, ...>" --reciter "<Mishary Alafasy>"`
+   (revizyonda aynı id ile `--replace`; sürüm numarası artar).
+3. `git add manual/<id>` → commit + push.
+4. Panele yükle: `Artifact` (publish, `url` = panel, `asset: true`, `file_paths` = `manual/<id>/video.mp4`,
+   `manual/<id>/cover.jpg`); dönen url'ler `video_url` ve `image_url`.
+5. `ArtifactData` → `manual/<id>`: yeni gönderide `set` (`/tmp/manual_panel/<id>.json` + iki url),
+   revizyonda `update` (`if_version`; aynı alanlar, `note` boş).
+6. Sahibine tek satır: "Panelde onayını bekliyor."
+**Revize istekleri:** sahibinin sohbetinde işe başlarken panelde `manual` koleksiyonunda
+`status: "revision"` olan belge var mı bak; varsa sahibine söyle ve notu uygula (2-5. adımlar, `--replace`).
+
+### Paylaşım görevi ("Halal Algorithm – elle gönderi paylaş")
+Takvimi yoktur; sahibi panelde Paylaş'a basınca panel bu görevi çalıştırır. Ana ajan da sahibi sohbette
+"paylaş" derse aynı adımları uygular. Kimse izlemez: soru sorma.
+1. Kurulum'daki gibi `git pull`.
+2. `ArtifactData list` → `manual`. `status: "approved"` olan her belge için sırayla:
+   a. Belgedeki `caption`'ı **harfi harfine** bir dosyaya yaz (düzeltme, kısaltma, ekleme yok).
+      `python3 scripts/manual_post.py enqueue <id> --caption <dosya>`. `REJECT` dönerse belgeye
+      `status: "failed"`, `error: "<sebep>"` yaz ve sonrakine geç.
+   b. `python3 scripts/panel_rows.py /tmp/panel` → panelde `queue/<slot>` satırını `set` ile yaz
+      (`/tmp/panel/queue/<slot>.json` + belgedeki `image_url` ve `video_url`).
+   c. `git add queue/<slot>.json manual/<id>/post.json` → commit ("manual: queue <id>") + push
+      (önce `git pull --rebase`).
+   d. Belgeyi `update`: `status: "queued"`, `slot`, `queued_at` (`date -u`).
+3. Repodaki `post.json`'u panelden farklı olan `rejected` / `revision` belgeleri için
+   `manual_post.py mark <id> rejected|revision --note "<not>"`, commit + push.
+4. `log/<gün>` belgesine "Ana ajan" kaydı ("Elle gönderi kuyruğa alındı: <başlık>").
+5. **Yayını bekle** (yalnızca bu çalışmada kuyruğa aldıkların için): yayıncının açık çalışması kuyruğu
+   en geç 15 dakikada bir kontrol eder. 40 dakikaya kadar birkaç dakikada bir `git pull` ile
+   `queue/<slot>.json` durumuna bak. `published` ya da `failed` olunca:
+   - Panel belgesi `manual/<id>` ve panel satırı `queue/<slot>`: `status`, `media_id`, `posted_at`, `error`.
+   - `published` ise kayıtlar (`notes/owner_chat/content_log.md`): "Kullanılan ayetler ve hadisler"
+     listesinde formatın altına bir satır (gün, kâri, ayetler), "Ayrıntılı kayıt" tablosuna bir satır
+     (UTC saat, format, içerik, caption ilk satırı, istatistik sütunları "—"), "Paylaşılan caption'lar"a
+     tam caption. Quiz ise `samples/README.md` → "Used verses" satırına ekle. Commit + push.
+   - 40 dakikada sonuçlanmazsa belgeye dokunma ve raporda söyle; sonucu sonraki ana ajan işler.
+6. Rapor (Türkçe, kısa): ne kuyruğa alındı, ne paylaşıldı, hata.
+
 ## Yorum yanıtları (kendi gönderilerimize gelen yorumlar)
 
 Akış: GitHub `comments-fetch` saatte bir yeni yorumları `comments/inbox.json`'a yazar →
@@ -524,6 +585,8 @@ sen de dosyaları ve komutları kullanarak yaparsın; her değişiklikten sonra 
 - "Yorumları göster / şu yorumu yanıtla" → "Yorum yanıtları" bölümü. Sahibi sohbette bir
   yanıtı açıkça onaylarsa panel belgesini `approved` yap (`reply` = onaylanan metin,
   `approved_at` = şimdi) ve 5. adımı hemen uygula.
+- "Bunu panele koy" / elle yapılan bir video hazır → "Elle gönderiler" → "Ana ajan: yeni elle
+  gönderi ekleme". Sahibi sohbette "paylaş" derse "Paylaşım görevi" adımları.
 - "Nasıl gidiyor?" → `history/posted.jsonl`, `history/insights.json`, `notes/strategy.md`
   özetini ver.
 - Kural değişikliği istenirse bu dosyayı (AGENT.md) güncelle; sonraki çalışmalar onu izler.

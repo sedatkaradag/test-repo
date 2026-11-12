@@ -72,9 +72,24 @@ Zamanlanmış görevler (Claude, hepsi `permission_mode: auto`):
 |---|---|
 | Halal Algorithm – günlük içerik | her gün 08:37 İstanbul |
 | Halal Algorithm – haftalık analist | pazartesi 09:23 İstanbul |
+| Halal Algorithm – elle gönderi paylaş (`trig_0179CkSGe4s3w7e3V71V9KHb`) | takvimsiz; panelde "Paylaş"a basınca |
 | Panel senkronu · Europe/Berlin | her gün 08:32 Berlin |
 | Panel senkronu · Asia/Karachi | her gün 20:47 Karaçi |
 | Panel senkronu · America/New_York | her gün 13:17 ve 21:17 New York |
+
+## Elle gönderiler (12 Kasım 2026'dan beri)
+
+Elle yapılan videolar (quiz, hikâye vb.) artık panelin **"Elle gönderiler"** bölümüne konur; sahibi orada
+izler, caption'ı düzeltir, **Paylaş / Revize iste / Reddet** der. Paylaş → "elle gönderi paylaş" görevi
+kuyruğa alır → yayıncı paylaşır (en geç ~15 dk) → görev `content_log.md` ve kullanılan ayet listesini
+günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual_post.py`.
+- Bu sohbette bir video bittiğinde: sohbette gönder **ve** panele koy ("Ana ajan: yeni elle gönderi ekleme").
+- **Her yeni sohbette:** panelde `manual` koleksiyonunda `status: "revision"` olan var mı bak; varsa notu uygula.
+- Bunlar denetçi/`integrity` adımlarından geçmez (sahibinin kararı: "ben manuel kontrol ediyorum, ama
+  oluştururken dikkat et"). Hazırlarken doğrulayıcı alt ajan ve kaynak kuralları yine geçerli.
+- Story'ye gitmez, deneme (trial) Reels değildir; istatistikte eskisi gibi `manual_posts` grubunda.
+- İlk gerçek kullanımda kontrol et: panelin "Paylaş" düğmesi görevi başlatabildi mi (Claude Code Remote
+  bağlantısı izni). Başlatamazsa sahibi sohbette "paylaş" der, ana ajan aynı adımları uygular.
 
 ## Açık işler (11 Kasım 2026 itibarıyla)
 
