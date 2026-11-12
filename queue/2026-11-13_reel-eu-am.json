@@ -17,7 +17,7 @@
   "review": "Round 2 independent reviewer approved: integrity ok, Arabic checked, English and reference match, revised caption accurate",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -103,6 +103,16 @@
       "087014",
       "087015"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 7.0,
+    "video_seconds": 10.2,
+    "verse_seconds": [
+      3.58,
+      3.4
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-12T05:45:41+00:00"
   }
 }

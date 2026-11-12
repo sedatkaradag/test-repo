@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: integrity ok, Arabic and pause signs checked, English and reference match, caption gentle and accurate",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -108,6 +108,15 @@
     "ayahs": [
       "059022"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 10.0,
+    "video_seconds": 13.2,
+    "verse_seconds": [
+      10.0
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-12T05:48:41+00:00"
   }
 }
