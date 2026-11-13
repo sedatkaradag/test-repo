@@ -178,5 +178,15 @@
     "opened_at": "2026-11-09T06:28:20Z",
     "closed_at": "2026-11-10T00:45:25Z",
     "resolution": "Gerçek bir sorun değil: sahibi bu Reels'i Instagram 'ses kullanılamıyor' (tilavet sesi kısıtlandı) uyarısı verdiği için arşive aldı; arşivdeki gönderi için API istatistik döndürmüyor. Analizlerde dışarıda bırakılmaya devam edilsin."
+  },
+  {
+    "id": "S-016",
+    "kind": "code",
+    "title": "Hesap istatistikleri tutarsız (takipçi kontrolü)",
+    "detail": "followers 531; counts that do not fit the daily follows: [{'at': '2026-11-12T18:34:45+00:00', 'followers_count': 510, 'range': [67, 67], 'common_so_far': [51, 55]}, {'at': '2026-11-13T02:55:23+00:00', 'followers_count': 515, 'range': [72, 72], 'common_so_far': [51, 55]}]; differences from Instagram's daily series: []",
+    "ref": "",
+    "source": "Gece istatistik",
+    "status": "open",
+    "opened_at": "2026-11-13T18:10:35Z"
   }
 ]
