@@ -81,13 +81,17 @@ Zamanlanmış görevler (Claude, hepsi `permission_mode: auto`):
 
 Elle yapılan videolar (quiz, hikâye vb.) artık panelin **"Elle gönderiler"** bölümüne konur; sahibi orada
 izler, caption'ı düzeltir, **Paylaş / Revize iste / Reddet** der. Paylaş → "elle gönderi paylaş" görevi
-kuyruğa alır → yayıncı paylaşır (en geç ~15 dk) → görev `content_log.md` ve kullanılan ayet listesini
+kuyruğa alır → `kick_publisher.py` uyuyan yayıncıyı yeniden başlatır → yayıncı paylaşır (genelde 2-5 dk) → görev `content_log.md` ve kullanılan ayet listesini
 günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual_post.py`.
 - Bu sohbette bir video bittiğinde: sohbette gönder **ve** panele koy ("Ana ajan: yeni elle gönderi ekleme").
 - **Her yeni sohbette:** panelde `manual` koleksiyonunda `status: "revision"` olan var mı bak; varsa notu uygula.
 - Bunlar denetçi/`integrity` adımlarından geçmez (sahibinin kararı: "ben manuel kontrol ediyorum, ama
   oluştururken dikkat et"). Hazırlarken doğrulayıcı alt ajan ve kaynak kuralları yine geçerli.
 - Story'ye gitmez, deneme (trial) Reels değildir; istatistikte eskisi gibi `manual_posts` grubunda.
+- 13 Kasım (sahibi onayladı): Lokmân 31:14 yayıncı zincirinde 44 dk takıldı. Düzeltme: `next_due.py` zamanı
+  geçmiş (45 dk'dan az) hazır gönderiyi görür, 5 dk sonra yeni çalışma başlatır; paylaşım görevi
+  `kick_publisher.py` ile yayıncı sadece zincir adımında uyuyorsa onu durdurup yeniden başlatır.
+  Sahibi "düzenli gönderiye yakınsa elle gönderiyi kaydır" kuralını **istemedi**; ekleme.
 - İlk gerçek kullanımda kontrol et: panelin "Paylaş" düğmesi görevi başlatabildi mi (Claude Code Remote
   bağlantısı izni). Başlatamazsa sahibi sohbette "paylaş" der, ana ajan aynı adımları uygular.
 

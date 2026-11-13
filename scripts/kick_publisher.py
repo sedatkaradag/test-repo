@@ -49,8 +49,10 @@ def main():
     step = current_step(rid)
     if step != SLEEP_STEP:
         return {"action": "none", "why": f"run {rid} is busy: {step}", "run": rid}
-    gh("run", "cancel", str(rid))
-    for _ in range(30):  # let the cancel land so the new run is not queued behind it
+    # The chain step runs with `if: always()`, which a normal cancel does not stop: force-cancel it.
+    # Safe here because the run is only sleeping (nothing is being published).
+    gh("api", "-X", "POST", f"repos/{{owner}}/{{repo}}/actions/runs/{rid}/force-cancel")
+    for _ in range(45):  # let the cancel land (force-cancel took ~35 s) so the new run is not queued behind it
         time.sleep(2)
         if json.loads(gh("run", "view", str(rid), "--json", "status"))["status"] == "completed":
             break
