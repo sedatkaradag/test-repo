@@ -214,7 +214,25 @@ for (const k in SCN) {
   const l = document.createElementNS("http://www.w3.org/2000/svg", "g"); l.setAttribute("opacity", 0); l.innerHTML = SCN[k].light; lightsG.appendChild(l);
   SCN[k].g = g; SCN[k].l = l;
 }
-$("rug").innerHTML = rug();
+// the rug is clipped from its top edge down; a roll sits on that edge and shrinks as the rug opens
+$("rug").innerHTML = `<defs><clipPath id="rugclip"><rect id="rugclipR" x="280" y="600" width="520" height="940"/></clipPath>
+  <linearGradient id="rollG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05170f"/><stop offset=".38" stop-color="#2d6f53"/>
+  <stop offset=".55" stop-color="#1d5640"/><stop offset="1" stop-color="#041510"/></linearGradient>
+  <linearGradient id="rollHi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".35" stop-color="#fff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+  <g clip-path="url(#rugclip)">${rug()}</g>
+  <g id="roll" filter="url(#shadowS)"><rect id="rollR" x="300" width="480" fill="url(#rollG)"/><rect id="rollH" x="300" width="480" fill="url(#rollHi)"/>
+  <line id="rollL1" x1="322" x2="322" stroke="${IV}" stroke-opacity=".55" stroke-width="3"/><line id="rollL2" x1="758" x2="758" stroke="${IV}" stroke-opacity=".55" stroke-width="3"/>
+  <line id="rollL3" x1="344" x2="344" stroke="${GD}" stroke-opacity=".7" stroke-width="2"/><line id="rollL4" x1="736" x2="736" stroke="${GD}" stroke-opacity=".7" stroke-width="2"/></g>`;
+const ROLLS = ["fajr", "dhuhr", "asr", "maghrib", "isha", "low", "broken", "joy", "grateful", "anyway"];
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+function setRug(u) {
+  const top = 624, start = 1398, y = start + (top - start) * u;
+  $("rugclipR").setAttribute("y", y); $("rugclipR").setAttribute("height", 1560 - y);
+  const d = 20 + 76 * Math.sqrt(Math.max(0, 1 - u));
+  ["rollR", "rollH"].forEach(id => { $(id).setAttribute("y", y - d * .62); $(id).setAttribute("height", d); $(id).setAttribute("rx", Math.min(d / 2, 16)); });
+  ["rollL1", "rollL2", "rollL3", "rollL4"].forEach(id => { $(id).setAttribute("y1", y - d * .62 + 3); $(id).setAttribute("y2", y + d * .38 - 3); });
+  $("roll").setAttribute("opacity", u > .985 ? 0 : 1);
+}
 $("hands").innerHTML = hand(404, 1296, 6, false) + hand(676, 1296, -6, true);
 
 $("who").textContent = D.hadith.who;
@@ -232,6 +250,8 @@ function render(t) {
   const showScene = (key, o) => { const sc = SCN[key]; const g = sc.g || SCN.anyway.g, l = sc.l || SCN.anyway.l; g.setAttribute("opacity", Math.max(+g.getAttribute("opacity"), o)); l.setAttribute("opacity", Math.max(+l.getAttribute("opacity"), o)); };
   const prev = S[i - 1];
   const fadeIn = ramp(lt, 0, .12);
+  // every scene up to the climax opens the rug again from its roll under the hands; the climax opens slowly
+  setRug(ROLLS.includes(cur.key) ? easeOut(ramp(lt, .06, cur.key === "anyway" ? 1.35 : .72)) : 1);
   if (prev && fadeIn < 1) showScene(prev.key, 1);
   showScene(cur.key, fadeIn);
   // camera: slow push-in per scene; the climax pushes a little more

@@ -120,6 +120,14 @@ add(lp(noise(int(.18 * SR)), 260) * decay(int(.18 * SR), .04), 15.32, db(-20), 0
 # Hadith and logo: quiet room, one far bird
 bird(21.2, .6, 2, 3000, db(-44))
 
+# The rug opens at the start of every scene up to the climax: a fabric swish, then it settles flat
+for k in ("fajr", "dhuhr", "asr", "maghrib", "isha", "low", "broken", "joy", "grateful", "anyway"):
+    dur = 1.35 if k == "anyway" else .72
+    n = int(dur * SR); x = np.linspace(0, 1, n)
+    sw = bp(noise(n), 260, 2600) * (x ** .4) * (1 - x) ** 1.6 * 3.2
+    add(sw, T[k] + .06, db(-27 if k == "anyway" else -30), 0)
+    m = int(.12 * SR); add(lp(noise(m), 220) * decay(m, .025), T[k] + .06 + dur * .92, db(-27), 0)
+
 mix = np.stack([lp(L, 11000, 4), lp(R, 11000, 4)], 1)   # soften the clicks
 fade = int(.8 * SR); mix[-fade:] *= np.linspace(1, 0, fade)[:, None]
 mix /= np.abs(mix).max() + 1e-9
