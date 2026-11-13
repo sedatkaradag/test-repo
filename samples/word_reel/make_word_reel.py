@@ -34,7 +34,7 @@ SW, SH, FPS = RL.SW, RL.SH, RL.FPS
 
 HOT_AR = (255, 244, 214)      # the word being recited: warm white
 HOT_EN = (246, 214, 140)      # its meaning: bright gold
-READ_AR = (188, 158, 98)      # words already recited: a calmer gold, so the current word stands out
+READ_AR = RL.VERSE_ON         # words already recited: the template gold (owner, 13 Nov: the calmer gold was too dull)
 RISE, FALL = 0.20, 0.50       # seconds into the bright state and back (eased)
 BEHIND = False   # owner, 13 Nov: no light patch behind the word (it read as a band); glow on the letters only
 
