@@ -57,6 +57,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-11 (sabah) | Hikâye, TTS (107,5 sn) | Buhârî 1968 | Can you live in the same house as someone, and still neglect them? | — | — | — | — | — | — | — | — |
 | 2026-11-12 (sabah) | Guess the Surah (99,9 sn) | 20:25-28, 99:7-8, 105:3-4, 40:60 · Alafasy | Can you name all 4 Surahs? The last one is hard. (önerilen) | — | — | — | — | — | — | — | — |
 | 2026-11-13 05:49 | Animasyon · ortam sesi (28,4 sn) | Buhârî 1117 | Half asleep at Fajr. Buried in work at Dhuhr. Worn out at Isha. Pray anyway. | — | — | — | — | — | — | — | — |
+| 2026-11-13 02:39 | Vaaz sesi + çizgi illüstrasyon (2:51), Şeyh Kişk "Ölüm" | Hadîsü's-Sûr (zayıf), Tekvîr 81, Mü'min 40:16 | Who will remain when everything is gone? | sahibi denedi: önce trial Reels (~10 izlenme, silindi), sonra normal Reels: yine ~10 | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -141,3 +142,8 @@ Salah is not kept for the days you feel ready; it is for every mood and every da
 | taj_ul_furqan hesabının bir Reels'i (link sohbette kaldı) | Sesli mesaj fikri: gece iki panel (HIM/HER), mesaj, ayetin sesli mesaj olarak gönderilmesi | `samples/voice_note/` (17:32) |
 | https://www.instagram.com/reel/Dfc4CQ6ITSx/ (birmesal) | Buhârî 1968 hikâyesi, düz çizim sahneler, Türkçe anlatım, kelime vurgulu altyazı | `samples/story_video/salman_bukhari1968/` |
 | https://www.instagram.com/p/Dfhwh84ofRa (birmesal) | Müslim 537, arkadan-yukarıdan görünen saflar, ileri bulanık, yazı kartları (ما كهرني ولا ضربني ولا شتمني) | `samples/story_video/muawiya_muslim537/` |
+
+**Kişk "Ölüm" denemesi, 13 Kasım (sonuç):** Trial ve normal Reels ikisi de ~10 izlenme; aynı günlerde diğer Reels'ler 1,3-2,4 bin.
+Muhtemel neden: 2:51'lik sesin tamamı zaten viral iki gönderiyle (tab.takhayal, TheTazkiyyahGuide) birebir aynı ve akış
+da onlardan; Instagram bunu "özgün değil" sayıp öneriye sokmamış olabilir (Nisan 2026 kuralı). Silip yeniden yüklemek de
+"daha önce paylaşılmış içerik" sayılır. Ders: başka hesapta viral olmuş sesi aynen kullanma; görsel değişiklik yetmiyor.
