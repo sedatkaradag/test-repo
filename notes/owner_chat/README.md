@@ -91,6 +91,13 @@ günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual
 - İlk gerçek kullanımda kontrol et: panelin "Paylaş" düğmesi görevi başlatabildi mi (Claude Code Remote
   bağlantısı izni). Başlatamazsa sahibi sohbette "paylaş" der, ana ajan aynı adımları uygular.
 
+## Arşivlenen gönderiler (13 Kasım 2026)
+
+Sahibi bazı gönderileri uygulamadan **arşive alıyor**. Arşivdeki gönderi için API "does not exist" der ve istatistik vermez
+(ör. 49:12, 6 Kas; 89:27-30, 12 Kas). Bu Instagram kaldırması değildir; açık sorun olarak raporlama.
+Başka hesapta viral olmuş sesi videoya gömüp yüklemek özgün sayılmıyor (Kişk denemesi ~10 izlenme); kullanılacaksa
+uygulamada o sesin "Sesi kullan" düğmesiyle, elle paylaşılmalı (API ile Instagram sesi eklenemez).
+
 ## Kaynak kuralı (sahibinin sözü, 12 Kasım 2026)
 
 **Yalnızca sahih ve hasen kaynak.** Sahibi açıkça onay vermedikçe bunun dışına asla çıkılmaz. Tek istisna:
