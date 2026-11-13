@@ -36,7 +36,7 @@ HOT_AR = (255, 244, 214)      # the word being recited: warm white
 HOT_EN = (246, 214, 140)      # its meaning: bright gold
 READ_AR = (188, 158, 98)      # words already recited: a calmer gold, so the current word stands out
 RISE, FALL = 0.20, 0.50       # seconds into the bright state and back (eased)
-PAD_AR, PAD_EN = (18, 6), (10, 3)   # the soft light behind the word (x, y padding)
+BEHIND = False   # owner, 13 Nov: no light patch behind the word (it read as a band); glow on the letters only
 
 
 def soft_light(img, box, pad, alpha, blur):
@@ -82,7 +82,6 @@ for line in v["lines"]:
         box = ImageDraw.Draw(on).textbbox(pos, wd, font=font, direction="rtl", language="ar")
         src = blank(); ImageDraw.Draw(src).text(pos, wd, font=font, fill=(255, 214, 130, 255), direction="rtl", language="ar")
         hot = blank()
-        soft_light(hot, box, PAD_AR, 70, 16)                       # light behind the word
         hot.alpha_composite(src.filter(ImageFilter.GaussianBlur(22)))   # wide glow
         hot.alpha_composite(src.filter(ImageFilter.GaussianBlur(7)))    # close glow
         ImageDraw.Draw(hot).text(pos, wd, font=font, fill=HOT_AR + (255,), direction="rtl", language="ar")
@@ -104,7 +103,6 @@ for line in L["full_lines"]:
         on, hot = blank(), blank()
         wpx = sum(f.getlength(t_) for t_, f in R._runs(word.rstrip(".,"), msize))
         asc, desc = R._runs(word, msize)[0][1].getmetrics()
-        soft_light(hot, (x, y + asc * 0.25, x + wpx, y + asc + desc * 0.4), PAD_EN, 46, 9)
         for img, col in ((en_dim, RL.MEAL_DIM), (on, RL.MEAL), (hot, HOT_EN)):
             xx, d = x, ImageDraw.Draw(img)
             for t_, f in R._runs(word, msize):
