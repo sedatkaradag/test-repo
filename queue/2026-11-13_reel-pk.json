@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: integrity ok, Arabic checked mark by mark, English and reference match, caption accurate",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "missed",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
