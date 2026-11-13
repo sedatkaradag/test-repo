@@ -34,6 +34,9 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 **99 Names (tesbih)**
 - Tirmizî 3507 listesi (sunnah.com, Darussalam çevirisi) — paylaşıldı.
 
+**Animasyon · ortam sesi**
+- 13 Kas, kâri yok (ortam sesi): Sahih al-Bukhari 1117 ("Pray anyway") — paylaşıldı.
+
 ## Ayrıntılı kayıt
 
 İstatistikler `history/insights.json` → `manual_posts`, 2026-11-11 02:16 UTC okuması (yaş = o ana kadar).
@@ -53,6 +56,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-10 20:41 | Guess the Surah (91,6 sn) | 54:17, 103:2-3, 89:27-28, 31:18 · Alafasy | Can you name all 4 Surahs? The last one is hard. | 0,2 g | 1661 | 1916 | 130 | 4 | 10 | 4 | 14,7 sn |
 | 2026-11-11 (sabah) | Hikâye, TTS (107,5 sn) | Buhârî 1968 | Can you live in the same house as someone, and still neglect them? | — | — | — | — | — | — | — | — |
 | 2026-11-12 (sabah) | Guess the Surah (99,9 sn) | 20:25-28, 99:7-8, 105:3-4, 40:60 · Alafasy | Can you name all 4 Surahs? The last one is hard. (önerilen) | — | — | — | — | — | — | — | — |
+| 2026-11-13 05:49 | Animasyon · ortam sesi (28,4 sn) | Buhârî 1117 | Half asleep at Fajr. Buried in work at Dhuhr. Worn out at Isha. Pray anyway. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -119,6 +123,15 @@ Source: Sahih al-Bukhari 1968
 Follow @thehalalalgorithm for more.
 
 #hadith #sahihbukhari #islamicstories #muslimfamily
+```
+
+**Pray anyway, 13 Kasım** (sahibinin panelde onayladığı caption)
+```
+Half asleep at Fajr. Buried in work at Dhuhr. Worn out at Isha. Pray anyway.
+
+Salah is not kept for the days you feel ready; it is for every mood and every day, all five times. Narrated ‘Imran bin Husain: I had piles, so I asked the Prophet (ﷺ) about the prayer. He said, “Pray while standing and if you can’t, pray while sitting and if you cannot do even that, then pray Lying on your side.” (Sahih al-Bukhari 1117)
+
+#salah #prayanyway #fiveprayers #islamicreminder #sunnah
 ```
 
 ## Örnek alınan videolar (başka hesaplar)
