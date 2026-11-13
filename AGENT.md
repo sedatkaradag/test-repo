@@ -437,12 +437,17 @@ Takvimi yoktur; sahibi panelde Paylaş'a basınca panel bu görevi çalıştır�
    c. `git add queue/<slot>.json manual/<id>/post.json` → commit ("manual: queue <id>") + push
       (önce `git pull --rebase`).
    d. Belgeyi `update`: `status: "queued"`, `slot`, `queued_at` (`date -u`).
+   e. Bu çalışmada en az bir gönderi kuyruğa aldıysan, hepsi bittikten sonra **bir kez**
+      `python3 scripts/kick_publisher.py`. Yayıncı "Chain the next run" adımında uyuyorsa onu durdurup
+      yeni çalışma başlatır (gönderi ~2-3 dakikada çıkar); başka bir adımdaysa dokunmaz, o çalışma
+      bitince zincir zamanı geçmiş gönderiyi görüp 5 dakika içinde yeni çalışma başlatır.
+      Dönen `action`'ı rapora yaz; `error` dönerse sadece raporda söyle (zincir yine yakalar).
 3. Repodaki `post.json`'u panelden farklı olan `rejected` / `revision` belgeleri için
    `manual_post.py mark <id> rejected|revision --note "<not>"`, commit + push.
 4. `log/<gün>` belgesine "Ana ajan" kaydı ("Elle gönderi kuyruğa alındı: <başlık>").
-5. **Yayını bekle** (yalnızca bu çalışmada kuyruğa aldıkların için): yayıncının açık çalışması kuyruğu
-   en geç 15 dakikada bir kontrol eder. 40 dakikaya kadar birkaç dakikada bir `git pull` ile
-   `queue/<slot>.json` durumuna bak. `published` ya da `failed` olunca:
+5. **Yayını bekle** (yalnızca bu çalışmada kuyruğa aldıkların için): `restarted` / `dispatched` ise gönderi
+   genelde 2-5 dakikada çıkar; `none` (yayıncı meşgul) ise en geç ~25 dakika. 40 dakikaya kadar
+   1-2 dakikada bir `git pull` ile `queue/<slot>.json` durumuna bak; sonuçlanınca beklemeyi bırak. `published` ya da `failed` olunca:
    - Panel belgesi `manual/<id>` ve panel satırı `queue/<slot>`: `status`, `media_id`, `posted_at`, `error`.
    - `published` ise kayıtlar (`notes/owner_chat/content_log.md`): "Kullanılan ayetler ve hadisler"
      listesinde formatın altına bir satır (gün, kâri, ayetler), "Ayrıntılı kayıt" tablosuna bir satır
