@@ -1,0 +1,89 @@
+{
+  "entry_id": "quran:55:60",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ar-Rahmaan 55:60",
+  "slot": "2026-11-14_reel-eu",
+  "publish_at": "2026-11-14T17:57:33Z",
+  "local_slot": "2026-11-14 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-14_reel-eu.jpg",
+  "video": "queue/2026-11-14_reel-eu.mp4",
+  "cover": "queue/2026-11-14_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Keep doing good, even if no one notices\n\nOne short question in Surah Ar-Rahman, and the answer is already inside it. Be good to people today, whether they notice or not.\n\nSurah Ar-Rahman 55:60\n\nName one good thing someone did for you this week.\n\n#ihsan #surahrahman #doinggood #quranreels\n\nRecitation: Mahmoud Khalil Al-Husary",
+  "alt_text": "Is the reward for goodness anything but goodness (Surah Ar-Rahmaan 55:60)",
+  "theme": "doing good / goodness returned with goodness",
+  "review": "Independent reviewer approved: Arabic checked mark by mark, question mark correct, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:55:60",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Keep doing good, even if no one notices",
+    "hook_lines": [
+      "Keep doing good, even if no",
+      "one notices"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "055060",
+        "lines": [
+          "هَلۡ جَزَآءُ ٱلۡإِحۡسَٰنِ إِلَّا ٱلۡإِحۡسَٰنُ ٦٠"
+        ],
+        "y": 760.0,
+        "meal": [
+          "Is the reward for goodness anything but",
+          "goodness?"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 946.0,
+    "full": "Is the reward for goodness anything but goodness?",
+    "full_lines": [
+      "Is the reward for goodness anything but",
+      "goodness?"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Ar-Rahmaan 55:60",
+    "ref_y": 1096.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name one good thing someone did for you this week.",
+    "cta_lines": [
+      "Name one good thing someone did for you",
+      "this week."
+    ],
+    "cta_size": 48,
+    "line_y": 1154.0,
+    "handle_y": 1300.0,
+    "handle_size": 27
+  },
+  "layout_hash": "207a6acdad1907833399fa01",
+  "created_at": "2026-11-13T05:43:59+00:00",
+  "audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "055060"
+    ],
+    "done": false
+  }
+}

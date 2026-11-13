@@ -1,0 +1,158 @@
+{
+  "entry_id": "quran:57:22-23",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hadid 57:22-23",
+  "slot": "2026-11-14_reel-us",
+  "publish_at": "2026-11-15T01:30:29Z",
+  "local_slot": "2026-11-14 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-14_reel-us.jpg",
+  "video": "queue/2026-11-14_reel-us.mp4",
+  "cover": "queue/2026-11-14_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "For the thing you lost and still think about\n\nEvery calamity was written before it happened, so that you do not grieve over what passed you by, nor become proud of what you were given. Rest your heart in that tonight.\n\nSurah Al-Hadid 57:22-23\n\nSave this for the day you keep replaying what you missed.\n\n#qadr #letgo #surahhadid #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "No calamity befalls the earth or yourselves but it is already written in a Record before We bring it into existence. That is indeed easy for Allah – so that you may not grieve over what you have missed, nor exult over what He has given you, for Allah does not love anyone who is conceited and boastful – (Surah Al-Hadid 57:22-23)",
+  "theme": "loss and decree / not grieving over what passed",
+  "review": "Independent reviewer approved: Arabic and pause signs checked, English/reference match, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:57:22-23",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For the thing you lost and still think about",
+    "hook_lines": [
+      "For the thing you lost and",
+      "still think about"
+    ],
+    "hook_size": 82,
+    "arabic_size": 56,
+    "verses": [
+      {
+        "ayah": "057022",
+        "lines": [
+          "مَآ أَصَابَ مِن مُّصِيبَةٖ فِي ٱلۡأَرۡضِ وَلَا فِيٓ أَنفُسِكُمۡ إِلَّا",
+          "فِي كِتَٰبٖ مِّن قَبۡلِ أَن نَّبۡرَأَهَآۚ إِنَّ ذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٞ ٢٢"
+        ],
+        "y": 639.6,
+        "meal": [
+          "No calamity befalls the earth or yourselves but it is already written",
+          "in a Record before We bring it into existence. That is indeed easy",
+          "for Allah"
+        ]
+      },
+      {
+        "ayah": "057023",
+        "lines": [
+          "لِّكَيۡلَا تَأۡسَوۡاْ عَلَىٰ مَا فَاتَكُمۡ وَلَا تَفۡرَحُواْ بِمَآ ءَاتَىٰكُمۡۗ",
+          "وَٱللَّهُ لَا يُحِبُّ كُلَّ مُخۡتَالٖ فَخُورٍ ٢٣"
+        ],
+        "y": 857.6,
+        "meal": [
+          "– so that you may not grieve over what you have missed, nor exult",
+          "over what He has given you, for Allah does not love anyone who is",
+          "conceited and boastful –"
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1105.6,
+    "full": "No calamity befalls the earth or yourselves but it is already written in a Record before We bring it into existence. That is indeed easy for Allah – so that you may not grieve over what you have missed, nor exult over what He has given you, for Allah does not love anyone who is conceited and boastful –",
+    "full_lines": [
+      "No calamity befalls the earth or yourselves but it is already written",
+      "in a Record before We bring it into existence. That is indeed easy",
+      "for Allah – so that you may not grieve over what you have missed,",
+      "nor exult over what He has given you, for Allah does not love",
+      "anyone who is conceited and boastful –"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-Hadid 57:22-23",
+    "ref_y": 1359.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save this for the day you keep replaying what you missed.",
+    "cta_lines": [
+      "Save this for the day you keep replaying what you missed."
+    ],
+    "cta_size": 36,
+    "line_y": 1417.6,
+    "handle_y": 1480.6,
+    "handle_size": 27
+  },
+  "layout_hash": "c672bf73797b331d5922af15",
+  "created_at": "2026-11-13T05:44:48+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "057022",
+      "057023"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "entry_id": "quran:27:62",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Naml 27:62",
+  "slot": "2026-11-14_reel-pk",
+  "publish_at": "2026-11-14T15:32:39Z",
+  "local_slot": "2026-11-14 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-14_reel-pk.jpg",
+  "video": "queue/2026-11-14_reel-pk.mp4",
+  "cover": "queue/2026-11-14_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Who answers you when you are desperate?\n\nAllah responds to the distressed when they call on Him, and He relieves suffering. Whatever is weighing on you tonight, say it to Him in dua.\n\nSurah An-Naml 27:62\n\nWhich worry will you hand over to Allah tonight?\n\n#duainhardship #distress #surahnaml #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "Is He [not better] Who responds to the distressed when he calls out to Him, and Who relieves suffering, and Who makes you successors on earth? Is there any god besides Allah? Little is it that you take heed (Surah An-Naml 27:62)",
+  "theme": "dua in distress / Allah answers the desperate",
+  "review": "Independent reviewer approved: Arabic and pause signs checked, English/reference match, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:27:62",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Who answers you when you are desperate?",
+    "hook_lines": [
+      "Who answers you when you",
+      "are desperate?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "027062",
+        "lines": [
+          "أَمَّن يُجِيبُ ٱلۡمُضۡطَرَّ إِذَا دَعَاهُ وَيَكۡشِفُ ٱلسُّوٓءَ",
+          "وَيَجۡعَلُكُمۡ خُلَفَآءَ ٱلۡأَرۡضِۗ أَءِلَٰهٞ مَّعَ ٱللَّهِۚ قَلِيلٗا",
+          "مَّا تَذَكَّرُونَ ٦٢"
+        ],
+        "y": 598.0,
+        "meal": [
+          "Is He [not better] Who responds to the",
+          "distressed when he calls out to Him, and Who",
+          "relieves suffering, and Who makes you successors",
+          "on earth? Is there any god besides Allah? Little is",
+          "it that you take heed."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "Is He [not better] Who responds to the distressed when he calls out to Him, and Who relieves suffering, and Who makes you successors on earth? Is there any god besides Allah? Little is it that you take heed.",
+    "full_lines": [
+      "Is He [not better] Who responds to the",
+      "distressed when he calls out to Him, and Who",
+      "relieves suffering, and Who makes you successors",
+      "on earth? Is there any god besides Allah? Little is",
+      "it that you take heed."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Naml 27:62",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which worry will you hand over to Allah tonight?",
+    "cta_lines": [
+      "Which worry will you hand over to Allah",
+      "tonight?"
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "5c1c2e25cac0302c1f665d55",
+  "created_at": "2026-11-13T05:43:47+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "027062"
+    ],
+    "done": false
+  }
+}

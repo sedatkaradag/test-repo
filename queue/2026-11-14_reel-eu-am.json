@@ -1,0 +1,96 @@
+{
+  "entry_id": "quran:43:67",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Az-Zukhruf 43:67",
+  "slot": "2026-11-14_reel-eu-am",
+  "publish_at": "2026-11-14T07:17:19Z",
+  "local_slot": "2026-11-14 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-14_reel-eu-am.jpg",
+  "video": "queue/2026-11-14_reel-eu-am.mp4",
+  "cover": "queue/2026-11-14_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Look at your closest friends for a moment\n\nOn that Day, close friends turn into enemies, except the righteous. Choose friends who bring you closer to Allah, and be that friend for someone else.\n\nSurah Az-Zukhruf 43:67\n\nSend this to the friend who reminds you of Allah.\n\n#islamicfriendship #goodcompany #surahzukhruf #quranreels\n\nRecitation: Mohamed Siddiq Al-Minshawi",
+  "alt_text": "On that Day, close friends will become enemies to one another, except the righteous (Surah Az-Zukhruf 43:67)",
+  "theme": "friendship / choosing righteous friends",
+  "review": "Independent reviewer approved: Arabic checked word by word, English/reference match, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:43:67",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Look at your closest friends for a moment",
+    "hook_lines": [
+      "Look at your closest friends",
+      "for a moment"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "043067",
+        "lines": [
+          "ٱلۡأَخِلَّآءُ يَوۡمَئِذِۭ بَعۡضُهُمۡ لِبَعۡضٍ عَدُوٌّ",
+          "إِلَّا ٱلۡمُتَّقِينَ ٦٧"
+        ],
+        "y": 697.6,
+        "meal": [
+          "On that Day, close friends will become enemies",
+          "to one another, except the righteous."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "On that Day, close friends will become enemies to one another, except the righteous.",
+    "full_lines": [
+      "On that Day, close friends will become enemies",
+      "to one another, except the righteous."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Az-Zukhruf 43:67",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to the friend who reminds you of Allah.",
+    "cta_lines": [
+      "Send this to the friend who reminds you of",
+      "Allah."
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "6f12f8725c082cefc06b6d3e",
+  "created_at": "2026-11-13T05:43:15+00:00",
+  "audio": {
+    "reciter": "Minshawy_Murattal_128kbps",
+    "reciter_name": "Mohamed Siddiq Al-Minshawi",
+    "ayahs": [
+      "043067"
+    ],
+    "done": false
+  }
+}
