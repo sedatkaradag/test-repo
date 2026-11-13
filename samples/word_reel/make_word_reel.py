@@ -32,9 +32,26 @@ assert L.get("template") == "v3" and len(L["verses"]) == 1, "one-verse v3 plans 
 assert not RL.issues(L), RL.issues(L)
 SW, SH, FPS = RL.SW, RL.SH, RL.FPS
 
-HOT_AR = (255, 236, 186)      # the word being recited
-HOT_EN = (240, 206, 128)      # its meaning
-RISE, FALL = 0.10, 0.30       # seconds: into the bright state, back to plain gold
+HOT_AR = (255, 244, 214)      # the word being recited: warm white
+HOT_EN = (246, 214, 140)      # its meaning: bright gold
+READ_AR = (188, 158, 98)      # words already recited: a calmer gold, so the current word stands out
+RISE, FALL = 0.20, 0.50       # seconds into the bright state and back (eased)
+PAD_AR, PAD_EN = (18, 6), (10, 3)   # the soft light behind the word (x, y padding)
+
+
+def soft_light(img, box, pad, alpha, blur):
+    """A soft gold light behind a word: a rounded patch, blurred so it has no edge."""
+    x0, y0, x1, y1 = box
+    patch = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    r = (y1 - y0 + 2 * pad[1]) / 2
+    ImageDraw.Draw(patch).rounded_rectangle((x0 - pad[0], y0 - pad[1], x1 + pad[0], y1 + pad[1]), radius=r,
+                                            fill=(214, 178, 104, alpha))
+    img.alpha_composite(patch.filter(ImageFilter.GaussianBlur(blur)))
+
+
+def smooth(x):
+    x = min(1.0, max(0.0, x))
+    return x * x * (3 - 2 * x)
 
 # ---------- Arabic words, each on its own layers ----------
 v = L["verses"][0]
@@ -61,11 +78,13 @@ for line in v["lines"]:
         w = font.getlength(wd, direction="rtl", language="ar")
         pos = (x_r - w, y)
         d_dim.text(pos, wd, font=font, fill=RL.VERSE_DIM + (255,), direction="rtl", language="ar")
-        on = blank(); ImageDraw.Draw(on).text(pos, wd, font=font, fill=RL.VERSE_ON + (255,), direction="rtl", language="ar")
-        hot = blank(); ImageDraw.Draw(hot).text(pos, wd, font=font, fill=RL.VERSE_ON + (255,), direction="rtl", language="ar")
-        glow = hot.filter(ImageFilter.GaussianBlur(14))
+        on = blank(); ImageDraw.Draw(on).text(pos, wd, font=font, fill=READ_AR + (255,), direction="rtl", language="ar")
+        box = ImageDraw.Draw(on).textbbox(pos, wd, font=font, direction="rtl", language="ar")
+        src = blank(); ImageDraw.Draw(src).text(pos, wd, font=font, fill=(255, 214, 130, 255), direction="rtl", language="ar")
         hot = blank()
-        hot.alpha_composite(glow); hot.alpha_composite(glow)
+        soft_light(hot, box, PAD_AR, 70, 16)                       # light behind the word
+        hot.alpha_composite(src.filter(ImageFilter.GaussianBlur(22)))   # wide glow
+        hot.alpha_composite(src.filter(ImageFilter.GaussianBlur(7)))    # close glow
         ImageDraw.Draw(hot).text(pos, wd, font=font, fill=HOT_AR + (255,), direction="rtl", language="ar")
         ar_on.append(on); ar_hot.append(hot)
         x_r -= w + space
@@ -83,6 +102,9 @@ for line in L["full_lines"]:
     for j, word in enumerate(words):
         x = x0 + (R._width_ltr(" ".join(words[:j]) + " ", msize) if j else 0)
         on, hot = blank(), blank()
+        wpx = sum(f.getlength(t_) for t_, f in R._runs(word.rstrip(".,"), msize))
+        asc, desc = R._runs(word, msize)[0][1].getmetrics()
+        soft_light(hot, (x, y + asc * 0.25, x + wpx, y + asc + desc * 0.4), PAD_EN, 46, 9)
         for img, col in ((en_dim, RL.MEAL_DIM), (on, RL.MEAL), (hot, HOT_EN)):
             xx, d = x, ImageDraw.Draw(img)
             for t_, f in R._runs(word, msize):
@@ -109,9 +131,9 @@ def state(t):
         if t >= a:
             read[w] = 1
             if t < b:
-                heat[w] = max(heat[w], min(1.0, (t - a) / RISE))
+                heat[w] = max(heat[w], smooth((t - a) / RISE))
             else:
-                heat[w] = max(heat[w], max(0.0, 1 - (t - b) / FALL))
+                heat[w] = max(heat[w], 1 - smooth((t - b) / FALL))
     return read, heat
 
 
