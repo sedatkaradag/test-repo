@@ -168,3 +168,15 @@ Sahibinin seçimleri: **müziksiz ortam sesi**, **nötr eller** (cinsiyet belli 
 - Ses: `sound.py` gürültü + sinüs sentezi (örnek ses yok, müzik/melodi yok), sahne başına oda sesi ve olaylar
   (titreşim, klavye, saat, kapı, anahtar, cırcır böceği, fincan, yağmur, gök gürültüsü, kuş, sayfa, tesbih). -18 LUFS.
 - Render tek parça ~4 dk. Mushaf yere değil rahleye konur.
+
+## Format: kelime kelime yanan ayet Reels'i (13 Kas) — `samples/word_reel/`
+
+Sahibinin isteği: okunan kelime en parlak (ışıltılı), okunmuşlar altın, okunmamışlar soluk; meal eşleşerek yanar
+("zinaya yaklaşmayın" sesli mesaj videosundaki gibi). Görünüm sistem şablonu v3'ün aynısı (`reels.plan` + `layers`).
+- Set dosyası: `map` (her Arapça kelimenin İngilizce kelime numaraları; metin değişmez) ve `events` (duyulduğu sırayla
+  her kelime, tekrarlar dahil). Kelime zamanları audio-fetch'in `align.json`'ından.
+- **Kârinin geri dönüp tekrar okuduğu yerler** `align.json`'da boşluk olarak görünür (31:14'te 14,25-22,8 sn: Alafasy
+  3-10. kelimeleri yeniden okuyor). Tekrarı MFCC + DTW ile bul (librosa; önce kelime aralıklarını boşlukta ara, sonra
+  aralığı boşluğa hizala; tekrar eden kelimelerin süreleri ilk okumayla örtüşmeli). Bağımsız doğrulayıcıya `map` ve
+  `events`'i kontrol ettir.
+- Render ~1,5 dk (32 sn video).
