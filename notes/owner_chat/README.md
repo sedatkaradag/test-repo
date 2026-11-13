@@ -106,7 +106,7 @@ uygulamada o sesin "Sesi kullan" düğmesiyle, elle paylaşılmalı (API ile Ins
 Bu istisna başka içeriğe emsal değildir.
 
 ## Açık işler (11 Kasım 2026 itibarıyla)
-- **Lokmân 31:14 "annene gönder" (13 Kas)** panelde onay bekliyor (`manual/2026-11-13-mother-31-14`). Sahibi "10 bin
+- **Lokmân 31:14 "annene gönder" (13 Kas)** 12:15 UTC'de paylaşıldı (`manual/2026-11-13-mother-31-14`), kelime kelime sürüm. Sahibi "10 bin
   izlenme alacak bir Reels" istedi; rapordaki formül: sistem şablonu v3 + kişiye gönderme çağrısı (30:21 gibi),
   Alafasy, 32,6 sn. 17:24 tek başına "and" ile başladığı için seçilmedi. Paylaşılınca 48. saatte görüntülemeyi 30:21 ile
   karşılaştır (30:21: 2 günde 8.829).

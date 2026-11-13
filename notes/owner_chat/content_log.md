@@ -57,6 +57,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-11 (sabah) | Hikâye, TTS (107,5 sn) | Buhârî 1968 | Can you live in the same house as someone, and still neglect them? | — | — | — | — | — | — | — | — |
 | 2026-11-12 (sabah) | Guess the Surah (99,9 sn) | 20:25-28, 99:7-8, 105:3-4, 40:60 · Alafasy | Can you name all 4 Surahs? The last one is hard. (önerilen) | — | — | — | — | — | — | — | — |
 | 2026-11-13 05:49 | Animasyon · ortam sesi (28,4 sn) | Buhârî 1117 | Half asleep at Fajr. Buried in work at Dhuhr. Worn out at Isha. Pray anyway. | — | — | — | — | — | — | — | — |
+| 2026-11-13 12:15 | Ayet Reels, kelime kelime (31,9 sn) | Lokmân 31:14 · Alafasy | Allah reminds you what your mother went through | — | — | — | — | — | — | — | — |
 | 2026-11-13 02:39 | Vaaz sesi + çizgi illüstrasyon (2:51), Şeyh Kişk "Ölüm" | Hadîsü's-Sûr (zayıf), Tekvîr 81, Mü'min 40:16 | Who will remain when everything is gone? (önce trial Reels, silindi; sonra normal Reels) | — | — | ~10 | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
@@ -150,3 +151,19 @@ da onlardan; Instagram bunu "özgün değil" sayıp öneriye sokmamış olabilir
 Sahibinin kontrolü: ses kısılmamış, Hesap durumu temiz, 10 izlenmenin hepsi takipçi (takipçi olmayana hiç gösterilmedi = önerilmedi).
 Reels 13 Kas ~08:45 UTC silindi. TheTazkiyyahGuide da aynı videoyu trial Reels olarak paylaşmış (profilde yok, linkle açılıyor)
 ve önerilere girmiş (5,7 bin takipçi, 38 bin beğeni): kopya kümesinde erken gelen geçiyor, geç gelen bastırılıyor gibi.
+
+**Lokmân 31:14, 13 Kasım** (sahibinin panelde onayladığı caption; 12:15 UTC'de paylaşıldı, onaydan 44 dk sonra: yayıncı zinciri
+geçmişteki "hazır" gönderiyi görmedi, sahibinin bildirimiyle elle çözüldü)
+```
+Allah reminds you what your mother went through
+
+Allah tells us He enjoined kindness to parents, that a mother carries her child in weakness upon weakness, and that we should be grateful to Him and to our parents. The verse ends by reminding us that the final return is to Him.
+
+Surah Luqman 31:14
+
+Send this to your mother, or pray for her
+
+#mother #parentsinislam #quran #quranreels
+
+Recitation: Mishary Alafasy
+```
