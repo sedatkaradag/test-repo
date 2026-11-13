@@ -99,6 +99,9 @@ günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual
 Bu istisna başka içeriğe emsal değildir.
 
 ## Açık işler (11 Kasım 2026 itibarıyla)
+- **"Pray anyway" (13 Kas)** panelde onay bekliyor (`manual/2026-11-13-pray-anyway`). İlk gerçek elle gönderi:
+  sahibi Paylaş'a basınca görevin panelden tetiklenip tetiklenmediğini kontrol et (`list_triggers` → last_run).
+  Örnek: taj_ul_furqan https://www.instagram.com/reel/DfpYfq9MgHx/ (fikir alındı, sözler ve çizimler bizim).
 - **Şeyh Kişk "Ölüm" deneme videosu** (12 Kas): örnek https://www.instagram.com/p/DfcgRWbsX-1 (2:49,
   krem zemin çizgi illüstrasyon, serif altyazı, turuncu italik vurgu, ayet etiketleri). Bizde: koyu yeşil zemin,
   fildişi çizgi, altın vurgu, tam 2:49, aynı ses. Ses: sahibi videoyu yükleyecek. Arapça yazıya dökülüp

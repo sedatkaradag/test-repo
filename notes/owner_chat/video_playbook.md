@@ -157,3 +157,14 @@ Sahibi "bizimki de benzer olsun" dedi: aynı sahne akışı, bizim renkler (koyu
 - `lines.txt`: `başlangıç | metin ([vurgu]) | sahne | ayet`. Render iki paralel parça (2 çekirdek), ~10 dk; düzeltmede sadece ilgili
   aralık yeniden çizilip `trim + concat` ile eklenir.
 - Künye: en sonda soluk, küçük ("Voice: … · Concept: @tab.takhayal"), sahibi istedi.
+
+## Format: "Pray anyway" yukarıdan seccade animasyonu (13 Kas) — `samples/story_video/pray_anyway/`
+
+Sahibinin seçimleri: **müziksiz ortam sesi**, **nötr eller** (cinsiyet belli değil), **kendi ifadelerimiz** (örneğin
+"Pray it sleepy" kalıbı kullanılmadı), **zengin illüstrasyon** (yukarıdan oda, vakte göre ışık, bizim yeşil/altın seccade).
+- Akış: 5 vakit (etiketli) + 4 ruh hali + "Pray. *Anyway.*" (ışık tek noktaya iner, ses kesilir) + hadis kartı + logo; 28,4 sn.
+- Hadis kartı: metin `find.py`'den, `display_text`/`split_narrator` (yalnız tipografi); Arapça kelime konumuyla kesilir;
+  son cümle altına döner. Kaynakta "Lying" büyük L ile; düzeltilmez.
+- Ses: `sound.py` gürültü + sinüs sentezi (örnek ses yok, müzik/melodi yok), sahne başına oda sesi ve olaylar
+  (titreşim, klavye, saat, kapı, anahtar, cırcır böceği, fincan, yağmur, gök gürültüsü, kuş, sayfa, tesbih). -18 LUFS.
+- Render tek parça ~4 dk. Mushaf yere değil rahleye konur.
