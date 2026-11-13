@@ -147,3 +147,6 @@ Salah is not kept for the days you feel ready; it is for every mood and every da
 Muhtemel neden: 2:51'lik sesin tamamı zaten viral iki gönderiyle (tab.takhayal, TheTazkiyyahGuide) birebir aynı ve akış
 da onlardan; Instagram bunu "özgün değil" sayıp öneriye sokmamış olabilir (Nisan 2026 kuralı). Silip yeniden yüklemek de
 "daha önce paylaşılmış içerik" sayılır. Ders: başka hesapta viral olmuş sesi aynen kullanma; görsel değişiklik yetmiyor.
+Sahibinin kontrolü: ses kısılmamış, Hesap durumu temiz, 10 izlenmenin hepsi takipçi (takipçi olmayana hiç gösterilmedi = önerilmedi).
+Reels 13 Kas ~08:45 UTC silindi. TheTazkiyyahGuide da aynı videoyu trial Reels olarak paylaşmış (profilde yok, linkle açılıyor)
+ve önerilere girmiş (5,7 bin takipçi, 38 bin beğeni): kopya kümesinde erken gelen geçiyor, geç gelen bastırılıyor gibi.
