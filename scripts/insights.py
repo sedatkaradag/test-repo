@@ -217,6 +217,7 @@ def breakdown_or_zero(data):
 PT = "America/Los_Angeles"
 FIRST_DAY = dt.date(2026, 10, 20)   # the first day Instagram has account numbers for (earlier days are all zero)
 WINDOW = "pt-day-v2"                 # rows measured with the window above; rows without it are measured again
+PENDING_DAYS = 2                     # a closed day that still reads 0 follows this recently is not checked yet
 REFRESH_DAYS = 7                     # Instagram fills the last days in late, so these are measured on every run
 FOLLOWERS = ROOT / "history" / "followers.jsonl"
 DAY_FIELDS = ("follows", "unfollows", "reach_total", "reach_followers", "reach_non_followers", "views_total", "accounts_engaged")
@@ -316,9 +317,15 @@ def daily_rows(base, token, user, now, account):
     snaps = read_jsonl(FOLLOWERS)
     snaps.append({"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count")})
     write_jsonl(FOLLOWERS, snaps)
-    net_to, total = {}, 0
+    # Instagram can show a day that has already ended as 0 follows / 0 unfollows for a while and fill it in
+    # later (12 and 13 Nov 2026: S-016/S-018/S-019 were opened by this). Such a recent all-zero day, and the
+    # days after it, count as not measured yet: the counts taken on them are checked once the day is filled in.
+    net_to, total, pending = {}, 0, []
     for r in rows:
         if "follows" not in r:
+            break
+        if r["follows"] == 0 and r["unfollows"] == 0 and (today - dt.date.fromisoformat(r["date"])).days <= PENDING_DAYS:
+            pending = [x["date"] for x in rows[rows.index(r):]]
             break
         total += r["follows"] - r["unfollows"]
         net_to[r["date"]] = total
@@ -341,8 +348,10 @@ def daily_rows(base, token, user, now, account):
     check = {"at": now.isoformat(timespec="seconds"), "followers_count": account.get("followers_count"),
              "net_follows_through": {"date": max(net_to), "net": total} if net_to else None,
              "counts_checked": n, "followers_before_first_day": [lo, hi] if n else None, "conflicts": bad,
-             "series": series_check(base, token, user, rows, today)}
-    check["ok"] = len(net_to) == len(rows) and n > 0 and not bad and not check["series"]["differences"]
+             "series": series_check(base, token, user, rows, today), "pending_days": pending}
+    unmeasured = [r["date"] for r in rows[len(net_to):]]
+    recent = all((today - dt.date.fromisoformat(d)).days <= PENDING_DAYS for d in unmeasured)
+    check["ok"] = recent and n > 0 and not bad and not check["series"]["differences"]
     return rows, check
 
 

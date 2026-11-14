@@ -221,7 +221,9 @@
     "detail": "followers 552; counts that do not fit the daily follows: [{'at': '2026-11-13T18:01:35+00:00', 'followers_count': 531, 'range': [64, 64], 'common_so_far': [51, 55]}, {'at': '2026-11-14T02:41:29+00:00', 'followers_count': 539, 'range': [72, 72], 'common_so_far': [51, 55]}]; differences from Instagram's daily series: []",
     "ref": "",
     "source": "Gece istatistik",
-    "status": "open",
-    "opened_at": "2026-11-14T16:48:15Z"
+    "status": "closed",
+    "opened_at": "2026-11-14T16:48:15Z",
+    "closed_at": "2026-11-14T19:44:06Z",
+    "resolution": "Sahte alarm: Instagram biten bir günün (13 Kasım) takip sayısını bir süre 0 gösteriyor, kontrol bunu gerçek sayı sanıyordu (S-016/S-018 de aynı sebep). Takipçi sayısında sorun yok. Düzeltme (sahibi onayladı, 14 Kas): insights.py son 2 gün içinde 0 görünen günü ve sonrasını 'henüz ölçülmedi' sayıyor, Instagram doldurunca kontrol ediyor; gerçek tutarsızlık ve 2 günden eski 0 yine alarm verir (gerçek verilerle denendi)."
   }
 ]
