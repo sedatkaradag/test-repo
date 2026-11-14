@@ -1,0 +1,50 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:12:86",
+  "verses": ["012086"],
+  "options": [
+   ["Maryam", "مريم"],
+   ["Hud", "هود"],
+   ["Yusuf", "يوسف"],
+   ["Al-Anbiya", "الأنبياء"]
+  ],
+  "answer": 2
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:109:6",
+  "verses": ["109006"],
+  "options": [
+   ["Al-Kafirun", "الكافرون"],
+   ["Al-Ikhlas", "الإخلاص"],
+   ["An-Nasr", "النصر"],
+   ["Al-Ma'un", "الماعون"]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:91:9-10",
+  "verses": ["091009", "091010"],
+  "options": [
+   ["Al-A'la", "الأعلى"],
+   ["Al-Layl", "الليل"],
+   ["Al-Balad", "البلد"],
+   ["Ash-Shams", "الشمس"]
+  ],
+  "answer": 3
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:14:7",
+  "verses": ["014007"],
+  "options": [
+   ["An-Nahl", "النحل"],
+   ["Ibrahim", "إبراهيم"],
+   ["Al-Hijr", "الحجر"],
+   ["Al-Isra", "الإسراء"]
+  ],
+  "answer": 1
+ }
+]
