@@ -1,0 +1,78 @@
+{
+"text": "Then why are the people turned, but not the dog?",
+"tokens": [
+{
+"text": "Then",
+"ws": " ",
+"start": 0.25,
+"end": 0.512
+},
+{
+"text": "why",
+"ws": " ",
+"start": 0.512,
+"end": 0.825
+},
+{
+"text": "are",
+"ws": " ",
+"start": 0.825,
+"end": 0.925
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.925,
+"end": 1.025
+},
+{
+"text": "people",
+"ws": " ",
+"start": 1.025,
+"end": 1.413
+},
+{
+"text": "turned",
+"ws": "",
+"start": 1.413,
+"end": 2.075
+},
+{
+"text": ",",
+"ws": " ",
+"start": 2.075,
+"end": 2.175
+},
+{
+"text": "but",
+"ws": " ",
+"start": 2.175,
+"end": 2.325
+},
+{
+"text": "not",
+"ws": " ",
+"start": 2.325,
+"end": 2.575
+},
+{
+"text": "the",
+"ws": " ",
+"start": 2.575,
+"end": 2.712
+},
+{
+"text": "dog",
+"ws": "",
+"start": 2.712,
+"end": 3.45
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.45,
+"end": 3.65
+}
+],
+"duration": 3.75
+}

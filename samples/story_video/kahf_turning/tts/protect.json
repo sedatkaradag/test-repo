@@ -1,0 +1,120 @@
+{
+"text": "The turning that protects people from tissue death, and the special posture that protects the dog's vessels.",
+"tokens": [
+{
+"text": "The",
+"ws": " ",
+"start": 0.25,
+"end": 0.362
+},
+{
+"text": "turning",
+"ws": " ",
+"start": 0.362,
+"end": 0.85
+},
+{
+"text": "that",
+"ws": " ",
+"start": 0.85,
+"end": 0.975
+},
+{
+"text": "protects",
+"ws": " ",
+"start": 0.975,
+"end": 1.5
+},
+{
+"text": "people",
+"ws": " ",
+"start": 1.5,
+"end": 1.9
+},
+{
+"text": "from",
+"ws": " ",
+"start": 1.9,
+"end": 2.112
+},
+{
+"text": "tissue",
+"ws": " ",
+"start": 2.112,
+"end": 2.587
+},
+{
+"text": "death",
+"ws": "",
+"start": 2.587,
+"end": 3.275
+},
+{
+"text": ",",
+"ws": " ",
+"start": 3.275,
+"end": 3.375
+},
+{
+"text": "and",
+"ws": " ",
+"start": 3.375,
+"end": 3.487
+},
+{
+"text": "the",
+"ws": " ",
+"start": 3.487,
+"end": 3.587
+},
+{
+"text": "special",
+"ws": " ",
+"start": 3.587,
+"end": 4.088
+},
+{
+"text": "posture",
+"ws": " ",
+"start": 4.088,
+"end": 4.9
+},
+{
+"text": "that",
+"ws": " ",
+"start": 4.9,
+"end": 5.075
+},
+{
+"text": "protects",
+"ws": " ",
+"start": 5.075,
+"end": 5.6
+},
+{
+"text": "the",
+"ws": " ",
+"start": 5.6,
+"end": 5.737
+},
+{
+"text": "dog's",
+"ws": " ",
+"start": 5.737,
+"end": 6.15
+},
+{
+"text": "vessels",
+"ws": "",
+"start": 6.15,
+"end": 7.05
+},
+{
+"text": ".",
+"ws": "",
+"start": 7.05,
+"end": 7.25
+}
+],
+"duration": 7.35
+}

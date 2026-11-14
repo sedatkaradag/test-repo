@@ -1,0 +1,192 @@
+{
+"text": "When a person lies still in the same position for a long time, the blood vessels caught between the weight of the bones and the surface beneath get blocked.",
+"tokens": [
+{
+"text": "When",
+"ws": " ",
+"start": 0.25,
+"end": 0.362
+},
+{
+"text": "a",
+"ws": " ",
+"start": 0.362,
+"end": 0.425
+},
+{
+"text": "person",
+"ws": " ",
+"start": 0.425,
+"end": 0.85
+},
+{
+"text": "lies",
+"ws": " ",
+"start": 0.85,
+"end": 1.225
+},
+{
+"text": "still",
+"ws": " ",
+"start": 1.225,
+"end": 1.913
+},
+{
+"text": "in",
+"ws": " ",
+"start": 1.913,
+"end": 2.013
+},
+{
+"text": "the",
+"ws": " ",
+"start": 2.013,
+"end": 2.112
+},
+{
+"text": "same",
+"ws": " ",
+"start": 2.112,
+"end": 2.45
+},
+{
+"text": "position",
+"ws": " ",
+"start": 2.45,
+"end": 2.975
+},
+{
+"text": "for",
+"ws": " ",
+"start": 2.975,
+"end": 3.1
+},
+{
+"text": "a",
+"ws": " ",
+"start": 3.1,
+"end": 3.2
+},
+{
+"text": "long",
+"ws": " ",
+"start": 3.2,
+"end": 3.513
+},
+{
+"text": "time",
+"ws": "",
+"start": 3.513,
+"end": 4.325
+},
+{
+"text": ",",
+"ws": " ",
+"start": 4.325,
+"end": 4.425
+},
+{
+"text": "the",
+"ws": " ",
+"start": 4.425,
+"end": 4.562
+},
+{
+"text": "blood",
+"ws": " ",
+"start": 4.562,
+"end": 4.85
+},
+{
+"text": "vessels",
+"ws": " ",
+"start": 4.85,
+"end": 5.362
+},
+{
+"text": "caught",
+"ws": " ",
+"start": 5.362,
+"end": 5.7
+},
+{
+"text": "between",
+"ws": " ",
+"start": 5.7,
+"end": 6.062
+},
+{
+"text": "the",
+"ws": " ",
+"start": 6.062,
+"end": 6.188
+},
+{
+"text": "weight",
+"ws": " ",
+"start": 6.188,
+"end": 6.487
+},
+{
+"text": "of",
+"ws": " ",
+"start": 6.487,
+"end": 6.562
+},
+{
+"text": "the",
+"ws": " ",
+"start": 6.562,
+"end": 6.688
+},
+{
+"text": "bones",
+"ws": " ",
+"start": 6.688,
+"end": 7.575
+},
+{
+"text": "and",
+"ws": " ",
+"start": 7.575,
+"end": 7.713
+},
+{
+"text": "the",
+"ws": " ",
+"start": 7.713,
+"end": 7.812
+},
+{
+"text": "surface",
+"ws": " ",
+"start": 7.812,
+"end": 8.35
+},
+{
+"text": "beneath",
+"ws": " ",
+"start": 8.35,
+"end": 8.812
+},
+{
+"text": "get",
+"ws": " ",
+"start": 8.812,
+"end": 9.062
+},
+{
+"text": "blocked",
+"ws": "",
+"start": 9.062,
+"end": 9.85
+},
+{
+"text": ".",
+"ws": "",
+"start": 9.85,
+"end": 10.05
+}
+],
+"duration": 10.15
+}

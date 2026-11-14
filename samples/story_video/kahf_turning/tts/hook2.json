@@ -1,0 +1,150 @@
+{
+"text": "This vital rule, used in intensive care today, was written word for word in Surah Al-Kahf, fourteen hundred years ago.",
+"tokens": [
+{
+"text": "This",
+"ws": " ",
+"start": 0.25,
+"end": 0.487
+},
+{
+"text": "vital",
+"ws": " ",
+"start": 0.487,
+"end": 0.912
+},
+{
+"text": "rule",
+"ws": "",
+"start": 0.912,
+"end": 1.375
+},
+{
+"text": ",",
+"ws": " ",
+"start": 1.375,
+"end": 1.488
+},
+{
+"text": "used",
+"ws": " ",
+"start": 1.488,
+"end": 1.875
+},
+{
+"text": "in",
+"ws": " ",
+"start": 1.875,
+"end": 2.0
+},
+{
+"text": "intensive",
+"ws": " ",
+"start": 2.0,
+"end": 2.638
+},
+{
+"text": "care",
+"ws": " ",
+"start": 2.638,
+"end": 2.925
+},
+{
+"text": "today",
+"ws": "",
+"start": 2.925,
+"end": 3.575
+},
+{
+"text": ",",
+"ws": " ",
+"start": 3.575,
+"end": 3.7
+},
+{
+"text": "was",
+"ws": " ",
+"start": 3.7,
+"end": 3.913
+},
+{
+"text": "written",
+"ws": " ",
+"start": 3.913,
+"end": 4.225
+},
+{
+"text": "word",
+"ws": " ",
+"start": 4.225,
+"end": 4.55
+},
+{
+"text": "for",
+"ws": " ",
+"start": 4.55,
+"end": 4.713
+},
+{
+"text": "word",
+"ws": " ",
+"start": 4.713,
+"end": 5.188
+},
+{
+"text": "in",
+"ws": " ",
+"start": 5.188,
+"end": 5.362
+},
+{
+"text": "Surah",
+"ws": " ",
+"start": 5.362,
+"end": 5.725
+},
+{
+"text": "Al-Kahf",
+"ws": "",
+"start": 5.725,
+"end": 6.65
+},
+{
+"text": ",",
+"ws": " ",
+"start": 6.65,
+"end": 6.763
+},
+{
+"text": "fourteen",
+"ws": " ",
+"start": 6.763,
+"end": 7.3
+},
+{
+"text": "hundred",
+"ws": " ",
+"start": 7.3,
+"end": 7.725
+},
+{
+"text": "years",
+"ws": " ",
+"start": 7.725,
+"end": 8.025
+},
+{
+"text": "ago",
+"ws": "",
+"start": 8.025,
+"end": 8.8
+},
+{
+"text": ".",
+"ws": "",
+"start": 8.8,
+"end": 9.0
+}
+],
+"duration": 9.1
+}

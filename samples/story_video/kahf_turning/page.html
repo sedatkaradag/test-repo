@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Poppins'; src: url('file://__HERE__/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Poppins'; src: url('file://__HERE__/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Poppins'; src: url('file://__HERE__/fonts/Poppins-MediumItalic.ttf'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Hafs'; src: url('file://__REPO__/assets/fonts/KFGQPC-UthmanicHafs-v18.ttf'); }
+@font-face { font-family: 'Marcellus'; src: url('file://__REPO__/assets/fonts/Marcellus-Regular.ttf'); }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #061013; }
+#stage { position: absolute; inset: 0; overflow: hidden; }
+svg#art { position: absolute; left: 0; top: 0; }
+.cap { position: absolute; left: 60px; right: 60px; text-align: center; font-family: Poppins; font-weight: 700; color: #eef3f5;
+       text-transform: uppercase; letter-spacing: 1px; line-height: 1.2; white-space: nowrap; opacity: 0; }
+.g { color: #f3c04f; } .r { color: #ff5d62; } .n { color: #4fd18b; }
+.tag { display: inline-block; font-size: 24px; letter-spacing: 2px; color: #f3c04f; border: 2px solid #f3c04f; border-radius: 30px; padding: 6px 22px; }
+.ar { font-family: Hafs; text-transform: none; letter-spacing: 0; direction: rtl; }
+.quote { font-family: Poppins; font-weight: 500; font-style: italic; text-transform: none; letter-spacing: 0; }
+#card { position: absolute; left: 70px; right: 70px; top: 300px; height: 1000px; border: 3px solid #b98a3a; border-radius: 22px;
+        background: linear-gradient(#170f08, #110b06); opacity: 0; box-shadow: 0 0 60px rgba(0,0,0,.5); }
+#card .pill { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); background: #f3c04f; color: #1b1205; font: 700 22px Poppins;
+              letter-spacing: 2px; padding: 6px 20px; border-radius: 20px; white-space: nowrap; }
+#cardAr { position: absolute; left: 50px; right: 50px; top: 60px; font-family: Hafs; font-size: 72px; line-height: 1.7; direction: rtl;
+          text-align: center; color: #fff; }
+#cardAr span { transition: none; }
+#cardLine { position: absolute; left: 90px; right: 90px; top: 560px; height: 2px; background: rgba(185,138,58,.45); }
+#cardEn { position: absolute; left: 56px; right: 56px; top: 600px; font: italic 500 41px/1.42 Poppins; color: #f4efe6; text-align: center; }
+#logoBox { position: absolute; left: 0; right: 0; top: 540px; text-align: center; opacity: 0; }
+#logoBox .frame { width: 560px; height: 360px; overflow: hidden; margin: 0 auto; position: relative; }
+#logoBox img { position: absolute; left: 0; top: -104px; width: 560px; visibility: hidden; }
+</style></head>
+<body><div id="stage">
+<svg id="art" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <radialGradient id="bgG" cx="50%" cy="42%" r="75%"><stop offset="0" stop-color="#12272c"/><stop offset=".55" stop-color="#0a181c"/><stop offset="1" stop-color="#040a0c"/></radialGradient>
+    <radialGradient id="necro" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2a0306" stop-opacity=".95"/><stop offset=".55" stop-color="#4a070d" stop-opacity=".75"/><stop offset="1" stop-color="#4a070d" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f3c04f" stop-opacity=".55"/><stop offset="1" stop-color="#f3c04f" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowN" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#4fd18b" stop-opacity=".5"/><stop offset="1" stop-color="#4fd18b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="spotG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff4b52" stop-opacity=".95"/><stop offset=".5" stop-color="#e0303a" stop-opacity=".8"/><stop offset="1" stop-color="#e0303a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fadeX" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".15" stop-color="#fff"/><stop offset=".85" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <mask id="ecgMask"><rect x="0" y="0" width="1080" height="1920" fill="url(#fadeX)"/></mask>
+    <clipPath id="tissueClip"><rect x="-380" y="-150" width="760" height="300" rx="18"/></clipPath>
+    <g id="bodyFront">
+      <rect x="-72" y="-300" width="144" height="58" rx="20" fill="#c9dbe8" opacity=".28"/>
+      <rect x="-14" y="-216" width="28" height="30" fill="#b3cde4"/>
+      <rect x="-100" y="-186" width="32" height="222" rx="16" fill="#a9c5de"/>
+      <rect x="68" y="-186" width="32" height="222" rx="16" fill="#a9c5de"/>
+      <circle cx="-84" cy="40" r="17" fill="#a9c5de"/><circle cx="84" cy="40" r="17" fill="#a9c5de"/>
+      <rect x="-62" y="8" width="56" height="236" rx="26" fill="#a9c5de"/>
+      <rect x="6" y="8" width="56" height="236" rx="26" fill="#a9c5de"/>
+      <rect x="-74" y="-198" width="148" height="222" rx="44" fill="#bad3e9"/>
+      <ellipse cx="-34" cy="250" rx="27" ry="17" fill="#9fbcd6"/><ellipse cx="34" cy="250" rx="27" ry="17" fill="#9fbcd6"/>
+      <circle cx="0" cy="-250" r="44" fill="#bad3e9"/>
+      <path d="M-44,-252 A44,44 0 0 1 44,-252 Q0,-236 -44,-252 Z" fill="#363b46"/>
+    </g>
+    <g id="bodySide">
+      <rect x="-72" y="-300" width="144" height="58" rx="20" fill="#c9dbe8" opacity=".28"/>
+      <rect x="-12" y="-214" width="26" height="30" fill="#b3cde4"/>
+      <rect x="-40" y="10" width="54" height="236" rx="26" fill="#9fbcd6"/>
+      <rect x="-52" y="-198" width="104" height="224" rx="44" fill="#bad3e9"/>
+      <rect x="-6" y="0" width="56" height="140" rx="26" fill="#b0cbe3" transform="rotate(-10 22 10)"/>
+      <rect x="18" y="120" width="50" height="128" rx="24" fill="#b0cbe3" transform="rotate(8 40 124)"/>
+      <ellipse cx="-14" cy="252" rx="24" ry="16" fill="#93b2cd"/><ellipse cx="54" cy="252" rx="22" ry="15" fill="#a3bfd8"/>
+      <rect x="16" y="-176" width="30" height="196" rx="15" fill="#a2bfd9"/>
+      <circle cx="30" cy="26" r="16" fill="#a2bfd9"/>
+      <circle cx="0" cy="-250" r="42" fill="#bad3e9"/>
+      <path d="M0,-292 A42,42 0 0 0 0,-208 Q-12,-250 0,-292 Z" fill="#363b46"/>
+    </g>
+    <g id="dog">
+      <path d="M38 196 C 14 196 6 188 0 176" stroke="#b97e43" stroke-width="13" fill="none" stroke-linecap="round"/>
+      <rect x="250" y="182" width="128" height="18" rx="9" fill="#b97e43"/>
+      <path d="M44 200 C 30 170 50 132 104 126 L 236 120 C 276 118 300 138 302 168 L 302 200 Z" fill="#d39a5b"/>
+      <ellipse cx="92" cy="168" rx="58" ry="34" fill="#c98f51"/>
+      <rect x="90" y="186" width="74" height="15" rx="7" fill="#c08648"/>
+      <path d="M236 182 C 230 124 252 84 300 70 L 336 82 C 340 124 326 162 304 196 Z" fill="#d39a5b"/>
+      <rect x="262" y="186" width="132" height="16" rx="8" fill="#d8a165"/>
+      <circle cx="324" cy="64" r="38" fill="#d8a165"/>
+      <rect x="338" y="58" width="56" height="32" rx="15" fill="#d8a165"/>
+      <circle cx="392" cy="66" r="7" fill="#3b2a20"/>
+      <circle cx="334" cy="54" r="4.5" fill="#2b1d16"/>
+      <path d="M298 42 C 284 56 282 96 298 108 C 312 96 318 66 312 44 Z" fill="#a8723c"/>
+    </g>
+    <g id="cave">
+      <path d="M-180,130 L-180,-10 C-180,-140 -96,-196 0,-196 C96,-196 180,-140 180,-10 L180,130 Z" fill="#7b6655"/>
+      <path d="M-180,130 L-180,-10 C-180,-60 -166,-100 -140,-128 L-120,-60 L-130,130 Z" fill="#6c5949"/>
+      <path d="M-118,130 L-118,6 C-118,-82 -64,-124 0,-124 C64,-124 118,-82 118,6 L118,130 Z" fill="#0c0a0f"/>
+      <ellipse cx="-62" cy="104" rx="36" ry="14" fill="#4b4562"/><ellipse cx="2" cy="108" rx="36" ry="14" fill="#4b4562"/><ellipse cx="64" cy="104" rx="36" ry="14" fill="#4b4562"/>
+    </g>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bgG)"/>
+  <g id="pattern" opacity=".07"></g>
+  <g id="world"></g>
+</svg>
+<div id="caps"></div>
+<div id="card"><div class="pill">AL-KAHF · 18</div><div id="cardAr"></div><div id="cardLine"></div><div id="cardEn"></div></div>
+<div id="logoBox"><div class="frame" id="logoFrame"></div>
+  <div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:44px;margin-top:40px">THE HALAL ALGORITHM</div>
+  <div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:34px;margin-top:44px;border:2px solid #e8c66a;display:inline-block;padding:14px 38px;border-radius:40px">+ FOLLOW</div></div>
+</div>
+<script>
+const D = __DATA__;
+const C = D.cues, $ = id => document.getElementById(id), NS = "http://www.w3.org/2000/svg";
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const ramp = (t, t0, d = .35) => ease((t - t0) / d);
+function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+
+// ---------- background pattern (faint curls) ----------
+(function () { let s = 7; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280; const g = $("pattern");
+  for (let i = 0; i < 70; i++) { const x = rnd() * 1080, y = rnd() * 1920, r = 14 + rnd() * 16, a = rnd() * 360;
+    el("path", { d: `M${-r},0 A${r},${r} 0 0 1 ${r},0`, transform: `translate(${x},${y}) rotate(${a})`, stroke: "#9fd3d0", "stroke-width": 3, fill: "none", "stroke-linecap": "round" }, g); } })();
+
+// ---------- scenes ----------
+const SC = [["hook", C.s_hook], ["icu", C.s_icu], ["surah", C.s_surah], ["card", C.s_card], ["notice", C.s_notice], ["why", C.s_why],
+  ["med", C.s_med], ["tissue", C.s_tissue], ["rule", C.s_rule], ["detail", C.s_detail], ["whydog", C.s_whydog], ["sphinx", C.s_sphinx],
+  ["nosore", C.s_nosore], ["protect", C.s_protect], ["logo", C.s_logo]];
+const scene = {};
+SC.forEach(([k, t0], i) => { scene[k] = { t0, t1: i + 1 < SC.length ? SC[i + 1][1] : D.end + 5 }; });
+function vis(k, t) { const s = scene[k]; return ramp(t, s.t0, .35) * (1 - ramp(t, s.t1 - .3, .3)); }
+const world = $("world"), G = {};
+for (const [k] of SC) G[k] = el("g", { id: "g_" + k }, world);
+
+// captions: [scene, cue time, y, html, size, until]
+const CAPS = [
+  ["hook", C.h_l1, 300, "A person lying still", 46], ["hook", C.h_l2, 362, "if you don't turn them <span class=g>right and left</span>", 46],
+  ["hook", C.h_l3, 1190, "their body breaks down", 42], ["hook", C.h_l3 + .5, 1246, "under its own weight", 42],
+  ["icu", C.i_l2, 300, "a <span class=g>vital rule</span>", 50], ["icu", C.i_l1, 368, "used in intensive care today", 42],
+  ["icu", C.i_l3, 1250, "1400 years ago in Surah Al-Kahf", 40], ["icu", C.i_l4, 1314, "<span class=g>word for word</span>", 56],
+  ["surah", C.su_en, 760, "Surah Al-Kahf", 72], ["surah", C.su_v, 850, "<span class=g>Verse 18</span>", 52],
+  ["surah", C.su_cap, 1320, "<span style='color:#e9d3a8'>The young men asleep in the cave</span>", 34],
+  ["notice", C.n_title, 300, "Notice the detail in this verse", 40],
+  ["why", C.w_l1, 300, "In a story about people asleep", 42], ["why", C.w_l2, 362, "why stress <span class=g>right and left</span>", 46],
+  ["why", C.w_l3, 424, "<span style='color:#9fb0b6'>so clearly?</span>", 40],
+  ["med", C.m_tag, 300, "<span class=tag>Modern medicine · Intensive care</span>", 30], ["med", C.m_l1, 1220, "This sentence", 42],
+  ["med", C.m_l2, 1284, "<span class=g>is vital</span>", 64],
+  ["tissue", C.t_l2, 300, "lying still", 46], ["tissue", C.t_l1, 362, "in the same position for a long time", 38],
+  ["tissue", C.t_l3, 1080, "vessels <span class=r>blocked</span>", 46, C.t_dead - .2], ["tissue", C.t_oxy, 1144, "<span class=r>no oxygen</span> reaches the tissue", 38, C.t_dead - .2],
+  ["tissue", C.t_dead, 1080, "<span style='color:#d9a3a6'>tissue death · clotting</span>", 34], ["tissue", C.t_ulcer, 1140, "<span class=r>decubitus ulcer</span>", 58],
+  ["tissue", C.t_bedsore, 1216, "“bedsore”", 44],
+  ["rule", C.r_l0, 300, "In intensive care", 40], ["rule", C.r_l2, 356, "<span class=g>the most basic rule</span>", 48], ["rule", C.r_l1, 418, "for keeping an unconscious patient alive", 34],
+  ["rule", C.r_l3, 1210, "at regular intervals", 40], ["rule", C.r_l4, 1270, "turn them <span class=g>right and left</span>", 50],
+  ["detail", C.d_title, 300, "One more detail", 48],
+  ["whydog", C.wd_l1, 300, "Why are the people turned", 46], ["whydog", C.wd_l2, 362, "but not the <span class=g>dog?</span>", 50],
+  ["sphinx", C.sp_tag, 300, "<span class=tag>Veterinary anatomy</span>", 30], ["sphinx", C.sp_l1, 380, "resting on its chest", 44],
+  ["sphinx", C.sp_l2, 1010, "<span class=g>“the sphinx position”</span>", 52], ["sphinx", C.sp_l3, 1090, "weight spreads <span class=g>evenly</span> across the chest", 34],
+  ["sphinx", C.sp_l4, 1146, "vessels <span class=n>not squeezed</span>", 40],
+  ["nosore", C.ns_l1, 300, "In this special position", 44], ["nosore", C.ns_l2, 1110, "<span class=n>no bedsores</span>", 64],
+  ["protect", C.p_l1, 300, "The turn that protects <span class=g>people</span>", 42], ["protect", C.p_l2, 362, "the posture that protects <span class=g>the dog</span>", 42],
+];
+const capEls = CAPS.map(([k, at, y, html, size, until]) => { const d = document.createElement("div"); d.className = "cap"; d.style.top = y + "px";
+  d.style.fontSize = size + "px"; d.innerHTML = html; $("caps").appendChild(d); return { k, at, y, d, until }; });
+
+// small labels with their own x
+function label(k, at, x, y, html, size, until) { const d = document.createElement("div"); d.className = "cap"; d.style.left = (x - 300) + "px";
+  d.style.right = "auto"; d.style.width = "600px"; d.style.top = y + "px"; d.style.fontSize = size + "px"; d.innerHTML = html; $("caps").appendChild(d);
+  capEls.push({ k, at, y, d, until }); }
+label("detail", C.d_lab, 300, 1010, "the young men: <span class=g>turned</span>", 30);
+label("detail", C.d_lab2, 760, 1010, "the dog: <span class=r>not turned</span>", 30);
+
+// Arabic phrase blocks (verse words from the database, by position)
+function arBlock(k, idx, y, size, at) { const d = document.createElement("div"); d.className = "cap ar"; d.style.top = y + "px"; d.style.fontSize = size + "px";
+  d.style.whiteSpace = "normal"; d.style.lineHeight = "1.6"; d.innerHTML = idx.map(i => `<span>${D.ar[i]}</span>`).join(" "); $("caps").appendChild(d);
+  const o = { k, at, y, d, ar: true, spans: [...d.querySelectorAll("span")] }; capEls.push(o); return o; }
+const nAr = arBlock("notice", D.turn_ar, 390, 92, C.n_ar);
+const dAr = arBlock("detail", D.dog_ar, 1070, 84, C.d_ar);
+const pAr = arBlock("protect", D.turn_ar, 1080, 86, C.p_ar);
+function quote(k, at, y, html, size) { const d = document.createElement("div"); d.className = "cap quote"; d.style.top = y + "px"; d.style.fontSize = size + "px";
+  d.style.whiteSpace = "normal"; d.innerHTML = html; $("caps").appendChild(d); capEls.push({ k, at, y, d }); }
+const goldify = s => s.replace(/\b(right|left|turned)\b/g, "<span class=g>$1</span>");
+quote("notice", C.n_en, 1250, "“" + goldify(D.turn_en) + "”", 44);
+quote("detail", C.d_en, 1190, "“" + D.dog_en.replace("forelegs", "<span class=g>forelegs</span>") + "”", 40);
+quote("protect", C.p_en, 1300, "“" + goldify(D.turn_en) + "”", 40);
+const qmarks = [["why", C.w_q, 1170], ["whydog", C.wd_q, 1130]].map(([k, at, y]) => { const d = document.createElement("div"); d.className = "cap g";
+  d.style.top = y + "px"; d.style.fontSize = "150px"; d.textContent = "?"; $("caps").appendChild(d); const o = { k, at, y, d }; capEls.push(o); return o; });
+
+// ---------- art builders ----------
+function bed(parent) { return el("rect", { x: -112, y: -318, width: 224, height: 610, rx: 16, fill: "rgba(120,175,195,.14)", stroke: "rgba(150,205,220,.55)", "stroke-width": 4 }, parent); }
+function makePerson(parent, x, y, s) {
+  const g = el("g", { transform: `translate(${x},${y}) scale(${s})` }, parent);
+  bed(g);
+  const front = el("use", { href: "#bodyFront" }, g), side = el("use", { href: "#bodySide" }, g);
+  const spots = el("g", {}, g);
+  [[0, -250, 20], [-46, -158, 22], [46, -158, 22], [-84, -40, 16], [84, -40, 16], [0, 4, 26], [-34, 250, 16], [34, 250, 16]].forEach(([cx, cy, r]) =>
+    el("circle", { cx, cy, r: r * 1.6, fill: "url(#spotG)" }, spots));
+  const arrows = el("g", {}, g);
+  const a1 = el("path", { fill: "none", stroke: "#f3c04f", "stroke-width": 9, "stroke-linecap": "round" }, arrows),
+        a2 = el("path", { fill: "none", stroke: "#f3c04f", "stroke-width": 9, "stroke-linecap": "round" }, arrows),
+        h1 = el("path", { fill: "#f3c04f" }, arrows), h2 = el("path", { fill: "#f3c04f" }, arrows);
+  const xg = el("g", { opacity: 0 }, g);
+  el("path", { d: "M-70,-200 L70,-40 M70,-200 L-70,-40", stroke: "#ff4b52", "stroke-width": 16, "stroke-linecap": "round" }, xg);
+  return { g, front, side, spots, arrows, a1, a2, h1, h2, xg,
+    pose(p) { const a = Math.abs(p), f = clamp((.5 - a) * 8 + .5), sq = 1 - .22 * Math.sin(Math.PI * clamp(a / .9));
+      front.setAttribute("opacity", f); side.setAttribute("opacity", 1 - f);
+      side.setAttribute("transform", `scale(${(p < 0 ? -1 : 1) * sq},1)`); front.setAttribute("transform", `scale(${sq},1)`); },
+    arrowsAt(ang, on) { arrows.setAttribute("opacity", on); const R = 150, cy = -110;
+      const arc = (a0, a1) => { const p0 = [Math.cos(a0) * R, cy + Math.sin(a0) * R], p1 = [Math.cos(a1) * R, cy + Math.sin(a1) * R]; return [`M${p0[0]},${p0[1]} A${R},${R} 0 0 1 ${p1[0]},${p1[1]}`, p1, a1]; };
+      const head = ([x, y], a) => { const tx = -Math.sin(a), ty = Math.cos(a), nx = Math.cos(a), ny = Math.sin(a);
+        return `M${x + tx * 30},${y + ty * 30} L${x + nx * 20 - tx * 6},${y + ny * 20 - ty * 6} L${x - nx * 20 - tx * 6},${y - ny * 20 - ty * 6} Z`; };
+      const [d1, e1, b1] = arc(ang, ang + 1.6), [d2, e2, b2] = arc(ang + Math.PI, ang + Math.PI + 1.6);
+      a1.setAttribute("d", d1); a2.setAttribute("d", d2); h1.setAttribute("d", head(e1, b1)); h2.setAttribute("d", head(e2, b2)); },
+    spotsAt(o, t) { spots.setAttribute("opacity", o * (.75 + .25 * Math.sin(t * 6))); } };
+}
+function makeEcg(parent, y, w = 1080) {
+  const g = el("g", { mask: "url(#ecgMask)" }, parent); const inner = el("g", {}, g); const P = 230; let d = `M${-P},${y}`;
+  for (let x = -P; x < w + 2 * P; x += P) d += ` L${x + 80},${y} l12,-12 l12,12 l18,0 l10,26 l14,-92 l14,108 l10,-42 l18,0 l16,-16 l16,16 L${x + P},${y}`;
+  el("path", { d, fill: "none", stroke: "#46c98b", "stroke-width": 4, "stroke-linejoin": "round", opacity: .9 }, inner);
+  return t => inner.setAttribute("transform", `translate(${-((t * 150) % P)},0)`);
+}
+function makeDog(parent, x, y, s) { const g = el("g", { transform: `translate(${x},${y}) scale(${s}) translate(-200,-200)` }, parent);
+  const glow = el("ellipse", { cx: 230, cy: 160, rx: 210, ry: 110, fill: "url(#glowN)", opacity: 0 }, g);
+  const chest = el("ellipse", { cx: 250, cy: 160, rx: 90, ry: 70, fill: "url(#glowG)", opacity: 0 }, g);
+  el("use", { href: "#dog" }, g); return { g, glow, chest }; }
+function clock(parent, x, y) { const g = el("g", { transform: `translate(${x},${y})` }, parent);
+  el("circle", { r: 48, fill: "none", stroke: "#e9eef0", "stroke-width": 5 }, g);
+  for (let i = 0; i < 12; i++) el("line", { x1: 0, y1: -40, x2: 0, y2: -34, stroke: "#e9eef0", "stroke-width": 3, transform: `rotate(${i * 30})` }, g);
+  const hh = el("line", { x1: 0, y1: 0, x2: 0, y2: -22, stroke: "#e9eef0", "stroke-width": 5, "stroke-linecap": "round" }, g);
+  const mh = el("line", { x1: 0, y1: 0, x2: 0, y2: -34, stroke: "#f3c04f", "stroke-width": 4, "stroke-linecap": "round" }, g);
+  return { g, set(t) { hh.setAttribute("transform", `rotate(${t * 40})`); mh.setAttribute("transform", `rotate(${t * 480})`); } }; }
+
+// hook / icu / med / rule / detail / whydog / protect people
+const P = {
+  hook: makePerson(G.hook, 540, 800, 1.0), icu: makePerson(G.icu, 540, 760, .95), notice: makePerson(G.notice, 540, 860, .78),
+  med: makePerson(G.med, 540, 780, .9), rule: makePerson(G.rule, 540, 790, .95), detail: makePerson(G.detail, 300, 700, .62),
+  whydog: makePerson(G.whydog, 300, 760, .62), protect: makePerson(G.protect, 300, 720, .62),
+};
+const ecgIcu = makeEcg(G.icu, 1140), ecgMed = makeEcg(G.med, 1130);
+const caves = { surah: el("use", { href: "#cave", transform: "translate(540,1150) scale(1.1)" }, G.surah), why: el("use", { href: "#cave", transform: "translate(540,860) scale(1.25)" }, G.why) };
+const surahAr = document.createElement("div"); surahAr.className = "cap ar g"; surahAr.style.top = "560px"; surahAr.style.fontSize = "120px"; surahAr.textContent = "سُورَةُ الكَهۡفِ";
+$("caps").appendChild(surahAr); capEls.push({ k: "surah", at: C.su_ar, y: 560, d: surahAr });
+const clk = clock(G.rule, 860, 560);
+const dogs = { detail: makeDog(G.detail, 780, 780, .72), whydog: makeDog(G.whydog, 780, 820, .72), sphinx: makeDog(G.sphinx, 540, 860, 1.9),
+  nosore: makeDog(G.nosore, 540, 900, 1.5), protect: makeDog(G.protect, 780, 790, .72) };
+const dogX = el("path", { d: "M720,600 L800,680 M800,600 L720,680", stroke: "#ff4b52", "stroke-width": 14, "stroke-linecap": "round", opacity: 0 }, G.detail);
+const ground = el("line", { x1: 120, y1: 860, x2: 960, y2: 860, stroke: "rgba(220,230,235,.35)", "stroke-width": 3 }, G.sphinx);
+const legArrow = el("path", { d: "M900,846 L960,846 M944,834 L962,846 L944,858", stroke: "#f3c04f", "stroke-width": 6, fill: "none", "stroke-linecap": "round", opacity: 0 }, G.sphinx);
+const downArrows = el("g", { opacity: 0 }, G.sphinx);
+for (let i = 0; i < 6; i++) { const x = 520 + i * 52; el("path", { d: `M${x},${790} L${x},${830} M${x - 9},${819} L${x},${832} L${x + 9},${819}`, stroke: "#f3c04f", "stroke-width": 5, fill: "none", "stroke-linecap": "round" }, downArrows); }
+
+// tissue
+const TG = el("g", { transform: "translate(540,740)" }, G.tissue);
+el("rect", { x: -392, y: 150, width: 784, height: 20, rx: 6, fill: "#7d8794" }, TG);
+const tisG = el("g", { "clip-path": "url(#tissueClip)" }, TG);
+el("rect", { x: -380, y: -150, width: 760, height: 300, fill: "#e38e97" }, tisG);
+(function () { let s = 3; const r = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < 46; i++) el("circle", { cx: -370 + r() * 740, cy: -140 + r() * 280, r: 3 + r() * 3, fill: "#b9a6e6", opacity: .7 }, tisG); })();
+const necro = el("ellipse", { cx: 0, cy: 20, rx: 10, ry: 10, fill: "url(#necro)", opacity: 0 }, tisG);
+const vessel = el("path", { fill: "#c51f2e" }, tisG);
+const cellsG = el("g", {}, tisG); const cells = []; for (let i = 0; i < 28; i++) cells.push(el("ellipse", { rx: 10, ry: 6, fill: "#ff8f95" }, cellsG));
+const bone = el("g", {}, TG); el("rect", { x: -170, y: -128, width: 340, height: 70, rx: 35, fill: "#f3e6cf" }, bone);
+const boneT = el("text", { x: 0, y: -84, "text-anchor": "middle", "font-family": "Poppins", "font-weight": 700, "font-size": 26, fill: "#8b6d4a", "letter-spacing": 2 }, bone); boneT.textContent = "BONE";
+const floorT = el("text", { x: 0, y: 206, "text-anchor": "middle", "font-family": "Poppins", "font-weight": 700, "font-size": 24, fill: "#a7b1bb", "letter-spacing": 3, opacity: 0 }, TG); floorT.textContent = "SURFACE";
+const press = el("g", { opacity: 0 }, TG);
+for (const x of [-110, 0, 110]) el("path", { d: `M${x},-236 L${x},-180 M${x - 12},-194 L${x},-178 L${x + 12},-194`, stroke: "#f3c04f", "stroke-width": 6, fill: "none", "stroke-linecap": "round" }, press);
+function tissueAt(t) {
+  const k = .9 * ramp(t, C.t_press, Math.max(.6, C.t_block - C.t_press));
+  const h = x => 24 * (1 - k * Math.exp(-((x / 120) ** 2)));
+  let top = "", bot = ""; for (let x = -390; x <= 390; x += 10) { top += `${x === -390 ? "M" : "L"}${x},${20 - h(x)} `; bot = `L${x},${20 + h(x)} ` + bot; }
+  vessel.setAttribute("d", top + bot + "Z");
+  // cells: integrate speed so they slow and stop at the narrowing
+  const t0 = scene.tissue.t0; let pos = 0; for (let u = t0; u < t; u += .05) pos += .05 * 150 * (1 - ramp(u, C.t_press, Math.max(.6, C.t_block - C.t_press)) * .97);
+  cells.forEach((c, i) => { let x = -390 + ((i * 29 + pos) % 780); if (k > .5 && x > -60 && x < 120) x = -60 - (i % 5) * 18; const hh = h(x);
+    c.setAttribute("cx", x); c.setAttribute("cy", 20 + ((i % 3) - 1) * hh * .45); c.setAttribute("ry", Math.max(2, Math.min(6, hh * .3))); });
+  bone.setAttribute("transform", `translate(0,${8 * ramp(t, C.t_press, .8)})`); bone.setAttribute("opacity", ramp(t, C.t_bone, .4) * .4 + .6);
+  floorT.setAttribute("opacity", ramp(t, C.t_floor, .4)); press.setAttribute("opacity", ramp(t, C.t_press, .4));
+  press.setAttribute("transform", `translate(0,${6 * Math.sin(t * 7)})`);
+  const n = ramp(t, C.t_dead, 2.2); necro.setAttribute("rx", 40 + 210 * n); necro.setAttribute("ry", 30 + 110 * n); necro.setAttribute("opacity", n);
+}
+
+// verse card
+const cardAr = $("cardAr"), cardEn = $("cardEn");
+const arSp = D.card.ar.map(o => { const sp = document.createElement("span"); sp.textContent = D.ar[o.i]; cardAr.appendChild(sp); cardAr.appendChild(document.createTextNode(" ")); return { ...o, sp }; });
+const enSp = D.card.en.map((o, i) => { if (i && !/^[,.;:!?]/.test(o.w)) cardEn.appendChild(document.createTextNode(" ")); const sp = document.createElement("span"); sp.textContent = o.w;
+  if (D.card.gold.includes(o.w.toLowerCase())) sp.style.color = "#f3c04f"; cardEn.appendChild(sp); return { ...o, sp }; });
+cardEn.insertBefore(document.createTextNode("“"), cardEn.firstChild); cardEn.appendChild(document.createTextNode("”"));
+
+// logo frames
+const logoImgs = D.logo_frames.map(p => { const i = document.createElement("img"); i.src = "file://" + p; $("logoFrame").appendChild(i); return i; });
+
+// lit words by recitation
+function litWords(o, sid, t) { const W = D.words[sid]; o.spans.forEach((s, i) => { const w = W[i]; let c = "rgba(243,192,79,.28)", sh = "none";
+  if (t >= w.s) { c = "#f3c04f"; } if (t >= w.s && t < w.e + .15) { c = "#fff3cf"; sh = "0 0 26px rgba(243,192,79,.9), 0 0 8px rgba(243,192,79,.9)"; }
+  s.style.color = c; s.style.textShadow = sh; }); }
+
+// ---------- render ----------
+function render(t) {
+  for (const [k] of SC) G[k].setAttribute("opacity", vis(k, t));
+  for (const c of capEls) { let o = vis(c.k, t) * ramp(t, c.at, .3); if (c.until) o *= 1 - ramp(t, c.until, .3);
+    c.d.style.opacity = o; c.d.style.transform = `translateY(${18 * (1 - ramp(t, c.at, .35))}px)`; }
+  // hook
+  { const p = P.hook; const tw = ramp(t, C.h_l2, .6) * (1 - ramp(t, C.h_x, .3)); p.pose(.0); p.arrowsAt(t * 2.2, tw);
+    p.xg.setAttribute("opacity", ramp(t, C.h_x, .25) * (1 - ramp(t, C.h_spots + .3, .4))); p.spotsAt(ramp(t, C.h_spots, .6), t); }
+  // icu: patient turning slowly on the monitor
+  { const p = P.icu; const ph = (t - C.i_turn); p.pose(ph > 0 ? Math.sin(ph * 1.3) * ramp(t, C.i_turn, .6) : 0); p.arrowsAt(0, 0); p.spotsAt(0, t); ecgIcu(t); }
+  // card
+  { const o = vis("card", t); $("card").style.opacity = o; $("card").style.transform = `scale(${.96 + .04 * ramp(t, scene.card.t0, .5)})`;
+    arSp.forEach(a => { a.sp.style.opacity = ramp(t, a.t, .35); a.sp.style.color = a.gold ? "#f3c04f" : "#ffffff"; });
+    enSp.forEach(e => { e.sp.style.opacity = ramp(t, e.s - .05, .15); }); }
+  // notice: rotating patient + lit phrase
+  { const p = P.notice; const a = ramp(t, C.n_body, .5); p.pose(Math.sin((t - C.n_body) * 1.6) * a); p.arrowsAt(t * 2.4, a); p.spotsAt(0, t); litWords(nAr, "REC1", t); }
+  // med
+  { const p = P.med; p.pose(0); p.arrowsAt(0, 0); p.spotsAt(0, t); ecgMed(t); }
+  // tissue
+  tissueAt(Math.max(t, scene.tissue.t0));
+  // rule
+  { const p = P.rule; const a = ramp(t, C.r_turn, .5); p.pose(Math.sin((t - C.r_turn) * 1.5) * a); p.arrowsAt(t * 2.4, a);
+    p.spotsAt(ramp(t, C.r_body, .5) * (1 - ramp(t, C.r_turn + .8, 1.2)), t); clk.g.setAttribute("opacity", ramp(t, C.r_clock, .4)); clk.set(t); }
+  // detail
+  { const p = P.detail; const a = ramp(t, C.d_body, .5); p.pose(Math.sin((t - C.d_body) * 1.6) * a); p.arrowsAt(t * 2.4, a); p.spotsAt(0, t);
+    p.g.setAttribute("opacity", ramp(t, C.d_body - .4, .4)); dogs.detail.g.setAttribute("opacity", ramp(t, C.d_dog, .5));
+    dogX.setAttribute("opacity", ramp(t, C.d_x, .25)); for (const s of dAr.spans) { s.style.color = "#f3c04f"; } }
+  // whydog
+  { const p = P.whydog; p.pose(Math.sin((t - scene.whydog.t0) * 1.6)); p.arrowsAt(t * 2.4, 1); p.spotsAt(0, t); }
+  // sphinx
+  { const d = dogs.sphinx; d.chest.setAttribute("opacity", ramp(t, C.sp_l1, .6) * (.7 + .3 * Math.sin(t * 4)));
+    legArrow.setAttribute("opacity", ramp(t, C.sp_legs, .3)); legArrow.setAttribute("transform", `translate(${8 * Math.sin(t * 6)},0)`);
+    downArrows.setAttribute("opacity", ramp(t, C.sp_arrows, .4)); downArrows.setAttribute("transform", `translate(0,${5 * Math.sin(t * 6)})`); }
+  // nosore
+  dogs.nosore.glow.setAttribute("opacity", ramp(t, C.ns_l2, .6) * (.8 + .2 * Math.sin(t * 3)));
+  // protect
+  { const p = P.protect; p.pose(Math.sin((t - scene.protect.t0) * 1.4)); p.arrowsAt(t * 2.2, 1); p.spotsAt(0, t);
+    dogs.protect.g.setAttribute("opacity", ramp(t, C.p_dog, .5)); dogs.protect.glow.setAttribute("opacity", .6 * ramp(t, C.p_dog + .4, .6)); litWords(pAr, "REC2", t); }
+  // logo
+  { $("logoBox").style.opacity = vis("logo", t); const f = clamp(Math.floor((t - C.logo_draw) * 30), 0, logoImgs.length - 1);
+    logoImgs.forEach((im, i) => im.style.visibility = i === f ? "visible" : "hidden"); }
+}
+window.render = render;
+window.ready = Promise.all([document.fonts.ready, ...logoImgs.map(i => i.decode().catch(() => 0))]).then(() => { render(0); return true; });
+</script></body></html>

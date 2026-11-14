@@ -1,0 +1,48 @@
+{
+"text": "So the dog is not turned.",
+"tokens": [
+{
+"text": "So",
+"ws": " ",
+"start": 0.25,
+"end": 0.425
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.425,
+"end": 0.562
+},
+{
+"text": "dog",
+"ws": " ",
+"start": 0.562,
+"end": 1.15
+},
+{
+"text": "is",
+"ws": " ",
+"start": 1.15,
+"end": 1.363
+},
+{
+"text": "not",
+"ws": " ",
+"start": 1.363,
+"end": 1.663
+},
+{
+"text": "turned",
+"ws": "",
+"start": 1.663,
+"end": 2.55
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.55,
+"end": 2.75
+}
+],
+"duration": 2.85
+}

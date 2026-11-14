@@ -180,3 +180,18 @@ Sahibinin isteği: okunan kelime en parlak (ışıltılı), okunmuşlar altın, 
   aralığı boşluğa hizala; tekrar eden kelimelerin süreleri ilk okumayla örtüşmeli). Bağımsız doğrulayıcıya `map` ve
   `events`'i kontrol ettir.
 - Render ~1,5 dk (32 sn video).
+
+## Format: ayet + tıp anlatısı animasyonu, İngilizce TTS (14 Kas) — `samples/story_video/kahf_turning/`
+
+Sahibinin referansı: @ashabisuffetv Kehf 18:18 Reels'i (2:10, Türkçe). Sahibi **aynısını** istedi: anlatı orijinaldeki
+gibi (köpek / sfenks pozisyonu dahil; benim kaynak uyarılarıma rağmen "Türkiye'de yaygın anlatı" diye), concept künyesi
+yok, bizim normal kapanış (logo çizimi + THE HALAL ALGORITHM + FOLLOW), ses bm_george 0.95.
+- Akış orijinalle aynı: kanca (yatan beden, oklar, X, kırmızı baskı noktaları) → yoğun bakım + EKG → sure başlığı + mağara →
+  ayet kartı (Arapça 0-12. kelimeler + meal, kelime kelime) → "ونقلبهم ذات اليمين وذات الشمال" (Alafasy tilaveti, kelime kelime
+  yanar) → neden? → doku kesiti (kemik/zemin, damar daralır, nekroz) → en temel kural + saat → köpek (باسط ذراعيه) →
+  sfenks pozisyonu → yatak yarası oluşmaz → insanı koruyan dönüş / köpeği koruyan duruş + tilavet → logo.
+- Türkçe anlatım asr-work (faster-whisper, `tr`) ile metne döküldü, cümle cümle İngilizceye çevrildi (`tts/lines.json`).
+  Ayet meali ve "We turned them over on their right and left sides" / "stretching its forelegs" kaynaktan birebir.
+- Görsel dil: koyu lacivert-yeşil zemin, Poppins Bold büyük harf, altın vurgu; yazılar konuşmayla aynı anda (kelime zamanlarından).
+- Ses: anlatım + tilavet (aynı seviye), müziksiz oda sesi, sahne geçişi hışırtısı, EKG bip, -16 LUFS. Süre 2:35 (İngilizce uzun).
+- Render: `python3 make.py <out>` (~7 dk), `--stills=t1,t2` kontrol kareleri. Tilavet: audio-fetch 018018 (`AUD` dizini).

@@ -1,0 +1,180 @@
+{
+"text": "In intensive care, the most basic rule for keeping an unconscious patient alive is to turn them to the right and to the left at regular intervals.",
+"tokens": [
+{
+"text": "In",
+"ws": " ",
+"start": 0.275,
+"end": 0.4
+},
+{
+"text": "intensive",
+"ws": " ",
+"start": 0.4,
+"end": 1.038
+},
+{
+"text": "care",
+"ws": "",
+"start": 1.038,
+"end": 1.7
+},
+{
+"text": ",",
+"ws": " ",
+"start": 1.7,
+"end": 1.8
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.8,
+"end": 1.9
+},
+{
+"text": "most",
+"ws": " ",
+"start": 1.9,
+"end": 2.188
+},
+{
+"text": "basic",
+"ws": " ",
+"start": 2.188,
+"end": 2.638
+},
+{
+"text": "rule",
+"ws": " ",
+"start": 2.638,
+"end": 3.025
+},
+{
+"text": "for",
+"ws": " ",
+"start": 3.025,
+"end": 3.15
+},
+{
+"text": "keeping",
+"ws": " ",
+"start": 3.15,
+"end": 3.55
+},
+{
+"text": "an",
+"ws": " ",
+"start": 3.55,
+"end": 3.712
+},
+{
+"text": "unconscious",
+"ws": " ",
+"start": 3.712,
+"end": 4.487
+},
+{
+"text": "patient",
+"ws": " ",
+"start": 4.487,
+"end": 4.925
+},
+{
+"text": "alive",
+"ws": " ",
+"start": 4.925,
+"end": 5.8
+},
+{
+"text": "is",
+"ws": " ",
+"start": 5.8,
+"end": 5.975
+},
+{
+"text": "to",
+"ws": " ",
+"start": 5.975,
+"end": 6.112
+},
+{
+"text": "turn",
+"ws": " ",
+"start": 6.112,
+"end": 6.388
+},
+{
+"text": "them",
+"ws": " ",
+"start": 6.388,
+"end": 6.575
+},
+{
+"text": "to",
+"ws": " ",
+"start": 6.575,
+"end": 6.7
+},
+{
+"text": "the",
+"ws": " ",
+"start": 6.7,
+"end": 6.838
+},
+{
+"text": "right",
+"ws": " ",
+"start": 6.838,
+"end": 7.625
+},
+{
+"text": "and",
+"ws": " ",
+"start": 7.625,
+"end": 7.8
+},
+{
+"text": "to",
+"ws": " ",
+"start": 7.8,
+"end": 7.925
+},
+{
+"text": "the",
+"ws": " ",
+"start": 7.925,
+"end": 8.05
+},
+{
+"text": "left",
+"ws": " ",
+"start": 8.05,
+"end": 8.65
+},
+{
+"text": "at",
+"ws": " ",
+"start": 8.65,
+"end": 8.838
+},
+{
+"text": "regular",
+"ws": " ",
+"start": 8.838,
+"end": 9.275
+},
+{
+"text": "intervals",
+"ws": "",
+"start": 9.275,
+"end": 10.225
+},
+{
+"text": ".",
+"ws": "",
+"start": 10.225,
+"end": 10.425
+}
+],
+"duration": 10.525
+}

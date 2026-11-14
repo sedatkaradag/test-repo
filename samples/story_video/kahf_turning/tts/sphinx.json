@@ -1,0 +1,276 @@
+{
+"text": "Because, as veterinary anatomy shows, when a dog lies down on its chest with its forelegs stretched out in front, in the sphinx position, its weight spreads evenly across its broad chest, and its blood vessels are not squeezed.",
+"tokens": [
+{
+"text": "Because",
+"ws": "",
+"start": 0.25,
+"end": 0.75
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.75,
+"end": 0.825
+},
+{
+"text": "as",
+"ws": " ",
+"start": 0.825,
+"end": 0.988
+},
+{
+"text": "veterinary",
+"ws": " ",
+"start": 0.988,
+"end": 1.625
+},
+{
+"text": "anatomy",
+"ws": " ",
+"start": 1.625,
+"end": 2.175
+},
+{
+"text": "shows",
+"ws": "",
+"start": 2.175,
+"end": 2.925
+},
+{
+"text": ",",
+"ws": " ",
+"start": 2.925,
+"end": 3.025
+},
+{
+"text": "when",
+"ws": " ",
+"start": 3.025,
+"end": 3.175
+},
+{
+"text": "a",
+"ws": " ",
+"start": 3.175,
+"end": 3.288
+},
+{
+"text": "dog",
+"ws": " ",
+"start": 3.288,
+"end": 3.65
+},
+{
+"text": "lies",
+"ws": " ",
+"start": 3.65,
+"end": 4.0
+},
+{
+"text": "down",
+"ws": " ",
+"start": 4.0,
+"end": 4.338
+},
+{
+"text": "on",
+"ws": " ",
+"start": 4.338,
+"end": 4.438
+},
+{
+"text": "its",
+"ws": " ",
+"start": 4.438,
+"end": 4.638
+},
+{
+"text": "chest",
+"ws": " ",
+"start": 4.638,
+"end": 5.263
+},
+{
+"text": "with",
+"ws": " ",
+"start": 5.263,
+"end": 5.412
+},
+{
+"text": "its",
+"ws": " ",
+"start": 5.412,
+"end": 5.612
+},
+{
+"text": "forelegs",
+"ws": " ",
+"start": 5.612,
+"end": 6.188
+},
+{
+"text": "stretched",
+"ws": " ",
+"start": 6.188,
+"end": 6.625
+},
+{
+"text": "out",
+"ws": " ",
+"start": 6.625,
+"end": 6.825
+},
+{
+"text": "in",
+"ws": " ",
+"start": 6.825,
+"end": 6.987
+},
+{
+"text": "front",
+"ws": "",
+"start": 6.987,
+"end": 7.8
+},
+{
+"text": ",",
+"ws": " ",
+"start": 7.8,
+"end": 7.912
+},
+{
+"text": "in",
+"ws": " ",
+"start": 7.912,
+"end": 8.037
+},
+{
+"text": "the",
+"ws": " ",
+"start": 8.037,
+"end": 8.137
+},
+{
+"text": "sphinx",
+"ws": " ",
+"start": 8.137,
+"end": 8.55
+},
+{
+"text": "position",
+"ws": "",
+"start": 8.55,
+"end": 9.4
+},
+{
+"text": ",",
+"ws": " ",
+"start": 9.4,
+"end": 9.512
+},
+{
+"text": "its",
+"ws": " ",
+"start": 9.512,
+"end": 9.738
+},
+{
+"text": "weight",
+"ws": " ",
+"start": 9.738,
+"end": 10.062
+},
+{
+"text": "spreads",
+"ws": " ",
+"start": 10.062,
+"end": 10.525
+},
+{
+"text": "evenly",
+"ws": " ",
+"start": 10.525,
+"end": 11.05
+},
+{
+"text": "across",
+"ws": " ",
+"start": 11.05,
+"end": 11.4
+},
+{
+"text": "its",
+"ws": " ",
+"start": 11.4,
+"end": 11.613
+},
+{
+"text": "broad",
+"ws": " ",
+"start": 11.613,
+"end": 11.988
+},
+{
+"text": "chest",
+"ws": "",
+"start": 11.988,
+"end": 12.7
+},
+{
+"text": ",",
+"ws": " ",
+"start": 12.7,
+"end": 12.8
+},
+{
+"text": "and",
+"ws": " ",
+"start": 12.8,
+"end": 12.912
+},
+{
+"text": "its",
+"ws": " ",
+"start": 12.912,
+"end": 13.088
+},
+{
+"text": "blood",
+"ws": " ",
+"start": 13.088,
+"end": 13.375
+},
+{
+"text": "vessels",
+"ws": " ",
+"start": 13.375,
+"end": 13.875
+},
+{
+"text": "are",
+"ws": " ",
+"start": 13.875,
+"end": 13.975
+},
+{
+"text": "not",
+"ws": " ",
+"start": 13.975,
+"end": 14.238
+},
+{
+"text": "squeezed",
+"ws": "",
+"start": 14.238,
+"end": 15.25
+},
+{
+"text": ".",
+"ws": "",
+"start": 15.25,
+"end": 15.45
+}
+],
+"duration": 15.55
+}

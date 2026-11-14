@@ -1,0 +1,48 @@
+{
+"text": "Notice the detail in this verse.",
+"tokens": [
+{
+"text": "Notice",
+"ws": " ",
+"start": 0.275,
+"end": 0.725
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.725,
+"end": 0.863
+},
+{
+"text": "detail",
+"ws": " ",
+"start": 0.863,
+"end": 1.688
+},
+{
+"text": "in",
+"ws": " ",
+"start": 1.688,
+"end": 1.85
+},
+{
+"text": "this",
+"ws": " ",
+"start": 1.85,
+"end": 2.1
+},
+{
+"text": "verse",
+"ws": "",
+"start": 2.1,
+"end": 2.875
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.875,
+"end": 3.075
+}
+],
+"duration": 3.175
+}

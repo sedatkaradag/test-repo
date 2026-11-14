@@ -1,0 +1,48 @@
+{
+"text": "Oxygen no longer reaches the tissue.",
+"tokens": [
+{
+"text": "Oxygen",
+"ws": " ",
+"start": 0.25,
+"end": 1.113
+},
+{
+"text": "no",
+"ws": " ",
+"start": 1.113,
+"end": 1.413
+},
+{
+"text": "longer",
+"ws": " ",
+"start": 1.413,
+"end": 1.925
+},
+{
+"text": "reaches",
+"ws": " ",
+"start": 1.925,
+"end": 2.45
+},
+{
+"text": "the",
+"ws": " ",
+"start": 2.45,
+"end": 2.587
+},
+{
+"text": "tissue",
+"ws": "",
+"start": 2.587,
+"end": 3.5
+},
+{
+"text": ".",
+"ws": "",
+"start": 3.5,
+"end": 3.65
+}
+],
+"duration": 3.75
+}

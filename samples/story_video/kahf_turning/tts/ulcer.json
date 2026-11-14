@@ -1,0 +1,120 @@
+{
+"text": "Soon, tissue death and clotting begin. Medicine calls it a decubitus ulcer, or a bedsore.",
+"tokens": [
+{
+"text": "Soon",
+"ws": "",
+"start": 0.275,
+"end": 0.675
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.675,
+"end": 0.738
+},
+{
+"text": "tissue",
+"ws": " ",
+"start": 0.738,
+"end": 1.188
+},
+{
+"text": "death",
+"ws": " ",
+"start": 1.188,
+"end": 1.55
+},
+{
+"text": "and",
+"ws": " ",
+"start": 1.55,
+"end": 1.675
+},
+{
+"text": "clotting",
+"ws": " ",
+"start": 1.675,
+"end": 2.075
+},
+{
+"text": "begin",
+"ws": "",
+"start": 2.075,
+"end": 2.85
+},
+{
+"text": ".",
+"ws": " ",
+"start": 2.85,
+"end": 2.987
+},
+{
+"text": "Medicine",
+"ws": " ",
+"start": 2.987,
+"end": 3.475
+},
+{
+"text": "calls",
+"ws": " ",
+"start": 3.475,
+"end": 3.8
+},
+{
+"text": "it",
+"ws": " ",
+"start": 3.8,
+"end": 3.913
+},
+{
+"text": "a",
+"ws": " ",
+"start": 3.913,
+"end": 3.975
+},
+{
+"text": "decubitus",
+"ws": " ",
+"start": 3.975,
+"end": 4.675
+},
+{
+"text": "ulcer",
+"ws": "",
+"start": 4.675,
+"end": 5.3
+},
+{
+"text": ",",
+"ws": " ",
+"start": 5.3,
+"end": 5.463
+},
+{
+"text": "or",
+"ws": " ",
+"start": 5.463,
+"end": 5.65
+},
+{
+"text": "a",
+"ws": " ",
+"start": 5.65,
+"end": 5.763
+},
+{
+"text": "bedsore",
+"ws": "",
+"start": 5.763,
+"end": 6.775
+},
+{
+"text": ".",
+"ws": "",
+"start": 6.775,
+"end": 6.95
+}
+],
+"duration": 7.05
+}

@@ -1,0 +1,72 @@
+{
+"text": "We turned them over on their right and left sides.",
+"tokens": [
+{
+"text": "We",
+"ws": " ",
+"start": 0.225,
+"end": 0.35
+},
+{
+"text": "turned",
+"ws": " ",
+"start": 0.35,
+"end": 0.588
+},
+{
+"text": "them",
+"ws": " ",
+"start": 0.588,
+"end": 0.738
+},
+{
+"text": "over",
+"ws": " ",
+"start": 0.738,
+"end": 1.325
+},
+{
+"text": "on",
+"ws": " ",
+"start": 1.325,
+"end": 1.475
+},
+{
+"text": "their",
+"ws": " ",
+"start": 1.475,
+"end": 1.688
+},
+{
+"text": "right",
+"ws": " ",
+"start": 1.688,
+"end": 2.188
+},
+{
+"text": "and",
+"ws": " ",
+"start": 2.188,
+"end": 2.35
+},
+{
+"text": "left",
+"ws": " ",
+"start": 2.35,
+"end": 2.638
+},
+{
+"text": "sides",
+"ws": "",
+"start": 2.638,
+"end": 3.5
+},
+{
+"text": ".",
+"ws": "",
+"start": 3.5,
+"end": 3.7
+}
+],
+"duration": 3.8
+}

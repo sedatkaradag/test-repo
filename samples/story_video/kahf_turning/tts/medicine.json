@@ -1,0 +1,90 @@
+{
+"text": "Modern medicine and intensive care know very well how vital this sentence is.",
+"tokens": [
+{
+"text": "Modern",
+"ws": " ",
+"start": 0.275,
+"end": 0.6
+},
+{
+"text": "medicine",
+"ws": " ",
+"start": 0.6,
+"end": 1.4
+},
+{
+"text": "and",
+"ws": " ",
+"start": 1.4,
+"end": 1.55
+},
+{
+"text": "intensive",
+"ws": " ",
+"start": 1.55,
+"end": 2.212
+},
+{
+"text": "care",
+"ws": " ",
+"start": 2.212,
+"end": 2.788
+},
+{
+"text": "know",
+"ws": " ",
+"start": 2.788,
+"end": 3.038
+},
+{
+"text": "very",
+"ws": " ",
+"start": 3.038,
+"end": 3.35
+},
+{
+"text": "well",
+"ws": " ",
+"start": 3.35,
+"end": 3.737
+},
+{
+"text": "how",
+"ws": " ",
+"start": 3.737,
+"end": 3.987
+},
+{
+"text": "vital",
+"ws": " ",
+"start": 3.987,
+"end": 4.4
+},
+{
+"text": "this",
+"ws": " ",
+"start": 4.4,
+"end": 4.588
+},
+{
+"text": "sentence",
+"ws": " ",
+"start": 4.588,
+"end": 5.15
+},
+{
+"text": "is",
+"ws": "",
+"start": 5.15,
+"end": 5.8
+},
+{
+"text": ".",
+"ws": "",
+"start": 5.8,
+"end": 6.0
+}
+],
+"duration": 6.1
+}

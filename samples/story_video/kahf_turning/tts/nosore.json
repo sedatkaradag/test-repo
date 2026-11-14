@@ -1,0 +1,84 @@
+{
+"text": "In this special position, no bedsores form on the dog's body.",
+"tokens": [
+{
+"text": "In",
+"ws": " ",
+"start": 0.25,
+"end": 0.35
+},
+{
+"text": "this",
+"ws": " ",
+"start": 0.35,
+"end": 0.525
+},
+{
+"text": "special",
+"ws": " ",
+"start": 0.525,
+"end": 0.95
+},
+{
+"text": "position",
+"ws": "",
+"start": 0.95,
+"end": 1.725
+},
+{
+"text": ",",
+"ws": " ",
+"start": 1.725,
+"end": 1.863
+},
+{
+"text": "no",
+"ws": " ",
+"start": 1.863,
+"end": 2.1
+},
+{
+"text": "bedsores",
+"ws": " ",
+"start": 2.1,
+"end": 2.8
+},
+{
+"text": "form",
+"ws": " ",
+"start": 2.8,
+"end": 3.163
+},
+{
+"text": "on",
+"ws": " ",
+"start": 3.163,
+"end": 3.263
+},
+{
+"text": "the",
+"ws": " ",
+"start": 3.263,
+"end": 3.362
+},
+{
+"text": "dog's",
+"ws": " ",
+"start": 3.362,
+"end": 3.775
+},
+{
+"text": "body",
+"ws": "",
+"start": 3.775,
+"end": 4.5
+},
+{
+"text": ".",
+"ws": "",
+"start": 4.5,
+"end": 4.675
+}
+],
+"duration": 4.775
+}

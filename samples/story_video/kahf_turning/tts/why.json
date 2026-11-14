@@ -1,0 +1,144 @@
+{
+"text": "In a story about people asleep, why does it stress that they were turned to the right and to the left?",
+"tokens": [
+{
+"text": "In",
+"ws": " ",
+"start": 0.25,
+"end": 0.35
+},
+{
+"text": "a",
+"ws": " ",
+"start": 0.35,
+"end": 0.463
+},
+{
+"text": "story",
+"ws": " ",
+"start": 0.463,
+"end": 0.975
+},
+{
+"text": "about",
+"ws": " ",
+"start": 0.975,
+"end": 1.275
+},
+{
+"text": "people",
+"ws": " ",
+"start": 1.275,
+"end": 1.625
+},
+{
+"text": "asleep",
+"ws": "",
+"start": 1.625,
+"end": 2.4
+},
+{
+"text": ",",
+"ws": " ",
+"start": 2.4,
+"end": 2.5
+},
+{
+"text": "why",
+"ws": " ",
+"start": 2.5,
+"end": 2.688
+},
+{
+"text": "does",
+"ws": " ",
+"start": 2.688,
+"end": 2.85
+},
+{
+"text": "it",
+"ws": " ",
+"start": 2.85,
+"end": 3.013
+},
+{
+"text": "stress",
+"ws": " ",
+"start": 3.013,
+"end": 3.675
+},
+{
+"text": "that",
+"ws": " ",
+"start": 3.675,
+"end": 3.825
+},
+{
+"text": "they",
+"ws": " ",
+"start": 3.825,
+"end": 3.975
+},
+{
+"text": "were",
+"ws": " ",
+"start": 3.975,
+"end": 4.138
+},
+{
+"text": "turned",
+"ws": " ",
+"start": 4.138,
+"end": 4.45
+},
+{
+"text": "to",
+"ws": " ",
+"start": 4.45,
+"end": 4.55
+},
+{
+"text": "the",
+"ws": " ",
+"start": 4.55,
+"end": 4.688
+},
+{
+"text": "right",
+"ws": " ",
+"start": 4.688,
+"end": 5.388
+},
+{
+"text": "and",
+"ws": " ",
+"start": 5.388,
+"end": 5.575
+},
+{
+"text": "to",
+"ws": " ",
+"start": 5.575,
+"end": 5.7
+},
+{
+"text": "the",
+"ws": " ",
+"start": 5.7,
+"end": 5.838
+},
+{
+"text": "left",
+"ws": "",
+"start": 5.838,
+"end": 6.625
+},
+{
+"text": "?",
+"ws": "",
+"start": 6.625,
+"end": 6.825
+}
+],
+"duration": 6.925
+}

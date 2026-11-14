@@ -1,0 +1,42 @@
+{
+"text": "Surah Al-Kahf, verse eighteen.",
+"tokens": [
+{
+"text": "Surah",
+"ws": " ",
+"start": 0.275,
+"end": 0.613
+},
+{
+"text": "Al-Kahf",
+"ws": "",
+"start": 0.613,
+"end": 1.4
+},
+{
+"text": ",",
+"ws": " ",
+"start": 1.4,
+"end": 1.512
+},
+{
+"text": "verse",
+"ws": " ",
+"start": 1.512,
+"end": 1.85
+},
+{
+"text": "eighteen",
+"ws": "",
+"start": 1.85,
+"end": 2.85
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.85,
+"end": 3.05
+}
+],
+"duration": 3.15
+}

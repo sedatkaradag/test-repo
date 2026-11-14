@@ -1,0 +1,168 @@
+{
+"text": "While the verse says the young men were turned to the right and to the left, of their dog it says: stretching its forelegs.",
+"tokens": [
+{
+"text": "While",
+"ws": " ",
+"start": 0.25,
+"end": 0.412
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.412,
+"end": 0.5
+},
+{
+"text": "verse",
+"ws": " ",
+"start": 0.5,
+"end": 0.838
+},
+{
+"text": "says",
+"ws": " ",
+"start": 0.838,
+"end": 1.15
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.15,
+"end": 1.275
+},
+{
+"text": "young",
+"ws": " ",
+"start": 1.275,
+"end": 1.575
+},
+{
+"text": "men",
+"ws": " ",
+"start": 1.575,
+"end": 1.85
+},
+{
+"text": "were",
+"ws": " ",
+"start": 1.85,
+"end": 1.988
+},
+{
+"text": "turned",
+"ws": " ",
+"start": 1.988,
+"end": 2.325
+},
+{
+"text": "to",
+"ws": " ",
+"start": 2.325,
+"end": 2.425
+},
+{
+"text": "the",
+"ws": " ",
+"start": 2.425,
+"end": 2.55
+},
+{
+"text": "right",
+"ws": " ",
+"start": 2.55,
+"end": 3.225
+},
+{
+"text": "and",
+"ws": " ",
+"start": 3.225,
+"end": 3.4
+},
+{
+"text": "to",
+"ws": " ",
+"start": 3.4,
+"end": 3.5
+},
+{
+"text": "the",
+"ws": " ",
+"start": 3.5,
+"end": 3.625
+},
+{
+"text": "left",
+"ws": "",
+"start": 3.625,
+"end": 4.2
+},
+{
+"text": ",",
+"ws": " ",
+"start": 4.2,
+"end": 4.3
+},
+{
+"text": "of",
+"ws": " ",
+"start": 4.3,
+"end": 4.425
+},
+{
+"text": "their",
+"ws": " ",
+"start": 4.425,
+"end": 4.638
+},
+{
+"text": "dog",
+"ws": " ",
+"start": 4.638,
+"end": 4.975
+},
+{
+"text": "it",
+"ws": " ",
+"start": 4.975,
+"end": 5.138
+},
+{
+"text": "says",
+"ws": "",
+"start": 5.138,
+"end": 5.825
+},
+{
+"text": ":",
+"ws": " ",
+"start": 5.825,
+"end": 6.0
+},
+{
+"text": "stretching",
+"ws": " ",
+"start": 6.0,
+"end": 6.525
+},
+{
+"text": "its",
+"ws": " ",
+"start": 6.525,
+"end": 6.737
+},
+{
+"text": "forelegs",
+"ws": "",
+"start": 6.737,
+"end": 7.725
+},
+{
+"text": ".",
+"ws": "",
+"start": 7.725,
+"end": 7.925
+}
+],
+"duration": 8.025
+}

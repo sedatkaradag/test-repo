@@ -1,0 +1,120 @@
+{
+"text": "In verse eighteen of Surah Al-Kahf, describing the young men asleep in the cave, Allah says:",
+"tokens": [
+{
+"text": "In",
+"ws": " ",
+"start": 0.25,
+"end": 0.375
+},
+{
+"text": "verse",
+"ws": " ",
+"start": 0.375,
+"end": 0.688
+},
+{
+"text": "eighteen",
+"ws": " ",
+"start": 0.688,
+"end": 1.438
+},
+{
+"text": "of",
+"ws": " ",
+"start": 1.438,
+"end": 1.613
+},
+{
+"text": "Surah",
+"ws": " ",
+"start": 1.613,
+"end": 1.975
+},
+{
+"text": "Al-Kahf",
+"ws": "",
+"start": 1.975,
+"end": 2.875
+},
+{
+"text": ",",
+"ws": " ",
+"start": 2.875,
+"end": 2.975
+},
+{
+"text": "describing",
+"ws": " ",
+"start": 2.975,
+"end": 3.513
+},
+{
+"text": "the",
+"ws": " ",
+"start": 3.513,
+"end": 3.6
+},
+{
+"text": "young",
+"ws": " ",
+"start": 3.6,
+"end": 3.9
+},
+{
+"text": "men",
+"ws": " ",
+"start": 3.9,
+"end": 4.188
+},
+{
+"text": "asleep",
+"ws": " ",
+"start": 4.188,
+"end": 4.612
+},
+{
+"text": "in",
+"ws": " ",
+"start": 4.612,
+"end": 4.713
+},
+{
+"text": "the",
+"ws": " ",
+"start": 4.713,
+"end": 4.812
+},
+{
+"text": "cave",
+"ws": "",
+"start": 4.812,
+"end": 5.45
+},
+{
+"text": ",",
+"ws": " ",
+"start": 5.45,
+"end": 5.588
+},
+{
+"text": "Allah",
+"ws": " ",
+"start": 5.588,
+"end": 5.888
+},
+{
+"text": "says",
+"ws": "",
+"start": 5.888,
+"end": 6.65
+},
+{
+"text": ":",
+"ws": "",
+"start": 6.65,
+"end": 6.85
+}
+],
+"duration": 6.95
+}

@@ -1,0 +1,72 @@
+{
+"text": "Follow for more of the Quran's fine details like this.",
+"tokens": [
+{
+"text": "Follow",
+"ws": " ",
+"start": 0.25,
+"end": 0.688
+},
+{
+"text": "for",
+"ws": " ",
+"start": 0.688,
+"end": 0.825
+},
+{
+"text": "more",
+"ws": " ",
+"start": 0.825,
+"end": 1.275
+},
+{
+"text": "of",
+"ws": " ",
+"start": 1.275,
+"end": 1.363
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.363,
+"end": 1.488
+},
+{
+"text": "Quran's",
+"ws": " ",
+"start": 1.488,
+"end": 2.1
+},
+{
+"text": "fine",
+"ws": " ",
+"start": 2.1,
+"end": 2.5
+},
+{
+"text": "details",
+"ws": " ",
+"start": 2.5,
+"end": 3.05
+},
+{
+"text": "like",
+"ws": " ",
+"start": 3.05,
+"end": 3.275
+},
+{
+"text": "this",
+"ws": "",
+"start": 3.275,
+"end": 3.95
+},
+{
+"text": ".",
+"ws": "",
+"start": 3.95,
+"end": 4.15
+}
+],
+"duration": 4.25
+}
