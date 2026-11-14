@@ -181,13 +181,15 @@
   },
   {
     "id": "S-016",
-    "kind": "code",
-    "title": "Hesap istatistikleri tutarsız (takipçi kontrolü)",
-    "detail": "followers 531; counts that do not fit the daily follows: [{'at': '2026-11-12T18:34:45+00:00', 'followers_count': 510, 'range': [67, 67], 'common_so_far': [51, 55]}, {'at': '2026-11-13T02:55:23+00:00', 'followers_count': 515, 'range': [72, 72], 'common_so_far': [51, 55]}]; differences from Instagram's daily series: []",
-    "ref": "",
-    "source": "Gece istatistik",
-    "status": "open",
-    "opened_at": "2026-11-13T18:10:35Z"
+    "kind": "other",
+    "title": "Senkron görevlerinin saatleri config ile uyuşmuyor",
+    "detail": "America/New_York: şu an CRON_TZ=America/New_York 47 13,20 * * * → olması gereken CRON_TZ=America/New_York 17 13,21 * * * (reel-eu 13:00, reel-us 20:30). Görev 2026-11-10 00:45 UTC'de güncellenmiş. Karachi ve Berlin uyumlu.",
+    "ref": "senkron görevleri",
+    "source": "Panel senkronu, 2026-11-10",
+    "status": "closed",
+    "opened_at": "2026-11-10T01:49:11Z",
+    "closed_at": "2026-11-10T02:05:00Z",
+    "resolution": "Ana ajanın hatası: görev, reel-us'un eski (hadis) ve yeni (ayet) satırları config'te birlikte dururken hesaplanan saatle güncellenmişti; çift satır hesabı kaydırdı. Görev scripts/sync_schedule.py'nin şimdiki çıktısına çekildi: CRON_TZ=America/New_York 17 13,21 * * * (reel-eu 13:00, reel-us 20:30). Karachi ve Berlin zaten uyumlu."
   },
   {
     "id": "S-017",
@@ -199,5 +201,17 @@
     "status": "closed",
     "opened_at": "2026-11-13T15:54:57Z",
     "closed_at": "2026-11-14T10:17:22Z"
+  },
+  {
+    "id": "S-018",
+    "kind": "code",
+    "title": "Hesap istatistikleri tutarsız (takipçi kontrolü)",
+    "detail": "followers 531; counts that do not fit the daily follows: [{'at': '2026-11-12T18:34:45+00:00', 'followers_count': 510, 'range': [67, 67], 'common_so_far': [51, 55]}, {'at': '2026-11-13T02:55:23+00:00', 'followers_count': 515, 'range': [72, 72], 'common_so_far': [51, 55]}]; differences from Instagram's daily series: []",
+    "ref": "",
+    "source": "Gece istatistik",
+    "status": "closed",
+    "opened_at": "2026-11-13T18:10:35Z",
+    "closed_at": "2026-11-14T12:20:00Z",
+    "resolution": "Kendiliğinden düzeldi: Instagram 12-13 Kasım günlük takip sayılarını sonradan düzeltti; 14 Kasım 02:41 UTC gece kontrolünde 28 sayım tutarlı (conflicts boş, ok: true). Takipçi sayısında sorun yok. Not: gece işi bu kaydı S-016 olarak açmıştı ama panelde S-016 başka (kapalı) bir kayıttı, bu yüzden panelde hiç görünmedi; S-018 olarak yeniden numaralandı."
   }
 ]
