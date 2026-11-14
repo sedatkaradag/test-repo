@@ -192,11 +192,11 @@
   {
     "id": "S-017",
     "kind": "publish",
-    "title": "2026-11-13_reel-pk (quran:25:47) yayınlanmadı, missed",
-    "detail": "publish_at 2026-11-13T15:32Z; yayıncı 17:41Z housekeeping çalışmasında geç kalma sınırını geçtiği için missed işaretledi, hata mesajı yok. Yayıncı zinciri o saatlerde uyuyordu ya da çalışmıyordu. Şu an zincir canlı (14 Kasım 01:29Z run in_progress). 25:47 hiç paylaşılmadı; ileride yeniden kullanılabilir.",
+    "title": "Yayıncı zinciri koptu: 2026-11-13_reel-pk kaçırıldı (missed)",
+    "detail": "publish çalışması 43426128578 'Chain the next run' adımında 15:30 UTC'de 'gh workflow run' HTTP 500 ile düştü; zincir yeniden başlamadı. reel-pk (publish_at 15:32 UTC) zamanında paylaşılmadı ve 45 dk sınırı aşıldığı için yayıncı tarafından 'missed' işaretlendi. 18:19 UTC senkronu: yayıncı yeniden çalışıyor, reel-eu 18:05 UTC'de yayınlandı. Karar sahibinde: reel-pk elle yeniden kuyruğa alınabilir. (Not: repo issues.json'da S-016 eksikti, panelde başka bir kapalı S-016 var; çakışmayı önlemek için panele S-017 olarak yazıldı, commit edilmedi.) | 2026-11-14 günlük içerik: zincir yeniden canlı (14 Kasım 01:29Z run in_progress); repoya S-017 olarak işlendi.",
     "ref": "2026-11-13_reel-pk",
-    "source": "Günlük içerik, 2026-11-14",
+    "source": "Panel senkronu, 2026-11-13",
     "status": "open",
-    "opened_at": "2026-11-14T05:45:01Z"
+    "opened_at": "2026-11-13T15:54:57Z"
   }
 ]
