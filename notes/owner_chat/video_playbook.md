@@ -195,3 +195,8 @@ yok, bizim normal kapanış (logo çizimi + THE HALAL ALGORITHM + FOLLOW), ses b
 - Görsel dil: koyu lacivert-yeşil zemin, Poppins Bold büyük harf, altın vurgu; yazılar konuşmayla aynı anda (kelime zamanlarından).
 - Ses: anlatım + tilavet (aynı seviye), müziksiz oda sesi, sahne geçişi hışırtısı, EKG bip, -16 LUFS. Süre 2:35 (İngilizce uzun).
 - Render: `python3 make.py <out>` (~7 dk), `--stills=t1,t2` kontrol kareleri. Tilavet: audio-fetch 018018 (`AUD` dizini).
+- Sahibinin düzeltmeleri (14 Kas): arka plan bizim Reels zemini (`assets/reel_background.png`, sekiz köşeli yıldız deseni);
+  altta sabit, soluk küçük logo + "THE HALAL ALGORITHM" (kapanış logosunda gizlenir); tilavet **Husarî**: Alafasy
+  "الشمالِ"de durmadan devam ediyor, kesilince cümle yarım kalmış gibi duyuldu. 9 kâri tarandı (sessizlik analizi):
+  bu ayette ۖ durağında yalnızca Husarî duruyor (Alafasy, Minşâvî, Tablâvî, Abdülbâsıt yalnızca رقود ve بالوصيد'de).
+  **Kural:** ayetten parça keserken kârinin o noktada durduğunu (ardından sessizlik) kontrol et.

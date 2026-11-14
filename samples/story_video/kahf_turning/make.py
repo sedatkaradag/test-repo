@@ -2,7 +2,7 @@
 python3 make.py <out_dir> [--stills=t1,t2,...]      (narration in tts/, recitation dir in $AUD or /home/claude/kahf/aud)
 
 Verse text (Arabic and English) only from scripts/find.py, cut by word position, never typed.
-Narration: Kokoro bm_george 0.95 (tts/<id>.flac + .json word times). Recitation: Alafasy 18:18, words 4-8.
+Narration: Kokoro bm_george 0.95 (tts/<id>.flac + .json word times). Recitation: Husary 18:18, words 4-8 (he stops at the waqf).
 """
 import json, os, subprocess, sys
 from pathlib import Path
@@ -14,7 +14,10 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 OUT = Path(sys.argv[1]); OUT.mkdir(parents=True, exist_ok=True)
 STILLS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--stills=")), None)
-AUD = Path(os.environ.get("AUD", "/home/claude/kahf/aud"))
+# Recitation: Husary (everyayah Husary_128kbps; word times from quran-align Husary_64kbps, same recording, +20 ms).
+# Husary stops at the waqf mark after al-shimal (owner: Alafasy runs on, the phrase sounded unfinished).
+AUD = Path(os.environ.get("AUD", "/home/claude/kahf/husary"))
+REC_SPEECH_END = 18.35          # measured: silence starts here (1.5 s waqf)
 FPS, SR = 30, 48000
 
 # ---------- verse from the database ----------
@@ -34,9 +37,9 @@ ORDER = ["hook1", "hook2", "intro", "verse", "ref", "notice", "REC1", "turn", "w
 GAP = {"hook2": .45, "intro": .55, "verse": .35, "ref": .45, "notice": .7, "REC1": .35, "turn": .35, "why": .7,
        "medicine": .5, "vessels": .6, "oxygen": .3, "ulcer": .35, "rule": .7, "detail": .8, "dog1": .4, "dog2": .35,
        "whydog": .6, "sphinx": .6, "nosore": .5, "protect": .7, "REC2": .4, "outro": .8}
-al = json.load(open(AUD / "align.json"))["018018"]
-REC_A, REC_B = al[4][2] / 1000, al[8][3] / 1000            # words 4-8: wa-nuqallibuhum ... ash-shimal
-REC_WORDS = [(w[0], w[2] / 1000 - REC_A, w[3] / 1000 - REC_A) for w in al[4:9]]
+al = [[w, w1, a + 20, b + 20] for w, w1, a, b in json.load(open(AUD / "align.json"))["018018"]]
+REC_A, REC_B = al[4][2] / 1000, REC_SPEECH_END      # words 4-8: wa-nuqallibuhum ... ash-shimal (stop)
+REC_WORDS = [(w[0], w[2] / 1000 - REC_A, min(w[3] / 1000, REC_B) - REC_A) for w in al[4:9]]
 
 t, segs, words = .35, [], {}
 for sid in ORDER:
@@ -126,7 +129,7 @@ data = {
 }
 logo = sorted((REPO / "samples/logo_draw/frames_800").iterdir())
 data["logo_frames"] = [str(p) for p in logo]
-page = (HERE / "page.html").read_text(encoding="utf-8").replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__HERE__", str(HERE)).replace("__REPO__", str(REPO))
+page = (HERE / "page.html").read_text(encoding="utf-8").replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__HERE__", str(HERE)).replace("__REPO__", str(REPO)).replace("__MARK__", str(sorted((REPO / "samples/logo_draw/frames_478").iterdir())[-1]))
 run = OUT / "page_run.html"; run.write_text(page, encoding="utf-8")
 json.dump({k: data[k] for k in ("end", "segs", "cues")}, open(OUT / "timeline.json", "w"), indent=1)
 print("end", END, "s")
@@ -157,7 +160,7 @@ N = int(END * SR); nar = np.zeros(N); rec = np.zeros(N)
 def load(path):
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
     return np.frombuffer(raw, dtype=np.float32).astype(float)
-recit = load(AUD / "audio/018018.mp3")
+recit = load(AUD / "018018.mp3")
 for s in segs:
     i0 = int(s["t0"] * SR)
     if s["kind"] == "tts":

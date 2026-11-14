@@ -86,12 +86,12 @@ svg#art { position: absolute; left: 0; top: 0; }
       <ellipse cx="-62" cy="104" rx="36" ry="14" fill="#4b4562"/><ellipse cx="2" cy="108" rx="36" ry="14" fill="#4b4562"/><ellipse cx="64" cy="104" rx="36" ry="14" fill="#4b4562"/>
     </g>
   </defs>
-  <rect width="1080" height="1920" fill="url(#bgG)"/>
-  <g id="pattern" opacity=".07"></g>
+  <image href="file://__REPO__/assets/reel_background.png" x="0" y="0" width="1080" height="1920"/>
   <g id="world"></g>
 </svg>
 <div id="caps"></div>
 <div id="card"><div class="pill">AL-KAHF · 18</div><div id="cardAr"></div><div id="cardLine"></div><div id="cardEn"></div></div>
+<div id="mark" style="position:absolute;left:0;right:0;top:1440px;text-align:center;opacity:0"><div style="width:71px;height:90px;margin:0 auto;overflow:hidden;position:relative"><img src="file://__MARK__" style="position:absolute;width:140px;left:-34px;top:-25px"></div><div style="font-family:Marcellus;letter-spacing:6px;color:#e8c66a;font-size:24px;margin-top:10px">THE HALAL ALGORITHM</div></div>
 <div id="logoBox"><div class="frame" id="logoFrame"></div>
   <div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:44px;margin-top:40px">THE HALAL ALGORITHM</div>
   <div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:34px;margin-top:44px;border:2px solid #e8c66a;display:inline-block;padding:14px 38px;border-radius:40px">+ FOLLOW</div></div>
@@ -104,10 +104,6 @@ const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
 const ramp = (t, t0, d = .35) => ease((t - t0) / d);
 function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
 
-// ---------- background pattern (faint curls) ----------
-(function () { let s = 7; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280; const g = $("pattern");
-  for (let i = 0; i < 70; i++) { const x = rnd() * 1080, y = rnd() * 1920, r = 14 + rnd() * 16, a = rnd() * 360;
-    el("path", { d: `M${-r},0 A${r},${r} 0 0 1 ${r},0`, transform: `translate(${x},${y}) rotate(${a})`, stroke: "#9fd3d0", "stroke-width": 3, fill: "none", "stroke-linecap": "round" }, g); } })();
 
 // ---------- scenes ----------
 const SC = [["hook", C.s_hook], ["icu", C.s_icu], ["surah", C.s_surah], ["card", C.s_card], ["notice", C.s_notice], ["why", C.s_why],
@@ -270,7 +266,7 @@ const cardAr = $("cardAr"), cardEn = $("cardEn");
 const arSp = D.card.ar.map(o => { const sp = document.createElement("span"); sp.textContent = D.ar[o.i]; cardAr.appendChild(sp); cardAr.appendChild(document.createTextNode(" ")); return { ...o, sp }; });
 const enSp = D.card.en.map((o, i) => { if (i && !/^[,.;:!?]/.test(o.w)) cardEn.appendChild(document.createTextNode(" ")); const sp = document.createElement("span"); sp.textContent = o.w;
   if (D.card.gold.includes(o.w.toLowerCase())) sp.style.color = "#f3c04f"; cardEn.appendChild(sp); return { ...o, sp }; });
-cardEn.insertBefore(document.createTextNode("“"), cardEn.firstChild); cardEn.appendChild(document.createTextNode("”"));
+cardEn.insertBefore(document.createTextNode("“"), cardEn.firstChild); enSp[enSp.length - 1].sp.textContent += "”";
 
 // logo frames
 const logoImgs = D.logo_frames.map(p => { const i = document.createElement("img"); i.src = "file://" + p; $("logoFrame").appendChild(i); return i; });
@@ -318,6 +314,8 @@ function render(t) {
   // protect
   { const p = P.protect; p.pose(Math.sin((t - scene.protect.t0) * 1.4)); p.arrowsAt(t * 2.2, 1); p.spotsAt(0, t);
     dogs.protect.g.setAttribute("opacity", ramp(t, C.p_dog, .5)); dogs.protect.glow.setAttribute("opacity", .6 * ramp(t, C.p_dog + .4, .6)); litWords(pAr, "REC2", t); }
+  // fixed small mark (our logo + page name), hidden under the closing logo
+  $("mark").style.opacity = .62 * ramp(t, .6, .6) * (1 - ramp(t, scene.logo.t0 - .3, .3));
   // logo
   { $("logoBox").style.opacity = vis("logo", t); const f = clamp(Math.floor((t - C.logo_draw) * 30), 0, logoImgs.length - 1);
     logoImgs.forEach((im, i) => im.style.visibility = i === f ? "visible" : "hidden"); }
