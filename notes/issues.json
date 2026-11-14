@@ -213,5 +213,15 @@
     "opened_at": "2026-11-13T18:10:35Z",
     "closed_at": "2026-11-14T12:20:00Z",
     "resolution": "Kendiliğinden düzeldi: Instagram 12-13 Kasım günlük takip sayılarını sonradan düzeltti; 14 Kasım 02:41 UTC gece kontrolünde 28 sayım tutarlı (conflicts boş, ok: true). Takipçi sayısında sorun yok. Not: gece işi bu kaydı S-016 olarak açmıştı ama panelde S-016 başka (kapalı) bir kayıttı, bu yüzden panelde hiç görünmedi; S-018 olarak yeniden numaralandı."
+  },
+  {
+    "id": "S-019",
+    "kind": "code",
+    "title": "Hesap istatistikleri tutarsız (takipçi kontrolü)",
+    "detail": "followers 552; counts that do not fit the daily follows: [{'at': '2026-11-13T18:01:35+00:00', 'followers_count': 531, 'range': [64, 64], 'common_so_far': [51, 55]}, {'at': '2026-11-14T02:41:29+00:00', 'followers_count': 539, 'range': [72, 72], 'common_so_far': [51, 55]}]; differences from Instagram's daily series: []",
+    "ref": "",
+    "source": "Gece istatistik",
+    "status": "open",
+    "opened_at": "2026-11-14T16:48:15Z"
   }
 ]
