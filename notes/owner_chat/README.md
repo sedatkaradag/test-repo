@@ -92,6 +92,11 @@ günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual
   geçmiş (45 dk'dan az) hazır gönderiyi görür, 5 dk sonra yeni çalışma başlatır; paylaşım görevi
   `kick_publisher.py` ile yayıncı sadece zincir adımında uyuyorsa onu durdurup yeniden başlatır.
   Sahibi "düzenli gönderiye yakınsa elle gönderiyi kaydır" kuralını **istemedi**; ekleme.
+- 14 Kasım: 13 Kasım reel-pk (25:47) kaçırıldı (S-017). Sebep: benim deneme için başlattığım yayıncı çalışması
+  zinciri sürdürürken GitHub HTTP 500 verdi, yeniden deneme yoktu, planlı yedek çalışmalar da 2 saat gelmedi.
+  Sahibine "düzenli gönderiler etkilenmez" demiştim, yanlış çıktı. Düzeltme (onaylı): zincir ve kick_publisher
+  başlatmayı 6 kez dener; kick önce yenisini başlatır, sonra eskisini durdurur. Ders: yayıncıya dokunan her
+  değişiklikte "bu adım başarısız olursa ne olur" diye bak ve riski sahibine açıkça söyle.
 - İlk gerçek kullanımda kontrol et: panelin "Paylaş" düğmesi görevi başlatabildi mi (Claude Code Remote
   bağlantısı izni). Başlatamazsa sahibi sohbette "paylaş" der, ana ajan aynı adımları uygular.
 
