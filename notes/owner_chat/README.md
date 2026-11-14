@@ -97,6 +97,8 @@ günceller. Adımlar: `AGENT.md` → "Elle gönderiler". Script: `scripts/manual
   Sahibine "düzenli gönderiler etkilenmez" demiştim, yanlış çıktı. Düzeltme (onaylı): zincir ve kick_publisher
   başlatmayı 6 kez dener; kick önce yenisini başlatır, sonra eskisini durdurur. Ders: yayıncıya dokunan her
   değişiklikte "bu adım başarısız olursa ne olur" diye bak ve riski sahibine açıkça söyle.
+  Sahibi: 25:47 yeniden kuyruğa alınmasın, ama kullanılmış sayılmasın. Tekrar kontrolü (`enqueue.py`
+  `taken_ids`) artık kaçırılan (`missed`) ve silinen kuyruk öğelerini saymıyor; S-017 kapandı.
 - İlk gerçek kullanımda kontrol et: panelin "Paylaş" düğmesi görevi başlatabildi mi (Claude Code Remote
   bağlantısı izni). Başlatamazsa sahibi sohbette "paylaş" der, ana ajan aynı adımları uygular.
 

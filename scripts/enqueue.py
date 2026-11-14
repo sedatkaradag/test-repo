@@ -168,6 +168,19 @@ def queued():
     return items
 
 
+NOT_TAKEN = {"deleted", "missed"}   # never reached the page: the content may be chosen again (owner, 14 Nov)
+
+
+def taken_ids():
+    """Entry ids that count as used by the queue (for the repeat check)."""
+    ids = set()
+    for i in queued():
+        if i.get("status") not in NOT_TAKEN:
+            ids.add(i["entry_id"])
+            ids |= set(i.get("entry_ids") or [])
+    return ids
+
+
 def hashtags(caption):
     return {t.lower() for t in re.findall(r"#\w+", caption)}
 
@@ -229,7 +242,7 @@ def cmd_add(a):
     if m:
         s, x, y = map(int, m.groups())
         base_ids = {f"quran:{s}:{v}" for v in range(x, y + 1)} | {a.entry}
-    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued()}
+    recent = used_ids(cfg["repeat_days"]) | taken_ids()
     if verse_set(base_ids) & verse_set(recent):   # overlapping verse ranges count as a repeat
         sys.exit(f"REJECT: {a.entry} was posted or queued recently")
     if entry["type"] == "hadith" and entry["status"] not in ("sahih", "hasan"):
@@ -391,9 +404,7 @@ def cmd_add_reel(a):
     if m:
         s, x, y = map(int, m.groups())
         base_ids = {f"quran:{s}:{v}" for v in range(x, y + 1)} | {a.entry}
-    recent = used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"}
-    for i in queued():
-        recent |= set(i.get("entry_ids") or [])
+    recent = used_ids(cfg["repeat_days"]) | taken_ids()
     if verse_set(base_ids) & verse_set(recent):   # overlapping verse ranges count as a repeat
         sys.exit(f"REJECT: {a.entry} was posted or queued recently (Reels must not repeat a post)")
     if entry["type"] == "hadith" and entry["status"] not in ("sahih", "hasan"):
@@ -537,7 +548,7 @@ def cmd_add_carousel(a):
         require_approval(",".join(ids), a.slot)
     if (QUEUE / f"{a.slot}.json").exists():
         sys.exit(f"REJECT: slot {a.slot} already filled")
-    recent = verse_set(used_ids(cfg["repeat_days"]) | {i["entry_id"] for i in queued() if i.get("status") != "deleted"})
+    recent = verse_set(used_ids(cfg["repeat_days"]) | taken_ids())
     entries = []
     for i in ids:
         e = get(i)
