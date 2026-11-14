@@ -17,6 +17,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 - 9 Kas, Alafasy: Al-Mulk 67:2 · Ar-Rahman 55:13 · Al-A'la 87:16-17 · Ar-Ra'd 13:28
 - 10 Kas, Alafasy: Al-Qamar 54:17 · Al-'Asr 103:2-3 · Al-Fajr 89:27-28 · Luqman 31:18
 - 12 Kas, Alafasy: Ta-Ha 20:25-28 · Az-Zalzalah 99:7-8 · Al-Fil 105:3-4 · Ghafir 40:60
+- 14 Kas, Alafasy: Yusuf 12:86 · Al-Kafirun 109:6 · Ash-Shams 91:9-10 · Ibrahim 14:7
 - Denenip kullanılmayan: Az-Zumar 39:53 (okuma uzun, video 111 sn oldu; yerine 54:17). Kullanılabilir.
 
 **Trivia (Qur'an Quiz)**
@@ -59,6 +60,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-13 05:49 | Animasyon · ortam sesi (28,4 sn) | Buhârî 1117 | Half asleep at Fajr. Buried in work at Dhuhr. Worn out at Isha. Pray anyway. | — | — | — | — | — | — | — | — |
 | 2026-11-13 12:15 | Ayet Reels, kelime kelime (31,9 sn) | Lokmân 31:14 · Alafasy | Allah reminds you what your mother went through | — | — | — | — | — | — | — | — |
 | 2026-11-13 02:39 | Vaaz sesi + çizgi illüstrasyon (2:51), Şeyh Kişk "Ölüm" | Hadîsü's-Sûr (zayıf), Tekvîr 81, Mü'min 40:16 | Who will remain when everything is gone? (önce trial Reels, silindi; sonra normal Reels) | — | — | ~10 | — | — | — | — | — |
+| 2026-11-14 12:30 | Guess the Surah (79,3 sn) | 12:86, 109:6, 91:9-10, 14:7 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -166,4 +168,19 @@ Send this to your mother, or pray for her
 #mother #parentsinislam #quran #quranreels
 
 Recitation: Mishary Alafasy
+```
+
+**Guess the Surah, 14 Kasım** (sahibinin panelde onayladığı caption; 12:30 UTC'de paylaşıldı)
+```
+Can you name all 4 Surahs? The last one is hard.
+
+Listen to the verse, pick your answer before the timer ends, then see if you got it right.
+
+Comment your score below (?/4) and send this to a friend to compare.
+
+Recitation: Mishary Rashid Alafasy
+
+Follow @thehalalalgorithm for more.
+
+#quran #guessthesurah #quranquiz #islamicquiz #alafasy
 ```
