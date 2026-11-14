@@ -188,5 +188,15 @@
     "source": "Gece istatistik",
     "status": "open",
     "opened_at": "2026-11-13T18:10:35Z"
+  },
+  {
+    "id": "S-017",
+    "kind": "publish",
+    "title": "2026-11-13_reel-pk (quran:25:47) yayınlanmadı, missed",
+    "detail": "publish_at 2026-11-13T15:32Z; yayıncı 17:41Z housekeeping çalışmasında geç kalma sınırını geçtiği için missed işaretledi, hata mesajı yok. Yayıncı zinciri o saatlerde uyuyordu ya da çalışmıyordu. Şu an zincir canlı (14 Kasım 01:29Z run in_progress). 25:47 hiç paylaşılmadı; ileride yeniden kullanılabilir.",
+    "ref": "2026-11-13_reel-pk",
+    "source": "Günlük içerik, 2026-11-14",
+    "status": "open",
+    "opened_at": "2026-11-14T05:45:01Z"
   }
 ]

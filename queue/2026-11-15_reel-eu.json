@@ -1,0 +1,118 @@
+{
+  "entry_id": "quran:11:6",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Hud 11:6",
+  "slot": "2026-11-15_reel-eu",
+  "publish_at": "2026-11-15T18:00:51Z",
+  "local_slot": "2026-11-15 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-15_reel-eu.jpg",
+  "video": "queue/2026-11-15_reel-eu.mp4",
+  "cover": "queue/2026-11-15_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Worried about provision? Read this\n\nAllah tells us there is no moving creature on earth but its provision is upon Him, and that He knows its place of dwelling and its place of rest. Do your work today, and leave the worry of provision with the One who provides.\n\nSurah Hud 11:6\n\nWhich worry about provision will you hand back to Allah today?\n\n#rizq #provision #tawakkul #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "There is no moving creature on earth but upon Allah is its provision. He knows its place of dwelling and its place of rest; everything is [written] in a clear Record (Surah Hud 11:6)",
+  "theme": "provision (rizq) / Allah provides for every creature",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word and mark by mark, English and reference match, Reel frame ok, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:11:6",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Worried about provision? Read this",
+    "hook_lines": [
+      "Worried about provision?",
+      "Read this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "011006",
+        "lines": [
+          "وَمَا مِن دَآبَّةٖ فِي ٱلۡأَرۡضِ إِلَّا عَلَى ٱللَّهِ",
+          "رِزۡقُهَا وَيَعۡلَمُ مُسۡتَقَرَّهَا وَمُسۡتَوۡدَعَهَاۚ كُلّٞ",
+          "فِي كِتَٰبٖ مُّبِينٖ ٦"
+        ],
+        "y": 594.4,
+        "meal": [
+          "There is no moving creature on earth but upon",
+          "Allah is its provision. He knows its place of",
+          "dwelling and its place of rest; everything is",
+          "[written] in a clear Record."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "There is no moving creature on earth but upon Allah is its provision. He knows its place of dwelling and its place of rest; everything is [written] in a clear Record.",
+    "full_lines": [
+      "There is no moving creature on earth but upon",
+      "Allah is its provision. He knows its place of",
+      "dwelling and its place of rest; everything is",
+      "[written] in a clear Record."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Hud 11:6",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which worry about provision will you hand back to Allah today?",
+    "cta_lines": [
+      "Which worry about provision will you hand",
+      "back to Allah today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "0b5171482c9f98dd72aa6f69",
+  "created_at": "2026-11-14T05:43:24+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "011006"
+    ],
+    "done": false
+  }
+}

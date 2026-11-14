@@ -1,0 +1,153 @@
+{
+  "entry_id": "quran:10:62-64",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Yunus 10:62-64",
+  "slot": "2026-11-15_reel-us",
+  "publish_at": "2026-11-16T01:28:29Z",
+  "local_slot": "2026-11-15 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-15_reel-us.jpg",
+  "video": "queue/2026-11-15_reel-us.mp4",
+  "cover": "queue/2026-11-15_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "No fear, no grief: who Allah promises this to\n\nAllah says His allies will have no fear, nor will they grieve, and describes them as those who believe and fear Him. For them are glad tidings in this world and the Hereafter, and that is the supreme triumph.\n\nSurah Yunus 10:62-64\n\nSend this to someone carrying fear or grief tonight\n\n#nofear #hopeinallah #alliesofallah #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Indeed, the allies of Allah will have no fear, nor will they grieve. Those who believe and fear Allah. For them are glad tidings in the life of this world and in the Hereafter; there is no change in Allah’s words. That is the supreme triumph (Surah Yunus 10:62-64)",
+  "theme": "no fear nor grief / allies of Allah",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word and mark by mark, English and reference match, Reel frame ok, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:10:62-64",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "No fear, no grief: who Allah promises this to",
+    "hook_lines": [
+      "No fear, no grief: who Allah",
+      "promises this to"
+    ],
+    "hook_size": 82,
+    "arabic_size": 60,
+    "verses": [
+      {
+        "ayah": "010062",
+        "lines": [
+          "أَلَآ إِنَّ أَوۡلِيَآءَ ٱللَّهِ لَا خَوۡفٌ عَلَيۡهِمۡ وَلَا هُمۡ",
+          "يَحۡزَنُونَ ٦٢"
+        ],
+        "y": 598.4,
+        "meal": [
+          "Indeed, the allies of Allah will have no fear, nor will they grieve."
+        ]
+      },
+      {
+        "ayah": "010063",
+        "lines": [
+          "ٱلَّذِينَ ءَامَنُواْ وَكَانُواْ يَتَّقُونَ ٦٣"
+        ],
+        "y": 832.4,
+        "meal": [
+          "Those who believe and fear Allah."
+        ]
+      },
+      {
+        "ayah": "010064",
+        "lines": [
+          "لَهُمُ ٱلۡبُشۡرَىٰ فِي ٱلۡحَيَوٰةِ ٱلدُّنۡيَا وَفِي ٱلۡأٓخِرَةِۚ لَا تَبۡدِيلَ",
+          "لِكَلِمَٰتِ ٱللَّهِۚ ذَٰلِكَ هُوَ ٱلۡفَوۡزُ ٱلۡعَظِيمُ ٦٤"
+        ],
+        "y": 949.4,
+        "meal": [
+          "For them are glad tidings in the life of this world and in the",
+          "Hereafter; there is no change in Allah’s words. That is the supreme",
+          "triumph."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1213.4,
+    "full": "Indeed, the allies of Allah will have no fear, nor will they grieve. Those who believe and fear Allah. For them are glad tidings in the life of this world and in the Hereafter; there is no change in Allah’s words. That is the supreme triumph.",
+    "full_lines": [
+      "Indeed, the allies of Allah will have no fear, nor will they grieve.",
+      "Those who believe and fear Allah. For them are glad tidings in the",
+      "life of this world and in the Hereafter; there is no change in Allah’s",
+      "words. That is the supreme triumph."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "ref": "Surah Yunus 10:62-64",
+    "ref_y": 1421.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone carrying fear or grief tonight",
+    "cta_lines": [
+      "Send this to someone carrying fear or grief tonight"
+    ],
+    "cta_size": 36,
+    "line_y": 1479.4,
+    "handle_y": 1542.4,
+    "handle_size": 27
+  },
+  "layout_hash": "11abbf53caad675b98f7b054",
+  "created_at": "2026-11-14T05:44:52+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "010062",
+      "010063",
+      "010064"
+    ],
+    "done": false
+  }
+}

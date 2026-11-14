@@ -1,0 +1,120 @@
+{
+  "entry_id": "quran:16:96",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nahl 16:96",
+  "slot": "2026-11-15_reel-pk",
+  "publish_at": "2026-11-15T15:32:36Z",
+  "local_slot": "2026-11-15 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-15_reel-pk.jpg",
+  "video": "queue/2026-11-15_reel-pk.mp4",
+  "cover": "queue/2026-11-15_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Everything you hold tonight will one day end\n\nAllah tells us that whatever we have will come to an end, but whatever is with Him will last forever, and that He will reward those who remain steadfast according to the best of their deeds. Hold the world lightly, and hold on to what lasts.\n\nSurah An-Nahl 16:96\n\nSave this for the moment the world feels too heavy to hold\n\n#dunya #akhirah #steadfast #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Whatever you have will come to an end, but whatever Allah has will last forever. And We will surely grant those who remain steadfast their reward according to the best of their deeds (Surah An-Nahl 16:96)",
+  "theme": "what lasts / this world ends, what is with Allah remains",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word and mark by mark, English and reference match, Reel frame ok, caption accurate",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:16:96",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Everything you hold tonight will one day end",
+    "hook_lines": [
+      "Everything you hold tonight",
+      "will one day end"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "016096",
+        "lines": [
+          "مَا عِندَكُمۡ يَنفَدُ وَمَا عِندَ ٱللَّهِ بَاقٖۗ",
+          "وَلَنَجۡزِيَنَّ ٱلَّذِينَ صَبَرُوٓاْ أَجۡرَهُم بِأَحۡسَنِ",
+          "مَا كَانُواْ يَعۡمَلُونَ ٩٦"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Whatever you have will come to an end, but",
+          "whatever Allah has will last forever. And We will",
+          "surely grant those who remain steadfast their",
+          "reward according to the best of their deeds."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Whatever you have will come to an end, but whatever Allah has will last forever. And We will surely grant those who remain steadfast their reward according to the best of their deeds.",
+    "full_lines": [
+      "Whatever you have will come to an end, but",
+      "whatever Allah has will last forever. And We will",
+      "surely grant those who remain steadfast their",
+      "reward according to the best of their deeds."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nahl 16:96",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save this for the moment the world feels too heavy to hold",
+    "cta_lines": [
+      "Save this for the moment the world feels too",
+      "heavy to hold"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "be7c559a72f892266a800e22",
+  "created_at": "2026-11-14T05:42:54+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "016096"
+    ],
+    "done": false
+  }
+}
