@@ -50,4 +50,11 @@ jobs:
             if [ "$w" -le 900 ]; then sleep "$w"; break; fi
             sleep 900
           done
-          gh workflow run publish.yml --ref main
+          # GitHub sometimes answers the dispatch with a transient 500 (13 Nov, reel-pk missed): retry
+          for d in 0 20 40 80 160 300; do
+            sleep "$d"
+            if gh workflow run publish.yml --ref main; then exit 0; fi
+            echo "dispatch failed, retrying"
+          done
+          echo "::error::could not start the next publish run after 6 tries"
+          exit 1
