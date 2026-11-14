@@ -15,7 +15,7 @@ jobs:
         with: {python-version: "3.11"}
       - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng
       - run: pip install -q "kokoro>=0.9.4" soundfile
-      - run: python tts/make_tts.py bm_george 0.95
+      - run: python tts/voice_demo.py
       - name: push the narration to branch tts-out
         run: |
           cd out
