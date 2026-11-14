@@ -38,6 +38,9 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 **Animasyon · ortam sesi**
 - 13 Kas, kâri yok (ortam sesi): Sahih al-Bukhari 1117 ("Pray anyway") — paylaşıldı.
 
+**Animasyon · İngilizce TTS**
+- 14 Kas, Husary (tilavet) + TTS bm_george: Al-Kahf 18:18 (sağa sola çevrilme, köpek) — paylaşıldı.
+
 ## Ayrıntılı kayıt
 
 İstatistikler `history/insights.json` → `manual_posts`, 2026-11-11 02:16 UTC okuması (yaş = o ana kadar).
@@ -61,6 +64,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-13 12:15 | Ayet Reels, kelime kelime (31,9 sn) | Lokmân 31:14 · Alafasy | Allah reminds you what your mother went through | — | — | — | — | — | — | — | — |
 | 2026-11-13 02:39 | Vaaz sesi + çizgi illüstrasyon (2:51), Şeyh Kişk "Ölüm" | Hadîsü's-Sûr (zayıf), Tekvîr 81, Mü'min 40:16 | Who will remain when everything is gone? (önce trial Reels, silindi; sonra normal Reels) | — | — | ~10 | — | — | — | — | — |
 | 2026-11-14 12:30 | Guess the Surah (79,3 sn) | 12:86, 109:6, 91:9-10, 14:7 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
+| 2026-11-14 19:46 | Animasyon · İngilizce TTS (162,1 sn) | Kehf 18:18 · Husary | If you don't turn a person lying still, their body breaks down under its own weight. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -183,4 +187,21 @@ Recitation: Mishary Rashid Alafasy
 Follow @thehalalalgorithm for more.
 
 #quran #guessthesurah #quranquiz #islamicquiz #alafasy
+```
+
+**Kehf 18:18, 14 Kasım** (sahibinin panelde onayladığı caption; 19:46 UTC'de paylaşıldı)
+```
+If you don't turn a person lying still, their body breaks down under its own weight.
+
+Intensive care units turn unconscious patients to the right and to the left at regular intervals. Now read how Surah Al-Kahf describes the young men asleep in the cave:
+
+"You would have thought they were awake, although they were asleep. We turned them over on their right and left sides, while their dog stretching its forelegs at the entrance." (Al-Kahf 18:18)
+
+Watch till the end for the detail about the dog.
+
+Recitation: Mahmoud Khalil Al-Husary
+
+Follow @thehalalalgorithm for more.
+
+#quran #surahkahf #alkahf #peopleofthecave #quranverses #islam #muslim #husary
 ```
