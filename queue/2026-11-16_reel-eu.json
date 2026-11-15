@@ -1,0 +1,95 @@
+{
+  "entry_id": "quran:9:119",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah At-Tawba 9:119",
+  "slot": "2026-11-16_reel-eu",
+  "publish_at": "2026-11-16T17:59:13Z",
+  "local_slot": "2026-11-16 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-16_reel-eu.jpg",
+  "video": "queue/2026-11-16_reel-eu.mp4",
+  "cover": "queue/2026-11-16_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "One verse on honesty and the company you keep\n\nAllah calls the believers to fear Him and to be with those who are truthful. Choose words that are true today, and people who help you stay that way.\n\nSurah At-Tawba 9:119\n\nName one truthful friend who keeps you honest.\n\n#honesty #truthfulness #surahtawbah #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "O you who believe, fear Allah and be with those who are truthful (Surah At-Tawba 9:119)",
+  "theme": "honesty / be with the truthful",
+  "review": "Independent reviewer approved: Arabic checked word by word and mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:9:119",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "One verse on honesty and the company you keep",
+    "hook_lines": [
+      "One verse on honesty and",
+      "the company you keep"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "009119",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَكُونُواْ",
+          "مَعَ ٱلصَّٰدِقِينَ ١١٩"
+        ],
+        "y": 697.6,
+        "meal": [
+          "O you who believe, fear Allah and be with those",
+          "who are truthful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "O you who believe, fear Allah and be with those who are truthful.",
+    "full_lines": [
+      "O you who believe, fear Allah and be with those",
+      "who are truthful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah At-Tawba 9:119",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name one truthful friend who keeps you honest.",
+    "cta_lines": [
+      "Name one truthful friend who keeps you",
+      "honest."
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "75bc80deb8ae1bb4caff5c0b",
+  "created_at": "2026-11-15T05:45:41+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "009119"
+    ],
+    "done": false
+  }
+}

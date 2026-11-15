@@ -1,0 +1,109 @@
+{
+  "entry_id": "quran:2:183",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:183",
+  "slot": "2026-11-16_reel-eu-am",
+  "publish_at": "2026-11-16T07:11:43Z",
+  "local_slot": "2026-11-16 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-16_reel-eu-am.jpg",
+  "video": "queue/2026-11-16_reel-eu-am.mp4",
+  "cover": "queue/2026-11-16_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Fasting tomorrow? Here is why Allah asks us to fast\n\nAllah tells the believers that fasting was prescribed for them as it was for those before them, so that they may become righteous. The aim of a fast is not hunger. It is a heart that grows in righteousness.\n\nSurah Al-Baqara 2:183\n\nWhich day this week will you fast for Allah?\n\n#fasting #taqwa #surahbaqarah #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "O you who believe, fasting is prescribed upon you as it was prescribed upon those who were before you, so that you may become righteous (Surah Al-Baqara 2:183)",
+  "theme": "fasting / prescribed so that you may become righteous (Monday fast day)",
+  "review": "Independent reviewer approved: Arabic checked word by word and mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:183",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Fasting tomorrow? Here is why Allah asks us to fast",
+    "hook_lines": [
+      "Fasting tomorrow? Here is",
+      "why Allah asks us to fast"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "002183",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ كُتِبَ عَلَيۡكُمُ",
+          "ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن",
+          "قَبۡلِكُمۡ لَعَلَّكُمۡ تَتَّقُونَ ١٨٣"
+        ],
+        "y": 636.4,
+        "meal": [
+          "O you who believe, fasting is prescribed upon",
+          "you as it was prescribed upon those who were",
+          "before you, so that you may become righteous."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1134.4,
+    "full": "O you who believe, fasting is prescribed upon you as it was prescribed upon those who were before you, so that you may become righteous.",
+    "full_lines": [
+      "O you who believe, fasting is prescribed upon",
+      "you as it was prescribed upon those who were",
+      "before you, so that you may become righteous."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:183",
+    "ref_y": 1347.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which day this week will you fast for Allah?",
+    "cta_lines": [
+      "Which day this week will you fast for Allah?"
+    ],
+    "cta_size": 48,
+    "line_y": 1405.4,
+    "handle_y": 1485.4,
+    "handle_size": 27
+  },
+  "layout_hash": "d0185a378cc858997b644f0c",
+  "created_at": "2026-11-15T05:44:51+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "002183"
+    ],
+    "done": false
+  }
+}

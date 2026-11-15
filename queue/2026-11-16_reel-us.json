@@ -1,0 +1,107 @@
+{
+  "entry_id": "quran:3:190",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Aal-i-Imraan 3:190",
+  "slot": "2026-11-16_reel-us",
+  "publish_at": "2026-11-17T01:26:10Z",
+  "local_slot": "2026-11-16 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-16_reel-us.jpg",
+  "video": "queue/2026-11-16_reel-us.mp4",
+  "cover": "queue/2026-11-16_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Before you sleep tonight, look up\n\nAllah tells us that in the creation of the heavens and earth, and in the alternation of night and day, are signs for people of understanding. Tonight, step outside for a moment and reflect on what you see.\n\nSurah Aal-i-Imraan 3:190\n\nWhat sign of Allah did you notice today?\n\n#tafakkur #nightsky #surahaliimran #quranreels\n\nRecitation: Ahmed Al-Ajmi",
+  "alt_text": "Indeed, in the creation of the heavens and earth and the alternation of the night and day are signs for people of understanding (Surah Aal-i-Imraan 3:190)",
+  "theme": "reflection / signs in creation, night and day",
+  "review": "Independent reviewer approved: Arabic checked word by word and mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:3:190",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Before you sleep tonight, look up",
+    "hook_lines": [
+      "Before you sleep tonight,",
+      "look up"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "003190",
+        "lines": [
+          "إِنَّ فِي خَلۡقِ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ",
+          "وَٱخۡتِلَٰفِ ٱلَّيۡلِ وَٱلنَّهَارِ لَأٓيَٰتٖ لِّأُوْلِي",
+          "ٱلۡأَلۡبَٰبِ ١٩٠"
+        ],
+        "y": 636.4,
+        "meal": [
+          "Indeed, in the creation of the heavens and earth",
+          "and the alternation of the night and day are signs",
+          "for people of understanding."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1134.4,
+    "full": "Indeed, in the creation of the heavens and earth and the alternation of the night and day are signs for people of understanding.",
+    "full_lines": [
+      "Indeed, in the creation of the heavens and earth",
+      "and the alternation of the night and day are signs",
+      "for people of understanding."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Aal-i-Imraan 3:190",
+    "ref_y": 1347.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "What sign of Allah did you notice today?",
+    "cta_lines": [
+      "What sign of Allah did you notice today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1405.4,
+    "handle_y": 1485.4,
+    "handle_size": 27
+  },
+  "layout_hash": "b2e9449773fac32b886144fc",
+  "created_at": "2026-11-15T05:46:09+00:00",
+  "audio": {
+    "reciter": "ahmed_ibn_ali_al_ajamy_128kbps",
+    "reciter_name": "Ahmed Al-Ajmi",
+    "ayahs": [
+      "003190"
+    ],
+    "done": false
+  }
+}

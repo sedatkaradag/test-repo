@@ -1,0 +1,118 @@
+{
+  "entry_id": "quran:7:56",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'raaf 7:56",
+  "slot": "2026-11-16_reel-pk",
+  "publish_at": "2026-11-16T15:33:04Z",
+  "local_slot": "2026-11-16 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-16_reel-pk.jpg",
+  "video": "queue/2026-11-16_reel-pk.mp4",
+  "cover": "queue/2026-11-16_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Allah's mercy is close to those who do good\n\nAllah tells us not to spread corruption on earth after it has been set right, and to call upon Him with fear and hope. His mercy is close to those who do good. Tonight, make your dua with both fear and hope.\n\nSurah Al-A'raaf 7:56\n\nWhich good deed will you do before you sleep?\n\n#dua #allahsmercy #surahaaraf #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Do not spread corruption on earth after it has been set aright, but call upon Him with fear and hope. Indeed, the mercy of Allah is close to those who do good (Surah Al-A'raaf 7:56)",
+  "theme": "dua with fear and hope / Allah's mercy is near the doers of good",
+  "review": "Independent reviewer approved: Arabic checked word by word and mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:7:56",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Allah's mercy is close to those who do good",
+    "hook_lines": [
+      "Allah's mercy is close to",
+      "those who do good"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "007056",
+        "lines": [
+          "وَلَا تُفۡسِدُواْ فِي ٱلۡأَرۡضِ بَعۡدَ إِصۡلَٰحِهَا",
+          "وَٱدۡعُوهُ خَوۡفٗا وَطَمَعًاۚ إِنَّ رَحۡمَتَ ٱللَّهِ",
+          "قَرِيبٞ مِّنَ ٱلۡمُحۡسِنِينَ ٥٦"
+        ],
+        "y": 611.2,
+        "meal": [
+          "Do not spread corruption on earth after it has",
+          "been set aright, but call upon Him with fear and",
+          "hope. Indeed, the mercy of Allah is close to those",
+          "who do good."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1109.2,
+    "full": "Do not spread corruption on earth after it has been set aright, but call upon Him with fear and hope. Indeed, the mercy of Allah is close to those who do good.",
+    "full_lines": [
+      "Do not spread corruption on earth after it has",
+      "been set aright, but call upon Him with fear and",
+      "hope. Indeed, the mercy of Allah is close to those",
+      "who do good."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-A'raaf 7:56",
+    "ref_y": 1385.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which good deed will you do before you sleep?",
+    "cta_lines": [
+      "Which good deed will you do before you sleep?"
+    ],
+    "cta_size": 48,
+    "line_y": 1443.2,
+    "handle_y": 1523.2,
+    "handle_size": 27
+  },
+  "layout_hash": "aec0aa16c7678adeb4c14bbc",
+  "created_at": "2026-11-15T05:45:20+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "007056"
+    ],
+    "done": false
+  }
+}
