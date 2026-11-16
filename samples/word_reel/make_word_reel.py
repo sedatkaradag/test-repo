@@ -7,7 +7,7 @@ back and reads words again, they light again in that order (`EVENTS`).
 
     python3 samples/word_reel/make_word_reel.py <set.json> <caption.txt> <recitation.mp3> <out.mp4>
 
-set.json: {"entry": "quran:31:14", "map": [[0,1,2], ...], "events": [[word, start_ms, end_ms], ...]}
+set.json: {"entry": "quran:31:14" (or a range, e.g. "quran:43:68-70"; audio = the verses joined in order), "map": [[0,1,2], ...], "events": [[word, start_ms, end_ms], ...]}
   map[k]    = English word numbers (of the meaning as shown, split on spaces) for Arabic word k
   events    = every word as it is heard, in order, repeats included
 Layout, colours, hook, slogan, closing line and progress line are the system template's (scripts/reels.py).
@@ -28,7 +28,7 @@ import render as R  # noqa: E402
 SET, CAPTION, MP3, OUT = (Path(a) for a in sys.argv[1:5])
 S = json.loads(SET.read_text(encoding="utf-8"))
 L = RL.plan(S["entry"], CAPTION.read_text(encoding="utf-8"))
-assert L.get("template") == "v3" and len(L["verses"]) == 1, "one-verse v3 plans only"
+assert L.get("template") == "v3", "v3 plans only"
 assert not RL.issues(L), RL.issues(L)
 SW, SH, FPS = RL.SW, RL.SH, RL.FPS
 
@@ -53,11 +53,10 @@ def smooth(x):
     x = min(1.0, max(0.0, x))
     return x * x * (3 - 2 * x)
 
-# ---------- Arabic words, each on its own layers ----------
-v = L["verses"][0]
+# ---------- Arabic words, each on its own layers (all verses of the range, in order) ----------
 size = L["arabic_size"]
 font = R._font(R.F_QURAN, size)
-tokens = [t for line in v["lines"] for t in line.split(" ")]
+tokens = [t for v in L["verses"] for line in v["lines"] for t in line.split(" ")]
 assert len(tokens) == len(S["map"]), (len(tokens), len(S["map"]))
 
 
@@ -66,9 +65,11 @@ def blank():
 
 
 ar_dim, ar_on, ar_hot = blank(), [], []
-y, k = v["y"], 0
+k = 0
 d_dim = ImageDraw.Draw(ar_dim)
-for line in v["lines"]:
+for v, line in ((v, line) for v in L["verses"] for line in v["lines"]):
+    if line is v["lines"][0]:
+        y = v["y"]
     words = line.split(" ")
     w_line = font.getlength(line, direction="rtl", language="ar")
     right = (SW + w_line) / 2
