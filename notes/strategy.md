@@ -2,91 +2,86 @@
 
 Analist her pazartesi bu dosyayı günceller.
 
-## Güncel durum (2026-11-09, veri: insights.json 2026-11-09 01:58 UTC)
+## Güncel durum (2026-11-16, veri: insights.json 2026-11-16 02:23 UTC)
 
-Kapsam: 1-8 Kasım Reels'leri; ortalamalara yalnızca en az 24 saatlik paylaşımlar katıldı (yaş = `fetched_at` −
-`posted_at`). Hesap: **335 takipçi** (2 Kasım: 121). `online_followers_by_utc_hour` artık geliyor. Reels'lerde
-gönderi başına `follows` / `profile_visits` hâlâ yok; `reposts` hiç dönmüyor. 2026-11-06_reel-eu (49:12) için
-Instagram hiç istatistik vermiyor (56 saatlik, `stats: {}`): ortalamalardan çıkarıldı, açık sorun S-015.
+Kapsam: 9-15 Kasım'da paylaşılan Reels'ler; ortalamalara yalnızca en az 24 saatlik paylaşımlar katıldı (yaş =
+`fetched_at` − `posted_at`); grup karşılaştırmalarında iki taraf da 48 sa+. Hesap: **601 takipçi** (9 Kasım: 335).
+`followers_check.ok: true` (52 gün karşılaştırıldı, fark yok). 2026-11-11_reel-us (89:27-30) sahibi tarafından arşive
+alındı, istatistiği yok: ortalamalara katılmadı (sorun değil). Reels'te gönderi başına `follows` / `profile_visits`
+hâlâ yok. Haftanın tek hadis Reels'i 6014 (8 Kas slotu, 9 Kas 01:30 UTC; 1187 reach) ayet tablolarına katılmadı.
 
-| Tür (1-8 Kas, 24 sa+) | n | Yaş | Ort. reach | Ort. kayıt | Ort. paylaşım | Kayıt/reach | Paylaşım/reach | Ort. izlenme | İzlenme/süre | Atlanma |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Reels, ayet (tilavetli) | 21 | 32-187 sa | 1796 | 29.1 | 10.7 | %1.62 | %0.59 | 6.6 sn | %30 | %66.0 |
-| Reels, hadis (sessiz) | 7 | 24-193 sa | 556 | 4.6 | 2.9 | %0.82 | %0.51 | 3.7 sn | %30 | %67.9 |
-| Carousel (4 Kas) | 1 | 99 sa | 37 | 0 | 0 | 0 | 0 | - | - | - |
+| Tür (9-15 Kas, 24 sa+) | n | Yaş | Ort. reach | Medyan | Ort. kayıt | Ort. paylaşım | Kayıt/reach | Paylaşım/reach | Ort. izlenme | İzlenme/süre | Atlanma |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Reels, ayet (tilavetli) | 22 | 25-163 sa | 1958 | 1634 | 31.9 | 26.0 | %1.63 | %1.33 | 5.7 sn | %26 | %68.7 |
+| Önceki hafta ayet (1-8 Kas, bugünkü yaşla) | 25 | 176-355 sa | 1688 | 1450 | 26.5 | 11.9 | %1.57 | %0.70 | 6.5 sn | %29 | %66.2 |
 
-| Slot (1-8 Kas, 24 sa+) | n | Yaş | Ort. reach | Kayıt/reach | Paylaşım/reach | İzlenme | Atlanma | Takipçi online (UTC saat) |
-|---|---|---|---|---|---|---|---|---|
-| reel-eu-am (08:15 Berlin = 07:15 UTC) | 7 | 43-187 sa | 1493 | %1.48 | %0.48 | 6.5 sn | %66.3 | 156 (zirve) |
-| reel-pk (20:30 Karaçi = 15:30 UTC) | 7 | 34-178 sa | 1980 | %1.64 | %0.41 | 6.7 sn | %65.7 | 81 |
-| reel-eu (13:00 New York = 18:00 UTC) | 6 | 32-176 sa | 1931 | %1.72 | %0.93 | 6.7 sn | %66.4 | 70 (en düşük) |
-| reel-us (20:30 New York = 01:30 UTC, hadis) | 7 | 24-193 sa | 556 | %0.82 | %0.51 | 3.7 sn | %67.9 | 144 |
+| Slot (9-15 Kas, **48 sa+**) | n | Yaş | Ort. reach | Medyan | Kayıt/reach | Paylaşım/reach | İzlenme | Atlanma | Takipçi online (UTC saat) |
+|---|---|---|---|---|---|---|---|---|---|
+| reel-eu-am (08:15 Berlin = 07:15 UTC) | 5 | 67-163 sa | 1422 | 1374 | %1.31 | %0.76 | 5.0 sn | %70.5 | 318 (zirve bölgesi) |
+| reel-pk (20:30 Karaçi = 15:30 UTC) | 4 | 83-155 sa | 1507 | 1530 | %1.09 | %0.35 | 5.3 sn | %68.0 | 181 |
+| reel-eu (13:00 New York = 18:00 UTC) | 5 | 56-152 sa | 1663 | 1648 | %1.40 | %0.49 | 6.2 sn | %68.3 | 146 (en düşük) |
+| reel-us (20:30 New York = 01:30 UTC) | 5 | 49-169 sa | 2877 | 1694 | %2.02 | %2.67 | 6.9 sn | %62.0 | 282 |
+| · reel-us yalnız ayet (10 Kas+) | 4 | 49-145 sa | 3300 | 1890 | %2.15 | %2.86 | 6.5 sn | %64.1 | |
+| · diğer üç slotun ayeti (aynı dönem) | 14 | 56-163 sa | 1532 | 1494 | %1.28 | %0.54 | 5.5 sn | %69.0 | |
 
-reel-pk ortalamasını Nâs (5691, sahibinin seçimi) yukarı çekiyor; Nâs hariç reel-pk 1361.
+- **reel-us ayete geçince en iyi slot oldu.** 30:21 (7866) hariç bile reel-us ayet ort. 1778 (28:24, 59:22, 16:90),
+  diğer slotların 1532'sinin üstünde; 25 saatlik 57:22-23 de 3266. Hadis döneminde aynı saat ~556'ydı: zayıflık
+  **saatten değil türden** geliyordu. Diğer üç slot birbirine çok yakın (1422-1663); slotlar arası fark tema farkından
+  büyük değil.
+- **Büyüme (Instagram günü, 8-14 Kas):** **268 yeni takip, 11 takipten çıkma (net +257)**; önceki hafta (1-7 Kas) net
+  +202. Takipçi sayısıyla tutarlı: 8 Kas 01:50 UTC 306 → 15 Kas 02:08 UTC 567 (+261). Günlük ortalama erişim 9.5 bin
+  (önceki hafta 6.4 bin), etkileşen hesap günde 987 (708), görüntüleme günde 12.3 bin. Erişimin **%98.9'u takipçi
+  olmayanlardan**. 1.000 takipçi-dışı erişim başına takip 4.1 (önceki hafta 4.7): erişim büyüdü, dönüşüm biraz düştü.
+  En iyi günler 9 Kas (59), 11 Kas (58), 10 Kas (43): 30:21 Reels'inin (10 Kas) yayıldığı günler.
+- **Kitle:** takipçilerin en çok çevrimiçi olduğu saat **04-08 UTC** (312-325), en az **16-19 UTC** (146-162).
+- **İzleyiciyi tutma:** ayette izlenme videonun %26'sı (önceki hafta %29), atlanma %68.7 (önceki %66.2): ilk 3 saniye
+  kaybı biraz arttı. 20-30 sn videolar en iyi grup (n=9, ort. 2363, paylaşım/reach %1.89); 20 sn altı (n=9) 1588,
+  atlanma %70.7; 30 sn üstü (n=4) 1881. Kısa video avantaj sağlamıyor. En yüksek atlanma 55:60 (Husary, %79.7) ve
+  3:133-134 (45 sn, %76.1).
+- **Şablon v3 (her iki taraf 48 sa+):** ayet v2 (30-31 Eki, n=6, 369-403 sa) 1343 reach, atlanma %64.0; v3 1-8 Kas
+  (n=24) 1756, %66.2; v3 9-14 Kas (n=18) 1925, %67.9. Reach, kayıt ve paylaşım oranı v3'te aynı ya da iyi; atlanma
+  her hafta ~2 puan artıyor. Hesap 5 katına çıktığı ve kitle değiştiği için şablona bağlanamaz; **karar önerilmiyor**,
+  ama atlanmadaki eğilim izlenmeli (ilk kare: kanca/etiket).
+- **Story (Reels'in kopyası):** 20 sa+ ölçülen 5 Story ort. 22 reach (17-26), 1 takip, 0 yanıt; gezinme 86 ileri
+  dokunma, 20 çıkış, 15 kaydırma. Maliyeti yok, devam.
+- **Kâri (30 Eki+, 48 sa+, ayet):** Alafasy n=13 ort. 2064 (atlanma %64.8); Muaiqly n=9 2022 (30:21 ve 57:22-23 dahil;
+  medyan 1281); Sudais n=6 1741; Dosari n=9 1511, paylaşım/reach %0.33 (en düşük); Abdul Basit n=7 1409, atlanma
+  %70.2, izlenme oranı %24 (en zayıf, ikinci hafta). Minshawi, Husary, Ajmi n=1-2. **Ağırlıklar değiştirilmedi:** tema
+  etkisi baskın ve n küçük; Abdul Basit iki haftadır en zayıf, 3 → 2 sahibine/ana ajana öneri olarak bırakıldı.
 
-- **Büyüme (2026-11-10'da düzeltildi):** 1-7 Kasım **208 yeni takip, 6 takipten çıkma (net +202)**; önceki hafta
-  (25-31 Ekim) net +57. Günlük erişim ort. 6.4 bin (önceki hafta 2.6 bin), etkileşen hesap günde 708 (316). Erişimin
-  **%99'u takipçi olmayanlardan**: büyüme hâlâ tamamen keşiften. En iyi günler 4 Kasım (54 takip) ve 3 Kasım (46):
-  Nâs/Felak Reels'leri ve iki elle quiz denemesinin olduğu günler. Takipçi sayısıyla tutarlı: 2 Kasım 121 → 9 Kasım 335.
-  (Bu maddenin ilk hali hatalı veriyle yazılmıştı: eski `insights.py` her güne ertesi günü de ekliyordu; 408 / +398 /
-  12.2 bin / 1371 / 100 / 88 yanlıştı.)
-- **Kitle:** takipçilerin %20'si Hindistan, %15'i Pakistan, sonra S. Arabistan, İngiltere, ABD, BAE; etkileşenlerin
-  %40'ı Hindistan. Yaş ağırlıkla 25-34 (takipçi) ve 18-34 (etkileşen); erkek ağırlıklı.
-  Takipçiler en çok **04-10 UTC** arası çevrimiçi (156-173), en az **15-19 UTC** (63-81).
-- **Hadis Reels'i yine düştü:** v3'te 5 Reels (48 sa+) ort. 416 reach, kayıt/reach %0.77, paylaşım/reach %0.34;
-  v2'nin son üç hadis Reels'i (30 Eki-1 Kas) ort. 864. En iyi hadis 4835 (işleri kolaylaştırmak, 727). Ayetin ~%30'u.
-- **İzleyiciyi tutma:** ayet ve hadis Reels'inde izlenme videonun ~%30'u, atlanma %66-68 (ilk 3 sn kayıp büyük).
-  30 sn üstü 4 ayet Reels'i (Nâs, 49:6, Ayyub 21:83-84, 6:162-163) ort. 3059 reach, kayıt/reach %2.08, izlenme 11.6 sn:
-  uzun video cezalandırılmıyor, güçlü içerikte izlenme süresi uzuyor. 20 sn altı ve 20-30 sn grupları aynı (~1455).
-- **Şablon v3 karşılaştırması (her iki taraf 48 sa+):**
+### En iyi 3 tema (Reels, reach, 9-15 Kasım, 24 sa+)
+1. Eşler arası sevgi ve rahmet (30:21, reel-us, Muaiqly): **7866 reach, 202 kayıt, 331 paylaşım** (hesabın en iyisi)
+2. Kayıp ve kader / geçene üzülmemek (57:22-23, reel-us, Muaiqly): 3266 reach, 80 kayıt, 29 paylaşım (25 saatlik)
+3. Doğru söz söylemek (33:70-71, reel-eu, Sudais): 2231 reach, 35 kayıt, 14 paylaşım
 
-  | Grup | n | Yaş | Ort. reach | Kayıt/reach | Paylaşım/reach | İzlenme | Atlanma |
-  |---|---|---|---|---|---|---|---|
-  | Ayet v2 (30-31 Eki) | 6 | 201-235 sa | 1331 | %1.57 | %0.45 | 6.0 sn | %63.9 |
-  | Ayet v3 (sahibinin seçimleri hariç) | 14 | 58-187 sa | 1484 | %1.65 | %0.63 | 6.0 sn | %67.2 |
-  | Hadis v2 (30 Eki-1 Kas) | 3 | 193-242 sa | 864 | %1.20 | %0.85 | 4.1 sn | %66.0 |
-  | Hadis v3 | 5 | 48-168 sa | 416 | %0.77 | %0.34 | 3.6 sn | %69.2 |
+Yakından izleyenler: Musa'nın duası (28:24): 2085; iyi arkadaş (43:67): 1779 reach, 34 paylaşım; Allah'ın isimleri
+(59:22): 34 paylaşım. 24 saati dolmayanlardan 16:96 (11 sa, 2149) ve 11:6 rızık (8 sa, 1912, 42 kayıt) güçlü
+başladı. Ortak çizgi: aile/ilişki, kayıp ve teselli, "birine gönder" duygusu taşıyan ayetler en çok paylaşılıyor.
 
-  Ayette reach, kayıt ve paylaşım oranı biraz daha iyi, izlenme aynı, **atlanma ~3 puan kötü**. Hesap bu arada 2.5 kat
-  büyüdü, tema/kâri da farklı; erişim farkı şablona bağlanamaz. Atlanmadaki artış ilk karede (kanca + üst etiket)
-  bir şeyin eskisi kadar tutmadığını düşündürüyor ama kanıt zayıf. Hadiste her ölçüm kötüleşti (n=3 vs 5).
-  Şablon için karar önerilmiyor; 16 Kasım'da yeniden bak.
-- **Story (Reels'in kopyası):** 24 saatini dolduran 4 Story ort. 15 reach (8-19); 0 takip, 0 yanıt. Gezinme: 49 ileri
-  dokunma, 9 kaydırma, 8 çıkış. Maliyeti yok, devam.
-- **Kâri (30 Eki+, 48 sa+):** Alafasy n=6 ort. 2372 (Nâs dahil; hariç 1708), atlanma %62.9 (en düşük); Sudais n=3
-  1746; Dosari n=4 1479; Abdul Basit n=3 1340, atlanma %71.0 ve izlenme oranı %23 (en zayıf); Muaiqly n=5 1214.
-  Minshawi ve Husary birer Reels ile en yüksek kayıt oranları (%3.6, %2.6) ama n=1. Ağırlıklar değiştirilmedi
-  (tema etkisi baskın, n küçük); Abdul Basit bir hafta daha zayıf kalırsa ağırlığı 3 → 2 düşünülsün.
+### En zayıf 3 tema (Reels, reach, 9-15 Kasım, 24 sa+)
+1. Allah her şeyi bilir / düşen yaprak (6:59, reel-eu, Muaiqly): 1229
+2. Yusuf kardeşlerini affeder (12:92, reel-pk, Alafasy): 1296
+3. Lokman'ın öğüdü / namaz ve sabır (31:17, reel-eu-am, Ajmi): 1299, atlanma %73.4
 
-### En iyi 3 tema (Reels, reach, 1-8 Kasım, 24 sa+)
-1. Nâs suresi / vesveseden Allah'a sığınmak (114:1-6, reel-pk, sahibinin seçimi): 5691 reach, 74 kayıt, 18 paylaşım
-2. Haberi paylaşmadan önce doğrulamak (49:6, reel-eu): 3408 reach, 80 kayıt, **49 paylaşım** (32 saatlik, hâlâ artıyor)
-3. Allah Latîf'tir / rızık (42:19, reel-eu-am): 2270 reach, 38 kayıt, 21 paylaşım
-
-Yakından izleyenler: Eyyub'un duası / sıkıntı (21:83-84): 1880 reach, **67 kayıt** (%3.6); Felak (113:1-5): 1907;
-Kevser 1827. 2:152 (zikir) 19 saatte 58 paylaşım aldı (henüz 24 saat değil). Ortak çizgi: tanınan kısa sureler,
-peygamber duaları ve günlük hayata doğrudan dokunan pratik ayetler ("birine gönder" etkisi: 49:6, 17:23).
-
-### En zayıf 3 tema (Reels, reach, 1-8 Kasım, 24 sa+)
-1. Kalp ve ameller, görünüş değil (hadis, Müslim 6543): 301
-2. Hayır söyle ya da sus (hadis, İbn Mâce 3971): 327, atlanma %73.8
-3. Yoldan eziyeti kaldırmak (hadis, Buhari 2472): 336
-
-En zayıf üçü de hadis. En zayıf ayet: ölümü hatırlatma (29:57, reel-pk): 1081 reach, 0 paylaşım.
+En zayıflar bile önceki haftanın ayet medyanına (1450) yakın; taban yükseldi. Son hadis Reels'i (Buhârî 6014,
+komşuya iyilik): 1187, v3 hadis ortalamasının (416) çok üstünde.
 
 ### Önerilen tür oranı
-- Şimdilik 3 ayet + 1 hadis Reels; ama hadis slotu ayetin ~%30'unda ve düşüyor. **Sahibine öneri:** reel-us'u bir
-  hafta ayet Reels'i (ya da elle quiz denemesi) olarak denemek; kararı ana ajan/sahibi verir (analist slot türünü
-  değiştirmez).
-- Ayet Reels'inde tanınan kısa sureler, peygamber duaları (Eyyub, Yunus, Adem, Zekeriya) ve pratik, paylaşılabilir
-  ahlak ayetleri (49:6, 17:23) öncelikli. 30 sn üstü güçlü metinlerden kaçınmaya gerek yok.
-- Hadis Reels'inde öfke (Müslim 6643, 1368) ve kolaylaştırma (4835, 727) gibi somut, günlük tavsiyeler soyut
-  ahlak hadislerinden iyi.
-- **Carousel:** üçüncü örnek (4 Kas) de 37 reach (eşik 50). Üç denemede de Reels'in %3'ünün altında. Öneri: sahibi
-  onaylarsa haftalık carousel'i Reels'e (ya da quiz Reels'ine) çevirmek.
-- **Quiz Reels'leri (elle):** iki denemede takip / görüntüleyen %0.54 ve %0.99, ayet Reels'inden yüksek. Haftada 1-2
-  quiz denemesine devam önerilir (3-5 örnekle karar).
+- **4 ayet Reels'i devam** (reel-us'un ayete geçişi veriyle doğrulandı). Hadis Reels'i yalnızca sahibi isterse.
+- Ayet seçiminde öncelik: aile/eş/anne-baba, kayıp-teselli-kader, dua ve sıkıntı, konuşma ahlakı gibi paylaşılabilir
+  temalar. Soyut "Allah her şeyi bilir" türü ayetler daha az paylaşılıyor.
+- **Elle Reels (sistem dışı):** anlatı/dhikr videoları (n=6, 48 sa+) ort. 2220 reach, kayıt/reach %1.58, paylaşım/reach
+  %1.10, izlenme 14 sn, atlanma %57.5: aynı dönemin ayet Reels'iyle (n=24, 1850, %1.64, %1.40, 6.0 sn, %67.4) erişimde
+  eşit ya da iyi, tutmada çok daha iyi. Guess the Surah (n=4) 2368 reach, izlenme 19 sn, yorum 6.8, ama kayıt/paylaşım
+  oranı düşük (%0.61 / %0.25). 3 soruluk trivia (n=2) 1110: zayıf. Öneri: Guess the Surah ve anlatı videolarına devam,
+  3 soru trivia'yı bırakmayı düşünmek.
 
+### Saat önerisi
+**Değişiklik yok.** Son slot değişikliğinden (30 Ekim) 14 gün geçti ama güçlü kanıt yok: en iyi slot (reel-us, 01:30
+UTC) zaten takipçilerin yüksek çevrimiçi olduğu bölgede; diğer üç slot birbirine çok yakın (1422-1663) ve aradaki fark
+tema farkıyla açıklanabilecek boyutta. Erişimin %99'u takipçi olmayanlardan geldiği için `online_followers` belirleyici
+değil. Bir sonraki bakış: reel-eu-am (07:15 UTC) iki haftadır en düşük ortalama erişimde (1493 → 1422) ve en yüksek
+atlanmada; bir hafta daha en altta kalırsa saat denemesi düşünülebilir.
 
 ### Format karşılaştırması: fotoğraf, Reels, carousel (sahibinin isteğiyle ek analiz, 2026-10-29)
 
@@ -117,13 +112,6 @@ de fotoğraf gönderisinden ~25 kat iyi. Carousel 4 Kasım'daki ikinci örnekten
 o da 50 reach'in altında kalırsa Reels'e çevrilmesi düşünülsün.
 
 
-### Saat önerisi
-**Değişiklik yok.** Son saat değişikliği 30 Ekim'de yürürlüğe girdi (reel-eu-am); 14 gün 13 Kasım'da doluyor.
-Kanıt da değişikliği gerektirmiyor: `online_followers` 04-10 UTC'de zirve, 15-19 UTC'de dip gösteriyor, ama en iyi
-iki slot (reel-eu 18:00 UTC, reel-pk 15:30 UTC) tam dip saatlerde. Erişimin %99'u takipçi olmayanlardan geldiği için
-takipçilerin çevrimiçi saati belirleyici değil. Hindistan/Pakistan akşamı (reel-pk) kitleye uygun. 16 Kasım'da
-reel-us'un (01:30 UTC) hadis mi saat mi yüzünden zayıf olduğunu ayırmak için önce tür denemesi önerilir.
-
 ## Elle yapılan testler (sistem dışı; 10 Kasım'dan beri nightly `manual_posts` olarak izler)
 
 Bu paylaşımlar `history/posted.jsonl`'da yok. 10 Kasım'dan itibaren gece toplama bunları kendisi bulur (`insights.json` → `manual_posts`); ilk iki satır Instagram'ın gönderi istatistiklerinden elle alındı.
@@ -147,6 +135,35 @@ Quiz 2 (uygulama, 2026-11-05 20:25): ortalama izlenme 16 sn, geçme %58,5 (tipik
 (ikisi de tipikten yüksek), beğeni %8,0 ve kayıt %0,5 (tipikten düşük); 3. saniyede %46, sonra ~%25 sona kadar; 27. saatte
 hâlâ yükseliyor (tipik Reels 1. günden sonra düzleşiyor). Takip / görüntüleyen %0,99: şimdiye kadarki en yüksek Reels.
 
+**Nightly `manual_posts` (2026-11-16 02:23 UTC ölçümü; takip Instagram API'de gönderi başına gelmiyor):**
+
+| Paylaşım (UTC) | İlk satır | Yaş | Reach | Görüntüleme | Beğeni | Yorum | Kayıt | Paylaşım | İzlenme | Atlanma |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-03 14:39 | Guess the surah 🎧 | 300 sa | 1737 | 2003 | 116 | 7 | 8 | 2 | 10.9 sn | %62.8 |
+| 2026-11-04 14:19 | Can you name all 4 Surahs? 🎧 | 276 sa | 3607 | 4261 | 302 | 10 | 18 | 16 | 17.1 sn | %58.2 |
+| 2026-11-05 18:52 | Can you name all 4 surahs? 🎧 | 248 sa | 2170 | 2587 | 194 | 10 | 25 | 8 | 27.6 sn | %54.2 |
+| 2026-11-07 13:33 | Can you name all 4 surahs? 🎧 | 205 sa | 2681 | 3189 | 204 | 13 | 14 | 5 | 22.3 sn | %53.7 |
+| 2026-11-07 20:04 | 3 questions from the Qur'an. 5 seconds each. | 198 sa | 1106 | 1244 | 66 | 2 | 6 | 3 | 12.2 sn | %65.7 |
+| 2026-11-08 13:54 | 3 questions from the Qur'an. 5 seconds each. | 180 sa | 1114 | 1312 | 71 | 0 | 9 | 1 | 12.8 sn | %69.4 |
+| 2026-11-09 05:54 | Did you do your dhikr today? 📿 Save it, like it, | 164 sa | 2306 | 2575 | 174 | 0 | 48 | 31 | 14.8 sn | %76.6 |
+| 2026-11-09 10:46 | Can you name all 4 Surahs? The last one is the h | 160 sa | 2984 | 3499 | 245 | 6 | 20 | 7 | 20.0 sn | %59 |
+| 2026-11-10 05:08 | He sent a heart. She sent this back. | 141 sa | 2450 | 2764 | 189 | 0 | 32 | 17 | 9.9 sn | %52.1 |
+| 2026-11-10 20:41 | Can you name all 4 Surahs? The last one is hard. | 126 sa | 2124 | 2420 | 166 | 6 | 12 | 7 | 15.4 sn | %61.4 |
+| 2026-11-11 03:53 | Can you live in the same house as someone, and s | 119 sa | 1700 | 1987 | 75 | 0 | 22 | 8 | 26.5 sn | %38 |
+| 2026-11-11 12:12 | He spoke in the middle of the prayer. What did t | 110 sa | 1693 | 1928 | 82 | 0 | 23 | 7 | 20.5 sn | %51.3 |
+| 2026-11-12 08:16 | Can you name all 4 Surahs? The last one is hard. | 90 sa | 1682 | 1954 | 131 | 2 | 12 | 5 | 19.6 sn | %58.1 |
+| 2026-11-13 05:49 | Half asleep at Fajr. Buried in work at Dhuhr. Wo | 69 sa | 2144 | 2461 | 209 | 0 | 29 | 22 | 5.8 sn | %60 |
+| 2026-11-13 12:15 | Allah reminds you what your mother went through | 62 sa | 3028 | 3380 | 298 | 0 | 56 | 61 | 6.7 sn | %67 |
+| 2026-11-14 12:30 | Can you name all 4 Surahs? The last one is hard. | 38 sa | 1818 | 2019 | 155 | 2 | 5 | 21 | 13.2 sn | %61.8 |
+| 2026-11-14 19:46 | If you don't turn a person lying still, their bo | 31 sa | 2066 | 2354 | 90 | 1 | 23 | 11 | 17.4 sn | %48.7 |
+
+Karşılaştırma (7-14 Kas, 48 sa+): Guess the Surah n=4 ort. 2368 reach, izlenme 19.3 sn, atlanma %58.0, yorum 6.8,
+kayıt/reach %0.61, paylaşım/reach %0.25; anlatı/dhikr/animasyon n=6 ort. 2220, izlenme 14.0 sn, atlanma %57.5, kayıt/reach
+%1.58, paylaşım/reach %1.10; 3 soru trivia n=2 ort. 1110; aynı dönemin ayet Reels'i n=24 (49-211 sa) ort. 1850, izlenme
+6.0 sn, atlanma %67.4, kayıt/reach %1.64, paylaşım/reach %1.40. Elle videolar izleyiciyi çok daha iyi tutuyor; Guess the
+Surah yorum getiriyor ama kayıt/paylaşım getirmiyor; anlatı videoları ayet Reels'i kadar paylaşılıyor (anne 13 Kas: 3028
+reach, 61 paylaşım).
+
 ## Değişiklik notları
 - 2026-10-26: İlk haftalık analiz. Saat değişikliği yok (kanıt zayıf, online_followers yok).
 - 2026-10-29: İkinci haftalık analiz. Ayet Reels'i yeni slotlarda ~5 kat büyüdü; saat değişikliği yok (slotlar 27 ve 30 Ekim'de değişti, 14 gün dolmadı).
@@ -156,3 +173,4 @@ hâlâ yükseliyor (tipik Reels 1. günden sonra düzleşiyor). Takip / görünt
 - 2026-11-09: Dördüncü haftalık analiz. Takipçi 121 → 335 (net +202/hafta; ilk yazılan +398 hatalı veriydi, 2026-11-10'da düzeltildi), erişimin %99'u keşiften. En iyi temalar Nâs, 49:6 (haber doğrulama), 42:19; en zayıf üçü hadis Reels'i (v3'te ort. 416). Şablon v3: ayette atlanma ~3 puan kötü, diğer ölçümler aynı ya da iyi; karar yok. Carousel üçüncü kez eşiğin altında (37). 49:12 Reels'inin istatistiği yok (S-015). Saat değişikliği yok (14 gün 13 Kasım'da doluyor; online saatler en iyi slotlarla çelişiyor), config.yaml'a dokunulmadı.
 - 2026-11-10 (sahibinin kararları): S-015 kapatıldı: 2026-11-06_reel-eu (49:12) Reels'ini sahibi Instagram'ın "ses kullanılamıyor" uyarısı yüzünden arşive aldı; istatistiği bu yüzden boş, analizlere katma. **reel-us 2026-11-09 slotundan (10 Kasım 04:30 İstanbul) itibaren ayet**; kuyruktaki iki hadis (İbn Mâce 1847, Buhârî 13) çıkarıldı (hadis Reels'i v3'te ayetin ~%30'unda kaldı; hadis artık yalnızca sahibi isteyince). **Haftalık carousel kapatıldı** (üç denemede de 50 erişimin altında). 16 Kasım analizinde reel-us'un ayet olarak diğer slotlarla karşılaştırmasını yap (saat etkisini tür etkisinden ayırmak için).
 - 2026-11-10: **Hesap istatistikleri düzeltildi** (sahibinin fark ettiği hata). `insights.py` günlük sayıları Instagram'dan "bu gece yarısından ertesi gece yarısına" diye istiyordu; Instagram bitiş gününü de dahil saydığı için her gün ertesi günün takip, erişim, görüntüleme ve etkileşen sayılarını da içeriyordu. Artık her gün tek başına ölçülüyor, 20 Ekim'den beri bütün günler yeniden çekildi ve her çalışmada takipçi sayısıyla ve Instagram'ın kendi günlük serisiyle karşılaştırılıyor (tutmazsa açık sorun). Gönderi bazlı sayılar (reach, kayıt, izlenme, atlanma) bu hatadan etkilenmedi. 1.000 takipçi-dışı erişim başına takip oranı ~4.1 olarak aynı kaldı (iki taraf birlikte şişmişti).
+- 2026-11-16: Beşinci haftalık analiz. Takipçi 335 → 601 (8-14 Kas net +257; takipçi kaydıyla tutarlı). **reel-us ayete geçince en iyi slot oldu** (48 sa+ ort. 3300, 30:21 hariç 1778; diğer slotlar 1532): eski zayıflık saatten değil hadisten. En iyi temalar 30:21 (7866 reach, 331 paylaşım), 57:22-23, 33:70-71; en zayıf 6:59, 12:92, 31:17. Ayet atlanması %66.2 → %68.7. Şablon v3: karar yok. Kâri ağırlıkları değişmedi (Abdul Basit 3 → 2 önerisi duruyor). Elle `manual_posts` tablosu eklendi. Saat değişikliği yok (14 gün doldu ama güçlü kanıt yok), config.yaml'a dokunulmadı.
