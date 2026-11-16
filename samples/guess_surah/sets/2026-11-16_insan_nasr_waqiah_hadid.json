@@ -1,0 +1,108 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:76:9",
+  "verses": [
+   "076009"
+  ],
+  "options": [
+   [
+    "Al-Balad",
+    "البلد"
+   ],
+   [
+    "Al-Insan",
+    "الإنسان"
+   ],
+   [
+    "Al-Muddaththir",
+    "المدثر"
+   ],
+   [
+    "Al-Layl",
+    "الليل"
+   ]
+  ],
+  "answer": 1
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:110:3",
+  "verses": [
+   "110003"
+  ],
+  "options": [
+   [
+    "Al-Kawthar",
+    "الكوثر"
+   ],
+   [
+    "Al-Asr",
+    "العصر"
+   ],
+   [
+    "Quraysh",
+    "قريش"
+   ],
+   [
+    "An-Nasr",
+    "النصر"
+   ]
+  ],
+  "answer": 3
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:56:77-79",
+  "verses": [
+   "056077",
+   "056078",
+   "056079"
+  ],
+  "options": [
+   [
+    "Al-Waqi'ah",
+    "الواقعة"
+   ],
+   [
+    "At-Tur",
+    "الطور"
+   ],
+   [
+    "Al-Buruj",
+    "البروج"
+   ],
+   [
+    "Abasa",
+    "عبس"
+   ]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:57:3",
+  "verses": [
+   "057003"
+  ],
+  "options": [
+   [
+    "Al-Hashr",
+    "الحشر"
+   ],
+   [
+    "Al-Mulk",
+    "الملك"
+   ],
+   [
+    "Al-Hadid",
+    "الحديد"
+   ],
+   [
+    "Al-Mujadila",
+    "المجادلة"
+   ]
+  ],
+  "answer": 2
+ }
+]
