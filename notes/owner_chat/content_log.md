@@ -41,6 +41,9 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 **Animasyon · İngilizce TTS**
 - 14 Kas, Husary (tilavet) + TTS bm_george: Al-Kahf 18:18 (sağa sola çevrilme, köpek) — paylaşıldı.
 
+**Ayet Reels · kelime kelime**
+- 16 Kas, Alafasy: Az-Zukhruf 43:68-70 (eşlerinizle birlikte cennete) — paylaşıldı.
+
 ## Ayrıntılı kayıt
 
 İstatistikler `history/insights.json` → `manual_posts`, 2026-11-11 02:16 UTC okuması (yaş = o ana kadar).
@@ -65,6 +68,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-13 02:39 | Vaaz sesi + çizgi illüstrasyon (2:51), Şeyh Kişk "Ölüm" | Hadîsü's-Sûr (zayıf), Tekvîr 81, Mü'min 40:16 | Who will remain when everything is gone? (önce trial Reels, silindi; sonra normal Reels) | — | — | ~10 | — | — | — | — | — |
 | 2026-11-14 12:30 | Guess the Surah (79,3 sn) | 12:86, 109:6, 91:9-10, 14:7 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-14 19:46 | Animasyon · İngilizce TTS (162,1 sn) | Kehf 18:18 · Husary | If you don't turn a person lying still, their body breaks down under its own weight. | — | — | — | — | — | — | — | — |
+| 2026-11-16 12:00 | Ayet Reels, kelime kelime (30,5 sn) | Zuhruf 43:68-70 · Alafasy | Allah's invitation to you and your spouse | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -204,4 +208,19 @@ Recitation: Mahmoud Khalil Al-Husary
 Follow @thehalalalgorithm for more.
 
 #quran #surahkahf #alkahf #peopleofthecave #quranverses #islam #muslim #husary
+```
+
+**Zuhruf 43:68-70, 16 Kasım** (sahibinin panelde onayladığı caption; 12:00 UTC'de paylaşıldı)
+```
+Allah's invitation to you and your spouse
+
+On that Day, Allah's believing servants are told there is no fear for them and no grief, and then: enter Paradise, you and your spouses, rejoicing. Pray that you enter it together.
+
+Surah Az-Zukhruf 43:68-70
+
+Send this to your spouse, and make dua for Jannah together
+
+#marriageinislam #muslimcouple #jannah #quranreels
+
+Recitation: Mishary Alafasy
 ```
