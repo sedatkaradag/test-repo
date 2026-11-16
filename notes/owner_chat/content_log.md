@@ -18,6 +18,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 - 10 Kas, Alafasy: Al-Qamar 54:17 · Al-'Asr 103:2-3 · Al-Fajr 89:27-28 · Luqman 31:18
 - 12 Kas, Alafasy: Ta-Ha 20:25-28 · Az-Zalzalah 99:7-8 · Al-Fil 105:3-4 · Ghafir 40:60
 - 14 Kas, Alafasy: Yusuf 12:86 · Al-Kafirun 109:6 · Ash-Shams 91:9-10 · Ibrahim 14:7
+- 16 Kas, Alafasy: Al-Insan 76:9 · An-Nasr 110:3 · Al-Waqi'ah 56:77-79 · Al-Hadid 57:3
 - Denenip kullanılmayan: Az-Zumar 39:53 (okuma uzun, video 111 sn oldu; yerine 54:17). Kullanılabilir.
 
 **Trivia (Qur'an Quiz)**
@@ -69,6 +70,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-14 12:30 | Guess the Surah (79,3 sn) | 12:86, 109:6, 91:9-10, 14:7 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-14 19:46 | Animasyon · İngilizce TTS (162,1 sn) | Kehf 18:18 · Husary | If you don't turn a person lying still, their body breaks down under its own weight. | — | — | — | — | — | — | — | — |
 | 2026-11-16 12:00 | Ayet Reels, kelime kelime (30,5 sn) | Zuhruf 43:68-70 · Alafasy | Allah's invitation to you and your spouse | — | — | — | — | — | — | — | — |
+| 2026-11-16 19:34 | Guess the Surah (86,8 sn) | 76:9, 110:3, 56:77-79, 57:3 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -223,4 +225,20 @@ Send this to your spouse, and make dua for Jannah together
 #marriageinislam #muslimcouple #jannah #quranreels
 
 Recitation: Mishary Alafasy
+```
+
+**Guess the Surah, 16 Kasım** (sahibinin panelde onayladığı caption; 19:34 UTC'de paylaşıldı)
+```
+Can you name all 4 Surahs? The last one is hard.
+
+Listen to the verse, pick your answer before the timer ends, then see if you got it right.
+
+Comment your score below (?/4) and send this to a friend to compare.
+
+Verses: Al-Insan 76:9 · An-Nasr 110:3 · Al-Waqi'ah 56:77-79 · Al-Hadid 57:3
+Recitation: Mishary Rashid Alafasy
+
+Follow @thehalalalgorithm for more.
+
+#quran #guessthesurah #quranquiz #islamicquiz #quranverses #islam #muslim #alafasy
 ```
