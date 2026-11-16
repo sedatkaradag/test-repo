@@ -115,5 +115,10 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-12T05:48:03+00:00"
+  },
+  "dismissed": {
+    "at": "2026-11-16T08:05:00Z",
+    "by": "owner",
+    "why": "kaçırılan gönderi panelden kaldırıldı (S-017)"
   }
 }

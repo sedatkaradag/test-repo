@@ -32,6 +32,8 @@ def main(out):
         item = json.loads(p.read_text(encoding="utf-8"))
         if item.get("type") == "story" and item.get("source_slot"):
             continue   # shown as the Story of its post (source row: story_video_url, story_audio)
+        if item.get("dismissed"):
+            continue   # the owner removed it from the panel (e.g. an old missed post); the queue file stays as the record
         row = {k: item[k] for k in FIELDS if k in item}
         if (item.get("type") == "reel" and item.get("publish_at") and item.get("story", True)
                 and reel_story_on(cfg, item)):

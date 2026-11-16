@@ -326,7 +326,8 @@ Her çalışmanın (günlük, haftalık, ana ajan değişiklikleri) sonunda:
      Tasarımcı, Analist, Ana ajan). Belge yoksa `{"day": "...", "entries": [...]}` ile oluştur.
 4. 14 günden eski `queue/*` panel satırlarını ve 30 günden eski `log/*` belgelerini sil.
 
-Panel güncellemesi başarısız olursa işi durdurma; raporda belirt.
+Panel güncellemesi başarısız olursa işi durdurma; 2 dakika arayla 2 kez yeniden dene, yine olmazsa
+"Panel senkronu" bölümündeki "Panele yazılamazsa" adımıyla sorunu repoya kaydet ve raporda belirt.
 
 Panel, yayınlanan gönderiyi paylaşımdan sonra 24 saat "Kuyruktaki gönderiler"de
 "Yayında" olarak gösterir; sonra yalnızca "Yayınlananlar" tablosunda kalır (sayfa kendisi yapar).
@@ -335,21 +336,31 @@ Panel, yayınlanan gönderiyi paylaşımdan sonra 24 saat "Kuyruktaki gönderile
 
 GitHub yayıncısı panele yazamaz; paylaşımları repoya kaydeder. Bu kısa çalışma repodaki
 durumu panele taşır ve yorum yanıtlarını yürütür. İçerik üretmez, kuyruğu, görselleri veya
-config'i değiştirmez; yalnızca `comments/outbox/` için commit atar.
+config'i değiştirmez; yalnızca `comments/outbox/` ve (aşağıdaki "Panele yazılamazsa" durumunda)
+`notes/issues.json` için commit atar.
+
+**Panele yazılamazsa** (yazma ya da yükleme onay/izin, ağ veya sunucu hatasıyla reddedilirse):
+2 dakika bekleyip aynı yazımı en fazla 2 kez daha dene. Yine olmazsa panele yazmayı bırak, kalan
+karşılaştırmaları yine yap ve sorunu repoya kaydet:
+`python3 scripts/issues.py add --kind publish --source "Panel senkronu <saat dilimi>, <tarih>" --ref "panel" --title "Panel senkronu panele yazamadı" --detail "<hata metni; panelde eksik kalanlar: yayına geçen gönderiler, yüklenemeyen videolar, yapılamayan kontroller>"`
+→ yalnızca `notes/issues.json`'ı commit + push et. Sonraki senkron ya da günlük çalışma bu kaydı ve
+eksikleri panele taşır. Raporun en üstüne "Panel güncellenemedi" yaz.
 
 1. `git pull` (repo yoksa Kurulum'daki gibi klonla).
 2. `python3 scripts/panel_rows.py /tmp/panel`.
 3. Panelden `queue` koleksiyonunu `ArtifactData list` ile oku. Her repo satırı için yalnızca
    `status`, `media_id`, `posted_at`, `error`, `story_kind` alanlarından farklı olanları `update` ile yaz
    (`if_version` ver; `image_url`, `story_url`, `video_url`, `card_urls`'e dokunma; repoda
-   olmayan alanı yazma). Panelde hiç olmayan bir satır varsa ekleme, raporda belirt.
+   olmayan alanı yazma). Panelde hiç olmayan bir satır varsa ekleme, raporda belirt
+   (`panel_rows.py` sahibinin panelden kaldırdığı `dismissed` satırları zaten üretmez).
+   Repoda açık olup panelde olmayan sorunlar için `issues/<id>` ← `/tmp/panel/issues/<id>.json` ekle.
    Tüm yazımlar tek `batch`.
 4. Bu çalışmada "Yayında"ya geçen her gönderi için `log/<YYYY-MM-DD>` belgesine
    `{"ts": <posted_at>, "agent": "Yayıncı", "text": "<referans> yayınlandı (<İstanbul saati>)…"}`
    ekle (Story/carousel/Reels olduğunu belirt). Gün belgesi `posted_at`'in UTC günüdür.
 5. Sorun kontrolü: `publish_at` 20 dakikadan eski olup repoda hâlâ `ready`, `publishing` veya
    `audio_pending` olan, `error`'unda "recitation could not be added" yazan `hold` Reels, ya da
-   `failed` / `missed` olan gönderi var mı? **Tilavet eklenen Reels:** repoda `audio.done: true`
+   `failed` / `missed` olan gönderi var mı? (`dismissed` alanı olanları sahibi gördü ve kaldırdı: sayma.) **Tilavet eklenen Reels:** repoda `audio.done: true`
    olup panel satırında `audio.done` olmayan her Reels ya da Story öğesi için `queue/<slot>.mp4`'ü
    panele yükle, satırın `video_url`, `audio`, `status`, `publish_at` ve `caption` alanlarını
    güncelle; `story_audio.done` olup panelde `story_video_url` olmayan gönderiler için

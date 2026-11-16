@@ -233,7 +233,9 @@
     "detail": "16 Kas 07:32 UTC Berlin senkronunda panele yazma ve video yükleme her denemede araç onayı hatasıyla reddedildi (platform tarafı; aynı sabah günlük içerik ve analist panele yazabildi). Senkron yalnızca comments/outbox commit edebildiği için sorunu repoya da kaydedemedi; panel ve sorun kaydı boş kaldı. Ana ajan 10:56'da senkronu elle tamamladı (2:183 yayında, 17 Kas 4 Reels videosu yüklendi, zamanlama uyumlu). Ayrıca 15 Kas Karachi senkronu kullanım limiti yüzünden hiç çalışmadı. Öneri (sahibin onayını bekliyor): panel yazımı başarısız olursa senkron 2 kez bekleyip yeniden denesin; yine olmazsa sorunu notes/issues.json'a yazıp commit etsin (sonraki çalışma panele taşır).",
     "ref": "panel senkronu",
     "source": "Panel senkronu Europe/Berlin, 2026-11-16 (ana ajan kaydetti)",
-    "status": "open",
-    "opened_at": "2026-11-16T07:58:32Z"
+    "status": "closed",
+    "opened_at": "2026-11-16T07:58:32Z",
+    "closed_at": "2026-11-16T08:03:12Z",
+    "resolution": "Düzeltildi (sahibi onayladı, 16 Kas): senkron panele yazamazsa 2 dk arayla 2 kez yeniden deniyor; yine olmazsa sorunu notes/issues.json'a yazıp commit ediyor, sonraki çalışma kaydı ve eksikleri panele taşıyor. Günlük çalışma için de aynı kural. 16 Kas senkronu elle tamamlandı. Platformdaki onay hatası tek seferlik; aynı saatlerde diğer çalışmalar ve ana ajan panele yazabildi."
   }
 ]
