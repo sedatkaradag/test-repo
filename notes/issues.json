@@ -225,5 +225,15 @@
     "opened_at": "2026-11-14T16:48:15Z",
     "closed_at": "2026-11-14T19:44:06Z",
     "resolution": "Sahte alarm: Instagram biten bir günün (13 Kasım) takip sayısını bir süre 0 gösteriyor, kontrol bunu gerçek sayı sanıyordu (S-016/S-018 de aynı sebep). Takipçi sayısında sorun yok. Düzeltme (sahibi onayladı, 14 Kas): insights.py son 2 gün içinde 0 görünen günü ve sonrasını 'henüz ölçülmedi' sayıyor, Instagram doldurunca kontrol ediyor; gerçek tutarsızlık ve 2 günden eski 0 yine alarm verir (gerçek verilerle denendi)."
+  },
+  {
+    "id": "S-020",
+    "kind": "other",
+    "title": "Senkron panele yazamayınca sorun kaydı da açılamıyor",
+    "detail": "16 Kas 07:32 UTC Berlin senkronunda panele yazma ve video yükleme her denemede araç onayı hatasıyla reddedildi (platform tarafı; aynı sabah günlük içerik ve analist panele yazabildi). Senkron yalnızca comments/outbox commit edebildiği için sorunu repoya da kaydedemedi; panel ve sorun kaydı boş kaldı. Ana ajan 10:56'da senkronu elle tamamladı (2:183 yayında, 17 Kas 4 Reels videosu yüklendi, zamanlama uyumlu). Ayrıca 15 Kas Karachi senkronu kullanım limiti yüzünden hiç çalışmadı. Öneri (sahibin onayını bekliyor): panel yazımı başarısız olursa senkron 2 kez bekleyip yeniden denesin; yine olmazsa sorunu notes/issues.json'a yazıp commit etsin (sonraki çalışma panele taşır).",
+    "ref": "panel senkronu",
+    "source": "Panel senkronu Europe/Berlin, 2026-11-16 (ana ajan kaydetti)",
+    "status": "open",
+    "opened_at": "2026-11-16T07:58:32Z"
   }
 ]
