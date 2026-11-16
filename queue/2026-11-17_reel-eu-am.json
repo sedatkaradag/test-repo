@@ -1,0 +1,115 @@
+{
+  "entry_id": "quran:20:114",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Taa-Haa 20:114",
+  "slot": "2026-11-17_reel-eu-am",
+  "publish_at": "2026-11-17T07:16:52Z",
+  "local_slot": "2026-11-17 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-17_reel-eu-am.jpg",
+  "video": "queue/2026-11-17_reel-eu-am.mp4",
+  "cover": "queue/2026-11-17_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "One short dua for every student\n\nAllah ends this verse with a dua to say: “My Lord, increase me in knowledge.” Carry it into every class, every page and every exam today.\n\nSurah Taa-Haa 20:114\n\nSay it once before you open your books today.\n\n#studentlife #duaforknowledge #seekknowledge #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "So Exalted is Allah, the True Sovereign. Do not hasten to [recite] the Qur’an before its revelation to you is concluded, and say, “My Lord, increase me in knowledge.” (Surah Taa-Haa 20:114)",
+  "theme": "knowledge / dua for increase in knowledge",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked mark by mark, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:20:114",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "One short dua for every student",
+    "hook_lines": [
+      "One short dua for every",
+      "student"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "020114",
+        "lines": [
+          "فَتَعَٰلَى ٱللَّهُ ٱلۡمَلِكُ ٱلۡحَقُّۗ وَلَا تَعۡجَلۡ",
+          "بِٱلۡقُرۡءَانِ مِن قَبۡلِ أَن يُقۡضَىٰٓ إِلَيۡكَ",
+          "وَحۡيُهُۥۖ وَقُل رَّبِّ زِدۡنِي عِلۡمٗا ١١٤"
+        ],
+        "y": 611.2,
+        "meal": [
+          "So Exalted is Allah, the True Sovereign. Do not",
+          "hasten to [recite] the Qur’an before its revelation",
+          "to you is concluded, and say, “My Lord, increase",
+          "me in knowledge.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1109.2,
+    "full": "So Exalted is Allah, the True Sovereign. Do not hasten to [recite] the Qur’an before its revelation to you is concluded, and say, “My Lord, increase me in knowledge.”",
+    "full_lines": [
+      "So Exalted is Allah, the True Sovereign. Do not",
+      "hasten to [recite] the Qur’an before its revelation",
+      "to you is concluded, and say, “My Lord, increase",
+      "me in knowledge.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Taa-Haa 20:114",
+    "ref_y": 1385.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Say it once before you open your books today.",
+    "cta_lines": [
+      "Say it once before you open your books today."
+    ],
+    "cta_size": 48,
+    "line_y": 1443.2,
+    "handle_y": 1523.2,
+    "handle_size": 27
+  },
+  "layout_hash": "32a9a3b1ae2db943426f3f01",
+  "created_at": "2026-11-16T05:44:50+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "020114"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "entry_id": "quran:15:49",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hijr 15:49",
+  "slot": "2026-11-17_reel-eu",
+  "publish_at": "2026-11-17T18:01:37Z",
+  "local_slot": "2026-11-17 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-17_reel-eu.jpg",
+  "video": "queue/2026-11-17_reel-eu.mp4",
+  "cover": "queue/2026-11-17_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Forgiveness: the message Allah wants His servants to hear\n\nAllah commands that this be told to His servants. Whatever you carried into today, turn back to Him.\n\nSurah Al-Hijr 15:49\n\nSend this to someone who thinks they have gone too far.\n\n#forgiveness #istighfar #ghafoor #surahhijr #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "Inform My slaves that I am indeed the All-Forgiving, the Most Merciful (Surah Al-Hijr 15:49)",
+  "theme": "forgiveness / Allah is the All-Forgiving, the Most Merciful",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked mark by mark, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:15:49",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Forgiveness: the message Allah wants His servants to hear",
+    "hook_lines": [
+      "Forgiveness: the message",
+      "Allah wants His servants to",
+      "hear"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "015049",
+        "lines": [
+          "نَبِّئۡ عِبَادِيٓ أَنِّيٓ أَنَا ٱلۡغَفُورُ ٱلرَّحِيمُ ٤٩"
+        ],
+        "y": 827.8,
+        "meal": [
+          "Inform My slaves that I am indeed the",
+          "All-Forgiving, the Most Merciful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1013.8,
+    "full": "Inform My slaves that I am indeed the All-Forgiving, the Most Merciful.",
+    "full_lines": [
+      "Inform My slaves that I am indeed the",
+      "All-Forgiving, the Most Merciful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Hijr 15:49",
+    "ref_y": 1163.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who thinks they have gone too far.",
+    "cta_lines": [
+      "Send this to someone who thinks they have",
+      "gone too far."
+    ],
+    "cta_size": 48,
+    "line_y": 1221.8,
+    "handle_y": 1367.8,
+    "handle_size": 27
+  },
+  "layout_hash": "1ad14e59718017a175370dff",
+  "created_at": "2026-11-16T05:45:22+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "015049"
+    ],
+    "done": false
+  }
+}

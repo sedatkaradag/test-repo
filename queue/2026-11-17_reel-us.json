@@ -1,0 +1,111 @@
+{
+  "entry_id": "quran:52:48",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah At-Tur 52:48",
+  "slot": "2026-11-17_reel-us",
+  "publish_at": "2026-11-18T01:26:32Z",
+  "local_slot": "2026-11-17 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-17_reel-us.jpg",
+  "video": "queue/2026-11-17_reel-us.mp4",
+  "cover": "queue/2026-11-17_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "If patience feels heavy tonight, read this\n\nAllah speaks these words to His Prophet ﷺ. Read them slowly and let them settle your heart before you sleep.\n\nSurah At-Tur 52:48\n\nSave this for the night you need it most.\n\n#sabr #patienceinislam #surahtur #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Be patient [O Prophet] with your Lord’s decree, for indeed you are under Our [watchful] Eyes. And glorify the praises of your Lord when you rise (Surah At-Tur 52:48)",
+  "theme": "comfort in patience / under Allah's watchful Eyes",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked mark by mark, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:52:48",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "If patience feels heavy tonight, read this",
+    "hook_lines": [
+      "If patience feels heavy",
+      "tonight, read this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "052048",
+        "lines": [
+          "وَٱصۡبِرۡ لِحُكۡمِ رَبِّكَ فَإِنَّكَ بِأَعۡيُنِنَاۖ",
+          "وَسَبِّحۡ بِحَمۡدِ رَبِّكَ حِينَ تَقُومُ ٤٨"
+        ],
+        "y": 673.6,
+        "meal": [
+          "Be patient [O Prophet] with your Lord’s decree,",
+          "for indeed you are under Our [watchful] Eyes.",
+          "And glorify the praises of your Lord when you",
+          "rise."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1015.6,
+    "full": "Be patient [O Prophet] with your Lord’s decree, for indeed you are under Our [watchful] Eyes. And glorify the praises of your Lord when you rise.",
+    "full_lines": [
+      "Be patient [O Prophet] with your Lord’s decree,",
+      "for indeed you are under Our [watchful] Eyes.",
+      "And glorify the praises of your Lord when you",
+      "rise."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah At-Tur 52:48",
+    "ref_y": 1291.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save this for the night you need it most.",
+    "cta_lines": [
+      "Save this for the night you need it most."
+    ],
+    "cta_size": 48,
+    "line_y": 1349.6,
+    "handle_y": 1429.6,
+    "handle_size": 27
+  },
+  "layout_hash": "2c55ee22eae6293dd8d9961c",
+  "created_at": "2026-11-16T05:45:43+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "052048"
+    ],
+    "done": false
+  }
+}

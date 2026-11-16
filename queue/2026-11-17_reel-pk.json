@@ -1,0 +1,101 @@
+{
+  "entry_id": "quran:29:2",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ankaboot 29:2",
+  "slot": "2026-11-17_reel-pk",
+  "publish_at": "2026-11-17T15:34:07Z",
+  "local_slot": "2026-11-17 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-17_reel-pk.jpg",
+  "video": "queue/2026-11-17_reel-pk.mp4",
+  "cover": "queue/2026-11-17_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Wondering why life keeps testing you?\n\nAllah asks this question in the Qur'an. Read it slowly and think about the test you are facing right now.\n\nSurah Al-Ankaboot 29:2\n\nWhich test are you asking Allah to help you through?\n\n#tests #trialsinlife #surahankabut #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Do people think once they say, “We believe,” that they will be left without being put to the test (Surah Al-Ankaboot 29:2)",
+  "theme": "tests / believers will be tested",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked mark by mark, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:29:2",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Wondering why life keeps testing you?",
+    "hook_lines": [
+      "Wondering why life keeps",
+      "testing you?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "029002",
+        "lines": [
+          "أَحَسِبَ ٱلنَّاسُ أَن يُتۡرَكُوٓاْ أَن يَقُولُوٓاْ",
+          "ءَامَنَّا وَهُمۡ لَا يُفۡتَنُونَ ٢"
+        ],
+        "y": 697.6,
+        "meal": [
+          "Do people think once they say, “We believe,” that",
+          "they will be left without being put to the test?"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "Do people think once they say, “We believe,” that they will be left without being put to the test?",
+    "full_lines": [
+      "Do people think once they say, “We believe,” that",
+      "they will be left without being put to the test?"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Ankaboot 29:2",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which test are you asking Allah to help you through?",
+    "cta_lines": [
+      "Which test are you asking Allah to help you",
+      "through?"
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "cb928cec44be931cebaf1eef",
+  "created_at": "2026-11-16T05:45:08+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "029002"
+    ],
+    "done": false
+  }
+}
