@@ -17,7 +17,7 @@
   "review": "approve: Arabic checked word by word on card and Reel frame; English, reference and caption correct",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -127,6 +127,15 @@
     "ayahs": [
       "003185"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 31.1,
+    "video_seconds": 34.3,
+    "verse_seconds": [
+      31.06
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-17T05:48:42+00:00"
   }
 }
