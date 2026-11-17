@@ -1,0 +1,110 @@
+{
+  "entry_id": "quran:17:53",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Israa 17:53",
+  "slot": "2026-11-18_reel-eu-am",
+  "publish_at": "2026-11-18T07:16:24Z",
+  "local_slot": "2026-11-18 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-18_reel-eu-am.jpg",
+  "video": "queue/2026-11-18_reel-eu-am.mp4",
+  "cover": "queue/2026-11-18_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Good speech: one instruction for every chat today\n\nAllah gives one clear instruction about the way we talk to each other. Let it shape every message, call and conversation you have today.\n\nSurah Al-Isra 17:53\n\nPick one conversation today and choose the best words for it.\n\n#speech #goodwords #muslimhabits #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Tell My slaves that they should say what is best, for Satan sows discord among them. Indeed, Satan is a sworn enemy to mankind (Surah Al-Israa 17:53)",
+  "theme": "speech / say what is best",
+  "review": "approve: Arabic checked word by word on card and Reel frame; English, reference and caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:17:53",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Good speech: one instruction for every chat today",
+    "hook_lines": [
+      "Good speech: one",
+      "instruction for every chat",
+      "today"
+    ],
+    "hook_size": 82,
+    "arabic_size": 66,
+    "verses": [
+      {
+        "ayah": "017053",
+        "lines": [
+          "وَقُل لِّعِبَادِي يَقُولُواْ ٱلَّتِي هِيَ أَحۡسَنُۚ إِنَّ",
+          "ٱلشَّيۡطَٰنَ يَنزَغُ بَيۡنَهُمۡۚ إِنَّ ٱلشَّيۡطَٰنَ كَانَ",
+          "لِلۡإِنسَٰنِ عَدُوّٗا مُّبِينٗا ٥٣"
+        ],
+        "y": 711.4,
+        "meal": [
+          "Tell My slaves that they should say what is best,",
+          "for Satan sows discord among them. Indeed,",
+          "Satan is a sworn enemy to mankind."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1125.4,
+    "full": "Tell My slaves that they should say what is best, for Satan sows discord among them. Indeed, Satan is a sworn enemy to mankind.",
+    "full_lines": [
+      "Tell My slaves that they should say what is best,",
+      "for Satan sows discord among them. Indeed,",
+      "Satan is a sworn enemy to mankind."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Israa 17:53",
+    "ref_y": 1338.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one conversation today and choose the best words for it.",
+    "cta_lines": [
+      "Pick one conversation today and choose the",
+      "best words for it."
+    ],
+    "cta_size": 48,
+    "line_y": 1396.4,
+    "handle_y": 1542.4,
+    "handle_size": 27
+  },
+  "layout_hash": "ca41765bc2f3d0cac7e3bd85",
+  "created_at": "2026-11-17T05:44:48+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "017053"
+    ],
+    "done": false
+  }
+}

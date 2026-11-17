@@ -1,0 +1,132 @@
+{
+  "entry_id": "quran:3:185",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Aal-i-Imraan 3:185",
+  "slot": "2026-11-18_reel-pk",
+  "publish_at": "2026-11-18T15:32:40Z",
+  "local_slot": "2026-11-18 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-18_reel-pk.jpg",
+  "video": "queue/2026-11-18_reel-pk.mp4",
+  "cover": "queue/2026-11-18_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "A gentle reminder about what really counts\n\nAllah tells us plainly what every soul will meet, and what real success is. Let it settle your priorities tonight, softly and without fear.\n\nSurah Aal-i-Imraan 3:185\n\nSave it for the day this world feels too big.\n\n#remembrance #akhirah #realsuccess #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Every soul will taste death, and you will be paid your reward in full on the Day of Resurrection. Whoever is spared from the Fire and admitted into Paradise has truly won, for the life of this world is nothing but an illusory pleasure (Surah Aal-i-Imraan 3:185)",
+  "theme": "gentle reminder of death / real success",
+  "review": "approve: Arabic checked word by word on card and Reel frame; English, reference and caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:3:185",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A gentle reminder about what really counts",
+    "hook_lines": [
+      "A gentle reminder about",
+      "what really counts"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "003185",
+        "lines": [
+          "كُلُّ نَفۡسٖ ذَآئِقَةُ ٱلۡمَوۡتِۗ وَإِنَّمَا تُوَفَّوۡنَ أُجُورَكُمۡ يَوۡمَ",
+          "ٱلۡقِيَٰمَةِۖ فَمَن زُحۡزِحَ عَنِ ٱلنَّارِ وَأُدۡخِلَ ٱلۡجَنَّةَ",
+          "فَقَدۡ فَازَۗ وَمَا ٱلۡحَيَوٰةُ ٱلدُّنۡيَآ إِلَّا مَتَٰعُ ٱلۡغُرُورِ ١٨٥"
+        ],
+        "y": 624.4,
+        "meal": [
+          "Every soul will taste death, and you will be paid",
+          "your reward in full on the Day of Resurrection.",
+          "Whoever is spared from the Fire and admitted",
+          "into Paradise has truly won, for the life of this",
+          "world is nothing but an illusory pleasure."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1026.4,
+    "full": "Every soul will taste death, and you will be paid your reward in full on the Day of Resurrection. Whoever is spared from the Fire and admitted into Paradise has truly won, for the life of this world is nothing but an illusory pleasure.",
+    "full_lines": [
+      "Every soul will taste death, and you will be paid",
+      "your reward in full on the Day of Resurrection.",
+      "Whoever is spared from the Fire and admitted",
+      "into Paradise has truly won, for the life of this",
+      "world is nothing but an illusory pleasure."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Aal-i-Imraan 3:185",
+    "ref_y": 1365.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save it for the day this world feels too big.",
+    "cta_lines": [
+      "Save it for the day this world feels too big."
+    ],
+    "cta_size": 48,
+    "line_y": 1423.4,
+    "handle_y": 1503.4,
+    "handle_size": 27
+  },
+  "layout_hash": "56f0d25efd97f4977fea3abc",
+  "created_at": "2026-11-17T05:45:52+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "003185"
+    ],
+    "done": false
+  }
+}

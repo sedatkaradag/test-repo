@@ -1,0 +1,112 @@
+{
+  "entry_id": "quran:7:151",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'raaf 7:151",
+  "slot": "2026-11-18_reel-eu",
+  "publish_at": "2026-11-18T17:57:58Z",
+  "local_slot": "2026-11-18 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-18_reel-eu.jpg",
+  "video": "queue/2026-11-18_reel-eu.mp4",
+  "cover": "queue/2026-11-18_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "A dua for your brother, straight from Musa\n\nWhen Musa turned to his Lord, he did not ask forgiveness for himself alone. He included his brother in the same breath.\n\nSurah Al-A'raaf 7:151\n\nSend this to your brother or sister and make this dua for them today.\n\n#duaforfamily #siblings #prophetmusa #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "Moses said, “My Lord, forgive me and my brother, and admit us into Your mercy, for You are the Most Merciful of those who show mercy.” (Surah Al-A'raaf 7:151)",
+  "theme": "dua for family / Musa's dua for himself and his brother",
+  "review": "approve: Arabic checked word by word on card and Reel frame; English, reference and caption correct",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:7:151",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A dua for your brother, straight from Musa",
+    "hook_lines": [
+      "A dua for your brother,",
+      "straight from Musa"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "007151",
+        "lines": [
+          "قَالَ رَبِّ ٱغۡفِرۡ لِي وَلِأَخِي وَأَدۡخِلۡنَا فِي",
+          "رَحۡمَتِكَۖ وَأَنتَ أَرۡحَمُ ٱلرَّٰحِمِينَ ١٥١"
+        ],
+        "y": 647.2,
+        "meal": [
+          "Moses said, “My Lord, forgive me and my",
+          "brother, and admit us into Your mercy, for You",
+          "are the Most Merciful of those who show",
+          "mercy.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 989.2,
+    "full": "Moses said, “My Lord, forgive me and my brother, and admit us into Your mercy, for You are the Most Merciful of those who show mercy.”",
+    "full_lines": [
+      "Moses said, “My Lord, forgive me and my",
+      "brother, and admit us into Your mercy, for You",
+      "are the Most Merciful of those who show",
+      "mercy.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-A'raaf 7:151",
+    "ref_y": 1265.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to your brother or sister and make this dua for them today.",
+    "cta_lines": [
+      "Send this to your brother or sister and make",
+      "this dua for them today."
+    ],
+    "cta_size": 48,
+    "line_y": 1323.2,
+    "handle_y": 1469.2,
+    "handle_size": 27
+  },
+  "layout_hash": "9cffb62ed788660ba1e03685",
+  "created_at": "2026-11-17T05:45:12+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "007151"
+    ],
+    "done": false
+  }
+}
