@@ -1,0 +1,107 @@
+[
+ {
+  "level": "MEDIUM",
+  "entry": "quran:49:10",
+  "verses": [
+   "049010"
+  ],
+  "options": [
+   [
+    "Al-Mumtahanah",
+    "الممتحنة"
+   ],
+   [
+    "An-Nur",
+    "النور"
+   ],
+   [
+    "Al-Hujurat",
+    "الحجرات"
+   ],
+   [
+    "Al-Anfal",
+    "الأنفال"
+   ]
+  ],
+  "answer": 2
+ },
+ {
+  "level": "EASY",
+  "entry": "quran:106:3-4",
+  "verses": [
+   "106003",
+   "106004"
+  ],
+  "options": [
+   [
+    "Quraysh",
+    "قريش"
+   ],
+   [
+    "Al-Ma'un",
+    "الماعون"
+   ],
+   [
+    "Al-Masad",
+    "المسد"
+   ],
+   [
+    "Al-Humazah",
+    "الهمزة"
+   ]
+  ],
+  "answer": 0
+ },
+ {
+  "level": "MEDIUM",
+  "entry": "quran:19:30",
+  "verses": [
+   "019030"
+  ],
+  "options": [
+   [
+    "Al-Ma'idah",
+    "المائدة"
+   ],
+   [
+    "Al Imran",
+    "آل عمران"
+   ],
+   [
+    "An-Nisa",
+    "النساء"
+   ],
+   [
+    "Maryam",
+    "مريم"
+   ]
+  ],
+  "answer": 3
+ },
+ {
+  "level": "HARD",
+  "entry": "quran:61:2",
+  "verses": [
+   "061002"
+  ],
+  "options": [
+   [
+    "Al-Munafiqun",
+    "المنافقون"
+   ],
+   [
+    "As-Saff",
+    "الصف"
+   ],
+   [
+    "Al-Mujadila",
+    "المجادلة"
+   ],
+   [
+    "Al-Hashr",
+    "الحشر"
+   ]
+  ],
+  "answer": 1
+ }
+]
