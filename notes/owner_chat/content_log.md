@@ -39,6 +39,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 
 **Animasyon · ortam sesi**
 - 13 Kas, kâri yok (ortam sesi): Sahih al-Bukhari 1117 ("Pray anyway") — paylaşıldı.
+- 18 Kas, kâri yok (ortam sesi): At-Talaq 65:3 · An-Nisa 4:32 · Ibrahim 14:7 · Al-Baqarah 2:216 · Hud 11:6 (rızkı engelleyen 5 alışkanlık) — paylaşıldı.
 
 **Animasyon · İngilizce TTS**
 - 14 Kas, Husary (tilavet) + TTS bm_george: Al-Kahf 18:18 (sağa sola çevrilme, köpek) — paylaşıldı.
@@ -73,6 +74,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-16 12:00 | Ayet Reels, kelime kelime (30,5 sn) | Zuhruf 43:68-70 · Alafasy | Allah's invitation to you and your spouse | — | — | — | — | — | — | — | — |
 | 2026-11-16 19:34 | Guess the Surah (86,8 sn) | 76:9, 110:3, 56:77-79, 57:3 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-17 09:20 | Guess the Surah (90,3 sn) | 49:10, 106:3-4, 19:30, 61:2 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
+| 2026-11-18 19:08 | Animasyon · ortam sesi (57 sn) | 65:3, 4:32, 14:7, 2:216, 11:6 | Innocent habits that might be blocking your rizq | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -259,4 +261,17 @@ Recitation: Mishary Rashid Alafasy
 Follow @thehalalalgorithm for more.
 
 #quran #guessthesurah #quranquiz #islamicquiz #quranverses #islam #muslim #alafasy
+```
+
+**Rızık alışkanlıkları, 18 Kasım** (sahibinin panelde onayladığı caption; 19:08 UTC'de paylaşıldı)
+```
+Innocent habits that might be blocking your rizq
+
+Five things we say without thinking, and what to say instead. Each one comes with a verse to hold on to.
+
+At-Talaaq 65:3 · An-Nisaa 4:32 · Ibrahim 14:7 · Al-Baqara 2:216 · Hud 11:6
+
+Which habit will you drop first? Send this to someone who needs it today.
+
+#rizq #tawakkul #shukr #islamicreminders #muslimreminder
 ```
