@@ -1,0 +1,100 @@
+{
+  "entry_id": "quran:4:147",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nisaa 4:147",
+  "slot": "2026-11-19_reel-us",
+  "publish_at": "2026-11-20T01:26:43Z",
+  "local_slot": "2026-11-19 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-19_reel-us.jpg",
+  "video": "queue/2026-11-19_reel-us.mp4",
+  "cover": "queue/2026-11-19_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "A question from Allah about gratitude\n\nAllah asks this question Himself, and then tells us He is ever Appreciative. Before Friday begins, count three things you have been given and thank Him for each.\n\nSurah An-Nisaa 4:147\n\nName three blessings you can thank Allah for right now.\n\n#gratitude #shukr #surahnisa #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "Why would Allah punish you, if you are grateful and faithful? Allah is ever Appreciative, All-Knowing (Surah An-Nisaa 4:147)",
+  "theme": "gratitude / Allah is ever Appreciative (Friday eve)",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word and mark by mark on card and Reel, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:4:147",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A question from Allah about gratitude",
+    "hook_lines": [
+      "A question from Allah",
+      "about gratitude"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "004147",
+        "lines": [
+          "مَّا يَفۡعَلُ ٱللَّهُ بِعَذَابِكُمۡ إِن شَكَرۡتُمۡ",
+          "وَءَامَنتُمۡۚ وَكَانَ ٱللَّهُ شَاكِرًا عَلِيمٗا ١٤٧"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Why would Allah punish you, if you are grateful",
+          "and faithful? Allah is ever Appreciative,",
+          "All-Knowing."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Why would Allah punish you, if you are grateful and faithful? Allah is ever Appreciative, All-Knowing.",
+    "full_lines": [
+      "Why would Allah punish you, if you are grateful",
+      "and faithful? Allah is ever Appreciative,",
+      "All-Knowing."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nisaa 4:147",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name three blessings you can thank Allah for right now.",
+    "cta_lines": [
+      "Name three blessings you can thank Allah for",
+      "right now."
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "9d66a3aa07c459bb7e34a3f2",
+  "created_at": "2026-11-18T05:44:39+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "004147"
+    ],
+    "done": false
+  }
+}

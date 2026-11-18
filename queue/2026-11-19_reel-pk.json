@@ -1,0 +1,146 @@
+{
+  "entry_id": "quran:99:6-8",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Az-Zalzala 99:6-8",
+  "slot": "2026-11-19_reel-pk",
+  "publish_at": "2026-11-19T15:31:03Z",
+  "local_slot": "2026-11-19 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-19_reel-pk.jpg",
+  "video": "queue/2026-11-19_reel-pk.mp4",
+  "cover": "queue/2026-11-19_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "No good deed is too small to count\n\nAllah says every person will be shown their deeds, even an atom's weight of good. Do one small good thing tonight and trust that you will see it.\n\nSurah Az-Zalzala 99:6-8\n\nPick one small good deed before you sleep tonight.\n\n#smalldeeds #gooddeeds #surahzalzalah #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "On that Day all people will come forward in separate groups to be shown their deeds. So whoever does an atom’s weight of good will see it; and whoever does an atom’s weight of evil will see it (Surah Az-Zalzala 99:6-8)",
+  "theme": "small deeds / an atom's weight of good is seen",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word and mark by mark on card and Reel, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:99:6-8",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "No good deed is too small to count",
+    "hook_lines": [
+      "No good deed is too small to",
+      "count"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "099006",
+        "lines": [
+          "يَوۡمَئِذٖ يَصۡدُرُ ٱلنَّاسُ أَشۡتَاتٗا لِّيُرَوۡاْ أَعۡمَٰلَهُمۡ ٦"
+        ],
+        "y": 598.0,
+        "meal": [
+          "On that Day all people will come forward in",
+          "separate groups to be shown their deeds."
+        ]
+      },
+      {
+        "ayah": "099007",
+        "lines": [
+          "فَمَن يَعۡمَلۡ مِثۡقَالَ ذَرَّةٍ خَيۡرٗا يَرَهُۥ ٧"
+        ],
+        "y": 722.0,
+        "meal": [
+          "So whoever does an atom’s weight of good will",
+          "see it;"
+        ]
+      },
+      {
+        "ayah": "099008",
+        "lines": [
+          "وَمَن يَعۡمَلۡ مِثۡقَالَ ذَرَّةٖ شَرّٗا يَرَهُۥ ٨"
+        ],
+        "y": 846.0,
+        "meal": [
+          "and whoever does an atom’s weight of evil will",
+          "see it."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "On that Day all people will come forward in separate groups to be shown their deeds. So whoever does an atom’s weight of good will see it; and whoever does an atom’s weight of evil will see it.",
+    "full_lines": [
+      "On that Day all people will come forward in",
+      "separate groups to be shown their deeds. So",
+      "whoever does an atom’s weight of good will see",
+      "it; and whoever does an atom’s weight of evil will",
+      "see it."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "ref": "Surah Az-Zalzala 99:6-8",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one small good deed before you sleep tonight.",
+    "cta_lines": [
+      "Pick one small good deed before you sleep",
+      "tonight."
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "0c4aa81c5644540723af87fb",
+  "created_at": "2026-11-18T05:43:58+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "099006",
+      "099007",
+      "099008"
+    ],
+    "done": false
+  }
+}

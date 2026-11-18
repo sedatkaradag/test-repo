@@ -1,0 +1,96 @@
+{
+  "entry_id": "quran:7:199",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'raaf 7:199",
+  "slot": "2026-11-19_reel-eu",
+  "publish_at": "2026-11-19T18:00:01Z",
+  "local_slot": "2026-11-19 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-19_reel-eu.jpg",
+  "video": "queue/2026-11-19_reel-eu.mp4",
+  "cover": "queue/2026-11-19_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Three commands for good character, online and off\n\nOne short verse with three instructions for how we deal with people. Remember it the next time a conversation turns sour.\n\nSurah Al-A'raaf 7:199\n\nWhich of the three is hardest for you right now?\n\n#goodcharacter #akhlaq #onlinemanners #quranreels\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Be gracious, enjoin what is right and turn away from those who are ignorant (Surah Al-A'raaf 7:199)",
+  "theme": "good character / be gracious and turn away from the ignorant",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word and mark by mark on card and Reel, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:7:199",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Three commands for good character, online and off",
+    "hook_lines": [
+      "Three commands for good",
+      "character, online and off"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "007199",
+        "lines": [
+          "خُذِ ٱلۡعَفۡوَ وَأۡمُرۡ بِٱلۡعُرۡفِ وَأَعۡرِضۡ عَنِ",
+          "ٱلۡجَٰهِلِينَ ١٩٩"
+        ],
+        "y": 697.6,
+        "meal": [
+          "Be gracious, enjoin what is right and turn away",
+          "from those who are ignorant."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "Be gracious, enjoin what is right and turn away from those who are ignorant.",
+    "full_lines": [
+      "Be gracious, enjoin what is right and turn away",
+      "from those who are ignorant."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-A'raaf 7:199",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which of the three is hardest for you right now?",
+    "cta_lines": [
+      "Which of the three is hardest for you right",
+      "now?"
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "bf177d51744953346f586eeb",
+  "created_at": "2026-11-18T05:44:16+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "007199"
+    ],
+    "done": false
+  }
+}
