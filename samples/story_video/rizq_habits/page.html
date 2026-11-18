@@ -4,21 +4,21 @@
 @font-face { font-family: 'Garamond'; src: url('file://__REPO__/assets/fonts/EBGaramond[wght].ttf'); font-weight: 400 800; }
 @font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Medium.ttf'); font-weight: 500; }
 @font-face { font-family: 'Marcellus'; src: url('file://__REPO__/assets/fonts/Marcellus-Regular.ttf'); }
-html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0d0d29; }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0b221d; }
 #stage { position: absolute; inset: 0; overflow: hidden; }
 svg#art { position: absolute; left: 0; top: 0; }
 .t { position: absolute; left: 70px; right: 70px; text-align: center; opacity: 0; }
-.pill { font: 500 24px Poppins; letter-spacing: 5px; color: #c9c7ee; border: 2px solid rgba(160,156,230,.55); border-radius: 40px;
+.pill { font: 500 24px Poppins; letter-spacing: 5px; color: #e8c66a; border: 2px solid rgba(232,198,106,.6); border-radius: 40px;
         display: inline-block; padding: 12px 34px; }
-.big { font: 500 92px/1.12 Garamond; color: #ece9f8; }
-.head { font: 500 76px/1.15 Garamond; color: #ece9f8; position: relative; display: inline-block; }
+.big { font: 500 92px/1.12 Garamond; color: #f4efe2; }
+.head { font: 500 76px/1.15 Garamond; color: #f4efe2; position: relative; display: inline-block; }
 .strike { position: absolute; left: -28px; height: 5px; top: 52%; background: #d9727f; border-radius: 3px; width: 0; }
-.sub { font: 400 46px/1.3 Garamond; color: #c9c6e2; }
-.label { font: 500 24px Poppins; letter-spacing: 5px; color: #9d9ac9; }
-.quote { font: 500 56px/1.25 Garamond; color: #f0cf86; }
-.verse { font: italic 400 40px/1.35 Garamond; color: #d8d4ee; }
-.ref { font: 500 22px Poppins; letter-spacing: 5px; color: #8d8ab8; margin-top: 14px; }
-.gold { font: 500 52px Garamond; color: #f0cf86; }
+.sub { font: 400 46px/1.3 Garamond; color: #bcd3c8; }
+.label { font: 500 24px Poppins; letter-spacing: 5px; color: #8fbcaa; }
+.quote { font: 500 56px/1.25 Garamond; color: #e8c66a; }
+.verse { font: italic 400 40px/1.35 Garamond; color: #dfe9e2; }
+.ref { font: 500 22px Poppins; letter-spacing: 5px; color: #8fbcaa; margin-top: 14px; }
+.gold { font: 500 52px Garamond; color: #e8c66a; }
 #logoBox { position: absolute; left: 0; right: 0; top: 560px; text-align: center; opacity: 0; }
 #logoBox .frame { width: 560px; height: 360px; overflow: hidden; margin: 0 auto; position: relative; }
 #logoBox img { position: absolute; left: 0; top: -104px; width: 560px; visibility: hidden; }
@@ -27,14 +27,14 @@ svg#art { position: absolute; left: 0; top: 0; }
 <svg id="art" width="1080" height="1920" viewBox="0 0 1080 1920">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0b26"/><stop offset=".55" stop-color="#13123a"/><stop offset="1" stop-color="#1a1847"/></linearGradient>
-    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a37a0" stop-opacity="0"/><stop offset=".55" stop-color="#3a37a0" stop-opacity=".11"/><stop offset="1" stop-color="#3a37a0" stop-opacity=".02"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fae86" stop-opacity="0"/><stop offset=".55" stop-color="#3fae86" stop-opacity=".07"/><stop offset="1" stop-color="#3fae86" stop-opacity=".01"/></linearGradient>
     <filter id="soft" x="-50%" y="0" width="200%" height="100%"><feGaussianBlur stdDeviation="38"/></filter>
     <radialGradient id="warm" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffe9a8" stop-opacity="1"/><stop offset=".45" stop-color="#e9c46f" stop-opacity=".55"/><stop offset="1" stop-color="#e9c46f" stop-opacity="0"/></radialGradient>
     <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6d27a" stop-opacity=".55"/><stop offset="1" stop-color="#f6d27a" stop-opacity="0"/></radialGradient>
     <mask id="moonCut"><rect x="-200" y="-200" width="400" height="400" fill="#fff"/><circle cx="34" cy="-22" r="64" fill="#000"/></mask>
     <g id="moon"><circle r="78" fill="#f1e6c8" mask="url(#moonCut)"/></g>
   </defs>
-  <rect width="1080" height="1920" fill="url(#sky)"/>
+  <image href="file://__REPO__/assets/reel_background.png" x="0" y="0" width="1080" height="1920"/>
   <g id="beams" filter="url(#soft)"></g>
   <g id="stars"></g>
   <g id="world"></g>
@@ -58,7 +58,7 @@ let seed = 11; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 23328
 
 // sky: soft vertical beams and twinkling stars
 for (const [x, w] of [[180, 160], [420, 120], [700, 200], [930, 140]]) el("rect", { x: x - w / 2, y: 0, width: w, height: 1920, fill: "url(#beam)" }, $("beams"));
-const stars = []; for (let i = 0; i < 150; i++) stars.push({ e: el("circle", { cx: rnd() * 1080, cy: rnd() * 1920, r: .8 + rnd() * 2.2, fill: "#fff" }, $("stars")), p: rnd() * 6.28, s: .6 + rnd() * 1.6, b: .25 + rnd() * .55 });
+const stars = []; for (let i = 0; i < 70; i++) stars.push({ e: el("circle", { cx: rnd() * 1080, cy: rnd() * 1920, r: .8 + rnd() * 2.2, fill: "#f4e7c4" }, $("stars")), p: rnd() * 6.28, s: .6 + rnd() * 1.6, b: .15 + rnd() * .4 });
 
 // scenes
 const S = D.scenes, end = D.end, W = $("world");
@@ -94,35 +94,35 @@ H.forEach((h, i) => {
 // 1. door opens, light inside
 const d1 = el("g", { transform: "translate(540,860)" }, G.h0);
 const doorLight = el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "url(#warm)", opacity: 0 }, d1);
-el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "none", stroke: "#5b57c9", "stroke-width": 5 }, d1);
+el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "none", stroke: "#c9a85a", "stroke-width": 5 }, d1);
 const door = el("g", {}, d1);
-el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "#2b2878", stroke: "#5b57c9", "stroke-width": 5 }, door);
+el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "#16473b", stroke: "#c9a85a", "stroke-width": 5 }, door);
 el("circle", { cx: 80, cy: 0, r: 7, fill: "#f0cf86" }, door);
 // 2. cloud with rain -> moon over water
 const d2 = el("g", { transform: "translate(540,860)" }, G.h1);
 const cloud = el("g", {}, d2);
-for (const [x, y, r] of [[-70, 0, 62], [0, -24, 76], [74, 2, 60], [-20, 20, 60], [40, 22, 58]]) el("circle", { cx: x, cy: y, r, fill: "#3b38a0" }, cloud);
-const rain = []; for (let i = 0; i < 14; i++) rain.push(el("line", { x1: 0, y1: 0, x2: -5, y2: 22, stroke: "#6d69d6", "stroke-width": 3, "stroke-linecap": "round" }, cloud));
+for (const [x, y, r] of [[-70, 0, 62], [0, -24, 76], [74, 2, 60], [-20, 20, 60], [40, 22, 58]]) el("circle", { cx: x, cy: y, r, fill: "#2a6553" }, cloud);
+const rain = []; for (let i = 0; i < 14; i++) rain.push(el("line", { x1: 0, y1: 0, x2: -5, y2: 22, stroke: "#7cc4a7", "stroke-width": 3, "stroke-linecap": "round" }, cloud));
 const calm = el("g", { opacity: 0 }, d2);
 el("use", { href: "#moon", transform: "translate(0,-40) scale(.62)" }, calm);
-const wave = el("path", { fill: "none", stroke: "#6d69d6", "stroke-width": 5, "stroke-linecap": "round" }, calm);
+const wave = el("path", { fill: "none", stroke: "#7cc4a7", "stroke-width": 5, "stroke-linecap": "round" }, calm);
 // 3. row of houses, windows light one by one
 const d3 = el("g", { transform: "translate(540,880)" }, G.h2); const wins = [];
 for (let j = 0; j < 5; j++) { const x = -360 + j * 180;
-  el("path", { d: `M${x - 74},${-20} L${x},${-96} L${x + 74},${-20} L${x + 74},${120} L${x - 74},${120} Z`, fill: "#25225e" }, d3);
-  wins.push(el("rect", { x: x - 22, y: 22, width: 44, height: 44, fill: "#34318a" }, d3)); }
+  el("path", { d: `M${x - 74},${-20} L${x},${-96} L${x + 74},${-20} L${x + 74},${120} L${x - 74},${120} Z`, fill: "#174237" }, d3);
+  wins.push(el("rect", { x: x - 22, y: 22, width: 44, height: 44, fill: "#245a4a" }, d3)); }
 // 4. ground line, sprout grows
 const d4 = el("g", { transform: "translate(540,960)" }, G.h3);
-el("line", { x1: -330, y1: 0, x2: 330, y2: 0, stroke: "#4a46b8", "stroke-width": 5, "stroke-linecap": "round" }, d4);
+el("line", { x1: -330, y1: 0, x2: 330, y2: 0, stroke: "#c9a85a", "stroke-width": 5, "stroke-linecap": "round" }, d4);
 const stem = el("line", { x1: 0, y1: 0, x2: 0, y2: 0, stroke: "#7fcf95", "stroke-width": 9, "stroke-linecap": "round" }, d4);
 const leaves = [[-50, -150, -1], [50, -150, 1], [-42, -90, -1], [42, -90, 1]].map(([x, y, s]) => el("ellipse", { cx: x, cy: y, rx: 0, ry: 0, fill: "#8bd6a0" }, d4));
 // 5. lantern lights
 const d5 = el("g", { transform: "translate(540,860)" }, G.h4);
 const lglow = el("circle", { r: 170, fill: "url(#halo)", opacity: 0 }, d5);
-el("rect", { x: -6, y: -130, width: 12, height: 26, fill: "#5b57c9" }, d5);
-el("rect", { x: -38, y: -108, width: 76, height: 14, rx: 6, fill: "#5b57c9" }, d5);
-el("rect", { x: -62, y: -96, width: 124, height: 186, rx: 30, fill: "#2b2878", stroke: "#5b57c9", "stroke-width": 6 }, d5);
-el("rect", { x: -78, y: 84, width: 156, height: 22, rx: 8, fill: "#5b57c9" }, d5);
+el("rect", { x: -6, y: -130, width: 12, height: 26, fill: "#c9a85a" }, d5);
+el("rect", { x: -38, y: -108, width: 76, height: 14, rx: 6, fill: "#c9a85a" }, d5);
+el("rect", { x: -62, y: -96, width: 124, height: 186, rx: 30, fill: "#16473b", stroke: "#c9a85a", "stroke-width": 6 }, d5);
+el("rect", { x: -78, y: 84, width: 156, height: 22, rx: 8, fill: "#c9a85a" }, d5);
 const flame = el("ellipse", { cx: 0, cy: 0, rx: 22, ry: 42, fill: "#f6d27a", opacity: 0 }, d5);
 // end
 const em = el("g", { transform: "translate(540,860)" }, G.end); el("use", { href: "#moon" }, em);
@@ -148,7 +148,7 @@ function render(t) {
     rain.forEach((r, i) => { const x = -90 + (i % 7) * 30 + (i > 6 ? 14 : 0), y = 60 + ((t * 260 + i * 37) % 120); r.setAttribute("transform", `translate(${x},${y})`); });
     let d = ""; for (let x = -170; x <= 170; x += 10) d += `${x === -170 ? "M" : "L"}${x},${70 + 9 * Math.sin(x / 34 + t * 2.2)} `; wave.setAttribute("d", d); }
   // 3 windows
-  wins.forEach((w, j) => { const on = ramp(t, S.h2[0] + H[2].turn - 1.2 + j * .35, .3); w.setAttribute("fill", on > .5 ? "#e9c46f" : "#34318a"); w.setAttribute("opacity", .6 + .4 * on); });
+  wins.forEach((w, j) => { const on = ramp(t, S.h2[0] + H[2].turn - 1.2 + j * .35, .3); w.setAttribute("fill", on > .5 ? "#e8c66a" : "#245a4a"); w.setAttribute("opacity", .6 + .4 * on); });
   // 4 sprout
   { const g = ramp(t, S.h3[0] + H[3].turn - .9, 1.2); stem.setAttribute("y2", -170 * g);
     leaves.forEach((l, i) => { const a = ramp(t, S.h3[0] + H[3].turn - .3 + i * .15, .6); l.setAttribute("rx", 34 * a); l.setAttribute("ry", 16 * a); }); }

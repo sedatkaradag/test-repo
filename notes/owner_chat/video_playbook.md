@@ -203,7 +203,7 @@ yok, bizim normal kapanış (logo çizimi + THE HALAL ALGORITHM + FOLLOW), ses b
 
 ## Format: "Innocent habits blocking your rizq" (18 Kas) — `samples/story_video/rizq_habits/`
 
-Referans: @reminders.in.frames (40 sn, 60 bin beğeni). Gece göğü, yıldızlar, ince serif yazı, 5 alışkanlık: başlık harf harf
+Referans: @reminders.in.frames (40 sn, 60 bin beğeni). Sahibi: bizim tasarım, cennet yeşili (Reels zemini + altın). Gece göğü, yıldızlar, ince serif yazı, 5 alışkanlık: başlık harf harf
 yazılır, kırmızı çizgiyle üstü çizilir, altında kısa açıklama; küçük çizim dönüşür (kapı açılır, yağmur → ay, pencereler yanar,
 filiz büyür, fener yanar); "Say instead" sözü altın renkte.
 - Sahibinin kararları: referanstaki "Qur'an x:y" etiketli sözler ayet DEĞİL (65:3, 65:2-3, 4:32, 2:216 paraphrase). Sözler kaldı,
