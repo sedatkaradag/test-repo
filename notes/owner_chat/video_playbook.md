@@ -200,3 +200,14 @@ yok, bizim normal kapanış (logo çizimi + THE HALAL ALGORITHM + FOLLOW), ses b
   "الشمالِ"de durmadan devam ediyor, kesilince cümle yarım kalmış gibi duyuldu. 9 kâri tarandı (sessizlik analizi):
   bu ayette ۖ durağında yalnızca Husarî duruyor (Alafasy, Minşâvî, Tablâvî, Abdülbâsıt yalnızca رقود ve بالوصيد'de).
   **Kural:** ayetten parça keserken kârinin o noktada durduğunu (ardından sessizlik) kontrol et.
+
+## Format: "Innocent habits blocking your rizq" (18 Kas) — `samples/story_video/rizq_habits/`
+
+Referans: @reminders.in.frames (40 sn, 60 bin beğeni). Gece göğü, yıldızlar, ince serif yazı, 5 alışkanlık: başlık harf harf
+yazılır, kırmızı çizgiyle üstü çizilir, altında kısa açıklama; küçük çizim dönüşür (kapı açılır, yağmur → ay, pencereler yanar,
+filiz büyür, fener yanar); "Say instead" sözü altın renkte.
+- Sahibinin kararları: referanstaki "Qur'an x:y" etiketli sözler ayet DEĞİL (65:3, 65:2-3, 4:32, 2:216 paraphrase). Sözler kaldı,
+  altına kaynaktan birebir ayet cümlesi + numara eklendi (make.py substring kontrolü). Kapanış "Rizq isn't blocked because Allah
+  withholds" 13:26 ile çeliştiği için Hud 11:6. Ses müziksiz ortam (gece, cırcır, kapı, yağmur, ışık, fener).
+- **Kural:** başka sayfadan uyarlarken ayet etiketli her sözü kaynakla karşılaştır; ayet değilse ayet gibi gösterme.
+- Render: `python3 make.py <out>` (~4 dk), `--stills=...`. 57 sn, -21 LUFS.

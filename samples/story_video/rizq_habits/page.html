@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Garamond'; src: url('file://__REPO__/assets/fonts/EBGaramond[wght].ttf'); font-weight: 400 800; }
+@font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Marcellus'; src: url('file://__REPO__/assets/fonts/Marcellus-Regular.ttf'); }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0d0d29; }
+#stage { position: absolute; inset: 0; overflow: hidden; }
+svg#art { position: absolute; left: 0; top: 0; }
+.t { position: absolute; left: 70px; right: 70px; text-align: center; opacity: 0; }
+.pill { font: 500 24px Poppins; letter-spacing: 5px; color: #c9c7ee; border: 2px solid rgba(160,156,230,.55); border-radius: 40px;
+        display: inline-block; padding: 12px 34px; }
+.big { font: 500 92px/1.12 Garamond; color: #ece9f8; }
+.head { font: 500 76px/1.15 Garamond; color: #ece9f8; position: relative; display: inline-block; }
+.strike { position: absolute; left: -28px; height: 5px; top: 52%; background: #d9727f; border-radius: 3px; width: 0; }
+.sub { font: 400 46px/1.3 Garamond; color: #c9c6e2; }
+.label { font: 500 24px Poppins; letter-spacing: 5px; color: #9d9ac9; }
+.quote { font: 500 56px/1.25 Garamond; color: #f0cf86; }
+.verse { font: italic 400 40px/1.35 Garamond; color: #d8d4ee; }
+.ref { font: 500 22px Poppins; letter-spacing: 5px; color: #8d8ab8; margin-top: 14px; }
+.gold { font: 500 52px Garamond; color: #f0cf86; }
+#logoBox { position: absolute; left: 0; right: 0; top: 560px; text-align: center; opacity: 0; }
+#logoBox .frame { width: 560px; height: 360px; overflow: hidden; margin: 0 auto; position: relative; }
+#logoBox img { position: absolute; left: 0; top: -104px; width: 560px; visibility: hidden; }
+</style></head>
+<body><div id="stage">
+<svg id="art" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0b26"/><stop offset=".55" stop-color="#13123a"/><stop offset="1" stop-color="#1a1847"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a37a0" stop-opacity="0"/><stop offset=".55" stop-color="#3a37a0" stop-opacity=".11"/><stop offset="1" stop-color="#3a37a0" stop-opacity=".02"/></linearGradient>
+    <filter id="soft" x="-50%" y="0" width="200%" height="100%"><feGaussianBlur stdDeviation="38"/></filter>
+    <radialGradient id="warm" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffe9a8" stop-opacity="1"/><stop offset=".45" stop-color="#e9c46f" stop-opacity=".55"/><stop offset="1" stop-color="#e9c46f" stop-opacity="0"/></radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6d27a" stop-opacity=".55"/><stop offset="1" stop-color="#f6d27a" stop-opacity="0"/></radialGradient>
+    <mask id="moonCut"><rect x="-200" y="-200" width="400" height="400" fill="#fff"/><circle cx="34" cy="-22" r="64" fill="#000"/></mask>
+    <g id="moon"><circle r="78" fill="#f1e6c8" mask="url(#moonCut)"/></g>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#sky)"/>
+  <g id="beams" filter="url(#soft)"></g>
+  <g id="stars"></g>
+  <g id="world"></g>
+</svg>
+<div id="caps"></div>
+<div id="mark" style="position:absolute;left:0;right:0;top:1585px;text-align:center;opacity:0">
+  <div style="width:62px;height:79px;margin:0 auto;overflow:hidden;position:relative"><img src="file://__MARK__" style="position:absolute;width:122px;left:-30px;top:-22px"></div>
+  <div style="font-family:Marcellus;letter-spacing:6px;color:#c9b07a;font-size:22px;margin-top:8px">THE HALAL ALGORITHM</div></div>
+<div id="logoBox"><div class="frame" id="logoFrame"></div>
+  <div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:44px;margin-top:40px">THE HALAL ALGORITHM</div>
+  <div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:34px;margin-top:44px;border:2px solid #e8c66a;display:inline-block;padding:14px 38px;border-radius:40px">+ FOLLOW</div></div>
+</div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id), NS = "http://www.w3.org/2000/svg";
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const ramp = (t, t0, d = .4) => ease((t - t0) / d);
+function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+let seed = 11; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+
+// sky: soft vertical beams and twinkling stars
+for (const [x, w] of [[180, 160], [420, 120], [700, 200], [930, 140]]) el("rect", { x: x - w / 2, y: 0, width: w, height: 1920, fill: "url(#beam)" }, $("beams"));
+const stars = []; for (let i = 0; i < 150; i++) stars.push({ e: el("circle", { cx: rnd() * 1080, cy: rnd() * 1920, r: .8 + rnd() * 2.2, fill: "#fff" }, $("stars")), p: rnd() * 6.28, s: .6 + rnd() * 1.6, b: .25 + rnd() * .55 });
+
+// scenes
+const S = D.scenes, end = D.end, W = $("world");
+const G = {}; for (const k of Object.keys(S)) G[k] = el("g", {}, W);
+function vis(k, t) { const s = S[k]; return ramp(t, s[0], .45) * (1 - ramp(t, s[1] - .45, .45)); }
+const texts = [];
+function text(k, at, top, html, cls, extra) { const d = document.createElement("div"); d.className = "t"; d.style.top = top + "px"; d.innerHTML = `<div class="${cls}">${html}</div>`;
+  $("caps").appendChild(d); const o = { k, at, d, ...(extra || {}) }; texts.push(o); return o; }
+
+// title
+text("title", .2, 300, "RIZQ REMINDER", "pill");
+text("title", .5, 410, "Innocent habits<br>blocking your rizq", "big");
+const tm = el("g", { transform: "translate(540,860)" }, G.title);
+const r1 = el("circle", { r: 130, fill: "none", stroke: "#b9965c", "stroke-width": 3, opacity: .55 }, tm);
+const r2 = el("circle", { r: 104, fill: "none", stroke: "#b9965c", "stroke-width": 3, opacity: .8 }, tm);
+el("use", { href: "#moon" }, tm);
+
+// habits
+const H = D.habits;
+const typed = [];
+H.forEach((h, i) => {
+  const k = "h" + i, t0 = S[k][0];
+  text(k, t0 + .1, 300, "HABIT " + (i + 1), "pill");
+  const head = text(k, t0 + .2, 400, `<span class="tx"></span><span class="strike"></span>`, "head", { type: h.head, t: t0 + .35, strikeAt: t0 + .35 + h.head.length * .055 + .35 });
+  typed.push(head);
+  text(k, head.strikeAt + .45, 500, h.sub, "sub");
+  text(k, t0 + h.turn + .2, 1150, h.label, "label");
+  text(k, t0 + h.turn + .4, 1200, "“" + h.say + "”", "quote");
+  text(k, t0 + h.turn + 1.5, 1370, "“" + h.verse + "”<div class='ref'>" + h.ref + "</div>", "verse");
+});
+
+// illustrations (center ~ y 860)
+// 1. door opens, light inside
+const d1 = el("g", { transform: "translate(540,860)" }, G.h0);
+const doorLight = el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "url(#warm)", opacity: 0 }, d1);
+el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "none", stroke: "#5b57c9", "stroke-width": 5 }, d1);
+const door = el("g", {}, d1);
+el("rect", { x: -115, y: -150, width: 230, height: 300, fill: "#2b2878", stroke: "#5b57c9", "stroke-width": 5 }, door);
+el("circle", { cx: 80, cy: 0, r: 7, fill: "#f0cf86" }, door);
+// 2. cloud with rain -> moon over water
+const d2 = el("g", { transform: "translate(540,860)" }, G.h1);
+const cloud = el("g", {}, d2);
+for (const [x, y, r] of [[-70, 0, 62], [0, -24, 76], [74, 2, 60], [-20, 20, 60], [40, 22, 58]]) el("circle", { cx: x, cy: y, r, fill: "#3b38a0" }, cloud);
+const rain = []; for (let i = 0; i < 14; i++) rain.push(el("line", { x1: 0, y1: 0, x2: -5, y2: 22, stroke: "#6d69d6", "stroke-width": 3, "stroke-linecap": "round" }, cloud));
+const calm = el("g", { opacity: 0 }, d2);
+el("use", { href: "#moon", transform: "translate(0,-40) scale(.62)" }, calm);
+const wave = el("path", { fill: "none", stroke: "#6d69d6", "stroke-width": 5, "stroke-linecap": "round" }, calm);
+// 3. row of houses, windows light one by one
+const d3 = el("g", { transform: "translate(540,880)" }, G.h2); const wins = [];
+for (let j = 0; j < 5; j++) { const x = -360 + j * 180;
+  el("path", { d: `M${x - 74},${-20} L${x},${-96} L${x + 74},${-20} L${x + 74},${120} L${x - 74},${120} Z`, fill: "#25225e" }, d3);
+  wins.push(el("rect", { x: x - 22, y: 22, width: 44, height: 44, fill: "#34318a" }, d3)); }
+// 4. ground line, sprout grows
+const d4 = el("g", { transform: "translate(540,960)" }, G.h3);
+el("line", { x1: -330, y1: 0, x2: 330, y2: 0, stroke: "#4a46b8", "stroke-width": 5, "stroke-linecap": "round" }, d4);
+const stem = el("line", { x1: 0, y1: 0, x2: 0, y2: 0, stroke: "#7fcf95", "stroke-width": 9, "stroke-linecap": "round" }, d4);
+const leaves = [[-50, -150, -1], [50, -150, 1], [-42, -90, -1], [42, -90, 1]].map(([x, y, s]) => el("ellipse", { cx: x, cy: y, rx: 0, ry: 0, fill: "#8bd6a0" }, d4));
+// 5. lantern lights
+const d5 = el("g", { transform: "translate(540,860)" }, G.h4);
+const lglow = el("circle", { r: 170, fill: "url(#halo)", opacity: 0 }, d5);
+el("rect", { x: -6, y: -130, width: 12, height: 26, fill: "#5b57c9" }, d5);
+el("rect", { x: -38, y: -108, width: 76, height: 14, rx: 6, fill: "#5b57c9" }, d5);
+el("rect", { x: -62, y: -96, width: 124, height: 186, rx: 30, fill: "#2b2878", stroke: "#5b57c9", "stroke-width": 6 }, d5);
+el("rect", { x: -78, y: 84, width: 156, height: 22, rx: 8, fill: "#5b57c9" }, d5);
+const flame = el("ellipse", { cx: 0, cy: 0, rx: 22, ry: 42, fill: "#f6d27a", opacity: 0 }, d5);
+// end
+const em = el("g", { transform: "translate(540,860)" }, G.end); el("use", { href: "#moon" }, em);
+text("end", S.end[0] + .3, 300, "“" + D.close.verse + "”", "big", { small: true });
+text("end", S.end[0] + 1.4, 300 + D.close.lines * 104 + 30, D.close.ref, "ref");
+text("end", S.end[0] + 2.6, 1180, "Return to tawakkul.", "gold");
+texts.filter(o => o.small).forEach(o => { o.d.firstChild.style.fontSize = "74px"; });
+
+const logoImgs = D.logo.map(p => { const i = document.createElement("img"); i.src = "file://" + p; $("logoFrame").appendChild(i); return i; });
+
+function render(t) {
+  stars.forEach(s => s.e.setAttribute("opacity", s.b * (.55 + .45 * Math.sin(t * s.s + s.p))));
+  for (const k of Object.keys(S)) G[k].setAttribute("opacity", vis(k, t));
+  for (const o of texts) { const v = vis(o.k, t) * ramp(t, o.at, .5); o.d.style.opacity = v; o.d.style.transform = `translateY(${14 * (1 - ramp(t, o.at, .6))}px)`; }
+  for (const o of typed) { const n = clamp(Math.floor((t - o.t) / .055), 0, o.type.length); o.d.querySelector(".tx").textContent = o.type.slice(0, n);
+    const sk = o.d.querySelector(".strike"); sk.style.width = `calc(${100 * ease((t - o.strikeAt) / .45)}% + ${56 * ease((t - o.strikeAt) / .45)}px)`; }
+  // title
+  r1.setAttribute("r", 128 + 6 * Math.sin(t * 1.6)); r1.setAttribute("opacity", .35 + .2 * Math.sin(t * 1.6));
+  // 1 door
+  { const a = ramp(t, S.h0[0] + H[0].turn, 1.0); door.setAttribute("transform", `translate(-115,0) scale(${1 - .88 * a},1) translate(115,0)`); doorLight.setAttribute("opacity", a); }
+  // 2 rain -> calm
+  { const a = ramp(t, S.h1[0] + H[1].turn - .2, .8); cloud.setAttribute("opacity", 1 - a); calm.setAttribute("opacity", a);
+    rain.forEach((r, i) => { const x = -90 + (i % 7) * 30 + (i > 6 ? 14 : 0), y = 60 + ((t * 260 + i * 37) % 120); r.setAttribute("transform", `translate(${x},${y})`); });
+    let d = ""; for (let x = -170; x <= 170; x += 10) d += `${x === -170 ? "M" : "L"}${x},${70 + 9 * Math.sin(x / 34 + t * 2.2)} `; wave.setAttribute("d", d); }
+  // 3 windows
+  wins.forEach((w, j) => { const on = ramp(t, S.h2[0] + H[2].turn - 1.2 + j * .35, .3); w.setAttribute("fill", on > .5 ? "#e9c46f" : "#34318a"); w.setAttribute("opacity", .6 + .4 * on); });
+  // 4 sprout
+  { const g = ramp(t, S.h3[0] + H[3].turn - .9, 1.2); stem.setAttribute("y2", -170 * g);
+    leaves.forEach((l, i) => { const a = ramp(t, S.h3[0] + H[3].turn - .3 + i * .15, .6); l.setAttribute("rx", 34 * a); l.setAttribute("ry", 16 * a); }); }
+  // 5 lantern
+  { const a = ramp(t, S.h4[0] + H[4].turn, .7); flame.setAttribute("opacity", a); flame.setAttribute("ry", 42 + 4 * Math.sin(t * 9)); lglow.setAttribute("opacity", a * (.85 + .15 * Math.sin(t * 5))); }
+  $("mark").style.opacity = .55 * ramp(t, .8, .6) * (1 - ramp(t, S.logo[0] - .3, .3));
+  $("logoBox").style.opacity = vis("logo", t);
+  const f = clamp(Math.floor((t - S.logo[0]) * 30), 0, logoImgs.length - 1); logoImgs.forEach((im, i) => im.style.visibility = i === f ? "visible" : "hidden");
+}
+window.render = render;
+window.ready = Promise.all([document.fonts.ready, ...logoImgs.map(i => i.decode().catch(() => 0))]).then(() => { render(0); return true; });
+</script></body></html>
