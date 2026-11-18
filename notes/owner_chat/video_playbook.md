@@ -208,6 +208,6 @@ yazılır, kırmızı çizgiyle üstü çizilir, altında kısa açıklama; kü�
 filiz büyür, fener yanar); "Say instead" sözü altın renkte.
 - Sahibinin kararları: referanstaki "Qur'an x:y" etiketli sözler ayet DEĞİL (65:3, 65:2-3, 4:32, 2:216 paraphrase). Sözler kaldı,
   altına kaynaktan birebir ayet cümlesi + numara eklendi (make.py substring kontrolü). Kapanış "Rizq isn't blocked because Allah
-  withholds" 13:26 ile çeliştiği için Hud 11:6. Ses müziksiz ortam (gece, cırcır, kapı, yağmur, ışık, fener).
+  withholds" 13:26 ile çeliştiği için Hud 11:6. Ses müziksiz ortam (gece, cırcır, kapı, yağmur, ışık, fener). Sahibi: yüksek "parıltı" sesi itici, yerine yumuşak hava sesi; başlık yazılırken klavye tuşu sesi.
 - **Kural:** başka sayfadan uyarlarken ayet etiketli her sözü kaynakla karşılaştır; ayet değilse ayet gibi gösterme.
 - Render: `python3 make.py <out>` (~4 dk), `--stills=...`. 57 sn, -21 LUFS.

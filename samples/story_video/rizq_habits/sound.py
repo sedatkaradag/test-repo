@@ -25,14 +25,23 @@ for t0 in np.arange(1.0, END - 3, 0.9):
         for j in range(3):
             n = int(.016 * SR); add(np.sin(2 * np.pi * 4300 * np.arange(n) / SR) * np.hanning(n), t0 + j * .03, db(-46) * rng.uniform(.5, 1), rng.uniform(-.8, .8))
 def shimmer(t0, g):
-    for k in range(6):
-        n = int(.9 * SR); f = 1800 + k * 470 + rng.uniform(-60, 60)
-        add(np.sin(2 * np.pi * f * np.arange(n) / SR) * dec(n, .25) * np.hanning(n) ** .3, t0 + k * .07, g / (k + 2), rng.uniform(-.5, .5))
+    """Soft warm 'bloom' (owner, 18 Nov: the old high sine sparkle was grating): low breathy swell, no pitch."""
+    n = int(1.6 * SR); x = np.linspace(0, 1, n)
+    swell = lp(bp(noise(n), 120, 1400), 900) * (x ** .8) * (1 - x) ** 1.8 * 4
+    add(swell, t0 - .2, g * .9)
+def keys(t0, text):
+    """A keyboard key for every typed character (owner, 18 Nov)."""
+    for k, ch in enumerate(text):
+        n = int(.045 * SR); tick = bp(noise(n), 1200, 5200) * dec(n, .006)
+        thud = lp(noise(n), 260) * dec(n, .012) * .8
+        g = db(-27) * rng.uniform(.65, 1.0) * (1.25 if ch == " " else 1.0)
+        add(tick + thud, t0 + k * .055 + rng.uniform(-.006, .006), g, rng.uniform(-.25, .25))
 def strike(t0):  # pen line across the words
     n = int(.42 * SR); x = np.linspace(0, 1, n); add(bp(noise(n), 1500, 6500) * (np.sin(np.pi * x) ** .6), t0, db(-33), -.3 + .6 * 0)
 shimmer(.4, db(-34))
 for i, h in enumerate(TL["habits"]):
     t0 = SC[f"h{i}"][0]; add(bp(noise(int(.7 * SR)), 300, 2500) * np.hanning(int(.7 * SR)), t0 - .35, db(-36))   # soft whoosh in
+    keys(t0 + .35, h["head"])
     strike(t0 + .35 + len(h["head"]) * .055 + .35)
     tt = t0 + TURN
     if i == 0:   # door creaks open, light
