@@ -122,7 +122,7 @@ rain = np.frombuffer(rr, np.float32).astype(float).reshape(-1, 2); xf = int(2 * 
 loop = rain.copy()
 while len(loop) < n:
     loop = np.concatenate([loop[:-xf], loop[-xf:] * (1 - w) + rain[:xf] * w, rain[xf:]])
-loop = loop[:n] * env(n, 3, 1.8)[:, None]; RAIN_UNDER_REC = 30   # dB below the recitation's level
+loop = loop[:n] * env(n, 3, 1.8)[:, None]; RAIN_UNDER_REC = 46   # owner, 19 Nov: "almost inaudible"; dB below the recitation's level
 _rr = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
 _x = np.frombuffer(_rr, np.float32).astype(float); rec_rms = np.sqrt((_x[np.abs(_x) > 1e-3] ** 2).mean()) / np.abs(_x).max() * db(-4)
 loop /= np.sqrt((loop ** 2).mean()) / (rec_rms * db(-RAIN_UNDER_REC))
