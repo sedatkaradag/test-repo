@@ -1,31 +1,43 @@
 [
  {
-  "id": "intro",
-  "text": "A to Z Islamic quiz! Let's see how many you can get. Ready? Let's begin."
+  "id": "l_A",
+  "text": "A."
  },
  {
   "id": "q_A",
-  "text": "What is the day before Eid al-Adha called?"
+  "text": "What is the call to prayer called?"
  },
  {
   "id": "a_A",
-  "text": "The Day of Arafah."
+  "text": "The Adhan."
+ },
+ {
+  "id": "l_B",
+  "text": "B."
  },
  {
   "id": "q_B",
-  "text": "Who was the first muezzin of Islam?"
+  "text": "What do Muslims say before they start eating?"
  },
  {
   "id": "a_B",
-  "text": "Bilal, may Allah be pleased with him."
+  "text": "Bismillah."
+ },
+ {
+  "id": "l_C",
+  "text": "C."
  },
  {
   "id": "q_C",
-  "text": "Where did the first revelation come down?"
+  "text": "What is the English word for sadaqah?"
  },
  {
   "id": "a_C",
-  "text": "The Cave of Hira."
+  "text": "Charity."
+ },
+ {
+  "id": "l_D",
+  "text": "D."
  },
  {
   "id": "q_D",
@@ -36,6 +48,10 @@
   "text": "Duaa."
  },
  {
+  "id": "l_E",
+  "text": "E."
+ },
+ {
   "id": "q_E",
   "text": "Which celebration marks the end of Ramadan?"
  },
@@ -44,28 +60,44 @@
   "text": "Eid al-Fitr."
  },
  {
+  "id": "l_F",
+  "text": "F."
+ },
+ {
   "id": "q_F",
-  "text": "What is the first surah of the Quran?"
+  "text": "Which surah is recited in every rak'ah of prayer?"
  },
  {
   "id": "a_F",
   "text": "Al-Fatiha."
  },
  {
+  "id": "l_G",
+  "text": "G."
+ },
+ {
   "id": "q_G",
-  "text": "Which angel brought the revelation to the Prophet peace be upon him?"
+  "text": "Which angel brought the revelation to the Prophet, peace be upon him,?"
  },
  {
   "id": "a_G",
   "text": "Gabriel, Jibreel."
  },
  {
+  "id": "l_H",
+  "text": "H."
+ },
+ {
   "id": "q_H",
-  "text": "What is the pilgrimage to Makkah called?"
+  "text": "In which cave did the first revelation come down?"
  },
  {
   "id": "a_H",
-  "text": "Hajj."
+  "text": "The Cave of Hira."
+ },
+ {
+  "id": "l_I",
+  "text": "I."
  },
  {
   "id": "q_I",
@@ -76,6 +108,10 @@
   "text": "Ibrahim, peace be upon him."
  },
  {
+  "id": "l_J",
+  "text": "J."
+ },
+ {
   "id": "q_J",
   "text": "Which day has a special congregational prayer every week?"
  },
@@ -84,28 +120,44 @@
   "text": "Jumuah, Friday."
  },
  {
+  "id": "l_K",
+  "text": "K."
+ },
+ {
   "id": "q_K",
-  "text": "What is the House of Allah in Makkah called?"
+  "text": "Which House did Ibrahim and Ismail raise in Makkah?"
  },
  {
   "id": "a_K",
   "text": "The Kaaba."
  },
  {
+  "id": "l_L",
+  "text": "L."
+ },
+ {
   "id": "q_L",
-  "text": "What is the Night of Decree called in Arabic?"
+  "text": "Which night is better than a thousand months?"
  },
  {
   "id": "a_L",
   "text": "Laylatul Qadr."
  },
  {
+  "id": "l_M",
+  "text": "M."
+ },
+ {
   "id": "q_M",
-  "text": "In which city is the Prophet's Mosque?"
+  "text": "To which city did the Prophet, peace be upon him, migrate?"
  },
  {
   "id": "a_M",
   "text": "Madinah."
+ },
+ {
+  "id": "l_N",
+  "text": "N."
  },
  {
   "id": "q_N",
@@ -116,6 +168,10 @@
   "text": "Nooh, peace be upon him."
  },
  {
+  "id": "l_O",
+  "text": "O."
+ },
+ {
   "id": "q_O",
   "text": "What does the name Al-Fatiha mean?"
  },
@@ -124,28 +180,44 @@
   "text": "The Opening."
  },
  {
+  "id": "l_P",
+  "text": "P."
+ },
+ {
   "id": "q_P",
-  "text": "Which pillar of Islam is performed five times a day?"
+  "text": "What is the second pillar of Islam?"
  },
  {
   "id": "a_P",
   "text": "Prayer, salah."
  },
  {
+  "id": "l_Q",
+  "text": "Q."
+ },
+ {
   "id": "q_Q",
-  "text": "Which direction do Muslims face when they pray?"
+  "text": "What is the direction of prayer called?"
  },
  {
   "id": "a_Q",
   "text": "The Qibla."
  },
  {
+  "id": "l_R",
+  "text": "R."
+ },
+ {
   "id": "q_R",
-  "text": "In which month is fasting obligatory?"
+  "text": "In which month was the Quran first revealed?"
  },
  {
   "id": "a_R",
   "text": "Ramadan."
+ },
+ {
+  "id": "l_S",
+  "text": "S."
  },
  {
   "id": "q_S",
@@ -156,6 +228,10 @@
   "text": "Suhoor."
  },
  {
+  "id": "l_T",
+  "text": "T."
+ },
+ {
   "id": "q_T",
   "text": "What is the belief in the Oneness of Allah called?"
  },
@@ -164,47 +240,163 @@
   "text": "Tawheed."
  },
  {
+  "id": "l_U",
+  "text": "U."
+ },
+ {
   "id": "q_U",
-  "text": "Which mountain near Madinah gave its name to a famous battle?"
+  "text": "In which battle did the archers leave their posts?"
  },
  {
   "id": "a_U",
-  "text": "Uhud."
+  "text": "The Battle of Uhud."
+ },
+ {
+  "id": "l_V",
+  "text": "V."
  },
  {
   "id": "q_V",
-  "text": "What does the word ayah mean in English?"
+  "text": "Ayat al-Kursi is the greatest what in the Quran?"
  },
  {
   "id": "a_V",
-  "text": "A verse, or a sign."
+  "text": "The greatest verse."
+ },
+ {
+  "id": "l_W",
+  "text": "W."
  },
  {
   "id": "q_W",
-  "text": "Which night prayer has an odd number of rakahs?"
+  "text": "Which prayer should be the last prayer of the night?"
  },
  {
   "id": "a_W",
   "text": "Witr."
  },
  {
+  "id": "l_Y",
+  "text": "Y."
+ },
+ {
   "id": "q_Y",
-  "text": "Which prophet was thrown into a well by his brothers?"
+  "text": "Whose people believed in time and were saved from the punishment?"
  },
  {
   "id": "a_Y",
-  "text": "Yoosuf, peace be upon him."
+  "text": "The people of Yunus, peace be upon him."
+ },
+ {
+  "id": "l_Z",
+  "text": "Z."
  },
  {
   "id": "q_Z",
-  "text": "What is the blessed water near the Kaaba called?"
+  "text": "Which prophet was the father of Yahya?"
  },
  {
   "id": "a_Z",
-  "text": "Zamzam."
+  "text": "Zakariyya, peace be upon him."
  },
  {
-  "id": "outro",
-  "text": "How many did you get out of twenty five? Tell us in the comments, and send this to a friend."
+  "id": "lp_A",
+  "text": "Ay."
+ },
+ {
+  "id": "lp_B",
+  "text": "Bee."
+ },
+ {
+  "id": "lp_C",
+  "text": "See."
+ },
+ {
+  "id": "lp_D",
+  "text": "Dee."
+ },
+ {
+  "id": "lp_E",
+  "text": "Ee."
+ },
+ {
+  "id": "lp_F",
+  "text": "Eff."
+ },
+ {
+  "id": "lp_G",
+  "text": "Gee."
+ },
+ {
+  "id": "lp_H",
+  "text": "Aitch."
+ },
+ {
+  "id": "lp_I",
+  "text": "Eye."
+ },
+ {
+  "id": "lp_J",
+  "text": "Jay."
+ },
+ {
+  "id": "lp_K",
+  "text": "Kay."
+ },
+ {
+  "id": "lp_L",
+  "text": "El."
+ },
+ {
+  "id": "lp_M",
+  "text": "Em."
+ },
+ {
+  "id": "lp_N",
+  "text": "En."
+ },
+ {
+  "id": "lp_O",
+  "text": "Oh."
+ },
+ {
+  "id": "lp_P",
+  "text": "Pee."
+ },
+ {
+  "id": "lp_Q",
+  "text": "Queue."
+ },
+ {
+  "id": "lp_R",
+  "text": "Are."
+ },
+ {
+  "id": "lp_S",
+  "text": "Ess."
+ },
+ {
+  "id": "lp_T",
+  "text": "Tee."
+ },
+ {
+  "id": "lp_U",
+  "text": "You."
+ },
+ {
+  "id": "lp_V",
+  "text": "Vee."
+ },
+ {
+  "id": "lp_W",
+  "text": "Double you."
+ },
+ {
+  "id": "lp_Y",
+  "text": "Why."
+ },
+ {
+  "id": "lp_Z",
+  "text": "Zed."
  }
 ]

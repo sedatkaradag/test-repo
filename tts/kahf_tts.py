@@ -9,7 +9,7 @@ for L in json.load(open("tts/kahf_lines.json")):
     for r in pipe(L["text"], voice=VOICE, speed=SPEED, split_pattern=None):
         a = np.asarray(r.audio)
         for tk in (r.tokens or []):
-            toks.append({"text": tk.text, "ws": tk.whitespace,
+            toks.append({"text": tk.text, "ws": tk.whitespace, "ph": tk.phonemes,
                          "start": None if tk.start_ts is None else round(t0 + tk.start_ts, 3),
                          "end": None if tk.end_ts is None else round(t0 + tk.end_ts, 3)})
         audio.append(a); t0 += len(a) / SR
