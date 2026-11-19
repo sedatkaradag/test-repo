@@ -1,86 +1,210 @@
 [
  {
-  "id": "hook1",
-  "text": "If you don't turn a person lying still to the right and to the left, their body starts to break down under its own weight."
- },
- {
-  "id": "hook2",
-  "text": "This vital rule, used in intensive care today, was written word for word in Surah Al-Kahf, fourteen hundred years ago."
- },
- {
   "id": "intro",
-  "text": "In verse eighteen of Surah Al-Kahf, describing the young men asleep in the cave, Allah says:"
+  "text": "A to Z Islamic quiz! Let's see how many you can get. Ready? Let's begin."
  },
  {
-  "id": "verse",
-  "text": "You would have thought they were awake, although they were asleep. We turned them over on their right and left sides, while their dog stretching its forelegs at the entrance."
+  "id": "q_A",
+  "text": "What is the day before Eid al-Adha called?"
  },
  {
-  "id": "ref",
-  "text": "Surah Al-Kahf, verse eighteen."
+  "id": "a_A",
+  "text": "The Day of Arafah."
  },
  {
-  "id": "notice",
-  "text": "Notice the detail in this verse."
+  "id": "q_B",
+  "text": "Who was the first muezzin of Islam?"
  },
  {
-  "id": "turn",
-  "text": "We turned them over on their right and left sides."
+  "id": "a_B",
+  "text": "Bilal, may Allah be pleased with him."
  },
  {
-  "id": "why",
-  "text": "In a story about people asleep, why does it stress that they were turned to the right and to the left?"
+  "id": "q_C",
+  "text": "Where did the first revelation come down?"
  },
  {
-  "id": "medicine",
-  "text": "Modern medicine and intensive care know very well how vital this sentence is."
+  "id": "a_C",
+  "text": "The Cave of Hira."
  },
  {
-  "id": "vessels",
-  "text": "When a person lies still in the same position for a long time, the blood vessels caught between the weight of the bones and the surface beneath get blocked."
+  "id": "q_D",
+  "text": "What do we call a personal supplication to Allah?"
  },
  {
-  "id": "oxygen",
-  "text": "Oxygen no longer reaches the tissue."
+  "id": "a_D",
+  "text": "Duaa."
  },
  {
-  "id": "ulcer",
-  "text": "Soon, tissue death and clotting begin. Medicine calls it a decubitus ulcer, or a bedsore."
+  "id": "q_E",
+  "text": "Which celebration marks the end of Ramadan?"
  },
  {
-  "id": "rule",
-  "text": "In intensive care, the most basic rule for keeping an unconscious patient alive is to turn them to the right and to the left at regular intervals."
+  "id": "a_E",
+  "text": "Eid al-Fitr."
  },
  {
-  "id": "detail",
-  "text": "There is one more detail."
+  "id": "q_F",
+  "text": "What is the first surah of the Quran?"
  },
  {
-  "id": "dog1",
-  "text": "While the verse says the young men were turned to the right and to the left, of their dog it says: stretching its forelegs."
+  "id": "a_F",
+  "text": "Al-Fatiha."
  },
  {
-  "id": "dog2",
-  "text": "So the dog is not turned."
+  "id": "q_G",
+  "text": "Which angel brought the revelation to the Prophet peace be upon him?"
  },
  {
-  "id": "whydog",
-  "text": "Then why are the people turned, but not the dog?"
+  "id": "a_G",
+  "text": "Gabriel, Jibreel."
  },
  {
-  "id": "sphinx",
-  "text": "Because, as veterinary anatomy shows, when a dog lies down on its chest with its forelegs stretched out in front, in the sphinx position, its weight spreads evenly across its broad chest, and its blood vessels are not squeezed."
+  "id": "q_H",
+  "text": "What is the pilgrimage to Makkah called?"
  },
  {
-  "id": "nosore",
-  "text": "In this special position, no bedsores form on the dog's body."
+  "id": "a_H",
+  "text": "Hajj."
  },
  {
-  "id": "protect",
-  "text": "The turning that protects people from tissue death, and the special posture that protects the dog's vessels."
+  "id": "q_I",
+  "text": "Which prophet was commanded to sacrifice his son?"
+ },
+ {
+  "id": "a_I",
+  "text": "Ibrahim, peace be upon him."
+ },
+ {
+  "id": "q_J",
+  "text": "Which day has a special congregational prayer every week?"
+ },
+ {
+  "id": "a_J",
+  "text": "Jumuah, Friday."
+ },
+ {
+  "id": "q_K",
+  "text": "What is the House of Allah in Makkah called?"
+ },
+ {
+  "id": "a_K",
+  "text": "The Kaaba."
+ },
+ {
+  "id": "q_L",
+  "text": "What is the Night of Decree called in Arabic?"
+ },
+ {
+  "id": "a_L",
+  "text": "Laylatul Qadr."
+ },
+ {
+  "id": "q_M",
+  "text": "In which city is the Prophet's Mosque?"
+ },
+ {
+  "id": "a_M",
+  "text": "Madinah."
+ },
+ {
+  "id": "q_N",
+  "text": "Which prophet built the Ark?"
+ },
+ {
+  "id": "a_N",
+  "text": "Nooh, peace be upon him."
+ },
+ {
+  "id": "q_O",
+  "text": "What does the name Al-Fatiha mean?"
+ },
+ {
+  "id": "a_O",
+  "text": "The Opening."
+ },
+ {
+  "id": "q_P",
+  "text": "Which pillar of Islam is performed five times a day?"
+ },
+ {
+  "id": "a_P",
+  "text": "Prayer, salah."
+ },
+ {
+  "id": "q_Q",
+  "text": "Which direction do Muslims face when they pray?"
+ },
+ {
+  "id": "a_Q",
+  "text": "The Qibla."
+ },
+ {
+  "id": "q_R",
+  "text": "In which month is fasting obligatory?"
+ },
+ {
+  "id": "a_R",
+  "text": "Ramadan."
+ },
+ {
+  "id": "q_S",
+  "text": "What is the meal before dawn on a fasting day called?"
+ },
+ {
+  "id": "a_S",
+  "text": "Suhoor."
+ },
+ {
+  "id": "q_T",
+  "text": "What is the belief in the Oneness of Allah called?"
+ },
+ {
+  "id": "a_T",
+  "text": "Tawheed."
+ },
+ {
+  "id": "q_U",
+  "text": "Which mountain near Madinah gave its name to a famous battle?"
+ },
+ {
+  "id": "a_U",
+  "text": "Uhud."
+ },
+ {
+  "id": "q_V",
+  "text": "What does the word ayah mean in English?"
+ },
+ {
+  "id": "a_V",
+  "text": "A verse, or a sign."
+ },
+ {
+  "id": "q_W",
+  "text": "Which night prayer has an odd number of rakahs?"
+ },
+ {
+  "id": "a_W",
+  "text": "Witr."
+ },
+ {
+  "id": "q_Y",
+  "text": "Which prophet was thrown into a well by his brothers?"
+ },
+ {
+  "id": "a_Y",
+  "text": "Yoosuf, peace be upon him."
+ },
+ {
+  "id": "q_Z",
+  "text": "What is the blessed water near the Kaaba called?"
+ },
+ {
+  "id": "a_Z",
+  "text": "Zamzam."
  },
  {
   "id": "outro",
-  "text": "Follow for more of the Quran's fine details like this."
+  "text": "How many did you get out of twenty five? Tell us in the comments, and send this to a friend."
  }
 ]
