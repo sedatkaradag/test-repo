@@ -122,15 +122,20 @@ rain = np.frombuffer(rr, np.float32).astype(float).reshape(-1, 2); xf = int(2 * 
 loop = rain.copy()
 while len(loop) < n:
     loop = np.concatenate([loop[:-xf], loop[-xf:] * (1 - w) + rain[:xf] * w, rain[xf:]])
-loop = loop[:n] * env(n, 3, 1.8)[:, None]; loop /= np.sqrt((loop ** 2).mean()) / db(-33)
+loop = loop[:n] * env(n, 3, 1.8)[:, None]; RAIN_UNDER_REC = 30   # dB below the recitation's level
+_rr = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+_x = np.frombuffer(_rr, np.float32).astype(float); rec_rms = np.sqrt((_x[np.abs(_x) > 1e-3] ** 2).mean()) / np.abs(_x).max() * db(-4)
+loop /= np.sqrt((loop ** 2).mean()) / (rec_rms * db(-RAIN_UNDER_REC))
 L[:n] += loop[:, 0]; R[:n] += loop[:, 1]
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
 rec = np.frombuffer(raw, np.float32).astype(float)[:int((AL[-1][3] / 1000 + .5) * SR)]; rec *= env(len(rec), .02, .45)
 add(rec / np.abs(rec).max(), REC_T, db(-4))
 bloom(SC["const"], db(-31), 200, 2000, 2.2); bloom(SC["fat"], db(-33)); bloom(SC["verse"], db(-31), 100, 1200, 2.4); bloom(SC["logo"] + .1, db(-30))
-mix = np.stack([lp(L, 11000), lp(R, 11000)], 1); f = int(1.2 * SR); mix[-f:] *= np.linspace(1, 0, f)[:, None]; mix /= np.abs(mix).max() + 1e-9
-wavfile.write(OUT / "amb_raw.wav", SR, (mix * .9 * 32767).astype(np.int16))
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / "amb_raw.wav"), "-af", "loudnorm=I=-18:TP=-1.5:LRA=14", "-ar", str(SR), str(OUT / "amb.wav")], check=True)
+mix = np.stack([lp(L, 11000), lp(R, 11000)], 1); f = int(1.2 * SR); mix[-f:] *= np.linspace(1, 0, f)[:, None]
+i0, i1 = int(REC_T * SR), int(REC_END * SR); seg = mix[i0:i1]
+mix *= db(-15) / np.sqrt((seg[np.abs(seg) > 1e-3] ** 2).mean())        # recitation at about -15 dBFS RMS
+pk = np.abs(mix).max(); mix *= min(1, db(-1) / pk)
+wavfile.write(OUT / "amb.wav", SR, (mix * 32767).astype(np.int16))
 
 video = OUT / "prophet_losses.mp4"; tmp = OUT / "prophet_losses_tmp.mp4"
 if "--audio-only" in sys.argv:
