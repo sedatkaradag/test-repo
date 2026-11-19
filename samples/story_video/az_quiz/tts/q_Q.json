@@ -1,62 +1,104 @@
 {
-"text": "What is the direction of prayer called?",
+"text": "Which tribe did the Prophet, peace be upon him, come from?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
-"ph": "w\u02cc\u0252t",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.4
+"end": 0.463
 },
 {
-"text": "is",
+"text": "tribe",
 "ws": " ",
-"ph": "\u026az",
-"start": 0.4,
-"end": 0.575
+"ph": "t\u0279\u02c8Ib",
+"start": 0.463,
+"end": 0.875
+},
+{
+"text": "did",
+"ws": " ",
+"ph": "d\u02c8\u026ad",
+"start": 0.875,
+"end": 1.012
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 0.575,
-"end": 0.7
+"start": 1.012,
+"end": 1.113
 },
 {
-"text": "direction",
-"ws": " ",
-"ph": "d\u026a\u0279\u02c8\u025bk\u0283\u1d4an",
-"start": 0.7,
-"end": 1.5
-},
-{
-"text": "of",
-"ws": " ",
-"ph": "\u0252v",
-"start": 1.5,
-"end": 1.688
-},
-{
-"text": "prayer",
-"ws": " ",
-"ph": "p\u0279\u02c8A\u0259",
-"start": 1.688,
-"end": 2.138
-},
-{
-"text": "called",
+"text": "Prophet",
 "ws": "",
-"ph": "k\u02c8\u0254\u02d0ld",
-"start": 2.138,
-"end": 2.875
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 1.113,
+"end": 1.75
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 1.75,
+"end": 1.863
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 1.863,
+"end": 2.2
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 2.2,
+"end": 2.375
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 2.375,
+"end": 2.725
+},
+{
+"text": "him",
+"ws": "",
+"ph": "h\u02cc\u026am",
+"start": 2.725,
+"end": 2.975
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 2.975,
+"end": 3.05
+},
+{
+"text": "come",
+"ws": " ",
+"ph": "k\u02c8\u028cm",
+"start": 3.05,
+"end": 3.312
+},
+{
+"text": "from",
+"ws": "",
+"ph": "f\u0279\u0252m",
+"start": 3.312,
+"end": 3.975
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 2.875,
-"end": 3.075
+"start": 3.975,
+"end": 4.175
 }
 ],
-"duration": 3.175
+"duration": 4.275
 }

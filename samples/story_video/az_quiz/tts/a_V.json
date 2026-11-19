@@ -1,34 +1,27 @@
 {
-"text": "The greatest verse.",
+"text": "A vow.",
 "tokens": [
 {
-"text": "The",
+"text": "A",
 "ws": " ",
-"ph": "\u00f0\u0259",
-"start": 0.225,
-"end": 0.362
+"ph": "\u0250",
+"start": 0.25,
+"end": 0.375
 },
 {
-"text": "greatest",
-"ws": " ",
-"ph": "\u0261\u0279\u02c8At\u026ast",
-"start": 0.362,
-"end": 0.938
-},
-{
-"text": "verse",
+"text": "vow",
 "ws": "",
-"ph": "v\u02c8\u025c\u02d0s",
-"start": 0.938,
-"end": 1.725
+"ph": "v\u02c8W",
+"start": 0.375,
+"end": 1.1
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.725,
-"end": 1.925
+"start": 1.1,
+"end": 1.35
 }
 ],
-"duration": 2.025
+"duration": 1.45
 }

@@ -1,0 +1,20 @@
+{
+"text": "Letter R.",
+"tokens": [
+{
+"text": "Letter",
+"ws": " ",
+"ph": "l\u02c8\u025bt\u0259",
+"start": 0.275,
+"end": 0.762
+},
+{
+"text": "R.",
+"ws": "",
+"ph": "\u02c8\u0251\u02d0",
+"start": 0.762,
+"end": 1.475
+}
+],
+"duration": 1.8
+}

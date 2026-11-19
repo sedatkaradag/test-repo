@@ -1,27 +1,55 @@
 {
-"text": "The Adhan.",
+"text": "Adam, peace be upon him.",
 "tokens": [
 {
-"text": "The",
-"ws": " ",
-"ph": "\u00f0i",
+"text": "Adam",
+"ws": "",
+"ph": "\u02c8ad\u0259m",
 "start": 0.25,
-"end": 0.487
+"end": 0.65
 },
 {
-"text": "Adhan",
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 0.65,
+"end": 0.738
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 0.738,
+"end": 1.113
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 1.113,
+"end": 1.3
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 1.3,
+"end": 1.675
+},
+{
+"text": "him",
 "ws": "",
-"ph": "\u0251\u02d0\u00f0\u02c8\u0251\u02d0n",
-"start": 0.487,
-"end": 1.575
+"ph": "h\u02cc\u026am",
+"start": 1.675,
+"end": 2.3
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.575,
-"end": 1.8
+"start": 2.3,
+"end": 2.475
 }
 ],
-"duration": 1.9
+"duration": 2.575
 }

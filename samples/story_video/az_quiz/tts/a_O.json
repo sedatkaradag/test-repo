@@ -1,27 +1,27 @@
 {
-"text": "The Opening.",
+"text": "The olive.",
 "tokens": [
 {
 "text": "The",
 "ws": " ",
 "ph": "\u00f0i",
-"start": 0.25,
-"end": 0.475
+"start": 0.225,
+"end": 0.412
 },
 {
-"text": "Opening",
+"text": "olive",
 "ws": "",
-"ph": "\u02c8Qp\u1d4an\u026a\u014b",
-"start": 0.475,
-"end": 1.475
+"ph": "\u02c8\u0252l\u026av",
+"start": 0.412,
+"end": 1.25
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.475,
-"end": 1.675
+"start": 1.25,
+"end": 1.475
 }
 ],
-"duration": 1.775
+"duration": 1.575
 }

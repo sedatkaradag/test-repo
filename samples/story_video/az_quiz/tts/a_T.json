@@ -1,20 +1,41 @@
 {
-"text": "Tawheed.",
+"text": "The expedition of Tabook.",
 "tokens": [
 {
-"text": "Tawheed",
-"ws": "",
-"ph": "t\u02c8\u0254\u02d0hi\u02d0d",
+"text": "The",
+"ws": " ",
+"ph": "\u00f0i",
 "start": 0.225,
-"end": 1.15
+"end": 0.35
+},
+{
+"text": "expedition",
+"ws": " ",
+"ph": "\u02cc\u025bksp\u026ad\u02c8\u026a\u0283\u1d4an",
+"start": 0.35,
+"end": 1.438
+},
+{
+"text": "of",
+"ws": " ",
+"ph": "\u0252v",
+"start": 1.438,
+"end": 1.637
+},
+{
+"text": "Tabook",
+"ws": "",
+"ph": "t\u02c8\u0251\u02d0b\u028ak",
+"start": 1.637,
+"end": 2.5
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.15,
-"end": 1.375
+"start": 2.5,
+"end": 2.7
 }
 ],
-"duration": 1.475
+"duration": 2.8
 }

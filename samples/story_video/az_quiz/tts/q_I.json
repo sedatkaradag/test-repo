@@ -1,69 +1,83 @@
 {
-"text": "Which prophet was commanded to sacrifice his son?",
+"text": "Which son helped Ibrahim raise the walls of the Kaaba?",
 "tokens": [
 {
 "text": "Which",
 "ws": " ",
 "ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.487
-},
-{
-"text": "prophet",
-"ws": " ",
-"ph": "p\u0279\u02c8\u0252f\u026at",
-"start": 0.487,
-"end": 0.975
-},
-{
-"text": "was",
-"ws": " ",
-"ph": "w\u0252z",
-"start": 0.975,
-"end": 1.175
-},
-{
-"text": "commanded",
-"ws": " ",
-"ph": "k\u0259m\u02c8\u0251\u02d0nd\u026ad",
-"start": 1.175,
-"end": 2.05
-},
-{
-"text": "to",
-"ws": " ",
-"ph": "t\u0259",
-"start": 2.05,
-"end": 2.212
-},
-{
-"text": "sacrifice",
-"ws": " ",
-"ph": "s\u02c8ak\u0279\u026afIs",
-"start": 2.212,
-"end": 2.875
-},
-{
-"text": "his",
-"ws": " ",
-"ph": "h\u026az",
-"start": 2.875,
-"end": 3.038
+"end": 0.438
 },
 {
 "text": "son",
-"ws": "",
+"ws": " ",
 "ph": "s\u02c8\u028cn",
-"start": 3.038,
-"end": 3.775
+"start": 0.438,
+"end": 0.838
+},
+{
+"text": "helped",
+"ws": " ",
+"ph": "h\u02c8\u025blpt",
+"start": 0.838,
+"end": 1.188
+},
+{
+"text": "Ibrahim",
+"ws": " ",
+"ph": "\u02c8\u026ab\u0279ah\u026am",
+"start": 1.188,
+"end": 1.9
+},
+{
+"text": "raise",
+"ws": " ",
+"ph": "\u0279\u02c8Az",
+"start": 1.9,
+"end": 2.35
+},
+{
+"text": "the",
+"ws": " ",
+"ph": "\u00f0\u0259",
+"start": 2.35,
+"end": 2.487
+},
+{
+"text": "walls",
+"ws": " ",
+"ph": "w\u02c8\u0254\u02d0lz",
+"start": 2.487,
+"end": 2.938
+},
+{
+"text": "of",
+"ws": " ",
+"ph": "\u0252v",
+"start": 2.938,
+"end": 3.013
+},
+{
+"text": "the",
+"ws": " ",
+"ph": "\u00f0\u0259",
+"start": 3.013,
+"end": 3.138
+},
+{
+"text": "Kaaba",
+"ws": "",
+"ph": "k\u02c8\u0251\u02d0b\u0259",
+"start": 3.138,
+"end": 3.95
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.775,
-"end": 3.975
+"start": 3.95,
+"end": 4.175
 }
 ],
-"duration": 4.075
+"duration": 4.275
 }

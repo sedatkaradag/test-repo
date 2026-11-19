@@ -1,27 +1,69 @@
 {
-"text": "The Kaaba.",
+"text": "Khadijah, may Allah be pleased with her.",
 "tokens": [
 {
-"text": "The",
-"ws": " ",
-"ph": "\u00f0\u0259",
-"start": 0.225,
-"end": 0.362
+"text": "Khadijah",
+"ws": "",
+"ph": "k\u02c8\u0251\u02d0d\u026a\u02a4\u0259",
+"start": 0.25,
+"end": 0.925
 },
 {
-"text": "Kaaba",
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 0.925,
+"end": 1.05
+},
+{
+"text": "may",
+"ws": " ",
+"ph": "m\u02c8A",
+"start": 1.05,
+"end": 1.337
+},
+{
+"text": "Allah",
+"ws": " ",
+"ph": "\u02c8al\u0259",
+"start": 1.337,
+"end": 1.6
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 1.6,
+"end": 1.788
+},
+{
+"text": "pleased",
+"ws": " ",
+"ph": "pl\u02c8i\u02d0zd",
+"start": 1.788,
+"end": 2.3
+},
+{
+"text": "with",
+"ws": " ",
+"ph": "w\u026a\u00f0",
+"start": 2.3,
+"end": 2.475
+},
+{
+"text": "her",
 "ws": "",
-"ph": "k\u02c8\u0251\u02d0b\u0259",
-"start": 0.362,
-"end": 1.225
+"ph": "h\u02cc\u025c\u02d0",
+"start": 2.475,
+"end": 3.025
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.225,
-"end": 1.475
+"start": 3.025,
+"end": 3.225
 }
 ],
-"duration": 1.575
+"duration": 3.325
 }

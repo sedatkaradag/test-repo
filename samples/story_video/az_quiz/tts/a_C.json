@@ -1,18 +1,25 @@
 {
-"text": "Charity.",
+"text": "A camel.",
 "tokens": [
 {
-"text": "Charity",
-"ws": "",
-"ph": "\u02a7\u02c8a\u0279\u026ati",
+"text": "A",
+"ws": " ",
+"ph": "\u0250",
 "start": 0.25,
-"end": 1.2
+"end": 0.375
+},
+{
+"text": "camel",
+"ws": "",
+"ph": "k\u02c8am\u1d4al",
+"start": 0.375,
+"end": 1.25
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.2,
+"start": 1.25,
 "end": 1.45
 }
 ],

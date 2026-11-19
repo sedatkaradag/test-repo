@@ -1,69 +1,69 @@
 {
-"text": "What do Muslims say before they start eating?",
+"text": "What is the longest surah of the Quran?",
 "tokens": [
 {
 "text": "What",
 "ws": " ",
 "ph": "w\u02cc\u0252t",
 "start": 0.25,
-"end": 0.425
+"end": 0.438
 },
 {
-"text": "do",
+"text": "is",
 "ws": " ",
-"ph": "d\u02c8u\u02d0",
-"start": 0.425,
-"end": 0.625
+"ph": "\u026az",
+"start": 0.438,
+"end": 0.675
 },
 {
-"text": "Muslims",
+"text": "the",
 "ws": " ",
-"ph": "m\u02c8\u028azl\u026amz",
-"start": 0.625,
-"end": 1.262
+"ph": "\u00f0\u0259",
+"start": 0.675,
+"end": 0.825
 },
 {
-"text": "say",
+"text": "longest",
 "ws": " ",
-"ph": "s\u02c8A",
-"start": 1.262,
-"end": 1.7
+"ph": "l\u02c8\u0252\u014b\u0261\u026ast",
+"start": 0.825,
+"end": 1.387
 },
 {
-"text": "before",
+"text": "surah",
 "ws": " ",
-"ph": "b\u026af\u02c8\u0254\u02d0",
-"start": 1.7,
-"end": 2.1
+"ph": "s\u02c8\u028a\u0259\u0279\u0259",
+"start": 1.387,
+"end": 1.913
 },
 {
-"text": "they",
+"text": "of",
 "ws": " ",
-"ph": "\u00f0A",
-"start": 2.1,
-"end": 2.312
+"ph": "\u0252v",
+"start": 1.913,
+"end": 2.038
 },
 {
-"text": "start",
+"text": "the",
 "ws": " ",
-"ph": "st\u02c8\u0251\u02d0t",
-"start": 2.312,
-"end": 2.712
+"ph": "\u00f0\u0259",
+"start": 2.038,
+"end": 2.163
 },
 {
-"text": "eating",
+"text": "Quran",
 "ws": "",
-"ph": "\u02c8i\u02d0t\u026a\u014b",
-"start": 2.712,
-"end": 3.55
+"ph": "k\u028a\u0279\u02c8\u0251\u02d0n",
+"start": 2.163,
+"end": 3.1
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.55,
-"end": 3.725
+"start": 3.1,
+"end": 3.3
 }
 ],
-"duration": 3.825
+"duration": 3.4
 }

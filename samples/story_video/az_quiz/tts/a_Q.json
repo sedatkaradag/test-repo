@@ -1,18 +1,11 @@
 {
-"text": "The Qibla.",
+"text": "Quraysh.",
 "tokens": [
 {
-"text": "The",
-"ws": " ",
-"ph": "\u00f0\u0259",
-"start": 0.225,
-"end": 0.362
-},
-{
-"text": "Qibla",
+"text": "Quraysh",
 "ws": "",
-"ph": "k\u02c8\u026abl\u0259",
-"start": 0.362,
+"ph": "kw\u0259\u0279\u02c8A\u0283",
+"start": 0.25,
 "end": 1.175
 },
 {
@@ -20,8 +13,8 @@
 "ws": "",
 "ph": ".",
 "start": 1.175,
-"end": 1.425
+"end": 1.4
 }
 ],
-"duration": 1.525
+"duration": 1.5
 }

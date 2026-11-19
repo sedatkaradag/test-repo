@@ -1,5 +1,5 @@
 {
-"text": "Which angel brought the revelation to the Prophet, peace be upon him,?",
+"text": "Which giant warrior did Dawud defeat?",
 "tokens": [
 {
 "text": "Which",
@@ -9,103 +9,47 @@
 "end": 0.438
 },
 {
-"text": "angel",
+"text": "giant",
 "ws": " ",
-"ph": "\u02c8An\u02a4\u1d4al",
+"ph": "\u02a4\u02c8I\u0259nt",
 "start": 0.438,
-"end": 0.887
+"end": 0.863
 },
 {
-"text": "brought",
+"text": "warrior",
 "ws": " ",
-"ph": "b\u0279\u02c8\u0254\u02d0t",
-"start": 0.887,
-"end": 1.175
+"ph": "w\u02c8\u0252\u0279\u026a\u0259",
+"start": 0.863,
+"end": 1.575
 },
 {
-"text": "the",
+"text": "did",
 "ws": " ",
-"ph": "\u00f0\u0259",
-"start": 1.175,
-"end": 1.275
+"ph": "d\u02c8\u026ad",
+"start": 1.575,
+"end": 1.837
 },
 {
-"text": "revelation",
+"text": "Dawud",
 "ws": " ",
-"ph": "\u0279\u02cc\u025bv\u0259l\u02c8A\u0283\u1d4an",
-"start": 1.275,
-"end": 1.95
+"ph": "d\u02c8aw\u028cd",
+"start": 1.837,
+"end": 2.225
 },
 {
-"text": "to",
-"ws": " ",
-"ph": "t\u0259",
-"start": 1.95,
-"end": 2.05
-},
-{
-"text": "the",
-"ws": " ",
-"ph": "\u00f0\u0259",
-"start": 2.05,
-"end": 2.188
-},
-{
-"text": "Prophet",
+"text": "defeat",
 "ws": "",
-"ph": "p\u0279\u02c8\u0252f\u026at",
-"start": 2.188,
-"end": 2.875
-},
-{
-"text": ",",
-"ws": " ",
-"ph": ",",
-"start": 2.875,
-"end": 2.987
-},
-{
-"text": "peace",
-"ws": " ",
-"ph": "p\u02c8i\u02d0s",
-"start": 2.987,
-"end": 3.325
-},
-{
-"text": "be",
-"ws": " ",
-"ph": "bi\u02d0",
-"start": 3.325,
-"end": 3.525
-},
-{
-"text": "upon",
-"ws": " ",
-"ph": "\u0259p\u02c8\u0252n",
-"start": 3.525,
-"end": 3.9
-},
-{
-"text": "him",
-"ws": "",
-"ph": "h\u02cc\u026am",
-"start": 3.9,
-"end": 4.525
-},
-{
-"text": ",",
-"ws": "",
-"ph": ",",
-"start": 4.525,
-"end": 4.675
+"ph": "d\u026af\u02c8i\u02d0t",
+"start": 2.225,
+"end": 3.1
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 4.675,
-"end": 4.725
+"start": 3.1,
+"end": 3.3
 }
 ],
-"duration": 4.825
+"duration": 3.4
 }

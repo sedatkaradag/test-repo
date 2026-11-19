@@ -1,41 +1,55 @@
 {
-"text": "The Cave of Hira.",
+"text": "Hood, peace be upon him.",
 "tokens": [
 {
-"text": "The",
-"ws": " ",
-"ph": "\u00f0\u0259",
-"start": 0.225,
-"end": 0.362
-},
-{
-"text": "Cave",
-"ws": " ",
-"ph": "k\u02c8Av",
-"start": 0.362,
-"end": 0.938
-},
-{
-"text": "of",
-"ws": " ",
-"ph": "\u0252v",
-"start": 0.938,
-"end": 1.113
-},
-{
-"text": "Hira",
+"text": "Hood",
 "ws": "",
-"ph": "h\u02c8i\u0259\u0279\u0259",
-"start": 1.113,
-"end": 1.925
+"ph": "h\u02c8\u028ad",
+"start": 0.25,
+"end": 0.525
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 0.525,
+"end": 0.613
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 0.613,
+"end": 0.975
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 0.975,
+"end": 1.15
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 1.15,
+"end": 1.525
+},
+{
+"text": "him",
+"ws": "",
+"ph": "h\u02cc\u026am",
+"start": 1.525,
+"end": 2.175
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.925,
-"end": 2.15
+"start": 2.175,
+"end": 2.375
 }
 ],
-"duration": 2.25
+"duration": 2.475
 }

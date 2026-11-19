@@ -1,69 +1,69 @@
 {
-"text": "In which month was the Quran first revealed?",
+"text": "What is one unit of the prayer called?",
 "tokens": [
 {
-"text": "In",
+"text": "What",
 "ws": " ",
-"ph": "\u026an",
+"ph": "w\u02cc\u0252t",
 "start": 0.25,
-"end": 0.375
+"end": 0.425
 },
 {
-"text": "which",
+"text": "is",
 "ws": " ",
-"ph": "w\u02cc\u026a\u02a7",
-"start": 0.375,
-"end": 0.637
+"ph": "\u026az",
+"start": 0.425,
+"end": 0.65
 },
 {
-"text": "month",
+"text": "one",
 "ws": " ",
-"ph": "m\u02c8\u028cn\u03b8",
-"start": 0.637,
-"end": 1.275
+"ph": "w\u02c8\u028cn",
+"start": 0.65,
+"end": 0.963
 },
 {
-"text": "was",
+"text": "unit",
 "ws": " ",
-"ph": "w\u0252z",
-"start": 1.275,
+"ph": "j\u02c8u\u02d0n\u026at",
+"start": 0.963,
 "end": 1.55
+},
+{
+"text": "of",
+"ws": " ",
+"ph": "\u0252v",
+"start": 1.55,
+"end": 1.712
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 1.55,
-"end": 1.688
+"start": 1.712,
+"end": 1.837
 },
 {
-"text": "Quran",
+"text": "prayer",
 "ws": " ",
-"ph": "k\u028a\u0279\u02c8\u0251\u02d0n",
-"start": 1.688,
-"end": 2.275
+"ph": "p\u0279\u02c8A\u0259",
+"start": 1.837,
+"end": 2.337
 },
 {
-"text": "first",
-"ws": " ",
-"ph": "f\u02c8\u025c\u02d0st",
-"start": 2.275,
-"end": 2.65
-},
-{
-"text": "revealed",
+"text": "called",
 "ws": "",
-"ph": "\u0279\u026av\u02c8i\u02d0ld",
-"start": 2.65,
-"end": 3.55
+"ph": "k\u02c8\u0254\u02d0ld",
+"start": 2.337,
+"end": 3.05
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.55,
-"end": 3.75
+"start": 3.05,
+"end": 3.25
 }
 ],
-"duration": 3.85
+"duration": 3.35
 }

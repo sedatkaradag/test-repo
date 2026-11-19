@@ -1,104 +1,62 @@
 {
-"text": "To which city did the Prophet, peace be upon him, migrate?",
+"text": "Which prophet did Allah speak to directly?",
 "tokens": [
 {
-"text": "To",
-"ws": " ",
-"ph": "t\u0259",
-"start": 0.25,
-"end": 0.375
-},
-{
-"text": "which",
+"text": "Which",
 "ws": " ",
 "ph": "w\u02cc\u026a\u02a7",
-"start": 0.375,
-"end": 0.588
+"start": 0.225,
+"end": 0.438
 },
 {
-"text": "city",
+"text": "prophet",
 "ws": " ",
-"ph": "s\u02c8\u026ati",
-"start": 0.588,
-"end": 1.0
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 0.438,
+"end": 1.012
 },
 {
 "text": "did",
 "ws": " ",
 "ph": "d\u02c8\u026ad",
-"start": 1.0,
-"end": 1.137
+"start": 1.012,
+"end": 1.238
 },
 {
-"text": "the",
+"text": "Allah",
 "ws": " ",
-"ph": "\u00f0\u0259",
-"start": 1.137,
-"end": 1.225
+"ph": "\u02c8al\u0259",
+"start": 1.238,
+"end": 1.538
 },
 {
-"text": "Prophet",
+"text": "speak",
+"ws": " ",
+"ph": "sp\u02c8i\u02d0k",
+"start": 1.538,
+"end": 1.9
+},
+{
+"text": "to",
+"ws": " ",
+"ph": "t\u0259",
+"start": 1.9,
+"end": 2.025
+},
+{
+"text": "directly",
 "ws": "",
-"ph": "p\u0279\u02c8\u0252f\u026at",
-"start": 1.225,
-"end": 1.875
-},
-{
-"text": ",",
-"ws": " ",
-"ph": ",",
-"start": 1.875,
-"end": 1.988
-},
-{
-"text": "peace",
-"ws": " ",
-"ph": "p\u02c8i\u02d0s",
-"start": 1.988,
-"end": 2.325
-},
-{
-"text": "be",
-"ws": " ",
-"ph": "bi\u02d0",
-"start": 2.325,
-"end": 2.5
-},
-{
-"text": "upon",
-"ws": " ",
-"ph": "\u0259p\u02c8\u0252n",
-"start": 2.5,
-"end": 2.875
-},
-{
-"text": "him",
-"ws": "",
-"ph": "h\u02cc\u026am",
-"start": 2.875,
-"end": 3.175
-},
-{
-"text": ",",
-"ws": " ",
-"ph": ",",
-"start": 3.175,
-"end": 3.25
-},
-{
-"text": "migrate",
-"ws": "",
-"ph": "mI\u0261\u0279\u02c8At",
-"start": 3.25,
-"end": 4.15
+"ph": "d\u026a\u0279\u02c8\u025bktli",
+"start": 2.025,
+"end": 3.0
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 4.15,
-"end": 4.35
+"start": 3.0,
+"end": 3.2
 }
 ],
-"duration": 4.45
+"duration": 3.3
 }

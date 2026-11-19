@@ -1,27 +1,27 @@
 {
-"text": "Eid al-Fitr.",
+"text": "Eleven stars.",
 "tokens": [
 {
-"text": "Eid",
+"text": "Eleven",
 "ws": " ",
-"ph": "\u02c8i\u02d0d",
+"ph": "\u026al\u02c8\u025bv\u1d4an",
 "start": 0.25,
-"end": 0.675
+"end": 0.775
 },
 {
-"text": "al-Fitr",
+"text": "stars",
 "ws": "",
-"ph": "\u02c8alf\u02c8\u026at\u0259",
-"start": 0.675,
-"end": 1.8
+"ph": "st\u02c8\u0251\u02d0z",
+"start": 0.775,
+"end": 1.775
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.8,
-"end": 2.025
+"start": 1.775,
+"end": 2.0
 }
 ],
-"duration": 2.125
+"duration": 2.1
 }

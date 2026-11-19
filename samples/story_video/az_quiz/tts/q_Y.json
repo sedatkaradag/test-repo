@@ -1,90 +1,62 @@
 {
-"text": "Whose people believed in time and were saved from the punishment?",
+"text": "What was Madinah called before the Hijrah?",
 "tokens": [
 {
-"text": "Whose",
+"text": "What",
 "ws": " ",
-"ph": "h\u02ccu\u02d0z",
+"ph": "w\u02cc\u0252t",
 "start": 0.25,
-"end": 0.45
+"end": 0.388
 },
 {
-"text": "people",
+"text": "was",
 "ws": " ",
-"ph": "p\u02c8i\u02d0p\u1d4al",
-"start": 0.45,
-"end": 0.825
+"ph": "w\u0252z",
+"start": 0.388,
+"end": 0.588
 },
 {
-"text": "believed",
+"text": "Madinah",
 "ws": " ",
-"ph": "b\u026al\u02c8i\u02d0vd",
-"start": 0.825,
-"end": 1.375
+"ph": "m\u02c8ad\u026an\u0259",
+"start": 0.588,
+"end": 1.312
 },
 {
-"text": "in",
+"text": "called",
 "ws": " ",
-"ph": "\u026an",
-"start": 1.375,
-"end": 1.538
+"ph": "k\u02c8\u0254\u02d0ld",
+"start": 1.312,
+"end": 1.725
 },
 {
-"text": "time",
+"text": "before",
 "ws": " ",
-"ph": "t\u02c8Im",
-"start": 1.538,
-"end": 2.325
-},
-{
-"text": "and",
-"ws": " ",
-"ph": "and",
-"start": 2.325,
-"end": 2.462
-},
-{
-"text": "were",
-"ws": " ",
-"ph": "w\u025c\u02d0",
-"start": 2.462,
-"end": 2.6
-},
-{
-"text": "saved",
-"ws": " ",
-"ph": "s\u02c8Avd",
-"start": 2.6,
-"end": 3.05
-},
-{
-"text": "from",
-"ws": " ",
-"ph": "f\u0279\u0252m",
-"start": 3.05,
-"end": 3.212
+"ph": "b\u026af\u02c8\u0254\u02d0",
+"start": 1.725,
+"end": 2.15
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 3.212,
-"end": 3.312
+"start": 2.15,
+"end": 2.275
 },
 {
-"text": "punishment",
+"text": "Hijrah",
 "ws": "",
-"ph": "p\u02c8\u028cn\u026a\u0283m\u1d4ant",
-"start": 3.312,
-"end": 4.3
+"ph": "h\u02c8\u026a\u02a4\u0279\u0259",
+"start": 2.275,
+"end": 3.075
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 4.3,
-"end": 4.5
+"start": 3.075,
+"end": 3.3
 }
 ],
-"duration": 4.6
+"duration": 3.4
 }

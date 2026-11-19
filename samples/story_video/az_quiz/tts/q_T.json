@@ -1,83 +1,132 @@
 {
-"text": "What is the belief in the Oneness of Allah called?",
+"text": "Which expedition did the Prophet, peace be upon him, lead in the intense summer heat?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
-"ph": "w\u02cc\u0252t",
-"start": 0.25,
-"end": 0.412
+"ph": "w\u02cc\u026a\u02a7",
+"start": 0.225,
+"end": 0.4
 },
 {
-"text": "is",
+"text": "expedition",
 "ws": " ",
-"ph": "\u026az",
-"start": 0.412,
-"end": 0.6
+"ph": "\u02cc\u025bksp\u026ad\u02c8\u026a\u0283\u1d4an",
+"start": 0.4,
+"end": 1.125
+},
+{
+"text": "did",
+"ws": " ",
+"ph": "d\u02c8\u026ad",
+"start": 1.125,
+"end": 1.262
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 0.6,
-"end": 0.725
+"start": 1.262,
+"end": 1.375
 },
 {
-"text": "belief",
+"text": "Prophet",
+"ws": "",
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 1.375,
+"end": 2.025
+},
+{
+"text": ",",
 "ws": " ",
-"ph": "b\u026al\u02c8i\u02d0f",
-"start": 0.725,
-"end": 1.525
+"ph": ",",
+"start": 2.025,
+"end": 2.138
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 2.138,
+"end": 2.475
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 2.475,
+"end": 2.65
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 2.65,
+"end": 3.0
+},
+{
+"text": "him",
+"ws": "",
+"ph": "h\u02cc\u026am",
+"start": 3.0,
+"end": 3.475
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 3.475,
+"end": 3.612
+},
+{
+"text": "lead",
+"ws": " ",
+"ph": "l\u02c8i\u02d0d",
+"start": 3.612,
+"end": 4.025
 },
 {
 "text": "in",
 "ws": " ",
 "ph": "\u026an",
-"start": 1.525,
-"end": 1.663
+"start": 4.025,
+"end": 4.138
 },
 {
 "text": "the",
 "ws": " ",
-"ph": "\u00f0\u0259",
-"start": 1.663,
-"end": 1.775
+"ph": "\u00f0i",
+"start": 4.138,
+"end": 4.275
 },
 {
-"text": "Oneness",
+"text": "intense",
 "ws": " ",
-"ph": "w\u02c8\u028cnn\u0259s",
-"start": 1.775,
-"end": 2.3
+"ph": "\u026ant\u02c8\u025bns",
+"start": 4.275,
+"end": 4.825
 },
 {
-"text": "of",
+"text": "summer",
 "ws": " ",
-"ph": "\u0252v",
-"start": 2.3,
-"end": 2.462
+"ph": "s\u02c8\u028cm\u0259",
+"start": 4.825,
+"end": 5.188
 },
 {
-"text": "Allah",
-"ws": " ",
-"ph": "\u02c8al\u0259",
-"start": 2.462,
-"end": 2.812
-},
-{
-"text": "called",
+"text": "heat",
 "ws": "",
-"ph": "k\u02c8\u0254\u02d0ld",
-"start": 2.812,
-"end": 3.575
+"ph": "h\u02c8i\u02d0t",
+"start": 5.188,
+"end": 5.875
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.575,
-"end": 3.775
+"start": 5.875,
+"end": 6.075
 }
 ],
-"duration": 3.875
+"duration": 6.175
 }

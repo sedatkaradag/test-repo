@@ -1,76 +1,118 @@
 {
-"text": "What do we call a personal supplication to Allah?",
+"text": "Which fruit did the Prophet, peace be upon him, break his fast with?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
-"ph": "w\u02cc\u0252t",
-"start": 0.225,
-"end": 0.338
-},
-{
-"text": "do",
-"ws": " ",
-"ph": "d\u02c8u\u02d0",
-"start": 0.338,
+"ph": "w\u02cc\u026a\u02a7",
+"start": 0.25,
 "end": 0.463
 },
 {
-"text": "we",
+"text": "fruit",
 "ws": " ",
-"ph": "wi\u02d0",
+"ph": "f\u0279\u02c8u\u02d0t",
 "start": 0.463,
-"end": 0.575
+"end": 0.8
 },
 {
-"text": "call",
+"text": "did",
 "ws": " ",
-"ph": "k\u02c8\u0254\u02d0l",
-"start": 0.575,
-"end": 1.175
+"ph": "d\u02c8\u026ad",
+"start": 0.8,
+"end": 0.963
 },
 {
-"text": "a",
+"text": "the",
 "ws": " ",
-"ph": "\u0250",
-"start": 1.175,
-"end": 1.312
+"ph": "\u00f0\u0259",
+"start": 0.963,
+"end": 1.087
 },
 {
-"text": "personal",
+"text": "Prophet",
+"ws": "",
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 1.087,
+"end": 1.725
+},
+{
+"text": ",",
 "ws": " ",
-"ph": "p\u02c8\u025c\u02d0s\u0259n\u1d4al",
-"start": 1.312,
+"ph": ",",
+"start": 1.725,
 "end": 1.837
 },
 {
-"text": "supplication",
+"text": "peace",
 "ws": " ",
-"ph": "s\u02cc\u028cpl\u026ak\u02c8A\u0283\u1d4an",
+"ph": "p\u02c8i\u02d0s",
 "start": 1.837,
-"end": 2.663
+"end": 2.175
 },
 {
-"text": "to",
+"text": "be",
 "ws": " ",
-"ph": "t\u028a",
-"start": 2.663,
-"end": 2.837
+"ph": "bi\u02d0",
+"start": 2.175,
+"end": 2.35
 },
 {
-"text": "Allah",
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 2.35,
+"end": 2.725
+},
+{
+"text": "him",
 "ws": "",
-"ph": "\u02c8al\u0259",
-"start": 2.837,
-"end": 3.575
+"ph": "h\u02cc\u026am",
+"start": 2.725,
+"end": 3.125
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 3.125,
+"end": 3.225
+},
+{
+"text": "break",
+"ws": " ",
+"ph": "b\u0279\u02c8Ak",
+"start": 3.225,
+"end": 3.462
+},
+{
+"text": "his",
+"ws": " ",
+"ph": "h\u026az",
+"start": 3.462,
+"end": 3.663
+},
+{
+"text": "fast",
+"ws": " ",
+"ph": "f\u02c8\u0251\u02d0st",
+"start": 3.663,
+"end": 4.125
+},
+{
+"text": "with",
+"ws": "",
+"ph": "w\u026a\u00f0",
+"start": 4.125,
+"end": 4.725
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.575,
-"end": 3.775
+"start": 4.725,
+"end": 4.95
 }
 ],
-"duration": 3.875
+"duration": 5.05
 }

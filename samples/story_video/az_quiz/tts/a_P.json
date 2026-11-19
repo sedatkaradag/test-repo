@@ -1,34 +1,20 @@
 {
-"text": "Prayer, salah.",
+"text": "Pharaoh.",
 "tokens": [
 {
-"text": "Prayer",
+"text": "Pharaoh",
 "ws": "",
-"ph": "p\u0279\u02c8A\u0259",
-"start": 0.225,
-"end": 0.65
-},
-{
-"text": ",",
-"ws": " ",
-"ph": ",",
-"start": 0.65,
-"end": 0.75
-},
-{
-"text": "salah",
-"ws": "",
-"ph": "s\u02c8al\u0259",
-"start": 0.75,
-"end": 1.6
+"ph": "f\u02c8\u025b\u02d0\u0279Q",
+"start": 0.25,
+"end": 1.0
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.6,
-"end": 1.825
+"start": 1.0,
+"end": 1.25
 }
 ],
-"duration": 1.925
+"duration": 1.35
 }

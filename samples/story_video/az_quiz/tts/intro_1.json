@@ -1,0 +1,160 @@
+{
+"text": "A to Z Islamic quiz, part one! Let's see how many you can get. Ready? Let's begin.",
+"tokens": [
+{
+"text": "A",
+"ws": " ",
+"ph": "\u0250",
+"start": 0.25,
+"end": 0.325
+},
+{
+"text": "to",
+"ws": " ",
+"ph": "t\u0259",
+"start": 0.325,
+"end": 0.487
+},
+{
+"text": "Z",
+"ws": " ",
+"ph": "z\u02c8i\u02d0",
+"start": 0.487,
+"end": 0.863
+},
+{
+"text": "Islamic",
+"ws": " ",
+"ph": "\u026azl\u02c8am\u026ak",
+"start": 0.863,
+"end": 1.375
+},
+{
+"text": "quiz",
+"ws": "",
+"ph": "kw\u02c8\u026az",
+"start": 1.375,
+"end": 1.75
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 1.75,
+"end": 1.8
+},
+{
+"text": "part",
+"ws": " ",
+"ph": "p\u02c8\u0251\u02d0t",
+"start": 1.8,
+"end": 2.125
+},
+{
+"text": "one",
+"ws": "",
+"ph": "w\u02c8\u028cn",
+"start": 2.125,
+"end": 2.65
+},
+{
+"text": "!",
+"ws": " ",
+"ph": "!",
+"start": 2.65,
+"end": 2.75
+},
+{
+"text": "Let's",
+"ws": " ",
+"ph": "l\u02c8\u025bts",
+"start": 2.75,
+"end": 2.95
+},
+{
+"text": "see",
+"ws": " ",
+"ph": "s\u02c8i\u02d0",
+"start": 2.95,
+"end": 3.125
+},
+{
+"text": "how",
+"ws": " ",
+"ph": "h\u02ccW",
+"start": 3.125,
+"end": 3.3
+},
+{
+"text": "many",
+"ws": " ",
+"ph": "m\u02c8\u025bni",
+"start": 3.3,
+"end": 3.525
+},
+{
+"text": "you",
+"ws": " ",
+"ph": "ju\u02d0",
+"start": 3.525,
+"end": 3.675
+},
+{
+"text": "can",
+"ws": " ",
+"ph": "kan",
+"start": 3.675,
+"end": 3.888
+},
+{
+"text": "get",
+"ws": "",
+"ph": "\u0261\u02c8\u025bt",
+"start": 3.888,
+"end": 4.45
+},
+{
+"text": ".",
+"ws": " ",
+"ph": ".",
+"start": 4.45,
+"end": 4.562
+},
+{
+"text": "Ready",
+"ws": "",
+"ph": "\u0279\u02c8\u025bdi",
+"start": 4.562,
+"end": 5.025
+},
+{
+"text": "?",
+"ws": " ",
+"ph": "?",
+"start": 5.025,
+"end": 5.162
+},
+{
+"text": "Let's",
+"ws": " ",
+"ph": "l\u02c8\u025bts",
+"start": 5.162,
+"end": 5.45
+},
+{
+"text": "begin",
+"ws": "",
+"ph": "b\u026a\u0261\u02c8\u026an",
+"start": 5.45,
+"end": 6.25
+},
+{
+"text": ".",
+"ws": "",
+"ph": ".",
+"start": 6.25,
+"end": 6.45
+}
+],
+"duration": 6.55
+}

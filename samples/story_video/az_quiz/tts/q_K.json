@@ -1,76 +1,104 @@
 {
-"text": "Which House did Ibrahim and Ismail raise in Makkah?",
+"text": "Who was the first wife of the Prophet, peace be upon him?",
 "tokens": [
 {
-"text": "Which",
+"text": "Who",
 "ws": " ",
-"ph": "w\u02cc\u026a\u02a7",
-"start": 0.25,
-"end": 0.425
+"ph": "h\u02ccu\u02d0",
+"start": 0.225,
+"end": 0.35
 },
 {
-"text": "House",
+"text": "was",
 "ws": " ",
-"ph": "h\u02c8Ws",
-"start": 0.425,
-"end": 0.8
+"ph": "w\u0252z",
+"start": 0.35,
+"end": 0.55
 },
 {
-"text": "did",
+"text": "the",
 "ws": " ",
-"ph": "d\u02c8\u026ad",
-"start": 0.8,
-"end": 1.012
+"ph": "\u00f0\u0259",
+"start": 0.55,
+"end": 0.7
 },
 {
-"text": "Ibrahim",
+"text": "first",
 "ws": " ",
-"ph": "\u02c8\u026ab\u0279ah\u026am",
-"start": 1.012,
-"end": 1.9
+"ph": "f\u02c8\u025c\u02d0st",
+"start": 0.7,
+"end": 1.1
 },
 {
-"text": "and",
+"text": "wife",
 "ws": " ",
-"ph": "and",
-"start": 1.9,
-"end": 2.087
+"ph": "w\u02c8If",
+"start": 1.1,
+"end": 1.413
 },
 {
-"text": "Ismail",
+"text": "of",
 "ws": " ",
-"ph": "\u02c8\u026asmIl",
-"start": 2.087,
-"end": 2.487
+"ph": "\u0252v",
+"start": 1.413,
+"end": 1.488
 },
 {
-"text": "raise",
+"text": "the",
 "ws": " ",
-"ph": "\u0279\u02c8Az",
-"start": 2.487,
-"end": 3.075
+"ph": "\u00f0\u0259",
+"start": 1.488,
+"end": 1.6
 },
 {
-"text": "in",
-"ws": " ",
-"ph": "\u026an",
-"start": 3.075,
-"end": 3.25
-},
-{
-"text": "Makkah",
+"text": "Prophet",
 "ws": "",
-"ph": "m\u02c8ak\u0251\u02d0",
-"start": 3.25,
-"end": 4.15
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 1.6,
+"end": 2.25
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 2.25,
+"end": 2.362
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 2.362,
+"end": 2.763
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 2.763,
+"end": 2.95
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 2.95,
+"end": 3.325
+},
+{
+"text": "him",
+"ws": "",
+"ph": "h\u02cc\u026am",
+"start": 3.325,
+"end": 3.925
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 4.15,
-"end": 4.325
+"start": 3.925,
+"end": 4.1
 }
 ],
-"duration": 4.425
+"duration": 4.2
 }

@@ -1,69 +1,83 @@
 {
-"text": "Which night is better than a thousand months?",
+"text": "Which prophet's people were destroyed by a rain of stones?",
 "tokens": [
 {
 "text": "Which",
 "ws": " ",
 "ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.512
+"end": 0.463
 },
 {
-"text": "night",
+"text": "prophet's",
 "ws": " ",
-"ph": "n\u02c8It",
-"start": 0.512,
-"end": 0.887
+"ph": "p\u0279\u02c8\u0252f\u026ats",
+"start": 0.463,
+"end": 0.925
 },
 {
-"text": "is",
+"text": "people",
 "ws": " ",
-"ph": "\u026az",
-"start": 0.887,
-"end": 1.062
+"ph": "p\u02c8i\u02d0p\u1d4al",
+"start": 0.925,
+"end": 1.575
 },
 {
-"text": "better",
+"text": "were",
 "ws": " ",
-"ph": "b\u02c8\u025bt\u0259",
-"start": 1.062,
-"end": 1.75
+"ph": "w\u025c\u02d0",
+"start": 1.575,
+"end": 1.7
 },
 {
-"text": "than",
+"text": "destroyed",
 "ws": " ",
-"ph": "\u00f0\u0259n",
-"start": 1.75,
-"end": 1.9
+"ph": "d\u026ast\u0279\u02c8Yd",
+"start": 1.7,
+"end": 2.4
+},
+{
+"text": "by",
+"ws": " ",
+"ph": "bI",
+"start": 2.4,
+"end": 2.575
 },
 {
 "text": "a",
 "ws": " ",
 "ph": "\u0250",
-"start": 1.9,
-"end": 2.038
+"start": 2.575,
+"end": 2.688
 },
 {
-"text": "thousand",
+"text": "rain",
 "ws": " ",
-"ph": "\u03b8\u02c8Wz\u1d4and",
-"start": 2.038,
-"end": 2.638
+"ph": "\u0279\u02c8An",
+"start": 2.688,
+"end": 3.013
 },
 {
-"text": "months",
+"text": "of",
+"ws": " ",
+"ph": "\u0252v",
+"start": 3.013,
+"end": 3.138
+},
+{
+"text": "stones",
 "ws": "",
-"ph": "m\u02c8\u028cn\u03b8s",
-"start": 2.638,
-"end": 3.425
+"ph": "st\u02c8Qnz",
+"start": 3.138,
+"end": 4.125
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.425,
-"end": 3.625
+"start": 4.125,
+"end": 4.325
 }
 ],
-"duration": 3.725
+"duration": 4.425
 }

@@ -1,20 +1,55 @@
 {
-"text": "Suhoor.",
+"text": "Sulayman, peace be upon him.",
 "tokens": [
 {
-"text": "Suhoor",
+"text": "Sulayman",
 "ws": "",
-"ph": "s\u0259h\u02c8\u0254\u02d0",
+"ph": "s\u02c8u\u02d0lAm\u0259n",
 "start": 0.275,
-"end": 1.125
+"end": 0.9
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 0.9,
+"end": 1.012
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 1.012,
+"end": 1.375
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 1.375,
+"end": 1.55
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 1.55,
+"end": 1.925
+},
+{
+"text": "him",
+"ws": "",
+"ph": "h\u02cc\u026am",
+"start": 1.925,
+"end": 2.575
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.125,
-"end": 1.375
+"start": 2.575,
+"end": 2.75
 }
 ],
-"duration": 1.475
+"duration": 2.85
 }

@@ -1,0 +1,20 @@
+{
+"text": "Letter K.",
+"tokens": [
+{
+"text": "Letter",
+"ws": " ",
+"ph": "l\u02c8\u025bt\u0259",
+"start": 0.275,
+"end": 0.637
+},
+{
+"text": "K.",
+"ws": "",
+"ph": "k\u02c8A",
+"start": 0.637,
+"end": 1.275
+}
+],
+"duration": 1.675
+}

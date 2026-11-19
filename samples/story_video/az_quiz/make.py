@@ -1,8 +1,9 @@
 """A to Z Islamic Quiz (owner's pick 19 Nov: English TTS version of @islamveihsan's 'A'dan Z'ye Dini Bilgiler').
-python3 make.py <out_dir> [--stills=t1,...]     narration: tts/<id>.flac + .json (Kokoro bm_george 0.95)
+python3 make.py <out_dir> --part=1|2 [--stills=t1,...]     narration: tts/<id>.flac + .json (Kokoro bm_george 0.95)
 
-25 letters (no X). Each letter is read, then its question; a 1.5 s timer; the answer is stamped and read.
-Difficulty (owner, 19 Nov): A-E easy, F-T medium, U-Z hard (5 / 15 / 5), field "d" in questions.json.
+25 letters (no X), split into two videos (owner, 19 Nov): part 1 = 13 letters from A, part 2 = the other 12 (field "p").
+"Letter X." is read, then the question; a 1.5 s timer; the answer is stamped and read.
+Difficulty over both parts 5 easy / 15 medium / 5 hard (field "d"), easy first within each part.
 Questions and answers: questions.json (basic facts, source noted per item). Sound: voice, soft ticks, stamp, no music.
 """
 import io, json, subprocess, sys
@@ -16,8 +17,9 @@ REPO = HERE.parents[2]
 OUT = Path(sys.argv[1]); OUT.mkdir(parents=True, exist_ok=True)
 STILLS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--stills=")), None)
 FPS, SR, THINK = 30, 48000, 1.5
-LETTER = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--letter=")), "l_")   # l_ = bare capital, lp_ = spelled name
-Q = json.load(open(HERE / "questions.json"))
+PART = int(next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--part=")), "1"))
+LETTER = "L_"   # "Letter X." (bare capitals sounded odd to the owner)
+Q = [q for q in json.load(open(HERE / "questions.json")) if q["p"] == PART]
 
 
 def tts(i):
@@ -29,7 +31,7 @@ def tts(i):
 
 segs, items = [], []
 t = .4
-j, tk, a, b = tts("intro"); segs.append(("intro", t, a, b)); t += b - a + .9
+j, tk, a, b = tts(f"intro_{PART}"); segs.append((f"intro_{PART}", t, a, b)); t += b - a + .9
 for q in Q:
     item = {"l": q["l"], "a": q["a"], "start": round(t - .15, 3)}
     j, tk, a, b = tts(f"{LETTER}{q['l']}"); segs.append((f"{LETTER}{q['l']}", t, a, b)); t += b - a + .3
@@ -46,10 +48,10 @@ for q in Q:
     item["next"] = round(t - .1, 3)
     items.append(item)
 outro_t = t
-j, tk, a, b = tts("outro"); segs.append(("outro", t + .3, a, b)); t += .3 + b - a + 1.2
+j, tk, a, b = tts(f"outro_{PART}"); segs.append((f"outro_{PART}", t + .3, a, b)); t += .3 + b - a + 1.2
 logo_t = t; END = round(t + 3.0, 2)
 data = {"items": items, "outro_t": outro_t, "logo_t": logo_t, "end": END,
-        "intro_hint": "Let’s see how many you get", "outro_hint": "Comment your score  ?/25",
+        "intro_hint": "Let’s see how many you get", "outro_hint": f"Comment your score  ?/{len(Q)}", "pill": f"PART {PART}",
         "logo": [str(p) for p in sorted((REPO / "samples/logo_draw/frames_800").iterdir())]}
 mark = sorted((REPO / "samples/logo_draw/frames_478").iterdir())[-1]
 page = (HERE / "page.html").read_text().replace("__DATA__", json.dumps(data, ensure_ascii=False)).replace("__REPO__", str(REPO)).replace("__MARK__", str(mark))
@@ -101,7 +103,7 @@ n = N; room = lp(np.cumsum(rng.standard_normal(n)), 220); room /= np.abs(room).m
 mix = voice + fx; mix /= max(1.0, np.abs(mix).max() / .95)
 wavfile.write(OUT / "mix_raw.wav", SR, (mix * 32767).astype(np.int16))
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / "mix_raw.wav"), "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", str(SR), str(OUT / "mix.wav")], check=True)
-video = OUT / "az_quiz.mp4"
+video = OUT / f"az_quiz_part{PART}.mp4"
 ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg", "-i", "-", "-i", str(OUT / "mix.wav"),
                        "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
                        "-t", f"{END:.2f}", "-movflags", "+faststart", str(video)], stdin=subprocess.PIPE)

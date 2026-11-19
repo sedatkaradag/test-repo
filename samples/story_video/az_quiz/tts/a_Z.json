@@ -1,55 +1,34 @@
 {
-"text": "Zakariyya, peace be upon him.",
+"text": "Zayd ibn Thabit.",
 "tokens": [
 {
-"text": "Zakariyya",
-"ws": "",
-"ph": "z\u02c8ak\u0251\u02d0\u0279\u02cc\u026ajj\u0259",
+"text": "Zayd",
+"ws": " ",
+"ph": "z\u02c8Ad",
 "start": 0.275,
-"end": 1.15
+"end": 0.8
 },
 {
-"text": ",",
+"text": "ibn",
 "ws": " ",
-"ph": ",",
-"start": 1.15,
+"ph": "\u02c8\u026ab\u0259n",
+"start": 0.8,
 "end": 1.262
 },
 {
-"text": "peace",
-"ws": " ",
-"ph": "p\u02c8i\u02d0s",
-"start": 1.262,
-"end": 1.6
-},
-{
-"text": "be",
-"ws": " ",
-"ph": "bi\u02d0",
-"start": 1.6,
-"end": 1.775
-},
-{
-"text": "upon",
-"ws": " ",
-"ph": "\u0259p\u02c8\u0252n",
-"start": 1.775,
-"end": 2.15
-},
-{
-"text": "him",
+"text": "Thabit",
 "ws": "",
-"ph": "h\u02cc\u026am",
-"start": 2.15,
-"end": 2.775
+"ph": "\u03b8\u02c8ab\u026at",
+"start": 1.262,
+"end": 2.175
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 2.775,
-"end": 2.95
+"start": 2.175,
+"end": 2.4
 }
 ],
-"duration": 3.05
+"duration": 2.5
 }

@@ -4,12 +4,16 @@
 @font-face { font-family: 'Garamond'; src: url('file://__REPO__/assets/fonts/EBGaramond[wght].ttf'); font-weight: 400 800; }
 @font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Medium.ttf'); font-weight: 500; }
 @font-face { font-family: 'PoppinsB'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-SemiBold.ttf'); }
+@font-face { font-family: 'Amiri'; src: url('file://__REPO__/assets/fonts/Amiri-Regular.ttf'); }
 @font-face { font-family: 'Marcellus'; src: url('file://__REPO__/assets/fonts/Marcellus-Regular.ttf'); }
 html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0b221d; }
 #stage { position: absolute; inset: 0; overflow: hidden; }
 svg#art { position: absolute; left: 0; top: 0; }
 .abs { position: absolute; left: 0; right: 0; text-align: center; }
-#title { top: 300px; font: 500 82px Garamond; color: #f4efe2; letter-spacing: .5px; }
+#pill { top: 222px; }
+#pill span { font: 500 30px Poppins; letter-spacing: 6px; color: #e8c66a; border: 2px solid rgba(232,198,106,.6); border-radius: 40px; padding: 10px 30px; }
+#q .saw { font: 400 60px Amiri; color: #e8c66a; position: relative; top: 4px; opacity: 1; }
+#title { top: 290px; font: 500 82px Garamond; color: #f4efe2; letter-spacing: .5px; }
 #center { position: absolute; left: 290px; width: 500px; top: 650px; height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; }
 #q { font: 500 54px/1.22 Garamond; color: #f4efe2; }
 #q span { opacity: 0; }
@@ -31,6 +35,7 @@ svg#art { position: absolute; left: 0; top: 0; }
   <image href="file://__REPO__/assets/reel_background.png" x="0" y="0" width="1080" height="1920"/>
   <g id="world"></g>
 </svg>
+<div class="abs" id="pill"><span id="pillText"></span></div>
 <div class="abs" id="title">A to Z Islamic Quiz</div>
 <div id="center"><div id="q"></div><div id="qmark">?</div><div id="stamp"></div></div>
 <div class="abs" id="hint"></div>
@@ -47,6 +52,7 @@ const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
 const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
 const ramp = (t, t0, d = .3) => ease((t - t0) / d);
 function el(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+$("pillText").textContent = D.pill;
 const W = $("world"), CX = 540, CY = 900, R = 382;
 const rings = el("g", {}, W);
 el("circle", { cx: CX, cy: CY, r: 318, fill: "rgba(255,255,255,.035)", stroke: "#c9a85a", "stroke-width": 3 }, rings);
@@ -87,8 +93,8 @@ function render(t) {
   $("hint").style.opacity = intro ? ramp(t, .8, .5) * (1 - ramp(t, it[0].start - .35, .3)) : (t >= end ? ramp(t, end + .9, .5) * (1 - ramp(t, D.logo_t - .3, .3)) : 0);
   // question words, typed with the voice
   const q = $("q");
-  if (k !== curQ) { q.innerHTML = k >= 0 ? it[k].words.map(w => `<span>${w.w}</span>`).join(" ") : ""; curQ = k; }
-  if (k >= 0 && t < end) { const sp = q.querySelectorAll("span"); it[k].words.forEach((w, j) => sp[j].style.opacity = ramp(t, w.s - .03, .12));
+  if (k !== curQ) { q.innerHTML = k >= 0 ? it[k].words.map(w => w.w.startsWith("ﷺ") ? `<span><span class="saw">ﷺ</span>${w.w.slice(1)}</span>` : `<span>${w.w}</span>`).join(" ") : ""; curQ = k; }
+  if (k >= 0 && t < end) { const sp = q.querySelectorAll(":scope > span"); it[k].words.forEach((w, j) => sp[j].style.opacity = ramp(t, w.s - .03, .12));
     q.style.opacity = 1 - ramp(t, it[k].ans - .25, .25); } else q.style.opacity = 0;
   // timer
   if (k >= 0 && t < end) { const p = clamp((t - it[k].think) / (it[k].ans - it[k].think)); bar.setAttribute("opacity", ramp(t, it[k].think - .3, .3) * (1 - ramp(t, it[k].next - .4, .3)));
@@ -96,13 +102,14 @@ function render(t) {
   // answer stamp
   const st = $("stamp");
   if (k >= 0 && t >= it[k].ans && t < end) { const a = it[k].a, i0 = a.toUpperCase().indexOf(it[k].l);
+    st.style.fontSize = a.length > 11 ? "56px" : "70px";
     st.innerHTML = i0 >= 0 ? a.slice(0, i0) + "<b>" + a[i0] + "</b>" + a.slice(i0 + 1) : a;
     const p = ramp(t, it[k].ans, .22); st.style.opacity = p * (1 - ramp(t, it[k].next - .35, .3)); st.style.transform = `rotate(-6deg) scale(${1.35 - .35 * p})`; }
   else st.style.opacity = 0;
   // end
   bub.setAttribute("opacity", t >= end ? ramp(t, end + .2, .4) * (1 - ramp(t, D.logo_t - .3, .3)) : 0);
   $("mark").style.opacity = .55 * ramp(t, .8, .6) * (1 - ramp(t, D.logo_t - .3, .3));
-  for (const id of ["title"]) $(id).style.opacity = ramp(t, 0, .5) * (1 - ramp(t, D.logo_t - .3, .3));
+  for (const id of ["pill", "title"]) $(id).style.opacity = ramp(t, 0, .5) * (1 - ramp(t, D.logo_t - .3, .3));
   rings.setAttribute("opacity", 1 - ramp(t, D.logo_t - .3, .3));
   for (const o of L) o.g.setAttribute("opacity", 1 - ramp(t, D.logo_t - .3, .3));
   $("logoBox").style.opacity = ramp(t, D.logo_t, .35);

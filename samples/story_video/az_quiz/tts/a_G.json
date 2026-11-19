@@ -1,34 +1,34 @@
 {
-"text": "Gabriel, Jibreel.",
+"text": "Goliath, Jaloot.",
 "tokens": [
 {
-"text": "Gabriel",
+"text": "Goliath",
 "ws": "",
-"ph": "\u0261\u02c8Ab\u0279\u026a\u0259l",
+"ph": "\u0261Ql\u02c8I\u0259\u03b8",
 "start": 0.25,
-"end": 0.95
+"end": 0.875
 },
 {
 "text": ",",
 "ws": " ",
 "ph": ",",
-"start": 0.95,
-"end": 1.1
+"start": 0.875,
+"end": 0.963
 },
 {
-"text": "Jibreel",
+"text": "Jaloot",
 "ws": "",
-"ph": "\u02a4\u02c8\u026ab\u0279i\u02d0l",
-"start": 1.1,
-"end": 2.05
+"ph": "\u02a4\u02c8alu\u02d0t",
+"start": 0.963,
+"end": 1.8
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 2.05,
-"end": 2.25
+"start": 1.8,
+"end": 2.0
 }
 ],
-"duration": 2.35
+"duration": 2.1
 }

@@ -1,76 +1,83 @@
 {
-"text": "Which surah is recited in every rak'ah of prayer?",
+"text": "What do Muslims do from dawn to sunset in Ramadan?",
 "tokens": [
 {
-"text": "Which",
+"text": "What",
 "ws": " ",
-"ph": "w\u02cc\u026a\u02a7",
+"ph": "w\u02cc\u0252t",
 "start": 0.25,
 "end": 0.45
 },
 {
-"text": "surah",
+"text": "do",
 "ws": " ",
-"ph": "s\u02c8\u028a\u0259\u0279\u0259",
+"ph": "d\u02c8u\u02d0",
 "start": 0.45,
-"end": 0.963
+"end": 0.65
 },
 {
-"text": "is",
+"text": "Muslims",
 "ws": " ",
-"ph": "\u026az",
-"start": 0.963,
-"end": 1.125
+"ph": "m\u02c8\u028azl\u026amz",
+"start": 0.65,
+"end": 1.2
 },
 {
-"text": "recited",
+"text": "do",
 "ws": " ",
-"ph": "\u0279\u026as\u02c8It\u026ad",
-"start": 1.125,
-"end": 2.0
+"ph": "d\u02c8u\u02d0",
+"start": 1.2,
+"end": 1.375
+},
+{
+"text": "from",
+"ws": " ",
+"ph": "f\u0279\u0252m",
+"start": 1.375,
+"end": 1.613
+},
+{
+"text": "dawn",
+"ws": " ",
+"ph": "d\u02c8\u0254\u02d0n",
+"start": 1.613,
+"end": 2.062
+},
+{
+"text": "to",
+"ws": " ",
+"ph": "t\u0259",
+"start": 2.062,
+"end": 2.237
+},
+{
+"text": "sunset",
+"ws": " ",
+"ph": "s\u02c8\u028cns\u025bt",
+"start": 2.237,
+"end": 3.087
 },
 {
 "text": "in",
 "ws": " ",
 "ph": "\u026an",
-"start": 2.0,
-"end": 2.225
+"start": 3.087,
+"end": 3.275
 },
 {
-"text": "every",
-"ws": " ",
-"ph": "\u02c8\u025bv\u0259\u0279i",
-"start": 2.225,
-"end": 2.612
-},
-{
-"text": "rak'ah",
-"ws": " ",
-"ph": "\u0279\u02c8ak\u0259",
-"start": 2.612,
-"end": 2.975
-},
-{
-"text": "of",
-"ws": " ",
-"ph": "\u0252v",
-"start": 2.975,
-"end": 3.138
-},
-{
-"text": "prayer",
+"text": "Ramadan",
 "ws": "",
-"ph": "p\u0279\u02c8A\u0259",
-"start": 3.138,
-"end": 3.975
+"ph": "\u0279\u02c8am\u0259dan",
+"start": 3.275,
+"end": 4.175
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.975,
-"end": 4.175
+"start": 4.175,
+"end": 4.375
 }
 ],
-"duration": 4.275
+"duration": 4.475
 }

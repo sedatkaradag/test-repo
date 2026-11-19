@@ -1,76 +1,69 @@
 {
-"text": "Aayat al-Kursi is the greatest what in the Quran?",
+"text": "What does the word nadhr mean in English?",
 "tokens": [
 {
-"text": "Aayat",
+"text": "What",
 "ws": " ",
-"ph": "\u02c8\u0251\u02d0jat",
-"start": 0.25,
-"end": 0.662
+"ph": "w\u02cc\u0252t",
+"start": 0.225,
+"end": 0.362
 },
 {
-"text": "al-Kursi",
+"text": "does",
 "ws": " ",
-"ph": "\u02c8alk\u02c8\u025c\u02d0si",
-"start": 0.662,
-"end": 1.738
-},
-{
-"text": "is",
-"ws": " ",
-"ph": "\u026az",
-"start": 1.738,
-"end": 1.925
+"ph": "d\u02c8\u028cz",
+"start": 0.362,
+"end": 0.55
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 1.925,
-"end": 2.062
+"start": 0.55,
+"end": 0.688
 },
 {
-"text": "greatest",
+"text": "word",
 "ws": " ",
-"ph": "\u0261\u0279\u02c8At\u026ast",
-"start": 2.062,
-"end": 2.575
+"ph": "w\u02c8\u025c\u02d0d",
+"start": 0.688,
+"end": 1.312
 },
 {
-"text": "what",
+"text": "nadhr",
 "ws": " ",
-"ph": "w\u02cc\u0252t",
-"start": 2.575,
-"end": 2.8
+"ph": "n\u02c8ad\u0259",
+"start": 1.312,
+"end": 1.688
+},
+{
+"text": "mean",
+"ws": " ",
+"ph": "m\u02c8i\u02d0n",
+"start": 1.688,
+"end": 2.112
 },
 {
 "text": "in",
 "ws": " ",
 "ph": "\u026an",
-"start": 2.8,
-"end": 2.913
+"start": 2.112,
+"end": 2.288
 },
 {
-"text": "the",
-"ws": " ",
-"ph": "\u00f0\u0259",
-"start": 2.913,
-"end": 3.0
-},
-{
-"text": "Quran",
+"text": "English",
 "ws": "",
-"ph": "k\u028a\u0279\u02c8\u0251\u02d0n",
-"start": 3.0,
-"end": 3.925
+"ph": "\u02c8\u026a\u014b\u0261l\u026a\u0283",
+"start": 2.288,
+"end": 3.15
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.925,
-"end": 4.125
+"start": 3.15,
+"end": 3.35
 }
 ],
-"duration": 4.225
+"duration": 3.45
 }

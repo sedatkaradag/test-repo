@@ -1,76 +1,76 @@
 {
-"text": "Which day has a special congregational prayer every week?",
+"text": "Which prophet spoke as a baby in the cradle?",
 "tokens": [
 {
 "text": "Which",
 "ws": " ",
 "ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.512
+"end": 0.463
 },
 {
-"text": "day",
+"text": "prophet",
 "ws": " ",
-"ph": "d\u02c8A",
-"start": 0.512,
-"end": 0.938
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 0.463,
+"end": 0.912
 },
 {
-"text": "has",
+"text": "spoke",
 "ws": " ",
-"ph": "haz",
-"start": 0.938,
-"end": 1.125
+"ph": "sp\u02c8Qk",
+"start": 0.912,
+"end": 1.325
+},
+{
+"text": "as",
+"ws": " ",
+"ph": "az",
+"start": 1.325,
+"end": 1.45
 },
 {
 "text": "a",
 "ws": " ",
 "ph": "\u0250",
-"start": 1.125,
-"end": 1.238
+"start": 1.45,
+"end": 1.562
 },
 {
-"text": "special",
+"text": "baby",
 "ws": " ",
-"ph": "sp\u02c8\u025b\u0283l",
-"start": 1.238,
-"end": 1.788
+"ph": "b\u02c8Abi",
+"start": 1.562,
+"end": 2.25
 },
 {
-"text": "congregational",
+"text": "in",
 "ws": " ",
-"ph": "k\u02cc\u0252\u014b\u0261\u0279\u026a\u0261\u02c8A\u0283\u0259n\u1d4al",
-"start": 1.788,
-"end": 2.663
+"ph": "\u026an",
+"start": 2.25,
+"end": 2.388
 },
 {
-"text": "prayer",
+"text": "the",
 "ws": " ",
-"ph": "p\u0279\u02c8A\u0259",
-"start": 2.663,
-"end": 3.263
+"ph": "\u00f0\u0259",
+"start": 2.388,
+"end": 2.487
 },
 {
-"text": "every",
-"ws": " ",
-"ph": "\u02c8\u025bv\u0259\u0279i",
-"start": 3.263,
-"end": 3.638
-},
-{
-"text": "week",
+"text": "cradle",
 "ws": "",
-"ph": "w\u02c8i\u02d0k",
-"start": 3.638,
-"end": 4.325
+"ph": "k\u0279\u02c8Ad\u1d4al",
+"start": 2.487,
+"end": 3.3
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 4.325,
-"end": 4.525
+"start": 3.3,
+"end": 3.475
 }
 ],
-"duration": 4.625
+"duration": 3.575
 }

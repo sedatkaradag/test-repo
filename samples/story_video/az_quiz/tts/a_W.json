@@ -1,20 +1,55 @@
 {
-"text": "Witr.",
+"text": "Wahshi. He later accepted Islam.",
 "tokens": [
 {
-"text": "Witr",
+"text": "Wahshi",
 "ws": "",
-"ph": "w\u02c8\u026at\u0259",
+"ph": "w\u02c8\u0251\u02d0\u0283i",
 "start": 0.25,
+"end": 0.825
+},
+{
+"text": ".",
+"ws": " ",
+"ph": ".",
+"start": 0.825,
 "end": 0.9
+},
+{
+"text": "He",
+"ws": " ",
+"ph": "h\u02cci\u02d0",
+"start": 0.9,
+"end": 1.05
+},
+{
+"text": "later",
+"ws": " ",
+"ph": "l\u02c8At\u0259",
+"start": 1.05,
+"end": 1.375
+},
+{
+"text": "accepted",
+"ws": " ",
+"ph": "\u0259ks\u02c8\u025bpt\u026ad",
+"start": 1.375,
+"end": 1.962
+},
+{
+"text": "Islam",
+"ws": "",
+"ph": "\u02c8\u026azl\u0251\u02d0m",
+"start": 1.962,
+"end": 2.875
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 0.9,
-"end": 1.2
+"start": 2.875,
+"end": 3.05
 }
 ],
-"duration": 1.3
+"duration": 3.15
 }

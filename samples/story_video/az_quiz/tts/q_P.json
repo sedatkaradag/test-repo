@@ -1,62 +1,76 @@
 {
-"text": "What is the second pillar of Islam?",
+"text": "Which ruler chased Moosa and drowned in the sea?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
-"ph": "w\u02cc\u0252t",
-"start": 0.25,
+"ph": "w\u02cc\u026a\u02a7",
+"start": 0.225,
 "end": 0.438
 },
 {
-"text": "is",
+"text": "ruler",
 "ws": " ",
-"ph": "\u026az",
+"ph": "\u0279\u02c8u\u02d0l\u0259",
 "start": 0.438,
-"end": 0.625
+"end": 0.787
+},
+{
+"text": "chased",
+"ws": " ",
+"ph": "\u02a7\u02c8Ast",
+"start": 0.787,
+"end": 1.25
+},
+{
+"text": "Moosa",
+"ws": " ",
+"ph": "m\u02c8u\u02d0s\u0259",
+"start": 1.25,
+"end": 2.013
+},
+{
+"text": "and",
+"ws": " ",
+"ph": "and",
+"start": 2.013,
+"end": 2.212
+},
+{
+"text": "drowned",
+"ws": " ",
+"ph": "d\u0279\u02c8Wnd",
+"start": 2.212,
+"end": 2.675
+},
+{
+"text": "in",
+"ws": " ",
+"ph": "\u026an",
+"start": 2.675,
+"end": 2.788
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 0.625,
-"end": 0.775
-},
-{
-"text": "second",
-"ws": " ",
-"ph": "s\u02c8\u025bk\u1d4and",
-"start": 0.775,
-"end": 1.238
-},
-{
-"text": "pillar",
-"ws": " ",
-"ph": "p\u02c8\u026al\u0259",
-"start": 1.238,
-"end": 1.8
-},
-{
-"text": "of",
-"ws": " ",
-"ph": "\u0252v",
-"start": 1.8,
-"end": 1.988
-},
-{
-"text": "Islam",
-"ws": "",
-"ph": "\u02c8\u026azl\u0251\u02d0m",
-"start": 1.988,
+"start": 2.788,
 "end": 2.925
+},
+{
+"text": "sea",
+"ws": "",
+"ph": "s\u02c8i\u02d0",
+"start": 2.925,
+"end": 3.675
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 2.925,
-"end": 3.125
+"start": 3.675,
+"end": 3.85
 }
 ],
-"duration": 3.225
+"duration": 3.95
 }
