@@ -1,5 +1,5 @@
 [
- {"p": 1, "l": "A", "d": "easy", "q": "Who was the first human Allah created?", "a": "Adam", "say_a": "Adam, peace be upon him.", "src": "Quran 2:30-31"},
+ {"p": 1, "l": "A", "d": "easy", "q": "Who was the first human that Allah created?", "a": "Adam", "say_a": "Adam, peace be upon him.", "src": "Quran 2:30-31"},
  {"p": 1, "l": "C", "d": "easy", "q": "What kind of animal was al-Qaswa, the ride of the Prophet ﷺ?", "a": "Camel", "say_a": "A camel.", "src": "Sahih al-Bukhari 2731"},
  {"p": 1, "l": "E", "d": "medium", "q": "How many stars did Yusuf see bowing to him in his dream?", "a": "Eleven", "say_a": "Eleven stars.", "src": "Quran 12:4"},
  {"p": 1, "l": "F", "d": "easy", "q": "What do Muslims do from dawn to sunset in Ramadan?", "a": "Fast", "say_a": "They fast.", "src": "Quran 2:187"},

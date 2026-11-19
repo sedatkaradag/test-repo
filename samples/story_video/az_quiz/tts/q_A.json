@@ -1,62 +1,69 @@
 {
-"text": "Who was the first human Allah created?",
+"text": "Who was the first human that Allah created?",
 "tokens": [
 {
 "text": "Who",
 "ws": " ",
 "ph": "h\u02ccu\u02d0",
 "start": 0.25,
-"end": 0.45
+"end": 0.425
 },
 {
 "text": "was",
 "ws": " ",
 "ph": "w\u0252z",
-"start": 0.45,
-"end": 0.65
+"start": 0.425,
+"end": 0.625
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 0.65,
-"end": 0.812
+"start": 0.625,
+"end": 0.775
 },
 {
 "text": "first",
 "ws": " ",
 "ph": "f\u02c8\u025c\u02d0st",
-"start": 0.812,
-"end": 1.413
+"start": 0.775,
+"end": 1.175
 },
 {
 "text": "human",
 "ws": " ",
 "ph": "hj\u02c8u\u02d0m\u0259n",
-"start": 1.413,
-"end": 1.85
+"start": 1.175,
+"end": 1.875
+},
+{
+"text": "that",
+"ws": " ",
+"ph": "\u00f0at",
+"start": 1.875,
+"end": 2.112
 },
 {
 "text": "Allah",
 "ws": " ",
 "ph": "\u02c8al\u0259",
-"start": 1.85,
-"end": 2.212
+"start": 2.112,
+"end": 2.413
 },
 {
 "text": "created",
 "ws": "",
 "ph": "k\u0279\u026a\u02c8At\u026ad",
-"start": 2.212,
-"end": 3.225
+"start": 2.413,
+"end": 3.45
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.225,
-"end": 3.425
+"start": 3.45,
+"end": 3.65
 }
 ],
-"duration": 3.525
+"duration": 3.75
 }
