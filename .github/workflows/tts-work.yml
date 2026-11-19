@@ -16,6 +16,14 @@ jobs:
       - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng
       - run: pip install -q "kokoro>=0.9.4" soundfile
       - run: python tts/kahf_tts.py bm_george 0.95
+      - name: fetch listed free (CC0) sound files into the output, if tts/fetch.txt exists (owner, 19 Nov)
+        run: |
+          mkdir -p out
+          if [ -f tts/fetch.txt ]; then
+            while read -r u; do [ -n "$u" ] || continue; case "$u" in https://opengameart.org/sites/default/files/*) ;; *) echo "skip $u"; continue;; esac
+              curl -fsSL "$u" -o "out/$(basename "$u" | sed 's/%20/_/g')"; done < tts/fetch.txt
+            ls -la out
+          fi
       - name: push the narration to branch tts-out
         run: |
           cd out
