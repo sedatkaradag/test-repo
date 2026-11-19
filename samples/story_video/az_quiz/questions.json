@@ -22,6 +22,6 @@
  {"p": 2, "l": "P", "d": "medium", "q": "Which ruler chased Musa and drowned in the sea?", "a": "Pharaoh", "say_a": "Pharaoh.", "src": "Quran 10:90"},
  {"p": 2, "l": "R", "d": "medium", "q": "What is one unit of the prayer called?", "a": "Rak'ah", "say_a": "A raka.", "src": "Sahih al-Bukhari 1090"},
  {"p": 2, "l": "U", "d": "medium", "q": "Who was the second caliph of Islam?", "a": "Umar", "say_a": "Umar ibn al-Khattab.", "src": "Sahih al-Bukhari 3700"},
- {"p": 2, "l": "V", "d": "hard", "q": "What does the word nadhr mean in English?", "a": "Vow", "say_a": "A vow.", "src": "nadhr = vow (Quran 76:7)"},
+ {"p": 2, "l": "V", "d": "hard", "q": "Which condiment did the Prophet ﷺ praise?", "a": "Vinegar", "say_a": "Vinegar.", "src": "Sahih Muslim 2051"},
  {"p": 2, "l": "Y", "d": "hard", "q": "What was Madinah called before the Hijrah?", "a": "Yathrib", "say_a": "Yathrib.", "src": "Quran 33:13"}
 ]

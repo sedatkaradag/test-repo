@@ -1,69 +1,97 @@
 {
-"text": "What does the word nadhr mean in English?",
+"text": "Which condiment did the Prophet, peace be upon him, praise?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
-"ph": "w\u02cc\u0252t",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.225,
-"end": 0.362
+"end": 0.438
 },
 {
-"text": "does",
+"text": "condiment",
 "ws": " ",
-"ph": "d\u02c8\u028cz",
-"start": 0.362,
-"end": 0.55
+"ph": "k\u02c8\u0252nd\u026am\u1d4ant",
+"start": 0.438,
+"end": 1.0
+},
+{
+"text": "did",
+"ws": " ",
+"ph": "d\u02c8\u026ad",
+"start": 1.0,
+"end": 1.137
 },
 {
 "text": "the",
 "ws": " ",
 "ph": "\u00f0\u0259",
-"start": 0.55,
-"end": 0.688
+"start": 1.137,
+"end": 1.238
 },
 {
-"text": "word",
-"ws": " ",
-"ph": "w\u02c8\u025c\u02d0d",
-"start": 0.688,
-"end": 1.312
-},
-{
-"text": "nadhr",
-"ws": " ",
-"ph": "n\u02c8ad\u0259",
-"start": 1.312,
-"end": 1.688
-},
-{
-"text": "mean",
-"ws": " ",
-"ph": "m\u02c8i\u02d0n",
-"start": 1.688,
-"end": 2.112
-},
-{
-"text": "in",
-"ws": " ",
-"ph": "\u026an",
-"start": 2.112,
-"end": 2.288
-},
-{
-"text": "English",
+"text": "Prophet",
 "ws": "",
-"ph": "\u02c8\u026a\u014b\u0261l\u026a\u0283",
-"start": 2.288,
-"end": 3.15
+"ph": "p\u0279\u02c8\u0252f\u026at",
+"start": 1.238,
+"end": 1.9
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 1.9,
+"end": 2.013
+},
+{
+"text": "peace",
+"ws": " ",
+"ph": "p\u02c8i\u02d0s",
+"start": 2.013,
+"end": 2.35
+},
+{
+"text": "be",
+"ws": " ",
+"ph": "bi\u02d0",
+"start": 2.35,
+"end": 2.525
+},
+{
+"text": "upon",
+"ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
+"start": 2.525,
+"end": 2.9
+},
+{
+"text": "him",
+"ws": "",
+"ph": "h\u02cc\u026am",
+"start": 2.9,
+"end": 3.125
+},
+{
+"text": ",",
+"ws": " ",
+"ph": ",",
+"start": 3.125,
+"end": 3.212
+},
+{
+"text": "praise",
+"ws": "",
+"ph": "p\u0279\u02c8Az",
+"start": 3.212,
+"end": 4.075
 },
 {
 "text": "?",
 "ws": "",
 "ph": "?",
-"start": 3.15,
-"end": 3.35
+"start": 4.075,
+"end": 4.275
 }
 ],
-"duration": 3.45
+"duration": 4.375
 }

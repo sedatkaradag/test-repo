@@ -1,25 +1,18 @@
 {
-"text": "A vow.",
+"text": "Vinegar.",
 "tokens": [
 {
-"text": "A",
-"ws": " ",
-"ph": "\u0250",
-"start": 0.25,
-"end": 0.375
-},
-{
-"text": "vow",
+"text": "Vinegar",
 "ws": "",
-"ph": "v\u02c8W",
-"start": 0.375,
-"end": 1.1
+"ph": "v\u02c8\u026an\u026a\u0261\u0259",
+"start": 0.25,
+"end": 1.075
 },
 {
 "text": ".",
 "ws": "",
 "ph": ".",
-"start": 1.1,
+"start": 1.075,
 "end": 1.35
 }
 ],
