@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Garamond'; src: url('file://__REPO__/assets/fonts/EBGaramond[wght].ttf'); font-weight: 400 800; }
+@font-face { font-family: 'Amiri'; src: url('file://__REPO__/assets/fonts/Amiri-Regular.ttf'); }
+@font-face { font-family: 'Hafs'; src: url('file://__REPO__/assets/fonts/KFGQPC-UthmanicHafs-v18.ttf'); }
+@font-face { font-family: 'Marcellus'; src: url('file://__REPO__/assets/fonts/Marcellus-Regular.ttf'); }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #08201b; }
+#bg { position: absolute; inset: 0; background: url('file://__REPO__/assets/reel_background.png') center/cover; }
+#shade { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 42%, rgba(6,26,22,.25), rgba(4,16,13,.82)); }
+canvas { position: absolute; left: 0; top: 0; }
+.abs { position: absolute; left: 0; right: 0; text-align: center; }
+.saw { font-family: Amiri; font-weight: 400; color: #f2c862; }
+#intro { top: 520px; color: #f4efe2; font: 500 50px/1.3 Garamond; }
+#intro .k { font-style: italic; font-size: 46px; color: #d8e6df; display: block; margin-bottom: 6px; }
+#intro b { color: #f2c862; font-weight: 600; }
+#intro .saw { font-size: 52px; }
+.lab { position: absolute; transform: translate(-50%, -100%); text-align: center; white-space: nowrap; }
+.lab .r { font: 500 16px Poppins; letter-spacing: 3.5px; color: rgba(225,236,230,.62); }
+.lab .n { font: 700 31px Poppins; line-height: 1.15; }
+.lab .h { font: 500 13.5px Poppins; color: rgba(225,236,230,.5); letter-spacing: .5px; }
+.lab .n .saw { font-size: 30px; }
+.lab:not(.sky) .h { display: none; }
+.lab.sky .n { font-size: 26px; } .lab.sky .r { font-size: 14px; letter-spacing: 3px; } .lab.sky .h { font-size: 12px; }
+#fat { top: 1010px; color: #f4efe2; }
+#fat .s { font: 500 22px Poppins; letter-spacing: 7px; color: rgba(225,236,230,.7); }
+#fat .big { font: 700 92px Poppins; letter-spacing: 2px; margin-top: 4px; }
+#fat .big span { color: #72d8ea; }
+#fat .h { font: 500 17px Poppins; color: rgba(225,236,230,.5); margin-top: -4px; }
+#fat .l { font: 500 38px/1.4 Poppins; margin-top: 22px; }
+#fat .l b { color: #f2c862; }
+#fat .l .saw { font-size: 38px; }
+#verse { top: 1000px; padding: 0 90px; }
+#verse .ar { font: 400 60px/1.9 Hafs; color: #f4efe2; direction: rtl; }
+#verse .en { font: italic 500 44px/1.35 Garamond; color: #e6efe9; margin-top: 14px; }
+#verse .ref { font: 500 21px Poppins; letter-spacing: 6px; color: #f2c862; margin-top: 26px; }
+#mark { top: 1700px; opacity: 0; }
+#logoBox { position: absolute; left: 0; right: 0; top: 560px; text-align: center; opacity: 0; }
+#logoBox .frame { width: 560px; height: 360px; overflow: hidden; margin: 0 auto; position: relative; }
+#logoBox img { position: absolute; left: 0; top: -104px; width: 560px; visibility: hidden; }
+</style></head>
+<body>
+<div id="bg"></div><div id="shade"></div>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<div id="labs"></div>
+<div class="abs" id="intro"><span class="k">Nobody talks about this:</span>The Prophet <span class="saw">ﷺ</span> went through so much loss<br>before he even turned <b>50</b>.</div>
+<div class="abs" id="fat"><div class="s">OF HIS SEVEN CHILDREN</div><div class="big">ONLY <span>FATIMAH</span></div><div class="h">raḍiyAllāhu ʿanhā</div>
+  <div class="l" id="fl1">outlived the Prophet <span class="saw">ﷺ</span>,</div><div class="l" id="fl2" style="margin-top:0">and only by <b>six months</b>.</div></div>
+<div class="abs" id="verse"><div class="ar" id="var"></div><div class="en" id="ven"></div><div class="ref" id="vref"></div></div>
+<div class="abs" id="mark"><div style="width:62px;height:79px;margin:0 auto;overflow:hidden;position:relative"><img src="file://__MARK__" style="position:absolute;width:122px;left:-30px;top:-22px"></div>
+  <div style="font-family:Marcellus;letter-spacing:6px;color:#c9b07a;font-size:22px;margin-top:8px">THE HALAL ALGORITHM</div></div>
+<div id="logoBox"><div class="frame" id="logoFrame"></div>
+  <div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:44px;margin-top:40px">THE HALAL ALGORITHM</div>
+  <div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:34px;margin-top:44px;border:2px solid #e8c66a;display:inline-block;padding:14px 38px;border-radius:40px">+ FOLLOW</div></div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const ramp = (t, t0, d = .4) => ease((t - t0) / d);
+const win = (t, a, b, f = .5) => ramp(t, a, f) * (1 - ramp(t, b - f, f));
+const HEAD = D.head, PPY = D.ppy, A0 = -2.5, A1 = 64.5, DA = .02;
+const P = D.people, byId = Object.fromEntries(P.map(p => [p.id, p]));
+
+// age <-> time from keyframes
+function ageAt(t) { const K = D.kf; if (t <= K[0][0]) return K[0][1];
+  for (let i = 1; i < K.length; i++) if (t <= K[i][0]) { const [t0, a0] = K[i - 1], [t1, a1] = K[i]; return a0 + (a1 - a0) * (t - t0) / (t1 - t0); }
+  return K[K.length - 1][1]; }
+function timeAt(a) { const K = D.kf; for (let i = 1; i < K.length; i++) { const [t0, a0] = K[i - 1], [t1, a1] = K[i]; if (a <= a1 && a1 > a0) return t0 + (t1 - t0) * clamp((a - a0) / (a1 - a0)); } return K[K.length - 1][0]; }
+P.forEach(p => { p.td = p.to < 99 ? timeAt(p.to) : 1e9; p.tb = timeAt(p.from); });
+
+// column x of everyone, as a function of age (the trail keeps the history, so moves show as curves)
+const NA = Math.round((A1 - A0) / DA) + 1, X = {};
+P.forEach(p => X[p.id] = new Float32Array(NA).fill(NaN));
+const alive = (p, a) => a >= p.from && a < p.to;
+for (let i = 0; i < NA; i++) { const a = A0 + i * DA;
+  const live = P.filter(p => alive(p, a)).sort((u, v) => u.order - v.order), n = live.length;
+  const sp = n > 1 ? Math.min(D.maxsp, (D.xr - D.xl) / (n - 1)) : 0, c = (D.xl + D.xr) / 2;
+  live.forEach((p, k) => { const tgt = c + (k - (n - 1) / 2) * sp, prev = i > 0 ? X[p.id][i - 1] : NaN;
+    let x0 = prev;
+    if (isNaN(x0)) x0 = p.enter === "left" ? -120 : p.enter === "right" ? 1200 : p.parent ? X[p.parent][i - 1] ?? tgt : tgt;
+    if (isNaN(x0)) x0 = tgt;
+    X[p.id][i] = x0 + (tgt - x0) * (1 - Math.exp(-DA / (p.enter ? 1.1 : .9))); }); }
+const idx = a => clamp(Math.round((a - A0) / DA), 0, NA - 1);
+const wig = (p, a) => 8 * Math.sin(a * 1.6 + p.order * 1.3) + 3.5 * Math.sin(a * 3.7 + p.order * 2.1);
+const xAt = (p, a) => { let i = idx(a); const A = X[p.id]; while (i > 0 && isNaN(A[i])) i--; let j = i; while (j < NA - 1 && isNaN(A[j])) j++; return (isNaN(A[i]) ? A[j] : A[i]) + wig(p, a); };
+
+const cv = $("cv"), g = cv.getContext("2d");
+const hexA = (h, a) => { const n = parseInt(h.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+function star(x, y, r, col, a) {
+  if (a <= 0) return; g.save(); g.globalAlpha = a;
+  const gr = g.createRadialGradient(x, y, 0, x, y, r * 5); gr.addColorStop(0, hexA(col, .55)); gr.addColorStop(1, hexA(col, 0)); g.fillStyle = gr; g.beginPath(); g.arc(x, y, r * 5, 0, 7); g.fill();
+  g.strokeStyle = "rgba(255,255,255,.85)"; g.lineWidth = 1.6; g.beginPath(); g.moveTo(x - r * 2.6, y); g.lineTo(x + r * 2.6, y); g.moveTo(x, y - r * 2.6); g.lineTo(x, y + r * 2.6); g.stroke();
+  g.fillStyle = "#fff"; g.beginPath(); g.arc(x, y, r * .75, 0, 7); g.fill(); g.restore(); }
+
+// labels (HTML, so the text is crisp)
+const labs = {};
+P.forEach(p => { const d = document.createElement("div"); d.className = "lab";
+  d.innerHTML = (p.role ? `<div class="r">${p.role}</div>` : "") + `<div class="n" style="color:${p.color}">${p.name}</div>` + (p.hon ? `<div class="h">${p.hon}</div>` : "");
+  $("labs").appendChild(d); labs[p.id] = d; });
+function place(p, x, y, anchor, a) { const d = labs[p.id]; d.style.opacity = a; if (a <= 0) return; d.classList.toggle("sky", anchor !== "C");
+  const w = d.offsetWidth, h = d.offsetHeight;
+  if (anchor === "L") { d.style.left = (x - 22 - w / 2) + "px"; d.style.top = (y + h / 2 - 6) + "px"; }
+  else if (anchor === "R") { d.style.left = (x + 22 + w / 2) + "px"; d.style.top = (y + h / 2 - 6) + "px"; }
+  else if (anchor === "T") { d.style.left = x + "px"; d.style.top = (y + 18 + h) + "px"; }
+  else { d.style.left = x + "px"; d.style.top = y + "px"; } }
+
+const logoImgs = D.logo.map(s => { const i = document.createElement("img"); i.src = "file://" + s; $("logoFrame").appendChild(i); return i; });
+$("var").textContent = D.verse.ar; $("ven").textContent = "“" + D.verse.en + "”"; $("vref").textContent = D.verse.ref;
+const S = D.scenes;
+
+function render(t) {
+  const age = ageAt(t), out = 1 - ramp(t, S.logo - .5, .5);
+  g.clearRect(0, 0, 1080, 1920);
+  const linesA = (1 - ramp(t, S.fade, 1.2)) * out;
+  // trails
+  if (linesA > 0) {
+    g.save(); g.lineCap = "round"; g.lineJoin = "round";
+    for (const p of P) { const a1 = Math.min(age, p.to), a0 = Math.max(p.from, age - 15); if (a1 <= a0) continue;
+      g.beginPath(); let first = true;
+      for (let a = a1; a >= a0; a -= .05) { const x = xAt(p, a), y = HEAD + (age - a) * PPY; if (first) { g.moveTo(x, y); first = false; } else g.lineTo(x, y); }
+      g.strokeStyle = hexA(p.color, .22 * linesA); g.lineWidth = 10; g.stroke();
+      g.strokeStyle = hexA(p.color, .9 * linesA); g.lineWidth = 3; g.stroke(); }
+    g.restore();
+    g.save(); g.globalCompositeOperation = "destination-in";
+    const fg = g.createLinearGradient(0, HEAD, 0, 1920); fg.addColorStop(0, "rgba(0,0,0,1)"); fg.addColorStop(.45, "rgba(0,0,0,.85)"); fg.addColorStop(1, "rgba(0,0,0,0)");
+    g.fillStyle = fg; g.fillRect(0, 0, 1080, 1920); g.restore();
+  }
+  // age axis
+  const axA = win(t, .3, S.fade + .6, .6) * out;
+  if (axA > 0) { g.save(); g.globalAlpha = axA; g.font = "500 17px Poppins"; g.textAlign = "left";
+    g.fillStyle = "rgba(225,236,230,.45)"; g.fillText("AGE", 40, HEAD - 34);
+    for (let k = Math.ceil((age - 12) / 5) * 5; k <= age + 7; k += 5) { const y = HEAD + (age - k) * PPY; if (k < 0 || y < 330 || Math.abs(y - HEAD) < 60) continue;
+      g.fillStyle = "rgba(225,236,230,.3)"; g.fillText(k, 50, y + 6); g.fillRect(36, y, 8, 1.5); }
+    const shown = Math.max(0, Math.floor(age + 1e-6));
+    g.font = "700 26px Poppins"; g.fillStyle = "#f2c862"; g.fillText(age < 0 ? "0" : shown, 44, HEAD + 9);
+    g.beginPath(); g.arc(92, HEAD, 4, 0, 7); g.fill(); g.restore(); }
+  // heads, flights, stars
+  const live = P.filter(p => alive(p, age)).sort((u, v) => u.order - v.order);
+  const xs = live.map(p => xAt(p, age));
+  for (const p of P) {
+    const d = labs[p.id];
+    if (alive(p, age)) {
+      const k = live.indexOf(p), x = xs[k], ap = ramp(t, p.tb, .6) * out;
+      const tight = Math.min(k > 0 ? x - xs[k - 1] : 999, k < live.length - 1 ? xs[k + 1] - x : 999) < 150;
+      const lift = p.id === "prophet" ? (live.length > 3 ? 120 : 56) : (tight && k % 2 === 1 ? 62 : 0);
+      g.save(); g.strokeStyle = hexA(p.color, .5 * ap); g.lineWidth = 1.5; if (lift) { g.beginPath(); g.moveTo(x, HEAD - 8); g.lineTo(x, HEAD - 8 - lift + 22); g.stroke(); } g.restore();
+      star(x, HEAD, 4.6, p.color, ap);
+      place(p, x, HEAD - 16 - lift, "C", ap);
+    } else if (t >= p.td) {
+      const f = ease((t - p.td) / 1.5), x0 = xAt(p, p.to - .01), [sx, sy, an] = p.slot;
+      let x = x0 + (sx - x0) * f, y = HEAD + (sy - HEAD) * f - Math.sin(Math.PI * f) * 60;
+      const big = p.id === "prophet";
+      if (big) { const gl = win(t, p.td, S.logo, .8);
+        g.save(); const gr = g.createRadialGradient(sx, sy, 0, sx, sy, 260); gr.addColorStop(0, `rgba(242,200,98,${.38 * gl})`); gr.addColorStop(1, "rgba(242,200,98,0)"); g.fillStyle = gr; g.fillRect(0, 0, 1080, 1920); g.restore(); }
+      const tw = .85 + .15 * Math.sin(t * 2.3 + p.order * 1.7);
+      star(x, y, big ? 7 : 4.4 * (1 + .4 * (1 - f)), p.color, tw * out);
+      if (f < .35) place(p, x, y - 16, "C", (1 - f / .35) * out);
+      else place(p, sx, sy, an, ramp(f, .6, .4) * out);
+    } else d.style.opacity = 0;
+  }
+  // constellation
+  const cA = ramp(t, S.const, .3) * out;
+  if (cA > 0) { g.save(); g.strokeStyle = "rgba(235,240,230,.42)"; g.lineWidth = 1.6;
+    D.edges.forEach((e, i) => { const a = byId[e[0]].slot, b = byId[e[1]].slot, f = ease((t - S.const - i * .09) / .5); if (f <= 0) return;
+      g.globalAlpha = cA; g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f); g.stroke(); }); g.restore(); }
+  // texts
+  $("intro").style.opacity = win(t, .4, S.introEnd, .7);
+  $("fat").style.opacity = win(t, S.fat, S.verse, .6);
+  $("fat").querySelectorAll(".s,.big,.h").forEach((e, i) => e.style.opacity = ramp(t, S.fat + i * .25, .6));
+  $("fl1").style.opacity = ramp(t, S.fat + 1.4, .6); $("fl2").style.opacity = ramp(t, S.fat + 2.6, .6);
+  $("verse").style.opacity = win(t, S.verse, S.logo, .7);
+  $("var").style.opacity = ramp(t, S.verse, .8); $("ven").style.opacity = ramp(t, S.verse + 1.2, .8); $("vref").style.opacity = ramp(t, S.verse + 2, .8);
+  $("mark").style.opacity = .55 * ramp(t, 1, .8) * out;
+  $("logoBox").style.opacity = ramp(t, S.logo, .4);
+  const fr = clamp(Math.floor((t - S.logo) * 30), 0, logoImgs.length - 1); logoImgs.forEach((im, i) => im.style.visibility = i === fr ? "visible" : "hidden");
+}
+window.render = render;
+window.ready = Promise.all([document.fonts.ready, ...logoImgs.map(i => i.decode().catch(() => 0))]).then(() => { render(0); return true; });
+</script></body></html>

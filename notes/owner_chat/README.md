@@ -115,6 +115,9 @@ uygulamada o sesin "Sesi kullan" düğmesiyle, elle paylaşılmalı (API ile Ins
 Şeyh Kişk sesli "Ölüm" deneme videosu (Hadîsü's-Sûr, zayıf/münker); **kanalda paylaşılmayacak**, yalnızca
 "yapabilir miyiz" denemesi. Her şey yayınlanacakmış gibi yapılır (caption'da rivayetin zayıflığı belirtilir).
 Bu istisna başka içeriğe emsal değildir.
+İkinci istisna (19 Kas): "The Prophet ﷺ lost so much before 50" videosu (`samples/story_video/prophet_losses`) için sahibi
+siyer kaynaklarını (İbn İshak / İbn Hişam: babasının doğumdan önce, annesinin 6, dedesinin 8 yaşında vefatı, oğulları
+Kasım ve Abdullah, yaşlar) onayladı. Sahih dayanağı olanlar make.py'de not edildi. Bu da başka içeriğe emsal değildir: her seferinde sorulur.
 
 ## Açık işler (11 Kasım 2026 itibarıyla)
 - **Lokmân 31:14 "annene gönder" (13 Kas)** 12:15 UTC'de paylaşıldı (`manual/2026-11-13-mother-31-14`), kelime kelime sürüm. Sahibi "10 bin

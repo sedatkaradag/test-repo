@@ -211,3 +211,11 @@ filiz büyür, fener yanar); "Say instead" sözü altın renkte.
   withholds" 13:26 ile çeliştiği için Hud 11:6. Ses müziksiz ortam (gece, cırcır, kapı, yağmur, ışık, fener). Sahibi: yüksek "parıltı" sesi itici, yerine yumuşak hava sesi; başlık yazılırken klavye tuşu sesi.
 - **Kural:** başka sayfadan uyarlarken ayet etiketli her sözü kaynakla karşılaştır; ayet değilse ayet gibi gösterme.
 - Render: `python3 make.py <out>` (~4 dk), `--stills=...`. 57 sn, -21 LUFS.
+
+## Format: "The Prophet ﷺ lost so much before 50" (19 Kas) — `samples/story_video/prophet_losses/`
+
+Referans: @kulturselarsiv (70 sn, Türkçe, müzikli, seslendirme yok). Her kişi yaşa göre aşağı akan parlak bir çizgi (solda yaş
+ekseni, baş satırı y=900); vefat edince çizgi biter, adı göğe yıldız olarak yükselir; 63'te Peygamberimiz ﷺ de yıldız olur,
+yıldızlar takımyıldızda birleşir, "Of his seven children ONLY FATIMAH … six months", Enbiya 21:107 (find.py), bizim kapanış.
+İngilizce, bizim yeşil zemin, ses müziksiz ortam + yıldız başına yumuşak "bloom". Siyer için sahibinin onayı var (README).
+- Render: `python3 make.py <out>` (~3 dk), `--stills=...`. 76,4 sn. Zaman/yaş eşlemesi make.py `KF`.
