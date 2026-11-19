@@ -43,6 +43,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 
 **Animasyon · İngilizce TTS**
 - 14 Kas, Husary (tilavet) + TTS bm_george: Al-Kahf 18:18 (sağa sola çevrilme, köpek) — paylaşıldı.
+- 19 Kas, kâri yok (TTS anlatım): A to Z Islamic Quiz Part 1 (13 harf, 13 soru; peygamberler, sahabe, Kur'an; ayet yok) — paylaşıldı.
 
 **Ayet Reels · kelime kelime**
 - 16 Kas, Alafasy: Az-Zukhruf 43:68-70 (eşlerinizle birlikte cennete) — paylaşıldı.
@@ -75,6 +76,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-16 19:34 | Guess the Surah (86,8 sn) | 76:9, 110:3, 56:77-79, 57:3 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-17 09:20 | Guess the Surah (90,3 sn) | 49:10, 106:3-4, 19:30, 61:2 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-18 19:08 | Animasyon · ortam sesi (57 sn) | 65:3, 4:32, 14:7, 2:216, 11:6 | Innocent habits that might be blocking your rizq | — | — | — | — | — | — | — | — |
+| 2026-11-19 10:04 | Animasyon · İngilizce TTS anlatım (147,7 sn) | A to Z Islamic Quiz Part 1 (13 harf) · ayet yok | A to Z Islamic Quiz, Part 1: how many can you get? | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -274,4 +276,16 @@ At-Talaaq 65:3 · An-Nisaa 4:32 · Ibrahim 14:7 · Al-Baqara 2:216 · Hud 11:6
 Which habit will you drop first? Send this to someone who needs it today.
 
 #rizq #tawakkul #shukr #islamicreminders #muslimreminder
+```
+
+
+**A to Z Islamic Quiz Part 1, 19 Kasım** (sahibinin panelde onayladığı caption; 10:04 UTC'de paylaşıldı)
+```
+A to Z Islamic Quiz, Part 1: how many can you get?
+
+13 letters, 13 questions about the prophets, the Companions and the Qur'an. It starts easy and gets harder towards the end. Pause if you need more time, and be honest with your score.
+
+Comment your score out of 13. Part 2 with the other 12 letters is coming next, follow so you don't miss it.
+
+#islam #muslim #islamicquiz #quran #deen #islamicreminder #muslimquiz #learnislam
 ```
