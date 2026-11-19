@@ -218,4 +218,8 @@ Referans: @kulturselarsiv (70 sn, Türkçe, müzikli, seslendirme yok). Her kiş
 ekseni, baş satırı y=900); vefat edince çizgi biter, adı göğe yıldız olarak yükselir; 63'te Peygamberimiz ﷺ de yıldız olur,
 yıldızlar takımyıldızda birleşir, "Of his seven children ONLY FATIMAH … six months", Enbiya 21:107 (find.py), bizim kapanış.
 İngilizce, bizim yeşil zemin, ses müziksiz ortam + yıldız başına yumuşak "bloom". Siyer için sahibinin onayı var (README).
-- Render: `python3 make.py <out>` (~3 dk), `--stills=...`. 76,4 sn. Zaman/yaş eşlemesi make.py `KF`.
+- Sahibinin düzeltmeleri (19 Kas): yıldızlar gerçek yıldız gibi ve parlak (4 uzun + 4 kısa ışın, renkli hale); "The Prophet" yerine
+  "Prophet Muhammad ﷺ" (ﷺ Amiri fontuyla); arkada hafif yağmur, ayet okunurken yağmur yok; 21:107 Alafasy ile okunuyor, kelimeler
+  okundukça parlıyor (soluk altın → altın, okunan kelime parlak); çizgi ayrılmaları yumuşak (kritik sönümlü yay + çocuğun dalgası
+  ebeveyninkinden başlıyor).
+- Render: `python3 make.py <out>` (~3 dk), `--stills=...`, tilavet `/home/claude/pl/rec` (audio-fetch 021107). 79,6 sn. Zaman/yaş eşlemesi make.py `KF`.

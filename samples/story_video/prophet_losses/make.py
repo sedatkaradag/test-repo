@@ -6,7 +6,9 @@ When someone passes away their line ends and their name rises into the sky as a 
 becomes a star too, the stars join into one constellation, then "only Fatimah" and Al-Anbiyaa 21:107.
 Sources: Bukhari/Muslim where there is a narration (notes in PEOPLE); ages and the sons al-Qasim and Abdullah
 from the sira (Ibn Ishaq / Ibn Hisham): the owner approved sira for this video on 19 Nov.
-Sound: our own ambience (noise and sines), soft blooms when a star rises; no music, no voice (as the reference).
+Sound: our own ambience (noise and sines), light rain, soft blooms when a star rises; no music. 21:107 recited by
+Alafasy (drafts-audio, word times from quran-align) with the words lighting up; no rain under the recitation (owner, 19 Nov).
+python3 make.py <out> expects REC=/home/claude/pl/rec (021107.mp3 + align.json) unless --rec=<dir>.
 """
 import io, json, subprocess, sys
 from pathlib import Path
@@ -32,7 +34,7 @@ PEOPLE = [
     ("ummk", "DAUGHTER", "Umm Kulthum", HA, "#ffab70", 6, 34.0, 62.0, "prophet", (662, 742, "R")),       # her burial: Bukhari 1285
     ("fatimah", "DAUGHTER", "Fatimah", HA, "#72d8ea", 7, 35.0, 63.5, "prophet", (428, 742, "L")),        # six months after him: Bukhari 4240
     ("abdullah_s", "SON", "Abdullah", HU, "#9cd0ff", 8, 41.0, 42.6, "prophet", (818, 318, "R")),         # sira
-    ("prophet", "", "The Prophet " + SAW, "", "#f2c862", 9, 0.0, 63.0, "amina", (545, 866, "R")),        # 63: Bukhari 3536
+    ("prophet", "", "Prophet Muhammad " + SAW, "", "#f2c862", 9, 0.0, 63.0, "amina", (545, 866, "R")),        # 63: Bukhari 3536
     ("ibrahim", "SON", "Ibrahim", HU, "#f4f1e6", 10, 61.1, 62.65, "prophet", (818, 640, "L")),           # Bukhari 1303
     ("abutalib", "UNCLE", "Abu Talib", "", "#e6e6e6", 11, 8.0, 49.95, "right", (926, 532, "L")),        # his death: Bukhari 3884
     ("father", "FATHER", "Abdullah", "", "#8fb4ff", 12, -9, -0.3, None, (926, 398, "L")),                # sira: died before his birth (93:6)
@@ -44,12 +46,18 @@ EDGES = [("am", "qasim"), ("qasim", "ruqayyah"), ("ruqayyah", "abdullah_s"), ("a
 KF = [(0, -1.6), (2.4, -0.9), (4.6, 0.3), (7.4, 3.0), (9.6, 6.25), (11.8, 8.35), (17.0, 24.3), (19.0, 25.6), (20.6, 27.3),
       (22.6, 29.8), (24.0, 30.6), (27.6, 35.4), (30.4, 41.2), (32.6, 42.8), (36.2, 49.7), (39.0, 50.35), (42.0, 55.25),
       (45.4, 61.2), (47.4, 62.1), (49.4, 62.75), (51.6, 63.02), (54.0, 63.52)]
-SC = {"introEnd": 7.6, "fade": 55.0, "const": 56.4, "fat": 58.4, "verse": 65.6, "logo": 73.0}
+REC = Path(next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--rec=")), "/home/claude/pl/rec"))
+AL = json.load(open(REC / "align.json"))["021107"]
+SC = {"introEnd": 7.6, "fade": 55.0, "const": 56.4, "fat": 58.4, "verse": 65.6}
+REC_T = SC["verse"] + .9; REC_END = REC_T + AL[-1][3] / 1000
+SC["logo"] = round(REC_END + 1.9, 2)
 END = SC["logo"] + 3.4
 
 v = json.loads(subprocess.run(["python3", str(REPO / "scripts/find.py"), "get", "quran:21:107"], capture_output=True, text=True, check=True).stdout)
 name, num = v["reference"].replace("Surah ", "").rsplit(" ", 1)
 verse = {"ar": v["arabic_display"].rstrip(" ١٠٧").strip(), "en": v["english"], "ref": f"{name.upper()} {num}"}
+assert len(verse["ar"].split(" ")) == len(AL), (verse["ar"], AL)
+verse["words"] = [{"s": round(REC_T + a / 1000, 3), "e": round(REC_T + b / 1000, 3)} for _, _, a, b in AL]
 people = [{"id": i, "role": r, "name": n, "hon": h, "color": c, "order": o, "from": a0, "to": a1,
            "enter": e if e in ("left", "right") else None, "parent": e if e not in ("left", "right") else None, "slot": list(s)}
           for i, r, n, h, c, o, a0, a1, e, s in PEOPLE]
@@ -106,10 +114,18 @@ for p in people:
         t0 = time_at(p["to"])
         if p["id"] == "prophet": bloom(t0, db(-24), 60, 900, 3.2)
         else: bloom(t0, db(-30))
+# light rain until the verse, none under the recitation
+n = int((REC_T - .2) * SR); rain = bp(rng.standard_normal(n), 900, 7000) * .45
+for _ in range(int(n / SR * 55)):
+    k = rng.integers(0, n - 600); rain[k:k + 600] += bp(rng.standard_normal(600), 2200, 8000) * np.exp(-np.arange(600) / (.0025 * SR)) * rng.uniform(.3, 1)
+rain = lp(rain, 6500) * env(n, 2.5, 1.6); add(rain / np.abs(rain).max(), 0, db(-31), -.15); add(np.roll(rain, int(.37 * SR)) / np.abs(rain).max(), 0, db(-33), .25)
+raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+rec = np.frombuffer(raw, np.float32).astype(float)[:int((AL[-1][3] / 1000 + .5) * SR)]; rec *= env(len(rec), .02, .45)
+add(rec / np.abs(rec).max(), REC_T, db(-4))
 bloom(SC["const"], db(-31), 200, 2000, 2.2); bloom(SC["fat"], db(-33)); bloom(SC["verse"], db(-31), 100, 1200, 2.4); bloom(SC["logo"] + .1, db(-30))
 mix = np.stack([lp(L, 11000), lp(R, 11000)], 1); f = int(1.2 * SR); mix[-f:] *= np.linspace(1, 0, f)[:, None]; mix /= np.abs(mix).max() + 1e-9
 wavfile.write(OUT / "amb_raw.wav", SR, (mix * .9 * 32767).astype(np.int16))
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / "amb_raw.wav"), "-af", "loudnorm=I=-20:TP=-1.5:LRA=12", "-ar", str(SR), str(OUT / "amb.wav")], check=True)
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / "amb_raw.wav"), "-af", "loudnorm=I=-18:TP=-1.5:LRA=14", "-ar", str(SR), str(OUT / "amb.wav")], check=True)
 
 video = OUT / "prophet_losses.mp4"; tmp = OUT / "prophet_losses_tmp.mp4"
 ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg", "-i", "-", "-i", str(OUT / "amb.wav"),
