@@ -1,0 +1,60 @@
+{
+"text": "What does the word ayah mean in English?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.225,
+"end": 0.362
+},
+{
+"text": "does",
+"ws": " ",
+"start": 0.362,
+"end": 0.55
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.55,
+"end": 0.688
+},
+{
+"text": "word",
+"ws": " ",
+"start": 0.688,
+"end": 1.262
+},
+{
+"text": "ayah",
+"ws": " ",
+"start": 1.262,
+"end": 1.637
+},
+{
+"text": "mean",
+"ws": " ",
+"start": 1.637,
+"end": 2.038
+},
+{
+"text": "in",
+"ws": " ",
+"start": 2.038,
+"end": 2.2
+},
+{
+"text": "English",
+"ws": "",
+"start": 2.2,
+"end": 3.05
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.05,
+"end": 3.25
+}
+],
+"duration": 3.35
+}

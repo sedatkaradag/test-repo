@@ -1,0 +1,24 @@
+{
+"text": "Laylatul Qadr.",
+"tokens": [
+{
+"text": "Laylatul",
+"ws": " ",
+"start": 0.275,
+"end": 0.925
+},
+{
+"text": "Qadr",
+"ws": "",
+"start": 0.925,
+"end": 1.775
+},
+{
+"text": ".",
+"ws": "",
+"start": 1.775,
+"end": 1.975
+}
+],
+"duration": 2.075
+}

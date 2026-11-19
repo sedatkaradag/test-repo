@@ -1,0 +1,18 @@
+{
+"text": "Hajj.",
+"tokens": [
+{
+"text": "Hajj",
+"ws": "",
+"start": 0.25,
+"end": 0.9
+},
+{
+"text": ".",
+"ws": "",
+"start": 0.9,
+"end": 1.15
+}
+],
+"duration": 1.3
+}

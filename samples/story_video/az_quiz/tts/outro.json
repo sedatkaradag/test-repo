@@ -1,0 +1,144 @@
+{
+"text": "How many did you get out of twenty five? Tell us in the comments, and send this to a friend.",
+"tokens": [
+{
+"text": "How",
+"ws": " ",
+"start": 0.25,
+"end": 0.45
+},
+{
+"text": "many",
+"ws": " ",
+"start": 0.45,
+"end": 0.775
+},
+{
+"text": "did",
+"ws": " ",
+"start": 0.775,
+"end": 0.912
+},
+{
+"text": "you",
+"ws": " ",
+"start": 0.912,
+"end": 1.025
+},
+{
+"text": "get",
+"ws": " ",
+"start": 1.025,
+"end": 1.225
+},
+{
+"text": "out",
+"ws": " ",
+"start": 1.225,
+"end": 1.413
+},
+{
+"text": "of",
+"ws": " ",
+"start": 1.413,
+"end": 1.5
+},
+{
+"text": "twenty",
+"ws": " ",
+"start": 1.5,
+"end": 1.837
+},
+{
+"text": "five",
+"ws": "",
+"start": 1.837,
+"end": 2.5
+},
+{
+"text": "?",
+"ws": " ",
+"start": 2.5,
+"end": 2.625
+},
+{
+"text": "Tell",
+"ws": " ",
+"start": 2.625,
+"end": 2.837
+},
+{
+"text": "us",
+"ws": " ",
+"start": 2.837,
+"end": 3.0
+},
+{
+"text": "in",
+"ws": " ",
+"start": 3.0,
+"end": 3.112
+},
+{
+"text": "the",
+"ws": " ",
+"start": 3.112,
+"end": 3.212
+},
+{
+"text": "comments",
+"ws": "",
+"start": 3.212,
+"end": 3.975
+},
+{
+"text": ",",
+"ws": " ",
+"start": 3.975,
+"end": 4.075
+},
+{
+"text": "and",
+"ws": " ",
+"start": 4.075,
+"end": 4.25
+},
+{
+"text": "send",
+"ws": " ",
+"start": 4.25,
+"end": 4.575
+},
+{
+"text": "this",
+"ws": " ",
+"start": 4.575,
+"end": 4.862
+},
+{
+"text": "to",
+"ws": " ",
+"start": 4.862,
+"end": 5.025
+},
+{
+"text": "a",
+"ws": " ",
+"start": 5.025,
+"end": 5.138
+},
+{
+"text": "friend",
+"ws": "",
+"start": 5.138,
+"end": 5.975
+},
+{
+"text": ".",
+"ws": "",
+"start": 5.975,
+"end": 6.2
+}
+],
+"duration": 6.3
+}

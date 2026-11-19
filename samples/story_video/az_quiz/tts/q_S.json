@@ -1,0 +1,78 @@
+{
+"text": "What is the meal before dawn on a fasting day called?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.4
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.4,
+"end": 0.55
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.55,
+"end": 0.688
+},
+{
+"text": "meal",
+"ws": " ",
+"start": 0.688,
+"end": 1.175
+},
+{
+"text": "before",
+"ws": " ",
+"start": 1.175,
+"end": 1.587
+},
+{
+"text": "dawn",
+"ws": " ",
+"start": 1.587,
+"end": 2.15
+},
+{
+"text": "on",
+"ws": " ",
+"start": 2.15,
+"end": 2.263
+},
+{
+"text": "a",
+"ws": " ",
+"start": 2.263,
+"end": 2.375
+},
+{
+"text": "fasting",
+"ws": " ",
+"start": 2.375,
+"end": 2.9
+},
+{
+"text": "day",
+"ws": " ",
+"start": 2.9,
+"end": 3.212
+},
+{
+"text": "called",
+"ws": "",
+"start": 3.212,
+"end": 3.95
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.95,
+"end": 4.15
+}
+],
+"duration": 4.25
+}

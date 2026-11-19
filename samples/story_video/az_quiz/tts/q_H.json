@@ -1,0 +1,54 @@
+{
+"text": "What is the pilgrimage to Makkah called?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.438
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.438,
+"end": 0.625
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.625,
+"end": 0.762
+},
+{
+"text": "pilgrimage",
+"ws": " ",
+"start": 0.762,
+"end": 1.7
+},
+{
+"text": "to",
+"ws": " ",
+"start": 1.7,
+"end": 1.875
+},
+{
+"text": "Makkah",
+"ws": " ",
+"start": 1.875,
+"end": 2.388
+},
+{
+"text": "called",
+"ws": "",
+"start": 2.388,
+"end": 3.125
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.125,
+"end": 3.325
+}
+],
+"duration": 3.425
+}

@@ -1,0 +1,24 @@
+{
+"text": "The Opening.",
+"tokens": [
+{
+"text": "The",
+"ws": " ",
+"start": 0.25,
+"end": 0.475
+},
+{
+"text": "Opening",
+"ws": "",
+"start": 0.475,
+"end": 1.475
+},
+{
+"text": ".",
+"ws": "",
+"start": 1.475,
+"end": 1.675
+}
+],
+"duration": 1.775
+}

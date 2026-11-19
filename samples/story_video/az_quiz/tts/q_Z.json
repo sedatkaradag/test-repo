@@ -1,0 +1,66 @@
+{
+"text": "What is the blessed water near the Kaaba called?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.438
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.438,
+"end": 0.65
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.65,
+"end": 0.787
+},
+{
+"text": "blessed",
+"ws": " ",
+"start": 0.787,
+"end": 1.212
+},
+{
+"text": "water",
+"ws": " ",
+"start": 1.212,
+"end": 1.925
+},
+{
+"text": "near",
+"ws": " ",
+"start": 1.925,
+"end": 2.112
+},
+{
+"text": "the",
+"ws": " ",
+"start": 2.112,
+"end": 2.237
+},
+{
+"text": "Kaaba",
+"ws": " ",
+"start": 2.237,
+"end": 2.688
+},
+{
+"text": "called",
+"ws": "",
+"start": 2.688,
+"end": 3.425
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.425,
+"end": 3.625
+}
+],
+"duration": 3.725
+}

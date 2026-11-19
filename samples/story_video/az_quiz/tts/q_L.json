@@ -1,0 +1,66 @@
+{
+"text": "What is the Night of Decree called in Arabic?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.4
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.4,
+"end": 0.575
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.575,
+"end": 0.713
+},
+{
+"text": "Night",
+"ws": " ",
+"start": 0.713,
+"end": 1.025
+},
+{
+"text": "of",
+"ws": " ",
+"start": 1.025,
+"end": 1.175
+},
+{
+"text": "Decree",
+"ws": " ",
+"start": 1.175,
+"end": 1.95
+},
+{
+"text": "called",
+"ws": " ",
+"start": 1.95,
+"end": 2.475
+},
+{
+"text": "in",
+"ws": " ",
+"start": 2.475,
+"end": 2.688
+},
+{
+"text": "Arabic",
+"ws": "",
+"start": 2.688,
+"end": 3.5
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.5,
+"end": 3.725
+}
+],
+"duration": 3.825
+}

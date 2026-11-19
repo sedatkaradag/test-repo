@@ -1,0 +1,72 @@
+{
+"text": "Which pillar of Islam is performed five times a day?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.225,
+"end": 0.438
+},
+{
+"text": "pillar",
+"ws": " ",
+"start": 0.438,
+"end": 0.775
+},
+{
+"text": "of",
+"ws": " ",
+"start": 0.775,
+"end": 0.938
+},
+{
+"text": "Islam",
+"ws": " ",
+"start": 0.938,
+"end": 1.613
+},
+{
+"text": "is",
+"ws": " ",
+"start": 1.613,
+"end": 1.775
+},
+{
+"text": "performed",
+"ws": " ",
+"start": 1.775,
+"end": 2.462
+},
+{
+"text": "five",
+"ws": " ",
+"start": 2.462,
+"end": 2.85
+},
+{
+"text": "times",
+"ws": " ",
+"start": 2.85,
+"end": 3.275
+},
+{
+"text": "a",
+"ws": " ",
+"start": 3.275,
+"end": 3.375
+},
+{
+"text": "day",
+"ws": "",
+"start": 3.375,
+"end": 4.05
+},
+{
+"text": "?",
+"ws": "",
+"start": 4.05,
+"end": 4.25
+}
+],
+"duration": 4.35
+}

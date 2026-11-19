@@ -1,0 +1,48 @@
+{
+"text": "A verse, or a sign.",
+"tokens": [
+{
+"text": "A",
+"ws": " ",
+"start": 0.25,
+"end": 0.338
+},
+{
+"text": "verse",
+"ws": "",
+"start": 0.338,
+"end": 0.85
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.85,
+"end": 0.963
+},
+{
+"text": "or",
+"ws": " ",
+"start": 0.963,
+"end": 1.15
+},
+{
+"text": "a",
+"ws": " ",
+"start": 1.15,
+"end": 1.275
+},
+{
+"text": "sign",
+"ws": "",
+"start": 1.275,
+"end": 2.1
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.1,
+"end": 2.3
+}
+],
+"duration": 2.4
+}

@@ -1,0 +1,24 @@
+{
+"text": "The Qibla.",
+"tokens": [
+{
+"text": "The",
+"ws": " ",
+"start": 0.225,
+"end": 0.362
+},
+{
+"text": "Qibla",
+"ws": "",
+"start": 0.362,
+"end": 1.175
+},
+{
+"text": ".",
+"ws": "",
+"start": 1.175,
+"end": 1.425
+}
+],
+"duration": 1.525
+}

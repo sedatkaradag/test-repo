@@ -1,0 +1,60 @@
+{
+"text": "What is the first surah of the Quran?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.4
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.4,
+"end": 0.575
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.575,
+"end": 0.725
+},
+{
+"text": "first",
+"ws": " ",
+"start": 0.725,
+"end": 1.163
+},
+{
+"text": "surah",
+"ws": " ",
+"start": 1.163,
+"end": 1.712
+},
+{
+"text": "of",
+"ws": " ",
+"start": 1.712,
+"end": 1.837
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.837,
+"end": 1.962
+},
+{
+"text": "Quran",
+"ws": "",
+"start": 1.962,
+"end": 2.9
+},
+{
+"text": "?",
+"ws": "",
+"start": 2.9,
+"end": 3.1
+}
+],
+"duration": 3.2
+}

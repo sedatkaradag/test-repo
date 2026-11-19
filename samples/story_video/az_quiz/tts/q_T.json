@@ -1,0 +1,72 @@
+{
+"text": "What is the belief in the Oneness of Allah called?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.412
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.412,
+"end": 0.6
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.6,
+"end": 0.725
+},
+{
+"text": "belief",
+"ws": " ",
+"start": 0.725,
+"end": 1.525
+},
+{
+"text": "in",
+"ws": " ",
+"start": 1.525,
+"end": 1.663
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.663,
+"end": 1.775
+},
+{
+"text": "Oneness",
+"ws": " ",
+"start": 1.775,
+"end": 2.3
+},
+{
+"text": "of",
+"ws": " ",
+"start": 2.3,
+"end": 2.462
+},
+{
+"text": "Allah",
+"ws": " ",
+"start": 2.462,
+"end": 2.812
+},
+{
+"text": "called",
+"ws": "",
+"start": 2.812,
+"end": 3.575
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.575,
+"end": 3.775
+}
+],
+"duration": 3.875
+}

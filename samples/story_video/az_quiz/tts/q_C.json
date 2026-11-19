@@ -1,0 +1,54 @@
+{
+"text": "Where did the first revelation come down?",
+"tokens": [
+{
+"text": "Where",
+"ws": " ",
+"start": 0.25,
+"end": 0.475
+},
+{
+"text": "did",
+"ws": " ",
+"start": 0.475,
+"end": 0.613
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.613,
+"end": 0.762
+},
+{
+"text": "first",
+"ws": " ",
+"start": 0.762,
+"end": 1.387
+},
+{
+"text": "revelation",
+"ws": " ",
+"start": 1.387,
+"end": 2.138
+},
+{
+"text": "come",
+"ws": " ",
+"start": 2.138,
+"end": 2.425
+},
+{
+"text": "down",
+"ws": "",
+"start": 2.425,
+"end": 3.2
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.2,
+"end": 3.4
+}
+],
+"duration": 3.5
+}

@@ -1,0 +1,36 @@
+{
+"text": "The Cave of Hira.",
+"tokens": [
+{
+"text": "The",
+"ws": " ",
+"start": 0.225,
+"end": 0.362
+},
+{
+"text": "Cave",
+"ws": " ",
+"start": 0.362,
+"end": 0.938
+},
+{
+"text": "of",
+"ws": " ",
+"start": 0.938,
+"end": 1.113
+},
+{
+"text": "Hira",
+"ws": "",
+"start": 1.113,
+"end": 1.925
+},
+{
+"text": ".",
+"ws": "",
+"start": 1.925,
+"end": 2.15
+}
+],
+"duration": 2.25
+}

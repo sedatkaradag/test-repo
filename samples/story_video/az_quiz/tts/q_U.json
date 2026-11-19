@@ -1,0 +1,78 @@
+{
+"text": "Which mountain near Madinah gave its name to a famous battle?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.25,
+"end": 0.487
+},
+{
+"text": "mountain",
+"ws": " ",
+"start": 0.487,
+"end": 1.262
+},
+{
+"text": "near",
+"ws": " ",
+"start": 1.262,
+"end": 1.512
+},
+{
+"text": "Madinah",
+"ws": " ",
+"start": 1.512,
+"end": 1.975
+},
+{
+"text": "gave",
+"ws": " ",
+"start": 1.975,
+"end": 2.212
+},
+{
+"text": "its",
+"ws": " ",
+"start": 2.212,
+"end": 2.4
+},
+{
+"text": "name",
+"ws": " ",
+"start": 2.4,
+"end": 2.962
+},
+{
+"text": "to",
+"ws": " ",
+"start": 2.962,
+"end": 3.1
+},
+{
+"text": "a",
+"ws": " ",
+"start": 3.1,
+"end": 3.225
+},
+{
+"text": "famous",
+"ws": " ",
+"start": 3.225,
+"end": 3.763
+},
+{
+"text": "battle",
+"ws": "",
+"start": 3.763,
+"end": 4.6
+},
+{
+"text": "?",
+"ws": "",
+"start": 4.6,
+"end": 4.775
+}
+],
+"duration": 4.875
+}

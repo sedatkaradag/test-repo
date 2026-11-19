@@ -1,0 +1,66 @@
+{
+"text": "What is the House of Allah in Makkah called?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.4
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.4,
+"end": 0.55
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.55,
+"end": 0.688
+},
+{
+"text": "House",
+"ws": " ",
+"start": 0.688,
+"end": 1.075
+},
+{
+"text": "of",
+"ws": " ",
+"start": 1.075,
+"end": 1.25
+},
+{
+"text": "Allah",
+"ws": " ",
+"start": 1.25,
+"end": 1.875
+},
+{
+"text": "in",
+"ws": " ",
+"start": 1.875,
+"end": 2.05
+},
+{
+"text": "Makkah",
+"ws": " ",
+"start": 2.05,
+"end": 2.538
+},
+{
+"text": "called",
+"ws": "",
+"start": 2.538,
+"end": 3.275
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.275,
+"end": 3.475
+}
+],
+"duration": 3.575
+}

@@ -1,0 +1,54 @@
+{
+"text": "Who was the first muezzin of Islam?",
+"tokens": [
+{
+"text": "Who",
+"ws": " ",
+"start": 0.25,
+"end": 0.45
+},
+{
+"text": "was",
+"ws": " ",
+"start": 0.45,
+"end": 0.65
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.65,
+"end": 0.812
+},
+{
+"text": "first",
+"ws": " ",
+"start": 0.812,
+"end": 1.325
+},
+{
+"text": "muezzin",
+"ws": " ",
+"start": 1.325,
+"end": 2.1
+},
+{
+"text": "of",
+"ws": " ",
+"start": 2.1,
+"end": 2.288
+},
+{
+"text": "Islam",
+"ws": "",
+"start": 2.288,
+"end": 3.25
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.25,
+"end": 3.45
+}
+],
+"duration": 3.55
+}

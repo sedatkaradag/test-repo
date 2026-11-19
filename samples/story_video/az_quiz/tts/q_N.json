@@ -1,0 +1,42 @@
+{
+"text": "Which prophet built the Ark?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.25,
+"end": 0.463
+},
+{
+"text": "prophet",
+"ws": " ",
+"start": 0.463,
+"end": 0.988
+},
+{
+"text": "built",
+"ws": " ",
+"start": 0.988,
+"end": 1.3
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.3,
+"end": 1.488
+},
+{
+"text": "Ark",
+"ws": "",
+"start": 1.488,
+"end": 2.2
+},
+{
+"text": "?",
+"ws": "",
+"start": 2.2,
+"end": 2.425
+}
+],
+"duration": 2.525
+}

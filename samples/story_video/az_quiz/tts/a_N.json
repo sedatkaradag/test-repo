@@ -1,0 +1,48 @@
+{
+"text": "Nooh, peace be upon him.",
+"tokens": [
+{
+"text": "Nooh",
+"ws": "",
+"start": 0.275,
+"end": 0.6
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.6,
+"end": 0.688
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 0.688,
+"end": 1.025
+},
+{
+"text": "be",
+"ws": " ",
+"start": 1.025,
+"end": 1.2
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 1.2,
+"end": 1.575
+},
+{
+"text": "him",
+"ws": "",
+"start": 1.575,
+"end": 2.2
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.2,
+"end": 2.4
+}
+],
+"duration": 2.5
+}

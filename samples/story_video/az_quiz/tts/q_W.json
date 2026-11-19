@@ -1,0 +1,66 @@
+{
+"text": "Which night prayer has an odd number of rakahs?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.25,
+"end": 0.475
+},
+{
+"text": "night",
+"ws": " ",
+"start": 0.475,
+"end": 0.762
+},
+{
+"text": "prayer",
+"ws": " ",
+"start": 0.762,
+"end": 1.45
+},
+{
+"text": "has",
+"ws": " ",
+"start": 1.45,
+"end": 1.663
+},
+{
+"text": "an",
+"ws": " ",
+"start": 1.663,
+"end": 1.85
+},
+{
+"text": "odd",
+"ws": " ",
+"start": 1.85,
+"end": 2.212
+},
+{
+"text": "number",
+"ws": " ",
+"start": 2.212,
+"end": 2.55
+},
+{
+"text": "of",
+"ws": " ",
+"start": 2.55,
+"end": 2.712
+},
+{
+"text": "rakahs",
+"ws": "",
+"start": 2.712,
+"end": 3.65
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.65,
+"end": 3.825
+}
+],
+"duration": 3.925
+}

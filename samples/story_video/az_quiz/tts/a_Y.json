@@ -1,0 +1,48 @@
+{
+"text": "Yoosuf, peace be upon him.",
+"tokens": [
+{
+"text": "Yoosuf",
+"ws": "",
+"start": 0.275,
+"end": 0.8
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.8,
+"end": 0.887
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 0.887,
+"end": 1.25
+},
+{
+"text": "be",
+"ws": " ",
+"start": 1.25,
+"end": 1.425
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 1.425,
+"end": 1.8
+},
+{
+"text": "him",
+"ws": "",
+"start": 1.8,
+"end": 2.425
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.425,
+"end": 2.6
+}
+],
+"duration": 2.7
+}

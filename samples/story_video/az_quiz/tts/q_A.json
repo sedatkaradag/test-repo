@@ -1,0 +1,60 @@
+{
+"text": "What is the day before Eid al-Adha called?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.25,
+"end": 0.4
+},
+{
+"text": "is",
+"ws": " ",
+"start": 0.4,
+"end": 0.575
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.575,
+"end": 0.713
+},
+{
+"text": "day",
+"ws": " ",
+"start": 0.713,
+"end": 1.175
+},
+{
+"text": "before",
+"ws": " ",
+"start": 1.175,
+"end": 1.613
+},
+{
+"text": "Eid",
+"ws": " ",
+"start": 1.613,
+"end": 1.938
+},
+{
+"text": "al-Adha",
+"ws": " ",
+"start": 1.938,
+"end": 2.438
+},
+{
+"text": "called",
+"ws": "",
+"start": 2.438,
+"end": 3.175
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.175,
+"end": 3.375
+}
+],
+"duration": 3.475
+}

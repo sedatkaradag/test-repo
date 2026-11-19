@@ -1,0 +1,54 @@
+{
+"text": "Which celebration marks the end of Ramadan?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.25,
+"end": 0.438
+},
+{
+"text": "celebration",
+"ws": " ",
+"start": 0.438,
+"end": 1.6
+},
+{
+"text": "marks",
+"ws": " ",
+"start": 1.6,
+"end": 2.025
+},
+{
+"text": "the",
+"ws": " ",
+"start": 2.025,
+"end": 2.188
+},
+{
+"text": "end",
+"ws": " ",
+"start": 2.188,
+"end": 2.413
+},
+{
+"text": "of",
+"ws": " ",
+"start": 2.413,
+"end": 2.525
+},
+{
+"text": "Ramadan",
+"ws": "",
+"start": 2.525,
+"end": 3.5
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.5,
+"end": 3.7
+}
+],
+"duration": 3.8
+}

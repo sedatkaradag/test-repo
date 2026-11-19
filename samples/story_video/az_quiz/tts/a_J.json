@@ -1,0 +1,30 @@
+{
+"text": "Jumuah, Friday.",
+"tokens": [
+{
+"text": "Jumuah",
+"ws": "",
+"start": 0.275,
+"end": 0.875
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.875,
+"end": 1.0
+},
+{
+"text": "Friday",
+"ws": "",
+"start": 1.0,
+"end": 1.925
+},
+{
+"text": ".",
+"ws": "",
+"start": 1.925,
+"end": 2.175
+}
+],
+"duration": 2.275
+}

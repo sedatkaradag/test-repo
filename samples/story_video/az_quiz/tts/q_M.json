@@ -1,0 +1,54 @@
+{
+"text": "In which city is the Prophet's Mosque?",
+"tokens": [
+{
+"text": "In",
+"ws": " ",
+"start": 0.25,
+"end": 0.4
+},
+{
+"text": "which",
+"ws": " ",
+"start": 0.4,
+"end": 0.613
+},
+{
+"text": "city",
+"ws": " ",
+"start": 0.613,
+"end": 1.262
+},
+{
+"text": "is",
+"ws": " ",
+"start": 1.262,
+"end": 1.55
+},
+{
+"text": "the",
+"ws": " ",
+"start": 1.55,
+"end": 1.688
+},
+{
+"text": "Prophet's",
+"ws": " ",
+"start": 1.688,
+"end": 2.188
+},
+{
+"text": "Mosque",
+"ws": "",
+"start": 2.188,
+"end": 2.925
+},
+{
+"text": "?",
+"ws": "",
+"start": 2.925,
+"end": 3.15
+}
+],
+"duration": 3.25
+}

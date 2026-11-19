@@ -1,0 +1,48 @@
+{
+"text": "Ibrahim, peace be upon him.",
+"tokens": [
+{
+"text": "Ibrahim",
+"ws": "",
+"start": 0.225,
+"end": 0.85
+},
+{
+"text": ",",
+"ws": " ",
+"start": 0.85,
+"end": 0.963
+},
+{
+"text": "peace",
+"ws": " ",
+"start": 0.963,
+"end": 1.387
+},
+{
+"text": "be",
+"ws": " ",
+"start": 1.387,
+"end": 1.575
+},
+{
+"text": "upon",
+"ws": " ",
+"start": 1.575,
+"end": 1.95
+},
+{
+"text": "him",
+"ws": "",
+"start": 1.95,
+"end": 2.6
+},
+{
+"text": ".",
+"ws": "",
+"start": 2.6,
+"end": 2.775
+}
+],
+"duration": 2.875
+}

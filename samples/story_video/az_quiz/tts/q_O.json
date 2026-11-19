@@ -1,0 +1,48 @@
+{
+"text": "What does the name Al-Fatiha mean?",
+"tokens": [
+{
+"text": "What",
+"ws": " ",
+"start": 0.225,
+"end": 0.362
+},
+{
+"text": "does",
+"ws": " ",
+"start": 0.362,
+"end": 0.55
+},
+{
+"text": "the",
+"ws": " ",
+"start": 0.55,
+"end": 0.675
+},
+{
+"text": "name",
+"ws": " ",
+"start": 0.675,
+"end": 1.312
+},
+{
+"text": "Al-Fatiha",
+"ws": " ",
+"start": 1.312,
+"end": 2.188
+},
+{
+"text": "mean",
+"ws": "",
+"start": 2.188,
+"end": 2.9
+},
+{
+"text": "?",
+"ws": "",
+"start": 2.9,
+"end": 3.1
+}
+],
+"duration": 3.2
+}

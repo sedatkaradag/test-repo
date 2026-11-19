@@ -1,0 +1,60 @@
+{
+"text": "Which direction do Muslims face when they pray?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.25,
+"end": 0.45
+},
+{
+"text": "direction",
+"ws": " ",
+"start": 0.45,
+"end": 1.113
+},
+{
+"text": "do",
+"ws": " ",
+"start": 1.113,
+"end": 1.3
+},
+{
+"text": "Muslims",
+"ws": " ",
+"start": 1.3,
+"end": 1.863
+},
+{
+"text": "face",
+"ws": " ",
+"start": 1.863,
+"end": 2.525
+},
+{
+"text": "when",
+"ws": " ",
+"start": 2.525,
+"end": 2.725
+},
+{
+"text": "they",
+"ws": " ",
+"start": 2.725,
+"end": 2.938
+},
+{
+"text": "pray",
+"ws": "",
+"start": 2.938,
+"end": 3.7
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.7,
+"end": 3.9
+}
+],
+"duration": 4.0
+}

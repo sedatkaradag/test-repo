@@ -1,0 +1,48 @@
+{
+"text": "In which month is fasting obligatory?",
+"tokens": [
+{
+"text": "In",
+"ws": " ",
+"start": 0.25,
+"end": 0.375
+},
+{
+"text": "which",
+"ws": " ",
+"start": 0.375,
+"end": 0.637
+},
+{
+"text": "month",
+"ws": " ",
+"start": 0.637,
+"end": 1.25
+},
+{
+"text": "is",
+"ws": " ",
+"start": 1.25,
+"end": 1.5
+},
+{
+"text": "fasting",
+"ws": " ",
+"start": 1.5,
+"end": 2.163
+},
+{
+"text": "obligatory",
+"ws": "",
+"start": 2.163,
+"end": 3.35
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.35,
+"end": 3.525
+}
+],
+"duration": 3.625
+}

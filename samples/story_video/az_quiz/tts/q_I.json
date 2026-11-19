@@ -1,0 +1,60 @@
+{
+"text": "Which prophet was commanded to sacrifice his son?",
+"tokens": [
+{
+"text": "Which",
+"ws": " ",
+"start": 0.25,
+"end": 0.487
+},
+{
+"text": "prophet",
+"ws": " ",
+"start": 0.487,
+"end": 0.975
+},
+{
+"text": "was",
+"ws": " ",
+"start": 0.975,
+"end": 1.175
+},
+{
+"text": "commanded",
+"ws": " ",
+"start": 1.175,
+"end": 2.05
+},
+{
+"text": "to",
+"ws": " ",
+"start": 2.05,
+"end": 2.212
+},
+{
+"text": "sacrifice",
+"ws": " ",
+"start": 2.212,
+"end": 2.875
+},
+{
+"text": "his",
+"ws": " ",
+"start": 2.875,
+"end": 3.038
+},
+{
+"text": "son",
+"ws": "",
+"start": 3.038,
+"end": 3.775
+},
+{
+"text": "?",
+"ws": "",
+"start": 3.775,
+"end": 3.975
+}
+],
+"duration": 4.075
+}
