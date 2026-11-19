@@ -237,5 +237,15 @@
     "opened_at": "2026-11-16T07:58:32Z",
     "closed_at": "2026-11-16T08:03:12Z",
     "resolution": "Düzeltildi (sahibi onayladı, 16 Kas): senkron panele yazamazsa 2 dk arayla 2 kez yeniden deniyor; yine olmazsa sorunu notes/issues.json'a yazıp commit ediyor, sonraki çalışma kaydı ve eksikleri panele taşıyor. Günlük çalışma için de aynı kural. 16 Kas senkronu elle tamamlandı. Platformdaki onay hatası tek seferlik; aynı saatlerde diğer çalışmalar ve ana ajan panele yazabildi."
+  },
+  {
+    "id": "S-021",
+    "kind": "content",
+    "title": "7:199 Reel recites 7:200 too, and the Muaiqly recording echoes",
+    "detail": "everyayah MaherAlMuaiqly128kbps/007199.mp3 contains 7:199 + 7:200 (ASR). Posted 19 Nov 18:01 UTC. No other wrong verse in the queue audit (notes/audits/2026-11-20_recitation_audit.md). Pipeline has no check of what is recited. Waiting for the owner: what to do with the post, and whether to add an automatic recitation check / change reciters.",
+    "ref": "quran:7:199 / 2026-11-19_reel-eu",
+    "source": "owner",
+    "status": "open",
+    "opened_at": "2026-11-19T22:47:10Z"
   }
 ]
