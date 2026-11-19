@@ -103,7 +103,6 @@ def add(sig, t0, g, pan=0.0):
     if 0 <= i < N: s = sig[:j - i] * g; L[i:j] += s * np.sqrt((1 - pan) / 2) * 1.41; R[i:j] += s * np.sqrt((1 + pan) / 2) * 1.41
 def env(n, a, r): e = np.ones(n); na, nr = max(1, int(a * SR)), max(1, int(r * SR)); e[:na] = np.linspace(0, 1, na); e[-nr:] *= np.linspace(1, 0, nr); return e
 tt = np.arange(N) / SR
-bed = lp(np.cumsum(rng.standard_normal(N)), 260); bed /= np.abs(bed).max(); add(bed * env(N, 2, 2.5), 0, db(-30))
 pad = sum(np.sin(2 * np.pi * f * tt + k) * (0.6 + 0.4 * np.sin(2 * np.pi * tt / (9 + 2 * k))) for k, f in enumerate([55, 82.4, 110, 164.8]))
 add(lp(pad, 400) / 4 * env(N, 4, 3), 0, db(-35))
 def bloom(t0, g, low=120, hi=1400, dur=1.6):
@@ -114,17 +113,16 @@ for p in people:
         t0 = time_at(p["to"])
         if p["id"] == "prophet": bloom(t0, db(-24), 60, 900, 3.2)
         else: bloom(t0, db(-30))
-# light rain until the verse, none under the recitation (owner, 19 Nov: the first try hissed like TV static,
-# so no broadband noise: separate small drops, each a short ring in its own band, over a soft low wash)
-n = int((REC_T - .2) * SR)
-def drops(rate, lo, hi, amp):
-    imp = np.zeros(n); k = rng.integers(0, n, int(n / SR * rate)); imp[k] = rng.exponential(1, len(k)) ** 1.6 * rng.choice([-1, 1], len(k))
-    return bp(imp, lo, hi) * amp
-for side in (-.45, .45):
-    rain = drops(260, 1800, 4200, 1.0) + drops(90, 900, 2000, 1.3) + drops(14, 380, 900, 1.6)
-    wash = lp(bp(rng.standard_normal(n), 250, 1400), 900) * (0.75 + 0.25 * np.sin(2 * np.pi * np.arange(n) / SR / 7.3 + side))
-    rain = lp(rain / np.abs(rain).max() + wash / np.abs(wash).max() * .22, 5200) * env(n, 3, 1.8)
-    add(rain / np.abs(rain).max(), 0, db(-29), side)
+# light rain until the verse, none under the recitation. Owner, 19 Nov: noise layers sound like static or wind,
+# so the rain is ONLY separate drops: soft ticks and small water "plips" (a short sine whose pitch rises as it dies away).
+n = int((REC_T - .2) * SR); fade = env(n, 3, 1.8)
+def tick(): m = int(.006 * SR); return lp(rng.standard_normal(m), rng.uniform(2500, 5000)) * np.exp(-np.arange(m) / (rng.uniform(.0006, .0014) * SR))
+def plip():
+    m = int(.04 * SR); x = np.arange(m) / SR; f0 = rng.uniform(1300, 3200); tau = rng.uniform(.006, .014)
+    return np.sin(2 * np.pi * f0 * (x + 1.6 * x * x / tau)) * np.exp(-x / tau) * np.minimum(1, x / .0008)
+for rate, make, g0 in ((38, tick, -31), (7, plip, -35)):
+    for t0 in np.sort(rng.uniform(0, n / SR, int(n / SR * rate))):
+        k = int(t0 * SR); add(make() * fade[min(k, n - 1)], t0, db(g0) * rng.lognormal(0, .45) ** 1, rng.uniform(-.8, .8))
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
 rec = np.frombuffer(raw, np.float32).astype(float)[:int((AL[-1][3] / 1000 + .5) * SR)]; rec *= env(len(rec), .02, .45)
 add(rec / np.abs(rec).max(), REC_T, db(-4))
@@ -134,6 +132,10 @@ wavfile.write(OUT / "amb_raw.wav", SR, (mix * .9 * 32767).astype(np.int16))
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(OUT / "amb_raw.wav"), "-af", "loudnorm=I=-18:TP=-1.5:LRA=14", "-ar", str(SR), str(OUT / "amb.wav")], check=True)
 
 video = OUT / "prophet_losses.mp4"; tmp = OUT / "prophet_losses_tmp.mp4"
+if "--audio-only" in sys.argv:
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-i", str(OUT / "amb.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+                    "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(tmp)], check=True); tmp.rename(video)
+    print(json.dumps({"ok": True, "video": str(video), "audio_only": True})); sys.exit(0)
 ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg", "-i", "-", "-i", str(OUT / "amb.wav"),
                        "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
                        "-t", f"{END:.2f}", "-movflags", "+faststart", str(tmp)], stdin=subprocess.PIPE)
