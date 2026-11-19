@@ -1,6 +1,318 @@
 [
- {"id": "a_U_1", "text": "The Battle of Ohud."},
- {"id": "a_U_2", "text": "The Battle of Oohud."},
- {"id": "q_V_1", "text": "Ayatul Kursi is the greatest what in the Quran?"},
- {"id": "q_V_2", "text": "Aayat al-Kursi is the greatest what in the Quran?"}
+ {
+  "id": "intro_1",
+  "text": "A to Z Islamic quiz, part one! Let's see how many you can get. Ready? Let's begin."
+ },
+ {
+  "id": "intro_2",
+  "text": "A to Z Islamic quiz, part two! Let's see how many you can get. Ready? Let's begin."
+ },
+ {
+  "id": "outro_1",
+  "text": "How many did you get out of thirteen? Tell us in the comments, and send this to a friend."
+ },
+ {
+  "id": "outro_2",
+  "text": "How many did you get out of twelve? Tell us in the comments, and send this to a friend."
+ },
+ {
+  "id": "L_A",
+  "text": "Letter A."
+ },
+ {
+  "id": "q_A",
+  "text": "Who was the first human Allah created?"
+ },
+ {
+  "id": "a_A",
+  "text": "Adam, peace be upon him."
+ },
+ {
+  "id": "L_C",
+  "text": "Letter C."
+ },
+ {
+  "id": "q_C",
+  "text": "What kind of animal was al-Qaswa, the ride of the Prophet, peace be upon him?"
+ },
+ {
+  "id": "a_C",
+  "text": "A camel."
+ },
+ {
+  "id": "L_E",
+  "text": "Letter E."
+ },
+ {
+  "id": "q_E",
+  "text": "How many stars did Yusuf see bowing to him in his dream?"
+ },
+ {
+  "id": "a_E",
+  "text": "Eleven stars."
+ },
+ {
+  "id": "L_F",
+  "text": "Letter F."
+ },
+ {
+  "id": "q_F",
+  "text": "What do Muslims do from dawn to sunset in Ramadan?"
+ },
+ {
+  "id": "a_F",
+  "text": "They fast."
+ },
+ {
+  "id": "L_I",
+  "text": "Letter I."
+ },
+ {
+  "id": "q_I",
+  "text": "Which son helped Ibrahim raise the walls of the Kaaba?"
+ },
+ {
+  "id": "a_I",
+  "text": "Ismail, peace be upon him."
+ },
+ {
+  "id": "L_K",
+  "text": "Letter K."
+ },
+ {
+  "id": "q_K",
+  "text": "Who was the first wife of the Prophet, peace be upon him?"
+ },
+ {
+  "id": "a_K",
+  "text": "Khadijah, may Allah be pleased with her."
+ },
+ {
+  "id": "L_L",
+  "text": "Letter L."
+ },
+ {
+  "id": "q_L",
+  "text": "Which prophet's people were destroyed by a rain of stones?"
+ },
+ {
+  "id": "a_L",
+  "text": "The people of Loot."
+ },
+ {
+  "id": "L_O",
+  "text": "Letter O."
+ },
+ {
+  "id": "q_O",
+  "text": "Which tree does Allah swear by together with the fig?"
+ },
+ {
+  "id": "a_O",
+  "text": "The olive."
+ },
+ {
+  "id": "L_Q",
+  "text": "Letter Q."
+ },
+ {
+  "id": "q_Q",
+  "text": "Which tribe did the Prophet, peace be upon him, come from?"
+ },
+ {
+  "id": "a_Q",
+  "text": "Quraysh."
+ },
+ {
+  "id": "L_S",
+  "text": "Letter S."
+ },
+ {
+  "id": "q_S",
+  "text": "Which prophet heard an ant warning the other ants?"
+ },
+ {
+  "id": "a_S",
+  "text": "Sulayman, peace be upon him."
+ },
+ {
+  "id": "L_T",
+  "text": "Letter T."
+ },
+ {
+  "id": "q_T",
+  "text": "Which expedition did the Prophet, peace be upon him, lead in the intense summer heat?"
+ },
+ {
+  "id": "a_T",
+  "text": "The expedition of Tabook."
+ },
+ {
+  "id": "L_W",
+  "text": "Letter W."
+ },
+ {
+  "id": "q_W",
+  "text": "Who killed Hamzah at the Battle of Uhud?"
+ },
+ {
+  "id": "a_W",
+  "text": "Wahshi. He later accepted Islam."
+ },
+ {
+  "id": "L_Z",
+  "text": "Letter Z."
+ },
+ {
+  "id": "q_Z",
+  "text": "Who gathered the Quran into one book under Abu Bakr?"
+ },
+ {
+  "id": "a_Z",
+  "text": "Zayd ibn Thabit."
+ },
+ {
+  "id": "L_B",
+  "text": "Letter B."
+ },
+ {
+  "id": "q_B",
+  "text": "What is the longest surah of the Quran?"
+ },
+ {
+  "id": "a_B",
+  "text": "Al-Baqarah."
+ },
+ {
+  "id": "L_D",
+  "text": "Letter D."
+ },
+ {
+  "id": "q_D",
+  "text": "Which fruit did the Prophet, peace be upon him, break his fast with?"
+ },
+ {
+  "id": "a_D",
+  "text": "Dates."
+ },
+ {
+  "id": "L_G",
+  "text": "Letter G."
+ },
+ {
+  "id": "q_G",
+  "text": "Which giant warrior did Dawud defeat?"
+ },
+ {
+  "id": "a_G",
+  "text": "Goliath, Jaloot."
+ },
+ {
+  "id": "L_H",
+  "text": "Letter H."
+ },
+ {
+  "id": "q_H",
+  "text": "Which prophet was sent to the people of 'Ad?"
+ },
+ {
+  "id": "a_H",
+  "text": "Hood, peace be upon him."
+ },
+ {
+  "id": "L_J",
+  "text": "Letter J."
+ },
+ {
+  "id": "q_J",
+  "text": "Which prophet spoke as a baby in the cradle?"
+ },
+ {
+  "id": "a_J",
+  "text": "Jesus, Eesa, peace be upon him."
+ },
+ {
+  "id": "L_M",
+  "text": "Letter M."
+ },
+ {
+  "id": "q_M",
+  "text": "Which prophet did Allah speak to directly?"
+ },
+ {
+  "id": "a_M",
+  "text": "Moosa, peace be upon him."
+ },
+ {
+  "id": "L_N",
+  "text": "Letter N."
+ },
+ {
+  "id": "q_N",
+  "text": "Which surah is named after the bee?"
+ },
+ {
+  "id": "a_N",
+  "text": "An-Nahl."
+ },
+ {
+  "id": "L_P",
+  "text": "Letter P."
+ },
+ {
+  "id": "q_P",
+  "text": "Which ruler chased Musa and drowned in the sea?"
+ },
+ {
+  "id": "a_P",
+  "text": "Pharaoh."
+ },
+ {
+  "id": "L_R",
+  "text": "Letter R."
+ },
+ {
+  "id": "q_R",
+  "text": "What is one unit of the prayer called?"
+ },
+ {
+  "id": "a_R",
+  "text": "A raka."
+ },
+ {
+  "id": "L_U",
+  "text": "Letter U."
+ },
+ {
+  "id": "q_U",
+  "text": "Who was the second caliph of Islam?"
+ },
+ {
+  "id": "a_U",
+  "text": "Umar ibn al-Khattab."
+ },
+ {
+  "id": "L_V",
+  "text": "Letter V."
+ },
+ {
+  "id": "q_V",
+  "text": "What does the word nadhr mean in English?"
+ },
+ {
+  "id": "a_V",
+  "text": "A vow."
+ },
+ {
+  "id": "L_Y",
+  "text": "Letter Y."
+ },
+ {
+  "id": "q_Y",
+  "text": "What was Madinah called before the Hijrah?"
+ },
+ {
+  "id": "a_Y",
+  "text": "Yathrib."
+ }
 ]
