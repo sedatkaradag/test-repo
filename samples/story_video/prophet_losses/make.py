@@ -6,7 +6,7 @@ When someone passes away their line ends and their name rises into the sky as a 
 becomes a star too, the stars join into one constellation, then "only Fatimah" and Al-Anbiyaa 21:107.
 Sources: Bukhari/Muslim where there is a narration (notes in PEOPLE); ages and the sons al-Qasim and Abdullah
 from the sira (Ibn Ishaq / Ibn Hisham): the owner approved sira for this video on 19 Nov.
-Sound: our own ambience (noise and sines), light rain, soft blooms when a star rises; no music. 21:107 recited by
+Sound: our own ambience (sines), light rain (CC0 recording, see below), soft blooms when a star rises; no music. 21:107 recited by
 Alafasy (drafts-audio, word times from quran-align) with the words lighting up; no rain under the recitation (owner, 19 Nov).
 python3 make.py <out> expects REC=/home/claude/pl/rec (021107.mp3 + align.json) unless --rec=<dir>.
 """
@@ -113,16 +113,17 @@ for p in people:
         t0 = time_at(p["to"])
         if p["id"] == "prophet": bloom(t0, db(-24), 60, 900, 3.2)
         else: bloom(t0, db(-30))
-# light rain until the verse, none under the recitation. Owner, 19 Nov: noise layers sound like static or wind,
-# so the rain is ONLY separate drops: soft ticks and small water "plips" (a short sine whose pitch rises as it dies away).
-n = int((REC_T - .2) * SR); fade = env(n, 3, 1.8)
-def tick(): m = int(.006 * SR); return lp(rng.standard_normal(m), rng.uniform(2500, 5000)) * np.exp(-np.arange(m) / (rng.uniform(.0006, .0014) * SR))
-def plip():
-    m = int(.04 * SR); x = np.arange(m) / SR; f0 = rng.uniform(1300, 3200); tau = rng.uniform(.006, .014)
-    return np.sin(2 * np.pi * f0 * (x + 1.6 * x * x / tau)) * np.exp(-x / tau) * np.minimum(1, x / .0008)
-for rate, make, g0 in ((38, tick, -31), (7, plip, -35)):
-    for t0 in np.sort(rng.uniform(0, n / SR, int(n / SR * rate))):
-        k = int(t0 * SR); add(make() * fade[min(k, n - 1)], t0, db(g0) * rng.lognormal(0, .45) ** 1, rng.uniform(-.8, .8))
+# light rain until the verse, none under the recitation. Owner, 19 Nov: synthesised rain sounded like static, wind, then
+# nothing like rain, so this is a real recording: "Rain (loopable)" no. 4 by Ylmir, OpenGameArt, CC0 (rain_cc0_ylmir.mp3),
+# the lightest of the four. Looped with a 2 s crossfade, rumble below 150 Hz removed.
+n = int((REC_T - .2) * SR)
+rr = subprocess.run(["ffmpeg", "-v", "error", "-i", str(HERE / "rain_cc0_ylmir.mp3"), "-af", "highpass=f=150", "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+rain = np.frombuffer(rr, np.float32).astype(float).reshape(-1, 2); xf = int(2 * SR); w = np.linspace(0, 1, xf)[:, None]
+loop = rain.copy()
+while len(loop) < n:
+    loop = np.concatenate([loop[:-xf], loop[-xf:] * (1 - w) + rain[:xf] * w, rain[xf:]])
+loop = loop[:n] * env(n, 3, 1.8)[:, None]; loop /= np.sqrt((loop ** 2).mean()) / db(-33)
+L[:n] += loop[:, 0]; R[:n] += loop[:, 1]
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
 rec = np.frombuffer(raw, np.float32).astype(float)[:int((AL[-1][3] / 1000 + .5) * SR)]; rec *= env(len(rec), .02, .45)
 add(rec / np.abs(rec).max(), REC_T, db(-4))
