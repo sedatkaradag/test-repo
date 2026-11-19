@@ -1,0 +1,113 @@
+{
+  "entry_id": "quran:10:57",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Yunus 10:57",
+  "slot": "2026-11-20_reel-eu-am",
+  "publish_at": "2026-11-20T07:10:45Z",
+  "local_slot": "2026-11-20 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-20_reel-eu-am.jpg",
+  "video": "queue/2026-11-20_reel-eu-am.mp4",
+  "cover": "queue/2026-11-20_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Your heart has a cure, and it came from Allah\n\nAllah describes what He sent to us: an exhortation from our Lord, a cure for what is in the hearts, guidance and mercy for the believers. Start this Friday by reading a few verses of it.\n\nSurah Yunus 10:57\n\nSave this for the morning your heart feels heavy.\n\n#quranhealing #healingverses #surahyunus #fridayreminder\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "O mankind, there has come to you an exhortation from your Lord, a cure for [illness] of the hearts, a guidance and mercy for the believers (Surah Yunus 10:57)",
+  "theme": "Qur'an as healing / a cure for the hearts (Friday)",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:10:57",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Your heart has a cure, and it came from Allah",
+    "hook_lines": [
+      "Your heart has a cure, and it",
+      "came from Allah"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "010057",
+        "lines": [
+          "يَٰٓأَيُّهَا ٱلنَّاسُ قَدۡ جَآءَتۡكُم مَّوۡعِظَةٞ مِّن",
+          "رَّبِّكُمۡ وَشِفَآءٞ لِّمَا فِي ٱلصُّدُورِ وَهُدٗى",
+          "وَرَحۡمَةٞ لِّلۡمُؤۡمِنِينَ ٥٧"
+        ],
+        "y": 594.4,
+        "meal": [
+          "O mankind, there has come to you an",
+          "exhortation from your Lord, a cure for [illness]",
+          "of the hearts, a guidance and mercy for the",
+          "believers."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "O mankind, there has come to you an exhortation from your Lord, a cure for [illness] of the hearts, a guidance and mercy for the believers.",
+    "full_lines": [
+      "O mankind, there has come to you an",
+      "exhortation from your Lord, a cure for [illness]",
+      "of the hearts, a guidance and mercy for the",
+      "believers."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Yunus 10:57",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save this for the morning your heart feels heavy.",
+    "cta_lines": [
+      "Save this for the morning your heart feels",
+      "heavy."
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "1ffb4fe3509e2e906fcfc3eb",
+  "created_at": "2026-11-19T05:46:16+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "010057"
+    ],
+    "done": false
+  }
+}

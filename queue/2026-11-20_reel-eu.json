@@ -1,0 +1,116 @@
+{
+  "entry_id": "quran:28:10",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Qasas 28:10",
+  "slot": "2026-11-20_reel-eu",
+  "publish_at": "2026-11-20T18:02:13Z",
+  "local_slot": "2026-11-20 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-20_reel-eu.jpg",
+  "video": "queue/2026-11-20_reel-eu.mp4",
+  "cover": "queue/2026-11-20_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Anxious heart? Look at what Allah did for Musa's mother\n\nThe heart of Musa's mother became so restless that she nearly gave everything away. Allah reassured her heart so she would hold on to her faith in His promise. If your heart is restless today, ask Him to reassure yours.\n\nSurah Al-Qasas 28:10\n\nWhich worry will you hand over to Allah today?\n\n#anxiety #prophetmusa #surahqasas #quranreels\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "The heart of Moses’ mother became restless; she was about to disclose it, had We not reassured her heart so that she would maintain her faith [in Allah’s promise] (Surah Al-Qasas 28:10)",
+  "theme": "anxiety / Allah reassured the heart of Musa's mother",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:28:10",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Anxious heart? Look at what Allah did for Musa's mother",
+    "hook_lines": [
+      "Anxious heart? Look at",
+      "what Allah did for Musa's",
+      "mother"
+    ],
+    "hook_size": 82,
+    "arabic_size": 62,
+    "verses": [
+      {
+        "ayah": "028010",
+        "lines": [
+          "وَأَصۡبَحَ فُؤَادُ أُمِّ مُوسَىٰ فَٰرِغًاۖ إِن كَادَتۡ لَتُبۡدِي بِهِۦ",
+          "لَوۡلَآ أَن رَّبَطۡنَا عَلَىٰ قَلۡبِهَا لِتَكُونَ مِنَ ٱلۡمُؤۡمِنِينَ ١٠"
+        ],
+        "y": 743.8,
+        "meal": [
+          "The heart of Moses’ mother became restless; she",
+          "was about to disclose it, had We not reassured her",
+          "heart so that she would maintain her faith [in",
+          "Allah’s promise]."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1013.8,
+    "full": "The heart of Moses’ mother became restless; she was about to disclose it, had We not reassured her heart so that she would maintain her faith [in Allah’s promise].",
+    "full_lines": [
+      "The heart of Moses’ mother became restless; she",
+      "was about to disclose it, had We not reassured her",
+      "heart so that she would maintain her faith [in",
+      "Allah’s promise]."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Qasas 28:10",
+    "ref_y": 1289.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which worry will you hand over to Allah today?",
+    "cta_lines": [
+      "Which worry will you hand over to Allah",
+      "today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1347.8,
+    "handle_y": 1493.8,
+    "handle_size": 27
+  },
+  "layout_hash": "8195eb7b3ecca752b0d9184f",
+  "created_at": "2026-11-19T05:47:09+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "028010"
+    ],
+    "done": false
+  }
+}

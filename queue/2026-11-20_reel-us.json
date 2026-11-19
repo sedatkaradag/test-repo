@@ -1,0 +1,140 @@
+{
+  "entry_id": "quran:13:23-24",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ar-Ra'd 13:23-24",
+  "slot": "2026-11-20_reel-us",
+  "publish_at": "2026-11-21T01:32:53Z",
+  "local_slot": "2026-11-20 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-20_reel-us.jpg",
+  "video": "queue/2026-11-20_reel-us.mp4",
+  "cover": "queue/2026-11-20_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "For the family you hope to see again in Jannah\n\nAllah describes the Gardens of Eternity, entered together with righteous parents, spouses and children, and angels greeting them with peace for what they patiently endured.\n\nSurah Ar-Ra'd 13:23-24\n\nSend this to the family you are making dua for.\n\n#jannah #muslimfamily #surahrad #quranreels\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Gardens of Eternity, which they will enter together with their righteous parents, their spouses and their offspring. Angels will enter upon them from every gate. “Peace be on you, for what you have patiently endured. How excellent is the final abode!” (Surah Ar-Ra'd 13:23-24)",
+  "theme": "family in Jannah / together with parents, spouses and children",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:13:23-24",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For the family you hope to see again in Jannah",
+    "hook_lines": [
+      "For the family you hope to",
+      "see again in Jannah"
+    ],
+    "hook_size": 82,
+    "arabic_size": 62,
+    "verses": [
+      {
+        "ayah": "013023",
+        "lines": [
+          "جَنَّٰتُ عَدۡنٖ يَدۡخُلُونَهَا وَمَن صَلَحَ مِنۡ ءَابَآئِهِمۡ",
+          "وَأَزۡوَٰجِهِمۡ وَذُرِّيَّٰتِهِمۡۖ وَٱلۡمَلَٰٓئِكَةُ يَدۡخُلُونَ عَلَيۡهِم",
+          "مِّن كُلِّ بَابٖ ٢٣"
+        ],
+        "y": 595.6,
+        "meal": [
+          "Gardens of Eternity, which they will enter together",
+          "with their righteous parents, their spouses and their",
+          "offspring. Angels will enter upon them from every",
+          "gate."
+        ]
+      },
+      {
+        "ayah": "013024",
+        "lines": [
+          "سَلَٰمٌ عَلَيۡكُم بِمَا صَبَرۡتُمۡۚ فَنِعۡمَ عُقۡبَى ٱلدَّارِ ٢٤"
+        ],
+        "y": 955.6,
+        "meal": [
+          "“Peace be on you, for what you have patiently",
+          "endured. How excellent is the final abode!”"
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 1105.6,
+    "full": "Gardens of Eternity, which they will enter together with their righteous parents, their spouses and their offspring. Angels will enter upon them from every gate. “Peace be on you, for what you have patiently endured. How excellent is the final abode!”",
+    "full_lines": [
+      "Gardens of Eternity, which they will enter together",
+      "with their righteous parents, their spouses and their",
+      "offspring. Angels will enter upon them from every",
+      "gate. “Peace be on you, for what you have patiently",
+      "endured. How excellent is the final abode!”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Ar-Ra'd 13:23-24",
+    "ref_y": 1414.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to the family you are making dua for.",
+    "cta_lines": [
+      "Send this to the family you are making dua for."
+    ],
+    "cta_size": 44,
+    "line_y": 1472.6,
+    "handle_y": 1546.6,
+    "handle_size": 27
+  },
+  "layout_hash": "73f05fd27ad89e46036c7a0d",
+  "created_at": "2026-11-19T05:48:36+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "013023",
+      "013024"
+    ],
+    "done": false
+  }
+}

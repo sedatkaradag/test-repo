@@ -1,0 +1,103 @@
+{
+  "entry_id": "quran:10:65",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Yunus 10:65",
+  "slot": "2026-11-20_reel-pk",
+  "publish_at": "2026-11-20T15:32:39Z",
+  "local_slot": "2026-11-20 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-20_reel-pk.jpg",
+  "video": "queue/2026-11-20_reel-pk.mp4",
+  "cover": "queue/2026-11-20_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "For when hurtful words keep replaying in your head\n\nWhat they said does not get the final word. All power belongs to Allah, and He is the All-Hearing, the All-Knowing.\n\nSurah Yunus 10:65\n\nTell Allah about it tonight, before you tell anyone else.\n\n#hurtfulwords #overthinking #allahhears #quranreels\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Do not let their words grieve you. Indeed, all power belongs to Allah. He is the All-Hearing, the All-Knowing (Surah Yunus 10:65)",
+  "theme": "hurtful words / do not let their words grieve you",
+  "review": "Independent reviewer approved: integrity ok, Arabic checked word by word, English/reference/caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:10:65",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For when hurtful words keep replaying in your head",
+    "hook_lines": [
+      "For when hurtful words",
+      "keep replaying in your head"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "010065",
+        "lines": [
+          "وَلَا يَحۡزُنكَ قَوۡلُهُمۡۘ إِنَّ ٱلۡعِزَّةَ لِلَّهِ جَمِيعًاۚ",
+          "هُوَ ٱلسَّمِيعُ ٱلۡعَلِيمُ ٦٥"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Do not let their words grieve you. Indeed, all",
+          "power belongs to Allah. He is the All-Hearing,",
+          "the All-Knowing."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Do not let their words grieve you. Indeed, all power belongs to Allah. He is the All-Hearing, the All-Knowing.",
+    "full_lines": [
+      "Do not let their words grieve you. Indeed, all",
+      "power belongs to Allah. He is the All-Hearing,",
+      "the All-Knowing."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Yunus 10:65",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Tell Allah about it tonight, before you tell anyone else.",
+    "cta_lines": [
+      "Tell Allah about it tonight, before you tell",
+      "anyone else."
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "b677e98c25dda946369dc200",
+  "created_at": "2026-11-19T05:46:38+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "010065"
+    ],
+    "done": false
+  }
+}
