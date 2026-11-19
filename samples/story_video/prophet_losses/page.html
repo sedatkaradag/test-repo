@@ -182,9 +182,11 @@ function render(t) {
   $("fl1").style.opacity = ramp(t, S.fat + 1.4, .6); $("fl2").style.opacity = ramp(t, S.fat + 2.6, .6);
   $("verse").style.opacity = win(t, S.verse, S.logo, .7);
   $("var").style.opacity = ramp(t, S.verse, .8);
-  arSp.forEach((sp, i) => { const w = D.verse.words[i]; let c = "rgba(243,192,79,.3)", sh = "none";
-    if (t >= w.s) c = "#f3c04f"; if (t >= w.s && t < w.e + .15) { c = "#fff3cf"; sh = "0 0 28px rgba(243,192,79,.9), 0 0 9px rgba(243,192,79,.9)"; }
-    sp.style.color = c; sp.style.textShadow = sh; }); $("ven").style.opacity = ramp(t, S.verse + 1.2, .8); $("vref").style.opacity = ramp(t, S.verse + 2, .8);
+  arSp.forEach((sp, i) => { const w = D.verse.words[i];   // soft: dim gold -> gold, a bright glow that swells in and fades out
+    const k1 = ramp(t, w.s - .15, .35), k2 = ramp(t, w.s - .15, .35) * (1 - ramp(t, w.e - .1, .7));
+    const r = 243 + 12 * k2, gg = 192 + 51 * k2, b = 79 + 128 * k2, al = .3 + .7 * k1;
+    sp.style.color = `rgba(${r | 0},${gg | 0},${b | 0},${al})`;
+    sp.style.textShadow = k2 > .01 ? `0 0 ${28 * k2}px rgba(243,192,79,${.9 * k2}), 0 0 9px rgba(243,192,79,${.9 * k2})` : "none"; }); $("ven").style.opacity = ramp(t, S.verse + 1.2, .8); $("vref").style.opacity = ramp(t, S.verse + 2, .8);
   $("mark").style.opacity = .55 * ramp(t, 1, .8) * out;
   $("logoBox").style.opacity = ramp(t, S.logo, .4);
   const fr = clamp(Math.floor((t - S.logo) * 30), 0, logoImgs.length - 1); logoImgs.forEach((im, i) => im.style.visibility = i === fr ? "visible" : "hidden");

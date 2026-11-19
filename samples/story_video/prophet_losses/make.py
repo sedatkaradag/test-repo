@@ -114,11 +114,17 @@ for p in people:
         t0 = time_at(p["to"])
         if p["id"] == "prophet": bloom(t0, db(-24), 60, 900, 3.2)
         else: bloom(t0, db(-30))
-# light rain until the verse, none under the recitation
-n = int((REC_T - .2) * SR); rain = bp(rng.standard_normal(n), 900, 7000) * .45
-for _ in range(int(n / SR * 55)):
-    k = rng.integers(0, n - 600); rain[k:k + 600] += bp(rng.standard_normal(600), 2200, 8000) * np.exp(-np.arange(600) / (.0025 * SR)) * rng.uniform(.3, 1)
-rain = lp(rain, 6500) * env(n, 2.5, 1.6); add(rain / np.abs(rain).max(), 0, db(-31), -.15); add(np.roll(rain, int(.37 * SR)) / np.abs(rain).max(), 0, db(-33), .25)
+# light rain until the verse, none under the recitation (owner, 19 Nov: the first try hissed like TV static,
+# so no broadband noise: separate small drops, each a short ring in its own band, over a soft low wash)
+n = int((REC_T - .2) * SR)
+def drops(rate, lo, hi, amp):
+    imp = np.zeros(n); k = rng.integers(0, n, int(n / SR * rate)); imp[k] = rng.exponential(1, len(k)) ** 1.6 * rng.choice([-1, 1], len(k))
+    return bp(imp, lo, hi) * amp
+for side in (-.45, .45):
+    rain = drops(260, 1800, 4200, 1.0) + drops(90, 900, 2000, 1.3) + drops(14, 380, 900, 1.6)
+    wash = lp(bp(rng.standard_normal(n), 250, 1400), 900) * (0.75 + 0.25 * np.sin(2 * np.pi * np.arange(n) / SR / 7.3 + side))
+    rain = lp(rain / np.abs(rain).max() + wash / np.abs(wash).max() * .22, 5200) * env(n, 3, 1.8)
+    add(rain / np.abs(rain).max(), 0, db(-29), side)
 raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(REC / "021107.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
 rec = np.frombuffer(raw, np.float32).astype(float)[:int((AL[-1][3] / 1000 + .5) * SR)]; rec *= env(len(rec), .02, .45)
 add(rec / np.abs(rec).max(), REC_T, db(-4))
