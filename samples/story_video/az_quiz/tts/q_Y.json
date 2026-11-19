@@ -1,72 +1,90 @@
 {
-"text": "Which prophet was thrown into a well by his brothers?",
+"text": "Whose people believed in time and were saved from the punishment?",
 "tokens": [
 {
-"text": "Which",
+"text": "Whose",
 "ws": " ",
+"ph": "h\u02ccu\u02d0z",
 "start": 0.25,
-"end": 0.463
+"end": 0.45
 },
 {
-"text": "prophet",
+"text": "people",
 "ws": " ",
-"start": 0.463,
-"end": 0.9
+"ph": "p\u02c8i\u02d0p\u1d4al",
+"start": 0.45,
+"end": 0.825
 },
 {
-"text": "was",
+"text": "believed",
 "ws": " ",
-"start": 0.9,
-"end": 1.137
+"ph": "b\u026al\u02c8i\u02d0vd",
+"start": 0.825,
+"end": 1.375
 },
 {
-"text": "thrown",
+"text": "in",
 "ws": " ",
-"start": 1.137,
-"end": 1.625
+"ph": "\u026an",
+"start": 1.375,
+"end": 1.538
 },
 {
-"text": "into",
+"text": "time",
 "ws": " ",
-"start": 1.625,
-"end": 1.9
+"ph": "t\u02c8Im",
+"start": 1.538,
+"end": 2.325
 },
 {
-"text": "a",
+"text": "and",
 "ws": " ",
-"start": 1.9,
-"end": 2.013
+"ph": "and",
+"start": 2.325,
+"end": 2.462
 },
 {
-"text": "well",
+"text": "were",
 "ws": " ",
-"start": 2.013,
-"end": 2.513
+"ph": "w\u025c\u02d0",
+"start": 2.462,
+"end": 2.6
 },
 {
-"text": "by",
+"text": "saved",
 "ws": " ",
-"start": 2.513,
-"end": 2.725
+"ph": "s\u02c8Avd",
+"start": 2.6,
+"end": 3.05
 },
 {
-"text": "his",
+"text": "from",
 "ws": " ",
-"start": 2.725,
-"end": 2.938
+"ph": "f\u0279\u0252m",
+"start": 3.05,
+"end": 3.212
 },
 {
-"text": "brothers",
+"text": "the",
+"ws": " ",
+"ph": "\u00f0\u0259",
+"start": 3.212,
+"end": 3.312
+},
+{
+"text": "punishment",
 "ws": "",
-"start": 2.938,
-"end": 3.8
+"ph": "p\u02c8\u028cn\u026a\u0283m\u1d4ant",
+"start": 3.312,
+"end": 4.3
 },
 {
 "text": "?",
 "ws": "",
-"start": 3.8,
-"end": 4.0
+"ph": "?",
+"start": 4.3,
+"end": 4.5
 }
 ],
-"duration": 4.1
+"duration": 4.6
 }

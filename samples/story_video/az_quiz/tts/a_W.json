@@ -4,12 +4,14 @@
 {
 "text": "Witr",
 "ws": "",
+"ph": "w\u02c8\u026at\u0259",
 "start": 0.25,
 "end": 0.9
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 0.9,
 "end": 1.2
 }

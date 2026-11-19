@@ -9,9 +9,7 @@ html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; backgro
 #stage { position: absolute; inset: 0; overflow: hidden; }
 svg#art { position: absolute; left: 0; top: 0; }
 .abs { position: absolute; left: 0; right: 0; text-align: center; }
-#pill { top: 236px; }
-#pill span { font: 500 24px Poppins; letter-spacing: 5px; color: #e8c66a; border: 2px solid rgba(232,198,106,.6); border-radius: 40px; padding: 10px 30px; }
-#title { top: 290px; font: 500 82px Garamond; color: #f4efe2; letter-spacing: .5px; }
+#title { top: 300px; font: 500 82px Garamond; color: #f4efe2; letter-spacing: .5px; }
 #center { position: absolute; left: 290px; width: 500px; top: 650px; height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; }
 #q { font: 500 54px/1.22 Garamond; color: #f4efe2; }
 #q span { opacity: 0; }
@@ -33,7 +31,6 @@ svg#art { position: absolute; left: 0; top: 0; }
   <image href="file://__REPO__/assets/reel_background.png" x="0" y="0" width="1080" height="1920"/>
   <g id="world"></g>
 </svg>
-<div class="abs" id="pill"><span>PART 1 · 25 LETTERS</span></div>
 <div class="abs" id="title">A to Z Islamic Quiz</div>
 <div id="center"><div id="q"></div><div id="qmark">?</div><div id="stamp"></div></div>
 <div class="abs" id="hint"></div>
@@ -51,8 +48,9 @@ const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
 const ramp = (t, t0, d = .3) => ease((t - t0) / d);
 function el(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
 const W = $("world"), CX = 540, CY = 900, R = 382;
-el("circle", { cx: CX, cy: CY, r: 318, fill: "rgba(255,255,255,.035)", stroke: "#c9a85a", "stroke-width": 3 }, W);
-el("circle", { cx: CX, cy: CY, r: 300, fill: "none", stroke: "rgba(201,168,90,.45)", "stroke-width": 2, "stroke-dasharray": "3 9" }, W);
+const rings = el("g", {}, W);
+el("circle", { cx: CX, cy: CY, r: 318, fill: "rgba(255,255,255,.035)", stroke: "#c9a85a", "stroke-width": 3 }, rings);
+el("circle", { cx: CX, cy: CY, r: 300, fill: "none", stroke: "rgba(201,168,90,.45)", "stroke-width": 2, "stroke-dasharray": "3 9" }, rings);
 // letters around the ring, A at the top, clockwise
 const L = D.items.map((it, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / D.items.length, x = CX + R * Math.cos(a), y = CY + R * Math.sin(a);
   const g = el("g", { transform: `translate(${x},${y})` }, W);
@@ -104,8 +102,8 @@ function render(t) {
   // end
   bub.setAttribute("opacity", t >= end ? ramp(t, end + .2, .4) * (1 - ramp(t, D.logo_t - .3, .3)) : 0);
   $("mark").style.opacity = .55 * ramp(t, .8, .6) * (1 - ramp(t, D.logo_t - .3, .3));
-  for (const id of ["pill", "title"]) $(id).style.opacity = ramp(t, 0, .5) * (1 - ramp(t, D.logo_t - .3, .3));
-  W.setAttribute("opacity", 1 - ramp(t, D.logo_t - .3, .3) * .0);
+  for (const id of ["title"]) $(id).style.opacity = ramp(t, 0, .5) * (1 - ramp(t, D.logo_t - .3, .3));
+  rings.setAttribute("opacity", 1 - ramp(t, D.logo_t - .3, .3));
   for (const o of L) o.g.setAttribute("opacity", 1 - ramp(t, D.logo_t - .3, .3));
   $("logoBox").style.opacity = ramp(t, D.logo_t, .35);
   const f = clamp(Math.floor((t - D.logo_t) * 30), 0, logoImgs.length - 1); logoImgs.forEach((im, i) => im.style.visibility = i === f ? "visible" : "hidden");

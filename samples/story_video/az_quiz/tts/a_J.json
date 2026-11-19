@@ -4,24 +4,28 @@
 {
 "text": "Jumuah",
 "ws": "",
+"ph": "\u02a4\u02c8u\u02d0mju\u02d0\u0259",
 "start": 0.275,
 "end": 0.875
 },
 {
 "text": ",",
 "ws": " ",
+"ph": ",",
 "start": 0.875,
 "end": 1.0
 },
 {
 "text": "Friday",
 "ws": "",
+"ph": "f\u0279\u02c8IdA",
 "start": 1.0,
 "end": 1.925
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 1.925,
 "end": 2.175
 }

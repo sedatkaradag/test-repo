@@ -4,42 +4,49 @@
 {
 "text": "Ibrahim",
 "ws": "",
+"ph": "\u02c8\u026ab\u0279ah\u026am",
 "start": 0.225,
 "end": 0.85
 },
 {
 "text": ",",
 "ws": " ",
+"ph": ",",
 "start": 0.85,
 "end": 0.963
 },
 {
 "text": "peace",
 "ws": " ",
+"ph": "p\u02c8i\u02d0s",
 "start": 0.963,
 "end": 1.387
 },
 {
 "text": "be",
 "ws": " ",
+"ph": "bi\u02d0",
 "start": 1.387,
 "end": 1.575
 },
 {
 "text": "upon",
 "ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
 "start": 1.575,
 "end": 1.95
 },
 {
 "text": "him",
 "ws": "",
+"ph": "h\u02cc\u026am",
 "start": 1.95,
 "end": 2.6
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 2.6,
 "end": 2.775
 }

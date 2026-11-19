@@ -1,48 +1,34 @@
 {
-"text": "A verse, or a sign.",
+"text": "The greatest verse.",
 "tokens": [
 {
-"text": "A",
+"text": "The",
 "ws": " ",
-"start": 0.25,
-"end": 0.338
+"ph": "\u00f0\u0259",
+"start": 0.225,
+"end": 0.362
+},
+{
+"text": "greatest",
+"ws": " ",
+"ph": "\u0261\u0279\u02c8At\u026ast",
+"start": 0.362,
+"end": 0.938
 },
 {
 "text": "verse",
 "ws": "",
-"start": 0.338,
-"end": 0.85
-},
-{
-"text": ",",
-"ws": " ",
-"start": 0.85,
-"end": 0.963
-},
-{
-"text": "or",
-"ws": " ",
-"start": 0.963,
-"end": 1.15
-},
-{
-"text": "a",
-"ws": " ",
-"start": 1.15,
-"end": 1.275
-},
-{
-"text": "sign",
-"ws": "",
-"start": 1.275,
-"end": 2.1
+"ph": "v\u02c8\u025c\u02d0s",
+"start": 0.938,
+"end": 1.725
 },
 {
 "text": ".",
 "ws": "",
-"start": 2.1,
-"end": 2.3
+"ph": ".",
+"start": 1.725,
+"end": 1.925
 }
 ],
-"duration": 2.4
+"duration": 2.025
 }

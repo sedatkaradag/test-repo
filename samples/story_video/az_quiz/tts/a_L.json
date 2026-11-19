@@ -4,18 +4,21 @@
 {
 "text": "Laylatul",
 "ws": " ",
+"ph": "l\u02c8Al\u0259t\u02cc\u028cl",
 "start": 0.275,
 "end": 0.925
 },
 {
 "text": "Qadr",
 "ws": "",
+"ph": "k\u02c8ad\u0259",
 "start": 0.925,
 "end": 1.775
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 1.775,
 "end": 1.975
 }

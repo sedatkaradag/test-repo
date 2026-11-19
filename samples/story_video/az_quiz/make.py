@@ -1,7 +1,8 @@
 """A to Z Islamic Quiz (owner's pick 19 Nov: English TTS version of @islamveihsan's 'A'dan Z'ye Dini Bilgiler').
 python3 make.py <out_dir> [--stills=t1,...]     narration: tts/<id>.flac + .json (Kokoro bm_george 0.95)
 
-25 letters (no X). One question per letter, read by the voice; a 2 s timer; the answer is stamped and read.
+25 letters (no X). Each letter is read, then its question; a 1.5 s timer; the answer is stamped and read.
+Difficulty (owner, 19 Nov): A-E easy, F-T medium, U-Z hard (5 / 15 / 5), field "d" in questions.json.
 Questions and answers: questions.json (basic facts, source noted per item). Sound: voice, soft ticks, stamp, no music.
 """
 import io, json, subprocess, sys
@@ -15,6 +16,7 @@ REPO = HERE.parents[2]
 OUT = Path(sys.argv[1]); OUT.mkdir(parents=True, exist_ok=True)
 STILLS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--stills=")), None)
 FPS, SR, THINK = 30, 48000, 1.5
+LETTER = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--letter=")), "l_")   # l_ = bare capital, lp_ = spelled name
 Q = json.load(open(HERE / "questions.json"))
 
 
@@ -29,7 +31,8 @@ segs, items = [], []
 t = .4
 j, tk, a, b = tts("intro"); segs.append(("intro", t, a, b)); t += b - a + .9
 for q in Q:
-    item = {"l": q["l"], "a": q["a"], "start": round(t - .35, 3)}
+    item = {"l": q["l"], "a": q["a"], "start": round(t - .15, 3)}
+    j, tk, a, b = tts(f"{LETTER}{q['l']}"); segs.append((f"{LETTER}{q['l']}", t, a, b)); t += b - a + .3
     j, tk, a, b = tts(f"q_{q['l']}"); segs.append((f"q_{q['l']}", t, a, b))
     # words of the question as shown (display text), timed by the voice's words in order
     shown = q["q"].split(" ")

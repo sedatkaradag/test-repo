@@ -1,36 +1,27 @@
 {
-"text": "The Day of Arafah.",
+"text": "The Adhan.",
 "tokens": [
 {
 "text": "The",
 "ws": " ",
-"start": 0.225,
-"end": 0.362
+"ph": "\u00f0i",
+"start": 0.25,
+"end": 0.487
 },
 {
-"text": "Day",
-"ws": " ",
-"start": 0.362,
-"end": 0.825
-},
-{
-"text": "of",
-"ws": " ",
-"start": 0.825,
-"end": 1.05
-},
-{
-"text": "Arafah",
+"text": "Adhan",
 "ws": "",
-"start": 1.05,
-"end": 2.025
+"ph": "\u0251\u02d0\u00f0\u02c8\u0251\u02d0n",
+"start": 0.487,
+"end": 1.575
 },
 {
 "text": ".",
 "ws": "",
-"start": 2.025,
-"end": 2.25
+"ph": ".",
+"start": 1.575,
+"end": 1.8
 }
 ],
-"duration": 2.35
+"duration": 1.9
 }

@@ -4,42 +4,49 @@
 {
 "text": "Nooh",
 "ws": "",
+"ph": "n\u02c8u\u02d0",
 "start": 0.275,
 "end": 0.6
 },
 {
 "text": ",",
 "ws": " ",
+"ph": ",",
 "start": 0.6,
 "end": 0.688
 },
 {
 "text": "peace",
 "ws": " ",
+"ph": "p\u02c8i\u02d0s",
 "start": 0.688,
 "end": 1.025
 },
 {
 "text": "be",
 "ws": " ",
+"ph": "bi\u02d0",
 "start": 1.025,
 "end": 1.2
 },
 {
 "text": "upon",
 "ws": " ",
+"ph": "\u0259p\u02c8\u0252n",
 "start": 1.2,
 "end": 1.575
 },
 {
 "text": "him",
 "ws": "",
+"ph": "h\u02cc\u026am",
 "start": 1.575,
 "end": 2.2
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 2.2,
 "end": 2.4
 }

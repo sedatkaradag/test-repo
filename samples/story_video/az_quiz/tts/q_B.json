@@ -1,54 +1,69 @@
 {
-"text": "Who was the first muezzin of Islam?",
+"text": "What do Muslims say before they start eating?",
 "tokens": [
 {
-"text": "Who",
+"text": "What",
 "ws": " ",
+"ph": "w\u02cc\u0252t",
 "start": 0.25,
-"end": 0.45
+"end": 0.425
 },
 {
-"text": "was",
+"text": "do",
 "ws": " ",
-"start": 0.45,
-"end": 0.65
+"ph": "d\u02c8u\u02d0",
+"start": 0.425,
+"end": 0.625
 },
 {
-"text": "the",
+"text": "Muslims",
 "ws": " ",
-"start": 0.65,
-"end": 0.812
+"ph": "m\u02c8\u028azl\u026amz",
+"start": 0.625,
+"end": 1.262
 },
 {
-"text": "first",
+"text": "say",
 "ws": " ",
-"start": 0.812,
-"end": 1.325
+"ph": "s\u02c8A",
+"start": 1.262,
+"end": 1.7
 },
 {
-"text": "muezzin",
+"text": "before",
 "ws": " ",
-"start": 1.325,
+"ph": "b\u026af\u02c8\u0254\u02d0",
+"start": 1.7,
 "end": 2.1
 },
 {
-"text": "of",
+"text": "they",
 "ws": " ",
+"ph": "\u00f0A",
 "start": 2.1,
-"end": 2.288
+"end": 2.312
 },
 {
-"text": "Islam",
+"text": "start",
+"ws": " ",
+"ph": "st\u02c8\u0251\u02d0t",
+"start": 2.312,
+"end": 2.712
+},
+{
+"text": "eating",
 "ws": "",
-"start": 2.288,
-"end": 3.25
+"ph": "\u02c8i\u02d0t\u026a\u014b",
+"start": 2.712,
+"end": 3.55
 },
 {
 "text": "?",
 "ws": "",
-"start": 3.25,
-"end": 3.45
+"ph": "?",
+"start": 3.55,
+"end": 3.725
 }
 ],
-"duration": 3.55
+"duration": 3.825
 }

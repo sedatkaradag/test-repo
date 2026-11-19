@@ -4,12 +4,14 @@
 {
 "text": "Al-Fatiha",
 "ws": "",
+"ph": "\u02c8alf\u02c8at\u026ah\u0259",
 "start": 0.25,
 "end": 1.6
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 1.6,
 "end": 1.825
 }

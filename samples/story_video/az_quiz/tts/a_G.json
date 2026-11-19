@@ -4,24 +4,28 @@
 {
 "text": "Gabriel",
 "ws": "",
+"ph": "\u0261\u02c8Ab\u0279\u026a\u0259l",
 "start": 0.25,
 "end": 0.95
 },
 {
 "text": ",",
 "ws": " ",
+"ph": ",",
 "start": 0.95,
 "end": 1.1
 },
 {
 "text": "Jibreel",
 "ws": "",
+"ph": "\u02a4\u02c8\u026ab\u0279i\u02d0l",
 "start": 1.1,
 "end": 2.05
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 2.05,
 "end": 2.25
 }

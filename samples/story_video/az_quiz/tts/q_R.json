@@ -1,48 +1,69 @@
 {
-"text": "In which month is fasting obligatory?",
+"text": "In which month was the Quran first revealed?",
 "tokens": [
 {
 "text": "In",
 "ws": " ",
+"ph": "\u026an",
 "start": 0.25,
 "end": 0.375
 },
 {
 "text": "which",
 "ws": " ",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.375,
 "end": 0.637
 },
 {
 "text": "month",
 "ws": " ",
+"ph": "m\u02c8\u028cn\u03b8",
 "start": 0.637,
-"end": 1.25
+"end": 1.275
 },
 {
-"text": "is",
+"text": "was",
 "ws": " ",
-"start": 1.25,
-"end": 1.5
+"ph": "w\u0252z",
+"start": 1.275,
+"end": 1.55
 },
 {
-"text": "fasting",
+"text": "the",
 "ws": " ",
-"start": 1.5,
-"end": 2.163
+"ph": "\u00f0\u0259",
+"start": 1.55,
+"end": 1.688
 },
 {
-"text": "obligatory",
+"text": "Quran",
+"ws": " ",
+"ph": "k\u028a\u0279\u02c8\u0251\u02d0n",
+"start": 1.688,
+"end": 2.275
+},
+{
+"text": "first",
+"ws": " ",
+"ph": "f\u02c8\u025c\u02d0st",
+"start": 2.275,
+"end": 2.65
+},
+{
+"text": "revealed",
 "ws": "",
-"start": 2.163,
-"end": 3.35
+"ph": "\u0279\u026av\u02c8i\u02d0ld",
+"start": 2.65,
+"end": 3.55
 },
 {
 "text": "?",
 "ws": "",
-"start": 3.35,
-"end": 3.525
+"ph": "?",
+"start": 3.55,
+"end": 3.75
 }
 ],
-"duration": 3.625
+"duration": 3.85
 }

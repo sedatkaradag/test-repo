@@ -4,24 +4,28 @@
 {
 "text": "Prayer",
 "ws": "",
+"ph": "p\u0279\u02c8A\u0259",
 "start": 0.225,
 "end": 0.65
 },
 {
 "text": ",",
 "ws": " ",
+"ph": ",",
 "start": 0.65,
 "end": 0.75
 },
 {
 "text": "salah",
 "ws": "",
+"ph": "s\u02c8al\u0259",
 "start": 0.75,
 "end": 1.6
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 1.6,
 "end": 1.825
 }

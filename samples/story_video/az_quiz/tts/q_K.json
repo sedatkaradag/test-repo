@@ -1,66 +1,76 @@
 {
-"text": "What is the House of Allah in Makkah called?",
+"text": "Which House did Ibrahim and Ismail raise in Makkah?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.4
-},
-{
-"text": "is",
-"ws": " ",
-"start": 0.4,
-"end": 0.55
-},
-{
-"text": "the",
-"ws": " ",
-"start": 0.55,
-"end": 0.688
+"end": 0.425
 },
 {
 "text": "House",
 "ws": " ",
-"start": 0.688,
-"end": 1.075
+"ph": "h\u02c8Ws",
+"start": 0.425,
+"end": 0.8
 },
 {
-"text": "of",
+"text": "did",
 "ws": " ",
-"start": 1.075,
-"end": 1.25
+"ph": "d\u02c8\u026ad",
+"start": 0.8,
+"end": 1.012
 },
 {
-"text": "Allah",
+"text": "Ibrahim",
 "ws": " ",
-"start": 1.25,
-"end": 1.875
+"ph": "\u02c8\u026ab\u0279ah\u026am",
+"start": 1.012,
+"end": 1.9
+},
+{
+"text": "and",
+"ws": " ",
+"ph": "and",
+"start": 1.9,
+"end": 2.087
+},
+{
+"text": "Ismail",
+"ws": " ",
+"ph": "\u02c8\u026asmIl",
+"start": 2.087,
+"end": 2.487
+},
+{
+"text": "raise",
+"ws": " ",
+"ph": "\u0279\u02c8Az",
+"start": 2.487,
+"end": 3.075
 },
 {
 "text": "in",
 "ws": " ",
-"start": 1.875,
-"end": 2.05
+"ph": "\u026an",
+"start": 3.075,
+"end": 3.25
 },
 {
 "text": "Makkah",
-"ws": " ",
-"start": 2.05,
-"end": 2.538
-},
-{
-"text": "called",
 "ws": "",
-"start": 2.538,
-"end": 3.275
+"ph": "m\u02c8ak\u0251\u02d0",
+"start": 3.25,
+"end": 4.15
 },
 {
 "text": "?",
 "ws": "",
-"start": 3.275,
-"end": 3.475
+"ph": "?",
+"start": 4.15,
+"end": 4.325
 }
 ],
-"duration": 3.575
+"duration": 4.425
 }

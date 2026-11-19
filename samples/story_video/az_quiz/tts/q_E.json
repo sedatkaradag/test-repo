@@ -4,48 +4,56 @@
 {
 "text": "Which",
 "ws": " ",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
 "end": 0.438
 },
 {
 "text": "celebration",
 "ws": " ",
+"ph": "s\u02cc\u025bl\u026ab\u0279\u02c8A\u0283\u1d4an",
 "start": 0.438,
 "end": 1.6
 },
 {
 "text": "marks",
 "ws": " ",
+"ph": "m\u02c8\u0251\u02d0ks",
 "start": 1.6,
 "end": 2.025
 },
 {
 "text": "the",
 "ws": " ",
+"ph": "\u00f0i",
 "start": 2.025,
 "end": 2.188
 },
 {
 "text": "end",
 "ws": " ",
+"ph": "\u02c8\u025bnd",
 "start": 2.188,
 "end": 2.413
 },
 {
 "text": "of",
 "ws": " ",
+"ph": "\u0252v",
 "start": 2.413,
 "end": 2.525
 },
 {
 "text": "Ramadan",
 "ws": "",
+"ph": "\u0279\u02c8am\u0259dan",
 "start": 2.525,
 "end": 3.5
 },
 {
 "text": "?",
 "ws": "",
+"ph": "?",
 "start": 3.5,
 "end": 3.7
 }

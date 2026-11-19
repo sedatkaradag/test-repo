@@ -1,0 +1,20 @@
+{
+"text": "Zed.",
+"tokens": [
+{
+"text": "Zed",
+"ws": "",
+"ph": "z\u02c8\u025bd",
+"start": 0.275,
+"end": 0.875
+},
+{
+"text": ".",
+"ws": "",
+"ph": ".",
+"start": 0.875,
+"end": 1.1
+}
+],
+"duration": 1.2
+}

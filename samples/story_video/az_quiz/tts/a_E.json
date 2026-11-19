@@ -4,18 +4,21 @@
 {
 "text": "Eid",
 "ws": " ",
+"ph": "\u02c8i\u02d0d",
 "start": 0.25,
 "end": 0.675
 },
 {
 "text": "al-Fitr",
 "ws": "",
+"ph": "\u02c8alf\u02c8\u026at\u0259",
 "start": 0.675,
 "end": 1.8
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 1.8,
 "end": 2.025
 }

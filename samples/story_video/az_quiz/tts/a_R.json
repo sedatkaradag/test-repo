@@ -4,12 +4,14 @@
 {
 "text": "Ramadan",
 "ws": "",
+"ph": "\u0279\u02c8am\u0259dan",
 "start": 0.275,
 "end": 1.3
 },
 {
 "text": ".",
 "ws": "",
+"ph": ".",
 "start": 1.3,
 "end": 1.525
 }

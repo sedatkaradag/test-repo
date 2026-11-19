@@ -1,48 +1,76 @@
 {
-"text": "Yoosuf, peace be upon him.",
+"text": "The people of Yunus, peace be upon him.",
 "tokens": [
 {
-"text": "Yoosuf",
+"text": "The",
+"ws": " ",
+"ph": "\u00f0\u0259",
+"start": 0.225,
+"end": 0.325
+},
+{
+"text": "people",
+"ws": " ",
+"ph": "p\u02c8i\u02d0p\u1d4al",
+"start": 0.325,
+"end": 0.7
+},
+{
+"text": "of",
+"ws": " ",
+"ph": "\u0252v",
+"start": 0.7,
+"end": 0.863
+},
+{
+"text": "Yunus",
 "ws": "",
-"start": 0.275,
-"end": 0.8
+"ph": "j\u02c8u\u02d0n\u0259s",
+"start": 0.863,
+"end": 1.5
 },
 {
 "text": ",",
 "ws": " ",
-"start": 0.8,
-"end": 0.887
+"ph": ",",
+"start": 1.5,
+"end": 1.613
 },
 {
 "text": "peace",
 "ws": " ",
-"start": 0.887,
-"end": 1.25
+"ph": "p\u02c8i\u02d0s",
+"start": 1.613,
+"end": 1.975
 },
 {
 "text": "be",
 "ws": " ",
-"start": 1.25,
-"end": 1.425
+"ph": "bi\u02d0",
+"start": 1.975,
+"end": 2.15
 },
 {
 "text": "upon",
 "ws": " ",
-"start": 1.425,
-"end": 1.8
+"ph": "\u0259p\u02c8\u0252n",
+"start": 2.15,
+"end": 2.525
 },
 {
 "text": "him",
 "ws": "",
-"start": 1.8,
-"end": 2.425
+"ph": "h\u02cc\u026am",
+"start": 2.525,
+"end": 3.175
 },
 {
 "text": ".",
 "ws": "",
-"start": 2.425,
-"end": 2.6
+"ph": ".",
+"start": 3.175,
+"end": 3.35
 }
 ],
-"duration": 2.7
+"duration": 3.45
 }

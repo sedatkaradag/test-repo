@@ -1,66 +1,69 @@
 {
-"text": "What is the Night of Decree called in Arabic?",
+"text": "Which night is better than a thousand months?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.4
+"end": 0.512
+},
+{
+"text": "night",
+"ws": " ",
+"ph": "n\u02c8It",
+"start": 0.512,
+"end": 0.887
 },
 {
 "text": "is",
 "ws": " ",
-"start": 0.4,
-"end": 0.575
+"ph": "\u026az",
+"start": 0.887,
+"end": 1.062
 },
 {
-"text": "the",
+"text": "better",
 "ws": " ",
-"start": 0.575,
-"end": 0.713
+"ph": "b\u02c8\u025bt\u0259",
+"start": 1.062,
+"end": 1.75
 },
 {
-"text": "Night",
+"text": "than",
 "ws": " ",
-"start": 0.713,
-"end": 1.025
+"ph": "\u00f0\u0259n",
+"start": 1.75,
+"end": 1.9
 },
 {
-"text": "of",
+"text": "a",
 "ws": " ",
-"start": 1.025,
-"end": 1.175
+"ph": "\u0250",
+"start": 1.9,
+"end": 2.038
 },
 {
-"text": "Decree",
+"text": "thousand",
 "ws": " ",
-"start": 1.175,
-"end": 1.95
+"ph": "\u03b8\u02c8Wz\u1d4and",
+"start": 2.038,
+"end": 2.638
 },
 {
-"text": "called",
-"ws": " ",
-"start": 1.95,
-"end": 2.475
-},
-{
-"text": "in",
-"ws": " ",
-"start": 2.475,
-"end": 2.688
-},
-{
-"text": "Arabic",
+"text": "months",
 "ws": "",
-"start": 2.688,
-"end": 3.5
+"ph": "m\u02c8\u028cn\u03b8s",
+"start": 2.638,
+"end": 3.425
 },
 {
 "text": "?",
 "ws": "",
-"start": 3.5,
-"end": 3.725
+"ph": "?",
+"start": 3.425,
+"end": 3.625
 }
 ],
-"duration": 3.825
+"duration": 3.725
 }

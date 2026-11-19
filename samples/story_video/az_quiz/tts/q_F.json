@@ -1,60 +1,76 @@
 {
-"text": "What is the first surah of the Quran?",
+"text": "Which surah is recited in every rak'ah of prayer?",
 "tokens": [
 {
-"text": "What",
+"text": "Which",
 "ws": " ",
+"ph": "w\u02cc\u026a\u02a7",
 "start": 0.25,
-"end": 0.4
-},
-{
-"text": "is",
-"ws": " ",
-"start": 0.4,
-"end": 0.575
-},
-{
-"text": "the",
-"ws": " ",
-"start": 0.575,
-"end": 0.725
-},
-{
-"text": "first",
-"ws": " ",
-"start": 0.725,
-"end": 1.163
+"end": 0.45
 },
 {
 "text": "surah",
 "ws": " ",
-"start": 1.163,
-"end": 1.712
+"ph": "s\u02c8\u028a\u0259\u0279\u0259",
+"start": 0.45,
+"end": 0.963
+},
+{
+"text": "is",
+"ws": " ",
+"ph": "\u026az",
+"start": 0.963,
+"end": 1.125
+},
+{
+"text": "recited",
+"ws": " ",
+"ph": "\u0279\u026as\u02c8It\u026ad",
+"start": 1.125,
+"end": 2.0
+},
+{
+"text": "in",
+"ws": " ",
+"ph": "\u026an",
+"start": 2.0,
+"end": 2.225
+},
+{
+"text": "every",
+"ws": " ",
+"ph": "\u02c8\u025bv\u0259\u0279i",
+"start": 2.225,
+"end": 2.612
+},
+{
+"text": "rak'ah",
+"ws": " ",
+"ph": "\u0279\u02c8ak\u0259",
+"start": 2.612,
+"end": 2.975
 },
 {
 "text": "of",
 "ws": " ",
-"start": 1.712,
-"end": 1.837
+"ph": "\u0252v",
+"start": 2.975,
+"end": 3.138
 },
 {
-"text": "the",
-"ws": " ",
-"start": 1.837,
-"end": 1.962
-},
-{
-"text": "Quran",
+"text": "prayer",
 "ws": "",
-"start": 1.962,
-"end": 2.9
+"ph": "p\u0279\u02c8A\u0259",
+"start": 3.138,
+"end": 3.975
 },
 {
 "text": "?",
 "ws": "",
-"start": 2.9,
-"end": 3.1
+"ph": "?",
+"start": 3.975,
+"end": 4.175
 }
 ],
-"duration": 3.2
+"duration": 4.275
 }

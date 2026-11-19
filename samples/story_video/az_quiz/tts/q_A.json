@@ -1,60 +1,62 @@
 {
-"text": "What is the day before Eid al-Adha called?",
+"text": "What is the call to prayer called?",
 "tokens": [
 {
 "text": "What",
 "ws": " ",
+"ph": "w\u02cc\u0252t",
 "start": 0.25,
 "end": 0.4
 },
 {
 "text": "is",
 "ws": " ",
+"ph": "\u026az",
 "start": 0.4,
 "end": 0.575
 },
 {
 "text": "the",
 "ws": " ",
+"ph": "\u00f0\u0259",
 "start": 0.575,
 "end": 0.713
 },
 {
-"text": "day",
+"text": "call",
 "ws": " ",
+"ph": "k\u02c8\u0254\u02d0l",
 "start": 0.713,
-"end": 1.175
+"end": 1.288
 },
 {
-"text": "before",
+"text": "to",
 "ws": " ",
-"start": 1.175,
-"end": 1.613
+"ph": "t\u0259",
+"start": 1.288,
+"end": 1.438
 },
 {
-"text": "Eid",
+"text": "prayer",
 "ws": " ",
-"start": 1.613,
-"end": 1.938
-},
-{
-"text": "al-Adha",
-"ws": " ",
-"start": 1.938,
-"end": 2.438
+"ph": "p\u0279\u02c8A\u0259",
+"start": 1.438,
+"end": 1.887
 },
 {
 "text": "called",
 "ws": "",
-"start": 2.438,
-"end": 3.175
+"ph": "k\u02c8\u0254\u02d0ld",
+"start": 1.887,
+"end": 2.625
 },
 {
 "text": "?",
 "ws": "",
-"start": 3.175,
-"end": 3.375
+"ph": "?",
+"start": 2.625,
+"end": 2.825
 }
 ],
-"duration": 3.475
+"duration": 2.925
 }

@@ -4,60 +4,70 @@
 {
 "text": "What",
 "ws": " ",
+"ph": "w\u02cc\u0252t",
 "start": 0.225,
 "end": 0.338
 },
 {
 "text": "do",
 "ws": " ",
+"ph": "d\u02c8u\u02d0",
 "start": 0.338,
 "end": 0.463
 },
 {
 "text": "we",
 "ws": " ",
+"ph": "wi\u02d0",
 "start": 0.463,
 "end": 0.575
 },
 {
 "text": "call",
 "ws": " ",
+"ph": "k\u02c8\u0254\u02d0l",
 "start": 0.575,
 "end": 1.175
 },
 {
 "text": "a",
 "ws": " ",
+"ph": "\u0250",
 "start": 1.175,
 "end": 1.312
 },
 {
 "text": "personal",
 "ws": " ",
+"ph": "p\u02c8\u025c\u02d0s\u0259n\u1d4al",
 "start": 1.312,
 "end": 1.837
 },
 {
 "text": "supplication",
 "ws": " ",
+"ph": "s\u02cc\u028cpl\u026ak\u02c8A\u0283\u1d4an",
 "start": 1.837,
 "end": 2.663
 },
 {
 "text": "to",
 "ws": " ",
+"ph": "t\u028a",
 "start": 2.663,
 "end": 2.837
 },
 {
 "text": "Allah",
 "ws": "",
+"ph": "\u02c8al\u0259",
 "start": 2.837,
 "end": 3.575
 },
 {
 "text": "?",
 "ws": "",
+"ph": "?",
 "start": 3.575,
 "end": 3.775
 }

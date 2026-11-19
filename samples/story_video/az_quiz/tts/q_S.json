@@ -4,72 +4,84 @@
 {
 "text": "What",
 "ws": " ",
+"ph": "w\u02cc\u0252t",
 "start": 0.25,
 "end": 0.4
 },
 {
 "text": "is",
 "ws": " ",
+"ph": "\u026az",
 "start": 0.4,
 "end": 0.55
 },
 {
 "text": "the",
 "ws": " ",
+"ph": "\u00f0\u0259",
 "start": 0.55,
 "end": 0.688
 },
 {
 "text": "meal",
 "ws": " ",
+"ph": "m\u02c8i\u02d0l",
 "start": 0.688,
 "end": 1.175
 },
 {
 "text": "before",
 "ws": " ",
+"ph": "b\u026af\u02c8\u0254\u02d0",
 "start": 1.175,
 "end": 1.587
 },
 {
 "text": "dawn",
 "ws": " ",
+"ph": "d\u02c8\u0254\u02d0n",
 "start": 1.587,
 "end": 2.15
 },
 {
 "text": "on",
 "ws": " ",
+"ph": "\u02cc\u0252n",
 "start": 2.15,
 "end": 2.263
 },
 {
 "text": "a",
 "ws": " ",
+"ph": "\u0250",
 "start": 2.263,
 "end": 2.375
 },
 {
 "text": "fasting",
 "ws": " ",
+"ph": "f\u02c8ast\u026a\u014b",
 "start": 2.375,
 "end": 2.9
 },
 {
 "text": "day",
 "ws": " ",
+"ph": "d\u02c8A",
 "start": 2.9,
 "end": 3.212
 },
 {
 "text": "called",
 "ws": "",
+"ph": "k\u02c8\u0254\u02d0ld",
 "start": 3.212,
 "end": 3.95
 },
 {
 "text": "?",
 "ws": "",
+"ph": "?",
 "start": 3.95,
 "end": 4.15
 }

@@ -1,36 +1,20 @@
 {
-"text": "The Cave of Hira.",
+"text": "Charity.",
 "tokens": [
 {
-"text": "The",
-"ws": " ",
-"start": 0.225,
-"end": 0.362
-},
-{
-"text": "Cave",
-"ws": " ",
-"start": 0.362,
-"end": 0.938
-},
-{
-"text": "of",
-"ws": " ",
-"start": 0.938,
-"end": 1.113
-},
-{
-"text": "Hira",
+"text": "Charity",
 "ws": "",
-"start": 1.113,
-"end": 1.925
+"ph": "\u02a7\u02c8a\u0279\u026ati",
+"start": 0.25,
+"end": 1.2
 },
 {
 "text": ".",
 "ws": "",
-"start": 1.925,
-"end": 2.15
+"ph": ".",
+"start": 1.2,
+"end": 1.45
 }
 ],
-"duration": 2.25
+"duration": 1.55
 }
