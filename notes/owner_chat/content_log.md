@@ -40,6 +40,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 **Animasyon · ortam sesi**
 - 13 Kas, kâri yok (ortam sesi): Sahih al-Bukhari 1117 ("Pray anyway") — paylaşıldı.
 - 18 Kas, kâri yok (ortam sesi): At-Talaq 65:3 · An-Nisa 4:32 · Ibrahim 14:7 · Al-Baqarah 2:216 · Hud 11:6 (rızkı engelleyen 5 alışkanlık) — paylaşıldı.
+- 19 Kas, Alafasy (tilavet) + ortam sesi: Al-Anbiya 21:107 (Peygamberimizin ﷺ 50 yaşından önceki kayıpları, hayat çizgileri) — paylaşıldı.
 
 **Animasyon · İngilizce TTS**
 - 14 Kas, Husary (tilavet) + TTS bm_george: Al-Kahf 18:18 (sağa sola çevrilme, köpek) — paylaşıldı.
@@ -77,6 +78,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-17 09:20 | Guess the Surah (90,3 sn) | 49:10, 106:3-4, 19:30, 61:2 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-18 19:08 | Animasyon · ortam sesi (57 sn) | 65:3, 4:32, 14:7, 2:216, 11:6 | Innocent habits that might be blocking your rizq | — | — | — | — | — | — | — | — |
 | 2026-11-19 10:04 | Animasyon · İngilizce TTS anlatım (147,7 sn) | A to Z Islamic Quiz Part 1 (13 harf) · ayet yok | A to Z Islamic Quiz, Part 1: how many can you get? | — | — | — | — | — | — | — | — |
+| 2026-11-19 13:24 | Animasyon · ortam sesi + tilavet (79,6 sn) | Al-Anbiya 21:107 · Alafasy | Prophet Muhammad ﷺ lost so much before he even turned 50. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -288,4 +290,19 @@ A to Z Islamic Quiz, Part 1: how many can you get?
 Comment your score out of 13. Part 2 with the other 12 letters is coming next, follow so you don't miss it.
 
 #islam #muslim #islamicquiz #quran #deen #islamicreminder #muslimquiz #learnislam
+```
+
+**Prophet Muhammad ﷺ lost so much before 50, 19 Kasım** (sahibinin panelde onayladığı caption; 13:24 UTC'de paylaşıldı)
+```
+Prophet Muhammad ﷺ lost so much before he even turned 50.
+
+He never saw his father. He lost his mother at six and his grandfather at eight. His sons al-Qasim and Abdullah died as little children. Around the age of fifty he lost Khadijah and his uncle Abu Talib in the same year, the Year of Sorrow.
+
+Later he buried his daughters Ruqayyah, Zaynab and Umm Kulthum, and his son Ibrahim. Of his seven children only Fatimah outlived him, and only by six months.
+
+"We have not sent you [O Prophet] except as a mercy to the worlds" (Al-Anbiyaa 21:107)
+
+Which of these did you not know before? Tell us in the comments.
+
+#prophetmuhammad #seerah #sunnah #islamicreminder #muslim #islam #sabr
 ```
