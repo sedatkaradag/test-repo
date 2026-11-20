@@ -50,6 +50,9 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 **Ayet Reels · kelime kelime**
 - 16 Kas, Alafasy: Az-Zukhruf 43:68-70 (eşlerinizle birlikte cennete) — paylaşıldı.
 
+**Animasyon · tilavet**
+- 20 Kas, Alafasy: Al-Qiyamah 75:26-40 (hayatın son anları ve sonrası, ayet ayet) — paylaşıldı.
+
 ## Ayrıntılı kayıt
 
 İstatistikler `history/insights.json` → `manual_posts`, 2026-11-11 02:16 UTC okuması (yaş = o ana kadar).
@@ -81,6 +84,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-19 10:04 | Animasyon · İngilizce TTS anlatım (147,7 sn) | A to Z Islamic Quiz Part 1 (13 harf) · ayet yok | A to Z Islamic Quiz, Part 1: how many can you get? | — | — | — | — | — | — | — | — |
 | 2026-11-19 13:24 | Animasyon · ortam sesi + tilavet (79,6 sn) | Al-Anbiya 21:107 · Alafasy | Prophet Muhammad ﷺ lost so much before he even turned 50. | — | — | — | — | — | — | — | — |
 | 2026-11-20 11:13 | Animasyon · İngilizce TTS anlatım (123,6 sn) | A to Z Islamic Quiz Part 2 (12 harf) · ayet yok | A to Z Islamic Quiz, Part 2: the other 12 letters. | — | — | — | — | — | — | — | — |
+| 2026-11-20 13:30 | Animasyon · tilavet (89,3 sn) | Al-Qiyamah 75:26-40 · Alafasy | "Does man think that he will be left neglected" (Al-Qiyaama 75:36) | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -318,4 +322,15 @@ A to Z Islamic Quiz, Part 2: the other 12 letters.
 Comment your score out of 12, and add your Part 1 score for the full A to Z. Missed Part 1? It's on our page.
 
 #islam #muslim #islamicquiz #quran #deen #islamicreminder #muslimquiz #learnislam
+```
+
+**Al-Qiyamah 75:26-40, 20 Kasım** (sahibinin panelde onayladığı caption; 13:30 UTC'de paylaşıldı)
+```
+"Does man think that he will be left neglected" (Al-Qiyaama 75:36)
+
+The last moments of a life, and what comes after: Surah Al-Qiyamah 75:26-40, recited by Mishary Alafasy.
+
+Which verse stayed with you? Tell us in the comments, and send this to someone who needs it today.
+
+#quran #quranrecitation #alafasy #qiyamah #islamicreminder #muslim #deen
 ```
