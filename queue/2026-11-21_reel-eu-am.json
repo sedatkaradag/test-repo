@@ -1,0 +1,94 @@
+{
+  "entry_id": "quran:16:128",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nahl 16:128",
+  "slot": "2026-11-21_reel-eu-am",
+  "publish_at": "2026-11-21T07:10:43Z",
+  "local_slot": "2026-11-21 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-21_reel-eu-am.jpg",
+  "video": "queue/2026-11-21_reel-eu-am.mp4",
+  "cover": "queue/2026-11-21_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Who Allah is with, in one short verse\n\nAllah says He is with those who fear Him and those who do good. Carry both into your Saturday: awareness of Him, and one good deed for someone.\n\nSurah An-Nahl 16:128\n\nName one good deed you will do before noon.\n\n#allahiswithyou #taqwa #ihsan #surahnahl\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Indeed, Allah is with those who fear Him and those who do good (Surah An-Nahl 16:128)",
+  "theme": "Allah's company / with those who fear Him and do good",
+  "review": "Independent reviewer approved: integrity ok, Arabic word/mark checked, English source, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:16:128",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Who Allah is with, in one short verse",
+    "hook_lines": [
+      "Who Allah is with, in one",
+      "short verse"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "016128",
+        "lines": [
+          "إِنَّ ٱللَّهَ مَعَ ٱلَّذِينَ ٱتَّقَواْ وَّٱلَّذِينَ هُم",
+          "مُّحۡسِنُونَ ١٢٨"
+        ],
+        "y": 724.0,
+        "meal": [
+          "Indeed, Allah is with those who fear Him and",
+          "those who do good."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1066.0,
+    "full": "Indeed, Allah is with those who fear Him and those who do good.",
+    "full_lines": [
+      "Indeed, Allah is with those who fear Him and",
+      "those who do good."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nahl 16:128",
+    "ref_y": 1216.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name one good deed you will do before noon.",
+    "cta_lines": [
+      "Name one good deed you will do before noon."
+    ],
+    "cta_size": 48,
+    "line_y": 1274.0,
+    "handle_y": 1354.0,
+    "handle_size": 27
+  },
+  "layout_hash": "7c5a93428107a5636fcf4649",
+  "created_at": "2026-11-20T05:42:17+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "016128"
+    ],
+    "done": false
+  }
+}

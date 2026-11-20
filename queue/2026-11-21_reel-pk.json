@@ -1,0 +1,134 @@
+{
+  "entry_id": "quran:59:23",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hashr 59:23",
+  "slot": "2026-11-21_reel-pk",
+  "publish_at": "2026-11-21T15:29:22Z",
+  "local_slot": "2026-11-21 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-21_reel-pk.jpg",
+  "video": "queue/2026-11-21_reel-pk.mp4",
+  "cover": "queue/2026-11-21_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Eight of Allah's names in one verse\n\nHe is the Granter of Security and the Watcher over all. Whatever kept you on edge today, call on Him by these names tonight.\n\nSurah Al-Hashr 59:23\n\nWhich of these names will you call Him by tonight?\n\n#namesofallah #asmaulhusna #surahhashr #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "He is Allah; none has the right to be worshiped except Him, the Sovereign, the Most Holy, the Most Perfect, the Granter of Security, the Watcher over all, the All-Mighty, the Compeller, the Supreme. Glory be to Allah far above what they associate with Him (Surah Al-Hashr 59:23)",
+  "theme": "Allah's names / the Granter of Security, the Watcher over all",
+  "review": "Independent reviewer approved: integrity ok, Arabic word/mark checked, 8 names verified, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:59:23",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Eight of Allah's names in one verse",
+    "hook_lines": [
+      "Eight of Allah's names in",
+      "one verse"
+    ],
+    "hook_size": 82,
+    "arabic_size": 70,
+    "verses": [
+      {
+        "ayah": "059023",
+        "lines": [
+          "هُوَ ٱللَّهُ ٱلَّذِي لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡمَلِكُ ٱلۡقُدُّوسُ",
+          "ٱلسَّلَٰمُ ٱلۡمُؤۡمِنُ ٱلۡمُهَيۡمِنُ ٱلۡعَزِيزُ ٱلۡجَبَّارُ",
+          "ٱلۡمُتَكَبِّرُۚ سُبۡحَٰنَ ٱللَّهِ عَمَّا يُشۡرِكُونَ ٢٣"
+        ],
+        "y": 600.4,
+        "meal": [
+          "He is Allah; none has the right to be worshiped except",
+          "Him, the Sovereign, the Most Holy, the Most Perfect,",
+          "the Granter of Security, the Watcher over all, the",
+          "All-Mighty, the Compeller, the Supreme. Glory be to",
+          "Allah far above what they associate with Him."
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 1038.4,
+    "full": "He is Allah; none has the right to be worshiped except Him, the Sovereign, the Most Holy, the Most Perfect, the Granter of Security, the Watcher over all, the All-Mighty, the Compeller, the Supreme. Glory be to Allah far above what they associate with Him.",
+    "full_lines": [
+      "He is Allah; none has the right to be worshiped except",
+      "Him, the Sovereign, the Most Holy, the Most Perfect,",
+      "the Granter of Security, the Watcher over all, the",
+      "All-Mighty, the Compeller, the Supreme. Glory be to",
+      "Allah far above what they associate with Him."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Hashr 59:23",
+    "ref_y": 1347.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which of these names will you call Him by tonight?",
+    "cta_lines": [
+      "Which of these names will you call Him by",
+      "tonight?"
+    ],
+    "cta_size": 44,
+    "line_y": 1405.4,
+    "handle_y": 1539.4,
+    "handle_size": 27
+  },
+  "layout_hash": "418665891c554edd654d5d0a",
+  "created_at": "2026-11-20T05:42:57+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "059023"
+    ],
+    "done": false
+  }
+}

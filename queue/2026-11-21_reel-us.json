@@ -1,0 +1,124 @@
+{
+  "entry_id": "quran:42:36",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ash-Shura 42:36",
+  "slot": "2026-11-21_reel-us",
+  "publish_at": "2026-11-22T01:33:11Z",
+  "local_slot": "2026-11-21 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-21_reel-us.jpg",
+  "video": "queue/2026-11-21_reel-us.mp4",
+  "cover": "queue/2026-11-21_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Trust in Allah: what He has is more lasting\n\nWhatever we are given here is a short enjoyment of this world. Allah says what is with Him is better and more lasting for those who believe and put their trust in their Lord. Let that settle your heart tonight.\n\nSurah Ash-Shura 42:36\n\nSend this to someone who is tired of chasing this world.\n\n#tawakkul #trustinallah #surahshura #quranreels\n\nRecitation: Mohamed Siddiq Al-Minshawi",
+  "alt_text": "Whatever you have been given is but a short enjoyment of the life of this world, but what is with Allah is better and more lasting for those who believe and put their trust in their Lord (Surah Ash-Shura 42:36)",
+  "theme": "trust in Allah / what is with Allah is more lasting",
+  "review": "Independent reviewer approved: integrity ok, Arabic word/mark checked, English source, caption ok",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:42:36",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Trust in Allah: what He has is more lasting",
+    "hook_lines": [
+      "Trust in Allah: what He has",
+      "is more lasting"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "042036",
+        "lines": [
+          "فَمَآ أُوتِيتُم مِّن شَيۡءٖ فَمَتَٰعُ ٱلۡحَيَوٰةِ ٱلدُّنۡيَاۚ",
+          "وَمَا عِندَ ٱللَّهِ خَيۡرٞ وَأَبۡقَىٰ لِلَّذِينَ ءَامَنُواْ",
+          "وَعَلَىٰ رَبِّهِمۡ يَتَوَكَّلُونَ ٣٦"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Whatever you have been given is but a short",
+          "enjoyment of the life of this world, but what is",
+          "with Allah is better and more lasting for those",
+          "who believe and put their trust in their Lord."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Whatever you have been given is but a short enjoyment of the life of this world, but what is with Allah is better and more lasting for those who believe and put their trust in their Lord.",
+    "full_lines": [
+      "Whatever you have been given is but a short",
+      "enjoyment of the life of this world, but what is",
+      "with Allah is better and more lasting for those",
+      "who believe and put their trust in their Lord."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Ash-Shura 42:36",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who is tired of chasing this world.",
+    "cta_lines": [
+      "Send this to someone who is tired of chasing",
+      "this world."
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "d2c348bd55caa991aea60a12",
+  "created_at": "2026-11-20T05:44:05+00:00",
+  "audio": {
+    "reciter": "Minshawy_Murattal_128kbps",
+    "reciter_name": "Mohamed Siddiq Al-Minshawi",
+    "ayahs": [
+      "042036"
+    ],
+    "done": false
+  }
+}
