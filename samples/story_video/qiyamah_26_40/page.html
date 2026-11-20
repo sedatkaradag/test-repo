@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'Poppins'; src: url('file://__REPO__/samples/story_video/kahf_turning/fonts/Poppins-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'Amiri'; src: url('file://__REPO__/assets/fonts/Amiri-Regular.ttf'); }
+@font-face { font-family: 'Hafs'; src: url('file://__REPO__/assets/fonts/KFGQPC-UthmanicHafs-v18.ttf'); }
+@font-face { font-family: 'Marcellus'; src: url('file://__REPO__/assets/fonts/Marcellus-Regular.ttf'); }
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #08201b; }
+#bg { position: absolute; inset: 0; background: url('file://__REPO__/assets/reel_background.png') center/cover; }
+#shade { position: absolute; inset: 0; background: radial-gradient(ellipse 85% 60% at 50% 45%, rgba(6,26,22,.30), rgba(4,16,13,.85)); }
+canvas { position: absolute; left: 0; top: 0; }
+.abs { position: absolute; left: 0; right: 0; text-align: center; }
+#head { top: 150px; }
+#head .mk { width: 92px; height: 116px; margin: 0 auto; overflow: hidden; position: relative; }
+#head .mk img { position: absolute; width: 180px; left: -44px; top: -32px; }
+#head .ar { font: 400 54px/1.2 Amiri; color: #e8c66a; margin-top: 14px; }
+#head .en { font: 500 21px Poppins; letter-spacing: 6px; color: rgba(232,198,106,.8); margin-top: 6px; }
+.vs { position: absolute; left: 0; right: 0; top: 760px; text-align: center; padding: 0 70px; }
+.vs .ar { font: 400 74px/1.75 Hafs; direction: rtl; }
+.vs .num { font: 400 46px Amiri; color: #e8c66a; margin: 0 10px; display: inline-block; }
+.vs .rule { width: 260px; height: 1.5px; margin: 10px auto 28px; background: linear-gradient(90deg, transparent, rgba(232,198,106,.7), transparent); position: relative; }
+.vs .rule::after { content: ""; position: absolute; left: 50%; top: -3px; width: 7px; height: 7px; margin-left: -3.5px; border-radius: 50%; background: #e8c66a; }
+.vs .en { font: 500 42px/1.4 Poppins; color: #f1ede2; }
+#pill { position: absolute; left: 50%; top: 1700px; transform: translateX(-50%); width: 660px; height: 104px; border-radius: 60px;
+  border: 1.5px solid rgba(232,198,106,.35); background: rgba(6,24,20,.55); display: flex; align-items: center; padding: 0 26px; box-sizing: border-box; }
+#pill .lg { width: 66px; height: 66px; border-radius: 50%; border: 1.5px solid rgba(232,198,106,.6); overflow: hidden; position: relative; flex: none; }
+#pill .lg img { position: absolute; width: 104px; left: -19px; top: -14px; }
+#pill .tx { margin-left: 18px; text-align: left; flex: 1; }
+#pill .t1 { font: 700 26px Poppins; color: #f1ede2; white-space: nowrap; } #pill .t2 { font: 500 19px Poppins; color: rgba(225,236,230,.55); white-space: nowrap; }
+#bars { display: flex; gap: 7px; align-items: center; height: 60px; }
+#bars i { display: block; width: 6px; border-radius: 3px; background: #7fd6b0; }
+#logoBox { position: absolute; left: 0; right: 0; top: 560px; text-align: center; opacity: 0; }
+#logoBox .frame { width: 560px; height: 360px; overflow: hidden; margin: 0 auto; position: relative; }
+#logoBox img { position: absolute; left: 0; top: -104px; width: 560px; visibility: hidden; }
+</style></head>
+<body>
+<div id="bg"></div><div id="shade"></div>
+<canvas id="cv" width="1080" height="1920"></canvas>
+<div class="abs" id="head"><div class="mk"><img src="file://__MARK__"></div><div class="ar">سُورَةُ القِيَامَةِ</div><div class="en">SURAH AL-QIYAMAH · 75:26–40</div></div>
+<div id="verses"></div>
+<div id="pill"><div class="lg"><img src="file://__MARK__"></div><div class="tx"><div class="t1">The Halal Algorithm</div><div class="t2">@thehalalalgorithm</div></div><div id="bars"></div></div>
+<div id="logoBox"><div class="frame" id="logoFrame"></div>
+  <div style="font-family:Marcellus;letter-spacing:8px;color:#e8c66a;font-size:44px;margin-top:40px">THE HALAL ALGORITHM</div>
+  <div style="font-family:Marcellus;letter-spacing:4px;color:#f6efdc;font-size:34px;margin-top:44px;border:2px solid #e8c66a;display:inline-block;padding:14px 38px;border-radius:40px">+ FOLLOW</div></div>
+<script>
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const ramp = (t, t0, d = .4) => ease((t - t0) / d);
+const lerp = (a, b, k) => a + (b - a) * k;
+const cv = $("cv"), g = cv.getContext("2d");
+const AR = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
+
+// verse blocks; every Arabic word its own span so it can light with the recitation
+const V = D.verses.map(v => { const el = document.createElement("div"); el.className = "vs";
+  const ar = document.createElement("div"); ar.className = "ar";
+  const sp = v.ar.split(" ").map((w, i) => { const s = document.createElement("span"); s.textContent = w; if (i) ar.appendChild(document.createTextNode(" ")); ar.appendChild(s); return s; });
+  const num = document.createElement("span"); num.className = "num"; num.textContent = "﴿" + AR(v.n) + "﴾"; ar.appendChild(document.createTextNode(" ")); ar.appendChild(num);
+  el.appendChild(ar); el.insertAdjacentHTML("beforeend", `<div class="rule"></div><div class="en">${v.en}</div>`);
+  $("verses").appendChild(el); return { ...v, el, sp }; });
+for (let i = 0; i < 14; i++) $("bars").appendChild(document.createElement("i"));
+const bars = [...$("bars").children];
+const logoImgs = D.logo.map(s => { const i = document.createElement("img"); i.src = "file://" + s; $("logoFrame").appendChild(i); return i; });
+
+// soft glow dot
+function glow(x, y, r, col, a) { if (a <= 0) return; g.save(); g.globalAlpha = a;
+  let gr = g.createRadialGradient(x, y, 0, x, y, r * 6); gr.addColorStop(0, col.replace("A", .55)); gr.addColorStop(1, col.replace("A", 0)); g.fillStyle = gr; g.beginPath(); g.arc(x, y, r * 6, 0, 7); g.fill();
+  gr = g.createRadialGradient(x, y, 0, x, y, r * 1.6); gr.addColorStop(0, "rgba(255,255,255,.95)"); gr.addColorStop(1, "rgba(255,255,255,0)"); g.fillStyle = gr; g.beginPath(); g.arc(x, y, r * 1.6, 0, 7); g.fill(); g.restore(); }
+const TEAL = "rgba(127,214,176,A)", GOLD = "rgba(242,200,98,A)", PALE = "rgba(230,240,225,A)";
+const rnd = (i, k = 0) => { const x = Math.sin(i * 127.1 + k * 311.7) * 43758.5453; return x - Math.floor(x); };
+const MY = 1330;   // motif centre line
+
+// one small scene per verse, drawn under the text (u = seconds into the verse, d = its length, a = opacity)
+const M = {
+  26(u, d, a) { // a heartbeat line; the bright dot runs along it
+    g.save(); g.globalAlpha = a; g.lineWidth = 3; g.strokeStyle = "rgba(127,214,176,.85)"; g.shadowColor = "#7fd6b0"; g.shadowBlur = 14; g.beginPath();
+    const beat = x => { const k = ((x + 1080) % 540) / 540; const p = k > .38 && k < .52 ? (k < .42 ? -(k - .38) * 2200 : k < .46 ? -88 + (k - .42) * 5200 : k < .49 ? 120 - (k - .46) * 4600 : -18 + (k - .49) * 600) : 0; return p; };
+    for (let x = 0; x <= 1080; x += 3) { const y = MY + beat(x - u * 240) * .9; x ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); g.restore();
+    const px = 540 + 300 * Math.sin(u * .5); glow(px, MY + beat(px - u * 240) * .9, 7, TEAL, a); },
+  27(u, d, a) { for (let i = 0; i < 7; i++) { const x = 140 + rnd(i) * 800 + 60 * Math.sin(u * .5 + i), y = MY - 140 + rnd(i, 1) * 300 + 30 * Math.cos(u * .4 + i * 2);
+      glow(x, y, 3 + rnd(i, 2) * 3, PALE, a * (.35 + .35 * Math.sin(u * 1.3 + i * 1.7))); } },
+  28(u, d, a) { const s = ease(u / d); g.save(); g.globalAlpha = a * .35; g.strokeStyle = "rgba(230,240,225,.5)"; g.lineWidth = 1.5; g.beginPath(); g.moveTo(540 - 40 - s * 300, MY); g.lineTo(540 + 40 + s * 300, MY); g.stroke(); g.restore();
+    glow(540 - 40 - s * 300, MY, 8, TEAL, a); glow(540 + 40 + s * 300, MY, 8, GOLD, a); },
+  29(u, d, a) { for (let k = 0; k < 2; k++) for (let x = 60; x <= 1020; x += 16) { const ph = x / 95 - u * 1.6 + k * Math.PI, y = MY + Math.sin(ph) * 70, z = Math.cos(ph);
+      g.fillStyle = (k ? GOLD : TEAL).replace("A", a * (.35 + .45 * (z + 1) / 2)); g.beginPath(); g.arc(x, y, 2.4 + 1.6 * (z + 1) / 2, 0, 7); g.fill(); } },
+  30(u, d, a) { const s = ease(u / d), y = lerp(MY + 150, MY - 170, s); glow(540, y, 9 + 6 * s, GOLD, a);
+    g.save(); g.globalAlpha = a * .3; const gr = g.createLinearGradient(0, MY + 160, 0, y); gr.addColorStop(0, "rgba(242,200,98,0)"); gr.addColorStop(1, "rgba(242,200,98,.6)"); g.fillStyle = gr; g.fillRect(538.5, y, 3, MY + 160 - y); g.restore(); },
+  31(u, d, a) { const s = ease(u / d); glow(540, MY - 60 + s * 120, 8, PALE, a * (1 - .7 * s)); },
+  32(u, d, a) { const s = ease(u / d); for (let i = 0; i < 9; i++) glow(540 + (s * 520) * (1 - i * .08), MY + Math.sin(i) * 4, 6 - i * .5, PALE, a * (1 - s * .6) * (1 - i * .1)); },
+  33(u, d, a) { g.save(); for (let i = 0; i < 46; i++) { const y = MY - 260 + rnd(i) * 520, sp = 160 + rnd(i, 1) * 260, L = 30 + rnd(i, 2) * 70, x = ((rnd(i, 3) * 1400 + u * sp) % 1400) - 160;
+      g.strokeStyle = PALE.replace("A", a * (.18 + rnd(i, 4) * .35)); g.lineWidth = 2; g.beginPath(); g.moveTo(x, y); g.lineTo(x + L, y); g.stroke(); } g.restore(); },
+  34(u, d, a) { mist(u, a * .8, 0); }, 35(u, d, a) { mist(u, a, 1); },
+  36(u, d, a) { mist(u, a * .55, 2); for (let i = 0; i < 26; i++) glow(100 + rnd(i) * 880, MY - 300 + ((rnd(i, 1) * 600 + u * 14) % 600), 1.6, PALE, a * .5 * rnd(i, 2)); },
+  37(u, d, a) { const fall = clamp(u / 1.3); glow(540, lerp(MY - 260, MY, ease(fall)), 6, PALE, a * (fall < 1 ? 1 : .8));
+    if (u > 1.3) for (let k = 0; k < 5; k++) { const r = ((u - 1.3) * 70 + k * 46) % 230; g.strokeStyle = TEAL.replace("A", a * .6 * (1 - r / 230)); g.lineWidth = 2; g.beginPath(); g.ellipse(540, MY, r * 1.2, r * .32, 0, 0, 7); g.stroke(); } },
+  38(u, d, a) { const s = ease(u / (d * .8)); dots(540, s, a, 0); },
+  39(u, d, a) { const s = ease(u / (d * .8)); dots(540 - 150 * s, 1, a, 1, .72); dots(540 + 150 * s, 1, a, 2, .72); },
+  40(u, d, a) { const s = ease(u / 1.8); g.save(); g.globalAlpha = a;
+    const sy = lerp(1720, 1560, s), gr = g.createRadialGradient(540, sy, 0, 540, sy, 900); gr.addColorStop(0, "rgba(255,236,170,.75)"); gr.addColorStop(.15, "rgba(242,200,98,.35)"); gr.addColorStop(1, "rgba(242,200,98,0)");
+    g.fillStyle = gr; g.fillRect(0, 600, 1080, 1320);
+    for (let k = 0; k < 18; k++) { const an = -Math.PI / 2 + (k - 8.5) * .16 + .02 * Math.sin(u * .7 + k), L = 900 * s; g.strokeStyle = `rgba(255,236,170,${.07 + .05 * Math.sin(u + k)})`; g.lineWidth = 26; g.beginPath(); g.moveTo(540, sy); g.lineTo(540 + Math.cos(an) * L, sy + Math.sin(an) * L); g.stroke(); }
+    glow(540, sy, 16, GOLD, 1);
+    g.fillStyle = "#06201a"; for (const [h, ph, col] of [[1640, 0, "#0a2a22"], [1700, 2, "#071f19"]]) { g.fillStyle = col; g.beginPath(); g.moveTo(0, 1920); for (let x = 0; x <= 1080; x += 20) g.lineTo(x, h + 40 * Math.sin(x / 170 + ph) + 20 * Math.sin(x / 60 + ph)); g.lineTo(1080, 1920); g.fill(); }
+    g.restore(); },
+};
+function mist(u, a, seed) { g.save(); for (let i = 0; i < 9; i++) { const x = 540 + (rnd(i, seed) - .5) * 900 + 40 * Math.sin(u * .3 + i), y = MY - 120 + (rnd(i, seed + 5) - .5) * 360, r = 180 + rnd(i, seed + 9) * 160;
+  const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(170,200,185,${.10 * a})`); gr.addColorStop(1, "rgba(170,200,185,0)"); g.fillStyle = gr; g.fillRect(x - r, y - r, 2 * r, 2 * r); } g.restore(); }
+const PTS = Array.from({ length: 260 }, (_, i) => { const z = 1 - 2 * (i + .5) / 260, r = Math.sqrt(1 - z * z), th = i * 2.39996; return [r * Math.cos(th), z, r * Math.sin(th)]; });
+function dots(cx, s, a, seed, sc = 1) { const R = 150 * sc, rot = performanceT * .35 + seed;
+  for (let i = 0; i < PTS.length; i++) { const [x0, y0, z0] = PTS[i], x = x0 * Math.cos(rot) + z0 * Math.sin(rot), z = -x0 * Math.sin(rot) + z0 * Math.cos(rot);
+    const sx = lerp(cx + (rnd(i, seed) - .5) * 900, cx + x * R, s), sy = lerp(MY + (rnd(i, seed + 3) - .5) * 600, MY + y0 * R, s);
+    g.fillStyle = PALE.replace("A", a * (.25 + .5 * (z + 1) / 2)); g.beginPath(); g.arc(sx, sy, 1.6 + 1.4 * (z + 1) / 2, 0, 7); g.fill(); } }
+let performanceT = 0;
+
+function render(t) {
+  performanceT = t; g.clearRect(0, 0, 1080, 1920);
+  const out = 1 - ramp(t, D.logo - .5, .5);
+  // drifting dust over the whole frame
+  for (let i = 0; i < 60; i++) { const x = rnd(i, 7) * 1080 + 20 * Math.sin(t * .2 + i), y = ((rnd(i, 8) * 1920 - t * (6 + rnd(i, 9) * 10)) % 1920 + 1920) % 1920;
+    g.fillStyle = `rgba(230,240,225,${(.12 + .2 * rnd(i, 4)) * out})`; g.beginPath(); g.arc(x, y, 1 + rnd(i, 5) * 1.6, 0, 7); g.fill(); }
+  V.forEach((v, k) => {
+    const a = ramp(t, v.t0 - .35, .45) * (1 - ramp(t, v.t1 - .2, .4)) * out;
+    v.el.style.opacity = a;
+    if (a > 0) { M[v.n]?.(t - v.t0, v.t1 - v.t0, a);
+      v.sp.forEach((sp, i) => { const w = v.words[i];   // soft: dim gold -> gold, a glow that swells in and fades out
+        const k1 = ramp(t, w.s - .15, .35), k2 = ramp(t, w.s - .15, .35) * (1 - ramp(t, w.e - .1, .7));
+        sp.style.color = `rgba(${243 + 12 * k2 | 0},${192 + 51 * k2 | 0},${79 + 128 * k2 | 0},${.32 + .68 * k1})`;
+        sp.style.textShadow = k2 > .01 ? `0 0 ${28 * k2}px rgba(243,192,79,${.9 * k2}), 0 0 9px rgba(243,192,79,${.9 * k2})` : "none"; }); }
+  });
+  $("head").style.opacity = ramp(t, .1, .6) * out; $("pill").style.opacity = ramp(t, .3, .6) * out;
+  const lv = D.env[clamp(Math.floor(t * 30), 0, D.env.length - 1)] || 0;
+  bars.forEach((b, i) => { const h = 10 + 44 * clamp(lv * (.55 + .45 * Math.abs(Math.sin(i * 1.7 + t * 9))), 0, 1); b.style.height = h + "px"; b.style.opacity = .5 + .5 * lv; });
+  $("logoBox").style.opacity = ramp(t, D.logo, .4);
+  const fr = clamp(Math.floor((t - D.logo) * 30), 0, logoImgs.length - 1); logoImgs.forEach((im, i) => im.style.visibility = i === fr ? "visible" : "hidden");
+}
+window.render = render;
+function fit() { V.forEach(v => { const ar = v.el.querySelector('.ar'); let fs = 74; ar.style.fontSize = fs + 'px'; v.el.style.opacity = 1;
+  while (ar.offsetHeight > fs * 1.75 * 1.3 && fs > 44) { fs -= 2; ar.style.fontSize = fs + 'px'; } v.el.style.opacity = 0; }); }
+window.ready = Promise.all([document.fonts.ready, ...logoImgs.map(i => i.decode().catch(() => 0))]).then(() => { fit(); render(0); return true; });
+</script></body></html>

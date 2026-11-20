@@ -223,3 +223,12 @@ yıldızlar takımyıldızda birleşir, "Of his seven children ONLY FATIMAH … 
   okundukça yumuşak geçişle parlıyor (soluk altın → altın, okunan kelime parlak, parlama 0,35 sn gelir 0,7 sn söner); çizgi ayrılmaları yumuşak (kritik sönümlü yay + çocuğun dalgası
   ebeveyninkinden başlıyor).
 - Render: `python3 make.py <out>` (~3 dk), `--stills=...`, tilavet `/home/claude/pl/rec` (audio-fetch 021107). 79,6 sn. Zaman/yaş eşlemesi make.py `KF`.
+
+## Format: Al-Qiyamah 75:26-40, ayet ayet sahne (20 Kas) — `samples/story_video/qiyamah_26_40/`
+
+Referans: @ahvalikuran (68 sn, Türkçe meal). Her ayet tek başına: Arapça (Hafs, tek satıra sığdırılır) + ﴿numara﴾ + İngilizce meal,
+altında ayete özel küçük sahne (26 kalp ritmi, 27 gezinen ışıklar, 28 ayrılan iki ışık, 29 sarmal, 30 yükselen ışık, 31 sönen ışık,
+32 uzaklaşan ışık, 33 yatay çizgiler, 34-36 sis, 37 damla + halkalar, 38 noktalar küre olur, 39 iki küre, 40 tepelerde gün doğumu).
+Üstte logo + surenin Arapça adı + "SURAH AL-QIYAMAH · 75:26–40"; altta tilavete göre oynayan ses çubuklu profil hapı; sonda bizim kapanış.
+Kari: Alafasy (kelime zamanları var, 15 ayet 85 sn; Husary 119 sn). Kelimeler yumuşak geçişle parlar (0,35 sn gelir, 0,7 sn söner).
+Ses: yalnızca tilavet. Kullanmadan önce 15 dosya ses tanımayla doğrulandı (7:199 dersi). Render ~3 dk.
