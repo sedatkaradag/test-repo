@@ -20,6 +20,7 @@ STILLS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--stills=")
 REC = Path(next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--rec=")), "/home/claude/qiy/Alafasy_128kbps"))
 FPS, SR, SURAH, VS = 30, 48000, 75, range(26, 41)
 INTRO = 0.9
+GAP = 0.5      # breath between verses
 AL = json.load(open(REC / "align.json"))
 
 def load(p):
@@ -32,16 +33,21 @@ for v in VS:
     ar = re.sub(r"[\s\u00a0]*[٠-٩]+\s*$", "", d["arabic_display"]).strip()   # drop the verse number; the page draws it in its ornament
     key = f"{SURAH:03d}{v:03d}"; al = AL[key]; x = load(REC / "audio" / f"{key}.mp3")
     assert len(ar.split(" ")) == len(al), (v, ar, al)
-    last = al[-1][3] / 1000; dur = min(len(x) / SR, last + .55)   # cut the trailing silence of the file
+    # where the voice really ends: quran-align ends 29, 30 and 40 up to 2 s early (the long madd of the last word),
+    # so cutting by it chopped those verses (owner, 20 Nov). Use the sound itself, then a breath before the next verse.
+    hop = SR // 100; e = np.array([np.sqrt((x[i:i + hop] ** 2).mean()) for i in range(0, len(x) - hop, hop)])
+    act = np.where(20 * np.log10(e / e.max() + 1e-9) > -40)[0]; s_end = (act[-1] + 1) * hop / SR
+    dur = min(len(x) / SR, s_end + .12)
     clips.append((t, x[:int(dur * SR)]))
-    verses.append({"n": v, "ar": ar, "en": d["english"], "t0": round(t, 3), "t1": round(t + dur, 3),
-                   "words": [{"s": round(t + a / 1000, 3), "e": round(t + b / 1000, 3)} for _, _, a, b in al]})
-    t += dur
-LOGO = round(t + .9, 2); END = LOGO + 3.4
+    words = [{"s": round(t + a / 1000, 3), "e": round(t + b / 1000, 3)} for _, _, a, b in al]
+    words[-1]["e"] = round(max(words[-1]["e"], t + s_end - .15), 3)      # the last word glows until its madd ends
+    verses.append({"n": v, "ar": ar, "en": d["english"], "t0": round(t, 3), "t1": round(t + dur, 3), "words": words})
+    t += dur + GAP
+LOGO = round(t - GAP + 1.0, 2); END = LOGO + 3.4
 
 N = int(END * SR); mono = np.zeros(N)
 for t0, x in clips:
-    i = int(t0 * SR); x = x.copy(); f = int(.04 * SR); x[:f] *= np.linspace(0, 1, f); x[-f:] *= np.linspace(1, 0, f); mono[i:i + len(x)] += x
+    i = int(t0 * SR); x = x.copy(); f = int(.04 * SR); x[:f] *= np.linspace(0, 1, f); f2 = int(.1 * SR); x[-f2:] *= np.linspace(1, 0, f2); mono[i:i + len(x)] += x
 spoken = mono[np.abs(mono) > 1e-3]; mono *= 10 ** (-16 / 20) / np.sqrt((spoken ** 2).mean())
 mono *= min(1, 10 ** (-1 / 20) / np.abs(mono).max())
 env = np.array([np.sqrt((mono[int(k / FPS * SR):int((k + 1) / FPS * SR)] ** 2).mean()) for k in range(int(END * FPS) + 1)])

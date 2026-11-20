@@ -74,11 +74,12 @@ const MY = 1330;   // motif centre line
 
 // one small scene per verse, drawn under the text (u = seconds into the verse, d = its length, a = opacity)
 const M = {
-  26(u, d, a) { // a heartbeat line; the bright dot runs along it
-    g.save(); g.globalAlpha = a; g.lineWidth = 3; g.strokeStyle = "rgba(127,214,176,.85)"; g.shadowColor = "#7fd6b0"; g.shadowBlur = 14; g.beginPath();
-    const beat = x => { const k = ((x + 1080) % 540) / 540; const p = k > .38 && k < .52 ? (k < .42 ? -(k - .38) * 2200 : k < .46 ? -88 + (k - .42) * 5200 : k < .49 ? 120 - (k - .46) * 4600 : -18 + (k - .49) * 600) : 0; return p; };
-    for (let x = 0; x <= 1080; x += 3) { const y = MY + beat(x - u * 240) * .9; x ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); g.restore();
-    const px = 540 + 300 * Math.sin(u * .5); glow(px, MY + beat(px - u * 240) * .9, 7, TEAL, a); },
+  26(u, d, a) { // heart monitor: the bright dot runs left to right and draws the trace; older trace fades behind it
+    const beat = x => { const k = ((x % 360) + 360) % 360 / 360; return k > .40 && k < .56 ? (k < .44 ? -(k - .40) * 1500 : k < .48 ? -60 + (k - .44) * 4000 : k < .52 ? 100 - (k - .48) * 3200 : -28 + (k - .52) * 700) : 0; };
+    const head = 60 + u * 230, W = 1080 + 260; g.save(); g.lineWidth = 3; g.lineCap = "round"; g.shadowColor = "#7fd6b0"; g.shadowBlur = 14;
+    for (let x = head - 760; x < head; x += 4) { const f = (x - (head - 760)) / 760, xx = ((x % W) + W) % W - 130, xn = (((x + 4) % W) + W) % W - 130; if (xn < xx) continue;
+      g.strokeStyle = `rgba(127,214,176,${a * .9 * f * f})`; g.beginPath(); g.moveTo(xx, MY + beat(x)); g.lineTo(xn, MY + beat(x + 4)); g.stroke(); }
+    g.restore(); const hx = ((head % W) + W) % W - 130; glow(hx, MY + beat(head), 7, TEAL, a); },
   27(u, d, a) { for (let i = 0; i < 7; i++) { const x = 140 + rnd(i) * 800 + 60 * Math.sin(u * .5 + i), y = MY - 140 + rnd(i, 1) * 300 + 30 * Math.cos(u * .4 + i * 2);
       glow(x, y, 3 + rnd(i, 2) * 3, PALE, a * (.35 + .35 * Math.sin(u * 1.3 + i * 1.7))); } },
   28(u, d, a) { const s = ease(u / d); g.save(); g.globalAlpha = a * .35; g.strokeStyle = "rgba(230,240,225,.5)"; g.lineWidth = 1.5; g.beginPath(); g.moveTo(540 - 40 - s * 300, MY); g.lineTo(540 + 40 + s * 300, MY); g.stroke(); g.restore();
@@ -93,16 +94,34 @@ const M = {
       g.strokeStyle = PALE.replace("A", a * (.18 + rnd(i, 4) * .35)); g.lineWidth = 2; g.beginPath(); g.moveTo(x, y); g.lineTo(x + L, y); g.stroke(); } g.restore(); },
   34(u, d, a) { mist(u, a * .8, 0); }, 35(u, d, a) { mist(u, a, 1); },
   36(u, d, a) { mist(u, a * .55, 2); for (let i = 0; i < 26; i++) glow(100 + rnd(i) * 880, MY - 300 + ((rnd(i, 1) * 600 + u * 14) % 600), 1.6, PALE, a * .5 * rnd(i, 2)); },
-  37(u, d, a) { const fall = clamp(u / 1.3); glow(540, lerp(MY - 260, MY, ease(fall)), 6, PALE, a * (fall < 1 ? 1 : .8));
-    if (u > 1.3) for (let k = 0; k < 5; k++) { const r = ((u - 1.3) * 70 + k * 46) % 230; g.strokeStyle = TEAL.replace("A", a * .6 * (1 - r / 230)); g.lineWidth = 2; g.beginPath(); g.ellipse(540, MY, r * 1.2, r * .32, 0, 0, 7); g.stroke(); } },
+  37(u, d, a) { // a drop falls (speeding up), touches the surface with a soft flash, rings are born small and grow out one by one
+    const T = 1.25, f = clamp(u / T), y = lerp(MY - 300, MY, f * f);
+    if (u < T + .25) glow(540, y, 6 * (1 - .5 * clamp((u - T) / .25)), PALE, a * (1 - clamp((u - T) / .25)));
+    if (u > T) { const fl = clamp((u - T) / .6); glow(540, MY, 10, TEAL, a * .8 * Math.sin(Math.PI * fl));
+      for (let k = 0; k < 6; k++) { const tb = T + k * .55; if (u < tb) continue; const q = (u - tb) / 3.2; if (q > 1) continue;
+        const r = 6 + 240 * (1 - Math.pow(1 - q, 2.2)), al = a * .65 * clamp((u - tb) / .3) * (1 - q) * (1 - q);
+        g.strokeStyle = TEAL.replace("A", al); g.lineWidth = 2.2 * (1 - q) + .6; g.beginPath(); g.ellipse(540, MY, r * 1.25, r * .32, 0, 0, 7); g.stroke(); } } },
   38(u, d, a) { const s = ease(u / (d * .8)); dots(540, s, a, 0); },
   39(u, d, a) { const s = ease(u / (d * .8)); dots(540 - 150 * s, 1, a, 1, .72); dots(540 + 150 * s, 1, a, 2, .72); },
-  40(u, d, a) { const s = ease(u / 1.8); g.save(); g.globalAlpha = a;
-    const sy = lerp(1720, 1560, s), gr = g.createRadialGradient(540, sy, 0, 540, sy, 900); gr.addColorStop(0, "rgba(255,236,170,.75)"); gr.addColorStop(.15, "rgba(242,200,98,.35)"); gr.addColorStop(1, "rgba(242,200,98,0)");
-    g.fillStyle = gr; g.fillRect(0, 600, 1080, 1320);
-    for (let k = 0; k < 18; k++) { const an = -Math.PI / 2 + (k - 8.5) * .16 + .02 * Math.sin(u * .7 + k), L = 900 * s; g.strokeStyle = `rgba(255,236,170,${.07 + .05 * Math.sin(u + k)})`; g.lineWidth = 26; g.beginPath(); g.moveTo(540, sy); g.lineTo(540 + Math.cos(an) * L, sy + Math.sin(an) * L); g.stroke(); }
-    glow(540, sy, 16, GOLD, 1);
-    g.fillStyle = "#06201a"; for (const [h, ph, col] of [[1640, 0, "#0a2a22"], [1700, 2, "#071f19"]]) { g.fillStyle = col; g.beginPath(); g.moveTo(0, 1920); for (let x = 0; x <= 1080; x += 20) g.lineTo(x, h + 40 * Math.sin(x / 170 + ph) + 20 * Math.sin(x / 60 + ph)); g.lineTo(1080, 1920); g.fill(); }
+  40(u, d, a) { // dawn: the sky warms, the sun rises behind three layers of hills, soft rays turn slowly, motes of light rise
+    const s = ease(u / 2.6), sy = lerp(1760, 1585, s); g.save(); g.globalAlpha = a;
+    let gr = g.createLinearGradient(0, 1000, 0, 1760); gr.addColorStop(0, "rgba(242,200,98,0)"); gr.addColorStop(.7, `rgba(242,190,98,${.16 * s})`); gr.addColorStop(1, `rgba(255,214,140,${.38 * s})`);
+    g.fillStyle = gr; g.fillRect(0, 1000, 1080, 920);
+    gr = g.createRadialGradient(540, sy, 0, 540, sy, 760); gr.addColorStop(0, `rgba(255,240,190,${.7 * s})`); gr.addColorStop(.12, `rgba(250,214,130,${.35 * s})`); gr.addColorStop(1, "rgba(242,200,98,0)");
+    g.fillStyle = gr; g.fillRect(0, 700, 1080, 1220);
+    g.globalCompositeOperation = "lighter";
+    for (let k = 0; k < 22; k++) { const an = -Math.PI / 2 + (k - 10.5) * .135 + .05 * Math.sin(u * .25 + k * 1.3), L = (520 + 260 * rnd(k, 3)) * s, w = .025 + .03 * rnd(k, 4);
+      const rg = g.createLinearGradient(540, sy, 540 + Math.cos(an) * L, sy + Math.sin(an) * L); rg.addColorStop(0, `rgba(255,228,160,${(.11 + .07 * Math.sin(u * .8 + k)) * s})`); rg.addColorStop(1, "rgba(255,228,160,0)");
+      g.fillStyle = rg; g.beginPath(); g.moveTo(540, sy); g.lineTo(540 + Math.cos(an - w) * L, sy + Math.sin(an - w) * L); g.lineTo(540 + Math.cos(an + w) * L, sy + Math.sin(an + w) * L); g.fill(); }
+    g.globalCompositeOperation = "source-over";
+    gr = g.createRadialGradient(540, sy, 0, 540, sy, 46); gr.addColorStop(0, "rgba(255,250,232,1)"); gr.addColorStop(.55, "rgba(255,236,180,.95)"); gr.addColorStop(1, "rgba(255,220,140,0)");
+    g.fillStyle = gr; g.beginPath(); g.arc(540, sy, 46, 0, 7); g.fill();
+    for (let i = 0; i < 30; i++) { const my = 1640 - ((u * (22 + rnd(i, 6) * 30) + rnd(i, 7) * 500) % 500), mx = 140 + rnd(i, 8) * 800 + 12 * Math.sin(u + i);
+      g.fillStyle = `rgba(255,236,180,${.5 * s * (1 - (1640 - my) / 500)})`; g.beginPath(); g.arc(mx, my, 1.3 + rnd(i, 9) * 1.5, 0, 7); g.fill(); }
+    const hills = [[1650, 0, 150, "#0d3027", .55], [1700, 2.1, 120, "#0a271f", .35], [1760, 4.2, 95, "#061c16", .2]];
+    hills.forEach(([h, ph, wv, col, rim]) => { const top = x => h + 46 * Math.sin(x / (wv * 1.4) + ph) + 18 * Math.sin(x / (wv * .45) + ph * 2);
+      g.fillStyle = col; g.beginPath(); g.moveTo(0, 1920); for (let x = 0; x <= 1080; x += 12) g.lineTo(x, top(x)); g.lineTo(1080, 1920); g.fill();
+      g.strokeStyle = `rgba(255,214,140,${rim * s})`; g.lineWidth = 2; g.beginPath(); for (let x = 0; x <= 1080; x += 12) { const y = top(x); x ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); });
     g.restore(); },
 };
 function mist(u, a, seed) { g.save(); for (let i = 0; i < 9; i++) { const x = 540 + (rnd(i, seed) - .5) * 900 + 40 * Math.sin(u * .3 + i), y = MY - 120 + (rnd(i, seed + 5) - .5) * 360, r = 180 + rnd(i, seed + 9) * 160;
