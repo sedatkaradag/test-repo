@@ -20,7 +20,7 @@ STILLS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--stills=")
 REC = Path(next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--rec=")), "/home/claude/qiy/Alafasy_128kbps"))
 FPS, SR, SURAH, VS = 30, 48000, 75, range(26, 41)
 INTRO = 0.9
-GAP = 0.5      # breath between verses
+GAP = 0.0      # owner, 20 Nov: no added pause; the verses follow each other as the files are
 AL = json.load(open(REC / "align.json"))
 
 def load(p):
@@ -34,10 +34,10 @@ for v in VS:
     key = f"{SURAH:03d}{v:03d}"; al = AL[key]; x = load(REC / "audio" / f"{key}.mp3")
     assert len(ar.split(" ")) == len(al), (v, ar, al)
     # where the voice really ends: quran-align ends 29, 30 and 40 up to 2 s early (the long madd of the last word),
-    # so cutting by it chopped those verses (owner, 20 Nov). Use the sound itself, then a breath before the next verse.
+    # so cutting by it chopped those verses (owner, 20 Nov). Play each file whole (it ends where the voice ends).
     hop = SR // 100; e = np.array([np.sqrt((x[i:i + hop] ** 2).mean()) for i in range(0, len(x) - hop, hop)])
     act = np.where(20 * np.log10(e / e.max() + 1e-9) > -40)[0]; s_end = (act[-1] + 1) * hop / SR
-    dur = min(len(x) / SR, s_end + .12)
+    dur = len(x) / SR
     clips.append((t, x[:int(dur * SR)]))
     words = [{"s": round(t + a / 1000, 3), "e": round(t + b / 1000, 3)} for _, _, a, b in al]
     words[-1]["e"] = round(max(words[-1]["e"], t + s_end - .15), 3)      # the last word glows until its madd ends

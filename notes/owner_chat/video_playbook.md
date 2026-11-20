@@ -233,6 +233,7 @@ altında ayete özel küçük sahne (26 kalp ritmi, 27 gezinen ışıklar, 28 ay
 Kari: Alafasy (kelime zamanları var, 15 ayet 85 sn; Husary 119 sn). Kelimeler yumuşak geçişle parlar (0,35 sn gelir, 0,7 sn söner).
 Ses: yalnızca tilavet. Kullanmadan önce 15 dosya ses tanımayla doğrulandı (7:199 dersi). Render ~3 dk.
 **Ders (sahibi, 20 Kas):** quran-align bazı ayetlerde son kelimenin uzatmasından önce bitiyor (29, 30, 40: 2 sn'ye kadar). Sesi align ile KESME:
-sesin gerçek bitişini enerjiden bul, ayetler arasına 0,5 sn nefes koy, son kelimenin parlaması uzatma bitene kadar sürsün.
+her dosyayı tam çal (ses dosyanın sonuna kadar sürüyor), son kelimenin parlaması uzatma bitene kadar sürsün.
+**Sorulmadan ayetler arasına boşluk/pay EKLEME** (0,5 sn nefes denedim, sahibi: "niye kafana göre pay koyuyorsun, kötü olmuş").
 Kalp ritmi ışığı soldan sağa çizgiyi çizer; damla hızlanarak düşer, halkalar küçük doğup tek tek açılır; gün doğumu: ısınan gök,
 3 kat tepe (altın kenar), dönen yumuşak ışınlar, yükselen ışık zerreleri.
