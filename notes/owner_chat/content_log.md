@@ -45,6 +45,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 **Animasyon · İngilizce TTS**
 - 14 Kas, Husary (tilavet) + TTS bm_george: Al-Kahf 18:18 (sağa sola çevrilme, köpek) — paylaşıldı.
 - 19 Kas, kâri yok (TTS anlatım): A to Z Islamic Quiz Part 1 (13 harf, 13 soru; peygamberler, sahabe, Kur'an; ayet yok) — paylaşıldı.
+- 20 Kas, kâri yok (TTS anlatım): A to Z Islamic Quiz Part 2 (diğer 12 harf, 12 soru; peygamberler, sahabe, Kur'an; ayet yok) — paylaşıldı.
 
 **Ayet Reels · kelime kelime**
 - 16 Kas, Alafasy: Az-Zukhruf 43:68-70 (eşlerinizle birlikte cennete) — paylaşıldı.
@@ -79,6 +80,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-18 19:08 | Animasyon · ortam sesi (57 sn) | 65:3, 4:32, 14:7, 2:216, 11:6 | Innocent habits that might be blocking your rizq | — | — | — | — | — | — | — | — |
 | 2026-11-19 10:04 | Animasyon · İngilizce TTS anlatım (147,7 sn) | A to Z Islamic Quiz Part 1 (13 harf) · ayet yok | A to Z Islamic Quiz, Part 1: how many can you get? | — | — | — | — | — | — | — | — |
 | 2026-11-19 13:24 | Animasyon · ortam sesi + tilavet (79,6 sn) | Al-Anbiya 21:107 · Alafasy | Prophet Muhammad ﷺ lost so much before he even turned 50. | — | — | — | — | — | — | — | — |
+| 2026-11-20 11:13 | Animasyon · İngilizce TTS anlatım (123,6 sn) | A to Z Islamic Quiz Part 2 (12 harf) · ayet yok | A to Z Islamic Quiz, Part 2: the other 12 letters. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -305,4 +307,15 @@ Later he buried his daughters Ruqayyah, Zaynab and Umm Kulthum, and his son Ibra
 Which of these did you not know before? Tell us in the comments.
 
 #prophetmuhammad #seerah #sunnah #islamicreminder #muslim #islam #sabr
+```
+
+**A to Z Islamic Quiz Part 2, 20 Kasım** (sahibinin panelde onayladığı caption; 11:13 UTC'de paylaşıldı)
+```
+A to Z Islamic Quiz, Part 2: the other 12 letters.
+
+12 questions about the prophets, the Companions and the Qur'an. It starts easy and gets harder towards the end. Pause if you need more time, and be honest with your score.
+
+Comment your score out of 12, and add your Part 1 score for the full A to Z. Missed Part 1? It's on our page.
+
+#islam #muslim #islamicquiz #quran #deen #islamicreminder #muslimquiz #learnislam
 ```
