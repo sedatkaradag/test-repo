@@ -14,7 +14,7 @@ canvas { position: absolute; left: 0; top: 0; }
 #head { top: 150px; }
 #head .mk { width: 92px; height: 116px; margin: 0 auto; overflow: hidden; position: relative; }
 #head .mk img { position: absolute; width: 180px; left: -44px; top: -32px; }
-#head .ar { font: 400 54px/1.2 Amiri; color: #e8c66a; margin-top: 14px; }
+#head .ar { font: 400 54px/1.2 Amiri; color: #e8c66a; margin-top: 36px; }
 #head .en { font: 500 21px Poppins; letter-spacing: 6px; color: rgba(232,198,106,.8); margin-top: 6px; }
 .vs { position: absolute; left: 0; right: 0; top: 760px; text-align: center; padding: 0 70px; }
 .vs .ar { font: 400 74px/1.75 Hafs; direction: rtl; }
@@ -103,26 +103,43 @@ const M = {
         g.strokeStyle = TEAL.replace("A", al); g.lineWidth = 2.2 * (1 - q) + .6; g.beginPath(); g.ellipse(540, MY, r * 1.25, r * .32, 0, 0, 7); g.stroke(); } } },
   38(u, d, a) { const s = ease(u / (d * .8)); dots(540, s, a, 0); },
   39(u, d, a) { const s = ease(u / (d * .8)); dots(540 - 150 * s, 1, a, 1, .72); dots(540 + 150 * s, 1, a, 2, .72); },
-  40(u, d, a) { // dawn: the sky warms, the sun rises behind three layers of hills, soft rays turn slowly, motes of light rise
-    const s = ease(u / 2.6), sy = lerp(1760, 1585, s); g.save(); g.globalAlpha = a;
-    let gr = g.createLinearGradient(0, 1000, 0, 1760); gr.addColorStop(0, "rgba(242,200,98,0)"); gr.addColorStop(.7, `rgba(242,190,98,${.16 * s})`); gr.addColorStop(1, `rgba(255,214,140,${.38 * s})`);
-    g.fillStyle = gr; g.fillRect(0, 1000, 1080, 920);
-    gr = g.createRadialGradient(540, sy, 0, 540, sy, 760); gr.addColorStop(0, `rgba(255,240,190,${.7 * s})`); gr.addColorStop(.12, `rgba(250,214,130,${.35 * s})`); gr.addColorStop(1, "rgba(242,200,98,0)");
-    g.fillStyle = gr; g.fillRect(0, 700, 1080, 1220);
-    g.globalCompositeOperation = "lighter";
-    for (let k = 0; k < 22; k++) { const an = -Math.PI / 2 + (k - 10.5) * .135 + .05 * Math.sin(u * .25 + k * 1.3), L = (520 + 260 * rnd(k, 3)) * s, w = .025 + .03 * rnd(k, 4);
-      const rg = g.createLinearGradient(540, sy, 540 + Math.cos(an) * L, sy + Math.sin(an) * L); rg.addColorStop(0, `rgba(255,228,160,${(.11 + .07 * Math.sin(u * .8 + k)) * s})`); rg.addColorStop(1, "rgba(255,228,160,0)");
-      g.fillStyle = rg; g.beginPath(); g.moveTo(540, sy); g.lineTo(540 + Math.cos(an - w) * L, sy + Math.sin(an - w) * L); g.lineTo(540 + Math.cos(an + w) * L, sy + Math.sin(an + w) * L); g.fill(); }
-    g.globalCompositeOperation = "source-over";
-    gr = g.createRadialGradient(540, sy, 0, 540, sy, 46); gr.addColorStop(0, "rgba(255,250,232,1)"); gr.addColorStop(.55, "rgba(255,236,180,.95)"); gr.addColorStop(1, "rgba(255,220,140,0)");
-    g.fillStyle = gr; g.beginPath(); g.arc(540, sy, 46, 0, 7); g.fill();
-    for (let i = 0; i < 30; i++) { const my = 1640 - ((u * (22 + rnd(i, 6) * 30) + rnd(i, 7) * 500) % 500), mx = 140 + rnd(i, 8) * 800 + 12 * Math.sin(u + i);
-      g.fillStyle = `rgba(255,236,180,${.5 * s * (1 - (1640 - my) / 500)})`; g.beginPath(); g.arc(mx, my, 1.3 + rnd(i, 9) * 1.5, 0, 7); g.fill(); }
-    const hills = [[1650, 0, 150, "#0d3027", .55], [1700, 2.1, 120, "#0a271f", .35], [1760, 4.2, 95, "#061c16", .2]];
-    hills.forEach(([h, ph, wv, col, rim]) => { const top = x => h + 46 * Math.sin(x / (wv * 1.4) + ph) + 18 * Math.sin(x / (wv * .45) + ph * 2);
-      g.fillStyle = col; g.beginPath(); g.moveTo(0, 1920); for (let x = 0; x <= 1080; x += 12) g.lineTo(x, top(x)); g.lineTo(1080, 1920); g.fill();
-      g.strokeStyle = `rgba(255,214,140,${rim * s})`; g.lineWidth = 2; g.beginPath(); for (let x = 0; x <= 1080; x += 12) { const y = top(x); x ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); });
-    g.restore(); },
+  40(u, d, a) { // dawn, drawn on its own layer and faded out towards the text: the horizon warms first, then the sun climbs from
+    // behind the far hill; soft blurred light shafts, a warm haze band, four hill layers (far ones paler, rims lit near the sun), rising motes
+    const c = oc, G = c.getContext("2d"); G.setTransform(1, 0, 0, 1, 0, 0); G.clearRect(0, 0, 1080, 1920);
+    const pre = ease(u / 2.2), s = ease((u - .6) / 6.5), HZ = 1585, sx = 540, sy = lerp(HZ + 60, HZ - 165, s);
+    let gr = G.createLinearGradient(0, 860, 0, HZ + 30);
+    gr.addColorStop(0, "rgba(242,200,98,0)"); gr.addColorStop(.55, `rgba(205,150,80,${.08 * pre + .06 * s})`); gr.addColorStop(.86, `rgba(240,185,110,${.16 * pre + .2 * s})`); gr.addColorStop(1, `rgba(255,214,150,${.25 * pre + .35 * s})`);
+    G.fillStyle = gr; G.fillRect(0, 860, 1080, HZ + 30 - 860);
+    gr = G.createRadialGradient(sx, sy, 0, sx, sy, 950); gr.addColorStop(0, `rgba(255,234,175,${.42 * s + .1 * pre})`); gr.addColorStop(.22, `rgba(248,198,120,${.16 * s + .05 * pre})`); gr.addColorStop(1, "rgba(242,200,98,0)");
+    G.fillStyle = gr; G.fillRect(0, 700, 1080, 1220);
+    G.save(); G.filter = "blur(9px)"; G.globalCompositeOperation = "lighter";
+    for (let k = 0; k < 15; k++) { const an = -Math.PI / 2 + (rnd(k, 11) - .5) * 2.6 + .035 * Math.sin(u * .22 + k), w = .018 + .045 * rnd(k, 12), L = (650 + 520 * rnd(k, 13)) * (.35 + .65 * s);
+      const al = (.07 + .09 * rnd(k, 14)) * s * (.65 + .35 * Math.sin(u * .55 + k * 1.9));
+      const rg = G.createLinearGradient(sx, sy, sx + Math.cos(an) * L, sy + Math.sin(an) * L); rg.addColorStop(0, `rgba(255,232,170,${al})`); rg.addColorStop(.6, `rgba(255,224,160,${al * .4})`); rg.addColorStop(1, "rgba(255,224,160,0)");
+      G.fillStyle = rg; G.beginPath(); G.moveTo(sx, sy); G.lineTo(sx + Math.cos(an - w) * L, sy + Math.sin(an - w) * L); G.lineTo(sx + Math.cos(an + w) * L, sy + Math.sin(an + w) * L); G.fill(); }
+    G.restore();
+    gr = G.createRadialGradient(sx, sy, 0, sx, sy, 150); gr.addColorStop(0, `rgba(255,246,220,${.85 * s + .15})`); gr.addColorStop(.28, `rgba(255,226,150,${.45 * s})`); gr.addColorStop(1, "rgba(255,214,140,0)");
+    G.fillStyle = gr; G.beginPath(); G.arc(sx, sy, 150, 0, 7); G.fill();
+    gr = G.createRadialGradient(sx, sy, 0, sx, sy, 40); gr.addColorStop(0, "rgba(255,253,244,1)"); gr.addColorStop(.75, "rgba(255,244,214,.97)"); gr.addColorStop(1, "rgba(255,230,170,0)");
+    G.fillStyle = gr; G.beginPath(); G.arc(sx, sy, 40, 0, 7); G.fill();
+    G.save(); G.filter = "blur(14px)"; gr = G.createLinearGradient(0, HZ - 70, 0, HZ + 70); gr.addColorStop(0, "rgba(255,220,160,0)"); gr.addColorStop(.5, `rgba(255,214,150,${.10 + .22 * s})`); gr.addColorStop(1, "rgba(255,220,160,0)");
+    G.fillStyle = gr; G.fillRect(-40, HZ - 70, 1160, 140); G.restore();
+    const layers = [[HZ, 22, 260, .7, [30, 52, 42], .75], [HZ + 55, 34, 190, 1.9, [18, 40, 33], .5], [HZ + 120, 44, 150, 3.4, [10, 30, 24], .3], [HZ + 205, 30, 230, 5.1, [6, 21, 17], .14]];
+    layers.forEach(([base, amp, wv, ph, col, rim], li) => {
+      const top = x => base + amp * Math.sin(x / wv + ph) + amp * .42 * Math.sin(x / (wv * .37) + ph * 1.7) + amp * .15 * Math.sin(x / (wv * .13) + ph);
+      const warm = (3 - li) / 3 * (.1 + .4 * s);   // far hills take the colour of the haze
+      G.fillStyle = `rgb(${col[0] + 120 * warm * .5 | 0},${col[1] + 80 * warm * .5 | 0},${col[2] + 30 * warm * .5 | 0})`;
+      G.beginPath(); G.moveTo(-10, 1920); for (let x = -10; x <= 1090; x += 8) G.lineTo(x, top(x)); G.lineTo(1090, 1920); G.fill();
+      G.lineWidth = li ? 1.8 : 2.4;
+      for (let x = -10; x < 1090; x += 8) { const near = Math.exp(-Math.pow((x - sx) / (260 + li * 90), 2)); G.strokeStyle = `rgba(255,218,150,${rim * s * (.18 + .82 * near)})`;
+        G.beginPath(); G.moveTo(x, top(x)); G.lineTo(x + 8, top(x + 8)); G.stroke(); }
+      if (li < 2) { G.save(); G.filter = "blur(10px)"; const mg = G.createLinearGradient(0, base + 10, 0, base + 90); mg.addColorStop(0, `rgba(230,200,150,${.10 * s})`); mg.addColorStop(1, "rgba(230,200,150,0)"); G.fillStyle = mg; G.fillRect(-40, base + 10, 1160, 80); G.restore(); }
+    });
+    for (let i = 0; i < 34; i++) { const life = (u * (.10 + rnd(i, 6) * .12) + rnd(i, 7)) % 1, my = HZ - 20 - life * 520, mx = 120 + rnd(i, 8) * 840 + 18 * Math.sin(u * .7 + i);
+      G.fillStyle = `rgba(255,236,190,${.55 * s * Math.sin(Math.PI * life)})`; G.beginPath(); G.arc(mx, my, 1.1 + rnd(i, 9) * 1.6, 0, 7); G.fill(); }
+    G.globalCompositeOperation = "destination-in"; gr = G.createLinearGradient(0, 960, 0, 1260); gr.addColorStop(0, "rgba(0,0,0,0)"); gr.addColorStop(1, "rgba(0,0,0,1)");
+    G.fillStyle = gr; G.fillRect(0, 0, 1080, 1920); G.globalCompositeOperation = "source-over";
+    g.save(); g.globalAlpha = a; g.drawImage(c, 0, 0); g.restore(); },
 };
 function mist(u, a, seed) { g.save(); for (let i = 0; i < 9; i++) { const x = 540 + (rnd(i, seed) - .5) * 900 + 40 * Math.sin(u * .3 + i), y = MY - 120 + (rnd(i, seed + 5) - .5) * 360, r = 180 + rnd(i, seed + 9) * 160;
   const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(170,200,185,${.10 * a})`); gr.addColorStop(1, "rgba(170,200,185,0)"); g.fillStyle = gr; g.fillRect(x - r, y - r, 2 * r, 2 * r); } g.restore(); }
@@ -132,6 +149,7 @@ function dots(cx, s, a, seed, sc = 1) { const R = 150 * sc, rot = performanceT *
     const sx = lerp(cx + (rnd(i, seed) - .5) * 900, cx + x * R, s), sy = lerp(MY + (rnd(i, seed + 3) - .5) * 600, MY + y0 * R, s);
     g.fillStyle = PALE.replace("A", a * (.25 + .5 * (z + 1) / 2)); g.beginPath(); g.arc(sx, sy, 1.6 + 1.4 * (z + 1) / 2, 0, 7); g.fill(); } }
 let performanceT = 0;
+const oc = document.createElement("canvas"); oc.width = 1080; oc.height = 1920;
 
 function render(t) {
   performanceT = t; g.clearRect(0, 0, 1080, 1920);

@@ -235,5 +235,7 @@ Ses: yalnızca tilavet. Kullanmadan önce 15 dosya ses tanımayla doğrulandı (
 **Ders (sahibi, 20 Kas):** quran-align bazı ayetlerde son kelimenin uzatmasından önce bitiyor (29, 30, 40: 2 sn'ye kadar). Sesi align ile KESME:
 her dosyayı tam çal (ses dosyanın sonuna kadar sürüyor), son kelimenin parlaması uzatma bitene kadar sürsün.
 **Sorulmadan ayetler arasına boşluk/pay EKLEME** (0,5 sn nefes denedim, sahibi: "niye kafana göre pay koyuyorsun, kötü olmuş").
-Kalp ritmi ışığı soldan sağa çizgiyi çizer; damla hızlanarak düşer, halkalar küçük doğup tek tek açılır; gün doğumu: ısınan gök,
-3 kat tepe (altın kenar), dönen yumuşak ışınlar, yükselen ışık zerreleri.
+Kalp ritmi ışığı soldan sağa çizgiyi çizer; damla hızlanarak düşer, halkalar küçük doğup tek tek açılır. Gün doğumu (v4, sahibi "detaylı
+inceleyip güzelleştir"): ayrı katmanda çizilir ve metne doğru söner; önce ufuk ısınır, güneş uzak tepenin ardından yükselir, bulanık yumuşak
+ışık huzmeleri, sıcak pus bandı, 4 kat tepe (uzaktakiler soluk/sıcak, kenar ışığı güneşe yakın yerde güçlü), tepeler arası sis, yükselen zerreler.
+Başlıktaki Arapça sure adı logodan 22 px aşağıda (hareke logoya biniyordu).
