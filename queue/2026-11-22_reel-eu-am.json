@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -95,6 +95,15 @@
     "ayahs": [
       "004110"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 15.6,
+    "video_seconds": 18.9,
+    "verse_seconds": [
+      15.65
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-21T05:45:53+00:00"
   }
 }
