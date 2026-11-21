@@ -1,0 +1,128 @@
+{
+  "entry_id": "quran:31:14",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Luqman 31:14",
+  "slot": "2026-11-22_reel-us",
+  "publish_at": "2026-11-23T01:30:17Z",
+  "local_slot": "2026-11-22 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-22_reel-us.jpg",
+  "video": "queue/2026-11-22_reel-us.mp4",
+  "cover": "queue/2026-11-22_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Weakness upon weakness: what your mother carried\n\nAllah reminds us that a mother carries her child in weakness upon weakness, and He tells us to be grateful to Him and to our parents. Call them tonight, or make dua for them if they have passed.\n\nSurah Luqman 31:14\n\nSend this to your mother with one word: thank you.\n\n#mother #kindnesstoparents #surahluqman #muslimfamily\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "We have enjoined upon man kindness to his parents. His mother bore him in weakness upon weakness, and his weaning took place within two years. Be grateful to Me and to your parents. To Me is the final return (Surah Luqman 31:14)",
+  "theme": "kindness to parents / mother's weakness upon weakness",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:31:14",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Weakness upon weakness: what your mother carried",
+    "hook_lines": [
+      "Weakness upon weakness:",
+      "what your mother carried"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "031014",
+        "lines": [
+          "وَوَصَّيۡنَا ٱلۡإِنسَٰنَ بِوَٰلِدَيۡهِ حَمَلَتۡهُ أُمُّهُۥ وَهۡنًا عَلَىٰ",
+          "وَهۡنٖ وَفِصَٰلُهُۥ فِي عَامَيۡنِ أَنِ ٱشۡكُرۡ لِي وَلِوَٰلِدَيۡكَ",
+          "إِلَيَّ ٱلۡمَصِيرُ ١٤"
+        ],
+        "y": 598.0,
+        "meal": [
+          "We have enjoined upon man kindness to his",
+          "parents. His mother bore him in weakness upon",
+          "weakness, and his weaning took place within two",
+          "years. Be grateful to Me and to your parents. To",
+          "Me is the final return."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "We have enjoined upon man kindness to his parents. His mother bore him in weakness upon weakness, and his weaning took place within two years. Be grateful to Me and to your parents. To Me is the final return.",
+    "full_lines": [
+      "We have enjoined upon man kindness to his",
+      "parents. His mother bore him in weakness upon",
+      "weakness, and his weaning took place within two",
+      "years. Be grateful to Me and to your parents. To",
+      "Me is the final return."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Luqman 31:14",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to your mother with one word: thank you.",
+    "cta_lines": [
+      "Send this to your mother with one word:",
+      "thank you."
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "f14882726254c23fb5124758",
+  "created_at": "2026-11-21T05:44:46+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "031014"
+    ],
+    "done": false
+  }
+}

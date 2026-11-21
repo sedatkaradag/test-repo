@@ -1,0 +1,119 @@
+{
+  "entry_id": "quran:34:39",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Saba 34:39",
+  "slot": "2026-11-22_reel-pk",
+  "publish_at": "2026-11-22T15:25:00Z",
+  "local_slot": "2026-11-22 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-22_reel-pk.jpg",
+  "video": "queue/2026-11-22_reel-pk.mp4",
+  "cover": "queue/2026-11-22_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Worried about money? Read what Allah says about giving\n\nProvision is in Allah's hands: He extends it or restricts it for whom He wills. Whatever you spend in charity, He will compensate for it, for He is the Best of Providers.\n\nSurah Saba 34:39\n\nGive one small sadaqah before you sleep tonight.\n\n#rizq #sadaqah #surahsaba #muslimhabits\n\nRecitation: Mahmoud Khalil Al-Husary",
+  "alt_text": "Say, “My Lord extends provision to whom He wills of His slaves or restricts it. Whatever you spend in charity, He will compensate for it, for He is the Best of Providers.” (Surah Saba 34:39)",
+  "theme": "rizq and charity / Allah is the Best of Providers",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic and pause signs checked, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:34:39",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Worried about money? Read what Allah says about giving",
+    "hook_lines": [
+      "Worried about money? Read",
+      "what Allah says about giving"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "034039",
+        "lines": [
+          "قُلۡ إِنَّ رَبِّي يَبۡسُطُ ٱلرِّزۡقَ لِمَن يَشَآءُ مِنۡ",
+          "عِبَادِهِۦ وَيَقۡدِرُ لَهُۥۚ وَمَآ أَنفَقۡتُم مِّن شَيۡءٖ",
+          "فَهُوَ يُخۡلِفُهُۥۖ وَهُوَ خَيۡرُ ٱلرَّٰزِقِينَ ٣٩"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Say, “My Lord extends provision to whom He",
+          "wills of His slaves or restricts it. Whatever you",
+          "spend in charity, He will compensate for it, for",
+          "He is the Best of Providers.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Say, “My Lord extends provision to whom He wills of His slaves or restricts it. Whatever you spend in charity, He will compensate for it, for He is the Best of Providers.”",
+    "full_lines": [
+      "Say, “My Lord extends provision to whom He",
+      "wills of His slaves or restricts it. Whatever you",
+      "spend in charity, He will compensate for it, for",
+      "He is the Best of Providers.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Saba 34:39",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Give one small sadaqah before you sleep tonight.",
+    "cta_lines": [
+      "Give one small sadaqah before you sleep",
+      "tonight."
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "ee9b585efac84085ec9e1eaa",
+  "created_at": "2026-11-21T05:43:56+00:00",
+  "audio": {
+    "reciter": "Husary_128kbps",
+    "reciter_name": "Mahmoud Khalil Al-Husary",
+    "ayahs": [
+      "034039"
+    ],
+    "done": false
+  }
+}

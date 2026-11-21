@@ -1,0 +1,100 @@
+{
+  "entry_id": "quran:4:110",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nisaa 4:110",
+  "slot": "2026-11-22_reel-eu-am",
+  "publish_at": "2026-11-22T07:19:03Z",
+  "local_slot": "2026-11-22 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-22_reel-eu-am.jpg",
+  "video": "queue/2026-11-22_reel-eu-am.mp4",
+  "cover": "queue/2026-11-22_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Made a mistake? This is the way back to forgiveness\n\nAllah says that whoever seeks His forgiveness after doing wrong will find Him All-Forgiving, Most Merciful. Start this Sunday by asking Him for forgiveness, before the day gets busy.\n\nSurah An-Nisaa 4:110\n\nAsk Allah for forgiveness before you check your phone.\n\n#istighfar #forgiveness #surahnisa #quranreels\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "Whoever commits evil or wrongs himself, then seeks Allah’s forgiveness will find Allah All-Forgiving, Most Merciful (Surah An-Nisaa 4:110)",
+  "theme": "forgiveness / seek it and find Allah Most Merciful",
+  "review": "Independent reviewer approved (round 1): integrity ok, Arabic checked word by word, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:4:110",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Made a mistake? This is the way back to forgiveness",
+    "hook_lines": [
+      "Made a mistake? This is the",
+      "way back to forgiveness"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "004110",
+        "lines": [
+          "وَمَن يَعۡمَلۡ سُوٓءًا أَوۡ يَظۡلِمۡ نَفۡسَهُۥ ثُمَّ",
+          "يَسۡتَغۡفِرِ ٱللَّهَ يَجِدِ ٱللَّهَ غَفُورٗا رَّحِيمٗا ١١٠"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Whoever commits evil or wrongs himself, then",
+          "seeks Allah’s forgiveness will find Allah",
+          "All-Forgiving, Most Merciful."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Whoever commits evil or wrongs himself, then seeks Allah’s forgiveness will find Allah All-Forgiving, Most Merciful.",
+    "full_lines": [
+      "Whoever commits evil or wrongs himself, then",
+      "seeks Allah’s forgiveness will find Allah",
+      "All-Forgiving, Most Merciful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nisaa 4:110",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Ask Allah for forgiveness before you check your phone.",
+    "cta_lines": [
+      "Ask Allah for forgiveness before you check",
+      "your phone."
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "1132024ab3a401fdf8a0a14e",
+  "created_at": "2026-11-21T05:43:23+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "004110"
+    ],
+    "done": false
+  }
+}
