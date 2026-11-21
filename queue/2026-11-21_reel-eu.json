@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: integrity ok, Arabic word/mark checked, English source, caption ok",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -133,5 +133,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-20T05:45:30+00:00"
-  }
+  },
+  "story_media_id": "18042374381896502",
+  "story_kind": "video",
+  "media_id": "17931528171186446",
+  "posted_at": "2026-11-21T17:57:44+00:00"
 }
