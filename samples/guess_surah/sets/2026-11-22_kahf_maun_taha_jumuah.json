@@ -1,0 +1,6 @@
+[
+ {"level": "MEDIUM", "entry": "quran:18:46", "verses": ["018046"], "options": [["Al-Isra", "الإسراء"], ["Al-Kahf", "الكهف"], ["Yusuf", "يوسف"], ["Ibrahim", "إبراهيم"]], "answer": 1},
+ {"level": "EASY", "entry": "quran:107:4-5", "verses": ["107004", "107005"], "options": [["Quraysh", "قريش"], ["Al-Kawthar", "الكوثر"], ["Al-Humazah", "الهمزة"], ["Al-Ma'un", "الماعون"]], "answer": 3},
+ {"level": "MEDIUM", "entry": "quran:20:14", "verses": ["020014"], "options": [["Ta-Ha", "طه"], ["Maryam", "مريم"], ["Al-Anbiya", "الأنبياء"], ["Al-Mu'minun", "المؤمنون"]], "answer": 0},
+ {"level": "HARD", "entry": "quran:62:10", "verses": ["062010"], "options": [["Al-Munafiqun", "المنافقون"], ["At-Taghabun", "التغابن"], ["Al-Jumu'ah", "الجمعة"], ["As-Saff", "الصف"]], "answer": 2}
+]
