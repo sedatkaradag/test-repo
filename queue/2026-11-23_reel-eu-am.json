@@ -1,0 +1,120 @@
+{
+  "entry_id": "quran:2:148",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:148",
+  "slot": "2026-11-23_reel-eu-am",
+  "publish_at": "2026-11-23T07:15:35Z",
+  "local_slot": "2026-11-23 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-23_reel-eu-am.jpg",
+  "video": "queue/2026-11-23_reel-eu-am.mp4",
+  "cover": "queue/2026-11-23_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Compete with others, but in good deeds\n\nEvery nation has a direction it turns to. Allah tells us to compete with one another in good deeds, and wherever we are, He will bring us all together.\n\nSurah Al-Baqara 2:148\n\nWhich good deed will you get to first today?\n\n#gooddeeds #competeingood #surahbaqarah #mondaymotivation\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Every nation has a direction to which it turns, so compete with one another in good deeds. Wherever you are, Allah will bring you all together, for Allah is Most Capable of all things (Surah Al-Baqara 2:148)",
+  "theme": "competing in good deeds (Monday)",
+  "review": "Independent reviewer approved: Arabic checked on card and reel, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:148",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Compete with others, but in good deeds",
+    "hook_lines": [
+      "Compete with others, but in",
+      "good deeds"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "002148",
+        "lines": [
+          "وَلِكُلّٖ وِجۡهَةٌ هُوَ مُوَلِّيهَاۖ فَٱسۡتَبِقُواْ",
+          "ٱلۡخَيۡرَٰتِۚ أَيۡنَ مَا تَكُونُواْ يَأۡتِ بِكُمُ ٱللَّهُ",
+          "جَمِيعًاۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَيۡءٖ قَدِيرٞ ١٤٨"
+        ],
+        "y": 620.8,
+        "meal": [
+          "Every nation has a direction to which it turns, so",
+          "compete with one another in good deeds.",
+          "Wherever you are, Allah will bring you all",
+          "together, for Allah is Most Capable of all things."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1094.8,
+    "full": "Every nation has a direction to which it turns, so compete with one another in good deeds. Wherever you are, Allah will bring you all together, for Allah is Most Capable of all things.",
+    "full_lines": [
+      "Every nation has a direction to which it turns, so",
+      "compete with one another in good deeds.",
+      "Wherever you are, Allah will bring you all",
+      "together, for Allah is Most Capable of all things."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:148",
+    "ref_y": 1370.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which good deed will you get to first today?",
+    "cta_lines": [
+      "Which good deed will you get to first today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1428.8,
+    "handle_y": 1508.8,
+    "handle_size": 27
+  },
+  "layout_hash": "5f2c65b7e37ac1812111c6af",
+  "created_at": "2026-11-22T05:44:52+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "002148"
+    ],
+    "done": false
+  }
+}

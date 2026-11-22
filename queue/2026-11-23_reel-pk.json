@@ -1,0 +1,161 @@
+{
+  "entry_id": "quran:21:89-90",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Anbiyaa 21:89-90",
+  "slot": "2026-11-23_reel-pk",
+  "publish_at": "2026-11-23T15:32:24Z",
+  "local_slot": "2026-11-23 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-23_reel-pk.jpg",
+  "video": "queue/2026-11-23_reel-pk.mp4",
+  "cover": "queue/2026-11-23_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Still waiting for your dua to be answered?\n\nZakariyya cried out to his Lord, and Allah answered his prayer. Allah describes his family as people who hastened to do good and called upon Him with hope and fear, humble before Him.\n\nSurah Al-Anbiyaa 21:89-90\n\nSend this to someone who has made the same dua for years.\n\n#dua #zakariya #surahanbiya #hopeinallah\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "And [remember] Zachariah, when he cried out to his Lord, “My Lord, do not leave me childless, for You are the Best of Inheritors.” So We answered his prayer and gave him John, and made his wife fertile. They used to hasten in doing good deeds and used to call upon Us with hope and fear, and they were humble before Us (Surah Al-Anbiyaa 21:89-90)",
+  "theme": "dua with hope / Zakariyya's prayer answered",
+  "review": "Independent reviewer approved: Arabic checked on card and reel, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:21:89-90",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Still waiting for your dua to be answered?",
+    "hook_lines": [
+      "Still waiting for your dua to",
+      "be answered?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 56,
+    "verses": [
+      {
+        "ayah": "021089",
+        "lines": [
+          "وَزَكَرِيَّآ إِذۡ نَادَىٰ رَبَّهُۥ رَبِّ لَا تَذَرۡنِي فَرۡدٗا وَأَنتَ خَيۡرُ",
+          "ٱلۡوَٰرِثِينَ ٨٩"
+        ],
+        "y": 596.0,
+        "meal": [
+          "And [remember] Zachariah, when he cried out to his Lord, “My",
+          "Lord, do not leave me childless, for You are the Best of Inheritors.”"
+        ]
+      },
+      {
+        "ayah": "021090",
+        "lines": [
+          "فَٱسۡتَجَبۡنَا لَهُۥ وَوَهَبۡنَا لَهُۥ يَحۡيَىٰ وَأَصۡلَحۡنَا لَهُۥ زَوۡجَهُۥٓۚ",
+          "إِنَّهُمۡ كَانُواْ يُسَٰرِعُونَ فِي ٱلۡخَيۡرَٰتِ وَيَدۡعُونَنَا رَغَبٗا وَرَهَبٗاۖ",
+          "وَكَانُواْ لَنَا خَٰشِعِينَ ٩٠"
+        ],
+        "y": 814.0,
+        "meal": [
+          "So We answered his prayer and gave him John, and made his wife",
+          "fertile. They used to hasten in doing good deeds and used to call",
+          "upon Us with hope and fear, and they were humble before Us."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1171.0,
+    "full": "And [remember] Zachariah, when he cried out to his Lord, “My Lord, do not leave me childless, for You are the Best of Inheritors.” So We answered his prayer and gave him John, and made his wife fertile. They used to hasten in doing good deeds and used to call upon Us with hope and fear, and they were humble before Us.",
+    "full_lines": [
+      "And [remember] Zachariah, when he cried out to his Lord, “My",
+      "Lord, do not leave me childless, for You are the Best of Inheritors.”",
+      "So We answered his prayer and gave him John, and made his wife",
+      "fertile. They used to hasten in doing good deeds and used to call",
+      "upon Us with hope and fear, and they were humble before Us."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Al-Anbiyaa 21:89-90",
+    "ref_y": 1425.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who has made the same dua for years.",
+    "cta_lines": [
+      "Send this to someone who has made the same dua for years."
+    ],
+    "cta_size": 36,
+    "line_y": 1483.0,
+    "handle_y": 1546.0,
+    "handle_size": 27
+  },
+  "layout_hash": "52c439d0caf4cbe7b3162497",
+  "created_at": "2026-11-22T05:45:45+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "021089",
+      "021090"
+    ],
+    "done": false
+  }
+}

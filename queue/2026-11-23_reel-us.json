@@ -1,0 +1,150 @@
+{
+  "entry_id": "quran:11:114-115",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Hud 11:114-115",
+  "slot": "2026-11-23_reel-us",
+  "publish_at": "2026-11-24T01:27:11Z",
+  "local_slot": "2026-11-23 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-23_reel-us.jpg",
+  "video": "queue/2026-11-23_reel-us.mp4",
+  "cover": "queue/2026-11-23_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Good deeds wipe out evil deeds, Allah says\n\nAllah tells us to establish prayer at both ends of the day and in hours of the night, for good deeds wipe out evil deeds. Then He tells us to be patient, for He does not let the reward of those who do good go to waste.\n\nSurah Hud 11:114-115\n\nPick one prayer you will guard all week, starting tonight.\n\n#salah #patience #surahhud #islamicreminder\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "Establish prayer at the two ends of the day and in some hours of the night. Indeed, good deeds wipe out evil deeds. This is a reminder for those who are mindful. And be patient, for indeed Allah does not let the reward of those who do good to go to waste (Surah Hud 11:114-115)",
+  "theme": "prayer and patience / good deeds wipe out evil deeds",
+  "review": "Independent reviewer approved: Arabic checked on card and reel, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:11:114-115",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Good deeds wipe out evil deeds, Allah says",
+    "hook_lines": [
+      "Good deeds wipe out evil",
+      "deeds, Allah says"
+    ],
+    "hook_size": 82,
+    "arabic_size": 66,
+    "verses": [
+      {
+        "ayah": "011114",
+        "lines": [
+          "وَأَقِمِ ٱلصَّلَوٰةَ طَرَفَيِ ٱلنَّهَارِ وَزُلَفٗا مِّنَ ٱلَّيۡلِۚ إِنَّ",
+          "ٱلۡحَسَنَٰتِ يُذۡهِبۡنَ ٱلسَّيِّـَٔاتِۚ ذَٰلِكَ ذِكۡرَىٰ",
+          "لِلذَّٰكِرِينَ ١١٤"
+        ],
+        "y": 594.8,
+        "meal": [
+          "Establish prayer at the two ends of the day and in some",
+          "hours of the night. Indeed, good deeds wipe out evil deeds.",
+          "This is a reminder for those who are mindful."
+        ]
+      },
+      {
+        "ayah": "011115",
+        "lines": [
+          "وَٱصۡبِرۡ فَإِنَّ ٱللَّهَ لَا يُضِيعُ أَجۡرَ ٱلۡمُحۡسِنِينَ ١١٥"
+        ],
+        "y": 978.8,
+        "meal": [
+          "And be patient, for indeed Allah does not let the reward of",
+          "those who do good to go to waste."
+        ]
+      }
+    ],
+    "meal_size": 38,
+    "meal_y": 1136.8,
+    "full": "Establish prayer at the two ends of the day and in some hours of the night. Indeed, good deeds wipe out evil deeds. This is a reminder for those who are mindful. And be patient, for indeed Allah does not let the reward of those who do good to go to waste.",
+    "full_lines": [
+      "Establish prayer at the two ends of the day and in some",
+      "hours of the night. Indeed, good deeds wipe out evil deeds.",
+      "This is a reminder for those who are mindful. And be",
+      "patient, for indeed Allah does not let the reward of those",
+      "who do good to go to waste."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Hud 11:114-115",
+    "ref_y": 1420.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one prayer you will guard all week, starting tonight.",
+    "cta_lines": [
+      "Pick one prayer you will guard all week, starting tonight."
+    ],
+    "cta_size": 40,
+    "line_y": 1478.8,
+    "handle_y": 1547.8,
+    "handle_size": 27
+  },
+  "layout_hash": "7a9328b6aa94f4ea6162ced8",
+  "created_at": "2026-11-22T05:46:59+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "011114",
+      "011115"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "entry_id": "quran:20:131",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Taa-Haa 20:131",
+  "slot": "2026-11-23_reel-eu",
+  "publish_at": "2026-11-23T18:02:26Z",
+  "local_slot": "2026-11-23 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-23_reel-eu.jpg",
+  "video": "queue/2026-11-23_reel-eu.mp4",
+  "cover": "queue/2026-11-23_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Comparing your life to theirs? Read this\n\nAllah tells us not to look with longing at the splendor of this life that others were given as a trial. The provision of your Lord is far better and more lasting.\n\nSurah Taa-Haa 20:131\n\nBefore your next scroll, thank Allah for one thing you already have.\n\n#comparison #contentment #surahtaha #muslimmindset\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Do not turn your eyes covetously towards the various forms of splendor of this life that We have given some of the [disbelievers] to enjoy, as a trial for them. But the provision of your Lord is far better and more lasting (Surah Taa-Haa 20:131)",
+  "theme": "comparison / contentment, Allah's provision is better",
+  "review": "Independent reviewer approved: Arabic checked on card and reel, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:20:131",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Comparing your life to theirs? Read this",
+    "hook_lines": [
+      "Comparing your life to",
+      "theirs? Read this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 64,
+    "verses": [
+      {
+        "ayah": "020131",
+        "lines": [
+          "وَلَا تَمُدَّنَّ عَيۡنَيۡكَ إِلَىٰ مَا مَتَّعۡنَا بِهِۦٓ أَزۡوَٰجٗا مِّنۡهُمۡ",
+          "زَهۡرَةَ ٱلۡحَيَوٰةِ ٱلدُّنۡيَا لِنَفۡتِنَهُمۡ فِيهِۚ وَرِزۡقُ رَبِّكَ خَيۡرٞ",
+          "وَأَبۡقَىٰ ١٣١"
+        ],
+        "y": 598.0,
+        "meal": [
+          "Do not turn your eyes covetously towards the",
+          "various forms of splendor of this life that We",
+          "have given some of the [disbelievers] to enjoy, as a",
+          "trial for them. But the provision of your Lord is",
+          "far better and more lasting."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1000.0,
+    "full": "Do not turn your eyes covetously towards the various forms of splendor of this life that We have given some of the [disbelievers] to enjoy, as a trial for them. But the provision of your Lord is far better and more lasting.",
+    "full_lines": [
+      "Do not turn your eyes covetously towards the",
+      "various forms of splendor of this life that We",
+      "have given some of the [disbelievers] to enjoy, as a",
+      "trial for them. But the provision of your Lord is",
+      "far better and more lasting."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Taa-Haa 20:131",
+    "ref_y": 1339.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Before your next scroll, thank Allah for one thing you already have.",
+    "cta_lines": [
+      "Before your next scroll, thank Allah for one",
+      "thing you already have."
+    ],
+    "cta_size": 48,
+    "line_y": 1397.0,
+    "handle_y": 1543.0,
+    "handle_size": 27
+  },
+  "layout_hash": "9a8020f355a314603e3128f6",
+  "created_at": "2026-11-22T05:46:19+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "020131"
+    ],
+    "done": false
+  }
+}
