@@ -20,6 +20,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 - 14 Kas, Alafasy: Yusuf 12:86 · Al-Kafirun 109:6 · Ash-Shams 91:9-10 · Ibrahim 14:7
 - 16 Kas, Alafasy: Al-Insan 76:9 · An-Nasr 110:3 · Al-Waqi'ah 56:77-79 · Al-Hadid 57:3
 - 17 Kas, Alafasy: Al-Hujurat 49:10 · Quraysh 106:3-4 · Maryam 19:30 · As-Saff 61:2
+- 22 Kas, Alafasy: Al-Kahf 18:46 · Al-Ma'un 107:4-5 · Ta-Ha 20:14 · Al-Jumu'ah 62:10
 - Denenip kullanılmayan: Az-Zumar 39:53 (okuma uzun, video 111 sn oldu; yerine 54:17). Kullanılabilir.
 
 **Trivia (Qur'an Quiz)**
@@ -85,6 +86,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-19 13:24 | Animasyon · ortam sesi + tilavet (79,6 sn) | Al-Anbiya 21:107 · Alafasy | Prophet Muhammad ﷺ lost so much before he even turned 50. | — | — | — | — | — | — | — | — |
 | 2026-11-20 11:13 | Animasyon · İngilizce TTS anlatım (123,6 sn) | A to Z Islamic Quiz Part 2 (12 harf) · ayet yok | A to Z Islamic Quiz, Part 2: the other 12 letters. | — | — | — | — | — | — | — | — |
 | 2026-11-20 13:30 | Animasyon · tilavet (89,3 sn) | Al-Qiyamah 75:26-40 · Alafasy | "Does man think that he will be left neglected" (Al-Qiyaama 75:36) | — | — | — | — | — | — | — | — |
+| 2026-11-22 15:56 | Guess the Surah (93,5 sn) | 18:46, 107:4-5, 20:14, 62:10 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -333,4 +335,20 @@ The last moments of a life, and what comes after: Surah Al-Qiyamah 75:26-40, rec
 Which verse stayed with you? Tell us in the comments, and send this to someone who needs it today.
 
 #quran #quranrecitation #alafasy #qiyamah #islamicreminder #muslim #deen
+```
+
+**Guess the Surah, 22 Kasım** (sahibinin panelde onayladığı caption; 15:56 UTC'de paylaşıldı)
+```
+Can you name all 4 Surahs? The last one is hard.
+
+Listen to the verse, pick your answer before the timer ends, then see if you got it right.
+
+Comment your score below (?/4) and send this to a friend to compare.
+
+Verses: Al-Kahf 18:46 · Al-Ma'un 107:4-5 · Ta-Ha 20:14 · Al-Jumu'ah 62:10
+Recitation: Mishary Rashid Alafasy
+
+Follow @thehalalalgorithm for more.
+
+#quran #guessthesurah #quranquiz #islamicquiz #quranverses #islam #muslim #alafasy
 ```
