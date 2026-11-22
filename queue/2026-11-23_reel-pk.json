@@ -17,7 +17,7 @@
   "review": "Independent reviewer approved: Arabic checked on card and reel, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -156,6 +156,16 @@
       "021089",
       "021090"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 47.3,
+    "video_seconds": 50.5,
+    "verse_seconds": [
+      16.54,
+      30.75
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-22T05:50:16+00:00"
   }
 }
