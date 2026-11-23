@@ -1,0 +1,6 @@
+[
+ {"level": "MEDIUM", "entry": "quran:17:24", "verses": ["017024"], "options": [["Al-Kahf", "الكهف"], ["Luqman", "لقمان"], ["Al-Isra", "الإسراء"], ["Al-Ahqaf", "الأحقاف"]], "answer": 2},
+ {"level": "EASY", "entry": "quran:112:3-4", "verses": ["112003", "112004"], "options": [["Al-Ikhlas", "الإخلاص"], ["Al-Falaq", "الفلق"], ["An-Nas", "الناس"], ["Al-Kafirun", "الكافرون"]], "answer": 0},
+ {"level": "MEDIUM", "entry": "quran:29:69", "verses": ["029069"], "options": [["Ar-Rum", "الروم"], ["Luqman", "لقمان"], ["As-Sajdah", "السجدة"], ["Al-Ankabut", "العنكبوت"]], "answer": 3},
+ {"level": "HARD", "entry": "quran:23:115", "verses": ["023115"], "options": [["Al-Hajj", "الحج"], ["Al-Mu'minun", "المؤمنون"], ["An-Nur", "النور"], ["Al-Furqan", "الفرقان"]], "answer": 1}
+]
