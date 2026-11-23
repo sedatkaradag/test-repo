@@ -21,6 +21,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 - 16 Kas, Alafasy: Al-Insan 76:9 · An-Nasr 110:3 · Al-Waqi'ah 56:77-79 · Al-Hadid 57:3
 - 17 Kas, Alafasy: Al-Hujurat 49:10 · Quraysh 106:3-4 · Maryam 19:30 · As-Saff 61:2
 - 22 Kas, Alafasy: Al-Kahf 18:46 · Al-Ma'un 107:4-5 · Ta-Ha 20:14 · Al-Jumu'ah 62:10
+- 23 Kas, Alafasy: Al-Isra 17:24 · Al-Ikhlas 112:3-4 · Al-Ankabut 29:69 · Al-Mu'minun 23:115
 - Denenip kullanılmayan: Az-Zumar 39:53 (okuma uzun, video 111 sn oldu; yerine 54:17). Kullanılabilir.
 
 **Trivia (Qur'an Quiz)**
@@ -87,6 +88,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-20 11:13 | Animasyon · İngilizce TTS anlatım (123,6 sn) | A to Z Islamic Quiz Part 2 (12 harf) · ayet yok | A to Z Islamic Quiz, Part 2: the other 12 letters. | — | — | — | — | — | — | — | — |
 | 2026-11-20 13:30 | Animasyon · tilavet (89,3 sn) | Al-Qiyamah 75:26-40 · Alafasy | "Does man think that he will be left neglected" (Al-Qiyaama 75:36) | — | — | — | — | — | — | — | — |
 | 2026-11-22 15:56 | Guess the Surah (93,5 sn) | 18:46, 107:4-5, 20:14, 62:10 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
+| 2026-11-23 14:31 | Guess the Surah (81,6 sn) | 17:24, 112:3-4, 29:69, 23:115 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -346,6 +348,22 @@ Listen to the verse, pick your answer before the timer ends, then see if you got
 Comment your score below (?/4) and send this to a friend to compare.
 
 Verses: Al-Kahf 18:46 · Al-Ma'un 107:4-5 · Ta-Ha 20:14 · Al-Jumu'ah 62:10
+Recitation: Mishary Rashid Alafasy
+
+Follow @thehalalalgorithm for more.
+
+#quran #guessthesurah #quranquiz #islamicquiz #quranverses #islam #muslim #alafasy
+```
+
+**Guess the Surah, 23 Kasım** (sahibinin panelde onayladığı caption; 14:31 UTC'de paylaşıldı)
+```
+Can you name all 4 Surahs? The last one is hard.
+
+Listen to the verse, pick your answer before the timer ends, then see if you got it right.
+
+Comment your score below (?/4) and send this to a friend to compare.
+
+Verses: Al-Isra 17:24 · Al-Ikhlas 112:3-4 · Al-Ankabut 29:69 · Al-Mu'minun 23:115
 Recitation: Mishary Rashid Alafasy
 
 Follow @thehalalalgorithm for more.
