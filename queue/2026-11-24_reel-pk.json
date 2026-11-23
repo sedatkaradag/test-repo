@@ -1,0 +1,106 @@
+{
+  "entry_id": "quran:2:115",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:115",
+  "slot": "2026-11-24_reel-pk",
+  "publish_at": "2026-11-24T15:28:03Z",
+  "local_slot": "2026-11-24 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-24_reel-pk.jpg",
+  "video": "queue/2026-11-24_reel-pk.mp4",
+  "cover": "queue/2026-11-24_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "For anyone who feels far from home tonight\n\nEast or west, wherever you turn, there is the Face of Allah. He is All-Encompassing, All-Knowing, so no place is too far and no corner is hidden from Him.\n\nSurah Al-Baqara 2:115\n\nSend this to someone living far from their family.\n\n#allahisnear #faraway #surahbaqarah #muslimabroad\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "To Allah belong the east and the west; wherever you turn, there is the Face of Allah. For Allah is All-Encompassing, All-Knowing (Surah Al-Baqara 2:115)",
+  "theme": "far from home / wherever you turn is the Face of Allah",
+  "review": "approve r1: Arabic checked at 2.5x on card and Reel, English/reference match, caption clean",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:115",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For anyone who feels far from home tonight",
+    "hook_lines": [
+      "For anyone who feels far",
+      "from home tonight"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "002115",
+        "lines": [
+          "وَلِلَّهِ ٱلۡمَشۡرِقُ وَٱلۡمَغۡرِبُۚ فَأَيۡنَمَا تُوَلُّواْ",
+          "فَثَمَّ وَجۡهُ ٱللَّهِۚ إِنَّ ٱللَّهَ وَٰسِعٌ عَلِيمٞ ١١٥"
+        ],
+        "y": 672.4,
+        "meal": [
+          "To Allah belong the east and the west; wherever",
+          "you turn, there is the Face of Allah. For Allah is",
+          "All-Encompassing, All-Knowing."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "To Allah belong the east and the west; wherever you turn, there is the Face of Allah. For Allah is All-Encompassing, All-Knowing.",
+    "full_lines": [
+      "To Allah belong the east and the west; wherever",
+      "you turn, there is the Face of Allah. For Allah is",
+      "All-Encompassing, All-Knowing."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:115",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone living far from their family.",
+    "cta_lines": [
+      "Send this to someone living far from their",
+      "family."
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "1aef7c37dd05e7b30b452e1c",
+  "created_at": "2026-11-23T05:45:51+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "002115"
+    ],
+    "done": false
+  }
+}

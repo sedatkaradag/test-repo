@@ -1,0 +1,113 @@
+{
+  "entry_id": "quran:55:26-27",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ar-Rahmaan 55:26-27",
+  "slot": "2026-11-24_reel-eu",
+  "publish_at": "2026-11-24T17:59:00Z",
+  "local_slot": "2026-11-24 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-24_reel-eu.jpg",
+  "video": "queue/2026-11-24_reel-eu.mp4",
+  "cover": "queue/2026-11-24_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Only one thing remains when everything ends\n\nEveryone on earth will perish. What remains is the Face of your Lord, full of Majesty and Honor. A quiet reminder to give your best to what lasts.\n\nSurah Ar-Rahmaan 55:26-27\n\nWhat is one thing you are doing today for the One who remains?\n\n#rememberdeath #surahrahman #whatlasts #quranreflection\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Everyone on earth will perish; but there will remain the Face of your Lord, full of Majesty and Honor (Surah Ar-Rahmaan 55:26-27)",
+  "theme": "what remains / all perishes but the Face of your Lord",
+  "review": "approve r1: Arabic checked at 2.5x on card and Reel, English/reference match, caption clean",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:55:26-27",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Only one thing remains when everything ends",
+    "hook_lines": [
+      "Only one thing remains",
+      "when everything ends"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "055026",
+        "lines": [
+          "كُلُّ مَنۡ عَلَيۡهَا فَانٖ ٢٦"
+        ],
+        "y": 610.0,
+        "meal": [
+          "Everyone on earth will perish;"
+        ]
+      },
+      {
+        "ayah": "055027",
+        "lines": [
+          "وَيَبۡقَىٰ وَجۡهُ رَبِّكَ ذُو ٱلۡجَلَٰلِ",
+          "وَٱلۡإِكۡرَامِ ٢٧"
+        ],
+        "y": 766.0,
+        "meal": [
+          "but there will remain the Face of your Lord, full",
+          "of Majesty and Honor."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1108.0,
+    "full": "Everyone on earth will perish; but there will remain the Face of your Lord, full of Majesty and Honor.",
+    "full_lines": [
+      "Everyone on earth will perish; but there will",
+      "remain the Face of your Lord, full of Majesty and",
+      "Honor."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah Ar-Rahmaan 55:26-27",
+    "ref_y": 1321.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "What is one thing you are doing today for the One who remains?",
+    "cta_lines": [
+      "What is one thing you are doing today for the",
+      "One who remains?"
+    ],
+    "cta_size": 48,
+    "line_y": 1379.0,
+    "handle_y": 1525.0,
+    "handle_size": 27
+  },
+  "layout_hash": "5abdee2ddc404f4b7fa3d0fa",
+  "created_at": "2026-11-23T05:46:13+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "055026",
+      "055027"
+    ],
+    "done": false
+  }
+}

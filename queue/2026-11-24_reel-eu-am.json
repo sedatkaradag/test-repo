@@ -1,0 +1,100 @@
+{
+  "entry_id": "quran:50:18",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Qaaf 50:18",
+  "slot": "2026-11-24_reel-eu-am",
+  "publish_at": "2026-11-24T07:10:10Z",
+  "local_slot": "2026-11-24 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-24_reel-eu-am.jpg",
+  "video": "queue/2026-11-24_reel-eu-am.mp4",
+  "cover": "queue/2026-11-24_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Before you say anything today, read this\n\nAllah tells us that a person does not utter a single word without a vigilant watcher with him, ready to record it. Every message, every comment, every reply is part of that.\n\nSurah Qaaf 50:18\n\nPick one word you will hold back today, and one kind word you will say instead.\n\n#speech #guardyourtongue #surahqaf #muslimhabits\n\nRecitation: Ahmed Al-Ajmi",
+  "alt_text": "Not a single word he utters but there is with him a vigilant watcher, ready [to record it] (Surah Qaaf 50:18)",
+  "theme": "speech / every word is recorded",
+  "review": "approve r2: Arabic checked at 2.5x on card and Reel, English/reference match, caption paraphrase fixed",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:50:18",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Before you say anything today, read this",
+    "hook_lines": [
+      "Before you say anything",
+      "today, read this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "050018",
+        "lines": [
+          "مَّا يَلۡفِظُ مِن قَوۡلٍ إِلَّا لَدَيۡهِ رَقِيبٌ",
+          "عَتِيدٞ ١٨"
+        ],
+        "y": 697.6,
+        "meal": [
+          "Not a single word he utters but there is with him",
+          "a vigilant watcher, ready [to record it]."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "Not a single word he utters but there is with him a vigilant watcher, ready [to record it].",
+    "full_lines": [
+      "Not a single word he utters but there is with him",
+      "a vigilant watcher, ready [to record it]."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Qaaf 50:18",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one word you will hold back today, and one kind word you will say instead.",
+    "cta_lines": [
+      "Pick one word you will hold back today, and",
+      "one kind word you will say instead."
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "1e53d3f26cfa218bd5eea9ad",
+  "created_at": "2026-11-23T05:47:21+00:00",
+  "audio": {
+    "reciter": "ahmed_ibn_ali_al_ajamy_128kbps",
+    "reciter_name": "Ahmed Al-Ajmi",
+    "ayahs": [
+      "050018"
+    ],
+    "done": false
+  }
+}
