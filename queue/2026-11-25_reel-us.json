@@ -17,7 +17,7 @@
   "review": "Approve: Arabic checked at 2.5x, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -132,6 +132,16 @@
       "032016",
       "032017"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 32.8,
+    "video_seconds": 36.0,
+    "verse_seconds": [
+      15.76,
+      17.08
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-24T05:49:39+00:00"
   }
 }

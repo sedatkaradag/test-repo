@@ -17,7 +17,7 @@
   "review": "Approve: Arabic checked word by word, English/reference match, caption quotes exact",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -132,6 +132,15 @@
     "ayahs": [
       "024022"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 33.9,
+    "video_seconds": 37.1,
+    "verse_seconds": [
+      33.88
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-24T05:48:10+00:00"
   }
 }
