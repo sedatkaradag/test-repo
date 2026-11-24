@@ -1,0 +1,137 @@
+{
+  "entry_id": "quran:24:22",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Noor 24:22",
+  "slot": "2026-11-25_reel-pk",
+  "publish_at": "2026-11-25T15:29:50Z",
+  "local_slot": "2026-11-25 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-25_reel-pk.jpg",
+  "video": "queue/2026-11-25_reel-pk.mp4",
+  "cover": "queue/2026-11-25_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Hard to forgive a relative? Read this\n\nAllah tells those who have been given more not to swear to hold back their help from relatives and those in need. Let them pardon and overlook. Then He asks, \"Do you not like to be forgiven by Allah?\"\n\nSurah An-Noor 24:22\n\nName one person you will pardon this week, even if only in your heart.\n\n#forgiveness #familyties #surahnur #letitgo\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "The people of virtue and affluence among you should not swear to withhold their aid from their relatives, the needy and the emigrants in the cause of Allah. Let them pardon and overlook. Do you not like to be forgiven by Allah? For Allah is All-Forgiving, Most Merciful (Surah An-Noor 24:22)",
+  "theme": "forgiving family / pardon and overlook",
+  "review": "Approve: Arabic checked word by word, English/reference match, caption quotes exact",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:24:22",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Hard to forgive a relative? Read this",
+    "hook_lines": [
+      "Hard to forgive a relative?",
+      "Read this"
+    ],
+    "hook_size": 82,
+    "arabic_size": 52,
+    "verses": [
+      {
+        "ayah": "024022",
+        "lines": [
+          "وَلَا يَأۡتَلِ أُوْلُواْ ٱلۡفَضۡلِ مِنكُمۡ وَٱلسَّعَةِ أَن يُؤۡتُوٓاْ أُوْلِي ٱلۡقُرۡبَىٰ",
+          "وَٱلۡمَسَٰكِينَ وَٱلۡمُهَٰجِرِينَ فِي سَبِيلِ ٱللَّهِۖ وَلۡيَعۡفُواْ وَلۡيَصۡفَحُوٓاْۗ",
+          "أَلَا تُحِبُّونَ أَن يَغۡفِرَ ٱللَّهُ لَكُمۡۚ وَٱللَّهُ غَفُورٞ رَّحِيمٌ ٢٢"
+        ],
+        "y": 673.2,
+        "meal": [
+          "The people of virtue and affluence among you should not swear to",
+          "withhold their aid from their relatives, the needy and the",
+          "emigrants in the cause of Allah. Let them pardon and overlook.",
+          "Do you not like to be forgiven by Allah? For Allah is All-Forgiving,",
+          "Most Merciful."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1006.2,
+    "full": "The people of virtue and affluence among you should not swear to withhold their aid from their relatives, the needy and the emigrants in the cause of Allah. Let them pardon and overlook. Do you not like to be forgiven by Allah? For Allah is All-Forgiving, Most Merciful.",
+    "full_lines": [
+      "The people of virtue and affluence among you should not swear to",
+      "withhold their aid from their relatives, the needy and the",
+      "emigrants in the cause of Allah. Let them pardon and overlook.",
+      "Do you not like to be forgiven by Allah? For Allah is All-Forgiving,",
+      "Most Merciful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Noor 24:22",
+    "ref_y": 1260.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Name one person you will pardon this week, even if only in your heart.",
+    "cta_lines": [
+      "Name one person you will pardon this week, even if only in",
+      "your heart."
+    ],
+    "cta_size": 36,
+    "line_y": 1318.2,
+    "handle_y": 1430.2,
+    "handle_size": 27
+  },
+  "layout_hash": "14822b68716c7fd68ed5b176",
+  "created_at": "2026-11-24T05:44:53+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "024022"
+    ],
+    "done": false
+  }
+}

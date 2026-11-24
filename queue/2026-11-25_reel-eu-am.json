@@ -1,0 +1,131 @@
+{
+  "entry_id": "quran:12:90",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Yusuf 12:90",
+  "slot": "2026-11-25_reel-eu-am",
+  "publish_at": "2026-11-25T07:14:15Z",
+  "local_slot": "2026-11-25 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-25_reel-eu-am.jpg",
+  "video": "queue/2026-11-25_reel-eu-am.mp4",
+  "cover": "queue/2026-11-25_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "What Yusuf said about patience when they met again\n\nHis brothers asked, \"Are you really Joseph?\" He said Allah had surely been gracious to him and his brother, and that whoever fears Allah and remains patient, Allah never lets the reward of those who do good be lost.\n\nSurah Yusuf 12:90\n\nSend this to someone whose patience is being tested right now.\n\n#patience #prophetyusuf #surahyusuf #sabr\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "They said, “Are you really Joseph?” He said, “I am Joseph, and this is my brother. Allah has surely been gracious to us. Whoever fears Allah and remains patient, Allah will never let the reward of those who do good to be lost.” (Surah Yusuf 12:90)",
+  "theme": "patience rewarded / Yusuf meets his brothers again",
+  "review": "Round 2 approve: Arabic checked mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:12:90",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "What Yusuf said about patience when they met again",
+    "hook_lines": [
+      "What Yusuf said about",
+      "patience when they met",
+      "again"
+    ],
+    "hook_size": 82,
+    "arabic_size": 68,
+    "verses": [
+      {
+        "ayah": "012090",
+        "lines": [
+          "قَالُوٓاْ أَءِنَّكَ لَأَنتَ يُوسُفُۖ قَالَ أَنَا۠ يُوسُفُ",
+          "وَهَٰذَآ أَخِيۖ قَدۡ مَنَّ ٱللَّهُ عَلَيۡنَآۖ إِنَّهُۥ مَن يَتَّقِ",
+          "وَيَصۡبِرۡ فَإِنَّ ٱللَّهَ لَا يُضِيعُ أَجۡرَ ٱلۡمُحۡسِنِينَ ٩٠"
+        ],
+        "y": 707.8,
+        "meal": [
+          "They said, “Are you really Joseph?” He said, “I am Joseph,",
+          "and this is my brother. Allah has surely been gracious to us.",
+          "Whoever fears Allah and remains patient, Allah will never",
+          "let the reward of those who do good to be lost.”"
+        ]
+      }
+    ],
+    "meal_size": 38,
+    "meal_y": 1133.8,
+    "full": "They said, “Are you really Joseph?” He said, “I am Joseph, and this is my brother. Allah has surely been gracious to us. Whoever fears Allah and remains patient, Allah will never let the reward of those who do good to be lost.”",
+    "full_lines": [
+      "They said, “Are you really Joseph?” He said, “I am Joseph,",
+      "and this is my brother. Allah has surely been gracious to us.",
+      "Whoever fears Allah and remains patient, Allah will never",
+      "let the reward of those who do good to be lost.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Yusuf 12:90",
+    "ref_y": 1365.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone whose patience is being tested right now.",
+    "cta_lines": [
+      "Send this to someone whose patience is being tested",
+      "right now."
+    ],
+    "cta_size": 40,
+    "line_y": 1423.8,
+    "handle_y": 1547.8,
+    "handle_size": 27
+  },
+  "layout_hash": "631ebbf42156f6176b97d11c",
+  "created_at": "2026-11-24T05:44:28+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "012090"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "entry_id": "quran:19:96",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Maryam 19:96",
+  "slot": "2026-11-25_reel-eu",
+  "publish_at": "2026-11-25T18:02:39Z",
+  "local_slot": "2026-11-25 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-25_reel-eu.jpg",
+  "video": "queue/2026-11-25_reel-eu.mp4",
+  "cover": "queue/2026-11-25_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Who does Allah make beloved to His creation?\n\nAllah tells us that the Most Compassionate will endear those who believe and do righteous deeds. A promise worth working toward, one good deed at a time.\n\nSurah Maryam 19:96\n\nWhich righteous deed will you do quietly today?\n\n#beloved #righteousdeeds #surahmaryam #muslimhabits\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Those who believe and do righteous deeds, the Most Compassionate will endear them [to His creation] (Surah Maryam 19:96)",
+  "theme": "being beloved / faith and righteous deeds",
+  "review": "Round 2 approve: Arabic checked mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:19:96",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Who does Allah make beloved to His creation?",
+    "hook_lines": [
+      "Who does Allah make",
+      "beloved to His creation?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "019096",
+        "lines": [
+          "إِنَّ ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ",
+          "سَيَجۡعَلُ لَهُمُ ٱلرَّحۡمَٰنُ وُدّٗا ٩٦"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Those who believe and do righteous deeds, the",
+          "Most Compassionate will endear them [to His",
+          "creation]."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Those who believe and do righteous deeds, the Most Compassionate will endear them [to His creation].",
+    "full_lines": [
+      "Those who believe and do righteous deeds, the",
+      "Most Compassionate will endear them [to His",
+      "creation]."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Maryam 19:96",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which righteous deed will you do quietly today?",
+    "cta_lines": [
+      "Which righteous deed will you do quietly",
+      "today?"
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "2d2f6c293da284df59dcb7d1",
+  "created_at": "2026-11-24T05:45:08+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "019096"
+    ],
+    "done": false
+  }
+}

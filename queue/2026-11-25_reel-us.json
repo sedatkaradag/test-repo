@@ -1,0 +1,137 @@
+{
+  "entry_id": "quran:32:16-17",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah As-Sajda 32:16-17",
+  "slot": "2026-11-25_reel-us",
+  "publish_at": "2026-11-26T01:29:59Z",
+  "local_slot": "2026-11-25 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-25_reel-us.jpg",
+  "video": "queue/2026-11-25_reel-us.mp4",
+  "cover": "queue/2026-11-25_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Leaving your warm bed to make dua tonight?\n\nAllah describes people who forsake their beds, calling on their Lord with fear and hope, and who spend from what He provided them. No soul knows the delights kept hidden for them as a reward.\n\nSurah As-Sajda 32:16-17\n\nWill you set an alarm tonight for a few minutes of dua?\n\n#tahajjud #qiyamullayl #surahsajdah #nightprayer\n\nRecitation: Mishary Alafasy",
+  "alt_text": "They forsake their beds, supplicating their Lord with fear and hope, and spend out of what We have provided for them. No soul knows what delights are kept hidden for them as a reward for what they used to do (Surah As-Sajda 32:16-17)",
+  "theme": "night dua / hidden reward for those who leave their beds",
+  "review": "Approve: Arabic checked at 2.5x, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:32:16-17",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Leaving your warm bed to make dua tonight?",
+    "hook_lines": [
+      "Leaving your warm bed to",
+      "make dua tonight?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 70,
+    "verses": [
+      {
+        "ayah": "032016",
+        "lines": [
+          "تَتَجَافَىٰ جُنُوبُهُمۡ عَنِ ٱلۡمَضَاجِعِ يَدۡعُونَ",
+          "رَبَّهُمۡ خَوۡفٗا وَطَمَعٗا وَمِمَّا رَزَقۡنَٰهُمۡ يُنفِقُونَ ١٦"
+        ],
+        "y": 602.8,
+        "meal": [
+          "They forsake their beds, supplicating their Lord with fear",
+          "and hope, and spend out of what We have provided for",
+          "them."
+        ]
+      },
+      {
+        "ayah": "032017",
+        "lines": [
+          "فَلَا تَعۡلَمُ نَفۡسٞ مَّآ أُخۡفِيَ لَهُم مِّن قُرَّةِ أَعۡيُنٖ",
+          "جَزَآءَۢ بِمَا كَانُواْ يَعۡمَلُونَ ١٧"
+        ],
+        "y": 874.8,
+        "meal": [
+          "No soul knows what delights are kept hidden for them as a",
+          "reward for what they used to do."
+        ]
+      }
+    ],
+    "meal_size": 38,
+    "meal_y": 1176.8,
+    "full": "They forsake their beds, supplicating their Lord with fear and hope, and spend out of what We have provided for them. No soul knows what delights are kept hidden for them as a reward for what they used to do.",
+    "full_lines": [
+      "They forsake their beds, supplicating their Lord with fear",
+      "and hope, and spend out of what We have provided for",
+      "them. No soul knows what delights are kept hidden for",
+      "them as a reward for what they used to do."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "ref": "Surah As-Sajda 32:16-17",
+    "ref_y": 1408.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Will you set an alarm tonight for a few minutes of dua?",
+    "cta_lines": [
+      "Will you set an alarm tonight for a few minutes of dua?"
+    ],
+    "cta_size": 40,
+    "line_y": 1466.8,
+    "handle_y": 1535.8,
+    "handle_size": 27
+  },
+  "layout_hash": "3d5878cd0d8327e375042ae4",
+  "created_at": "2026-11-24T05:45:36+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "032016",
+      "032017"
+    ],
+    "done": false
+  }
+}
