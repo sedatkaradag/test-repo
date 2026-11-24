@@ -17,7 +17,7 @@
   "review": "approve r2: Arabic checked at 2.5x on card and Reel, English/reference match, caption paraphrase fixed",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
