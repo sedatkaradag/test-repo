@@ -54,6 +54,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 
 **Animasyon · tilavet**
 - 20 Kas, Alafasy: Al-Qiyamah 75:26-40 (hayatın son anları ve sonrası, ayet ayet) — paylaşıldı.
+- 25 Kas, Alafasy · Minshawi · Husary (quiz "Who said it?"): Al-Anbiya 21:87 (Yunus) · Yusuf 12:18 (Ya'qub) · As-Saffat 37:102 (İsmail) — paylaşıldı.
 
 ## Ayrıntılı kayıt
 
@@ -89,6 +90,7 @@ Reels olarak paylaşılmış olması önemli değil; ona bakılmaz.
 | 2026-11-20 13:30 | Animasyon · tilavet (89,3 sn) | Al-Qiyamah 75:26-40 · Alafasy | "Does man think that he will be left neglected" (Al-Qiyaama 75:36) | — | — | — | — | — | — | — | — |
 | 2026-11-22 15:56 | Guess the Surah (93,5 sn) | 18:46, 107:4-5, 20:14, 62:10 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
 | 2026-11-23 14:31 | Guess the Surah (81,6 sn) | 17:24, 112:3-4, 29:69, 23:115 · Alafasy | Can you name all 4 Surahs? The last one is hard. | — | — | — | — | — | — | — | — |
+| 2026-11-25 12:47 | Animasyon · tilavet (quiz, 75,4 sn) | 21:87, 12:18, 37:102 · Alafasy, Minshawi, Husary | Who said it? 3 quotes from the Qur'an, 3 reciters. | — | — | — | — | — | — | — | — |
 
 İlk iki quiz için uygulama içi ek istatistikler (tutma eğrisi, kaynak, takip) `notes/strategy.md` →
 "Elle yapılan testler" bölümünde.
@@ -369,4 +371,20 @@ Recitation: Mishary Rashid Alafasy
 Follow @thehalalalgorithm for more.
 
 #quran #guessthesurah #quranquiz #islamicquiz #quranverses #islam #muslim #alafasy
+```
+
+**Who said it?, 25 Kasım** (sahibinin panelde onayladığı caption; 12:47 UTC'de paylaşıldı)
+```
+Who said it? 3 quotes from the Qur'an, 3 reciters.
+
+Listen to the words, pick your answer before the timer ends, then see if you got it right.
+
+Comment your score below (?/3) and send this to a friend to compare.
+
+Quotes: Al-Anbiya 21:87 · Yusuf 12:18 · As-Saffat 37:102
+Recitation: Mishary Alafasy · Mohamed Siddiq Al-Minshawi · Mahmoud Khalil Al-Husary
+
+Follow @thehalalalgorithm for more.
+
+#quran #whosaidit #quranquiz #islamicquiz #prophets #islam #muslim #quranrecitation
 ```

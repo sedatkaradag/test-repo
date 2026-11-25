@@ -92,6 +92,7 @@ Full list with dates, captions and results: `notes/owner_chat/content_log.md` (a
 - Trivia, Alafasy: 37:142, 21:69, 97:3 (Nov 7) | 20:20, 19:25, 50:38 (Nov 8)
 - Voice note: 17:32 (Alafasy, posted Nov 10); 49:6 (first draft, not posted)
 - A to Z Islamic Quiz, TTS: Part 1, 13 letters, no verses (posted Nov 19) | Part 2, 12 letters, no verses (posted Nov 20)
+- Who said it?, Alafasy · Minshawi · Husary: 21:87, 12:18, 37:102 (Nov 25)
 - Story videos (hadith): Bukhari 1968 (posted Nov 11), Muslim 537 (in revision)
 
 ## Caption (the one that was posted)
