@@ -18,6 +18,12 @@ jobs:
         with: {python-version: "3.11"}
       - run: pip install -q "faster-whisper==1.1.1" requests
       - run: mkdir -p out && python asr/transcribe.py asr/audio_${{ matrix.chunk }}.flac out/transcript.json ar
+      - name: forced alignment of the known words, if asr/words_<chunk>.json exists (wav2vec2 Arabic, CTC)
+        run: |
+          if [ -f asr/words_${{ matrix.chunk }}.json ]; then
+            pip install -q --index-url https://download.pytorch.org/whl/cpu torch torchaudio && pip install -q transformers
+            python asr/ctc_align.py asr/audio_${{ matrix.chunk }}.flac asr/words_${{ matrix.chunk }}.json out/ctc.json
+          fi
       - name: push the transcript to branch asr-out-<chunk>
         run: |
           cd out
