@@ -251,5 +251,6 @@ Minşavi 12:18 sona doğru 2,7 sn, Husary 37:102 3,2 sn kayıyor; Alafasy ±0,3 
 "kelime parlamalarına tekrar bak"): uzun meddi sonraki kelimeye veriyor. Çözüm: **zorla hizalama** (CTC, wav2vec2 Arapça;
 asr-work dalında `asr/ctc_align.py`, `asr/words_<n>.json` varsa çalışır): gösterilen kelimeler kesilmiş klibe hizalanır, her kelime
 sonrakinin başlangıcına kadar parlar (`word_times.json`). Şıklarda isim altında küçük "(Peace be upon him)". Arapça alıntıda
-tırnaklar sağ üst (açılış) ve sol alt (kapanış), soldan sağa düzenin aynası. Kesim: align başlangıcı + baştaki sessizliği atla; Minşavi "kāle bel"i nefes almadan okuyor,
+büyük altın tırnaklar Arapçaya aittir: açılış Arapçanın sağ üstünde, kapanış Arapçanın sol altında (mealin değil;
+mealin kendi küçük tırnakları var). Arapça en fazla 2 satır, sığmazsa küçülür. Kesim: align başlangıcı + baştaki sessizliği atla; Minşavi "kāle bel"i nefes almadan okuyor,
 bu yüzden 2. tur "قال"dan başlar, İngilizcesi "He said, …". Her kesim ses tanımayla doğrulandı.
