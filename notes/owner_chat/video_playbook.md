@@ -239,3 +239,14 @@ Kalp ritmi ışığı soldan sağa çizgiyi çizer; damla hızlanarak düşer, h
 inceleyip güzelleştir"): ayrı katmanda çizilir ve metne doğru söner; önce ufuk ısınır, güneş uzak tepenin ardından yükselir, bulanık yumuşak
 ışık huzmeleri, sıcak pus bandı, 4 kat tepe (uzaktakiler soluk/sıcak, kenar ışığı güneşe yakın yerde güçlü), tepeler arası sis, yükselen zerreler.
 Başlıktaki Arapça sure adı logodan 22 px aşağıda (hareke logoya biniyordu).
+
+## Format: "Who said it?" (25 Kas) — `samples/story_video/who_said_it/`
+
+Referans: DfR8FsygV58 (38 sn, 3 tur, açık zemin). Bizde yeşil-altın: başlık, ROUND x/3, alıntı kartı (find.py Arapçasının sözün ilk
+kelimesinden ayet sonuna kadar olan dilimi + find.py İngilizcesinin tırnak içi kısmı), 2x2 şık, "Listen…" → 3 sn süre çubuğu →
+doğru şık yeşil ✓, "Yunus, calling on his Lord · Al-Anbiya 21:87"; her turda ayrı kari; sonda bizim kapanış. Ses: yalnızca tilavet.
+Turlar: Alafasy 21:87 (Yunus), Minşavi 12:18 (Yakub), Husary 37:102 (İsmail babasına). Sahibi: kari/ayet birebir olmak zorunda değil.
+**Dersler:** quran-align her karide güvenilir DEĞİL. Abdulbasit 21:87: ~6 sn kaymış (veri dosyadan uzun) → kullanılmadı.
+Minşavi 12:18 sona doğru 2,7 sn, Husary 37:102 3,2 sn kayıyor; Alafasy ±0,3 sn. Kelime parlaması bu yüzden kesilmiş klibin
+ses tanımasından (`word_times.json`). Kesim: align başlangıcı + baştaki sessizliği atla; Minşavi "kāle bel"i nefes almadan okuyor,
+bu yüzden 2. tur "قال"dan başlar, İngilizcesi "He said, …". Her kesim ses tanımayla doğrulandı.
