@@ -17,7 +17,7 @@
   "review": "Approve: Arabic checked word by word, English/reference match, caption quotes exact",
   "flags": [],
   "integrity": "passed",
-  "status": "ready",
+  "status": "publishing",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
