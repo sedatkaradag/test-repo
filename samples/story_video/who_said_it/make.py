@@ -50,8 +50,9 @@ for rec, name, s, v, w0, opts, ans, who, ref in ROUNDS:
     act = np.where(20 * np.log10(e / e.max() + 1e-9) > -40)[0]; s_end = (act[-1] + 1) * hop / SR
     clip = x[int(a0 * SR):int(min(len(x) / SR, s_end + .15) * SR)].copy()
     f = int(.03 * SR); clip[:f] *= np.linspace(0, 1, f); f = int(.12 * SR); clip[-f:] *= np.linspace(1, 0, f)
-    # word light: from speech-to-text on this exact clip (word_times.json), not quran-align: on 25 Nov quran-align was
-    # off from the voice by up to 2.7 s (Minshawi 12:18) and 3.2 s (Husary 37:102); Alafasy within 0.3 s.
+    # word light: forced alignment (CTC, wav2vec2 Arabic; asr-work asr/ctc_align.py) of the displayed words to this exact
+    # clip, in word_times.json; each word glows until the next one starts. Not quran-align (25 Nov: up to 2.7 s off for
+    # Minshawi 12:18, 3.2 s for Husary 37:102) and not whisper's word times (they give a long madd to the next word).
     wavfile.write(OUT / f"clip_{len(rounds)}.wav", 16000, (np.interp(np.arange(0, len(clip), SR / 16000), np.arange(len(clip)), clip) * 32767).astype(np.int16))
     WT = json.load(open(HERE / "word_times.json")) if (HERE / "word_times.json").exists() else {}
     if key in WT:

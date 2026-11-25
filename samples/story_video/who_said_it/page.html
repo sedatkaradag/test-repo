@@ -13,15 +13,18 @@ html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; backgro
 #title { top: 380px; font: 700 92px Poppins; color: #f4efe2; letter-spacing: -1px; }
 #round { top: 512px; } #round span { font: 700 25px Poppins; letter-spacing: 4px; color: #0b2a22; background: #e8c66a; border-radius: 30px; padding: 9px 26px; }
 .rd { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
-.card { position: absolute; left: 90px; width: 900px; top: 600px; box-sizing: border-box; padding: 56px 56px 50px; border-radius: 36px;
+.card { position: absolute; left: 90px; width: 900px; top: 600px; box-sizing: border-box; padding: 56px 56px 84px; border-radius: 36px;
   background: rgba(7,30,25,.72); border: 2.5px solid rgba(232,198,106,.75); box-shadow: 0 20px 60px rgba(0,0,0,.35); text-align: center; }
-.card .qm { position: absolute; left: 34px; top: 8px; font: 700 120px/1 Garamond; color: #e8c66a; }
+.card .qm { position: absolute; font: 700 120px/1 Garamond; color: #e8c66a; }
+.card .qm.o { right: 34px; top: 8px; transform: scaleX(-1); }
+.card .qm.c { left: 34px; bottom: -48px; transform: scaleX(-1); }
 .card .ar { font: 400 72px/1.75 Hafs; direction: rtl; }
 .card .en { font: italic 500 40px/1.38 Garamond; color: #eae5d6; margin-top: 18px; }
 .opts { position: absolute; left: 90px; width: 900px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
 .op { height: 124px; border-radius: 26px; background: rgba(240,236,224,.95); display: flex; align-items: center; padding: 0 30px; gap: 22px; box-sizing: border-box; position: relative; }
 .op .b { width: 50px; height: 50px; border-radius: 50%; background: #0f3a2f; color: #f4efe2; font: 700 25px/50px Poppins; text-align: center; flex: none; }
-.op .n { font: 700 42px Poppins; color: #0f3a2f; }
+.op .n { font: 700 40px/1.1 Poppins; color: #0f3a2f; } .op .p { font: 500 19px Poppins; color: rgba(15,58,47,.62); margin-top: 3px; letter-spacing: .3px; }
+.op.right .p { color: rgba(255,255,255,.8); }
 .op.right { background: #1f8a5b; } .op.right .n { color: #fff; } .op.right .b { background: #fff; color: #1f8a5b; }
 .status { position: absolute; left: 0; right: 0; text-align: center; font: 500 34px Poppins; color: rgba(240,236,224,.8); }
 .bar { position: absolute; left: 240px; width: 600px; height: 14px; border-radius: 8px; background: rgba(240,236,224,.18); overflow: hidden; }
@@ -50,8 +53,8 @@ const ease = x => { x = clamp(x); return x * x * (3 - 2 * x); };
 const ramp = (t, t0, d = .4) => ease((t - t0) / d);
 const R = D.rounds.map((r, k) => {
   const el = document.createElement("div"); el.className = "rd";
-  el.innerHTML = `<div class="card"><div class="qm">“</div><div class="ar"></div><div class="en">${r.en_open ? "“" + r.en + "”" : r.en + "”"}</div></div>
-    <div class="opts">${r.options.map((o, i) => `<div class="op"><div class="b">${"ABCD"[i]}</div><div class="n">${o}</div></div>`).join("")}</div>
+  el.innerHTML = `<div class="card"><div class="qm o">“</div><div class="qm c">”</div><div class="ar"></div><div class="en">${r.en_open ? "“" + r.en + "”" : r.en + "”"}</div></div>
+    <div class="opts">${r.options.map((o, i) => `<div class="op"><div class="b">${"ABCD"[i]}</div><div><div class="n">${o}</div><div class="p">(Peace be upon him)</div></div></div>`).join("")}</div>
     <div class="status">Listen…</div><div class="bar"><i></i></div><div class="who">${r.who}</div><div class="foot"></div>`;
   $("rounds").appendChild(el);
   const ar = el.querySelector(".ar");

@@ -247,6 +247,9 @@ kelimesinden ayet sonuna kadar olan dilimi + find.py İngilizcesinin tırnak iç
 doğru şık yeşil ✓, "Yunus, calling on his Lord · Al-Anbiya 21:87"; her turda ayrı kari; sonda bizim kapanış. Ses: yalnızca tilavet.
 Turlar: Alafasy 21:87 (Yunus), Minşavi 12:18 (Yakub), Husary 37:102 (İsmail babasına). Sahibi: kari/ayet birebir olmak zorunda değil.
 **Dersler:** quran-align her karide güvenilir DEĞİL. Abdulbasit 21:87: ~6 sn kaymış (veri dosyadan uzun) → kullanılmadı.
-Minşavi 12:18 sona doğru 2,7 sn, Husary 37:102 3,2 sn kayıyor; Alafasy ±0,3 sn. Kelime parlaması bu yüzden kesilmiş klibin
-ses tanımasından (`word_times.json`). Kesim: align başlangıcı + baştaki sessizliği atla; Minşavi "kāle bel"i nefes almadan okuyor,
+Minşavi 12:18 sona doğru 2,7 sn, Husary 37:102 3,2 sn kayıyor; Alafasy ±0,3 sn. Whisper'ın kelime zamanları da yetmedi (sahibi:
+"kelime parlamalarına tekrar bak"): uzun meddi sonraki kelimeye veriyor. Çözüm: **zorla hizalama** (CTC, wav2vec2 Arapça;
+asr-work dalında `asr/ctc_align.py`, `asr/words_<n>.json` varsa çalışır): gösterilen kelimeler kesilmiş klibe hizalanır, her kelime
+sonrakinin başlangıcına kadar parlar (`word_times.json`). Şıklarda isim altında küçük "(Peace be upon him)". Arapça alıntıda
+tırnaklar sağ üst (açılış) ve sol alt (kapanış), soldan sağa düzenin aynası. Kesim: align başlangıcı + baştaki sessizliği atla; Minşavi "kāle bel"i nefes almadan okuyor,
 bu yüzden 2. tur "قال"dan başlar, İngilizcesi "He said, …". Her kesim ses tanımayla doğrulandı.
