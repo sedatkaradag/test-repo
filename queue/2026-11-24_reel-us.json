@@ -17,7 +17,7 @@
   "review": "approve r2: Arabic checked at 2.5x on card and Reel, English/reference match, closing line fixed",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -104,5 +104,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-23T05:50:29+00:00"
-  }
+  },
+  "story_media_id": "18107339237014616",
+  "story_kind": "video",
+  "media_id": "18117481556029918",
+  "posted_at": "2026-11-25T01:30:25+00:00"
 }
