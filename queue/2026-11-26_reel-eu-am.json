@@ -17,7 +17,7 @@
   "review": "Round 2 approve: Arabic, English, reference, reel frame and caption checked",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -103,6 +103,15 @@
     "ayahs": [
       "029069"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 9.7,
+    "video_seconds": 12.9,
+    "verse_seconds": [
+      9.74
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-25T05:46:26+00:00"
   }
 }
