@@ -8,9 +8,12 @@
   "seconds": 75.4,
   "video": "manual/2026-11-25-who-said-it/video.mp4",
   "cover": "manual/2026-11-25-who-said-it/cover.jpg",
-  "status": "pending",
+  "status": "queued",
   "created_at": "2026-11-25T11:10:09Z",
   "version": 3,
   "notes": [],
-  "updated_at": "2026-11-25T12:36:47Z"
+  "updated_at": "2026-11-25T12:36:47Z",
+  "slot": "2026-11-25_handmade-1246",
+  "approved_caption": "Who said it? 3 quotes from the Qur'an, 3 reciters.\n\nListen to the words, pick your answer before the timer ends, then see if you got it right.\n\nComment your score below (?/3) and send this to a friend to compare.\n\nQuotes: Al-Anbiya 21:87 · Yusuf 12:18 · As-Saffat 37:102\nRecitation: Mishary Alafasy · Mohamed Siddiq Al-Minshawi · Mahmoud Khalil Al-Husary\n\nFollow @thehalalalgorithm for more.\n\n#quran #whosaidit #quranquiz #islamicquiz #prophets #islam #muslim #quranrecitation",
+  "approved_at": "2026-11-25T12:44:09Z"
 }
