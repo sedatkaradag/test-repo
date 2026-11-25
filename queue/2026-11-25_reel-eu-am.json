@@ -17,7 +17,7 @@
   "review": "Round 2 approve: Arabic checked mark by mark, English/reference match, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "publishing",
+  "status": "published",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -136,5 +136,9 @@
     ],
     "timing": "verse by verse",
     "added_at": "2026-11-24T05:46:35+00:00"
-  }
+  },
+  "story_media_id": "18108397097548593",
+  "story_kind": "video",
+  "media_id": "18174733165475685",
+  "posted_at": "2026-11-25T07:15:25+00:00"
 }
