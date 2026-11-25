@@ -1,0 +1,108 @@
+{
+  "entry_id": "quran:29:69",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ankaboot 29:69",
+  "slot": "2026-11-26_reel-eu-am",
+  "publish_at": "2026-11-26T07:14:23Z",
+  "local_slot": "2026-11-26 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-26_reel-eu-am.jpg",
+  "video": "queue/2026-11-26_reel-eu-am.mp4",
+  "cover": "queue/2026-11-26_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Allah's promise to those who strive for Him\n\nAllah says that He will surely guide those who strive in His cause to His ways, for Allah is with those who do good. The effort is yours, and the guidance comes from Him.\n\nSurah Al-Ankaboot 29:69\n\nSave it for the morning you feel like giving up.\n\n#striving #guidance #surahankabut #morningreminder\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "As for those who strive in Our cause, We will surely guide them to Our ways, for Allah is certainly with those who do good (Surah Al-Ankaboot 29:69)",
+  "theme": "striving / Allah guides those who strive (Thursday)",
+  "review": "Round 2 approve: Arabic, English, reference, reel frame and caption checked",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:29:69",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Allah's promise to those who strive for Him",
+    "hook_lines": [
+      "Allah's promise to those",
+      "who strive for Him"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "029069",
+        "lines": [
+          "وَٱلَّذِينَ جَٰهَدُواْ فِينَا لَنَهۡدِيَنَّهُمۡ سُبُلَنَاۚ",
+          "وَإِنَّ ٱللَّهَ لَمَعَ ٱلۡمُحۡسِنِينَ ٦٩"
+        ],
+        "y": 698.8,
+        "meal": [
+          "As for those who strive in Our cause, We will",
+          "surely guide them to Our ways, for Allah is",
+          "certainly with those who do good."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1040.8,
+    "full": "As for those who strive in Our cause, We will surely guide them to Our ways, for Allah is certainly with those who do good.",
+    "full_lines": [
+      "As for those who strive in Our cause, We will",
+      "surely guide them to Our ways, for Allah is",
+      "certainly with those who do good."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Ankaboot 29:69",
+    "ref_y": 1253.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Save it for the morning you feel like giving up.",
+    "cta_lines": [
+      "Save it for the morning you feel like giving up."
+    ],
+    "cta_size": 48,
+    "line_y": 1311.8,
+    "handle_y": 1391.8,
+    "handle_size": 27
+  },
+  "layout_hash": "38c0a20585ba5d048787125a",
+  "created_at": "2026-11-25T05:44:02+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "029069"
+    ],
+    "done": false
+  }
+}

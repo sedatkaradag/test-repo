@@ -1,0 +1,141 @@
+{
+  "entry_id": "quran:26:83-85",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ash-Shu'araa 26:83-85",
+  "slot": "2026-11-26_reel-us",
+  "publish_at": "2026-11-27T01:31:49Z",
+  "local_slot": "2026-11-26 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-26_reel-us.jpg",
+  "video": "queue/2026-11-26_reel-us.mp4",
+  "cover": "queue/2026-11-26_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "The dua Ibrahim made for knowledge and good company\n\nIbrahim asked his Lord for knowledge, to be joined with the righteous, for an honorable mention among later generations, and to be among those who inherit the Garden of Bliss. A beautiful dua to carry into Friday.\n\nSurah Ash-Shu'araa 26:83-85\n\nWhich of these four requests will you add to your dua tonight?\n\n#prophetibrahim #duaforknowledge #surahshuara #jumuah\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "“My Lord, grant me knowledge, and join me with the righteous; and grant me an honorable mention among the later generations; and make me of those who will inherit the Garden of Bliss (Surah Ash-Shu'araa 26:83-85)",
+  "theme": "Ibrahim's dua / knowledge and righteous company (Friday eve)",
+  "review": "Approve: Arabic, English, reference, reel frame and caption checked",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:26:83-85",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "The dua Ibrahim made for knowledge and good company",
+    "hook_lines": [
+      "The dua Ibrahim made for",
+      "knowledge and good",
+      "company"
+    ],
+    "hook_size": 82,
+    "arabic_size": 62,
+    "verses": [
+      {
+        "ayah": "026083",
+        "lines": [
+          "رَبِّ هَبۡ لِي حُكۡمٗا وَأَلۡحِقۡنِي بِٱلصَّٰلِحِينَ ٨٣"
+        ],
+        "y": 710.2,
+        "meal": [
+          "“My Lord, grant me knowledge, and join me with the",
+          "righteous;"
+        ]
+      },
+      {
+        "ayah": "026084",
+        "lines": [
+          "وَٱجۡعَل لِّي لِسَانَ صِدۡقٖ فِي ٱلۡأٓخِرِينَ ٨٤"
+        ],
+        "y": 830.2,
+        "meal": [
+          "and grant me an honorable mention among the later",
+          "generations;"
+        ]
+      },
+      {
+        "ayah": "026085",
+        "lines": [
+          "وَٱجۡعَلۡنِي مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ ٨٥"
+        ],
+        "y": 950.2,
+        "meal": [
+          "and make me of those who will inherit the Garden of",
+          "Bliss.”"
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 1100.2,
+    "full": "“My Lord, grant me knowledge, and join me with the righteous; and grant me an honorable mention among the later generations; and make me of those who will inherit the Garden of Bliss.”",
+    "full_lines": [
+      "“My Lord, grant me knowledge, and join me with the",
+      "righteous; and grant me an honorable mention",
+      "among the later generations; and make me of those",
+      "who will inherit the Garden of Bliss.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "ref": "Surah Ash-Shu'araa 26:83-85",
+    "ref_y": 1352.2,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which of these four requests will you add to your dua tonight?",
+    "cta_lines": [
+      "Which of these four requests will you add to your",
+      "dua tonight?"
+    ],
+    "cta_size": 44,
+    "line_y": 1410.2,
+    "handle_y": 1544.2,
+    "handle_size": 27
+  },
+  "layout_hash": "f9ad3f0253d7da7eab2429a3",
+  "created_at": "2026-11-25T05:45:22+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "026083",
+      "026084",
+      "026085"
+    ],
+    "done": false
+  }
+}

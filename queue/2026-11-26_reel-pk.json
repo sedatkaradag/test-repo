@@ -1,0 +1,121 @@
+{
+  "entry_id": "quran:7:42",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-A'raaf 7:42",
+  "slot": "2026-11-26_reel-pk",
+  "publish_at": "2026-11-26T15:33:19Z",
+  "local_slot": "2026-11-26 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-26_reel-pk.jpg",
+  "video": "queue/2026-11-26_reel-pk.mp4",
+  "cover": "queue/2026-11-26_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "For the days your burden feels too heavy\n\nAllah says He does not burden a soul with more than it can bear. Those who believe and do righteous deeds are the people of Paradise, and they will abide there forever.\n\nSurah Al-A'raaf 7:42\n\nWho comes to mind when you read this tonight?\n\n#burden #islamichope #surahaaraf #jannah\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "As for those who believe and do righteous deeds – We do not burden a soul more than what it can bear – they are the people of Paradise, they will abide therein forever (Surah Al-A'raaf 7:42)",
+  "theme": "heavy burdens / no soul burdened beyond its capacity",
+  "review": "Approve: Arabic, English, reference, reel frame and caption checked",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:7:42",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "For the days your burden feels too heavy",
+    "hook_lines": [
+      "For the days your burden",
+      "feels too heavy"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "007042",
+        "lines": [
+          "وَٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ لَا",
+          "نُكَلِّفُ نَفۡسًا إِلَّا وُسۡعَهَآ أُوْلَٰٓئِكَ أَصۡحَٰبُ",
+          "ٱلۡجَنَّةِۖ هُمۡ فِيهَا خَٰلِدُونَ ٤٢"
+        ],
+        "y": 594.4,
+        "meal": [
+          "As for those who believe and do righteous deeds",
+          "– We do not burden a soul more than what it can",
+          "bear – they are the people of Paradise, they will",
+          "abide therein forever."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "As for those who believe and do righteous deeds – We do not burden a soul more than what it can bear – they are the people of Paradise, they will abide therein forever.",
+    "full_lines": [
+      "As for those who believe and do righteous deeds",
+      "– We do not burden a soul more than what it can",
+      "bear – they are the people of Paradise, they will",
+      "abide therein forever."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-A'raaf 7:42",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Who comes to mind when you read this tonight?",
+    "cta_lines": [
+      "Who comes to mind when you read this",
+      "tonight?"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "ade22efa1ea5c86dd4c060d2",
+  "created_at": "2026-11-25T05:44:28+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "007042"
+    ],
+    "done": false
+  }
+}
