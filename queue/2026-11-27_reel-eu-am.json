@@ -17,7 +17,7 @@
   "review": "approve r2: Arabic mark by mark, English, reference, caption faithful",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -106,6 +106,15 @@
     "ayahs": [
       "016078"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 23.5,
+    "video_seconds": 26.7,
+    "verse_seconds": [
+      23.47
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-26T05:49:07+00:00"
   }
 }

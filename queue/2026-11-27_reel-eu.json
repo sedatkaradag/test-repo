@@ -17,7 +17,7 @@
   "review": "approve r2: Arabic mark by mark, English, reference, hook not a quote",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -104,6 +104,15 @@
     "ayahs": [
       "040060"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 18.8,
+    "video_seconds": 22.0,
+    "verse_seconds": [
+      18.78
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-26T05:49:46+00:00"
   }
 }
