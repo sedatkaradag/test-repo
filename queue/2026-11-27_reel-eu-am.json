@@ -1,0 +1,111 @@
+{
+  "entry_id": "quran:16:78",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah An-Nahl 16:78",
+  "slot": "2026-11-27_reel-eu-am",
+  "publish_at": "2026-11-27T07:13:46Z",
+  "local_slot": "2026-11-27 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-27_reel-eu-am.jpg",
+  "video": "queue/2026-11-27_reel-eu-am.mp4",
+  "cover": "queue/2026-11-27_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "A morning reminder on gratitude: count these three gifts\n\nAllah brought us out of our mothers' wombs knowing nothing, and He gave us hearing, sight and intellect so that we may be grateful. Each one is a gift we use from the first minute of the day.\n\nSurah An-Nahl 16:78\n\nPick one of the three and thank Allah for it this morning.\n\n#gratitude #shukr #surahnahl #fridayreminder\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Allah brought you out from your mothers’ wombs not knowing anything, and He gave you hearing, sight and intellect, so that you may be grateful (Surah An-Nahl 16:78)",
+  "theme": "gratitude / hearing, sight and intellect (Friday)",
+  "review": "approve r2: Arabic mark by mark, English, reference, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:16:78",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "A morning reminder on gratitude: count these three gifts",
+    "hook_lines": [
+      "A morning reminder on",
+      "gratitude: count these three",
+      "gifts"
+    ],
+    "hook_size": 82,
+    "arabic_size": 72,
+    "verses": [
+      {
+        "ayah": "016078",
+        "lines": [
+          "وَٱللَّهُ أَخۡرَجَكُم مِّنۢ بُطُونِ أُمَّهَٰتِكُمۡ لَا",
+          "تَعۡلَمُونَ شَيۡـٔٗا وَجَعَلَ لَكُمُ ٱلسَّمۡعَ",
+          "وَٱلۡأَبۡصَٰرَ وَٱلۡأَفۡـِٔدَةَ لَعَلَّكُمۡ تَشۡكُرُونَ ٧٨"
+        ],
+        "y": 709.0,
+        "meal": [
+          "Allah brought you out from your mothers’ wombs",
+          "not knowing anything, and He gave you hearing,",
+          "sight and intellect, so that you may be grateful."
+        ]
+      }
+    ],
+    "meal_size": 42,
+    "meal_y": 1159.0,
+    "full": "Allah brought you out from your mothers’ wombs not knowing anything, and He gave you hearing, sight and intellect, so that you may be grateful.",
+    "full_lines": [
+      "Allah brought you out from your mothers’ wombs",
+      "not knowing anything, and He gave you hearing,",
+      "sight and intellect, so that you may be grateful."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah An-Nahl 16:78",
+    "ref_y": 1354.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one of the three and thank Allah for it this morning.",
+    "cta_lines": [
+      "Pick one of the three and thank Allah for it this",
+      "morning."
+    ],
+    "cta_size": 44,
+    "line_y": 1412.0,
+    "handle_y": 1546.0,
+    "handle_size": 27
+  },
+  "layout_hash": "17260e27ac09e2ea6ed3cbb5",
+  "created_at": "2026-11-26T05:46:52+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "016078"
+    ],
+    "done": false
+  }
+}

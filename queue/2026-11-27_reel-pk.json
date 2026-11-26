@@ -1,0 +1,104 @@
+{
+  "entry_id": "quran:46:13",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Ahqaf 46:13",
+  "slot": "2026-11-27_reel-pk",
+  "publish_at": "2026-11-27T15:33:19Z",
+  "local_slot": "2026-11-27 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-27_reel-pk.jpg",
+  "video": "queue/2026-11-27_reel-pk.mp4",
+  "cover": "queue/2026-11-27_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "No fear, no grief: who does Allah promise this to?\n\nAllah says that those who declare their Lord is Allah and then remain steadfast will have no fear, nor will they grieve. Staying firm is a choice we renew every day.\n\nSurah Al-Ahqaf 46:13\n\nSend this to someone who is trying hard to stay firm.\n\n#steadfast #istiqamah #surahahqaf #nofear\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "Indeed, those who say, “Our Lord is Allah”, then remain steadfast, they will have no fear, nor will they grieve (Surah Al-Ahqaf 46:13)",
+  "theme": "steadfastness / no fear, no grief",
+  "review": "approve r1: Arabic mark by mark, English, reference, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:46:13",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "No fear, no grief: who does Allah promise this to?",
+    "hook_lines": [
+      "No fear, no grief: who does",
+      "Allah promise this to?"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "046013",
+        "lines": [
+          "إِنَّ ٱلَّذِينَ قَالُواْ رَبُّنَا ٱللَّهُ ثُمَّ ٱسۡتَقَٰمُواْ",
+          "فَلَا خَوۡفٌ عَلَيۡهِمۡ وَلَا هُمۡ يَحۡزَنُونَ ١٣"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Indeed, those who say, “Our Lord is Allah”, then",
+          "remain steadfast, they will have no fear, nor will",
+          "they grieve."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Indeed, those who say, “Our Lord is Allah”, then remain steadfast, they will have no fear, nor will they grieve.",
+    "full_lines": [
+      "Indeed, those who say, “Our Lord is Allah”, then",
+      "remain steadfast, they will have no fear, nor will",
+      "they grieve."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Ahqaf 46:13",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to someone who is trying hard to stay firm.",
+    "cta_lines": [
+      "Send this to someone who is trying hard to stay",
+      "firm."
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "05b8dfaa0b9f8cf1fbe07609",
+  "created_at": "2026-11-26T05:47:11+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "046013"
+    ],
+    "done": false
+  }
+}

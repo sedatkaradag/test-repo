@@ -1,0 +1,109 @@
+{
+  "entry_id": "quran:40:60",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ghafir 40:60",
+  "slot": "2026-11-27_reel-eu",
+  "publish_at": "2026-11-27T18:02:28Z",
+  "local_slot": "2026-11-27 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-27_reel-eu.jpg",
+  "video": "queue/2026-11-27_reel-eu.mp4",
+  "cover": "queue/2026-11-27_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Call upon Allah, and He promises to respond\n\nAllah invites you to call upon Him and promises to answer. The only ones this verse warns are those too proud to worship Him.\n\nSurah Ghafir 40:60\n\nWhat will you ask Allah for before this day ends?\n\n#dua #makedua #surahghafir #answereddua\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "Your Lord says, “Call upon Me; I will respond to you. Those who are too proud to worship Me will enter Hell, utterly debased.” (Surah Ghafir 40:60)",
+  "theme": "dua / call upon Me, I will respond",
+  "review": "approve r2: Arabic mark by mark, English, reference, hook not a quote",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:40:60",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Call upon Allah, and He promises to respond",
+    "hook_lines": [
+      "Call upon Allah, and He",
+      "promises to respond"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "040060",
+        "lines": [
+          "وَقَالَ رَبُّكُمُ ٱدۡعُونِيٓ أَسۡتَجِبۡ لَكُمۡۚ",
+          "إِنَّ ٱلَّذِينَ يَسۡتَكۡبِرُونَ عَنۡ عِبَادَتِي",
+          "سَيَدۡخُلُونَ جَهَنَّمَ دَاخِرِينَ ٦٠"
+        ],
+        "y": 610.0,
+        "meal": [
+          "Your Lord says, “Call upon Me; I will respond to",
+          "you. Those who are too proud to worship Me",
+          "will enter Hell, utterly debased.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1108.0,
+    "full": "Your Lord says, “Call upon Me; I will respond to you. Those who are too proud to worship Me will enter Hell, utterly debased.”",
+    "full_lines": [
+      "Your Lord says, “Call upon Me; I will respond to",
+      "you. Those who are too proud to worship Me",
+      "will enter Hell, utterly debased.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Ghafir 40:60",
+    "ref_y": 1321.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "What will you ask Allah for before this day ends?",
+    "cta_lines": [
+      "What will you ask Allah for before this day",
+      "ends?"
+    ],
+    "cta_size": 48,
+    "line_y": 1379.0,
+    "handle_y": 1525.0,
+    "handle_size": 27
+  },
+  "layout_hash": "40369d471afc6a1ac025738b",
+  "created_at": "2026-11-26T05:47:34+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "040060"
+    ],
+    "done": false
+  }
+}

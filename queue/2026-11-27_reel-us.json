@@ -1,0 +1,133 @@
+{
+  "entry_id": "quran:6:54",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-An'aam 6:54",
+  "slot": "2026-11-27_reel-us",
+  "publish_at": "2026-11-28T01:32:02Z",
+  "local_slot": "2026-11-27 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-27_reel-us.jpg",
+  "video": "queue/2026-11-27_reel-us.mp4",
+  "cover": "queue/2026-11-27_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Made a mistake you regret? Your Lord has answered\n\nAllah has decreed mercy upon Himself. Whoever commits a sin out of ignorance, then repents and mends his ways, will find Allah All-Forgiving, Most Merciful.\n\nSurah Al-An'aam 6:54\n\nTurn back to Him tonight before you sleep.\n\n#repentance #tawbah #surahanam #allahsmercy\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "When those who believe in Our verses come to you, say, “Peace be upon you. Your Lord has decreed mercy upon Himself; whoever among you commits a sin out of ignorance then repents afterwards and mends his ways, then Allah is indeed All-Forgiving, Most Merciful.” (Surah Al-An'aam 6:54)",
+  "theme": "repentance / your Lord has decreed mercy upon Himself",
+  "review": "approve r1: Arabic mark by mark, English, reference, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:6:54",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Made a mistake you regret? Your Lord has answered",
+    "hook_lines": [
+      "Made a mistake you regret?",
+      "Your Lord has answered"
+    ],
+    "hook_size": 82,
+    "arabic_size": 52,
+    "verses": [
+      {
+        "ayah": "006054",
+        "lines": [
+          "وَإِذَا جَآءَكَ ٱلَّذِينَ يُؤۡمِنُونَ بِـَٔايَٰتِنَا فَقُلۡ سَلَٰمٌ عَلَيۡكُمۡۖ كَتَبَ",
+          "رَبُّكُمۡ عَلَىٰ نَفۡسِهِ ٱلرَّحۡمَةَ أَنَّهُۥ مَنۡ عَمِلَ مِنكُمۡ سُوٓءَۢا",
+          "بِجَهَٰلَةٖ ثُمَّ تَابَ مِنۢ بَعۡدِهِۦ وَأَصۡلَحَ فَأَنَّهُۥ غَفُورٞ رَّحِيمٞ ٥٤"
+        ],
+        "y": 692.8,
+        "meal": [
+          "When those who believe in Our verses come to you, say, “Peace be",
+          "upon you. Your Lord has decreed mercy upon Himself; whoever",
+          "among you commits a sin out of ignorance then repents",
+          "afterwards and mends his ways, then Allah is indeed All-Forgiving,",
+          "Most Merciful.”"
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1025.8,
+    "full": "When those who believe in Our verses come to you, say, “Peace be upon you. Your Lord has decreed mercy upon Himself; whoever among you commits a sin out of ignorance then repents afterwards and mends his ways, then Allah is indeed All-Forgiving, Most Merciful.”",
+    "full_lines": [
+      "When those who believe in Our verses come to you, say, “Peace be",
+      "upon you. Your Lord has decreed mercy upon Himself; whoever",
+      "among you commits a sin out of ignorance then repents",
+      "afterwards and mends his ways, then Allah is indeed All-Forgiving,",
+      "Most Merciful.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-An'aam 6:54",
+    "ref_y": 1279.8,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Turn back to Him tonight before you sleep.",
+    "cta_lines": [
+      "Turn back to Him tonight before you sleep."
+    ],
+    "cta_size": 36,
+    "line_y": 1337.8,
+    "handle_y": 1400.8,
+    "handle_size": 27
+  },
+  "layout_hash": "b7e6b9f46d13194b67a47f13",
+  "created_at": "2026-11-26T05:48:03+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "006054"
+    ],
+    "done": false
+  }
+}
