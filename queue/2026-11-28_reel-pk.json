@@ -1,0 +1,100 @@
+{
+  "entry_id": "quran:57:3",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Hadid 57:3",
+  "slot": "2026-11-28_reel-pk",
+  "publish_at": "2026-11-28T15:25:40Z",
+  "local_slot": "2026-11-28 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-28_reel-pk.jpg",
+  "video": "queue/2026-11-28_reel-pk.mp4",
+  "cover": "queue/2026-11-28_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Four names of Allah in one short verse\n\nAllah describes Himself as the First and the Last, the Manifest and the Hidden, All-Knowing of everything. Nothing in your life is outside His knowledge.\n\nSurah Al-Hadid 57:3\n\nWhich of these four names will you reflect on tonight?\n\n#namesofallah #asmaulhusna #surahhadid #tawheed\n\nRecitation: Abdul Rahman Al-Sudais",
+  "alt_text": "He is the First and the Last, the Manifest and the Hidden, and He is All-Knowing of everything (Surah Al-Hadid 57:3)",
+  "theme": "Allah's names / the First and the Last",
+  "review": "approve r1: Arabic checked mark by mark, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:57:3",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Four names of Allah in one short verse",
+    "hook_lines": [
+      "Four names of Allah in one",
+      "short verse"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "057003",
+        "lines": [
+          "هُوَ ٱلۡأَوَّلُ وَٱلۡأٓخِرُ وَٱلظَّٰهِرُ وَٱلۡبَاطِنُۖ وَهُوَ",
+          "بِكُلِّ شَيۡءٍ عَلِيمٌ ٣"
+        ],
+        "y": 697.6,
+        "meal": [
+          "He is the First and the Last, the Manifest and the",
+          "Hidden, and He is All-Knowing of everything."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "He is the First and the Last, the Manifest and the Hidden, and He is All-Knowing of everything.",
+    "full_lines": [
+      "He is the First and the Last, the Manifest and the",
+      "Hidden, and He is All-Knowing of everything."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Hadid 57:3",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Which of these four names will you reflect on tonight?",
+    "cta_lines": [
+      "Which of these four names will you reflect on",
+      "tonight?"
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "78a4630ef2cc9d48d5eb8429",
+  "created_at": "2026-11-27T05:44:25+00:00",
+  "audio": {
+    "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+    "reciter_name": "Abdul Rahman Al-Sudais",
+    "ayahs": [
+      "057003"
+    ],
+    "done": false
+  }
+}

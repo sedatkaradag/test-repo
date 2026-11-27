@@ -1,0 +1,138 @@
+{
+  "entry_id": "quran:39:42",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Az-Zumar 39:42",
+  "slot": "2026-11-28_reel-us",
+  "publish_at": "2026-11-29T01:34:23Z",
+  "local_slot": "2026-11-28 20:30 America/New_York (±5 min)",
+  "image": "queue/2026-11-28_reel-us.jpg",
+  "video": "queue/2026-11-28_reel-us.mp4",
+  "cover": "queue/2026-11-28_reel-us_cover.jpg",
+  "trial": false,
+  "caption": "Every night, Allah takes your soul in sleep\n\nIn this verse Allah tells us that He takes the souls at death, and He also takes the souls of those who have not died, during their sleep. He keeps back those for whom He has decreed death and sends the rest back until their appointed term. Each morning you wake up is a gift worth thanking Him for.\n\nSurah Az-Zumar 39:42\n\nBefore you sleep tonight, what will you thank Him for?\n\n#sleep #bedtimereminder #surahzumar #quranreflection\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Allah takes away the souls at the time of their death and of those who do not die during their sleep. He withholds the souls of those on whom He has decreed death, and releases others until an appointed term. Indeed, there are signs in this for people who reflect (Surah Az-Zumar 39:42)",
+  "theme": "sleep and death / souls taken in sleep",
+  "review": "approve r3: Arabic checked, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:39:42",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Every night, Allah takes your soul in sleep",
+    "hook_lines": [
+      "Every night, Allah takes your",
+      "soul in sleep"
+    ],
+    "hook_size": 82,
+    "arabic_size": 54,
+    "verses": [
+      {
+        "ayah": "039042",
+        "lines": [
+          "ٱللَّهُ يَتَوَفَّى ٱلۡأَنفُسَ حِينَ مَوۡتِهَا وَٱلَّتِي لَمۡ تَمُتۡ فِي مَنَامِهَاۖ",
+          "فَيُمۡسِكُ ٱلَّتِي قَضَىٰ عَلَيۡهَا ٱلۡمَوۡتَ وَيُرۡسِلُ ٱلۡأُخۡرَىٰٓ إِلَىٰٓ",
+          "أَجَلٖ مُّسَمًّىۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّقَوۡمٖ يَتَفَكَّرُونَ ٤٢"
+        ],
+        "y": 688.0,
+        "meal": [
+          "Allah takes away the souls at the time of their death and of those",
+          "who do not die during their sleep. He withholds the souls of those",
+          "on whom He has decreed death, and releases others until an",
+          "appointed term. Indeed, there are signs in this for people who",
+          "reflect."
+        ]
+      }
+    ],
+    "meal_size": 34,
+    "meal_y": 1033.0,
+    "full": "Allah takes away the souls at the time of their death and of those who do not die during their sleep. He withholds the souls of those on whom He has decreed death, and releases others until an appointed term. Indeed, there are signs in this for people who reflect.",
+    "full_lines": [
+      "Allah takes away the souls at the time of their death and of those",
+      "who do not die during their sleep. He withholds the souls of those",
+      "on whom He has decreed death, and releases others until an",
+      "appointed term. Indeed, there are signs in this for people who",
+      "reflect."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Az-Zumar 39:42",
+    "ref_y": 1287.0,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Before you sleep tonight, what will you thank Him for?",
+    "cta_lines": [
+      "Before you sleep tonight, what will you thank Him for?"
+    ],
+    "cta_size": 36,
+    "line_y": 1345.0,
+    "handle_y": 1408.0,
+    "handle_size": 27
+  },
+  "layout_hash": "57cb9f99e678b3848e86d34f",
+  "created_at": "2026-11-27T05:46:26+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "039042"
+    ],
+    "done": false
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "entry_id": "quran:2:238",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:238",
+  "slot": "2026-11-28_reel-eu-am",
+  "publish_at": "2026-11-28T07:16:55Z",
+  "local_slot": "2026-11-28 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-28_reel-eu-am.jpg",
+  "video": "queue/2026-11-28_reel-eu-am.mp4",
+  "cover": "queue/2026-11-28_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Your prayers today, and the one Allah singles out\n\nAllah tells us to be mindful of the prayers, especially the middle prayer, and to stand before Him in complete devotion. Start the weekend by guarding each one.\n\nSurah Al-Baqara 2:238\n\nPick one prayer today and give it your full attention.\n\n#salah #prayer #surahbaqarah #weekendreminder\n\nRecitation: Mishary Alafasy",
+  "alt_text": "Be mindful of the prayers, especially the middle prayer; and stand before Allah in complete devotion (Surah Al-Baqara 2:238)",
+  "theme": "prayer / guard the prayers, the middle prayer",
+  "review": "approve r1: Arabic card+reel checked, English/reference match, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:238",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Your prayers today, and the one Allah singles out",
+    "hook_lines": [
+      "Your prayers today, and the",
+      "one Allah singles out"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "002238",
+        "lines": [
+          "حَٰفِظُواْ عَلَى ٱلصَّلَوَٰتِ وَٱلصَّلَوٰةِ ٱلۡوُسۡطَىٰ",
+          "وَقُومُواْ لِلَّهِ قَٰنِتِينَ ٢٣٨"
+        ],
+        "y": 672.4,
+        "meal": [
+          "Be mindful of the prayers, especially the middle",
+          "prayer; and stand before Allah in complete",
+          "devotion."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1014.4,
+    "full": "Be mindful of the prayers, especially the middle prayer; and stand before Allah in complete devotion.",
+    "full_lines": [
+      "Be mindful of the prayers, especially the middle",
+      "prayer; and stand before Allah in complete",
+      "devotion."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:238",
+    "ref_y": 1227.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Pick one prayer today and give it your full attention.",
+    "cta_lines": [
+      "Pick one prayer today and give it your full",
+      "attention."
+    ],
+    "cta_size": 48,
+    "line_y": 1285.4,
+    "handle_y": 1431.4,
+    "handle_size": 27
+  },
+  "layout_hash": "1e440e1a72fb4502b19ee22a",
+  "created_at": "2026-11-27T05:44:09+00:00",
+  "audio": {
+    "reciter": "Alafasy_128kbps",
+    "reciter_name": "Mishary Alafasy",
+    "ayahs": [
+      "002238"
+    ],
+    "done": false
+  }
+}

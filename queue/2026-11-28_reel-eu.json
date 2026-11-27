@@ -1,0 +1,120 @@
+{
+  "entry_id": "quran:2:274",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Baqara 2:274",
+  "slot": "2026-11-28_reel-eu",
+  "publish_at": "2026-11-28T18:02:21Z",
+  "local_slot": "2026-11-28 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-28_reel-eu.jpg",
+  "video": "queue/2026-11-28_reel-eu.mp4",
+  "cover": "queue/2026-11-28_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "Charity in secret or in public, by day or night\n\nAllah promises those who spend in charity, day and night, in secret and in public, that their reward is with their Lord. Every time of day is a chance to give.\n\nSurah Al-Baqara 2:274\n\nWhat small amount could you give quietly before the day ends?\n\n#charity #sadaqah #secretcharity #givingback\n\nRecitation: Yasser Al-Dosari",
+  "alt_text": "Those who spend their wealth in charity, day and night, in secret and in public; they will have their reward with their Lord, and they will have no fear, nor will they grieve (Surah Al-Baqara 2:274)",
+  "theme": "charity / day and night, in secret and in public",
+  "review": "approve r1: Arabic checked, layout within limit, caption faithful",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:2:274",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Charity in secret or in public, by day or night",
+    "hook_lines": [
+      "Charity in secret or in",
+      "public, by day or night"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "002274",
+        "lines": [
+          "ٱلَّذِينَ يُنفِقُونَ أَمۡوَٰلَهُم بِٱلَّيۡلِ وَٱلنَّهَارِ سِرّٗا",
+          "وَعَلَانِيَةٗ فَلَهُمۡ أَجۡرُهُمۡ عِندَ رَبِّهِمۡ وَلَا",
+          "خَوۡفٌ عَلَيۡهِمۡ وَلَا هُمۡ يَحۡزَنُونَ ٢٧٤"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Those who spend their wealth in charity, day and",
+          "night, in secret and in public; they will have their",
+          "reward with their Lord, and they will have no",
+          "fear, nor will they grieve."
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Those who spend their wealth in charity, day and night, in secret and in public; they will have their reward with their Lord, and they will have no fear, nor will they grieve.",
+    "full_lines": [
+      "Those who spend their wealth in charity, day and",
+      "night, in secret and in public; they will have their",
+      "reward with their Lord, and they will have no",
+      "fear, nor will they grieve."
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Baqara 2:274",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "What small amount could you give quietly before the day ends?",
+    "cta_lines": [
+      "What small amount could you give quietly",
+      "before the day ends?"
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "64cb9d20361cbd0e53345d3c",
+  "created_at": "2026-11-27T05:44:54+00:00",
+  "audio": {
+    "reciter": "Yasser_Ad-Dussary_128kbps",
+    "reciter_name": "Yasser Al-Dosari",
+    "ayahs": [
+      "002274"
+    ],
+    "done": false
+  }
+}
