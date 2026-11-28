@@ -17,7 +17,7 @@
   "review": "approve r2 (r1 reject: hashtag fixed): Arabic checked word by word on card and reel, English/reference match",
   "flags": [],
   "integrity": "passed",
-  "status": "audio_pending",
+  "status": "ready",
   "reel_layout": {
     "template": "v3",
     "kind": "quran",
@@ -132,6 +132,17 @@
       "093007",
       "093008"
     ],
-    "done": false
+    "done": true,
+    "failed": false,
+    "tried": [],
+    "seconds": 20.5,
+    "video_seconds": 23.7,
+    "verse_seconds": [
+      6.5,
+      7.34,
+      6.61
+    ],
+    "timing": "verse by verse",
+    "added_at": "2026-11-28T05:46:50+00:00"
   }
 }
