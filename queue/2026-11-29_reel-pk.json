@@ -1,0 +1,120 @@
+{
+  "entry_id": "quran:12:64",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Yusuf 12:64",
+  "slot": "2026-11-29_reel-pk",
+  "publish_at": "2026-11-29T15:27:42Z",
+  "local_slot": "2026-11-29 20:30 Asia/Karachi (±5 min)",
+  "image": "queue/2026-11-29_reel-pk.jpg",
+  "video": "queue/2026-11-29_reel-pk.mp4",
+  "cover": "queue/2026-11-29_reel-pk_cover.jpg",
+  "trial": false,
+  "caption": "Every parent who worries should hear Yaqub's words\n\nYaqub asked his sons whether he should trust them with his son as he had once trusted them with his brother. Then he said that Allah is the best Protector and the Most Merciful of those who show mercy. A worried heart can rest in that.\n\nSurah Yusuf 12:64\n\nSend this to a parent who worries about their children.\n\n#parenting #prophetyaqub #surahyusuf #allahprotects\n\nRecitation: Abdul Basit Abdus-Samad",
+  "alt_text": "He said, “Should I trust you with him as I trusted you earlier with his brother? But Allah is the best Protector, and He is the Most Merciful of those who show mercy.” (Surah Yusuf 12:64)",
+  "theme": "worrying for your children / Allah is the best Protector (Yaqub)",
+  "review": "approve r1: Arabic checked word by word on card and reel, English/reference match, caption fine",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:12:64",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Every parent who worries should hear Yaqub's words",
+    "hook_lines": [
+      "Every parent who worries",
+      "should hear Yaqub's words"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "012064",
+        "lines": [
+          "قَالَ هَلۡ ءَامَنُكُمۡ عَلَيۡهِ إِلَّا كَمَآ",
+          "أَمِنتُكُمۡ عَلَىٰٓ أَخِيهِ مِن قَبۡلُ فَٱللَّهُ خَيۡرٌ",
+          "حَٰفِظٗاۖ وَهُوَ أَرۡحَمُ ٱلرَّٰحِمِينَ ٦٤"
+        ],
+        "y": 594.4,
+        "meal": [
+          "He said, “Should I trust you with him as I",
+          "trusted you earlier with his brother? But Allah is",
+          "the best Protector, and He is the Most Merciful",
+          "of those who show mercy.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "He said, “Should I trust you with him as I trusted you earlier with his brother? But Allah is the best Protector, and He is the Most Merciful of those who show mercy.”",
+    "full_lines": [
+      "He said, “Should I trust you with him as I",
+      "trusted you earlier with his brother? But Allah is",
+      "the best Protector, and He is the Most Merciful",
+      "of those who show mercy.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Yusuf 12:64",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Send this to a parent who worries about their children.",
+    "cta_lines": [
+      "Send this to a parent who worries about their",
+      "children."
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "c80df077fd8bf2561c815bb0",
+  "created_at": "2026-11-28T05:44:48+00:00",
+  "audio": {
+    "reciter": "Abdul_Basit_Murattal_192kbps",
+    "reciter_name": "Abdul Basit Abdus-Samad",
+    "ayahs": [
+      "012064"
+    ],
+    "done": false
+  }
+}

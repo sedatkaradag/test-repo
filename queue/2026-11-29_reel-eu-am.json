@@ -1,0 +1,137 @@
+{
+  "entry_id": "quran:93:6-8",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Ad-Dhuhaa 93:6-8",
+  "slot": "2026-11-29_reel-eu-am",
+  "publish_at": "2026-11-29T07:19:52Z",
+  "local_slot": "2026-11-29 08:15 Europe/Berlin (±5 min)",
+  "image": "queue/2026-11-29_reel-eu-am.jpg",
+  "video": "queue/2026-11-29_reel-eu-am.mp4",
+  "cover": "queue/2026-11-29_reel-eu-am_cover.jpg",
+  "trial": false,
+  "caption": "Hope after hardship: three questions from your Lord\n\nIn this surah Allah asks the Prophet ﷺ three questions: did He not find you an orphan and take care of you, find you unguided and guide you, find you in need and enrich you? Looking back at past care is a reason for hope today.\n\nSurah Ad-Dhuhaa 93:6-8\n\nThink of one hard time Allah brought you through, and thank Him this morning.\n\n#hope #surahduha #sundayreminder #allahsmercy\n\nRecitation: Mohamed Siddiq Al-Minshawi",
+  "alt_text": "Did He not find you an orphan then take good care of you? Did He not find you unguided then guide you? Did He not find you in need then enrich you (Surah Ad-Dhuhaa 93:6-8)",
+  "theme": "hope after hardship / He found you in need and enriched you",
+  "review": "approve r2 (r1 reject: hashtag fixed): Arabic checked word by word on card and reel, English/reference match",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:93:6-8",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "Hope after hardship: three questions from your Lord",
+    "hook_lines": [
+      "Hope after hardship: three",
+      "questions from your Lord"
+    ],
+    "hook_size": 82,
+    "arabic_size": 76,
+    "verses": [
+      {
+        "ayah": "093006",
+        "lines": [
+          "أَلَمۡ يَجِدۡكَ يَتِيمٗا فَـَٔاوَىٰ ٦"
+        ],
+        "y": 594.4,
+        "meal": [
+          "Did He not find you an orphan then take good",
+          "care of you?"
+        ]
+      },
+      {
+        "ayah": "093007",
+        "lines": [
+          "وَوَجَدَكَ ضَآلّٗا فَهَدَىٰ ٧"
+        ],
+        "y": 742.4,
+        "meal": [
+          "Did He not find you unguided then guide you?"
+        ]
+      },
+      {
+        "ayah": "093008",
+        "lines": [
+          "وَوَجَدَكَ عَآئِلٗا فَأَغۡنَىٰ ٨"
+        ],
+        "y": 890.4,
+        "meal": [
+          "Did He not find you in need then enrich you?"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1068.4,
+    "full": "Did He not find you an orphan then take good care of you? Did He not find you unguided then guide you? Did He not find you in need then enrich you?",
+    "full_lines": [
+      "Did He not find you an orphan then take good",
+      "care of you? Did He not find you unguided then",
+      "guide you? Did He not find you in need then",
+      "enrich you?"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "ref": "Surah Ad-Dhuhaa 93:6-8",
+    "ref_y": 1344.4,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Think of one hard time Allah brought you through, and thank Him this morning.",
+    "cta_lines": [
+      "Think of one hard time Allah brought you",
+      "through, and thank Him this morning."
+    ],
+    "cta_size": 48,
+    "line_y": 1402.4,
+    "handle_y": 1548.4,
+    "handle_size": 27
+  },
+  "layout_hash": "fa820c90a93bfff9d7df65e2",
+  "created_at": "2026-11-28T05:45:35+00:00",
+  "audio": {
+    "reciter": "Minshawy_Murattal_128kbps",
+    "reciter_name": "Mohamed Siddiq Al-Minshawi",
+    "ayahs": [
+      "093006",
+      "093007",
+      "093008"
+    ],
+    "done": false
+  }
+}

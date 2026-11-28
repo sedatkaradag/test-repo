@@ -1,0 +1,99 @@
+{
+  "entry_id": "quran:28:22",
+  "type": "reel",
+  "content_type": "quran",
+  "template": "v3",
+  "reference": "Surah Al-Qasas 28:22",
+  "slot": "2026-11-29_reel-eu",
+  "publish_at": "2026-11-29T18:04:27Z",
+  "local_slot": "2026-11-29 13:00 America/New_York (±5 min)",
+  "image": "queue/2026-11-29_reel-eu.jpg",
+  "video": "queue/2026-11-29_reel-eu.mp4",
+  "cover": "queue/2026-11-29_reel-eu_cover.jpg",
+  "trial": false,
+  "caption": "What Musa said when heading into the unknown\n\nAs Musa headed towards Midian, he said that his Lord would surely guide him to a straight way. Trust in Allah can come before the road is clear.\n\nSurah Al-Qasas 28:22\n\nFacing a new start this week? Say these words before you take the first step.\n\n#trustinallah #prophetmusa #surahqasas #newbeginnings\n\nRecitation: Maher Al-Muaiqly",
+  "alt_text": "When he headed towards Midian, he said, “My Lord will surely guide me to a straight way.” (Surah Al-Qasas 28:22)",
+  "theme": "new beginnings / Musa trusts his Lord to guide him",
+  "review": "approve r1: Arabic checked word by word on card and reel, English/reference match, caption fine",
+  "flags": [],
+  "integrity": "passed",
+  "status": "audio_pending",
+  "reel_layout": {
+    "template": "v3",
+    "kind": "quran",
+    "entry_id": "quran:28:22",
+    "label": "THE NOBLE QUR'AN",
+    "hook": "What Musa said when heading into the unknown",
+    "hook_lines": [
+      "What Musa said when",
+      "heading into the unknown"
+    ],
+    "hook_size": 82,
+    "arabic_size": 80,
+    "verses": [
+      {
+        "ayah": "028022",
+        "lines": [
+          "وَلَمَّا تَوَجَّهَ تِلۡقَآءَ مَدۡيَنَ قَالَ عَسَىٰ رَبِّيٓ",
+          "أَن يَهۡدِيَنِي سَوَآءَ ٱلسَّبِيلِ ٢٢"
+        ],
+        "y": 697.6,
+        "meal": [
+          "When he headed towards Midian, he said, “My",
+          "Lord will surely guide me to a straight way.”"
+        ]
+      }
+    ],
+    "meal_size": 46,
+    "meal_y": 1039.6,
+    "full": "When he headed towards Midian, he said, “My Lord will surely guide me to a straight way.”",
+    "full_lines": [
+      "When he headed towards Midian, he said, “My",
+      "Lord will surely guide me to a straight way.”"
+    ],
+    "full_owner": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ref": "Surah Al-Qasas 28:22",
+    "ref_y": 1189.6,
+    "slogan": "Follow & Share The Qur'an",
+    "slogan_lines": [
+      "Follow & Share The Qur'an"
+    ],
+    "cta": "Facing a new start this week? Say these words before you take the first step.",
+    "cta_lines": [
+      "Facing a new start this week? Say these words",
+      "before you take the first step."
+    ],
+    "cta_size": 48,
+    "line_y": 1247.6,
+    "handle_y": 1393.6,
+    "handle_size": 27
+  },
+  "layout_hash": "828e152bdce61a3eb7e96785",
+  "created_at": "2026-11-28T05:45:06+00:00",
+  "audio": {
+    "reciter": "MaherAlMuaiqly128kbps",
+    "reciter_name": "Maher Al-Muaiqly",
+    "ayahs": [
+      "028022"
+    ],
+    "done": false
+  }
+}
